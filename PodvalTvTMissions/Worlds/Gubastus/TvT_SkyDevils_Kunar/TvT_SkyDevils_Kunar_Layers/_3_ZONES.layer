@@ -2,7 +2,7 @@ PolylineShapeEntity : "{7019844BAD5C4DD8}Prefabs/PolyZone/PolyZone_Border.et" {
  components {
   PS_PolyZone "{60E90266F25533F6}" {
    m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
-   m_cPolygonColor 0 0.502 0.125 0.502
+   m_cPolygonColor 0 0.502 0.125 0
    m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
    m_cPolygonBorderColor 0 0.502 0.125 1
    m_aVisibleForFactions {
@@ -66,9 +66,8 @@ PolylineShapeEntity : "{7019844BAD5C4DD8}Prefabs/PolyZone/PolyZone_Border.et" {
  {
   PS_PolyZoneTrigger {
    ID "60FD050E1E83544C"
-   TriggerShapeType None
+   TriggerShapeType Polyline
    "Polyline Height" 999
-   DrawShape 1
    m_polyZoneEffect PS_PolyZoneEffectRestricted "{60FD050E0DC2A2AB}" {
     m_fKillTime 10
    }
@@ -81,7 +80,7 @@ $grp PolylineShapeEntity : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
   components {
    PS_PolyZone "{60E90266F25533F6}" {
     m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
-    m_cPolygonColor 0 0.502 0.125 0.502
+    m_cPolygonColor 0 0.502 0.125 0
     m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
     m_cPolygonBorderColor 0 0.502 0.125 1
     m_aVisibleForFactions {
@@ -138,7 +137,7 @@ $grp PolylineShapeEntity : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
   components {
    PS_PolyZone "{60E90266F25533F6}" {
     m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
-    m_cPolygonColor 0 0.502 0.125 0.502
+    m_cPolygonColor 0 0.502 0.125 0
     m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
     m_cPolygonBorderColor 0 0.502 0.125 1
     m_aVisibleForFactions {

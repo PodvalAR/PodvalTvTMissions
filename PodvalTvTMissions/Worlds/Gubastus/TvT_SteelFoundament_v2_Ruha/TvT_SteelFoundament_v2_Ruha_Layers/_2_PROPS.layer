@@ -7,6 +7,15 @@ GenericEntity FLAG_1 : "{F638E8AF02F38272}PrefabsEditable/Auto/Structures/Milita
    }
    m_sNotificationText "#drg_Flag_CapturedByFaction %1, игра не закончена, флаг можно перезахватить!"
   }
+  BaseActionsManagerComponent "{6202D4E6F133BF4A}" {
+   additionalActions {
+    PS_FlagChangeAction "{6202D4E6A53D4B3C}" {
+     Duration 5
+     m_bUseAnimation 1
+     m_fAnimationFPS 60
+    }
+   }
+  }
  }
  coords 4368.736 61.534 2173.083
  angles 30 -158.85 0
