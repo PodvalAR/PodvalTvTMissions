@@ -1,0 +1,24 @@
+GenericEntity Flag : "{A80E80B60FEAE52D}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_02_V1_UK.et" {
+ components {
+  SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+   m_aObjectiveNames {
+    "AFRF_WIN"
+    "UK_WIN"
+   }
+   m_sFactionKey "UK"
+   m_bUseAdvanceGameState 1
+   m_sUseNotification 1
+  }
+  BaseActionsManagerComponent "{6202D4E6F133BF4A}" {
+   additionalActions {
+    PS_FlagChangeAction "{6202D4E6A53D4B3C}" {
+     Duration 10
+     m_bUseAnimation 1
+     m_fAnimationFPS 60
+    }
+   }
+  }
+ }
+ coords 4484.138 14.814 5861.144
+ angles 45 -113.173 0
+}

@@ -1,0 +1,79 @@
+SCR_AIGroup UK_201 : "{654E3A922B11EC94}Prefabs/Groups/BLUFOR/British Forces/Regular/Group_UK_Squad.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+   m_iCompanyCallsign 2
+   m_iSquadCallsign 1
+  }
+ }
+ coords 4522.374 2.563 5824.5
+ angles 0 -117.413 0
+}
+SCR_AIGroup UK_000 : "{BBA36FB95553E79C}Prefabs/Groups/BLUFOR/British Forces/Regular/Group_UK_PL.et" {
+ coords 4521.05 2.562 5879.514
+ angles 0 -105.208 0
+}
+$grp SCR_AIGroup : "{DD836A3E445304BB}Prefabs/Groups/BLUFOR/British Forces/Regular/Group_UK_SniperGroup.et" {
+ UK_302 {
+  coords 4538.318 2.563 5865.659
+  angles 0 -15.117 0
+ }
+ UK_301 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 1
+   }
+  }
+  coords 4544.593 2.563 5867.355
+  angles 0 -15.117 0
+ }
+ UK_300 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 4550.867 2.563 5869.05
+  angles 0 -15.117 0
+ }
+}
+$grp SCR_AIGroup : "{F95993F1D0ECB936}Prefabs/Groups/BLUFOR/British Forces/Regular/Group_UK_Squad_2.et" {
+ UK_200 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 4494.072 2.563 5882.781
+  angles 0 -112.523 0
+ }
+ UK_100 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 4500.583 2.563 5867.958
+  angles 0 -114.52 0
+ }
+ UK_101 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 4507.191 2.563 5854.128
+  angles 0 -115.219 0
+ }
+ UK_102 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 4514.589 2.563 5839.227
+  angles 0 -116.759 0
+ }
+}
