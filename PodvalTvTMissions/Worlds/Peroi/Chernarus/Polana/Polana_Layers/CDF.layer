@@ -1,0 +1,162 @@
+SCR_AIGroup btr : "{3F29EA2D79388D65}Prefabs/Groups/BLUFOR/Ses_CDF/Group_A2F_CDF_Motorized.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A30C9A9E8D83F4}" {
+   m_iCompanyCallsign 1
+  }
+ }
+ coords 10678.957 205.062 7944.111
+ angles 0 -149.759 0
+ m_aUnitPrefabSlots {
+  "{9DD06B0388262773}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_SL_Opt_Random.et"
+  "{DF081FFC7A479F9B}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_SR_Random.et"
+  "{7E8CF24A35AC6A2D}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_AT_Random.et"
+  "{B2AAD7B334EC1507}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_AAT_Random.et"
+  "{2AC4BD0DD870A673}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_AR_Random.et"
+  "{D01975FC83367BD9}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_GL_Random.et"
+  "{AA9F3BAA3A3987D0}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_LAT_Random.et"
+  "{2C802DE0AEBE184A}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_Sniper_Random.et"
+  "{84D5A1539E639EA0}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_CC_Random.et"
+  "{90CD8E3B3F9CA0D7}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_Crew_Random.et"
+ }
+}
+Vehicle BTR70_Ses_CDF1 : "{52441D784D145D52}Prefabs/Vehicles/Wheeled/BTR70/BTR70_Ses_CDF.et" {
+ coords 10674.953 205.062 7942.817
+ angles 0 -56.817 0
+ m_sAttachmentGroupName "btr"
+}
+$grp SCR_AIGroup : "{6449AAD99869C0D5}Prefabs/Groups/BLUFOR/Ses_CDF/Group_A2F_CDF_Squad.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A30C9A9E8D83F4}" {
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 10670.854 205.156 8018.439
+  angles 0 -55.427 0
+  m_aUnitPrefabSlots {
+   "{9DD06B0388262773}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_SL_Opt_Random.et"
+   "{DF081FFC7A479F9B}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_SR_Random.et"
+   "{7E8CF24A35AC6A2D}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_AT_Random.et"
+   "{B2AAD7B334EC1507}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_AAT_Random.et"
+   "{2AC4BD0DD870A673}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_AR_Random.et"
+   "{D01975FC83367BD9}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_GL_Random.et"
+   "{7AB6CF75D8A31BEB}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_Rifle_Random.et"
+   "{AA9F3BAA3A3987D0}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_LAT_Random.et"
+   "{2C802DE0AEBE184A}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_Sniper_Random.et"
+  }
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A30C9A9E8D83F4}" {
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 10632.859 205.062 8034.299
+  angles 0 34.843 0
+  m_aUnitPrefabSlots {
+   "{9DD06B0388262773}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_SL_Opt_Random.et"
+   "{DF081FFC7A479F9B}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_SR_Random.et"
+   "{7E8CF24A35AC6A2D}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_AT_Random.et"
+   "{B2AAD7B334EC1507}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_AAT_Random.et"
+   "{2AC4BD0DD870A673}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_AR_Random.et"
+   "{D01975FC83367BD9}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_GL_Random.et"
+   "{7AB6CF75D8A31BEB}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_Rifle_Random.et"
+   "{AA9F3BAA3A3987D0}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_LAT_Random.et"
+   "{2C802DE0AEBE184A}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_Sniper_Random.et"
+  }
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A30C9A9E8D83F4}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 10538.853 219.818 8114.327
+  angles 5.458 -51.73 3.161
+  m_aUnitPrefabSlots {
+   "{9DD06B0388262773}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_SL_Opt_Random.et"
+   "{DF081FFC7A479F9B}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_SR_Random.et"
+   "{7E8CF24A35AC6A2D}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_AT_Random.et"
+   "{B2AAD7B334EC1507}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_AAT_Random.et"
+   "{2AC4BD0DD870A673}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_AR_Random.et"
+   "{D01975FC83367BD9}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_GL_Random.et"
+   "{AA9F3BAA3A3987D0}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_LAT_Random.et"
+   "{2C802DE0AEBE184A}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_Sniper_Random.et"
+  }
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A30C9A9E8D83F4}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 11714.973 68.45 9186.763
+  angles -8.189 43.182 -0.368
+  m_aUnitPrefabSlots {
+   "{9DD06B0388262773}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_SL_Opt_Random.et"
+   "{50C53F58D3742548}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_Rifle_SD_Random.et"
+   "{107B2619EBE9881E}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_LAT_SD_Random.et"
+   "{50C53F58D3742548}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_Rifle_SD_Random.et"
+   "{107B2619EBE9881E}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_LAT_SD_Random.et"
+   "{2C802DE0AEBE184A}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_Sniper_Random.et"
+  }
+  m_sCustomNameSet "Отделение разведки"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A30C9A9E8D83F4}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 10550.809 219.42 8129.646
+  angles 3.219 -52.898 0.192
+  m_aUnitPrefabSlots {
+   "{9DD06B0388262773}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_SL_Opt_Random.et"
+   "{DF081FFC7A479F9B}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_SR_Random.et"
+   "{7E8CF24A35AC6A2D}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_AT_Random.et"
+   "{B2AAD7B334EC1507}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_AAT_Random.et"
+   "{2AC4BD0DD870A673}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_AR_Random.et"
+   "{D01975FC83367BD9}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_GL_Random.et"
+   "{AA9F3BAA3A3987D0}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_LAT_Random.et"
+   "{2C802DE0AEBE184A}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_Sniper_Random.et"
+  }
+ }
+}
+SCR_AIGroup pil : "{6BF534002C76924B}Prefabs/Groups/BLUFOR/Ses_CDF/Group_A2F_CDF_Heli.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A30C9A9E8D83F4}" {
+   m_iCompanyCallsign 2
+  }
+ }
+ coords 12017.241 152.594 12684.996
+ angles 0 110.538 0
+}
+$grp Vehicle : "{CC55611936C21F25}Prefabs/Vehicles/Wheeled/M998/M1025_USAF.et" {
+ M1025_USAF1 {
+  coords 11713.955 68.406 9192.26
+  angles 0 -50.347 0
+ }
+ M1025_USAF2 {
+  coords 11726.044 68.491 9186.604
+  angles 0.619 133.737 -0.647
+ }
+}
+Vehicle UH1H_armed1 : "{DDDD9B51F1234DF3}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed.et" {
+ coords 12029.544 152.594 12681.391
+ angles 0 106.6 0
+ m_sAttachmentGroupName "pil"
+}
+SCR_AIGroup : "{F2ABAC37E4537895}Prefabs/Groups/BLUFOR/Ses_CDF/Group_A2F_CDF_PL.et" {
+ coords 10660.063 205.066 8024.861
+ angles -1.579 -143.971 2.17
+ m_aUnitPrefabSlots +{
+  "{DF081FFC7A479F9B}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_SR_Random.et"
+  "{7494538873206D04}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_Medic_Random.et"
+  "{2C802DE0AEBE184A}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_Sniper_Random.et"
+ }
+}
