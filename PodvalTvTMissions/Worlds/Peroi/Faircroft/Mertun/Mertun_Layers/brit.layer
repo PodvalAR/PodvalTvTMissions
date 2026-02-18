@@ -1,0 +1,108 @@
+$grp SCR_AIGroup : "{654E3A922B11EC94}Prefabs/Groups/BLUFOR/British Forces/Regular/Group_UK_Squad.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 6690.946 55.389 5615.379
+  angles -2.809 -128.911 -3.475
+  m_aUnitPrefabSlots +{
+   "{2457C5A201121FDC}Prefabs/Characters/Factions/BLUFOR/UK/Regular/Char_UK_Regular_Sniper.et"
+  }
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 6378.758 21.636 5472.405
+  angles 3.041 53.112 1.072
+  m_aUnitPrefabSlots +{
+   "{2457C5A201121FDC}Prefabs/Characters/Factions/BLUFOR/UK/Regular/Char_UK_Regular_Sniper.et"
+  }
+ }
+ spn {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 3768.215 3.063 8495.585
+  angles 0 135.262 0
+  m_aUnitPrefabSlots {
+   "{B352E45394EF0C7B}Prefabs/Characters/Factions/BLUFOR/UK/Regular/Char_UK_Regular_SL.et"
+   "{50CEE00B9ACA0197}Prefabs/Characters/Factions/BLUFOR/UK/Regular/Char_UK_Regular_Rifle_SD.et"
+   "{E505D2E705466C74}Prefabs/Characters/Factions/BLUFOR/UK/Regular/Char_UK_Regular_LAT.et"
+   "{50CEE00B9ACA0197}Prefabs/Characters/Factions/BLUFOR/UK/Regular/Char_UK_Regular_Rifle_SD.et"
+   "{E505D2E705466C74}Prefabs/Characters/Factions/BLUFOR/UK/Regular/Char_UK_Regular_LAT.et"
+   "{50CEE00B9ACA0197}Prefabs/Characters/Factions/BLUFOR/UK/Regular/Char_UK_Regular_Rifle_SD.et"
+   "{5A1BD3B104B0AC6F}Prefabs/Characters/Factions/BLUFOR/UK/Regular/Char_UK_Regular_Sniper_SD.et"
+  }
+  m_sCustomNameSet "Отделение разведки"
+ }
+ spn2 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 3780.945 3.063 8508.198
+  angles 0 135.262 0
+  m_aUnitPrefabSlots {
+   "{B352E45394EF0C7B}Prefabs/Characters/Factions/BLUFOR/UK/Regular/Char_UK_Regular_SL.et"
+   "{50CEE00B9ACA0197}Prefabs/Characters/Factions/BLUFOR/UK/Regular/Char_UK_Regular_Rifle_SD.et"
+   "{E505D2E705466C74}Prefabs/Characters/Factions/BLUFOR/UK/Regular/Char_UK_Regular_LAT.et"
+   "{50CEE00B9ACA0197}Prefabs/Characters/Factions/BLUFOR/UK/Regular/Char_UK_Regular_Rifle_SD.et"
+   "{E505D2E705466C74}Prefabs/Characters/Factions/BLUFOR/UK/Regular/Char_UK_Regular_LAT.et"
+   "{50CEE00B9ACA0197}Prefabs/Characters/Factions/BLUFOR/UK/Regular/Char_UK_Regular_Rifle_SD.et"
+   "{5A1BD3B104B0AC6F}Prefabs/Characters/Factions/BLUFOR/UK/Regular/Char_UK_Regular_Sniper_SD.et"
+  }
+  m_sCustomNameSet "Отделение разведки"
+ }
+}
+$grp Vehicle : "{AF950919C81D91B4}Prefabs/Vehicles/Helicopters/AH6M/MH6M.et" {
+ MH6M1 {
+  coords 3774.53 3.063 8486.104
+  angles 0 134.292 0
+  m_sAttachmentGroupName "spn"
+ }
+ MH6M2 {
+  coords 3786.876 3.063 8498.759
+  angles 0 134.292 0
+  m_sAttachmentGroupName "spn2"
+ }
+}
+SCR_AIGroup : "{BBA36FB95553E79C}Prefabs/Groups/BLUFOR/British Forces/Regular/Group_UK_PL.et" {
+ coords 6672.982 57.424 5628.399
+ angles -4.467 -127.445 0.045
+ m_aUnitPrefabSlots +{
+  "{6B0B103373DF995C}Prefabs/Characters/Factions/BLUFOR/UK/Regular/Char_UK_Regular_Observer.et"
+  "{BBF99633B60997D6}Prefabs/Characters/Factions/BLUFOR/UK/Regular/Char_UK_Regular_Medic.et"
+  "{2457C5A201121FDC}Prefabs/Characters/Factions/BLUFOR/UK/Regular/Char_UK_Regular_Sniper.et"
+ }
+}
+$grp SCR_AIGroup : "{F95993F1D0ECB936}Prefabs/Groups/BLUFOR/British Forces/Regular/Group_UK_Squad_2.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 6394.978 21.812 5475.777
+  angles 0 -125.638 0
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 6678.95 55.358 5616.748
+  angles 4.627 57.151 5.496
+ }
+}
