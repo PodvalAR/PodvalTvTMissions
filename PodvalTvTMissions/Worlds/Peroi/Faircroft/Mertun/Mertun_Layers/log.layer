@@ -24,6 +24,43 @@ $grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
   m_sFactionKey "UK"
  }
 }
+$grp GenericEntity : "{A80E80B60FEAE52D}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_02_V1_UK.et" {
+ {
+  components {
+   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+    m_aFlagData {
+     PS_FlagData "{68A8F019DE85A6BB}" {
+      m_sFactionKey "UK"
+     }
+     PS_FlagData "{68A8F019DEB0E5EA}" {
+      m_sFactionKey "RHS_AFRF"
+      m_iCaptureCounter 1
+     }
+    }
+    m_sFactionKey "UK"
+   }
+  }
+  coords 6675.422 68.964 5628.399
+ }
+ {
+  components {
+   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+    m_aFlagData {
+     PS_FlagData "{68A8F01933CCB275}" {
+      m_sFactionKey "UK"
+     }
+     PS_FlagData "{68A8F01933F3C68A}" {
+      m_sFactionKey "RHS_AFRF"
+      m_iCaptureCounter 1
+     }
+    }
+    m_sFactionKey "UK"
+   }
+  }
+  coords 6377.958 24.032 5463.376
+  angles 30 -125.078 0
+ }
+}
 GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
  components {
   DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
@@ -31,44 +68,4 @@ GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" 
   }
  }
  coords 2772.594 276.388 4116.711
-}
-$grp GenericEntity : "{F5EF4223ACA6169C}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_02_V1_AFRF.et" {
- {
-  components {
-   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
-    m_sDefaultMaterial "{2982521676444E84}Assets/Props/Fabric/Flags/Data/Flag_1_2_UK.emat"
-    m_aFlagData {
-     PS_FlagData "{6588FCB6C8DD7B29}" {
-      m_sFactionKey "UK"
-     }
-     PS_FlagData "{6588FCB6C83102AD}" {
-      m_sFactionKey "RHS_AFRF"
-      m_iCaptureCounter 1
-     }
-    }
-    m_sFactionKey "UK"
-   }
-  }
-  coords 6675.332 68.909 5628.307
-  angles 0.544 -0.012 -1.219
- }
- {
-  components {
-   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
-    m_sDefaultMaterial "{2982521676444E84}Assets/Props/Fabric/Flags/Data/Flag_1_2_UK.emat"
-    m_aFlagData {
-     PS_FlagData "{6588FCB6C8DD7B29}" {
-      m_sFactionKey "UK"
-     }
-     PS_FlagData "{6588FCB6C83102AD}" {
-      m_sFactionKey "RHS_AFRF"
-      m_iCaptureCounter 1
-     }
-    }
-    m_sFactionKey "UK"
-   }
-  }
-  coords 6378.162 24.229 5463.244
-  angles -0.315 -39.451 22.613
- }
 }
