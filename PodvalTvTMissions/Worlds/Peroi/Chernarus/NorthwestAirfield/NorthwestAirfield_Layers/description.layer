@@ -1,0 +1,84 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ {
+  coords 6904.79 406.074 11408.41
+  m_sTitle "Цели миссии"
+  m_sTextData "ВС РФ:"\
+  ""\
+  "Нужно удержать Диспетчерскую вышку и Стройку."\
+  ""\
+  "ЧСО:"\
+  ""\
+  "Нужно захватить Диспетчерскую вышку и Стройку."\
+  ""\
+  ""
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "Ses_CDF"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+ }
+ {
+  coords 6888.991 406.052 11436.354
+  m_sTitle "Условности Миссии"
+  m_sTextData "ВС РФ:"\
+  ""\
+  "За черный маркер нельзя выходить отделениям охраны Аэродрома и отделению Командира стороны."\
+  ""\
+  "США:"\
+  ""\
+  "Запрещено таранить вертолетом Диспетчерскую вышку и Стройку."
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "Ses_CDF"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+ }
+ {
+  coords 6859.197 378.456 11469.983
+  angles -1.739 0.299 -9.757
+  m_sTitle "Описание миссии"
+  m_sTextData "ВС РФ закрепились на Аэродроме, ЧСО хотят выбить их с Аэродрома  для закрепления своих сил в этом районе."
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "Ses_CDF"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+ }
+}
+$grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+ {
+  coords 4991.781 341.145 9920.667
+  angles 0 82.109 0
+  m_sImageSetGlow ""
+  m_MarkerColor 0 0 0 1
+  m_sQuadName "flag-2"
+  m_fWorldSize 55
+  m_sDescription "Стройка"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   ""
+   "Ses_CDF"
+   "RHS_AFRF"
+  }
+  m_bVisibleForEmptyFaction 1
+ }
+ {
+  coords 4719.064 337.183 10226.562
+  angles 0 88.867 0
+  m_sImageSetGlow ""
+  m_MarkerColor 0 0 0 1
+  m_sQuadName "flag-2"
+  m_fWorldSize 55
+  m_sDescription "Диспетчерская вышка"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   ""
+   "Ses_CDF"
+   "RHS_AFRF"
+  }
+  m_bVisibleForEmptyFaction 1
+ }
+}
