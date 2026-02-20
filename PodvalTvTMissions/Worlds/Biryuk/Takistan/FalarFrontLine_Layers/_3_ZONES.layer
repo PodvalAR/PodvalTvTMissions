@@ -1,0 +1,99 @@
+$grp PolylineShapeEntity : "{7019844BAD5C4DD8}Prefabs/PolyZone/PolyZone_Border.et" {
+ USAF {
+  components {
+   PS_PolyZone "{60E90266F25533F6}" {
+    m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
+    m_cPolygonColor 0 0 0 1
+    m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+    m_cPolygonBorderColor 0 0 0 1
+    m_aVisibleForFactions {
+     "RHS_AFRF"
+     "RHS_USAF"
+     ""
+    }
+   }
+  }
+  coords 6616.187 318.839 7090.186
+  Points {
+   ShapePoint "{60E90266E922A02A}" {
+    Position -1390.945 -162.282 2058.764
+   }
+   ShapePoint "{68A4728461FB5BEA}" {
+    Position 168.329 -161.507 2202.794
+   }
+   ShapePoint "{68A472846C453051}" {
+    Position 364.349 -66.358 61.348
+   }
+   ShapePoint "{68A4728467A3AF98}" {
+    Position -1260.305 30.278 -153.937
+   }
+  }
+  {
+   PS_PolyZoneTrigger {
+    ID "60FD050E1E83544C"
+    m_bReversed 1
+    m_sFactionKey "RHS_USAF"
+   }
+  }
+ }
+ RF {
+  components {
+   PS_PolyZone "{60E90266F25533F6}" {
+    m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
+    m_cPolygonColor 0 0 0 0
+    m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+    m_cPolygonBorderColor 0.624 0.157 0.157 1
+    m_bReversed 0
+    m_aVisibleForFactions {
+    }
+   }
+  }
+  coords 6616.187 318.839 7090.186
+  Points {
+   ShapePoint "{60E90266E922A02A}" {
+    Position 364.38 -66.356 61.372
+   }
+   ShapePoint "{68A4728461FB5BEA}" {
+    Position 278.465 26.82 1096.99
+   }
+   ShapePoint "{68A472846C453051}" {
+    Position -1323.302 -62.429 914.085
+   }
+   ShapePoint "{68A4728467A3AF98}" {
+    Position -1260.305 30.278 -153.937
+   }
+  }
+  {
+   PS_PolyZoneTrigger {
+    ID "60FD050E1E83544C"
+    m_bReversed 1
+    m_sFactionKey "RHS_AFRF"
+   }
+  }
+ }
+}
+PolylineShapeEntity : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
+ components {
+  PS_PolyZone "{60E90266F25533F6}" {
+   m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
+   m_cPolygonColor 0 0 0 0
+   m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+   m_cPolygonBorderColor 0.686 0.259 0.259 1
+   m_bLineMode 1
+   m_aVisibleForFactions {
+    "RHS_AFRF"
+    "RHS_USAF"
+    ""
+   }
+  }
+ }
+ coords 5299.047 252.832 7998.891
+ Points {
+  ShapePoint "{68A4949A6A7D772A}" {
+   Position 1595.582 92.831 188.258
+  }
+  ShapePoint "{60E90266E922A02A}" {
+   Position -6.29 3.644 5.473
+  }
+ }
+}

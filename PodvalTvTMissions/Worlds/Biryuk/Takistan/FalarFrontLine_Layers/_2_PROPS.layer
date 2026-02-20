@@ -1,0 +1,57 @@
+$grp GenericEntity : "{21D83950DF36F250}Prefabs/Props/Military/Sandbags/Sandbag_01_long_burlap.et" {
+ {
+  coords 6135.693 185.062 7268.755
+  angles 0 -19.906 0
+ }
+ {
+  coords 6140.495 185.071 7270.327
+  angles 0 -19.906 0
+ }
+}
+Tree : "{23C0BE9D80929DBD}Prefabs/Vegetation/Bush/b_salix_cinerea_1w.et" {
+ coords 6146.802 0.195 7886.679
+}
+$grp GenericEntity : "{27B3CECB6489D952}Prefabs/Props/Military/Sandbags/Sandbag_01_foundation_burlap.et" {
+ {
+  coords 6140.609 185.057 7268.476
+  angles 0 -16.587 0
+ }
+ {
+  coords 6136.633 185.054 7267.25
+  angles 0 -16.587 0
+ }
+ {
+  coords 6138.651 184.886 7263.551
+  angles 0 -18.608 0
+ }
+ {
+  coords 6134.285 184.827 7262.732
+  angles 0 -18.608 0
+ }
+}
+$grp SCR_IndestructibleEnvironmentalEntity : "{3EA83F7ADE809234}Prefabs/Rocks/Desert/Desert_Boulder_01.et" {
+ {
+  coords 6136.295 -1.305 7268.529
+ }
+ {
+  coords 6137.763 -1.603 7269.114
+ }
+}
+StaticModelEntity : "{732A335C72D8ADE2}Prefabs/Props/Military/Sandbags/Sandbag_01_bunker_burlap_foundation.et" {
+ coords 6132.873 185.101 7266.095
+ angles 0 -17.6 0
+ {
+  GenericEntity {
+   ID "5A532DCF487275B2"
+   coords 0 0.1 0
+  }
+  GenericEntity {
+   ID "5A532DCF78E7126A"
+   coords 0 0.1 0
+  }
+ }
+}
+GenericEntity : "{7492BAA88AFCEDCE}Prefabs/Compositions/Slotted/SlotFlatSmall/Bunker_S_USSR_01.et" {
+ coords 6034.022 145.274 7632.512
+ angles 0 9.543 0
+}
