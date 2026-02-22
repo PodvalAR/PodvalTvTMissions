@@ -84,6 +84,7 @@ $grp SCR_AIGroup : "{68FC03D21BDA0859}Prefabs/Groups/OPFOR/Ses_ChDKZ/Group_ChDKZ
    "{4EE9F8C57C51387B}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_MG_Random.et"
    "{345A828F3E94D377}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_AMG_Random.et"
    "{EF4167192ED8AFBF}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_GL_Random.et"
+   "{448EDFF48D360135}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_LAT_Random.et"
    "{41D4E0AF9842BE4B}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_AT_Random.et"
    "{3B679AE5DA875547}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_AAT_Random.et"
    "{448EDFF48D360135}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_LAT_Random.et"
@@ -149,6 +150,7 @@ $grp SCR_AIGroup : "{68FC03D21BDA0859}Prefabs/Groups/OPFOR/Ses_ChDKZ/Group_ChDKZ
    "{E0500D19D7A94BFD}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_SR_Random.et"
    "{4EE9F8C57C51387B}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_MG_Random.et"
    "{345A828F3E94D377}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_AMG_Random.et"
+   "{EF4167192ED8AFBF}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_GL_Random.et"
    "{41D4E0AF9842BE4B}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_AT_Random.et"
    "{3B679AE5DA875547}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_AAT_Random.et"
    "{448EDFF48D360135}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_LAT_Random.et"
@@ -204,10 +206,17 @@ $grp Vehicle : "{6CC21EBAB10F2A8A}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_uncover
   m_sAttachmentGroupName "spn1"
  }
 }
-Vehicle UAZ469_uncovered_Turret_Ses_ChDKZ_AGS_PAG1 : "{803B39BB65B4B731}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_uncovered_Turret_Ses_ChDKZ_AGS_PAG.et" {
- coords 12235.054 169.042 7289.223
- angles 4.324 -104.59 -1.124
- m_sAttachmentGroupName "nn"
+$grp Vehicle : "{803B39BB65B4B731}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_uncovered_Turret_Ses_ChDKZ_AGS_PAG.et" {
+ UAZ469_uncovered_Turret_Ses_ChDKZ_AGS_PAG1 {
+  coords 12235.054 169.042 7289.223
+  angles 4.324 -104.59 -1.124
+  m_sAttachmentGroupName "nn"
+ }
+ UAZ469_uncovered_Turret_Ses_ChDKZ_AGS_PAG2 {
+  coords 12249.854 167.526 7295.528
+  angles 7.161 -101.354 -0.528
+  m_sAttachmentGroupName "nn"
+ }
 }
 Vehicle UAZ469_uncovered_Turret_Ses_ChDKZ_AGS1 : "{B2EB0D29B109D2DC}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_uncovered_Turret_Ses_ChDKZ_AGS.et" {
  coords 8805.95 356.125 8998.434
