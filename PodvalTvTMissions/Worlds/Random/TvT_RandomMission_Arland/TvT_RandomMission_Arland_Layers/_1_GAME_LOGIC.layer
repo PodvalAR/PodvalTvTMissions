@@ -75,6 +75,7 @@ GenericEntity : "{574B8B93E7DDD76D}Prefabs/System/MissionRandomizer/GUB_Randomiz
        m_aGroupPrefabs {
         "{3CB180F292A52F34}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_Sniper.et"
        }
+       m_iNumVehicles 1
        m_aAttackVehiclePrefabs {
         "{F649585ABB3706C4}Prefabs/Vehicles/Wheeled/M151A2/M151A2.et"
        }
@@ -84,6 +85,7 @@ GenericEntity : "{574B8B93E7DDD76D}Prefabs/System/MissionRandomizer/GUB_Randomiz
        m_aGroupPrefabs {
         "{17491F97A5C9BBDF}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_Mechanized.et"
        }
+       m_iNumVehicles 1
        m_aAttackVehiclePrefabs {
         "{3312ADBF53A16DD8}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS.et"
        }
@@ -178,17 +180,48 @@ GenericEntity : "{574B8B93E7DDD76D}Prefabs/System/MissionRandomizer/GUB_Randomiz
      }
     }
    }
+   m_fMinDistanceBetweenLocations 500
+   m_fMaxDistanceBetweenLocations 5000
    m_MarkerMakerConfigPath "{978379BC297D10EE}Configs/MarkerMakerConfig_RHS.conf"
   }
  }
  coords 0 0 0
 }
 GenericEntity : "{6A3CDCFB475BF1B2}Prefabs/System/DRG_CriticalLossPrefab.et" {
+ components {
+  DRG_CriticalLossComponent "{65213D368F1BD792}" {
+   m_iTestingPlayerCounts 3
+   m_aLossLogics {
+    LossLogic "{68ACBC75B0B230CA}" {
+     m_aLosses {
+      FactionLoss "{68ACBC75BD128532}" {
+       m_iCriticalLossCount 1
+       m_sFactionKey "RHS_USAF"
+      }
+     }
+     m_bAdvanceGameStage 1
+     m_bUseMessage 1
+     m_bEventMessage "ВС США Понесли критические потери!"
+    }
+    LossLogic "{68ACBC75B05CD700}" {
+     m_aLosses {
+      FactionLoss "{68ACBC75BE9A436F}" {
+       m_iCriticalLossCount 1
+       m_sFactionKey "RHS_AFRF"
+      }
+     }
+     m_bAdvanceGameStage 1
+     m_bUseMessage 1
+     m_bEventMessage "ВС РФ Понесли критические потери!"
+    }
+   }
+  }
+ }
 }
 GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
  components {
   DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
-   m_iMissionTime 2700
+   m_iMissionTime 1800
   }
  }
 }
