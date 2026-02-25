@@ -1,0 +1,36 @@
+$grp Vehicle : "{03708F7E58BB7A53}Prefabs/Vehicles/Wheeled/M998/M1151_armed_M2HB.et" {
+ M1151_armed_M2HB3 {
+  coords 4091.685 213.538 7587.208
+  angles 0.597 -149.98 -1.033
+ }
+ M1151_armed_M2HB4 {
+  coords 3286.063 231.515 8328.864
+  angles -1.468 -149.943 -2.227
+ }
+ M1151_armed_M2HB2 {
+  coords 3307.223 206.687 7439.858
+  angles 0 -149.943 0
+ }
+}
+$grp Vehicle : "{3312ADBF53A16DD8}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS.et" {
+ LAV25_RHS1 {
+  coords 3263.572 232.687 8296.894
+  angles 0 -46.486 0
+  m_sAttachmentGroupName "sq"
+ }
+ LAV25_RHS2 {
+  components {
+   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+    FuelNodes {
+     SCR_FuelNode "{5622A70CD4036C5A}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+    }
+   }
+  }
+  coords 3292.299 223.223 8152.983
+  angles 0 148.514 0
+  m_sAttachmentGroupName "sq"
+ }
+}
