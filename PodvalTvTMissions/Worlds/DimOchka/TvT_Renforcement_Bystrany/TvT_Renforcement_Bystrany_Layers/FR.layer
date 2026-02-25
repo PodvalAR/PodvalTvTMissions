@@ -1,0 +1,173 @@
+$grp SCR_AIGroup : "{198852073E7B5D17}Prefabs/Groups/BLUFOR/French Army/dim_FR_Infantry_Squad.et" {
+ raz2 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A65926CDAA3}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 3287.653 208.271 7434.129
+  angles 0 142.846 0
+  m_aUnitPrefabSlots {
+   "{76C6998F9AF9A21C}Prefabs/Characters/Factions/BLUFOR/FR_Army/Summer/dim_FR_SL.et"
+   "{E58783C62ADEAE8B}Prefabs/Characters/Factions/BLUFOR/FR_Army/Summer/dim_FR_Marksman.et"
+   "{710163DEFC7F18DF}Prefabs/Characters/Factions/BLUFOR/FR_Army/Summer/dim_FR_TL.et"
+   "{1C681EAB667ACE5F}Prefabs/Characters/Factions/BLUFOR/FR_Army/Summer/dim_FR_SMAW.et"
+   "{B49C676B5F95ADEE}Prefabs/Characters/Factions/BLUFOR/FR_Army/Summer/dim_FR_Light_AT.et"
+   "{710163DEFC7F18DF}Prefabs/Characters/Factions/BLUFOR/FR_Army/Summer/dim_FR_TL.et"
+   "{4959B68AC63214EC}Prefabs/Characters/Factions/BLUFOR/FR_Army/Summer/dim_FR_MG.et"
+   "{169B16B15FCA6925}Prefabs/Characters/Factions/BLUFOR/FR_Army/Summer/dim_FR_GL.et"
+  }
+ }
+ raz3 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A65926CDAA3}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 3298.631 208.271 7442.448
+  angles 0 142.846 0
+ }
+ raz4 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A65926CDAA3}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 3
+   }
+  }
+  coords 3308.935 208.271 7450.256
+  angles 0 142.846 0
+ }
+ dva2 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A65926CDAA3}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 4811.137 164.88 8152.513
+  angles 0 157.722 0
+ }
+ dva3 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A65926CDAA3}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 2
+   }
+  }
+  coords 4799.971 165.45 8149.564
+  angles 0 157.722 0
+ }
+}
+$grp Vehicle : "{2834E391EC6FC919}Prefabs/Vehicles/Land_Vehicles/Wheeled_Vehicles/VBCI/VBCI_Dragar_CE.et" {
+ VBCI_Dragar_CE1 {
+  coords 3277.428 206.688 7421.224
+  angles 0 -125.189 0
+  m_sAttachmentGroupName "raz"
+ }
+ VBCI_Dragar_CE2 {
+  coords 4832.633 163.165 8149.922
+  angles -4.294 122.285 0.105
+  m_sAttachmentGroupName "dva"
+ }
+}
+SCR_AIGroup hq : "{3341C8E42D86A181}Prefabs/Groups/BLUFOR/French Army/dim_FR_HQ.et" {
+ coords 3268.481 206.687 7419.626
+ angles 0 142.101 0
+}
+Vehicle VBL_Unarmed_AANF1_CCE1 : "{338B56912EB63330}Prefabs/Vehicles/Land_Vehicles/Wheeled_Vehicles/VBL/VBL_Unarmed_AANF1_CCE.et" {
+ coords 3269.858 206.661 7416.21
+ angles 0 -124.433 0
+ m_sAttachmentGroupName "hq"
+}
+$grp Vehicle : "{49B154E85296FAD8}Prefabs/Vehicles/Land_Vehicles/Wheeled_Vehicles/VBL/VBL_Armed_AANF1_CE.et" {
+ VBL_Armed_AANF1_CE1 {
+  coords 4057.53 278.033 5703.377
+  angles 3.561 95.33 0.332
+  m_sAttachmentGroupName "rec"
+ }
+ VBL_Armed_AANF1_CE2 {
+  coords 4051.009 277.657 5704.588
+  angles 3.482 103.232 0.818
+  m_sAttachmentGroupName "rec"
+ }
+ VBL_Armed_AANF1_CE3 {
+  coords 4036.984 276.853 5708.004
+  angles 2.651 110.243 -0.294
+  m_sAttachmentGroupName "rec2"
+ }
+ VBL_Armed_AANF1_CE4 {
+  coords 4043.31 277.207 5706.008
+  angles 3.494 102.339 0.764
+  m_sAttachmentGroupName "rec2"
+ }
+}
+$grp SCR_AIGroup : "{78152E1B5F9F08ED}Prefabs/Groups/BLUFOR/French Army/dim_FR_Recon.et" {
+ rec {
+  components {
+   PS_GroupCallsignAssigner "{68B17A65926CDAA3}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 4046.679 277.362 5700.199
+  angles 0 10.13 0
+ }
+ rec2 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A65926CDAA3}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 1
+   }
+  }
+  coords 4039.558 277.362 5702.399
+  angles 0 23.25 0
+ }
+}
+$grp Vehicle : "{A5019E4548F81453}Prefabs/Vehicles/Land_Vehicles/Wheeled_Vehicles/GBC180/CCE/GBC180_CCE_MK2_Transport.et" {
+ GBC180_CCE_MK2_Transport1 {
+  coords 3287.431 206.687 7428.678
+  angles 0 -125.985 0
+  m_sAttachmentGroupName "raz2"
+ }
+ GBC180_CCE_MK2_Transport2 {
+  coords 3298.052 206.687 7436.391
+  angles 0 -125.985 0
+  m_sAttachmentGroupName "raz3"
+ }
+ GBC180_CCE_MK2_Transport3 {
+  coords 3308.586 206.687 7444.041
+  angles 0 -125.985 0
+  m_sAttachmentGroupName "raz4"
+ }
+ GBC180_CCE_MK2_Transport4 {
+  coords 4797.056 165.804 8145.151
+  angles -4.9 72.437 0.302
+  m_sAttachmentGroupName "dva3"
+ }
+ GBC180_CCE_MK2_Transport5 {
+  coords 4810.626 164.843 8149.445
+  angles -4.9 72.437 0.302
+  m_sAttachmentGroupName "dva2"
+ }
+}
+$grp SCR_AIGroup : "{D65D7A651C768707}Prefabs/Groups/BLUFOR/French Army/dim_FR_Infantry_Squad_Motorized.et" {
+ raz {
+  components {
+   PS_GroupCallsignAssigner "{68B17A6595C688DD}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 3278.917 206.687 7427.539
+  angles 0 142.574 0
+ }
+ dva {
+  components {
+   PS_GroupCallsignAssigner "{68B17A6595C688DD}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 4828.456 164.216 8157.014
+  angles 0 163.986 0
+ }
+}
