@@ -1,56 +1,343 @@
-GUB_DefendPointEntity : "{C7CE0DC3D5144B7D}Prefabs/System/MissionRandomizer/DefendPointEntity.et" {
- coords 2785.856 74.184 1654.976
- angles 0 0 0
- m_sFlagName "FLAG_ARLEVILE"
+$grp GUB_DefendPointEntity : "{C7CE0DC3D5144B7D}Prefabs/System/MissionRandomizer/DefendPointEntity.et" {
  {
-  $grp GUB_SpawnPointEntity : "{0DCCBC83322A0A0D}Prefabs/System/MissionRandomizer/SpawnPointEntity.et" {
-   Squad_1 {
-    coords 31.851 -1.332 22.491
-    angles 0 -120.054 0
-    m_iCompanyCallsign 1
+  coords 2785.856 74.184 1654.976
+  angles 0 0 0
+  m_sFlagName "FLAG_ARLEVILE"
+  {
+   $grp GUB_SpawnPointEntity : "{0DCCBC83322A0A0D}Prefabs/System/MissionRandomizer/SpawnPointEntity.et" {
+    Squad_1 {
+     coords 31.851 -1.331 22.491
+     angles 0 -120.054 0
+     m_iCompanyCallsign 1
+    }
+    Squad_2 {
+     coords -23.045 3.191 -1.459
+     angles 0 -135.57 0
+     m_iCompanyCallsign 1
+     m_iSquadCallsign 1
+    }
+    Recon_2 {
+     coords 12.925 -0.209 -32.077
+     angles 0 -28.876 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+     m_iSquadCallsign 1
+    }
+    Recon_1 {
+     coords -8.527 1.104 -41.327
+     angles 0 -19.496 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+    }
+    Recon_3 {
+     coords 36.178 -1.026 -19.09
+     angles 0 -28.876 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+     m_iSquadCallsign 2
+    }
+    Motorized_1 {
+     coords 66.243 -2.094 -2.847
+     angles 0 -30.229 0
+     m_eGroupType Motorized
+     m_iCompanyCallsign 2
+    }
+    Commander_1 {
+     coords 2.674 -0.268 21.326
+     angles 0 157.518 0
+     m_eGroupType Command
+    }
+    Squad_3 {
+     coords 10.614 0.391 -65.529
+     angles 0 154.31 0
+     m_iCompanyCallsign 1
+     m_iSquadCallsign 2
+    }
    }
-   Squad_2 {
-    coords -23.045 3.087 -1.459
-    angles 0 -135.57 0
-    m_iCompanyCallsign 1
-    m_iSquadCallsign 1
+  }
+ }
+ {
+  coords 1374.204 36.528 2383.094
+  angles 0 0 0
+  m_sFlagName "FLAG_MILITARY_2"
+  {
+   $grp GUB_SpawnPointEntity : "{0DCCBC83322A0A0D}Prefabs/System/MissionRandomizer/SpawnPointEntity.et" {
+    Squad_4 {
+     coords -5.378 0.491 11.41
+     angles 0 -128.909 0
+     m_iCompanyCallsign 1
+    }
+    Squad_5 {
+     coords -1.642 0.732 37.31
+     angles 0 -124.997 0
+     m_iCompanyCallsign 1
+     m_iSquadCallsign 1
+    }
+    Recon_4 {
+     coords -53.375 1.961 -61.744
+     angles 0 -39.777 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+     m_iSquadCallsign 1
+    }
+    Recon_5 {
+     coords -62.943 1.965 -49.925
+     angles 0 -36.771 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+    }
+    Recon_6 {
+     coords 29.296 -0.52 -42.024
+     angles 0 -88.631 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+     m_iSquadCallsign 2
+    }
+    Motorized_2 {
+     coords -28.174 0.099 -22.492
+     angles 0 -38.494 0
+     m_eGroupType Motorized
+     m_iCompanyCallsign 2
+    }
+    Commander_2 {
+     coords 27.091 -0.584 3.176
+     angles 0 -119.403 0
+     m_eGroupType Command
+    }
+    Squad_6 {
+     coords 5.905 -0.186 -28.059
+     angles 0 90.421 0
+     m_iCompanyCallsign 1
+     m_iSquadCallsign 2
+    }
    }
-   Recon_2 {
-    coords 12.925 -0.209 -32.077
-    angles 0 -28.876 0
-    m_eGroupType Recon
-    m_iCompanyCallsign 3
-    m_iSquadCallsign 1
+  }
+ }
+ {
+  coords 1311.709 39.82 2939.418
+  angles 0 0 0
+  m_sFlagName "FLAG_MILITARY_3"
+  {
+   $grp GUB_SpawnPointEntity : "{0DCCBC83322A0A0D}Prefabs/System/MissionRandomizer/SpawnPointEntity.et" {
+    Squad_7 {
+     coords 48.503 -2.15 41.913
+     angles 0 165.07 0
+     m_iCompanyCallsign 1
+    }
+    Squad_8 {
+     coords -50.278 -2.414 7.95
+     angles 0 78.826 0
+     m_iCompanyCallsign 1
+     m_iSquadCallsign 1
+    }
+    Recon_7 {
+     coords -42.913 -4.38 44.493
+     angles 0 77.67 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+     m_iSquadCallsign 1
+    }
+    Recon_8 {
+     coords 61.907 -1.82 -22.09
+     angles 0 166.831 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+    }
+    Recon_9 {
+     coords 16.692 -1.82 -54.695
+     angles 0 163.988 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+     m_iSquadCallsign 2
+    }
+    Motorized_3 {
+     coords -14.411 -1.82 -50.415
+     angles 0 -103.897 0
+     m_eGroupType Motorized
+     m_iCompanyCallsign 2
+    }
+    Commander_3 {
+     coords 39.443 -1.886 22.774
+     angles 0 -102.004 0
+     m_eGroupType Command
+    }
+    Squad_9 {
+     coords -46.845 -1.82 -20.232
+     angles 0 76.074 0
+     m_iCompanyCallsign 1
+     m_iSquadCallsign 2
+    }
    }
-   Recon_1 {
-    coords -8.527 1.103 -41.327
-    angles 0 -19.496 0
-    m_eGroupType Recon
-    m_iCompanyCallsign 3
+  }
+ }
+ {
+  coords 1359.246 8.472 1852.969
+  angles 0 0 0
+  m_sFlagName "FLAG_MILITARY_1"
+  {
+   $grp GUB_SpawnPointEntity : "{0DCCBC83322A0A0D}Prefabs/System/MissionRandomizer/SpawnPointEntity.et" {
+    Squad_10 {
+     coords -30.49 0.116 -26.742
+     angles 0 10.938 0
+     m_iCompanyCallsign 1
+    }
+    Squad_11 {
+     coords 58.94 5.319 -30.949
+     angles 0 -43.584 0
+     m_iCompanyCallsign 1
+     m_iSquadCallsign 1
+    }
+    Recon_10 {
+     coords -49.906 2.239 10.098
+     angles 0 -47.694 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+     m_iSquadCallsign 1
+    }
+    Recon_11 {
+     coords 58.221 3.161 42.023
+     angles 0 -174.651 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+    }
+    Recon_12 {
+     coords -492.231 -1.974 161.974
+     angles 0 85.556 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+     m_iSquadCallsign 2
+    }
+    Motorized_4 {
+     coords 77.467 2.318 42.408
+     angles 0 168.362 0
+     m_eGroupType Motorized
+     m_iCompanyCallsign 2
+    }
+    Commander_4 {
+     coords 56.898 2.407 6.848
+     angles 0 -65.094 0
+     m_eGroupType Command
+    }
+    Squad_12 {
+     coords -9.557 4.05 42.756
+     angles 0 7.313 0
+     m_iCompanyCallsign 1
+     m_iSquadCallsign 2
+    }
    }
-   Recon_3 {
-    coords 36.178 -1.026 -19.09
-    angles 0 -28.876 0
-    m_eGroupType Recon
-    m_iCompanyCallsign 3
-    m_iSquadCallsign 2
+  }
+ }
+ {
+  coords 3144.459 11.473 2775.158
+  angles 0 0 0
+  m_sFlagName "FLAG_BEUREGARD"
+  {
+   $grp GUB_SpawnPointEntity : "{0DCCBC83322A0A0D}Prefabs/System/MissionRandomizer/SpawnPointEntity.et" {
+    Squad_13 {
+     coords -51.648 4.438 -21.883
+     angles 0 131.342 0
+     m_iCompanyCallsign 1
+    }
+    Squad_14 {
+     coords 42.443 -0.967 36.876
+     angles 0 -43.584 0
+     m_iCompanyCallsign 1
+     m_iSquadCallsign 1
+    }
+    Recon_13 {
+     coords -11.672 2.803 -62.368
+     angles 0 -54.504 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+     m_iSquadCallsign 1
+    }
+    Recon_14 {
+     coords -39.261 -0.289 71.013
+     angles 0 36.216 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+    }
+    Recon_15 {
+     coords -24.81 -0.067 60.631
+     angles 0 37.045 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+     m_iSquadCallsign 2
+    }
+    Motorized_5 {
+     coords 1.609 0.185 -9.208
+     angles 0 -50.482 0
+     m_eGroupType Motorized
+     m_iCompanyCallsign 2
+    }
+    Commander_5 {
+     coords 4.186 0.012 9.829
+     angles 0 132.402 0
+     m_eGroupType Command
+    }
+    Squad_15 {
+     coords -42.896 0.405 37.125
+     angles 0 131.627 0
+     m_iCompanyCallsign 1
+     m_iSquadCallsign 2
+    }
    }
-   Motorized_1 {
-    coords 66.243 -2.094 -2.847
-    angles 0 -30.229 0
-    m_eGroupType Motorized
-    m_iCompanyCallsign 2
-   }
-   Commander_1 {
-    coords 2.674 -0.268 21.326
-    angles 0 157.518 0
-    m_eGroupType Command
-   }
-   Squad_3 {
-    coords 10.614 0.391 -65.529
-    angles 0 154.31 0
-    m_iCompanyCallsign 1
-    m_iSquadCallsign 2
+  }
+ }
+ {
+  coords 1988.846 51.375 3007.469
+  angles 0 0 0
+  m_sFlagName "FLAG_KOROVNIK"
+  {
+   $grp GUB_SpawnPointEntity : "{0DCCBC83322A0A0D}Prefabs/System/MissionRandomizer/SpawnPointEntity.et" {
+    Squad_16 {
+     coords -15.398 -0.072 -1.639
+     angles 0 -158.655 0
+     m_iCompanyCallsign 1
+    }
+    Squad_17 {
+     coords 32.922 -0.024 52.078
+     angles 0 -156.359 0
+     m_iCompanyCallsign 1
+     m_iSquadCallsign 1
+    }
+    Recon_16 {
+     coords 50.122 0.328 -40.045
+     angles 0 -134.71 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+     m_iSquadCallsign 1
+    }
+    Recon_17 {
+     coords -66.14 -0.875 13.24
+     angles 0 26.592 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+    }
+    Recon_18 {
+     coords 204.649 -40.008 180.568
+     angles 0 -133.172 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+     m_iSquadCallsign 2
+    }
+    Motorized_6 {
+     coords -8.228 0.195 0.187
+     angles 0 -66.314 0
+     m_eGroupType Motorized
+     m_iCompanyCallsign 2
+    }
+    Commander_6 {
+     coords 0.607 0 1.84
+     angles 0 -159.809 0
+     m_eGroupType Command
+    }
+    Squad_18 {
+     coords 22.471 0.031 -18.102
+     angles 0 -156.902 0
+     m_iCompanyCallsign 1
+     m_iSquadCallsign 2
+    }
    }
   }
  }
