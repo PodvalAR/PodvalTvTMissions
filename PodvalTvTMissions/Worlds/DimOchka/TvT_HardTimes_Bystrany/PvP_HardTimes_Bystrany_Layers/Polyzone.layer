@@ -1,0 +1,186 @@
+$grp PolylineShapeEntity {
+ capture1 {
+  components {
+   PS_PolyZone "{68A3236AE4A3C825}" {
+    m_mPolygonTexture "{62F4404928D33DB5}UI/layouts/Textures/Grid1b.edds"
+    m_cPolygonColor 0.001 0.502 0 1
+    m_fPolygonUVScale 0.44
+    m_mPolygonTextureBorder ""
+    m_cPolygonBorderColor 0.001 0.503 0 1
+    m_fPolygonBorderWidth 2
+    m_aVisibleForFactions {
+     "RHS_USAF"
+     "RHS_AFRF"
+     ""
+    }
+   }
+  }
+  coords 3267.931 228.613 8247.499
+  Points {
+   ShapePoint "{68A3236ACB5C1B43}" {
+    Position 0 0 0
+   }
+   ShapePoint "{68A3236ACB5C3475}" {
+    Position -19.604 -2.112 -28.233
+   }
+   ShapePoint "{68A3236AD61EFCAB}" {
+    Position -44.441 -1.091 -10.632
+   }
+   ShapePoint "{68A3236AD35018EB}" {
+    Position -77.205 3.771 23.821
+   }
+   ShapePoint "{68A3236ADCA8A61C}" {
+    Position -57.254 4.211 42.934
+   }
+   ShapePoint "{68A3236ADFE9FCAA}" {
+    Position -43.587 3.172 33.163
+   }
+   ShapePoint "{68A3236ADE2F0397}" {
+    Position -23.392 2 20.319
+   }
+   ShapePoint "{68A3236AD954FE29}" {
+    Position -1.953 0.15 1.901
+   }
+  }
+  IsClosed 1
+ }
+ capture2 {
+  components {
+   PS_PolyZone "{68A3236B18F55F32}" {
+    m_mPolygonTexture "{62F4404928D33DB5}UI/layouts/Textures/Grid1b.edds"
+    m_cPolygonColor 0 0.125 0.502 1
+    m_fPolygonUVScale 0.44
+    m_mPolygonTextureBorder ""
+    m_cPolygonBorderColor 0 0.125 0.502 1
+    m_fPolygonBorderWidth 2
+    m_aVisibleForFactions {
+     "RHS_USAF"
+     "RHS_AFRF"
+     ""
+    }
+   }
+  }
+  coords 3258.189 230.421 8269.151
+  Points {
+   ShapePoint "{68A3236AFA752CFC}" {
+    Position 0 0 0
+   }
+   ShapePoint "{68A3236AFA75668E}" {
+    Position 25.25 0.317 37.57
+   }
+   ShapePoint "{68A3236B0F10F2B8}" {
+    Position -22.229 3.348 69.678
+   }
+   ShapePoint "{68A3236B0969B68C}" {
+    Position -47.768 2.737 31.258
+   }
+  }
+  IsClosed 1
+ }
+}
+$grp GenericEntity : "{3D78D7D606FF9818}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_NoCapture.et" {
+ flag1 {
+  coords 3241.102 241.684 8305.077
+  angles 0 28.188 0
+ }
+ flag2 {
+  coords 3230.792 241.684 8310.603
+  angles 0 28.188 0
+ }
+ flag3 {
+  coords 3241.22 241.684 8330.684
+  angles 0 28.188 0
+ }
+ flag4 {
+  coords 3251.585 241.684 8325.129
+  angles 0 28.188 0
+ }
+ flagus1 {
+  coords 3256.769 236.363 8244.14
+  angles 0 33.932 0
+ }
+ flagus2 {
+  coords 3240.432 236.363 8255.652
+  angles 0 33.932 0
+ }
+ flagus3 {
+  coords 3233.455 236.363 8245.827
+  angles 0 33.932 0
+ }
+ flagus4 {
+  coords 3249.817 236.363 8234.264
+  angles 0 33.932 0
+ }
+}
+$grp GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ {
+  components {
+   GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+    m_aControlLogics {
+     GUB_ZoneControlLogic "{68A3236B7FECA942}" {
+      m_Timer GUB_ZoneControlTimer "{68A3236B788D0B74}" {
+       timeToComplete 150
+      }
+      m_ZoneController GUB_ZoneController "{68A3236B7B47DD3E}" {
+       m_sZoneEntityName "capture1"
+      }
+      m_FlagController GUB_FlagController "{68A3236B8406C4A9}" {
+       m_aFlagNames {
+        "flag1"
+        "flag2"
+        "flag3"
+        "flag4"
+       }
+       m_fStartFactionKey "RHS_USAF"
+       m_fEndFactionKey "RHS_AFRF"
+      }
+      m_aConditions {
+       GUB_ZoneControlBetweenFactionsCondition "{68A3236B8A96EF7C}" {
+        m_sFirstFactionKey "RHS_AFRF"
+        m_sSecondFactionKey "RHS_USAF"
+        m_fComparisonMultiplier 2
+        m_iOperator GREATER
+       }
+      }
+     }
+    }
+   }
+  }
+  coords 2850.676 237.166 8145.275
+ }
+ {
+  components {
+   GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+    m_aControlLogics {
+     GUB_ZoneControlLogic "{68A3236B7FECA942}" {
+      m_Timer GUB_ZoneControlTimer "{68A3236B788D0B74}" {
+       timeToComplete 150
+      }
+      m_ZoneController GUB_ZoneController "{68A3236B7B47DD3E}" {
+       m_sZoneEntityName "capture2"
+      }
+      m_FlagController GUB_FlagController "{68A3236B8406C4A9}" {
+       m_aFlagNames {
+        "flagus1"
+        "flagus2"
+        "flagus3"
+        "flagus4"
+       }
+       m_fStartFactionKey "RHS_USAF"
+       m_fEndFactionKey "RHS_AFRF"
+      }
+      m_aConditions {
+       GUB_ZoneControlBetweenFactionsCondition "{68A3236B8A96EF7C}" {
+        m_sFirstFactionKey "RHS_AFRF"
+        m_sSecondFactionKey "RHS_USAF"
+        m_fComparisonMultiplier 2
+        m_iOperator GREATER
+       }
+      }
+     }
+    }
+   }
+  }
+  coords 2880.412 237.166 8105.847
+ }
+}

@@ -1,0 +1,474 @@
+SCR_MapEntity MapEntity_Bystrany1 : "{EDFC9BFB5D9F2241}Prefabs/Props/MapEntity_Bystrany.et" {
+ coords 6183.547 207.002 8851.12
+}
+SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
+ coords 2234.382 295.466 8196.879
+}
+PerceptionManager PerceptionManager1 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 2102.807 296.19 8386.807
+}
+PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
+ coords 2079.048 307.914 8266.744
+}
+$grp SCR_AIGroup : "{000CD338713F2B5A}Prefabs/AI/Groups/Group_Base.et" {
+ {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "1"
+   }
+   PS_GroupCallsignAssigner "{68B17A4378FC6401}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 4093.129 213.531 7591.708
+  angles 0 180 0
+  m_faction "RHS_USAF"
+  m_aUnitPrefabSlots {
+   "{33B313818C46457C}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/Force_Recon/dim_USMC_TL.et"
+   "{7015A051DE2535D8}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/Force_Recon/dim_USMC_Assist_TL.et"
+   "{E041F94507C9B7B6}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/Force_Recon/dim_USMC_FR_Rifleman_2.et"
+   "{6BB1EF93AC30DDF2}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/Force_Recon/dim_USMC_FR_Rifleman.et"
+   "{04446BD59A4B351C}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/Force_Recon/dim_USMC_FR_Sapper.et"
+  }
+  m_sCustomNameSet "Force Recon"
+ }
+ sq {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "1"
+   }
+   PS_GroupCallsignAssigner "{68B17A4378FC6401}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 3250.526 232.687 8300.915
+  angles 0 34.82 0
+  m_faction "RHS_USAF"
+  m_aUnitPrefabSlots {
+   "{4E431B11CAB778D4}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Demi-season/dim_USMC_DS_SL.et"
+   "{4984E140AC31C217}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Demi-season/dim_USMC_DS_TL.et"
+   "{71DC3414967CCE24}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Demi-season/dim_USMC_DS_MG.et"
+   "{2E1E942F0F84B3ED}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Demi-season/dim_USMC_DS_GL.et"
+   "{C4BD94682D983BA2}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Demi-season/dim_USMC_DS_Rifleman_2.et"
+   "{DEB7F0EC46C3D5C9}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Demi-season/dim_USMC_DS_TL_2.et"
+   "{C0762B2AADBAC8F0}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/dim_Role_Character_USAF_USMC_CrewCommander-Gunner.et"
+   "{7721C4665CD6C0D3}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/dim_Role_Character_USAF_USMC_CrewDriver.et"
+  }
+  m_sCustomNameSet "Отряд USMC"
+ }
+ sq2 {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "1"
+   }
+   PS_GroupCallsignAssigner "{68B17A4378FC6401}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 3256.483 232.687 8315.576
+  angles 0 124.82 0
+  m_faction "RHS_USAF"
+  m_aUnitPrefabSlots {
+   "{4E431B11CAB778D4}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Demi-season/dim_USMC_DS_SL.et"
+   "{4984E140AC31C217}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Demi-season/dim_USMC_DS_TL.et"
+   "{71DC3414967CCE24}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Demi-season/dim_USMC_DS_MG.et"
+   "{2E1E942F0F84B3ED}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Demi-season/dim_USMC_DS_GL.et"
+   "{C4BD94682D983BA2}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Demi-season/dim_USMC_DS_Rifleman_2.et"
+   "{DEB7F0EC46C3D5C9}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Demi-season/dim_USMC_DS_TL_2.et"
+   "{2E1E942F0F84B3ED}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Demi-season/dim_USMC_DS_GL.et"
+   "{9519F4B8F453C528}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Demi-season/dim_USMC_DS_Medic.et"
+  }
+  m_sCustomNameSet "Отряд USMC"
+ }
+ sq3 {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "1"
+   }
+   PS_GroupCallsignAssigner "{68B17A4378FC6401}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 3291.702 231.189 8318.375
+  angles 0 -146.933 0
+  m_faction "RHS_USAF"
+  m_aUnitPrefabSlots {
+   "{4E431B11CAB778D4}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Demi-season/dim_USMC_DS_SL.et"
+   "{4984E140AC31C217}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Demi-season/dim_USMC_DS_TL.et"
+   "{71DC3414967CCE24}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Demi-season/dim_USMC_DS_MG.et"
+   "{2E1E942F0F84B3ED}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Demi-season/dim_USMC_DS_GL.et"
+   "{C4BD94682D983BA2}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Demi-season/dim_USMC_DS_Rifleman_2.et"
+   "{DEB7F0EC46C3D5C9}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Demi-season/dim_USMC_DS_TL_2.et"
+   "{2E1E942F0F84B3ED}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Demi-season/dim_USMC_DS_GL.et"
+   "{9519F4B8F453C528}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Demi-season/dim_USMC_DS_Medic.et"
+  }
+  m_sCustomNameSet "Отряд USMC"
+ }
+ sq4 {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "1"
+   }
+   PS_GroupCallsignAssigner "{68B17A4378FC6401}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 3249.204 229.656 8258.998
+  angles 0 -146.933 0
+  m_faction "RHS_USAF"
+  m_aUnitPrefabSlots {
+   "{4E431B11CAB778D4}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Demi-season/dim_USMC_DS_SL.et"
+   "{4984E140AC31C217}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Demi-season/dim_USMC_DS_TL.et"
+   "{71DC3414967CCE24}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Demi-season/dim_USMC_DS_MG.et"
+   "{2E1E942F0F84B3ED}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Demi-season/dim_USMC_DS_GL.et"
+   "{C4BD94682D983BA2}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Demi-season/dim_USMC_DS_Rifleman_2.et"
+   "{DEB7F0EC46C3D5C9}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Demi-season/dim_USMC_DS_TL_2.et"
+   "{2E1E942F0F84B3ED}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Demi-season/dim_USMC_DS_GL.et"
+   "{FB6383CF81BAC49B}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Demi-season/dim_USMC_DS_AT.et"
+  }
+  m_sCustomNameSet "Отряд USMC"
+ }
+ {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "1"
+   }
+   PS_GroupCallsignAssigner "{68B17A4378FC6401}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 3306.637 206.687 7445.145
+  angles 0 135 0
+  m_faction "RHS_USAF"
+  m_aUnitPrefabSlots {
+   "{33B313818C46457C}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/Force_Recon/dim_USMC_TL.et"
+   "{7015A051DE2535D8}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/Force_Recon/dim_USMC_Assist_TL.et"
+   "{E041F94507C9B7B6}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/Force_Recon/dim_USMC_FR_Rifleman_2.et"
+   "{6BB1EF93AC30DDF2}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/Force_Recon/dim_USMC_FR_Rifleman.et"
+   "{04446BD59A4B351C}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/Force_Recon/dim_USMC_FR_Sapper.et"
+  }
+  m_sCustomNameSet "Force Recon"
+ }
+ {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "1"
+   }
+   PS_GroupCallsignAssigner "{68B17A4378FC6401}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 2
+   }
+  }
+  coords 3664.041 281.251 8908.717
+  angles 0 165 0
+  m_faction "RHS_USAF"
+  m_aUnitPrefabSlots {
+   "{33B313818C46457C}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/Force_Recon/dim_USMC_TL.et"
+   "{7015A051DE2535D8}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/Force_Recon/dim_USMC_Assist_TL.et"
+   "{E041F94507C9B7B6}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/Force_Recon/dim_USMC_FR_Rifleman_2.et"
+   "{6BB1EF93AC30DDF2}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/Force_Recon/dim_USMC_FR_Rifleman.et"
+   "{04446BD59A4B351C}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/Force_Recon/dim_USMC_FR_Sapper.et"
+  }
+  m_sCustomNameSet "Force Recon"
+ }
+ {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "1"
+   }
+   PS_GroupCallsignAssigner "{68B17A4378FC6401}" {
+   }
+  }
+  coords 3250.26 232.687 8306.362
+  angles 0 120 0
+  m_faction "RHS_USAF"
+  m_aUnitPrefabSlots {
+   "{E2AF46B0809FBCC0}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/dim_Role_Character_USAF_USMC_Officer.et"
+  }
+  m_sCustomNameSet "Командир США"
+ }
+ sq5 {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "1"
+   }
+   PS_GroupCallsignAssigner "{68B17A4378FC6401}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 2
+   }
+  }
+  coords 3497.018 223.742 8188.669
+  angles 0 120.476 0
+  m_faction "RHS_USAF"
+  m_aUnitPrefabSlots {
+   "{4E431B11CAB778D4}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Demi-season/dim_USMC_DS_SL.et"
+   "{4984E140AC31C217}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Demi-season/dim_USMC_DS_TL.et"
+   "{71DC3414967CCE24}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Demi-season/dim_USMC_DS_MG.et"
+   "{2E1E942F0F84B3ED}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Demi-season/dim_USMC_DS_GL.et"
+   "{C4BD94682D983BA2}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Demi-season/dim_USMC_DS_Rifleman_2.et"
+   "{DEB7F0EC46C3D5C9}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Demi-season/dim_USMC_DS_TL_2.et"
+   "{2E1E942F0F84B3ED}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Demi-season/dim_USMC_DS_GL.et"
+   "{FB6383CF81BAC49B}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Demi-season/dim_USMC_DS_AT.et"
+  }
+  m_sCustomNameSet "Отряд USMC"
+ }
+ vvdv {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "1"
+   }
+   PS_GroupCallsignAssigner "{68B17A4378FC6401}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 5885.516 255.927 5870.94
+  angles 0 15 0
+  m_faction "RHS_AFRF"
+  m_aUnitPrefabSlots {
+   "{A467DC7A0F007B21}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_SL.et"
+   "{D97F30826A9347B8}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_SR.et"
+   "{FBD41570B0C083C3}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_MG_Opt.et"
+   "{DFA2A3CA1EA36572}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Rifleman.et"
+   "{EEC06B86B0C9154F}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Rifleman_2.et"
+   "{4A62BF3DB9E7E3A8}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_RPO.et"
+   "{F8F5DF9F36B961A6}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_CC.et"
+   "{C71B7D7DEAD5B6F3}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Crew.et"
+  }
+  m_sCustomNameSet "Отделение ВДВ"
+ }
+ vvdv2 {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "1"
+   }
+   PS_GroupCallsignAssigner "{68B17A4378FC6401}" {
+   }
+  }
+  coords 5881.162 255.888 5872.187
+  angles 0 15 0
+  m_faction "RHS_AFRF"
+  m_aUnitPrefabSlots {
+   "{7551E181CE4C6845}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Officer.et"
+  }
+  m_sCustomNameSet "Командир роты"
+ }
+ vvdv3 {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "1"
+   }
+   PS_GroupCallsignAssigner "{68B17A4378FC6401}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 5902.868 256.062 5866.445
+  angles 0 15 0
+  m_faction "RHS_AFRF"
+  m_aUnitPrefabSlots {
+   "{A467DC7A0F007B21}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_SL.et"
+   "{D97F30826A9347B8}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_SR.et"
+   "{FBD41570B0C083C3}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_MG_Opt.et"
+   "{DFA2A3CA1EA36572}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Rifleman.et"
+   "{EEC06B86B0C9154F}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Rifleman_2.et"
+   "{4A62BF3DB9E7E3A8}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_RPO.et"
+   "{F8F5DF9F36B961A6}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_CC.et"
+   "{C71B7D7DEAD5B6F3}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Crew.et"
+  }
+  m_sCustomNameSet "Отделение ВДВ"
+ }
+ vvdv4 {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "1"
+   }
+   PS_GroupCallsignAssigner "{68B17A4378FC6401}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 5918.719 256.25 5862.338
+  angles 0 15 0
+  m_faction "RHS_AFRF"
+  m_aUnitPrefabSlots {
+   "{A467DC7A0F007B21}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_SL.et"
+   "{D97F30826A9347B8}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_SR.et"
+   "{FBD41570B0C083C3}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_MG_Opt.et"
+   "{DFA2A3CA1EA36572}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Rifleman.et"
+   "{EEC06B86B0C9154F}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Rifleman_2.et"
+   "{4A62BF3DB9E7E3A8}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_RPO.et"
+   "{F8F5DF9F36B961A6}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_CC.et"
+   "{C71B7D7DEAD5B6F3}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Crew.et"
+  }
+  m_sCustomNameSet "Отделение ВДВ"
+ }
+ vvdv5 {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "1"
+   }
+   PS_GroupCallsignAssigner "{68B17A4378FC6401}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 6557.515 222.916 9359.792
+  angles 0 15 0
+  m_faction "RHS_AFRF"
+  m_aUnitPrefabSlots {
+   "{A467DC7A0F007B21}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_SL.et"
+   "{D97F30826A9347B8}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_SR.et"
+   "{FBD41570B0C083C3}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_MG_Opt.et"
+   "{DFA2A3CA1EA36572}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Rifleman.et"
+   "{EEC06B86B0C9154F}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Rifleman_2.et"
+   "{E213D14B86B1CC6E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Rifleman_Scout.et"
+   "{7942754277E36531}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Scout_VSS.et"
+  }
+  m_sCustomNameSet "Отделение ВДВ"
+ }
+ vvdv6 {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "1"
+   }
+   PS_GroupCallsignAssigner "{68B17A4378FC6401}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 6569.608 222.916 9357.115
+  angles 0 15 0
+  m_faction "RHS_AFRF"
+  m_aUnitPrefabSlots {
+   "{A467DC7A0F007B21}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_SL.et"
+   "{D97F30826A9347B8}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_SR.et"
+   "{114744A4440DC76E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_AT.et"
+   "{082072AAD96B86C2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_AAT.et"
+   "{EEC06B86B0C9154F}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Rifleman_2.et"
+   "{E213D14B86B1CC6E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Rifleman_Scout.et"
+   "{7942754277E36531}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Scout_VSS.et"
+  }
+  m_sCustomNameSet "Отделение ВДВ"
+ }
+ vvdv7 {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "1"
+   }
+   PS_GroupCallsignAssigner "{68B17A4378FC6401}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 2
+   }
+  }
+  coords 6582.253 222.916 9352.888
+  angles 0 35.643 0
+  m_faction "RHS_AFRF"
+  m_aUnitPrefabSlots {
+   "{A467DC7A0F007B21}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_SL.et"
+   "{D97F30826A9347B8}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_SR.et"
+   "{114744A4440DC76E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_AT.et"
+   "{082072AAD96B86C2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_AAT.et"
+   "{EEC06B86B0C9154F}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Rifleman_2.et"
+   "{E213D14B86B1CC6E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Rifleman_Scout.et"
+   "{7942754277E36531}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Scout_VSS.et"
+  }
+  m_sCustomNameSet "Отделение ВДВ"
+ }
+ vvdv8 {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "1"
+   }
+   PS_GroupCallsignAssigner "{68B17A4378FC6401}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 7121.776 115.676 8345.959
+  angles 0 7.571 0
+  m_faction "RHS_AFRF"
+  m_aUnitPrefabSlots {
+   "{A467DC7A0F007B21}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_SL.et"
+   "{D97F30826A9347B8}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_SR.et"
+   "{114744A4440DC76E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_AT.et"
+   "{082072AAD96B86C2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_AAT.et"
+   "{FBD41570B0C083C3}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_MG_Opt.et"
+   "{DFA2A3CA1EA36572}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Rifleman.et"
+   "{DFA2A3CA1EA36572}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Rifleman.et"
+  }
+  m_sCustomNameSet "Отделение ВДВ"
+ }
+ vvdv9 {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "1"
+   }
+   PS_GroupCallsignAssigner "{68B17A4378FC6401}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 1
+   }
+  }
+  coords 7133.748 115.776 8344.479
+  angles 0 8.534 0
+  m_faction "RHS_AFRF"
+  m_aUnitPrefabSlots {
+   "{A467DC7A0F007B21}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_SL.et"
+   "{D97F30826A9347B8}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_SR.et"
+   "{114744A4440DC76E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_AT.et"
+   "{082072AAD96B86C2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_AAT.et"
+   "{FBD41570B0C083C3}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_MG_Opt.et"
+   "{DFA2A3CA1EA36572}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Rifleman.et"
+   "{DFA2A3CA1EA36572}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Rifleman.et"
+  }
+  m_sCustomNameSet "Отделение ВДВ"
+ }
+ vvdv10 {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "1"
+   }
+   PS_GroupCallsignAssigner "{68B17A4378FC6401}" {
+    m_iCompanyCallsign 4
+    m_iSquadCallsign 1
+   }
+  }
+  coords 5730.833 134.664 8249.102
+  angles 0 -143.763 0
+  m_faction "RHS_AFRF"
+  m_aUnitPrefabSlots {
+   "{11797C4A3AA0D968}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/dim_VDV_Scout_SL.et"
+   "{8FF29D9E23FC803E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/dim_VDV_Scout_SR.et"
+   "{CD755E631AA40A57}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/dim_VDV_Scout_MG.et"
+   "{B367CB24FE23575A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/dim_VDV_Scout_Rifleman_A545.et"
+   "{1BA31F07C6E31821}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/dim_VDV_Scout_Flame.et"
+   "{DE73858FC18DBB6A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/dim_VDV_Scout_VSSM.et"
+  }
+  m_sCustomNameSet "ДРГ"
+ }
+ vvdv11 {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "1"
+   }
+   PS_GroupCallsignAssigner "{68B17A4378FC6401}" {
+    m_iCompanyCallsign 4
+   }
+  }
+  coords 6219.484 205.153 8836.445
+  angles 0 -163.034 0
+  m_faction "RHS_AFRF"
+  m_aUnitPrefabSlots {
+   "{B0352DED7C922D46}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/Goblin/dim_VDV_Scout_SL_Goblin.et"
+   "{F7ACBE5E8FD7E6F3}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/Goblin/dim_VDV_Scout_SR_Goblin.et"
+   "{59154B82242F9575}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/Goblin/dim_VDV_Scout_MG_Goblin.et"
+   "{B93672749A2623AD}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/Goblin/dim_VDV_Scout_Rifleman_Goblin.et"
+   "{7B401E039F20A62B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/Goblin/dim_VDV_Scout_Flame_Goblin.et"
+   "{870A212A64167BED}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/Goblin/dim_VDV_Scout_VSS_Goblin.et"
+  }
+  m_sCustomNameSet "ДРГ"
+  m_bSetPlayable 1
+ }
+}
