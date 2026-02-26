@@ -1,0 +1,95 @@
+Vehicle UH1H_armed_gunship_empty1 : "{137DCF41459A89BE}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed_gunship_empty.et" {
+ coords 3260.533 2.002 2911.54
+ angles 0 149.809 0
+ m_sAttachmentGroupName "HE_400"
+ m_bEnableMoveOnFreeze 1
+}
+Vehicle LAV25_RHS1 : "{3312ADBF53A16DD8}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS.et" {
+ coords 3167.779 11.39 2810.53
+ angles 4.585 -132.622 0
+ m_sAttachmentGroupName "VH_111"
+}
+SCR_AIGroup : "{3CB180F292A52F34}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_Sniper.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+   m_iCompanyCallsign 3
+   m_iSquadCallsign 1
+  }
+ }
+ coords 3150.645 13.245 2727.876
+ angles 0 -55.469 0
+ m_iMaxMembers 1
+}
+SCR_AIGroup : "{3EECAF1E0650D775}Prefabs/Groups/BLUFOR/RHS_USAF/Recon/Group_RHS_USAF_Recon_Squad.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+   m_iCompanyCallsign 3
+  }
+ }
+ coords 3270.164 2 2900.736
+ angles 0 -32.662 0
+}
+SCR_AIGroup HE_400 : "{6981CA4A67B1A730}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_Heli.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+   m_iCompanyCallsign 4
+  }
+ }
+ coords 3267.135 2 2898.945
+ angles 0 -33.325 0
+}
+SCR_AIGroup HQ_000 : "{8BE5C4D411C5E59C}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_PL.et" {
+ coords 3145.168 11.193 2781.164
+ angles 0 135.042 0
+}
+$grp SCR_AIGroup : "{955623450C88D6F3}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_Squad.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 3134.769 11.59 2768.521
+  angles 0 130.075 0
+ }
+ SQ_103 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 3
+   }
+  }
+  coords 3143.878 11.529 2779.019
+  angles 0 130.075 0
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 3154.413 12.942 2733.441
+  angles 0 -54.457 0
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 3136.677 11.923 2755.956
+  angles 0 -54.457 0
+ }
+}
+SCR_AIGroup VH_111 : "{F722F19CDE6535BA}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_PDVL_Squad_Motorized.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+   m_iPlatoonCallsign 1
+   m_iSquadCallsign 1
+  }
+ }
+ coords 3172.639 11.183 2809.513
+ angles 0 137.485 0
+}

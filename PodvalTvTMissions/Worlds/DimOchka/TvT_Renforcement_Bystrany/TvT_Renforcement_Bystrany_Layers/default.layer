@@ -1,0 +1,85 @@
+SCR_MapEntity MapEntity_Bystrany1 : "{EDFC9BFB5D9F2241}Prefabs/Props/MapEntity_Bystrany.et" {
+ coords 6654.643 226.817 6143.036
+}
+SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
+ coords 6631.559 229.389 6120.818
+}
+PerceptionManager PerceptionManager1 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 6572.462 230.879 6128.29
+}
+PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
+ coords 6583.061 229.175 6147.894
+}
+$grp GenericEntity : "{3D78D7D606FF9818}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_NoCapture.et" {
+ flag1 {
+  coords 6504.407 214.389 6536.933
+ }
+ flag2 {
+  coords 6506.152 214.4 6512.486
+ }
+ flag3 {
+  coords 6529.249 214.401 6509.89
+ }
+ flag4 {
+  coords 6539.928 214.439 6531.929
+ }
+ flag5 {
+  coords 6576.844 206.602 6493.528
+ }
+ flag6 {
+  coords 6557.932 206.602 6484.067
+ }
+ flag7 {
+  coords 6584.589 210.422 6543.055
+ }
+ flag8 {
+  coords 6562.265 246.647 6546.937
+ }
+}
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{68B2C1E70E507FFD}" {
+     m_Timer GUB_ZoneControlTimer "{68B2C1E708D0D7FF}" {
+      timeToComplete 150
+     }
+     m_ZoneController GUB_ZoneController "{68B2C1E70B5C6681}" {
+      m_sZoneEntityName "capture"
+     }
+     m_FlagController GUB_FlagController "{68B2C1E70AD7FC18}" {
+      m_aFlagNames {
+       "flag1"
+       "flag2"
+       "flag3"
+       "flag4"
+       "flag5"
+       "flag6"
+       "flag7"
+       "flag8"
+      }
+      m_fStartFactionKey "RHS_AFRF"
+      m_fEndFactionKey "FR"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{68B2C1E7203F418E}" {
+       m_sFirstFactionKey "FR"
+       m_sSecondFactionKey "RHS_AFRF"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 6243.403 201.85 6862.579
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 6465.345 221.28 6424.435
+}
