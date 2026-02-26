@@ -1,5 +1,10 @@
 $grp SCR_AIGroup : "{1128EBD3DDFF1D07}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Motorized.et" {
  RHS_AFRF_Squad {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iSquadCallsign 1
+   }
+  }
   coords 4845.396 16.041 3225.32
   angles 0 -84.61 0
   m_aUnitPrefabSlots {
@@ -15,6 +20,11 @@ $grp SCR_AIGroup : "{1128EBD3DDFF1D07}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Grou
   }
  }
  RHS_AFRF_Squad1 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iSquadCallsign 2
+   }
+  }
   coords 4846.975 16.374 3209.544
   angles 0 -100.207 0
   m_aUnitPrefabSlots {
@@ -30,6 +40,11 @@ $grp SCR_AIGroup : "{1128EBD3DDFF1D07}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Grou
   }
  }
  RHS_AFRF_Squad2 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iSquadCallsign 3
+   }
+  }
   coords 4852.415 16.826 3191.977
   angles 0 -114.065 0
   m_aUnitPrefabSlots {
@@ -57,7 +72,12 @@ SCR_AIGroup RHS_AFRF_HQ : "{496070641528229D}Prefabs/Groups/OPFOR/RHS_AFRF/Regul
  }
 }
 $grp SCR_AIGroup : "{EB131DDF464F90FD}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Squad.et" {
- {
+ RHS_AFRF_Squad3 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+   }
+  }
   coords 4900.326 38.008 4613.208
   angles 0 -133.328 0
   m_aUnitPrefabSlots {
@@ -70,7 +90,13 @@ $grp SCR_AIGroup : "{EB131DDF464F90FD}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Grou
    "{7983C2C66F11BD38}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_Rifleman.et"
   }
  }
- {
+ RHS_AFRF_Squad4 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
   coords 4883.554 39.47 4629.364
   angles 0 -135.863 0
   m_aUnitPrefabSlots {
@@ -83,7 +109,12 @@ $grp SCR_AIGroup : "{EB131DDF464F90FD}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Grou
    "{7983C2C66F11BD38}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_Rifleman.et"
   }
  }
- {
+ RHS_AFRF_Squad5 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+   }
+  }
   coords 4225.328 17 4154.792
   angles 0 -89.422 0
   m_aUnitPrefabSlots {
@@ -98,7 +129,13 @@ $grp SCR_AIGroup : "{EB131DDF464F90FD}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Grou
    "{36D1E050A6BF40F1}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_Sniper.et"
   }
  }
- {
+ RHS_AFRF_Squad6 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
   coords 4189.553 16.889 4188.626
   angles 0 -88.372 0
   m_aUnitPrefabSlots {
@@ -112,7 +149,13 @@ $grp SCR_AIGroup : "{EB131DDF464F90FD}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Grou
    "{36D1E050A6BF40F1}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_Sniper.et"
   }
  }
- {
+ RHS_AFRF_Squad7 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 2
+   }
+  }
   coords 4189.833 17.162 4109.902
   angles 0 -88.372 0
   m_aUnitPrefabSlots {
