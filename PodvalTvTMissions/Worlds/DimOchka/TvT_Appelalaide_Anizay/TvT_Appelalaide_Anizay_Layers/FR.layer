@@ -1,0 +1,419 @@
+$grp Turret : "{1A407760EEAE4156}Prefabs/Vehicles/Static/BaconZU23/BaconZU23_Turret_Deployed.et" {
+ {
+  coords 6204.437 107.665 6951.785
+  angles 0 -97.226 0
+ }
+ {
+  coords 6099.321 111.025 7022.985
+  angles 0 -97.226 0
+ }
+}
+$grp SCR_AIGroup : "{2ABEAC51EBBAAEF0}Prefabs/Groups/BLUFOR/French Army/dim_FR_Desert_Recon.et" {
+ REC2 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A65926CDAA3}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 5567.006 125.104 5593.904
+  angles 0 -114.726 0
+ }
+ REC3 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A65926CDAA3}" {
+    m_iCompanyCallsign 3
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 7209.44 108.156 6970.278
+  angles 0 30 0
+ }
+ REC {
+  components {
+   PS_GroupCallsignAssigner "{68B17A65926CDAA3}" {
+    m_iCompanyCallsign 3
+    m_iPlatoonCallsign 2
+    m_iSquadCallsign 2
+   }
+  }
+  coords 6809.541 129.844 8358.605
+  angles 7.932 -123.171 -4.102
+ }
+}
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{68B4BC4ECEC86F70}" {
+     m_Timer GUB_ZoneControlTimer "{68B4BC4EC8DD346D}" {
+      timeToComplete 150
+     }
+     m_ZoneController GUB_ZoneController "{68B4BC4ECAAF40CB}" {
+      m_sZoneEntityName "capture"
+     }
+     m_FlagController GUB_FlagController "{68B4BC4ED7FFEF32}" {
+      m_aFlagNames {
+       "flag1"
+       "flag2"
+       "flag3"
+       "flag4"
+      }
+      m_fStartFactionKey "FR"
+      m_fEndFactionKey "RHS_ION"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{68B4BC4ED988A011}" {
+       m_sFirstFactionKey "RHS_ION"
+       m_sSecondFactionKey "FR"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 6188.003 124.613 7604.518
+}
+$grp SCR_AIGroup : "{5A9B6C01177635FF}Prefabs/Groups/BLUFOR/French Army/dim_FR_Desert_Infantry_Squad.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68B17A65926CDAA3}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 6245.457 99.316 6928.662
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68B17A65926CDAA3}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 6143.401 103.689 6956.543
+  angles 0 -172.432 0
+ }
+ SD {
+  components {
+   PS_GroupCallsignAssigner "{68B17A65926CDAA3}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 6170.066 103.689 7027.232
+  angles 0 -172.432 0
+  m_aUnitPrefabSlots {
+   "{1CCFBDE90DDE0E23}Prefabs/Characters/Factions/BLUFOR/FR_Army/Desert/dim_FR_Desert_SL.et"
+   "{18DB6C83A1BF0CAC}Prefabs/Characters/Factions/BLUFOR/FR_Army/Desert/dim_FR_Desert_Marksman.et"
+   "{1B0847B86B58B4E0}Prefabs/Characters/Factions/BLUFOR/FR_Army/Desert/dim_FR_Desert_TL.et"
+   "{49C0882ED4F40FC9}Prefabs/Characters/Factions/BLUFOR/FR_Army/Desert/dim_FR_Desert_Light_AT.et"
+   "{86D2241A03419DA3}Prefabs/Characters/Factions/BLUFOR/FR_Army/Desert/dim_FR_Desert_SMAW.et"
+   "{1B0847B86B58B4E0}Prefabs/Characters/Factions/BLUFOR/FR_Army/Desert/dim_FR_Desert_TL.et"
+   "{235092EC5115B8D3}Prefabs/Characters/Factions/BLUFOR/FR_Army/Desert/dim_FR_Desert_MG.et"
+   "{7C9232D7C8EDC51A}Prefabs/Characters/Factions/BLUFOR/FR_Army/Desert/dim_FR_Desert_GL.et"
+  }
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68B17A65926CDAA3}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 3
+   }
+  }
+  coords 6253.557 97.689 6981.963
+  angles 0 -172.432 0
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68B17A65926CDAA3}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 6153.757 102.8 6970.07
+  angles 0 105 0
+  m_aUnitPrefabSlots {
+   "{1CCFBDE90DDE0E23}Prefabs/Characters/Factions/BLUFOR/FR_Army/Desert/dim_FR_Desert_SL.et"
+   "{18DB6C83A1BF0CAC}Prefabs/Characters/Factions/BLUFOR/FR_Army/Desert/dim_FR_Desert_Marksman.et"
+   "{1B0847B86B58B4E0}Prefabs/Characters/Factions/BLUFOR/FR_Army/Desert/dim_FR_Desert_TL.et"
+   "{49C0882ED4F40FC9}Prefabs/Characters/Factions/BLUFOR/FR_Army/Desert/dim_FR_Desert_Light_AT.et"
+   "{86D2241A03419DA3}Prefabs/Characters/Factions/BLUFOR/FR_Army/Desert/dim_FR_Desert_SMAW.et"
+   "{1B0847B86B58B4E0}Prefabs/Characters/Factions/BLUFOR/FR_Army/Desert/dim_FR_Desert_TL.et"
+   "{235092EC5115B8D3}Prefabs/Characters/Factions/BLUFOR/FR_Army/Desert/dim_FR_Desert_MG.et"
+   "{7C9232D7C8EDC51A}Prefabs/Characters/Factions/BLUFOR/FR_Army/Desert/dim_FR_Desert_GL.et"
+  }
+ }
+}
+$grp Vehicle : "{701ADC27F9D842DF}Prefabs/Vehicles/Wheeled/LR_3Series/3Series_LWB_Transport.et" {
+ _Series_LWB_Transport1 {
+  components {
+   MeshObject "{51DAA09FEFBFC0E7}" {
+    Object "{FEA3C27143D1C401}Assets/Vehicles/Wheeled/LR3Series/3Series_LWB_Recce.xob"
+    Materials {
+     MaterialAssignClass "{65949A0452B0712D}" {
+      SourceMaterial "lr_3series_body"
+      AssignedMaterial "{1D196D6B3825E237}Assets/Vehicles/Wheeled/LR3Series/Data/Civvie/lr_3series_body_civvie_Sand.emat"
+     }
+    }
+   }
+   SCR_UniversalInventoryStorageComponent "{648B4DF41C28F11F}" {
+    MultiSlots {
+     MultiSlotConfiguration "{5E86A8C9C339E7A1}" {
+      SlotTemplate InventoryStorageSlot Jerrycan {
+       Prefab "{C820846B0521423B}Prefabs/Weapons/Magazines/Box_127x99_M2_100rnd_4AP_1APIT.et"
+      }
+      NumSlots 4
+     }
+    }
+   }
+   SlotManagerComponent "{55BCE45E438E4CFF}" {
+    Slots {
+     RegisteringComponentSlotInfo RearCargo {
+      Enabled 0
+     }
+     RegisteringComponentSlotInfo Windscreen_L {
+      Enabled 0
+     }
+     RegisteringComponentSlotInfo Windscreen_R {
+      Enabled 0
+     }
+     RegisteringComponentSlotInfo Glass_Door_L {
+      Enabled 0
+     }
+     RegisteringComponentSlotInfo Glass_Door_R {
+      Enabled 0
+     }
+     RegisteringComponentSlotInfo GunnerRear {
+      Offset 0 -0.0475 -0.2628
+      Angles 0 0 0
+      Enabled 1
+      Prefab "{9E5D6537C4407B82}Prefabs/Vehicles/Wheeled/M151A2/LR3Series_gun_mount_M2HB.et"
+     }
+     RegisteringComponentSlotInfo Cargo_L1_01 {
+      Enabled 0
+     }
+     RegisteringComponentSlotInfo Cargo_L1_02 {
+      Enabled 0
+     }
+     RegisteringComponentSlotInfo Cargo_L2_01 {
+      Enabled 0
+     }
+     RegisteringComponentSlotInfo Cargo_L2_02 {
+      Enabled 0
+     }
+     RegisteringComponentSlotInfo Cargo_L2_03 {
+      Enabled 0
+     }
+     RegisteringComponentSlotInfo Cargo_L2_04 {
+      Enabled 0
+     }
+     RegisteringComponentSlotInfo Cargo_L2_05 {
+      Enabled 0
+     }
+    }
+   }
+  }
+  coords 7211.777 108.156 6974.286
+  angles 0 -62.526 0
+  m_sAttachmentGroupName "REC3"
+ }
+ _Series_LWB_Transport2 {
+  components {
+   MeshObject "{51DAA09FEFBFC0E7}" {
+    Object "{FEA3C27143D1C401}Assets/Vehicles/Wheeled/LR3Series/3Series_LWB_Recce.xob"
+    Materials {
+     MaterialAssignClass "{65949A0452B0712D}" {
+      SourceMaterial "lr_3series_body"
+      AssignedMaterial "{1D196D6B3825E237}Assets/Vehicles/Wheeled/LR3Series/Data/Civvie/lr_3series_body_civvie_Sand.emat"
+     }
+    }
+   }
+   SCR_UniversalInventoryStorageComponent "{648B4DF41C28F11F}" {
+    MultiSlots {
+     MultiSlotConfiguration "{5E86A8C9C339E7A1}" {
+      SlotTemplate InventoryStorageSlot Jerrycan {
+       Prefab "{C820846B0521423B}Prefabs/Weapons/Magazines/Box_127x99_M2_100rnd_4AP_1APIT.et"
+      }
+      NumSlots 4
+     }
+    }
+   }
+   SlotManagerComponent "{55BCE45E438E4CFF}" {
+    Slots {
+     RegisteringComponentSlotInfo RearCargo {
+      Enabled 0
+     }
+     RegisteringComponentSlotInfo Windscreen_L {
+      Enabled 0
+     }
+     RegisteringComponentSlotInfo Windscreen_R {
+      Enabled 0
+     }
+     RegisteringComponentSlotInfo Glass_Door_L {
+      Enabled 0
+     }
+     RegisteringComponentSlotInfo Glass_Door_R {
+      Enabled 0
+     }
+     RegisteringComponentSlotInfo GunnerRear {
+      Offset 0 -0.0475 -0.2628
+      Angles 0 0 0
+      Enabled 1
+      Prefab "{9E5D6537C4407B82}Prefabs/Vehicles/Wheeled/M151A2/LR3Series_gun_mount_M2HB.et"
+     }
+     RegisteringComponentSlotInfo Cargo_L1_01 {
+      Enabled 0
+     }
+     RegisteringComponentSlotInfo Cargo_L1_02 {
+      Enabled 0
+     }
+     RegisteringComponentSlotInfo Cargo_L2_01 {
+      Enabled 0
+     }
+     RegisteringComponentSlotInfo Cargo_L2_02 {
+      Enabled 0
+     }
+     RegisteringComponentSlotInfo Cargo_L2_03 {
+      Enabled 0
+     }
+     RegisteringComponentSlotInfo Cargo_L2_04 {
+      Enabled 0
+     }
+     RegisteringComponentSlotInfo Cargo_L2_05 {
+      Enabled 0
+     }
+    }
+   }
+  }
+  coords 5564.614 123.219 5591.589
+  angles 0 151.859 0
+  m_sAttachmentGroupName "REC2"
+ }
+ _Series_LWB_Transport3 {
+  components {
+   MeshObject "{51DAA09FEFBFC0E7}" {
+    Object "{FEA3C27143D1C401}Assets/Vehicles/Wheeled/LR3Series/3Series_LWB_Recce.xob"
+    Materials {
+     MaterialAssignClass "{65949A0452B0712D}" {
+      SourceMaterial "lr_3series_body"
+      AssignedMaterial "{1D196D6B3825E237}Assets/Vehicles/Wheeled/LR3Series/Data/Civvie/lr_3series_body_civvie_Sand.emat"
+     }
+    }
+   }
+   SCR_UniversalInventoryStorageComponent "{648B4DF41C28F11F}" {
+    MultiSlots {
+     MultiSlotConfiguration "{5E86A8C9C339E7A1}" {
+      SlotTemplate InventoryStorageSlot Jerrycan {
+       Prefab "{C820846B0521423B}Prefabs/Weapons/Magazines/Box_127x99_M2_100rnd_4AP_1APIT.et"
+      }
+      NumSlots 4
+     }
+    }
+   }
+   SlotManagerComponent "{55BCE45E438E4CFF}" {
+    Slots {
+     RegisteringComponentSlotInfo RearCargo {
+      Enabled 0
+     }
+     RegisteringComponentSlotInfo Windscreen_L {
+      Enabled 0
+     }
+     RegisteringComponentSlotInfo Windscreen_R {
+      Enabled 0
+     }
+     RegisteringComponentSlotInfo Glass_Door_L {
+      Enabled 0
+     }
+     RegisteringComponentSlotInfo Glass_Door_R {
+      Enabled 0
+     }
+     RegisteringComponentSlotInfo GunnerRear {
+      Offset 0 -0.0475 -0.2628
+      Angles 0 0 0
+      Enabled 1
+      Prefab "{9E5D6537C4407B82}Prefabs/Vehicles/Wheeled/M151A2/LR3Series_gun_mount_M2HB.et"
+     }
+     RegisteringComponentSlotInfo Cargo_L1_01 {
+      Enabled 0
+     }
+     RegisteringComponentSlotInfo Cargo_L1_02 {
+      Enabled 0
+     }
+     RegisteringComponentSlotInfo Cargo_L2_01 {
+      Enabled 0
+     }
+     RegisteringComponentSlotInfo Cargo_L2_02 {
+      Enabled 0
+     }
+     RegisteringComponentSlotInfo Cargo_L2_03 {
+      Enabled 0
+     }
+     RegisteringComponentSlotInfo Cargo_L2_04 {
+      Enabled 0
+     }
+     RegisteringComponentSlotInfo Cargo_L2_05 {
+      Enabled 0
+     }
+    }
+   }
+  }
+  coords 6803.509 130.311 8361.241
+  angles 3.997 -25.784 0.054
+  m_sAttachmentGroupName "REC"
+ }
+}
+SCR_AIGroup : "{758E98BA2BCB786E}Prefabs/Groups/BLUFOR/French Army/dim_FR_Desert_HQ.et" {
+ coords 6138.906 103.934 6947.016
+ angles 0 97.091 0
+ m_aUnitPrefabSlots +{
+  "{18DB6C83A1BF0CAC}Prefabs/Characters/Factions/BLUFOR/FR_Army/Desert/dim_FR_Desert_Marksman.et"
+ }
+}
+$grp Vehicle : "{94E75D29DCDEFBF7}Prefabs/Vehicles/Wheeled/LR_3Series/Civvie/3Series_LWB_Civvie_Sand.et" {
+ _Series_LWB_Civvie_Sand1 {
+  coords 6154.066 103.915 7026.655
+  angles 1.96 -75.014 -0.402
+  m_sAttachmentGroupName "SD"
+ }
+ _Series_LWB_Civvie_Sand2 {
+  coords 6165.75 103.52 7022.773
+  angles 1.983 -55.737 0.268
+  m_sAttachmentGroupName "SD"
+ }
+}
+$grp Vehicle : "{956953E15BD61F09}Prefabs/Vehicles/Wheeled/LR_3Series/Civvie/3Series_SWB_Civvie_Sand.et" {
+ _Series_SWB_Civvie_Sand1 {
+  coords 7218.928 108.125 6970.6
+  angles 0 -63.561 0
+  m_sAttachmentGroupName "REC3"
+ }
+ _Series_SWB_Civvie_Sand2 {
+  coords 5561.74 123.219 5596.976
+  angles 0 151.997 0
+  m_sAttachmentGroupName "REC2"
+ }
+ _Series_SWB_Civvie_Sand3 {
+  coords 6806.855 129.814 8354.473
+  angles 3.995 -24.795 0.123
+  m_sAttachmentGroupName "REC"
+ }
+}
+Turret : "{D062475B3C6426A3}Prefabs/Weapons/Tripods/BGM71TOW/Deployable_Tripod_BGM71_TOW.et" {
+ coords 6130.085 112.017 6948.475
+ angles 0 -64.833 0
+}
+$grp GenericEntity : "{DE25A434026D99AC}Prefabs/Weapons/Tripods/BGM71TOW/Part_BGM-71D_Launcher.et" {
+ {
+  coords 6131.173 112.293 6947.697
+  angles 0 10.685 -90
+ }
+ {
+  coords 6131.803 112.293 6947.578
+  angles 0 10.685 -90
+ }
+ {
+  coords 6132.61 112.293 6947.426
+  angles 0 10.685 -90
+ }
+}

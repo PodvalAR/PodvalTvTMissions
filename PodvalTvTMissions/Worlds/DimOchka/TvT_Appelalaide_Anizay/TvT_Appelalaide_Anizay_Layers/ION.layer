@@ -1,0 +1,515 @@
+SCR_AIGroup ion8 : "{1CF5EFE6FE5047FB}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_Elite_Force.et" {
+ components {
+  PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+   m_iCompanyCallsign 4
+  }
+ }
+ coords 5202.16 207.284 1769.543
+ angles 0 11.485 0
+}
+Vehicle LAV25_RHS1 : "{3312ADBF53A16DD9}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS.et" {
+ components {
+  MeshObject "{51DAA09FEFBFC0E7}" {
+   Materials {
+    MaterialAssignClass "{68B4D0FEC933DE39}" {
+     SourceMaterial "LAV25_MLOD"
+     AssignedMaterial "{EA24F015B0C55573}Assets/Vehicles/Wheeled/LAV25/Data/LAV25_MLOD_ION.emat"
+    }
+    MaterialAssignClass "{68B4D0FEC933DE23}" {
+     SourceMaterial "LAV25_body_exterior"
+     AssignedMaterial "{B07FA5B205787DA4}Assets/Vehicles/Wheeled/LAV25/Data/LAV25_body_exterior_ION.emat"
+    }
+   }
+  }
+  SlotManagerComponent "{55BCE45E438E4CFF}" {
+   Slots {
+    RegisteringComponentSlotInfo Turret {
+     Prefab "{E5DC9ED2B886A32A}Prefabs/Vehicles/Wheeled/LAV25/VehParts/Turret/LAV25_turret_rhs_ION.et"
+    }
+    RegisteringComponentSlotInfo ION {
+     PivotID "v_body"
+     Offset -1.0723 -1.6206 0.9834
+     Angles -88.7026 0 34.722
+     Prefab "{9675A453B0D83B75}Prefabs/Vehicles/Wheeled/M998/VehParts/ION Logo/dim_ION_Decal.et"
+    }
+    RegisteringComponentSlotInfo ION_2 {
+     PivotID "v_body"
+     Offset 1.0854 -1.6208 0.9627
+     Angles 90 11.0493 -135
+     Prefab "{9675A453B0D83B75}Prefabs/Vehicles/Wheeled/M998/VehParts/ION Logo/dim_ION_Decal.et"
+    }
+   }
+  }
+ }
+ coords 2679.369 142.397 7951.824
+ angles 0 76.735 0
+ m_sAttachmentGroupName "ion2"
+}
+$grp SCR_AIGroup : "{4482F48156932D3E}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_STK_3.et" {
+ ion5 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4778D2B8BD}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 3516.421 156.213 4645.619
+  angles 0 -165 0
+  m_aUnitPrefabSlots {
+   "{AEC9840EA78E11E7}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_SL_3.et"
+   "{A8288D670C2B80B3}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_TL.et"
+   "{8E01B51117F34FFD}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Rifleman_1.et"
+   "{3AFDE830D2BEDE8F}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Rifleman_4.et"
+   "{07C9CD08A7D257B8}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Rifleman_3.et"
+   "{E5D286AD0454E484}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Sapper_2.et"
+   "{A536AFA035B4146D}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Medic.et"
+   "{B5A4124F110F3F38}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Marksman_2.et"
+  }
+ }
+ ion3 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4778D2B8BD}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 2667.967 144.104 7952.078
+  angles 0 165 0
+  m_aUnitPrefabSlots {
+   "{AFEF77366AAD3A70}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_SL.et"
+   "{A8288D670C2B80B3}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_TL.et"
+   "{8E01B51117F34FFD}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Rifleman_1.et"
+   "{3AFDE830D2BEDE8F}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Rifleman_4.et"
+   "{2B951DA165375A8B}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_M72.et"
+   "{E5D286AD0454E484}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Sapper_2.et"
+   "{A536AFA035B4146D}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Medic.et"
+   "{B5A4124F110F3F38}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Marksman_2.et"
+  }
+ }
+}
+$grp Vehicle : "{6CF1EEE92139A849}Prefabs/Vehicles/Wheeled/M998/M1151_armed_M2HB_ION_AP.et" {
+ M1151_armed_M2HB_ION_AP1 {
+  coords 2698.979 142.704 7956.162
+  angles 0 79.686 0
+  m_sAttachmentGroupName "ion"
+ }
+ M1151_armed_M2HB_ION_AP2 {
+  coords 2707.284 142.704 7957.674
+  angles 0 79.686 0
+  m_sAttachmentGroupName "ion"
+ }
+}
+SCR_AIGroup : "{963AB6930837A26F}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_HQ.et" {
+ coords 3502.299 155.969 4638.768
+ angles 0 130.236 0
+}
+$grp Vehicle : "{9C07B4B8CF07B8A1}Prefabs/Vehicles/Wheeled/M998/M1151_armed_M2HB_Tan_AP.et" {
+ M1151_armed_M2HB_Tan_AP1 {
+  components {
+   MeshObject "{51DAA09FEFBFC0E7}" {
+    Materials {
+     MaterialAssignClass "{68A15AF7C85BBEFB}" {
+      SourceMaterial "Assets/Vehicles/Wheeled/M998/Data/HMMWV_Body"
+      AssignedMaterial "{03F73D428D8323F8}Assets/Vehicles/Wheeled/M998/Data/HMMWV_Body_ION.emat"
+     }
+     MaterialAssignClass "{68A15AF7C85BBEC5}" {
+      SourceMaterial "HMMWV_Body_Details"
+      AssignedMaterial "{EC160325F82DDD48}Assets/Vehicles/Wheeled/M998/Data/HMMWV_Body_Details_Tan.emat"
+     }
+     MaterialAssignClass "{68B4D0FD6A15F661}" {
+      SourceMaterial "Assets/Vehicles/Wheeled/M998/Data/HMMWV_Decals02"
+      AssignedMaterial "{6F1782B84A6A8584}Assets/Vehicles/Wheeled/M998/Data/HMMWV_Decals02_ion.emat"
+     }
+     MaterialAssignClass "{68B4D0FD6A15F654}" {
+      SourceMaterial "Assets/Vehicles/Wheeled/M998/Data/HMMWV_Decals_Text02"
+      AssignedMaterial "{AE743696D3EB105F}Assets/Vehicles/SharedMaterials/decals/numbers/Data/ION_logo.emat"
+     }
+    }
+   }
+   SlotManagerComponent "{55BCE45E438E4CFF}" {
+    Slots {
+     RegisteringComponentSlotInfo Roof {
+      Prefab "{90B654857D24A340}Prefabs/Vehicles/Wheeled/M998/VehParts/M1151_roof_M2HB_ION.et"
+     }
+     RegisteringComponentSlotInfo ION {
+      PivotID "v_body"
+      Offset -1.109 0.7541 -1.5344
+      Angles 0 0 0
+      Prefab "{9675A453B0D83B75}Prefabs/Vehicles/Wheeled/M998/VehParts/ION Logo/dim_ION_Decal.et"
+     }
+     RegisteringComponentSlotInfo ION_2 {
+      PivotID "v_body"
+      Offset 1.1028 0.7442 -1.4467
+      Angles 0 -177.81709 0
+      Prefab "{9675A453B0D83B75}Prefabs/Vehicles/Wheeled/M998/VehParts/ION Logo/dim_ION_Decal.et"
+     }
+    }
+   }
+  }
+  coords 3511.091 156.318 4622.449
+  angles 3.024 103.352 -1.12
+  m_sAttachmentGroupName "ion6"
+ }
+ M1151_armed_M2HB_Tan_AP2 {
+  components {
+   MeshObject "{51DAA09FEFBFC0E7}" {
+    Materials {
+     MaterialAssignClass "{68A15AF7C85BBEFB}" {
+      SourceMaterial "Assets/Vehicles/Wheeled/M998/Data/HMMWV_Body"
+      AssignedMaterial "{03F73D428D8323F8}Assets/Vehicles/Wheeled/M998/Data/HMMWV_Body_ION.emat"
+     }
+     MaterialAssignClass "{68A15AF7C85BBEC5}" {
+      SourceMaterial "HMMWV_Body_Details"
+      AssignedMaterial "{EC160325F82DDD48}Assets/Vehicles/Wheeled/M998/Data/HMMWV_Body_Details_Tan.emat"
+     }
+     MaterialAssignClass "{68B4D0FD6A15F661}" {
+      SourceMaterial "Assets/Vehicles/Wheeled/M998/Data/HMMWV_Decals02"
+      AssignedMaterial "{6F1782B84A6A8584}Assets/Vehicles/Wheeled/M998/Data/HMMWV_Decals02_ion.emat"
+     }
+     MaterialAssignClass "{68B4D0FD6A15F654}" {
+      SourceMaterial "Assets/Vehicles/Wheeled/M998/Data/HMMWV_Decals_Text02"
+      AssignedMaterial "{AE743696D3EB105F}Assets/Vehicles/SharedMaterials/decals/numbers/Data/ION_logo.emat"
+     }
+    }
+   }
+   SlotManagerComponent "{55BCE45E438E4CFF}" {
+    Slots {
+     RegisteringComponentSlotInfo Roof {
+      Prefab "{90B654857D24A340}Prefabs/Vehicles/Wheeled/M998/VehParts/M1151_roof_M2HB_ION.et"
+     }
+     RegisteringComponentSlotInfo ION {
+      PivotID "v_body"
+      Offset -1.109 0.7541 -1.5344
+      Angles 0 0 0
+      Prefab "{9675A453B0D83B75}Prefabs/Vehicles/Wheeled/M998/VehParts/ION Logo/dim_ION_Decal.et"
+     }
+     RegisteringComponentSlotInfo ION_2 {
+      PivotID "v_body"
+      Offset 1.1028 0.7442 -1.4467
+      Angles 0 -177.81709 0
+      Prefab "{9675A453B0D83B75}Prefabs/Vehicles/Wheeled/M998/VehParts/ION Logo/dim_ION_Decal.et"
+     }
+    }
+   }
+  }
+  coords 3503.354 156.048 4624.286
+  angles 1.078 103.375 -0.664
+  m_sAttachmentGroupName "ion6"
+ }
+ M1151_armed_M2HB_Tan_AP3 {
+  components {
+   MeshObject "{51DAA09FEFBFC0E7}" {
+    Materials {
+     MaterialAssignClass "{68A15AF7C85BBEFB}" {
+      SourceMaterial "Assets/Vehicles/Wheeled/M998/Data/HMMWV_Body"
+      AssignedMaterial "{03F73D428D8323F8}Assets/Vehicles/Wheeled/M998/Data/HMMWV_Body_ION.emat"
+     }
+     MaterialAssignClass "{68A15AF7C85BBEC5}" {
+      SourceMaterial "HMMWV_Body_Details"
+      AssignedMaterial "{EC160325F82DDD48}Assets/Vehicles/Wheeled/M998/Data/HMMWV_Body_Details_Tan.emat"
+     }
+     MaterialAssignClass "{68B4D0FD6A15F661}" {
+      SourceMaterial "Assets/Vehicles/Wheeled/M998/Data/HMMWV_Decals02"
+      AssignedMaterial "{6F1782B84A6A8584}Assets/Vehicles/Wheeled/M998/Data/HMMWV_Decals02_ion.emat"
+     }
+     MaterialAssignClass "{68B4D0FD6A15F654}" {
+      SourceMaterial "Assets/Vehicles/Wheeled/M998/Data/HMMWV_Decals_Text02"
+      AssignedMaterial "{AE743696D3EB105F}Assets/Vehicles/SharedMaterials/decals/numbers/Data/ION_logo.emat"
+     }
+    }
+   }
+   SlotManagerComponent "{55BCE45E438E4CFF}" {
+    Slots {
+     RegisteringComponentSlotInfo Roof {
+      Prefab "{90B654857D24A340}Prefabs/Vehicles/Wheeled/M998/VehParts/M1151_roof_M2HB_ION.et"
+     }
+     RegisteringComponentSlotInfo ION {
+      PivotID "v_body"
+      Offset -1.109 0.7541 -1.5344
+      Angles 0 0 0
+      Prefab "{9675A453B0D83B75}Prefabs/Vehicles/Wheeled/M998/VehParts/ION Logo/dim_ION_Decal.et"
+     }
+     RegisteringComponentSlotInfo ION_2 {
+      PivotID "v_body"
+      Offset 1.1028 0.7442 -1.4467
+      Angles 0 -177.81709 0
+      Prefab "{9675A453B0D83B75}Prefabs/Vehicles/Wheeled/M998/VehParts/ION Logo/dim_ION_Decal.et"
+     }
+    }
+   }
+  }
+  coords 3518.844 156.46 4633.076
+  angles -1.471 -155.742 3.26
+  m_sAttachmentGroupName "ion7"
+ }
+ M1151_armed_M2HB_Tan_AP4 {
+  components {
+   MeshObject "{51DAA09FEFBFC0E7}" {
+    Materials {
+     MaterialAssignClass "{68A15AF7C85BBEFB}" {
+      SourceMaterial "Assets/Vehicles/Wheeled/M998/Data/HMMWV_Body"
+      AssignedMaterial "{03F73D428D8323F8}Assets/Vehicles/Wheeled/M998/Data/HMMWV_Body_ION.emat"
+     }
+     MaterialAssignClass "{68A15AF7C85BBEC5}" {
+      SourceMaterial "HMMWV_Body_Details"
+      AssignedMaterial "{EC160325F82DDD48}Assets/Vehicles/Wheeled/M998/Data/HMMWV_Body_Details_Tan.emat"
+     }
+     MaterialAssignClass "{68B4D0FD6A15F661}" {
+      SourceMaterial "Assets/Vehicles/Wheeled/M998/Data/HMMWV_Decals02"
+      AssignedMaterial "{6F1782B84A6A8584}Assets/Vehicles/Wheeled/M998/Data/HMMWV_Decals02_ion.emat"
+     }
+     MaterialAssignClass "{68B4D0FD6A15F654}" {
+      SourceMaterial "Assets/Vehicles/Wheeled/M998/Data/HMMWV_Decals_Text02"
+      AssignedMaterial "{AE743696D3EB105F}Assets/Vehicles/SharedMaterials/decals/numbers/Data/ION_logo.emat"
+     }
+    }
+   }
+   SlotManagerComponent "{55BCE45E438E4CFF}" {
+    Slots {
+     RegisteringComponentSlotInfo Roof {
+      Prefab "{90B654857D24A340}Prefabs/Vehicles/Wheeled/M998/VehParts/M1151_roof_M2HB_ION.et"
+     }
+     RegisteringComponentSlotInfo ION {
+      PivotID "v_body"
+      Offset -1.109 0.7541 -1.5344
+      Angles 0 0 0
+      Prefab "{9675A453B0D83B75}Prefabs/Vehicles/Wheeled/M998/VehParts/ION Logo/dim_ION_Decal.et"
+     }
+     RegisteringComponentSlotInfo ION_2 {
+      PivotID "v_body"
+      Offset 1.1028 0.7442 -1.4467
+      Angles 0 -177.81709 0
+      Prefab "{9675A453B0D83B75}Prefabs/Vehicles/Wheeled/M998/VehParts/ION Logo/dim_ION_Decal.et"
+     }
+    }
+   }
+  }
+  coords 3522.135 156.534 4640.317
+  angles -0.37 -155.574 0.815
+  m_sAttachmentGroupName "ion7"
+ }
+ M1151_armed_M2HB_Tan_AP5 {
+  components {
+   MeshObject "{51DAA09FEFBFC0E7}" {
+    Materials {
+     MaterialAssignClass "{68A15AF7C85BBEFB}" {
+      SourceMaterial "Assets/Vehicles/Wheeled/M998/Data/HMMWV_Body"
+      AssignedMaterial "{03F73D428D8323F8}Assets/Vehicles/Wheeled/M998/Data/HMMWV_Body_ION.emat"
+     }
+     MaterialAssignClass "{68A15AF7C85BBEC5}" {
+      SourceMaterial "HMMWV_Body_Details"
+      AssignedMaterial "{EC160325F82DDD48}Assets/Vehicles/Wheeled/M998/Data/HMMWV_Body_Details_Tan.emat"
+     }
+     MaterialAssignClass "{68B4D0FD6A15F661}" {
+      SourceMaterial "Assets/Vehicles/Wheeled/M998/Data/HMMWV_Decals02"
+      AssignedMaterial "{6F1782B84A6A8584}Assets/Vehicles/Wheeled/M998/Data/HMMWV_Decals02_ion.emat"
+     }
+     MaterialAssignClass "{68B4D0FD6A15F654}" {
+      SourceMaterial "Assets/Vehicles/Wheeled/M998/Data/HMMWV_Decals_Text02"
+      AssignedMaterial "{AE743696D3EB105F}Assets/Vehicles/SharedMaterials/decals/numbers/Data/ION_logo.emat"
+     }
+    }
+   }
+   SlotManagerComponent "{55BCE45E438E4CFF}" {
+    Slots {
+     RegisteringComponentSlotInfo Roof {
+      Prefab "{90B654857D24A340}Prefabs/Vehicles/Wheeled/M998/VehParts/M1151_roof_M2HB_ION.et"
+     }
+     RegisteringComponentSlotInfo ION {
+      PivotID "v_body"
+      Offset -1.109 0.7541 -1.5344
+      Angles 0 0 0
+      Prefab "{9675A453B0D83B75}Prefabs/Vehicles/Wheeled/M998/VehParts/ION Logo/dim_ION_Decal.et"
+     }
+     RegisteringComponentSlotInfo ION_2 {
+      PivotID "v_body"
+      Offset 1.1028 0.7442 -1.4467
+      Angles 0 -177.81709 0
+      Prefab "{9675A453B0D83B75}Prefabs/Vehicles/Wheeled/M998/VehParts/ION Logo/dim_ION_Decal.et"
+     }
+    }
+   }
+  }
+  coords 3509.285 156.051 4635.73
+  angles 0.317 159.279 0.837
+  m_sAttachmentGroupName "ion5"
+ }
+ M1151_armed_M2HB_Tan_AP6 {
+  components {
+   MeshObject "{51DAA09FEFBFC0E7}" {
+    Materials {
+     MaterialAssignClass "{68A15AF7C85BBEFB}" {
+      SourceMaterial "Assets/Vehicles/Wheeled/M998/Data/HMMWV_Body"
+      AssignedMaterial "{03F73D428D8323F8}Assets/Vehicles/Wheeled/M998/Data/HMMWV_Body_ION.emat"
+     }
+     MaterialAssignClass "{68A15AF7C85BBEC5}" {
+      SourceMaterial "HMMWV_Body_Details"
+      AssignedMaterial "{EC160325F82DDD48}Assets/Vehicles/Wheeled/M998/Data/HMMWV_Body_Details_Tan.emat"
+     }
+     MaterialAssignClass "{68B4D0FD6A15F661}" {
+      SourceMaterial "Assets/Vehicles/Wheeled/M998/Data/HMMWV_Decals02"
+      AssignedMaterial "{6F1782B84A6A8584}Assets/Vehicles/Wheeled/M998/Data/HMMWV_Decals02_ion.emat"
+     }
+     MaterialAssignClass "{68B4D0FD6A15F654}" {
+      SourceMaterial "Assets/Vehicles/Wheeled/M998/Data/HMMWV_Decals_Text02"
+      AssignedMaterial "{AE743696D3EB105F}Assets/Vehicles/SharedMaterials/decals/numbers/Data/ION_logo.emat"
+     }
+    }
+   }
+   SlotManagerComponent "{55BCE45E438E4CFF}" {
+    Slots {
+     RegisteringComponentSlotInfo Roof {
+      Prefab "{90B654857D24A340}Prefabs/Vehicles/Wheeled/M998/VehParts/M1151_roof_M2HB_ION.et"
+     }
+     RegisteringComponentSlotInfo ION {
+      PivotID "v_body"
+      Offset -1.109 0.7541 -1.5344
+      Angles 0 0 0
+      Prefab "{9675A453B0D83B75}Prefabs/Vehicles/Wheeled/M998/VehParts/ION Logo/dim_ION_Decal.et"
+     }
+     RegisteringComponentSlotInfo ION_2 {
+      PivotID "v_body"
+      Offset 1.1028 0.7442 -1.4467
+      Angles 0 -177.81709 0
+      Prefab "{9675A453B0D83B75}Prefabs/Vehicles/Wheeled/M998/VehParts/ION Logo/dim_ION_Decal.et"
+     }
+    }
+   }
+  }
+  coords 3506.492 155.976 4643.178
+  angles 0.315 159.431 0.838
+  m_sAttachmentGroupName "ion5"
+ }
+}
+$grp SCR_AIGroup : "{A11EB8785A76BA55}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_STK_2.et" {
+ ion7 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A477EB020B5}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 3522.021 156.488 4632.442
+  angles 0 -66.323 0
+  m_aUnitPrefabSlots {
+   "{4B55C8F7AB6B868C}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_SL_2.et"
+   "{A8288D670C2B80B3}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_TL.et"
+   "{C267862958299863}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_AR.et"
+   "{8E01B51117F34FFD}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Rifleman_1.et"
+   "{E25581F1AB37C0D3}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Rifleman_2.et"
+   "{07C9CD08A7D257B8}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Rifleman_3.et"
+   "{CF7D22658BFE1B22}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_M72_2.et"
+   "{E5D286AD0454E484}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Sapper_2.et"
+   "{A536AFA035B4146D}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Medic.et"
+  }
+ }
+ ion2 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A477EB020B5}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 2682.078 144.391 7955.735
+  angles 0 168.863 0
+  m_aUnitPrefabSlots {
+   "{4B55C8F7AB6B868C}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_SL_2.et"
+   "{A8288D670C2B80B3}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_TL.et"
+   "{C267862958299863}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_AR.et"
+   "{8E01B51117F34FFD}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Rifleman_1.et"
+   "{07C9CD08A7D257B8}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Rifleman_3.et"
+   "{CF7D22658BFE1B22}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_M72_2.et"
+   "{E5D286AD0454E484}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Sapper_2.et"
+   "{9A253DEEA8423780}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_Crew.et"
+   "{9A253DEEA8423780}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_Crew.et"
+  }
+ }
+ ion4 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A477EB020B5}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 2
+   }
+  }
+  coords 2644.473 142.187 7946.436
+  angles 0 165 0
+ }
+}
+Vehicle MH6M1 : "{AF950919C81D91B4}Prefabs/Vehicles/Helicopters/AH6M/MH6M.et" {
+ coords 5203.731 207.307 1777.315
+ angles 0 -80.089 0
+ m_sAttachmentGroupName "ion9"
+}
+$grp Vehicle : "{CD1B5570AF3D50B6}Prefabs/Vehicles/Wheeled/M998/M1025_ION.et" {
+ M1025_ION1 {
+  coords 2667.625 142.219 7949.148
+  angles 0 76.116 0
+  m_sAttachmentGroupName "ion3"
+ }
+ M1025_ION2 {
+  coords 2658.595 142.219 7946.762
+  angles 0 73.841 0
+  m_sAttachmentGroupName "ion3"
+ }
+ M1025_ION3 {
+  coords 2646.921 142.187 7943.453
+  angles 0 72.773 0
+  m_sAttachmentGroupName "ion4"
+ }
+ M1025_ION4 {
+  coords 2638.045 142.156 7940.545
+  angles 0 70.499 0
+  m_sAttachmentGroupName "ion4"
+ }
+}
+$grp SCR_AIGroup : "{CD4A8C98E6B2357B}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_STK_1.et" {
+ ion6 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A477D63A783}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 3502.932 156.325 4621.184
+  angles 0 11.696 0
+  m_aUnitPrefabSlots {
+   "{93FDA136D2E298D0}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_SL_4.et"
+   "{A8288D670C2B80B3}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_TL.et"
+   "{8E01B51117F34FFD}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Rifleman_1.et"
+   "{07C9CD08A7D257B8}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Rifleman_3.et"
+   "{3AFDE830D2BEDE8F}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Rifleman_4.et"
+   "{2B951DA165375A8B}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_M72.et"
+   "{E5D286AD0454E484}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Sapper_2.et"
+   "{A536AFA035B4146D}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Medic.et"
+   "{B5A4124F110F3F38}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Marksman_2.et"
+  }
+ }
+ ion {
+  components {
+   PS_GroupCallsignAssigner "{68B17A477D63A783}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 2704.952 142.638 7960.759
+  angles 0 168.619 0
+  m_aUnitPrefabSlots {
+   "{93FDA136D2E298D0}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_SL_4.et"
+   "{A8288D670C2B80B3}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_TL.et"
+   "{E25581F1AB37C0D3}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Rifleman_2.et"
+   "{07C9CD08A7D257B8}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Rifleman_3.et"
+   "{3AFDE830D2BEDE8F}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Rifleman_4.et"
+   "{2B951DA165375A8B}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_M72.et"
+   "{E5D286AD0454E484}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Sapper_2.et"
+   "{A536AFA035B4146D}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Medic.et"
+   "{B5A4124F110F3F38}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Marksman_2.et"
+  }
+ }
+}
+SCR_AIGroup ion9 : "{E1F03F7213D8B57D}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_HeliCrew.et" {
+ components {
+  PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+   m_iCompanyCallsign 3
+  }
+ }
+ coords 5195.437 207.299 1770.69
+ angles 0 10.192 0
+}
