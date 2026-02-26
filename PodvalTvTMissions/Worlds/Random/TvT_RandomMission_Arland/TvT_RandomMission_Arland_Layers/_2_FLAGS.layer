@@ -1,86 +1,21 @@
-$grp GenericEntity : "{37FF769500E5C13C}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_02_V2_FIA.et" {
- FLAG_ARLEVILE {
-  components {
-   BaseActionsManagerComponent "{6202D4E6F133BF4A}" {
-    additionalActions {
-     PS_FlagChangeAction "{6202D4E6A53D4B3C}" {
-      Duration 5
-      m_bUseAnimation 1
-      m_fAnimationFPS 60
-     }
+GenericEntity FLAG_ARLEVILE : "{37FF769500E5C13C}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_02_V2_FIA.et" {
+ components {
+  SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+   m_aObjectiveNames {
+    "AFRF_WIN"
+    "USAF_WIN"
+   }
+  }
+  BaseActionsManagerComponent "{6202D4E6F133BF4A}" {
+   additionalActions {
+    PS_FlagChangeAction "{6202D4E6A53D4B3C}" {
+     Duration 5
+     m_bUseAnimation 1
+     m_fAnimationFPS 60
     }
    }
   }
-  coords 2790.433 74.332 1628.645
  }
- FLAG_BEUREGARD {
-  components {
-   BaseActionsManagerComponent "{6202D4E6F133BF4A}" {
-    additionalActions {
-     PS_FlagChangeAction "{6202D4E6A53D4B3C}" {
-      Duration 5
-      m_bUseAnimation 1
-      m_fAnimationFPS 60
-     }
-    }
-   }
-  }
-  coords 3168.617 11.49 2803.094
- }
- FLAG_MILITARY_1 {
-  components {
-   BaseActionsManagerComponent "{6202D4E6F133BF4A}" {
-    additionalActions {
-     PS_FlagChangeAction "{6202D4E6A53D4B3C}" {
-      Duration 5
-      m_bUseAnimation 1
-      m_fAnimationFPS 60
-     }
-    }
-   }
-  }
-  coords 1409.205 10.981 1859.941
- }
- FLAG_MILITARY_2 {
-  components {
-   BaseActionsManagerComponent "{6202D4E6F133BF4A}" {
-    additionalActions {
-     PS_FlagChangeAction "{6202D4E6A53D4B3C}" {
-      Duration 5
-      m_bUseAnimation 1
-      m_fAnimationFPS 60
-     }
-    }
-   }
-  }
-  coords 1387.932 36.221 2377.109
- }
- FLAG_MILITARY_3 {
-  components {
-   BaseActionsManagerComponent "{6202D4E6F133BF4A}" {
-    additionalActions {
-     PS_FlagChangeAction "{6202D4E6A53D4B3C}" {
-      Duration 5
-      m_bUseAnimation 1
-      m_fAnimationFPS 60
-     }
-    }
-   }
-  }
-  coords 1349.756 37.766 2972.72
- }
- FLAG_KOROVNIK {
-  components {
-   BaseActionsManagerComponent "{6202D4E6F133BF4A}" {
-    additionalActions {
-     PS_FlagChangeAction "{6202D4E6A53D4B3C}" {
-      Duration 5
-      m_bUseAnimation 1
-      m_fAnimationFPS 60
-     }
-    }
-   }
-  }
-  coords 1987.445 50.941 3005.385
- }
+ coords 2785.031 81.501 1654.098
+ angles 30 156.956 0
 }
