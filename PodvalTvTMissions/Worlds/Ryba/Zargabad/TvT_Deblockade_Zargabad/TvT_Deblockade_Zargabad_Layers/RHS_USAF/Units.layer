@@ -1,0 +1,84 @@
+SCR_AIGroup RHS_USAF_Sniper : "{3CB180F292A52F34}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_Sniper.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+   m_iCompanyCallsign 4
+  }
+ }
+ coords 1886.545 39.874 4923.95
+ angles 0 55.771 0
+}
+SCR_AIGroup RHS_USAF_HeliCrew : "{6981CA4A67B1A730}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_Heli.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+   m_iCompanyCallsign 3
+  }
+ }
+ coords 1893.829 39.75 4913.993
+ angles 0 58.631 0
+}
+SCR_AIGroup RHS_USAF_HQ : "{8BE5C4D411C5E59C}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_PL.et" {
+ coords 2091.739 38.469 4615.666
+ angles 0 -131.824 0
+}
+$grp SCR_AIGroup : "{955623450C88D6F3}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_Squad.et" {
+ RHS_USAF_Squad {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 2061.683 38.621 4654.59
+  angles 0 -128.238 0
+ }
+ RHS_USAF_Squad1 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 2047.433 38.67 4671.666
+  angles 0 -128.238 0
+ }
+ RHS_USAF_Rangers {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 3777.201 14.728 4305.687
+  angles 0 -44.236 0
+ }
+ RHS_USAF_Rangers1 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 3791.511 14.797 4320.039
+  angles 0 -47.282 0
+ }
+}
+$grp SCR_AIGroup : "{F722F19CDE6535BA}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_PDVL_Squad_Motorized.et" {
+ RHS_USAF_LAV {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 0
+    m_iSquadCallsign 1
+   }
+  }
+  coords 2083.228 38.563 4626.658
+  angles 0 -128.915 0
+ }
+ RHS_USAF_LAV1 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 0
+    m_iSquadCallsign 2
+   }
+  }
+  coords 2072.084 38.656 4640.858
+  angles 0 -128.915 0
+ }
+}
