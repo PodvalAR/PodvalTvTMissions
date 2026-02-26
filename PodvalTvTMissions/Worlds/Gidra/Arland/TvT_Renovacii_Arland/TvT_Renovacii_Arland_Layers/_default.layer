@@ -1,0 +1,16 @@
+SCR_AIWorld : "{01DC74137CFDDB6A}Prefabs/AI/SCR_AIWorld_Arland.et" {
+ coords -306.793 0 2586.401
+}
+PerceptionManager PerceptionManager1 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 1607.799 0 4099.542
+}
+PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
+ components {
+  SCR_GroupsManagerComponent "{5706EC99934496F5}" {
+   m_aGroupFlags {
+   }
+  }
+ }
+ coords 57.203 0 1241.623
+ m_iFreezeTime 180000
+}

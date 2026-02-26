@@ -1,0 +1,143 @@
+$grp SCR_AIGroup : "{1128EBD3DDFF1D07}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Motorized.et" {
+ VH_101 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 2704.792 77.5 1658.611
+  angles 0 -124.969 0
+ }
+ VH_102 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 2701.394 77.531 1646.799
+  angles 0 44.746 0
+ }
+ VH_112 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 2726.154 77.469 1635.307
+  angles 0 -130.57 0
+ }
+}
+$grp Vehicle : "{2B15F98903994DA3}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_covered_camo1.et" {
+ Ural4320_transport_covered_camo1 {
+  coords 2106.18 14.879 3422.737
+  angles 0 157.325 0
+  m_sAttachmentGroupName "MB_001"
+ }
+ Ural4320_transport_covered_camo3 {
+  coords 2087.614 14.704 3449.101
+  angles 0 128.334 0
+  m_sAttachmentGroupName "MB_003"
+ }
+ Ural4320_transport_covered_camo2 {
+  coords 2099.934 14.999 3436.22
+  angles 0 155.948 0
+  m_sAttachmentGroupName "MB_002"
+ }
+}
+$grp Vehicle : "{447CFE8D73F95C3E}Prefabs/Vehicles/Wheeled/BTR70/BTR70_AFRF.et" {
+ BTR70_AFRF1 {
+  coords 2700.642 77.492 1657.828
+  angles 0 -41.022 0
+  m_sAttachmentGroupName "VH_101"
+ }
+ BTR70_AFRF2 {
+  coords 2709.589 77.531 1646.012
+  angles 0 -37.939 0
+  m_sAttachmentGroupName "VH_102"
+ }
+ BTR70_AFRF3 {
+  coords 2718.768 77.469 1635.734
+  angles 0 -37.939 0
+  m_sAttachmentGroupName "VH_112"
+ }
+}
+SCR_AIGroup HQ_100 : "{496070641528229D}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_PL.et" {
+ coords 2689.404 77.438 1664.535
+ angles 0 55.714 0
+ m_aUnitPrefabSlots +{
+  "{1D25ADA8774D4BD2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Medic.et"
+ }
+}
+SCR_AIGroup SN_010 : "{8418108290CF1C16}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Sniper.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+   m_iPlatoonCallsign 1
+  }
+ }
+ coords 2071.081 14.313 3452.38
+ angles 0 19.588 0
+}
+$grp SCR_AIGroup : "{B851352F042E4F0B}Prefabs/Groups/OPFOR/RHS_AFRF/Recon/Group_RHS_AFRF_Recon_Squad.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 2506.214 147.652 2254.537
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 2506.895 147.598 2248.849
+ }
+}
+$grp Vehicle : "{E1A99B5F2DC9B38A}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_Camo.et" {
+ UAZ469_Camo1 {
+  coords 2072.601 14.478 3456.443
+  angles 0 111.152 0
+  m_sAttachmentGroupName "SN_010"
+ }
+ UAZ469_Camo2 {
+  coords 2693.864 77.437 1666.321
+  angles 0 -30.986 0
+  m_sAttachmentGroupName "HQ_000"
+ }
+}
+$grp SCR_AIGroup : "{EB131DDF464F90FD}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Squad.et" {
+ MB_002 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iSquadCallsign 2
+   }
+  }
+  coords 2095.143 14.955 3437.916
+  angles 0 60.54 0
+ }
+ MB_003 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iSquadCallsign 3
+   }
+  }
+  coords 2081.222 14.738 3448.871
+  angles 0 38.463 0
+ }
+ MB_001 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iSquadCallsign 1
+   }
+  }
+  coords 2101.049 14.884 3423.792
+  angles 0 72.82 0
+ }
+}
