@@ -1,3 +1,25 @@
+GenericEntity : "{6A3CDCFB475BF1B2}Prefabs/System/DRG_CriticalLossPrefab.et" {
+ components {
+  DRG_CriticalLossComponent "{65213D368F1BD792}" {
+   m_iAdvanceAfterSec 10
+   m_aLossLogics {
+    LossLogic "{68B329FB678CAABF}" {
+     m_aLosses {
+      FactionLoss "{68B329FB61617C72}" {
+       m_iCriticalLossCount 3
+       m_sFactionKey "RHS_USAF"
+      }
+      FactionLoss "{68B329FB6F177D10}" {
+       m_sFactionKey "RHS_AFRF"
+      }
+     }
+     m_bAdvanceGameStage 1
+     m_bEventMessage ""
+    }
+   }
+  }
+ }
+}
 GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
  components {
   DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
