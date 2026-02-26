@@ -60,16 +60,71 @@ $grp SCR_AIGroup : "{198852073E7B5D17}Prefabs/Groups/BLUFOR/French Army/dim_FR_I
   angles 0 157.722 0
  }
 }
-$grp Vehicle : "{2834E391EC6FC919}Prefabs/Vehicles/Land_Vehicles/Wheeled_Vehicles/VBCI/VBCI_Dragar_CE.et" {
- VBCI_Dragar_CE1 {
-  coords 3277.428 206.688 7421.224
+$grp Vehicle : "{2F404F13AA752C9A}Prefabs/Vehicles/Wheeled/GBC180_France/dim_GBC180_CE.et" {
+ dim_GBC180_CE1 {
+  coords 3287.101 206.687 7428.609
   angles 0 -125.189 0
-  m_sAttachmentGroupName "raz"
+  m_sAttachmentGroupName "raz2"
  }
- VBCI_Dragar_CE2 {
-  coords 4832.633 163.165 8149.922
-  angles -4.294 122.285 0.105
+ dim_GBC180_CE5 {
+  coords 4796.815 165.814 8145.496
+  angles -3.767 73.539 -0.13
+  m_sAttachmentGroupName "dva3"
+ }
+ dim_GBC180_CE2 {
+  coords 3297.253 206.687 7436.353
+  angles 0 -127.128 0
+  m_sAttachmentGroupName "raz3"
+ }
+ dim_GBC180_CE3 {
+  coords 3308.311 206.687 7444.569
+  angles 0 -127.128 0
+  m_sAttachmentGroupName "raz4"
+ }
+ dim_GBC180_CE4 {
+  coords 4809.993 164.968 8149.557
+  angles -3.762 75.015 -0.227
+  m_sAttachmentGroupName "dva2"
+ }
+}
+$grp Vehicle : "{3312ADBF53A16DD8}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS.et" {
+ LAV25_RHS1 {
+  components {
+   MeshObject "{51DAA09FEFBFC0E7}" {
+    Materials {
+     MaterialAssignClass "{68B330C980328930}" {
+      SourceMaterial "LAV25_MLOD"
+      AssignedMaterial "{FA932366126E5A89}Assets/Vehicles/Wheeled/LAV25/Data/LAV25_MLOD_MERDC.emat"
+     }
+     MaterialAssignClass "{68B330C98032891C}" {
+      SourceMaterial "LAV25_body_exterior"
+      AssignedMaterial "{96F94F3BC0D5D95A}Assets/Vehicles/Wheeled/LAV25/Data/LAV25_body_exterior_MERDC.emat"
+     }
+    }
+   }
+  }
+  coords 4831.482 163.337 8151.88
+  angles -5.818 114.857 1.236
   m_sAttachmentGroupName "dva"
+ }
+ LAV25_RHS2 {
+  components {
+   MeshObject "{51DAA09FEFBFC0E7}" {
+    Materials {
+     MaterialAssignClass "{68B330C980328930}" {
+      SourceMaterial "LAV25_MLOD"
+      AssignedMaterial "{FA932366126E5A89}Assets/Vehicles/Wheeled/LAV25/Data/LAV25_MLOD_MERDC.emat"
+     }
+     MaterialAssignClass "{68B330C98032891C}" {
+      SourceMaterial "LAV25_body_exterior"
+      AssignedMaterial "{96F94F3BC0D5D95A}Assets/Vehicles/Wheeled/LAV25/Data/LAV25_body_exterior_MERDC.emat"
+     }
+    }
+   }
+  }
+  coords 3277.004 206.76 7421.493
+  angles -5.818 -125.189 1.236
+  m_sAttachmentGroupName "raz"
  }
 }
 SCR_AIGroup hq : "{3341C8E42D86A181}Prefabs/Groups/BLUFOR/French Army/dim_FR_HQ.et" {
@@ -81,26 +136,54 @@ Vehicle VBL_Unarmed_AANF1_CCE1 : "{338B56912EB63330}Prefabs/Vehicles/Land_Vehicl
  angles 0 -124.433 0
  m_sAttachmentGroupName "hq"
 }
-$grp Vehicle : "{49B154E85296FAD8}Prefabs/Vehicles/Land_Vehicles/Wheeled_Vehicles/VBL/VBL_Armed_AANF1_CE.et" {
- VBL_Armed_AANF1_CE1 {
-  coords 4057.53 278.033 5703.377
-  angles 3.561 95.33 0.332
-  m_sAttachmentGroupName "rec"
- }
- VBL_Armed_AANF1_CE2 {
-  coords 4051.009 277.657 5704.588
-  angles 3.482 103.232 0.818
-  m_sAttachmentGroupName "rec"
- }
- VBL_Armed_AANF1_CE3 {
-  coords 4036.984 276.853 5708.004
-  angles 2.651 110.243 -0.294
+$grp Vehicle : "{37E409E5C8E39405}Prefabs/Vehicles/Wheeled/LR_3Series/3Series_SWB_Transport_Variant_2.et" {
+ _Series_SWB_Transport_Variant_2 {
+  components {
+   SlotManagerComponent "{55BCE45E438E4CFF}" {
+    Slots {
+     RegisteringComponentSlotInfo CamoNet_Front {
+      Enabled 1
+     }
+     RegisteringComponentSlotInfo CamoNet_Door_L {
+      Enabled 1
+     }
+     RegisteringComponentSlotInfo CamoNet_Door_R {
+      Enabled 1
+     }
+     RegisteringComponentSlotInfo CamoNet_Top {
+      Enabled 1
+      Prefab "{4F76A47BFCAC2442}Prefabs/Vehicles/Wheeled/LR_3Series/VehParts/Misc/CamoNet/3Series_CamoNet_Tray_SWB.et"
+     }
+    }
+   }
+  }
+  coords 4036.281 276.809 5708.749
+  angles 2.655 111.102 -0.254
   m_sAttachmentGroupName "rec2"
  }
- VBL_Armed_AANF1_CE4 {
-  coords 4043.31 277.207 5706.008
-  angles 3.494 102.339 0.764
-  m_sAttachmentGroupName "rec2"
+ _Series_SWB_Transport_Variant_1 {
+  components {
+   SlotManagerComponent "{55BCE45E438E4CFF}" {
+    Slots {
+     RegisteringComponentSlotInfo CamoNet_Front {
+      Enabled 1
+     }
+     RegisteringComponentSlotInfo CamoNet_Door_L {
+      Enabled 1
+     }
+     RegisteringComponentSlotInfo CamoNet_Door_R {
+      Enabled 1
+     }
+     RegisteringComponentSlotInfo CamoNet_Top {
+      Enabled 1
+      Prefab "{4F76A47BFCAC2442}Prefabs/Vehicles/Wheeled/LR_3Series/VehParts/Misc/CamoNet/3Series_CamoNet_Tray_SWB.et"
+     }
+    }
+   }
+  }
+  coords 4050.681 277.634 5704.615
+  angles 0 102.273 0
+  m_sAttachmentGroupName "rec"
  }
 }
 $grp SCR_AIGroup : "{78152E1B5F9F08ED}Prefabs/Groups/BLUFOR/French Army/dim_FR_Recon.et" {
@@ -124,31 +207,58 @@ $grp SCR_AIGroup : "{78152E1B5F9F08ED}Prefabs/Groups/BLUFOR/French Army/dim_FR_R
   angles 0 23.25 0
  }
 }
-$grp Vehicle : "{A5019E4548F81453}Prefabs/Vehicles/Land_Vehicles/Wheeled_Vehicles/GBC180/CCE/GBC180_CCE_MK2_Transport.et" {
- GBC180_CCE_MK2_Transport1 {
-  coords 3287.431 206.687 7428.678
-  angles 0 -125.985 0
-  m_sAttachmentGroupName "raz2"
+$grp Vehicle : "{8ACB8116F334AE6C}Prefabs/Vehicles/Wheeled/LR_3Series/dim_LWB_M2.et" {
+ dim_LWB_M1 {
+  components {
+   SlotManagerComponent "{55BCE45E438E4CFF}" {
+    Slots {
+     RegisteringComponentSlotInfo CamoNet_Front {
+      Enabled 1
+     }
+     RegisteringComponentSlotInfo CamoNet_Door_L {
+      Enabled 1
+     }
+     RegisteringComponentSlotInfo CamoNet_Door_R {
+      Enabled 1
+     }
+     RegisteringComponentSlotInfo CamoNet_Top {
+      Enabled 1
+      Prefab "{5BECAF94C8302C54}Prefabs/Vehicles/Wheeled/LR_3Series/VehParts/Misc/CamoNet/3Series_CamoNet_Tray_LWB.et"
+     }
+     RegisteringComponentSlotInfo CamoNet_Tray {
+     }
+    }
+   }
+  }
+  coords 4057.336 278.022 5703.548
+  angles 3.56 95.403 0.336
+  m_sAttachmentGroupName "rec"
  }
- GBC180_CCE_MK2_Transport2 {
-  coords 3298.052 206.687 7436.391
-  angles 0 -125.985 0
-  m_sAttachmentGroupName "raz3"
- }
- GBC180_CCE_MK2_Transport3 {
-  coords 3308.586 206.687 7444.041
-  angles 0 -125.985 0
-  m_sAttachmentGroupName "raz4"
- }
- GBC180_CCE_MK2_Transport4 {
-  coords 4797.056 165.804 8145.151
-  angles -4.9 72.437 0.302
-  m_sAttachmentGroupName "dva3"
- }
- GBC180_CCE_MK2_Transport5 {
-  coords 4810.626 164.843 8149.445
-  angles -4.9 72.437 0.302
-  m_sAttachmentGroupName "dva2"
+ dim_LWB_M2 {
+  components {
+   SlotManagerComponent "{55BCE45E438E4CFF}" {
+    Slots {
+     RegisteringComponentSlotInfo CamoNet_Front {
+      Enabled 1
+     }
+     RegisteringComponentSlotInfo CamoNet_Door_L {
+      Enabled 1
+     }
+     RegisteringComponentSlotInfo CamoNet_Door_R {
+      Enabled 1
+     }
+     RegisteringComponentSlotInfo CamoNet_Top {
+      Enabled 1
+      Prefab "{5BECAF94C8302C54}Prefabs/Vehicles/Wheeled/LR_3Series/VehParts/Misc/CamoNet/3Series_CamoNet_Tray_LWB.et"
+     }
+     RegisteringComponentSlotInfo CamoNet_Tray {
+     }
+    }
+   }
+  }
+  coords 4042.692 277.168 5706.67
+  angles 3.467 104.239 0.879
+  m_sAttachmentGroupName "rec2"
  }
 }
 $grp SCR_AIGroup : "{D65D7A651C768707}Prefabs/Groups/BLUFOR/French Army/dim_FR_Infantry_Squad_Motorized.et" {
@@ -160,6 +270,17 @@ $grp SCR_AIGroup : "{D65D7A651C768707}Prefabs/Groups/BLUFOR/French Army/dim_FR_I
   }
   coords 3278.917 206.687 7427.539
   angles 0 142.574 0
+  m_aUnitPrefabSlots {
+   "{76C6998F9AF9A21C}Prefabs/Characters/Factions/BLUFOR/FR_Army/Summer/dim_FR_SL.et"
+   "{E58783C62ADEAE8B}Prefabs/Characters/Factions/BLUFOR/FR_Army/Summer/dim_FR_Marksman.et"
+   "{710163DEFC7F18DF}Prefabs/Characters/Factions/BLUFOR/FR_Army/Summer/dim_FR_TL.et"
+   "{B49C676B5F95ADEE}Prefabs/Characters/Factions/BLUFOR/FR_Army/Summer/dim_FR_Light_AT.et"
+   "{710163DEFC7F18DF}Prefabs/Characters/Factions/BLUFOR/FR_Army/Summer/dim_FR_TL.et"
+   "{4959B68AC63214EC}Prefabs/Characters/Factions/BLUFOR/FR_Army/Summer/dim_FR_MG.et"
+   "{169B16B15FCA6925}Prefabs/Characters/Factions/BLUFOR/FR_Army/Summer/dim_FR_GL.et"
+   "{CA13B43EACD9CADB}Prefabs/Characters/Factions/BLUFOR/FR_Army/Summer/dim_FR_Crew.et"
+   "{CA13B43EACD9CADB}Prefabs/Characters/Factions/BLUFOR/FR_Army/Summer/dim_FR_Crew.et"
+  }
  }
  dva {
   components {
@@ -169,5 +290,16 @@ $grp SCR_AIGroup : "{D65D7A651C768707}Prefabs/Groups/BLUFOR/French Army/dim_FR_I
   }
   coords 4828.456 164.216 8157.014
   angles 0 163.986 0
+  m_aUnitPrefabSlots {
+   "{76C6998F9AF9A21C}Prefabs/Characters/Factions/BLUFOR/FR_Army/Summer/dim_FR_SL.et"
+   "{E58783C62ADEAE8B}Prefabs/Characters/Factions/BLUFOR/FR_Army/Summer/dim_FR_Marksman.et"
+   "{710163DEFC7F18DF}Prefabs/Characters/Factions/BLUFOR/FR_Army/Summer/dim_FR_TL.et"
+   "{B49C676B5F95ADEE}Prefabs/Characters/Factions/BLUFOR/FR_Army/Summer/dim_FR_Light_AT.et"
+   "{710163DEFC7F18DF}Prefabs/Characters/Factions/BLUFOR/FR_Army/Summer/dim_FR_TL.et"
+   "{4959B68AC63214EC}Prefabs/Characters/Factions/BLUFOR/FR_Army/Summer/dim_FR_MG.et"
+   "{169B16B15FCA6925}Prefabs/Characters/Factions/BLUFOR/FR_Army/Summer/dim_FR_GL.et"
+   "{CA13B43EACD9CADB}Prefabs/Characters/Factions/BLUFOR/FR_Army/Summer/dim_FR_Crew.et"
+   "{CA13B43EACD9CADB}Prefabs/Characters/Factions/BLUFOR/FR_Army/Summer/dim_FR_Crew.et"
+  }
  }
 }
