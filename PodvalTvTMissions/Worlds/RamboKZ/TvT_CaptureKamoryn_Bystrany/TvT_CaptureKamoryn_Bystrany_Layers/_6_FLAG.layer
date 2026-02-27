@@ -1,6 +1,13 @@
 $grp GenericEntity : "{F5EF4223ACA6169D}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_02_V1_AFRF.et" {
  FLAG_1 {
   components {
+   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+    m_aFlagData {
+     PS_FlagData "{68B726B5C8F14CB0}" {
+      m_sFactionKey "RHS_AFRF"
+     }
+    }
+   }
    BaseActionsManagerComponent "{6202D4E6F133BF4A}" {
     ActionContexts {
      UserActionContext "{6202D793E4B0C277}" {
@@ -14,6 +21,15 @@ $grp GenericEntity : "{F5EF4223ACA6169D}PrefabsEditable/Auto/Structures/Military
   angles 31.705 -45.463 -8.314
  }
  FLAG_2 {
+  components {
+   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+    m_aFlagData {
+     PS_FlagData "{68B726B4519A4BD2}" {
+      m_sFactionKey "RHS_AFRF"
+     }
+    }
+   }
+  }
   coords 3736.996 219.556 8007.036
   angles 34.509 113.402 -3.183
  }

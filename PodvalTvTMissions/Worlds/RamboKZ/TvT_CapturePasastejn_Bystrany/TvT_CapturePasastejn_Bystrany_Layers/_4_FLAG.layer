@@ -1,6 +1,13 @@
-$grp GenericEntity : "{F5EF4223ACA6169C}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_02_V1_AFRF.et" {
+$grp GenericEntity : "{F5EF4223ACA6169D}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_02_V1_AFRF.et" {
  FLAG_1 {
   components {
+   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+    m_aFlagData {
+     PS_FlagData "{68B726B494CB18EA}" {
+      m_sFactionKey "RHS_AFRF"
+     }
+    }
+   }
    BaseActionsManagerComponent "{6202D4E6F133BF4A}" {
     ActionContexts {
      UserActionContext "{6202D793E4B0C277}" {
@@ -24,6 +31,13 @@ $grp GenericEntity : "{F5EF4223ACA6169C}PrefabsEditable/Auto/Structures/Military
  }
  FLAG_2 {
   components {
+   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+    m_aFlagData {
+     PS_FlagData "{68B726B498BCD139}" {
+      m_sFactionKey "RHS_AFRF"
+     }
+    }
+   }
    BaseActionsManagerComponent "{6202D4E6F133BF4A}" {
     ActionContexts {
      UserActionContext "{6202D793E4B0C277}" {
