@@ -1,7 +1,15 @@
-SCR_AIGroup : "{0FC09C311C951395}Prefabs/Groups/OPFOR/drg_AFRF_PlatoonHQ.et" {
+Vehicle BTR70_AFRF1 : "{447CFE8D73F95C3E}Prefabs/Vehicles/Wheeled/BTR70/BTR70_AFRF.et" {
+ coords 8226.656 262.73 11305.017
+ angles -0.327 -9.349 -0.234
+ m_sAttachmentGroupName "bb"
+}
+SCR_AIGroup : "{496070641528229D}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_PL.et" {
  components {
   PS_GroupCallsignAssigner "{6454F7D129837B5A}" {
    m_iCompanyCallsign 0
+  }
+  PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+   Enabled 0
   }
  }
  coords 9839.759 143.155 11597.814
@@ -16,12 +24,25 @@ SCR_AIGroup : "{0FC09C311C951395}Prefabs/Groups/OPFOR/drg_AFRF_PlatoonHQ.et" {
   "{EA09A14A3C0DE997}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_Sharpshooter_SVDM.et"
  }
 }
-$grp SCR_AIGroup : "{3EDA372443FD105F}Prefabs/Groups/OPFOR/drg_AFRF_RifleSquad.et" {
+Vehicle BRDM2_AFRF1 : "{9AEDF323A812F9ED}Prefabs/Vehicles/Wheeled/BRDM2/BRDM2_AFRF.et" {
+ coords 8231.146 262.789 11297.814
+ angles -0.336 -11.762 -0.22
+ m_sAttachmentGroupName "bb"
+}
+Vehicle GAZ_TIGR_v2_Unarmed_Tan1 : "{BF28FEE927BA80F7}Prefabs/Vehicles/Wheeled/TIGR/Unarmed/GAZ_TIGR_v2_Unarmed_Tan.et" {
+ coords 9352.258 135.623 12269.85
+ angles -2.924 151.309 -0.019
+ m_sAttachmentGroupName "zy"
+}
+$grp SCR_AIGroup : "{EB131DDF464F90FD}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Squad.et" {
  {
   components {
    PS_GroupCallsignAssigner "{6454F7D129837B5A}" {
     m_iCompanyCallsign 0
     m_iPlatoonCallsign 1
+   }
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    Enabled 0
    }
   }
   coords 9857.397 145.02 11560.583
@@ -45,6 +66,9 @@ $grp SCR_AIGroup : "{3EDA372443FD105F}Prefabs/Groups/OPFOR/drg_AFRF_RifleSquad.e
     m_iPlatoonCallsign 1
     m_iSquadCallsign 1
    }
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    Enabled 0
+   }
   }
   coords 9996.766 142.259 11551.925
   angles -0.116 36.679 -0.795
@@ -66,6 +90,9 @@ $grp SCR_AIGroup : "{3EDA372443FD105F}Prefabs/Groups/OPFOR/drg_AFRF_RifleSquad.e
     m_iCompanyCallsign 0
     m_iPlatoonCallsign 1
     m_iSquadCallsign 2
+   }
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    Enabled 0
    }
   }
   coords 9991.243 142.053 11566.889
@@ -89,6 +116,9 @@ $grp SCR_AIGroup : "{3EDA372443FD105F}Prefabs/Groups/OPFOR/drg_AFRF_RifleSquad.e
     m_iPlatoonCallsign 1
     m_iSquadCallsign 3
    }
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    Enabled 0
+   }
   }
   coords 9341.839 135.901 12278.233
   angles 0.269 71.038 -0.092
@@ -109,6 +139,9 @@ $grp SCR_AIGroup : "{3EDA372443FD105F}Prefabs/Groups/OPFOR/drg_AFRF_RifleSquad.e
    PS_GroupCallsignAssigner "{6454F7D129837B5A}" {
     m_iCompanyCallsign 1
    }
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    Enabled 0
+   }
   }
   coords 8222.607 262.721 11305.135
   angles -0.098 80.115 -0.56
@@ -125,21 +158,6 @@ $grp SCR_AIGroup : "{3EDA372443FD105F}Prefabs/Groups/OPFOR/drg_AFRF_RifleSquad.e
    "{E29A1C16D087FB87}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_Crew.et"
   }
  }
-}
-Vehicle BTR70_AFRF1 : "{447CFE8D73F95C3E}Prefabs/Vehicles/Wheeled/BTR70/BTR70_AFRF.et" {
- coords 8226.656 262.73 11305.017
- angles -0.327 -9.349 -0.234
- m_sAttachmentGroupName "bb"
-}
-Vehicle BRDM2_AFRF1 : "{9AEDF323A812F9ED}Prefabs/Vehicles/Wheeled/BRDM2/BRDM2_AFRF.et" {
- coords 8231.146 262.789 11297.814
- angles -0.336 -11.762 -0.22
- m_sAttachmentGroupName "bb"
-}
-Vehicle GAZ_TIGR_v2_Unarmed_Tan1 : "{BF28FEE927BA80F7}Prefabs/Vehicles/Wheeled/TIGR/Unarmed/GAZ_TIGR_v2_Unarmed_Tan.et" {
- coords 9352.258 135.623 12269.85
- angles -2.924 151.309 -0.019
- m_sAttachmentGroupName "zy"
 }
 Vehicle Ural4320_ZU1 : "{FD109F3702AAB392}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_ZU23.et" {
  coords 9348.145 135.897 12280.663
