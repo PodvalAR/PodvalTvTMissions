@@ -1,9 +1,74 @@
+GenericEntity : "{574B8B93E7DDD76D}Prefabs/System/MissionRandomizer/GUB_RandomizeMissionPrefab.et" {
+ components {
+  GUB_RandomizeMissionComponent "{68A6D25C69D035C5}" {
+   m_aFactionPrefabs {
+    GUB_FactionPrefab "{68B6C7459A1E0B05}" : "{585DAD11963FFC1F}Configs/RandomPrefabConfig_AFRF.conf" {
+     m_aGroupPrefabs {
+      GUB_GroupPrefab "{68AF32C8D84E8766}" {
+       m_aAttackGroupPrefabs {
+        "{D266A249A174B7C7}Prefabs/Groups/OPFOR/RHS_AFRF/Recon/Group_RHS_AFRF_Recon_Squad_7.et"
+       }
+       m_aDefendGroupPrefabs {
+        "{D266A249A174B7C7}Prefabs/Groups/OPFOR/RHS_AFRF/Recon/Group_RHS_AFRF_Recon_Squad_7.et"
+       }
+      }
+     }
+    }
+    GUB_FactionPrefab "{68B6C7459BA8F985}" : "{E487849A5DA01A8C}Configs/RandomPrefabConfig_USAF.conf" {
+     m_aGroupPrefabs {
+      GUB_GroupPrefab "{68AF32C82E1E72D1}" {
+       m_aAttackGroupPrefabs {
+        "{18CF53AE14B14060}Prefabs/Groups/BLUFOR/RHS_USAF/Recon/Group_RHS_USAF_Recon_Squad_7.et"
+       }
+       m_aDefendGroupPrefabs {
+        "{18CF53AE14B14060}Prefabs/Groups/BLUFOR/RHS_USAF/Recon/Group_RHS_USAF_Recon_Squad_7.et"
+       }
+      }
+     }
+    }
+   }
+   m_fMinDistanceBetweenLocations 1500
+   m_fMaxDistanceBetweenLocations 3500
+   m_bMarkersOnlyOnBriefing 1
+   m_MarkerMakerConfigPath "{F4A0B8B3CF446139}Configs/MarkerMakerConfig_Random.conf"
+  }
+ }
+ coords 0 0 0
+}
 GenericEntity : "{6A3CDCFB475BF1B2}Prefabs/System/DRG_CriticalLossPrefab.et" {
+ components {
+  DRG_CriticalLossComponent "{65213D368F1BD792}" {
+   m_aLossLogics {
+    LossLogic "{68B7047724374025}" {
+     m_aLosses {
+      FactionLoss "{68B7047727CA97BB}" {
+       m_iCriticalLossCount 2
+       m_sFactionKey "RHS_AFRF"
+      }
+     }
+     m_bAdvanceGameStage 1
+     m_bUseMessage 1
+     m_bEventMessage "ВС РФ понесли критические потери!"
+    }
+    LossLogic "{68B7047724278B2F}" {
+     m_aLosses {
+      FactionLoss "{68B704773B3BC422}" {
+       m_iCriticalLossCount 2
+       m_sFactionKey "RHS_USAF"
+      }
+     }
+     m_bAdvanceGameStage 1
+     m_bUseMessage 1
+     m_bEventMessage "ВС США понесли критические потери!"
+    }
+   }
+  }
+ }
 }
 GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
  components {
   DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
-   m_iMissionTime 2700
+   m_iMissionTime 1800
   }
  }
 }
