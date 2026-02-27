@@ -10,5 +10,20 @@ GenericEntity : "{14B2D417839BF8A3}PrefabsEditable/Auto/Structures/Military/Flag
    m_sDefaultMaterial "{15AB376863D1724E}Assets/Props/Fabric/Flags/Data/Flag_1_2_Russia.emat"
    m_sFactionKey "RHS_AFRF"
   }
+  BaseActionsManagerComponent "{6202D4E6F133BF4A}" {
+   ActionContexts {
+    UserActionContext "{6202D793E4B0C277}" {
+     Radius 2.15
+    }
+   }
+   additionalActions {
+    PS_FlagChangeAction "{6202D4E6A53D4B3C}" {
+     Duration 10
+     m_bUseAnimation 1
+    }
+   }
+  }
  }
+ coords 3736.996 219.556 8007.036
+ angles 34.509 113.402 -3.183
 }

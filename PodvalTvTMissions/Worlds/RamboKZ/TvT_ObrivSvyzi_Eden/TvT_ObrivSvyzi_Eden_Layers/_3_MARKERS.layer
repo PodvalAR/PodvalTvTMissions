@@ -1,0 +1,107 @@
+$grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+ cmd_spawn2 {
+  coords 4529.162 16.732 10516.158
+  angles 0 81.318 0
+  m_sImageSet ""
+  m_sImageSetGlow ""
+  m_MarkerColor 1 1 1 0
+  m_sQuadName ""
+ }
+ defens1 {
+  coords 5340.49 43.495 10532.619
+  angles 0 90 0
+  m_sImageSet "{C3F217CA9CF060B4}UI/Imagesets/Conflict/ConflictIconsSet.imageset"
+  m_sImageSetGlow ""
+  m_sQuadName "Task_Defend"
+  m_fWorldSize 35
+  m_sDescription "Защищать КШМ"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "RHS_USAF"
+   ""
+  }
+  m_aHideOnGameModeStates {
+  }
+ }
+ defens2 {
+  coords 4558.956 16.062 10452.307
+  angles 0 90 0
+  m_sImageSet "{C3F217CA9CF060B4}UI/Imagesets/Conflict/ConflictIconsSet.imageset"
+  m_sImageSetGlow ""
+  m_sQuadName "Task_Defend"
+  m_fWorldSize 35
+  m_sDescription "Защищать КШМ"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "RHS_USAF"
+  }
+  m_aHideOnGameModeStates {
+  }
+ }
+ cmd_spawn1 {
+  coords 4531.708 15.05 10409.058
+  angles 0 31.985 0
+  m_sImageSet ""
+  m_sImageSetGlow ""
+  m_MarkerColor 1 1 1 0
+  m_sQuadName ""
+  m_bUseWorldScale 0
+ }
+ CMD {
+  coords 5228.323 40.048 10481.156
+  angles -0.931 46.988 2.499
+  m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 0.071 0.192 0.561 1
+  m_sQuadName "Truck"
+  m_fWorldSize 5.1
+  m_sDescription "КШМ 1"
+  m_bUseWorldScale 1
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+   "Drg_IGF"
+   "Drg_PIR"
+   "UK"
+   "USSR"
+   "US"
+   "FIA"
+   "Drg_VCA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+   GAME
+  }
+  m_iZOrder 0
+ }
+ attack1 {
+  coords 5340.524 43.508 10532.98
+  angles 0 90 0
+  m_sImageSet "{C3F217CA9CF060B4}UI/Imagesets/Conflict/ConflictIconsSet.imageset"
+  m_sImageSetGlow ""
+  m_sQuadName "Task_Attack"
+  m_fWorldSize 35
+  m_sDescription "Уничтожить КШМ 1"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+  }
+ }
+ attack2 {
+  coords 4559.085 16.062 10452.478
+  angles 0 90 0
+  m_sImageSet "{C3F217CA9CF060B4}UI/Imagesets/Conflict/ConflictIconsSet.imageset"
+  m_sImageSetGlow ""
+  m_sQuadName "Task_Attack"
+  m_fWorldSize 35
+  m_sDescription "Уничтожить КШМ 2"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+  }
+ }
+}
