@@ -943,18 +943,6 @@ $grp Vehicle : "{1395C9E664E4C792}Prefabs/Vehicles/Wheeled/M998/M1151_armed_M2HB
   coords 3498.336 223.469 8177.583
   angles 5.028 -8.078 -3.324
  }
- M1151_armed_M2HB_Tan_NOGUN_DIMKII1 {
-  coords 1451.946 127.779 4737.16
-  angles 7.103 -111.717 5.765
- }
- M1151_armed_M2HB_Tan_NOGUN_DIMKII2 {
-  coords 1433.059 128.919 4729.554
-  angles 7.91 171.104 -1.234
- }
- M1151_armed_M2HB_Tan_NOGUN_DIMKII3 {
-  coords 1510.052 122.649 4671.264
-  angles -3.309 1.13 -113.616
- }
 }
 $grp GenericEntity : "{14C6F846207A0DC8}Prefabs/Props/Civilian/Notebook_01/Notebook_01_open_Huey.et" {
  {
@@ -1291,9 +1279,6 @@ GenericEntity : "{33882C61BA9F0F90}Prefabs/Props/Civilian/Globe_01.et" {
 GenericEntity : "{34C2F623958FCACE}Prefabs/Props/Civilian/Ashtray_01_Full_clear.et" {
  coords 3248.789 238.545 8324.57
  angles 0 0 0
-}
-SCR_DestructibleBuildingEntity : "{35A406D39D6E0ADA}Prefabs/Structures/Military/Houses/Barracks_01/Barracks_01_military_camo_v1.et" {
- coords 2974.365 10.407 8023.876
 }
 GenericEntity : "{36B55E2B9C47373C}Prefabs/Compositions/Misc/SubCompositions/Tents/Tent_Medical_US_01.et" {
  coords 3223.974 230.044 8262.046
@@ -2149,34 +2134,6 @@ $grp GenericEntity : "{4911553FA8356302}Prefabs/Props/Garbage/Generic/Junk_01/Ju
  }
  {
   coords 3267.923 232.245 8325.109
- }
-}
-$grp Vehicle : "{49C909AFD66E90A1}Prefabs/Vehicles/Wheeled/S1203/S1203_transport_randomized.et" {
- S1203_transport_randomized1 {
-  components {
-   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
-    FuelNodes {
-     SCR_FuelNode "{5622A70CD4036C5A}" {
-      m_fInitialFuelTankState 0
-     }
-    }
-   }
-  }
-  coords 4063.927 17.201 4090.846
-  angles 0 -49.723 0
- }
- S1203_transport_randomized2 {
-  components {
-   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
-    FuelNodes {
-     SCR_FuelNode "{5622A70CD4036C5A}" {
-      m_fInitialFuelTankState 0
-     }
-    }
-   }
-  }
-  coords 4039.967 17.201 4092.776
-  angles 0 -81.518 0
  }
 }
 SCR_DestructibleBuildingEntity : "{4BF6BA8E45782D2D}Prefabs/Structures/Wall/Wall_E_Terrain.et" {
@@ -3343,14 +3300,15 @@ $grp GenericEntity : "{B0F3D8C49F4B5D1D}Prefabs/Compositions/Slotted/SlotFlatSma
   coords 3516.493 223.408 8184.932
   angles -1.632 30.191 0.431
   {
-   GenericEntity {
-    ID "67233C61873D06A1"
-    coords -2.59 0.016 1.312
-    angles 0.901 -42.936 -1.427
-   }
-   GenericEntity {
-    coords -2.206 0.023 1.445
-    angles 1.632 0 -0.431
+   $grp GenericEntity {
+    {
+     coords -2.59 0.016 1.312
+     angles 0.901 -42.936 -1.427
+    }
+    {
+     coords -2.206 0.023 1.445
+     angles 1.632 0 -0.431
+    }
    }
    GenericEntity {
     ID "67233C61873D069C"
@@ -3424,26 +3382,24 @@ $grp GenericEntity : "{B0F3D8C49F4B5D1D}Prefabs/Compositions/Slotted/SlotFlatSma
       }
      }
     }
-   }
-   GenericEntity {
-    ID "67233C61873F7BAB"
-    coords 4.333 0.099 -1.561
-    angles 0.497 87.67 1.613
     {
-     DecalEntity {
-      ID "56E0B29E17039037"
-      coords 0.002 0 -0.001
-      angles 0 180 0
+     coords 4.333 0.099 -1.561
+     angles 0.497 87.67 1.613
+     {
+      DecalEntity {
+       coords 0.002 0 -0.001
+       angles 0 180 0
+      }
      }
     }
-   }
-   GenericEntity {
-    coords -3.036 0.064 2.813
-    angles 2.663 0.003 0.169
     {
-     DecalEntity {
-      coords 0 0 0
-      angles 0 149.792 0
+     coords -3.036 0.064 2.813
+     angles 2.663 0.003 0.169
+     {
+      DecalEntity {
+       coords 0 0 0
+       angles 0 149.792 0
+      }
      }
     }
    }
@@ -3501,14 +3457,15 @@ $grp GenericEntity : "{B0F3D8C49F4B5D1D}Prefabs/Compositions/Slotted/SlotFlatSma
     coords 1.391 -0.072 -2.523
     angles 0.984 4.287 0.676
    }
-   StaticModelEntity {
-    ID "67233C61873D9BD4"
-    coords 4.309 0.184 0.825
-    angles -2.281 178.703 0.473
-   }
-   StaticModelEntity {
-    coords 1.141 0.098 3.214
-    angles -0.541 -93.892 -1.599
+   $grp StaticModelEntity {
+    {
+     coords 4.309 0.184 0.825
+     angles -2.281 178.703 0.473
+    }
+    {
+     coords 1.141 0.098 3.214
+     angles -0.541 -93.892 -1.599
+    }
    }
   }
  }

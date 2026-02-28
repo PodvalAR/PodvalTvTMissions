@@ -36,45 +36,6 @@ $grp GenericEntity : "{3D78D7D606FF9818}PrefabsEditable/Auto/Structures/Military
   coords 6562.265 246.647 6546.937
  }
 }
-GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
- components {
-  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
-   m_aControlLogics {
-    GUB_ZoneControlLogic "{68B2C1E70E507FFD}" {
-     m_Timer GUB_ZoneControlTimer "{68B2C1E708D0D7FF}" {
-      timeToComplete 150
-     }
-     m_ZoneController GUB_ZoneController "{68B2C1E70B5C6681}" {
-      m_sZoneEntityName "capture"
-     }
-     m_FlagController GUB_FlagController "{68B2C1E70AD7FC18}" {
-      m_aFlagNames {
-       "flag1"
-       "flag2"
-       "flag3"
-       "flag4"
-       "flag5"
-       "flag6"
-       "flag7"
-       "flag8"
-      }
-      m_fStartFactionKey "RHS_AFRF"
-      m_fEndFactionKey "FR"
-     }
-     m_aConditions {
-      GUB_ZoneControlBetweenFactionsCondition "{68B2C1E7203F418E}" {
-       m_sFirstFactionKey "FR"
-       m_sSecondFactionKey "RHS_AFRF"
-       m_fComparisonMultiplier 2
-       m_iOperator GREATER
-      }
-     }
-    }
-   }
-  }
- }
- coords 6243.403 201.85 6862.579
-}
 GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
  components {
   DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
