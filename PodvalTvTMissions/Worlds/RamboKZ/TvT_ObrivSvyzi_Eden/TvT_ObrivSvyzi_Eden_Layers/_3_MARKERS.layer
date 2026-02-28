@@ -1,12 +1,4 @@
 $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
- cmd_spawn2 {
-  coords 4529.162 16.732 10516.158
-  angles 0 81.318 0
-  m_sImageSet ""
-  m_sImageSetGlow ""
-  m_MarkerColor 1 1 1 0
-  m_sQuadName ""
- }
  defens1 {
   coords 5340.49 43.495 10532.619
   angles 0 90 0
@@ -37,15 +29,6 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   }
   m_aHideOnGameModeStates {
   }
- }
- cmd_spawn1 {
-  coords 4531.708 15.05 10409.058
-  angles 0 31.985 0
-  m_sImageSet ""
-  m_sImageSetGlow ""
-  m_MarkerColor 1 1 1 0
-  m_sQuadName ""
-  m_bUseWorldScale 0
  }
  CMD {
   coords 5228.323 40.048 10481.156
@@ -103,5 +86,36 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   m_aVisibleForFactions {
    "RHS_AFRF"
   }
+ }
+ CMD_2 {
+  coords 4529.043 16.715 10515.428
+  angles -2.766 173.637 -0.591
+  m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 0.071 0.192 0.561 1
+  m_sQuadName "Truck"
+  m_fWorldSize 5.1
+  m_sDescription "КШМ 2"
+  m_bUseWorldScale 1
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+   "Drg_IGF"
+   "Drg_PIR"
+   "UK"
+   "USSR"
+   "US"
+   "FIA"
+   "Drg_VCA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+   GAME
+  }
+  m_iZOrder 0
  }
 }

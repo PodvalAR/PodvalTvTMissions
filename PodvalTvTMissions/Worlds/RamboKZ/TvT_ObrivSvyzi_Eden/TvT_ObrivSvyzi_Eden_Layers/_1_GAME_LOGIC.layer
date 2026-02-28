@@ -15,7 +15,7 @@ GenericEntity : "{7A333AFB11EA847A}Prefabs/System/DRG_VehicleDestroyPrefab.et" {
      }
      m_sVehicleEntityNames {
       "USAF_000_CMD"
-      "USAF_000_CMD_2"
+      "USAF_010_CMD_2"
      }
      m_sMessage "Победа Атаки! ВС РФ уничтожили все Мобильные Штабы!"
     }
@@ -23,21 +23,6 @@ GenericEntity : "{7A333AFB11EA847A}Prefabs/System/DRG_VehicleDestroyPrefab.et" {
   }
  }
  coords 5480.832 0 3837.973
-}
-GenericEntity : "{91991AEB147C0F3B}Prefabs/System/DRG_RandomSpawnPrefab.et" {
- components {
-  DRG_RandomSpawnComponent "{66295E1A338BA9CE}" {
-   m_TargetEntity "USAF_000_CMD_2"
-   m_MarkerEntities {
-    "cmd_spawn1"
-    "cmd_spawn2"
-   }
-   m_PrefabResources {
-   }
-   m_InitDelayMs 200
-  }
- }
- coords 1731.107 14.691 2466.658
 }
 GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
  components {

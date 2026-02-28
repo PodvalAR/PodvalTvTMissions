@@ -1,73 +1,35 @@
 $grp Vehicle : "{3277F8B1FA06A2BC}Prefabs/Vehicles/Wheeled/M998/M1025_armed_M2HB_USAF.et" {
- USAF_102_V {
-  coords 4952.397 28.592 11816.415
-  angles -1.229 178.268 -1.156
-  m_sAttachmentGroupName "USAF_102"
- }
  USAF_100_V {
-  coords 4955.241 28.594 11770.024
+  coords 4956.427 28.755 11756.029
   angles 1.863 177.575 0.734
   m_sAttachmentGroupName "USAF_100"
  }
  USAF_101_V {
-  coords 4956.685 28.49 11799.537
+  coords 4955.945 28.475 11799.53
   angles 0.011 179.473 1.193
   m_sAttachmentGroupName "USAF_101"
  }
  USAF_200_V {
-  coords 4565.925 16.501 10542.109
-  angles 0.074 81.428 0.013
+  coords 4584.467 24.104 11126.854
+  angles 0.077 174.473 0.009
   m_sAttachmentGroupName "USAF_200"
  }
  USAF_201_V {
-  coords 4561.792 14.56 10389.845
-  angles -0.017 115.827 -0.029
+  coords 4583.198 24.353 11142.232
+  angles -0.018 176.196 -0.063
   m_sAttachmentGroupName "USAF_201"
  }
 }
 Vehicle USAF_110_V : "{3312ADBF53A16DD8}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS.et" {
- coords 4957.004 28.469 11840.806
+ coords 4956.572 28.469 11840.193
  angles 0 -171.5 0
  m_sAttachmentGroupName "USAF_110"
 }
 $grp Vehicle : "{36BDCC88B17B3BFA}Prefabs/Vehicles/Wheeled/M923A1/M923A1_command.et" {
- USAF_000_CMD_2 {
-  coords 5211.924 39.938 10500.642
-  angles -2.631 140.018 1.038
-  m_sAttachmentGroupName "USAF_000"
-  {
-   PS_ManualMarker CMD_2 : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
-    coords -0.393 -0.378 -0.946
-    angles 2.433 89.127 1.443
-    m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
-    m_sImageSetGlow ""
-    m_MarkerColor 0.071 0.192 0.561 1
-    m_sQuadName "Truck"
-    m_fWorldSize 5.1
-    m_sDescription "КШМ 2"
-    m_bUseWorldScale 1
-    m_aVisibleForFactions {
-     "RHS_AFRF"
-     "RHS_USAF"
-     "Ses_CDF"
-     "Ses_ChDKZ"
-     "Ses_TKR"
-     "Ses_TKA"
-     "Drg_IGF"
-     "Drg_PIR"
-     "UK"
-     "USSR"
-     "US"
-     "FIA"
-     "Drg_VCA"
-    }
-    m_bVisibleForEmptyFaction 1
-    m_aHideOnGameModeStates {
-     GAME
-    }
-    m_iZOrder 0
-   }
-  }
+ USAF_010_CMD_2 {
+  coords 4529.043 16.715 10515.428
+  angles -0.546 82.684 2.775
+  m_sAttachmentGroupName "USAF_001"
  }
  USAF_000_CMD {
   coords 5228.929 40.089 10481.008
@@ -75,32 +37,47 @@ $grp Vehicle : "{36BDCC88B17B3BFA}Prefabs/Vehicles/Wheeled/M923A1/M923A1_command
   m_sAttachmentGroupName "USAF_000"
  }
 }
-$grp SCR_AIGroup : "{955623450C88D6F3}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_Squad.et" {
- USAF_102 {
+$grp SCR_AIGroup : "{3EECAF1E0650D775}Prefabs/Groups/BLUFOR/RHS_USAF/Recon/Group_RHS_USAF_Recon_Squad.et" {
+ USAF_200 {
   components {
-   PS_GroupCallsignAssigner "{6564F0339CB2D893}" {
-    m_iCompanyCallsign 1
-    m_iSquadCallsign 2
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 2
    }
   }
-  coords 4958.01 28.593 11815.838
-  angles 0 -91.749 0
+  coords 4588.639 24.315 11125.693
+  angles 0 -93.157 0
   m_aUnitPrefabSlots {
-   "{67B4542E01521C15}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/dim_Role_Character_USAF_USMC_SL.et"
-   "{4B7BF5D744A5B2A1}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/dim_Role_Character_USAF_USMC_TF.et"
-   "{0A3CA53133D6BE06}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/dim_Role_Character_USAF_USMC_AR.et"
-   "{5A1CC345188BACAC}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/dim_Role_Character_USAF_USMC_Grenadier.et"
-   "{FD1EE030BC6DDA4E}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/dim_Role_Character_USAF_USMC_LAT.et"
-   "{4B7BF5D744A5B2A1}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/dim_Role_Character_USAF_USMC_TF.et"
-   "{0A3CA53133D6BE06}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/dim_Role_Character_USAF_USMC_AR.et"
-   "{5A1CC345188BACAC}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/dim_Role_Character_USAF_USMC_Grenadier.et"
-   "{FD1EE030BC6DDA4E}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/dim_Role_Character_USAF_USMC_LAT.et"
+   "{C4809EAA0F1F9C00}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/dim_Role_Character_USAF_MARSOC_SL.et"
+   "{EFD4BC124D52455A}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/dim_Role_Character_USAF_MARSOC_Grenadier.et"
+   "{A0D900A84F88554C}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/dim_Role_Character_USAF_MARSOC_Rifleman.et"
+   "{3445523D5722EBE8}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/dim_Role_Character_USAF_MARSOC_LAT.et"
+   "{F262FDFBC708985B}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/dim_Role_Character_USAF_MARSOC_Marksman.et"
   }
-  m_sCustomNameSet "Стрелковое отделение"
+  m_sCustomNameSet "Развед отряд"
  }
+ USAF_201 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 4588.677 24.427 11140.986
+  angles 0 -91.863 0
+  m_aUnitPrefabSlots {
+   "{C4809EAA0F1F9C00}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/dim_Role_Character_USAF_MARSOC_SL.et"
+   "{EFD4BC124D52455A}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/dim_Role_Character_USAF_MARSOC_Grenadier.et"
+   "{A0D900A84F88554C}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/dim_Role_Character_USAF_MARSOC_Rifleman.et"
+   "{3445523D5722EBE8}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/dim_Role_Character_USAF_MARSOC_LAT.et"
+   "{F262FDFBC708985B}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/dim_Role_Character_USAF_MARSOC_Marksman.et"
+  }
+  m_sCustomNameSet "Развед отряд"
+ }
+}
+$grp SCR_AIGroup : "{955623450C88D6F3}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_Squad.et" {
  USAF_101 {
   components {
-   PS_GroupCallsignAssigner "{6564F0339CB2D893}" {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
     m_iCompanyCallsign 1
     m_iSquadCallsign 1
    }
@@ -122,11 +99,11 @@ $grp SCR_AIGroup : "{955623450C88D6F3}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Gro
  }
  USAF_100 {
   components {
-   PS_GroupCallsignAssigner "{6564F0339CB2D893}" {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
     m_iCompanyCallsign 1
    }
   }
-  coords 4960.789 28.594 11769.848
+  coords 4961.033 28.786 11755.813
   angles 0 -89.619 0
   m_aUnitPrefabSlots {
    "{67B4542E01521C15}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/dim_Role_Character_USAF_USMC_SL.et"
@@ -143,7 +120,7 @@ $grp SCR_AIGroup : "{955623450C88D6F3}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Gro
  }
  USAF_110 {
   components {
-   PS_GroupCallsignAssigner "{6564F0339CB2D893}" {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
     m_iCompanyCallsign 1
     m_iPlatoonCallsign 1
    }
@@ -178,58 +155,37 @@ $grp SCR_AIGroup : "{955623450C88D6F3}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Gro
   }
   m_sCustomNameSet "Стрелковое отделение"
  }
-}
-$grp Vehicle : "{CC55611936C21F25}Prefabs/Vehicles/Wheeled/M998/M1025_USAF.et" {
- USAF_101_V2 {
-  coords 4956.72 28.506 11792.453
-  angles 0 178.445 0
-  m_sAttachmentGroupName "USAF_101"
- }
- USAF_102_V2 {
-  coords 4952.47 28.595 11822.954
-  angles -1.193 179.358 0.013
-  m_sAttachmentGroupName "USAF_102"
- }
- USAF_100_V2 {
-  coords 4955.025 28.594 11777.106
-  angles 1.84 179.285 0.789
-  m_sAttachmentGroupName "USAF_100"
- }
-}
-$grp SCR_AIGroup : "{3EECAF1E0650D775}Prefabs/Groups/BLUFOR/RHS_USAF/Recon/Group_RHS_USAF_Recon_Squad.et" {
- USAF_200 {
+ USAF_001 {
   components {
-   PS_GroupCallsignAssigner "{653B380F33F8D93C}" {
-    m_iCompanyCallsign 2
-   }
-  }
-  coords 4567.27 16.583 10546.045
-  angles 0 173.835 0
-  m_aUnitPrefabSlots {
-   "{C4809EAA0F1F9C00}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/dim_Role_Character_USAF_MARSOC_SL.et"
-   "{EFD4BC124D52455A}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/dim_Role_Character_USAF_MARSOC_Grenadier.et"
-   "{A0D900A84F88554C}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/dim_Role_Character_USAF_MARSOC_Rifleman.et"
-   "{3445523D5722EBE8}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/dim_Role_Character_USAF_MARSOC_LAT.et"
-   "{F262FDFBC708985B}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/dim_Role_Character_USAF_MARSOC_Marksman.et"
-  }
-  m_sCustomNameSet "Развед отряд"
- }
- USAF_201 {
-  components {
-   PS_GroupCallsignAssigner "{653B380F33F8D93C}" {
-    m_iCompanyCallsign 2
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
     m_iSquadCallsign 1
    }
   }
-  coords 4564.929 14.566 10392.21
-  angles 0 -154.986 0
+  coords 4545.545 15.943 10500.316
+  angles 0 -95.972 0
   m_aUnitPrefabSlots {
-   "{C4809EAA0F1F9C00}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/dim_Role_Character_USAF_MARSOC_SL.et"
-   "{EFD4BC124D52455A}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/dim_Role_Character_USAF_MARSOC_Grenadier.et"
-   "{A0D900A84F88554C}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/dim_Role_Character_USAF_MARSOC_Rifleman.et"
-   "{3445523D5722EBE8}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/dim_Role_Character_USAF_MARSOC_LAT.et"
-   "{F262FDFBC708985B}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/dim_Role_Character_USAF_MARSOC_Marksman.et"
+   "{67B4542E01521C15}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/dim_Role_Character_USAF_USMC_SL.et"
+   "{4B7BF5D744A5B2A1}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/dim_Role_Character_USAF_USMC_TF.et"
+   "{0A3CA53133D6BE06}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/dim_Role_Character_USAF_USMC_AR.et"
+   "{5A1CC345188BACAC}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/dim_Role_Character_USAF_USMC_Grenadier.et"
+   "{FD1EE030BC6DDA4E}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/dim_Role_Character_USAF_USMC_LAT.et"
+   "{4B7BF5D744A5B2A1}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/dim_Role_Character_USAF_USMC_TF.et"
+   "{0A3CA53133D6BE06}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/dim_Role_Character_USAF_USMC_AR.et"
+   "{5A1CC345188BACAC}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/dim_Role_Character_USAF_USMC_Grenadier.et"
+   "{FD1EE030BC6DDA4E}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/dim_Role_Character_USAF_USMC_LAT.et"
   }
-  m_sCustomNameSet "Развед отряд"
+  m_sCustomNameSet "Стрелковое отделение"
+ }
+}
+$grp Vehicle : "{CC55611936C21F25}Prefabs/Vehicles/Wheeled/M998/M1025_USAF.et" {
+ USAF_101_V2 {
+  coords 4955.98 28.491 11792.446
+  angles 0 178.445 0
+  m_sAttachmentGroupName "USAF_101"
+ }
+ USAF_100_V2 {
+  coords 4956.211 28.755 11763.111
+  angles 1.84 179.285 0.789
+  m_sAttachmentGroupName "USAF_100"
  }
 }
