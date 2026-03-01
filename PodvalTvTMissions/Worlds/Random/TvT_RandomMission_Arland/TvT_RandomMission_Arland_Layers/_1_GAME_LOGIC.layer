@@ -12,6 +12,8 @@ GenericEntity : "{574B8B93E7DDD76D}Prefabs/System/MissionRandomizer/GUB_Randomiz
     }
     GUB_FactionPrefab "{68C296C46764C846}" : "{2162A515C1EDE618}Configs/RandomPrefabConfig_USSR.conf" {
     }
+    GUB_FactionPrefab "{68C296D108D7E037}" : "{192C9DAB2B09B7F7}Configs/RandomPrefabConfig_US.conf" {
+    }
    }
    m_fMaxDistanceBetweenLocations 5000
    m_bMarkersOnlyOnBriefing 1
@@ -19,37 +21,6 @@ GenericEntity : "{574B8B93E7DDD76D}Prefabs/System/MissionRandomizer/GUB_Randomiz
   }
  }
  coords 0 0 0
-}
-GenericEntity : "{6A3CDCFB475BF1B2}Prefabs/System/DRG_CriticalLossPrefab.et" {
- components {
-  DRG_CriticalLossComponent "{65213D368F1BD792}" {
-   m_iTestingPlayerCounts 3
-   m_aLossLogics {
-    LossLogic "{68ACBC75B0B230CA}" {
-     m_aLosses {
-      FactionLoss "{68ACBC75BD128532}" {
-       m_iCriticalLossCount 1
-       m_sFactionKey "RHS_USAF"
-      }
-     }
-     m_bAdvanceGameStage 1
-     m_bUseMessage 1
-     m_bEventMessage "ВС США Понесли критические потери!"
-    }
-    LossLogic "{68ACBC75B05CD700}" {
-     m_aLosses {
-      FactionLoss "{68ACBC75BE9A436F}" {
-       m_iCriticalLossCount 1
-       m_sFactionKey "RHS_AFRF"
-      }
-     }
-     m_bAdvanceGameStage 1
-     m_bUseMessage 1
-     m_bEventMessage "ВС РФ Понесли критические потери!"
-    }
-   }
-  }
- }
 }
 GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
  components {
