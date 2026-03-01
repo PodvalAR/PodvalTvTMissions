@@ -2,187 +2,20 @@ GenericEntity : "{574B8B93E7DDD76D}Prefabs/System/MissionRandomizer/GUB_Randomiz
  components {
   GUB_RandomizeMissionComponent "{68A6D25C69D035C5}" {
    m_aFactionPrefabs {
-    GUB_FactionPrefab "{68A6D25CB41F049A}" {
-     m_aEnemyFactionKeys {
-      "RHS_AFRF"
-     }
-     m_aGroupPrefabs {
-      GUB_GroupPrefab "{68A6D25E6D71E44F}" {
-       m_iNumVehicles 2
-       m_aAttackVehiclePrefabs {
-        "{D574C943C9F8C9DF}Prefabs/Vehicles/Wheeled/M998/M1151_armed_M2HB_AP.et"
-       }
-      }
-      GUB_GroupPrefab "{68A7036940118BB0}" {
-       m_iNumVehicles 1
-       m_aDefendVehiclePrefabs {
-        "{3312ADBF53A16DD8}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS.et"
-       }
-       m_aAttackVehiclePrefabs {
-        "{3312ADBF53A16DD8}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS.et"
-       }
-      }
-      GUB_GroupPrefab "{68AB3810855688CB}" {
-       m_eGroupType Recon
-       m_aGroupPrefabs {
-        "{FD531F571854D70B}Prefabs/Groups/BLUFOR/RHS_USAF/Recon/Group_RHS_USAF_Recon_Squad_6.et"
-       }
-       m_iNumVehicles 2
-       m_aDefendVehiclePrefabs {
-        "{F649585ABB3706C4}Prefabs/Vehicles/Wheeled/M151A2/M151A2.et"
-        "{86D830868F026D54}Prefabs/Vehicles/Wheeled/M151A2/M151A2_MERDC.et"
-       }
-       m_aAttackVehiclePrefabs {
-        "{F649585ABB3706C4}Prefabs/Vehicles/Wheeled/M151A2/M151A2.et"
-        "{86D830868F026D54}Prefabs/Vehicles/Wheeled/M151A2/M151A2_MERDC.et"
-        "{F6B23D17D5067C11}Prefabs/Vehicles/Wheeled/M151A2/M151A2_M2HB.et"
-        "{5168FEA3054D6D15}Prefabs/Vehicles/Wheeled/M151A2/M151A2_M2HB_MERDC.et"
-       }
-      }
-      GUB_GroupPrefab "{68AB382C46F15ADC}" {
-       m_eGroupType Command
-       m_aGroupPrefabs {
-        "{8BE5C4D411C5E59C}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_PL.et"
-       }
-       m_iNumVehicles 1
-       m_aAttackVehiclePrefabs {
-        "{36BDCC88B17B3BFA}Prefabs/Vehicles/Wheeled/M923A1/M923A1_command.et"
-        "{38186F12F27A61C6}Prefabs/Vehicles/Wheeled/M923A1/M923A1_command_MERDC.et"
-       }
-      }
-      GUB_GroupPrefab "{68AB382F1581B18E}" {
-       m_eGroupType Helicopter_Attack
-       m_aGroupPrefabs {
-        "{6981CA4A67B1A730}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_Heli.et"
-       }
-       m_iNumVehicles 1
-       m_aAttackVehiclePrefabs {
-        "{21E9A875C0A3C409}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed_gunship_HE.et"
-        "{350492BE6F09A847}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed_gunship_HE_sharkNose.et"
-       }
-      }
-      GUB_GroupPrefab "{68AB382F1633C782}" {
-       m_eGroupType Helicopter_Recon
-       m_aGroupPrefabs {
-        "{FD531F571854D70B}Prefabs/Groups/BLUFOR/RHS_USAF/Recon/Group_RHS_USAF_Recon_Squad_6.et"
-       }
-       m_aAttackVehiclePrefabs {
-        "{FD531F571854D70B}Prefabs/Groups/BLUFOR/RHS_USAF/Recon/Group_RHS_USAF_Recon_Squad_6.et"
-       }
-      }
-      GUB_GroupPrefab "{68AB3824672F7027}" {
-       m_eGroupType Sniper
-       m_aGroupPrefabs {
-        "{3CB180F292A52F34}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_Sniper.et"
-       }
-       m_iNumVehicles 1
-       m_aAttackVehiclePrefabs {
-        "{F649585ABB3706C4}Prefabs/Vehicles/Wheeled/M151A2/M151A2.et"
-       }
-      }
-      GUB_GroupPrefab "{68AB3824601706F8}" {
-       m_eGroupType Mechanized
-       m_aGroupPrefabs {
-        "{17491F97A5C9BBDF}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_Mechanized.et"
-       }
-       m_iNumVehicles 1
-       m_aAttackVehiclePrefabs {
-        "{3312ADBF53A16DD8}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS.et"
-       }
-      }
-     }
+    GUB_FactionPrefab "{68B2D70FC18F2D0B}" : "{585DAD11963FFC1F}Configs/RandomPrefabConfig_AFRF.conf" {
     }
-    GUB_FactionPrefab "{68A703688BF5F029}" {
-     m_aEnemyFactionKeys {
-      "RHS_USAF"
-     }
-     m_aGroupPrefabs {
-      GUB_GroupPrefab "{68A703689692BFEE}" {
-       m_iNumVehicles 1
-       m_aAttackVehiclePrefabs {
-        "{2B15F98903994DA3}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_covered_camo1.et"
-        "{D9B91FAB817A6033}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_covered.et"
-        "{2CCD539A7AB35B2F}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_camo1.et"
-        "{16C1F16C9B053801}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport.et"
-       }
-      }
-      GUB_GroupPrefab "{68A70368A020F880}" {
-       m_iNumVehicles 1
-       m_aDefendVehiclePrefabs {
-        "{447CFE8D73F95C3E}Prefabs/Vehicles/Wheeled/BTR70/BTR70_AFRF.et"
-       }
-       m_aAttackVehiclePrefabs {
-        "{447CFE8D73F95C3E}Prefabs/Vehicles/Wheeled/BTR70/BTR70_AFRF.et"
-       }
-      }
-      GUB_GroupPrefab "{68AB3811888D046C}" {
-       m_eGroupType Recon
-       m_aGroupPrefabs {
-        "{B851352F042E4F0B}Prefabs/Groups/OPFOR/RHS_AFRF/Recon/Group_RHS_AFRF_Recon_Squad.et"
-       }
-       m_iNumVehicles 2
-       m_aDefendVehiclePrefabs {
-        "{E1A99B5F2DC9B38A}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_Camo.et"
-        "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et"
-       }
-       m_aAttackVehiclePrefabs {
-        "{03D9932135924AEF}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_Camo_uncovered.et"
-        "{0B4DEA8078B78A9B}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_PKM.et"
-       }
-      }
-      GUB_GroupPrefab "{68AB381380859F0B}" {
-       m_eGroupType Command
-       m_aGroupPrefabs {
-        "{496070641528229D}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_PL.et"
-       }
-       m_iNumVehicles 1
-       m_aAttackVehiclePrefabs {
-        "{2C95509CA3E61DE1}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_command_camo1.et"
-        "{1BABF6B33DA0AEB6}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_command.et"
-       }
-      }
-      GUB_GroupPrefab "{68AB382FF1F39F15}" {
-       m_eGroupType Helicopter_Attack
-       m_aGroupPrefabs {
-        "{D43A9753198C5D8F}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Heli.et"
-       }
-       m_iNumVehicles 1
-       m_aAttackVehiclePrefabs {
-        "{3C6B3ED0C3AC30D5}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_armed_gunship_HE.et"
-       }
-      }
-      GUB_GroupPrefab "{68AB382850296218}" {
-       m_eGroupType Helicopter_Recon
-       m_aGroupPrefabs {
-        "{B851352F042E4F0B}Prefabs/Groups/OPFOR/RHS_AFRF/Recon/Group_RHS_AFRF_Recon_Squad.et"
-       }
-      }
-      GUB_GroupPrefab "{68AB382BE18E36AA}" {
-       m_eGroupType Sniper
-       m_aGroupPrefabs {
-        "{8418108290CF1C16}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Sniper.et"
-       }
-       m_iNumVehicles 1
-       m_aAttackVehiclePrefabs {
-        "{16A674FE31B0921C}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_uncovered.et"
-       }
-      }
-      GUB_GroupPrefab "{68AB382B9AA049AB}" {
-       m_eGroupType Mechanized
-       m_aGroupPrefabs {
-        "{5AC79B71E9E08397}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Mechanized.et"
-       }
-       m_iNumVehicles 1
-       m_aAttackVehiclePrefabs {
-        "{9AEDF323A812F9ED}Prefabs/Vehicles/Wheeled/BRDM2/BRDM2_AFRF.et"
-       }
-      }
-     }
+    GUB_FactionPrefab "{68B2D70FC305EA79}" : "{E487849A5DA01A8C}Configs/RandomPrefabConfig_USAF.conf" {
+    }
+    GUB_FactionPrefab "{68C296C46401C4B4}" : "{E4F0DA38C0C32E2B}Configs/RandomPrefabConfig_ChDKZ.conf" {
+    }
+    GUB_FactionPrefab "{68C296C466E2A854}" : "{7D84839F460B3E10}Configs/RandomPrefabConfig_CDF.conf" {
+    }
+    GUB_FactionPrefab "{68C296C46764C846}" : "{2162A515C1EDE618}Configs/RandomPrefabConfig_USSR.conf" {
     }
    }
-   m_fMinDistanceBetweenLocations 500
    m_fMaxDistanceBetweenLocations 5000
-   m_MarkerMakerConfigPath "{978379BC297D10EE}Configs/MarkerMakerConfig_RHS.conf"
+   m_bMarkersOnlyOnBriefing 1
+   m_MarkerMakerConfigPath "{F4A0B8B3CF446139}Configs/MarkerMakerConfig_Random.conf"
   }
  }
  coords 0 0 0
