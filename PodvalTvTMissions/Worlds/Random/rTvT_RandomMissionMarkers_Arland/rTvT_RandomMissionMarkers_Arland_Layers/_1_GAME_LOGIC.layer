@@ -1,0 +1,30 @@
+GenericEntity : "{574B8B93E7DDD76D}Prefabs/System/MissionRandomizer/GUB_RandomizeMissionPrefab.et" {
+ components {
+  GUB_RandomizeMissionComponent "{68A6D25C69D035C5}" {
+   m_aFactionPrefabs {
+    GUB_FactionPrefab "{68B2D70FC18F2D0B}" : "{585DAD11963FFC1F}Configs/RandomPrefabConfig_AFRF.conf" {
+    }
+    GUB_FactionPrefab "{68B2D70FC305EA79}" : "{E487849A5DA01A8C}Configs/RandomPrefabConfig_USAF.conf" {
+    }
+    GUB_FactionPrefab "{68C296C46401C4B4}" : "{E4F0DA38C0C32E2B}Configs/RandomPrefabConfig_ChDKZ.conf" {
+    }
+    GUB_FactionPrefab "{68C296C466E2A854}" : "{7D84839F460B3E10}Configs/RandomPrefabConfig_CDF.conf" {
+    }
+    GUB_FactionPrefab "{68C296C46764C846}" : "{2162A515C1EDE618}Configs/RandomPrefabConfig_USSR.conf" {
+    }
+    GUB_FactionPrefab "{68C296D108D7E037}" : "{192C9DAB2B09B7F7}Configs/RandomPrefabConfig_US.conf" {
+    }
+   }
+   m_fMaxDistanceBetweenLocations 5000
+   m_MarkerMakerConfigPath "{978379BC297D10EE}Configs/MarkerMakerConfig_RHS.conf"
+  }
+ }
+ coords 0 0 0
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 1800
+  }
+ }
+}
