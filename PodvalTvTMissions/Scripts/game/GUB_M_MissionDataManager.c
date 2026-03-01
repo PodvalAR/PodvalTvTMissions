@@ -2,6 +2,9 @@ modded class PS_MissionDataManager
 {
 	override void InitData()
 	{
+		string localization = "ru_ru";
+		WidgetManager.SetLanguage(localization);
+		
 		SCR_MissionHeader missionHeader = SCR_MissionHeader.Cast(GetGame().GetMissionHeader());
 		if (missionHeader) {
 			//m_Data.MissionPath = missionHeader.GetHeaderResourcePath();
@@ -29,7 +32,10 @@ modded class PS_MissionDataManager
 		
 		#ifdef PS_REPLAYS
 		PS_ReplayWriter replayWriter = PS_ReplayWriter.GetInstance();
-		m_Data.ReplayPath = replayWriter.m_sReplayFileName;
+		string ReplayPath = replayWriter.m_sReplayFileName; // например "Replay_123.replay"
+		ReplayPath.Replace("$profile:Replays/", "");
+		
+		m_Data.ReplayPath = ReplayPath; // сохраняем только имя файла
 		#endif
 		
 		PS_MissionDescriptionManager missionDescriptionManager = PS_MissionDescriptionManager.GetInstance();
@@ -96,7 +102,7 @@ modded class PS_MissionDataManager
 				
 				groupData.Callsign = playableManager.GetGroupCallsignByPlayable(playable.GetRplId());
 				groupData.CallsignName = callsign;
-				groupData.Name = customName;
+				groupData.Name = WidgetManager.Translate("%1", customName);
 				
 				groupsMap.Insert(group, groupData);
 			}
@@ -118,6 +124,76 @@ modded class PS_MissionDataManager
 			m_EntityToRpl.Insert(character.GetID(), playable.GetRplId());
 			
 			groupData.Playables.Insert(missionDataPlayable);
+		}
+	}
+	
+	override void RegisterVehicle(Vehicle vehicle)
+	{
+		RplComponent rplComponent = RplComponent.Cast(vehicle.FindComponent(RplComponent));
+		SCR_EditableVehicleComponent editableVehicleComponent = SCR_EditableVehicleComponent.Cast(vehicle.FindComponent(SCR_EditableVehicleComponent));
+		FactionAffiliationComponent factionAffiliationComponent = FactionAffiliationComponent.Cast(vehicle.FindComponent(FactionAffiliationComponent));
+		SCR_DamageManagerComponent damageManagerComponent = SCR_DamageManagerComponent.Cast(vehicle.FindComponent(SCR_DamageManagerComponent));
+		RplId vehicleId = rplComponent.Id();
+		
+		PS_MissionDataVehicle vehicleData = new PS_MissionDataVehicle();
+		vehicleData.EntityId = vehicleId;
+		vehicleData.PrefabPath = vehicle.GetPrefabData().GetPrefabName();
+		if (editableVehicleComponent)
+		{
+			SCR_UIInfo info = editableVehicleComponent.GetInfo();
+			if (info)
+				vehicleData.EditableName = WidgetManager.Translate("%1", info.GetName());
+		}
+		if (factionAffiliationComponent)
+		{
+			Faction faction = factionAffiliationComponent.GetDefaultAffiliatedFaction();
+			if (faction)
+			{
+				vehicleData.VehicleFactionKey = WidgetManager.Translate("%1", faction.GetFactionKey());
+			}
+		}
+		if (damageManagerComponent)
+		{
+			m_RplToDamageManager.Insert(vehicleId, damageManagerComponent);
+			damageManagerComponent.GetOnDamage().Insert(OnDamaged);
+		}
+		
+		m_Data.Vehicles.Insert(vehicleData);
+		m_EntityToRpl.Insert(vehicle.GetID(), vehicleId);
+	}
+	
+	override void SaveObjectives()
+	{
+		array<PS_Objective> objectivesOut = {};
+		m_ObjectiveManager.GetObjectives(objectivesOut);
+		array<Faction> outFactions = {};
+		m_FactionManager.GetFactionsList(outFactions);
+		foreach (Faction faction : outFactions)
+		{
+			FactionKey factionKey = faction.GetFactionKey();
+			
+			PS_MissionDataFactionResult missionDataFactionResult = new PS_MissionDataFactionResult();
+			missionDataFactionResult.ResultFactionKey = factionKey;
+			PS_ObjectiveLevel objectiveLevel = m_ObjectiveManager.GetFactionScoreLevel(factionKey);
+			if (objectiveLevel)
+			{
+				missionDataFactionResult.ResultName = WidgetManager.Translate("%1", objectiveLevel.GetName());
+				missionDataFactionResult.ResultScore = WidgetManager.Translate("%1", objectiveLevel.GetScore());
+			}
+			foreach (PS_Objective objective : objectivesOut)
+			{
+				if (objective.GetFactionKey() != factionKey)
+					continue;
+				
+				PS_MissionDataObjective missionDataObjective = new PS_MissionDataObjective();
+				
+				missionDataObjective.Name = WidgetManager.Translate("%1", objective.GetTitle());
+				missionDataObjective.Completed = WidgetManager.Translate("%1", objective.GetCompleted());
+				missionDataObjective.Score = WidgetManager.Translate("%1", objective.GetScore());
+				
+				missionDataFactionResult.Objectives.Insert(missionDataObjective);
+			}
+			m_Data.FactionResults.Insert(missionDataFactionResult);
 		}
 	}
 	
@@ -264,10 +340,22 @@ modded class PS_MissionDataManager
 		string answer = context.POST_now("", missionSaveContext.ExportToString());
 		Print(string.Format("PS_MissionDataManager: answer(%1)", answer));
 	}
+	
+	override void WriteToFile()
+	{
+		string time = System.GetUnixTime().ToString();
+		m_Data.SessionName = string.Format("PS_MissionData_%1.json", time);
+		
+		SCR_JsonSaveContext missionSaveContext = new SCR_JsonSaveContext();
+		missionSaveContext.WriteValue("", m_Data);
+		string fileName = string.Format("$profile:Sessions\\PS_MissionData_%1.json", time);
+		missionSaveContext.SaveToFile(fileName);
+	}
 }
 
 modded class PS_MissionDataConfig
 {
 	string ScenarioType;
 	string Token;
+	string SessionName;
 }
