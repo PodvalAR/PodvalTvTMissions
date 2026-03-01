@@ -21,36 +21,6 @@ GenericEntity : "{574B8B93E7DDD76D}Prefabs/System/MissionRandomizer/GUB_Randomiz
  }
  coords 0 0 0
 }
-GenericEntity : "{6A3CDCFB475BF1B2}Prefabs/System/DRG_CriticalLossPrefab.et" {
- components {
-  DRG_CriticalLossComponent "{65213D368F1BD792}" {
-   m_aLossLogics {
-    LossLogic "{68B7047724374025}" {
-     m_aLosses {
-      FactionLoss "{68B7047727CA97BB}" {
-       m_iCriticalLossCount 2
-       m_sFactionKey "RHS_AFRF"
-      }
-     }
-     m_bAdvanceGameStage 1
-     m_bUseMessage 1
-     m_bEventMessage "ВС РФ понесли критические потери!"
-    }
-    LossLogic "{68B7047724278B2F}" {
-     m_aLosses {
-      FactionLoss "{68B704773B3BC422}" {
-       m_iCriticalLossCount 2
-       m_sFactionKey "RHS_USAF"
-      }
-     }
-     m_bAdvanceGameStage 1
-     m_bUseMessage 1
-     m_bEventMessage "ВС США понесли критические потери!"
-    }
-   }
-  }
- }
-}
 GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
  components {
   DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {

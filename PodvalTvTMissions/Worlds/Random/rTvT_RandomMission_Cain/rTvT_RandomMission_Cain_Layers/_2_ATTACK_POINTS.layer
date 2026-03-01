@@ -14,12 +14,6 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
      angles 0 -151.681 0
      m_iCompanyCallsign 1
     }
-    SQUAD_4 {
-     coords 7.738 -3.192 -50.626
-     angles 0 -151.681 0
-     m_iCompanyCallsign 1
-     m_iSquadCallsign 1
-    }
     MOTORIZED_3 {
      coords 54.479 -3.694 40.925
      angles 0 -151.681 0
@@ -54,13 +48,13 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
      m_iSquadCallsign 2
     }
     HELICOPTER_ATTACK_1 {
-     coords -53.118 5.238 -36.475
+     coords -63.878 4.347 -73.148
      angles 0 -163.648 0
      m_eGroupType Helicopter_Attack
      m_iCompanyCallsign 5
     }
     HELICOPTER_RECON_1 {
-     coords -59.355 6.18 -34.646
+     coords -70.115 5.367 -71.319
      angles 0 -163.648 0
      m_eGroupType Helicopter_Recon
      m_iCompanyCallsign 4
@@ -71,6 +65,20 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
      m_eGroupType Motorized
      m_iCompanyCallsign 2
      m_iSquadCallsign 2
+    }
+    HELICOPTER_ATTACK_17 {
+     coords -53.676 5.114 -39.342
+     angles 0 -163.648 0
+     m_eGroupType Helicopter_Attack
+     m_iCompanyCallsign 5
+     m_iSquadCallsign 1
+    }
+    HELICOPTER_RECON_17 {
+     coords -59.913 6.084 -37.513
+     angles 0 -163.648 0
+     m_eGroupType Helicopter_Recon
+     m_iCompanyCallsign 4
+     m_iSquadCallsign 1
     }
    }
   }
@@ -94,20 +102,13 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
     COMMAND_17 {
      coords -137.75 13.696 -119.293
      angles 0 12.033 0
-     m_eGroupType Command_1
+     m_eGroupType Command_4
     }
     MOTORIZED_34 {
      coords -120.5 11.027 -122.384
      angles 0 8.392 0
      m_eGroupType Motorized
      m_iCompanyCallsign 2
-    }
-    MOTORIZED_35 {
-     coords -90.996 7.34 -127.943
-     angles 0 8.292 0
-     m_eGroupType Motorized
-     m_iCompanyCallsign 2
-     m_iSquadCallsign 1
     }
     RECON_49 {
      coords 37.527 0.192 -180.213
@@ -134,19 +135,33 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
      angles 0 12.521 0
      m_eGroupType Helicopter_Recon
      m_iCompanyCallsign 4
+     m_iSquadCallsign 1
     }
     HELICOPTER_ATTACK_2 {
      coords 98.465 -4.375 110.16
      angles 0 12.521 0
      m_eGroupType Helicopter_Attack
      m_iCompanyCallsign 5
+     m_iSquadCallsign 1
     }
-    MOTORIZED_36 {
+    RECON_94 {
      coords 40.181 0.744 -155.955
      angles 0 -84.497 0
-     m_eGroupType Motorized
-     m_iCompanyCallsign 2
-     m_iSquadCallsign 2
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+     m_iSquadCallsign 3
+    }
+    HELICOPTER_RECON_16 {
+     coords 72.493 -2.253 5.472
+     angles 0 84.286 0
+     m_eGroupType Helicopter_Recon
+     m_iCompanyCallsign 4
+    }
+    HELICOPTER_ATTACK_16 {
+     coords 71.846 -2.374 11.94
+     angles 0 84.286 0
+     m_eGroupType Helicopter_Attack
+     m_iCompanyCallsign 5
     }
    }
   }
@@ -162,24 +177,26 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
      m_iCompanyCallsign 1
      m_iSquadCallsign 1
     }
-    SQUAD_36 {
+    MECHANIZED_1 {
      coords -6.1 -0.208 16.536
      angles 0 -33.541 0
-     m_iCompanyCallsign 1
+     m_eGroupType Mechanized
+     m_iCompanyCallsign 2
+     m_iSquadCallsign 4
     }
     COMMAND_18 {
-     coords -20.391 -0.023 -0.105
+     coords -20.524 -0.023 -3.103
      angles 0 -87.452 0
-     m_eGroupType Command_1
+     m_eGroupType Command_2
     }
     MOTORIZED_37 {
-     coords -26.009 -0.352 28.739
+     coords -22.488 -0.352 28.473
      angles 0 -175.671 0
      m_eGroupType Motorized
      m_iCompanyCallsign 2
     }
     MOTORIZED_38 {
-     coords -25.508 -0.383 35.398
+     coords -21.829 -0.383 35.119
      angles 0 -175.671 0
      m_eGroupType Motorized
      m_iCompanyCallsign 2
@@ -205,24 +222,26 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
      m_eGroupType Recon
      m_iCompanyCallsign 3
     }
-    HELICOPTER_RECON_3 {
-     coords 10.95 -1.362 63.929
-     angles 0 -88.134 0
-     m_eGroupType Helicopter_Recon
-     m_iCompanyCallsign 4
-    }
-    HELICOPTER_ATTACK_3 {
-     coords 10.739 -1.096 57.432
-     angles 0 -88.134 0
-     m_eGroupType Helicopter_Attack
-     m_iCompanyCallsign 5
-    }
     MOTORIZED_39 {
-     coords -25.249 -0.498 41.9
+     coords -21.219 -0.498 41.595
      angles 0 -175.671 0
      m_eGroupType Motorized
      m_iCompanyCallsign 2
      m_iSquadCallsign 2
+    }
+    RECON_9 {
+     coords 34.998 -0.993 -30.89
+     angles 0 -175.945 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+     m_iSquadCallsign 3
+    }
+    MOTORIZED_35 {
+     coords -20.742 -0.498 47.908
+     angles 0 -175.671 0
+     m_eGroupType Motorized
+     m_iCompanyCallsign 2
+     m_iSquadCallsign 3
     }
    }
   }
@@ -246,7 +265,7 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
     COMMAND_19 {
      coords 67.681 -0.439 8.533
      angles 0 120.73 0
-     m_eGroupType Command_1
+     m_eGroupType Command_7
     }
     MOTORIZED_40 {
      coords 32.938 0.44 -48.303
@@ -275,30 +294,19 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
      m_iCompanyCallsign 3
      m_iSquadCallsign 1
     }
-    RECON_57 {
-     coords -19.807 -1.127 51.065
-     angles 0 -92.909 0
-     m_eGroupType Recon
-     m_iCompanyCallsign 3
-    }
-    HELICOPTER_RECON_4 {
-     coords -30.58 1 -59.263
-     angles 0 -58.235 0
-     m_eGroupType Helicopter_Recon
-     m_iCompanyCallsign 4
-    }
-    HELICOPTER_ATTACK_4 {
-     coords -34.001 1.139 -64.79
-     angles 0 -58.235 0
-     m_eGroupType Helicopter_Attack
-     m_iCompanyCallsign 5
-    }
     MOTORIZED_42 {
      coords 15.179 0.441 -39.239
      angles 0 121.06 0
      m_eGroupType Motorized
      m_iCompanyCallsign 2
      m_iSquadCallsign 2
+    }
+    MOTORIZED_36 {
+     coords -12.044 -1.111 50.74
+     angles 0 -92.383 0
+     m_eGroupType Motorized
+     m_iCompanyCallsign 2
+     m_iSquadCallsign 3
     }
    }
   }
