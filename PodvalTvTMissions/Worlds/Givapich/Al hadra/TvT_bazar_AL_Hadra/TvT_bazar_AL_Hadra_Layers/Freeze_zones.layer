@@ -9,3 +9,36 @@ $grp SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/Restri
   coords 4343.278 17.846 4843.656
  }
 }
+PS_ManualMarker RHS_USAF_G_600_M : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+ coords 3431.979 17.842 5095.483
+ m_sImageSet "{1228936E5DB30403}UI/Textures/GroupManagement/FlagIcons/GroupFlagsBlufor.imageset"
+ m_sImageSetGlow ""
+ m_MarkerColor 1 1 1 1
+ m_sQuadName "undefined"
+ m_fWorldSize 50
+ m_sDescription "(Отряд разведки) Gecko 1–1"
+ m_bUseWorldScale 0
+ m_aVisibleForFactions {
+  "RHS_AFRF"
+  "RHS_USAF"
+  "RHS_ION"
+  "Ses_CDF"
+  "Ses_ChDKZ"
+  "Ses_TKR"
+  "Ses_TKA"
+  "Drg_IGF"
+  "Drg_PIR"
+  "UK"
+  "USSR"
+  "US"
+  "FIA"
+  "Drg_VCA"
+ }
+ m_bVisibleForEmptyFaction 1
+ m_aHideOnGameModeStates {
+ }
+ m_iZOrder 10
+}
+SCR_EditorRestrictionZoneEntity : "{EF72FA7CD87618D5}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneSmall.et" {
+ coords 3435.706 17.844 5096.674
+}
