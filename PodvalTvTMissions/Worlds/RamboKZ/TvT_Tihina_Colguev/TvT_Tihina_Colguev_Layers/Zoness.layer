@@ -25,10 +25,23 @@ $grp SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/Restri
   m_fZoneTeleportedRadius 150
  }
 }
-GenericEntity : "{C92071B2E5B2B82F}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_02_V1_USSR_Campaign.et" {
+GenericEntity FLAG_USSR : "{C92071B2E5B2B82F}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_02_V1_USSR_Campaign.et" {
+ components {
+  SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+   m_aFlagData {
+    PS_FlagData "{645F1E9A17B42959}" {
+    }
+   }
+  }
+  BaseActionsManagerComponent "{6202D4E6F133BF4A}" {
+   additionalActions {
+    PS_FlagChangeAction "{6202D4E6A53D4B3C}" {
+     Duration 10
+     m_bUseAnimation 1
+    }
+   }
+  }
+ }
  coords 9837.937 56.819 9490.218
  angles 0 118.828 0
-}
-GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
- coords 10083.236 0 8817.999
 }
