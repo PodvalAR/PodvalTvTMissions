@@ -1,0 +1,55 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ {
+  coords 10434.295 -0 8980.461
+  m_sTitle "Правила"
+  m_sTextData "1. Всем запрещено надевать форму, головные уборы, разгрузки, бронижилеты противника"\
+  "(Рюкзаки можно)"\
+  ""
+  m_aVisibleForFactions {
+   "USSR"
+   "US"
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+ {
+  coords 10315.578 0 8948.663
+  m_sTitle "Задачи"
+  m_sTextData "Удержать флаг"
+  m_aVisibleForFactions {
+   "USSR"
+   ""
+  }
+ }
+ {
+  coords 10259.719 0 8916.66
+  m_sTitle "Задачи"
+  m_sTextData "Захватить флаг"
+  m_aVisibleForFactions {
+   "US"
+  }
+ }
+ {
+  coords 10243.226 0 8907.095
+  m_sTitle "Легенда"
+  m_sTextData "1987г"\
+  "На территории о.Колгуев действовал взвод Спецназа ГРУ."\
+  "Задачей которого была найти украденю женщину товарища Бирюкова."\
+  "Похитителями оказались Американцы."\
+  "Целью которых было заманить элитные подразделения Спецназа для дальнейшего уничтожения. "
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+}
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ {
+  coords 10226.411 0 8760.927
+  m_sTitle "Флаг захвачен"
+  m_sFactionKey "US"
+ }
+ {
+  coords 10166.295 0 8716.484
+  m_sTitle "Флаг удержан"
+  m_sFactionKey "USSR"
+ }
+}

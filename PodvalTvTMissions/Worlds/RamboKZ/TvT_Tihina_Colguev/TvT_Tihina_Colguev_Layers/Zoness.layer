@@ -1,0 +1,34 @@
+$grp SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+ {
+  coords 9837.972 56.971 9490.203
+  m_fWarnRadius 150
+  m_fZoneRadius 190
+  m_fZoneTeleportedRadius 200
+  {
+   GenericEntity {
+    ID "59D673B36B893D84"
+    components {
+     SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+      m_fRadius 150
+     }
+    }
+   }
+  }
+ }
+ {
+  coords 10024.665 16.707 10817.961
+ }
+ {
+  coords 8324.768 29.751 6413.022
+  m_fWarnRadius 100
+  m_fZoneRadius 140
+  m_fZoneTeleportedRadius 150
+ }
+}
+GenericEntity : "{C92071B2E5B2B82F}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_02_V1_USSR_Campaign.et" {
+ coords 9837.937 56.819 9490.218
+ angles 0 118.828 0
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ coords 10083.236 0 8817.999
+}
