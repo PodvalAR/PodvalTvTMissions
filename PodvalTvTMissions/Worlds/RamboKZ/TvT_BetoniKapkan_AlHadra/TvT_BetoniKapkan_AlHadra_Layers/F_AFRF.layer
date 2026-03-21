@@ -1,3 +1,36 @@
+$grp Vehicle : "{447CFE8D73F95C3F}Prefabs/Vehicles/Wheeled/BTR70/BTR70_AFRF_camo.et" {
+ AFRF_012_V {
+  coords 3559.653 18.378 1343.921
+  angles 0.175 11.236 -0.879
+  m_sAttachmentGroupName "AFRF_103"
+ }
+ AFRF_112_V {
+  coords 1556.484 18.281 6934.009
+  angles 0.074 175.22 0.894
+  m_sAttachmentGroupName "AFRF_112"
+ }
+}
+SCR_AIGroup AFRF_000 : "{496070641528229D}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_PL.et" {
+ coords 3578.614 18.375 1408.62
+ angles 0 -77.279 0
+ m_aUnitPrefabSlots {
+  "{552177162DF26397}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_PL.et"
+  "{A65FD76193BDAC03}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_Medic.et"
+  "{EA09A14A3C0DE997}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_Sharpshooter_SVDM.et"
+ }
+}
+$grp Vehicle : "{5C38170BFBE9F966}Prefabs/Vehicles/Wheeled/TIGR/KORD/GAZ_TIGR_v2_KORD_SSP_ARMOR_CAMO.et" {
+ AFRF_100_V {
+  coords 1559.721 18.281 6872.067
+  angles -0.106 175.964 1.776
+  m_sAttachmentGroupName "AFRF_000"
+ }
+ AFRF_000_V {
+  coords 3572.889 18.376 1411.132
+  angles 0 13.403 0
+  m_sAttachmentGroupName "AFRF_000"
+ }
+}
 $grp Vehicle : "{1FBB492E86002BF5}Prefabs/Vehicles/Wheeled/UAZ452/UAZ452_transport.et" {
  AFRF_200_V {
   coords 4178.416 17.844 2782.881
@@ -10,22 +43,27 @@ $grp Vehicle : "{1FBB492E86002BF5}Prefabs/Vehicles/Wheeled/UAZ452/UAZ452_transpo
   m_sAttachmentGroupName "AFRF_201"
  }
 }
-SCR_AIGroup AFRF_000 : "{496070641528229D}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_PL.et" {
- coords 3578.614 18.375 1408.62
- angles 0 -77.279 0
- m_aUnitPrefabSlots {
-  "{552177162DF26397}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_PL.et"
-  "{A65FD76193BDAC03}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_Medic.et"
-  "{EA09A14A3C0DE997}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_Sharpshooter_SVDM.et"
+$grp Vehicle : "{2CCD539A7AB35B2F}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_camo1.et" {
+ AFRF_011_V {
+  coords 3563.555 18.376 1367.572
+  angles 0 11.199 0
+  m_sAttachmentGroupName "AFRF_102"
  }
-}
-Vehicle AFRF_100_V : "{5C38170BFBE9F966}Prefabs/Vehicles/Wheeled/TIGR/KORD/GAZ_TIGR_v2_KORD_SSP_ARMOR_CAMO.et" {
- coords 1559.721 18.281 6872.067
- angles -0.106 175.964 1.776
- m_sAttachmentGroupName "AFRF_000"
-}
-Vehicle Ural4320_transport_covered_tan1 : "{78E46A3CAC36BB1E}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_covered_tan.et" {
- coords 1586.217 18.529 6326.966
+ AFRF_010_V {
+  coords 3568.947 18.375 1391
+  angles 0 11.912 0
+  m_sAttachmentGroupName "AFRF_010"
+ }
+ AFRF_110_V {
+  coords 1559.096 18.281 6886.767
+  angles -0.171 178.059 1.77
+  m_sAttachmentGroupName "AFRF_110"
+ }
+ AFRF_111_V {
+  coords 1558.271 18.281 6908.906
+  angles -0.178 178.292 1.769
+  m_sAttachmentGroupName "AFRF_111"
+ }
 }
 $grp SCR_AIGroup : "{B851352F042E4F0B}Prefabs/Groups/OPFOR/RHS_AFRF/Recon/Group_RHS_AFRF_Recon_Squad.et" {
  AFRF_200 {
@@ -88,40 +126,6 @@ $grp SCR_AIGroup : "{B851352F042E4F0B}Prefabs/Groups/OPFOR/RHS_AFRF/Recon/Group_
   }
   m_iMaxMembers 1
   m_sCustomNameSet "Отряд спецназа"
- }
-}
-$grp Vehicle : "{C012BB3488BEA0C2}Prefabs/Vehicles/Wheeled/BTR70/BTR70.et" {
- AFRF_012_V {
-  coords 3559.653 18.378 1343.921
-  angles 0.175 11.236 -0.879
-  m_sAttachmentGroupName "AFRF_103"
- }
- AFRF_112_V {
-  coords 1556.484 18.281 6934.009
-  angles 0.074 175.22 0.894
-  m_sAttachmentGroupName "AFRF_112"
- }
-}
-$grp Vehicle : "{D9B91FAB817A6033}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_covered.et" {
- AFRF_011_V {
-  coords 3563.555 18.376 1367.572
-  angles 0 11.199 0
-  m_sAttachmentGroupName "AFRF_102"
- }
- AFRF_010_V {
-  coords 3568.947 18.375 1391
-  angles 0 11.912 0
-  m_sAttachmentGroupName "AFRF_010"
- }
- AFRF_110_V {
-  coords 1559.096 18.281 6886.767
-  angles -0.171 178.059 1.77
-  m_sAttachmentGroupName "AFRF_110"
- }
- AFRF_111_V {
-  coords 1558.271 18.281 6908.906
-  angles -0.178 178.292 1.769
-  m_sAttachmentGroupName "AFRF_111"
  }
 }
 $grp SCR_AIGroup : "{EB131DDF464F90FD}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Squad.et" {
@@ -266,9 +270,4 @@ $grp SCR_AIGroup : "{EB131DDF464F90FD}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Grou
    "{EA09A14A3C0DE997}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_Sharpshooter_SVDM.et"
   }
  }
-}
-Vehicle AFRF_000_V : "{EB1805C9B001DE8D}Prefabs/Vehicles/Wheeled/TIGR/KORD/GAZ_TIGR_v2_KORD_SPP_Tan.et" {
- coords 3572.889 18.376 1411.132
- angles 0 13.403 0
- m_sAttachmentGroupName "AFRF_000"
 }
