@@ -1,0 +1,77 @@
+GenericWorldFogEntity Fog_Haze2 {
+ coords 2193.087 -12.841 3118.366
+ FakeDistFog 0.542
+ HeightDensity 0.371
+ FogHeightStart entity
+ Color 0.5 0.5 0.5 0
+ ColorBack 0.4 0.4 0.4 0
+}
+PolylineShapeEntity capture {
+ components {
+  PS_PolyZone "{68EA0462E0AD53A0}" {
+   m_mPolygonTexture "{62F4404928D33DB5}UI/layouts/Textures/Grid1b.edds"
+   m_cPolygonColor 0 0.125 0.502 1
+   m_fPolygonUVScale 0.44
+   m_mPolygonTextureBorder ""
+   m_cPolygonBorderColor 0 0.125 0.502 1
+   m_fPolygonBorderWidth 6
+   m_aVisibleForFactions {
+    "RHS_USAF"
+    "Ses_TKA"
+    "Ses_TKR"
+    ""
+   }
+  }
+ }
+ coords 907.76 400.628 1389.356
+ Points {
+  ShapePoint "{68EA0463EEBF650D}" {
+   Position -1.18 -1.012 1.919
+  }
+  ShapePoint "{68EA0463EEBE2AD6}" {
+   Position 6.634 -1.477 -10.998
+  }
+  ShapePoint "{68EA0463EA2FD949}" {
+   Position 52.064 -8.502 16.543
+  }
+  ShapePoint "{68EA0463F1BDB634}" {
+   Position 43.47 -9.303 30.213
+  }
+ }
+ IsClosed 1
+}
+GenericEntity flag : "{3D78D7D606FF9818}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_NoCapture.et" {
+ coords 940.157 395.585 1417.009
+}
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{68EA046212CDADF6}" {
+     m_Timer GUB_ZoneControlTimer "{68EA04621D2AE508}" {
+      timeToComplete 180
+     }
+     m_ZoneController GUB_ZoneController "{68EA046219A2DC8D}" {
+      m_sZoneEntityName "capture"
+     }
+     m_FlagController GUB_FlagController "{68EA0462187A40B1}" {
+      m_aFlagNames {
+       "flag"
+      }
+      m_fStartFactionKey "RHS_USAF"
+      m_fEndFactionKey "Ses_TKR"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{68EA04622180DA58}" {
+       m_sFirstFactionKey "Ses_TKR"
+       m_sSecondFactionKey "RHS_USAF"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 71.415 232.481 2779.944
+}
