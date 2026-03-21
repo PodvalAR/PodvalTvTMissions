@@ -4,6 +4,17 @@ Vehicle dim_UAZ2 : "{0ACA2ED6AD52D641}Prefabs/Vehicles/Wheeled/UAZ469/dim_UAZ469
  m_sAttachmentGroupName "ruu4"
 }
 $grp SCR_AIGroup : "{1128EBD3DDFF1D07}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Motorized.et" {
+ ruu6 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 6321.501 294.031 7747.899
+  angles 0 34.496 0
+  m_sCustomNameSet "Патруль Старого Собора"
+ }
  ruu5 {
   components {
    PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
@@ -18,22 +29,11 @@ $grp SCR_AIGroup : "{1128EBD3DDFF1D07}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Grou
    "{2CA58D3E25DA1886}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_AT.et"
    "{D90B2AEF04BBE301}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_AAT.et"
    "{F40DE4FF5C5306DA}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_AR.et"
-   "{F9D89ADEABE46FF0}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_GL.et"
-   "{78410A549262E06D}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Rifle.et"
    "{9B17487B1BB8E272}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Rifle_opt.et"
    "{E4C1E22F77E5DBEF}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Sharpshooter.et"
+   "{C71B7D7DEAD5B6F3}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Crew.et"
+   "{E6D5BAE5703C9AA7}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Crew_Gunner.et"
   }
-  m_sCustomNameSet "Патруль Старого Собора"
- }
- ruu6 {
-  components {
-   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
-    m_iCompanyCallsign 1
-    m_iSquadCallsign 1
-   }
-  }
-  coords 6321.501 294.031 7747.899
-  angles 0 34.496 0
   m_sCustomNameSet "Патруль Старого Собора"
  }
 }
@@ -51,20 +51,22 @@ $grp Vehicle : "{2C95509CA3E61DE1}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_com
   angles 0 -142.956 0
  }
 }
-Vehicle Ural4320_transport_camo1 : "{2CCD539A7AB35B2F}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_camo1.et" {
- coords 6336.679 294.031 7765.559
- angles 0 -56.592 0
- m_sAttachmentGroupName "ruu5"
-}
 Vehicle Mi8MT_armed_Podval1 : "{31E004EC353C42B2}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_armed_Podval.et" {
  coords 6274.033 294.362 7791.884
  angles 0 34.869 0
  m_sAttachmentGroupName "ruu2"
 }
-Vehicle BTR70_AFRF4 : "{447CFE8D73F95C40}Prefabs/Vehicles/Wheeled/BTR70/BTR70_AFRF.et" {
- coords 6326.916 294.031 7750.524
- angles 0 -56.785 0
- m_sAttachmentGroupName "ruu6"
+$grp Vehicle : "{447CFE8D73F95C40}Prefabs/Vehicles/Wheeled/BTR70/BTR70_AFRF.et" {
+ BTR70_AFRF4 {
+  coords 6326.711 294.031 7750.739
+  angles 0 -56.714 0
+  m_sAttachmentGroupName "ruu6"
+ }
+ BTR70_AFRF2 {
+  coords 6337.399 294.031 7765.528
+  angles 0 -54.906 0
+  m_sAttachmentGroupName "ruu5"
+ }
 }
 SCR_AIGroup ruu1 : "{496070641528229D}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_PL.et" {
  coords 6321.584 294.031 7781.847

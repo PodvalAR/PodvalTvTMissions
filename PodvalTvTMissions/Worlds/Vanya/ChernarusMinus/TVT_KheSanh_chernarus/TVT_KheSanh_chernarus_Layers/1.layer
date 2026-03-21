@@ -1,0 +1,38 @@
+SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
+ coords 7481.615 305.075 7601.712
+}
+GenericWorldFogEntity : "{78D9BBF0F423FEB4}Prefabs/World/DefaultWorld/FogHaze_Default.et" {
+ coords 6260.914 35.954 2169.18
+ FogHeightStart entity
+}
+PerceptionManager PerceptionManager1 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 7525.933 314.835 7679.985
+}
+PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
+ components {
+  SCR_TimeAndWeatherHandlerComponent "{5EE3229927D4D2F5}" {
+   m_bUsePredefineStartingTimeAndWeather 1
+   m_aStartingWeatherAndTime {
+    SCR_TimeAndWeatherState "{68E6FDB13989D3B2}" {
+     m_sWeatherPresetName "Cloudy"
+     m_iStartingHour 7
+     m_iStartingMinutes 56
+    }
+   }
+  }
+ }
+ coords 7578.602 318.219 7648.572
+}
+$grp Turret : "{1A407760EEAE4156}Prefabs/Vehicles/Static/BaconZU23/BaconZU23_Turret_Deployed.et" {
+ {
+  coords 12803.932 23.948 10118.743
+  angles -2.313 -0.032 0.873
+ }
+ {
+  coords 12839.036 17.718 9939.537
+  angles -1.061 -0.011 0.608
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ coords 12106.504 28.838 3680.141
+}

@@ -1,0 +1,48 @@
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{68CEB1C9090AA274}" {
+     m_sZonePreviewName "Стройка дачи"
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "Ses_ChDKZ_WIN"
+     }
+     m_sFailedObjectiveNames {
+      "Ses_CDF_WIN"
+     }
+     m_sMessage "Победа Атаки, стройка захвачена!"
+     m_Timer GUB_ZoneControlTimer "{68CEB1C93E3B59F0}" {
+      timeToComplete 180
+     }
+     m_ZoneController GUB_ZoneController "{68CEB1C930ED379E}" {
+      m_sZoneEntityName "Trigger"
+     }
+     m_FlagController GUB_FlagController "{68CEDCC516125493}" {
+      m_aFlagNames {
+       "FLAG_1"
+       "FLAG_2"
+      }
+      m_fStartFactionKey "Ses_CDF"
+      m_fEndFactionKey "Ses_ChDKZ"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{68CEB1CAEBBCA665}" {
+       m_sFirstFactionKey "Ses_ChDKZ"
+       m_sSecondFactionKey "Ses_CDF"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER_OR_EQUALS
+      }
+     }
+    }
+   }
+  }
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+}

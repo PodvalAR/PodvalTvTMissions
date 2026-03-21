@@ -1,0 +1,383 @@
+ParticleEffectEntity {
+ coords 2041.979 19.609 3689.636
+ EffectPath "{C7C126B8FC38B083}Particles/Smoke_Building_Shop.ptc"
+}
+GenericEntity : "{002B8C09F0E7E371}Prefabs/Props/Wrecks/S1203_wreck/S1203_wreck_static.et" {
+ coords 2025.463 17.995 3707.306
+ angles 0 150 0
+}
+$grp Vehicle : "{17E2193EB418566E}Prefabs/Vehicles/Wheeled/M1083/M1083_Transport_Covered_Burned_Static.et" {
+ M1083_Transport_Covered_Burned_Static1 {
+  coords 2041.466 19.167 3685.595
+  angles -1.483 15.629 -4.883
+ }
+ M1083_Transport_Covered_Burned_Static2 {
+  components {
+   SlotManagerComponent "{55BCE45E438E4CFF}" {
+    Slots {
+     RegisteringComponentSlotInfo Roof_Hatch {
+      Enabled 0
+     }
+    }
+   }
+  }
+  coords 2032.874 20.514 3678.422
+  angles -1.011 -59.394 -88.457
+ }
+}
+GenericEntity : "{1D0B32AA80873228}Prefabs/Props/Wrecks/LAV25_wreck/LAV25_wreck.et" {
+ coords 2038.596 18.073 3702.461
+}
+$grp DecalEntity : "{1D29A6E8766D3A4C}Prefabs/Decals/Blood/Decal_Blood_11.et" {
+ {
+  coords 2041.297 -0 3665.386
+  angles -90 -180 -180
+  scale 4.8
+ }
+ {
+  coords 2041.523 -0 3679.833
+  angles -90 -180 -180
+  scale 4.8
+ }
+}
+$grp DecalEntity : "{1DC3A792132D86CB}Prefabs/Decals/Blood/BloodStain_Large_02.et" {
+ {
+  coords 2038.645 -0 3672.432
+  angles -90 -180 -180
+  scale 1.5
+ }
+ {
+  coords 2040.037 0 3680.913
+  angles -90 -180 -180
+  scale 1.5
+ }
+ {
+  coords 2039.902 -0 3690.173
+  angles -90 -180 -180
+  scale 1.5
+ }
+ {
+  coords 2039.992 0 3691.557
+  angles -90 -180 -180
+  scale 1.5
+ }
+ {
+  coords 2050.872 0.163 3654.101
+  angles -90 -180 -180
+  scale 1.5
+ }
+ {
+  coords 2059.017 -0 3647.73
+  angles -90 -180 -180
+  scale 1.5
+ }
+ {
+  coords 2065.376 -0 3639.087
+  angles -90 -180 -180
+  scale 1.5
+ }
+ {
+  coords 2063.323 0 3642.242
+  angles -90 -180 -180
+  scale 1.5
+ }
+}
+StaticModelEntity : "{20D4FE1DD50E5795}Prefabs/Structures/Debris/Debris_HouseVillage/Debris_HouseVillage_Concrete_Roof_Large_v1.et" {
+ coords 2052.089 19.982 3654.037
+ angles -0.895 0.014 -0.895
+}
+DecalEntity : "{23547DEEEC8AB053}Prefabs/Decals/Blood/Decal_Blood_2.et" {
+ coords 2038.942 -0 3681.199
+ angles -90 -180 -180
+}
+GenericEntity : "{25B265F3E7CBDFC8}Prefabs/Props/Wrecks/BMP1_wreck/BMP1_wreck.et" {
+ coords 2061.898 19.618 3777.816
+ angles -1.702 174.862 1.052
+ {
+  GenericEntity {
+   ID "662AB519E476772A"
+   coords 0 0 0
+   angles 0 105 0
+  }
+ }
+}
+GenericEntity : "{2B24356C351A2538}Prefabs/Props/Wrecks/M113_wreck/M113_wreck.et" {
+ coords 2041.764 19.07 3690.938
+ angles -3.576 -0.056 0.897
+}
+DecalEntity : "{32D707B931FD52FE}Prefabs/Decals/Blood/BloodStain_Wall_01.et" {
+ coords 2050.369 0.142 3654.42
+ angles -90 -180 -180
+ scale 0.8
+}
+$grp DecalEntity : "{3BD66CDD309673DB}Prefabs/Decals/Blood/BloodStain_Drops_01.et" {
+ {
+  coords 2044.886 -0 3672.979
+  angles -90 -180 -180
+  scale 2
+ }
+ {
+  coords 2051.109 0.171 3653.975
+  angles -90 -180 -180
+  scale 2
+ }
+ {
+  coords 2062.029 -0 3644.082
+  angles -90 -180 -180
+  scale 2
+ }
+}
+GenericEntity : "{434199706D4BFC9E}Prefabs/Structures/Wreck/volha_old.et" {
+ coords 2080.363 21.13 3627.067
+ angles 0.633 135.007 0.633
+}
+$grp DecalEntity : "{4E2502622DA0DB28}Prefabs/Decals/Miscellaneous/Decal_Damage_Burnt_01.et" {
+ {
+  coords 2040.475 19.292 3686.603
+  angles -90 -180 -180
+  scale 10
+ }
+ {
+  coords 2035.8 19.69 3673.636
+  angles -88.283 -90 137.895
+  scale 10
+ }
+ {
+  coords 2026.76 18.281 3704.957
+  angles -88.283 -90 137.895
+  scale 10
+  FarPlane 1.4
+ }
+ {
+  coords 2030.006 18.184 3701.095
+  angles -88.283 -90 137.895
+  scale 10
+  FarPlane 1.4
+ }
+ {
+  coords 2053.45 20.384 3650.884
+  angles -90 -180 -180
+  scale 10
+ }
+ {
+  coords 2062.421 19.677 3775.748
+  angles -88.283 -90 137.895
+  scale 10
+  FarPlane 1.4
+ }
+}
+DecalEntity : "{6101CDF87726A87E}Prefabs/Decals/Soil/Decal_Soil_01.et" {
+ coords 2046.956 -0 3661.113
+ angles -90 -180 -180
+}
+GenericEntity : "{6BE5C753730DBFED}Prefabs/Props/Wrecks/M923A1_wreck/M923A1_wreck_static.et" {
+ coords 2050.778 19.943 3661.763
+ angles 0 1.773 0
+}
+$grp DecalEntity : "{71979372AFE909E5}Prefabs/Decals/Blood/BloodStain_Large_01.et" {
+ {
+  coords 2047.23 0 3666.867
+  angles -90 -180 -180
+  scale 1.5
+ }
+ {
+  coords 2039.732 0 3680.038
+  angles -90 -180 -180
+  scale 1.5
+ }
+ {
+  coords 2039.456 0.518 3692.04
+  angles -90 0 0
+  scale 1.5
+ }
+}
+Vehicle M1151_armed_M2HB_Tan_NOGUN_DIMKII1_Burn1 : "{722DD21E9C9EBB82}Prefabs/Vehicles/Wheeled/M998/M1151_armed_M2HB_Tan_NOGUN_DIMKII1_Burn.et" {
+}
+GenericEntity : "{7B6EDBC3E88ECD97}Prefabs/Compositions/Misc/CustomEntities/CompositionDecals/CompositionDecal_Dirt_Tracks_03.et" {
+ coords 2037.026 19.089 3688.099
+ angles 0 60 0
+}
+$grp DecalEntity : "{80B1153302345834}Prefabs/Decals/Miscellaneous/Decal_Damage_Burnt_03.et" {
+ {
+  coords 2041.875 19.3 3690.233
+  angles -90 -180 -180
+  scale 5
+ }
+ {
+  coords 2072.577 21.072 3623.003
+  angles -90 -180 -180
+  scale 5
+ }
+}
+Vehicle M1083_Command_Tan1 : "{888FFC71FC66385F}Prefabs/Vehicles/Wheeled/M1083/M1083_Command_Tan.et" {
+ components {
+  SCR_UniversalInventoryStorageComponent "{65B6498665024F6E}" {
+   MultiSlots {
+    MultiSlotConfiguration "{65B6498665024F1D}" {
+     SlotTemplate InventoryStorageSlot Bandages {
+      Prefab "{1742632597955A55}Prefabs/Items/Misc/Sandbags/Part_Sandbag_Plastic.et"
+     }
+     NumSlots 150
+    }
+   }
+  }
+ }
+ coords 2060.56 21.813 3644.813
+ angles 0 30 -90
+}
+GenericEntity : "{9EF2973AE46B5AFC}Prefabs/Compositions/Misc/CustomEntities/CompositionDecals/CompositionDecal_Dirt_Tracks_02.et" {
+ coords 2037.524 19.357 3695.444
+ angles 0 -165 0
+}
+$grp GenericEntity : "{AE57C45CB32D6168}Prefabs/Props/Wrecks/M113_wreck/M113_wreck_static.et" {
+ {
+  coords 2029.553 18.249 3705.063
+  angles -2.913 -59.116 1.384
+ }
+ {
+  coords 2068.052 20.859 3636.229
+  angles -2.142 -82.099 2.411
+ }
+ {
+  coords 2042.504 19.875 3668.457
+  angles -1.223 -29.993 -0.328
+ }
+}
+DecalEntity : "{B38FBA56FA69E392}Prefabs/Decals/Fluids/Decal_OilStain_01_large.et" {
+ coords 2044.499 0 3664.114
+ angles -90 -180 -180
+}
+GenericEntity : "{B90E5414AB7C325B}Prefabs/Props/Wrecks/BTR70_Wreck/BTR70_wreck_static.et" {
+ coords 2071.562 19.617 3787.175
+ angles -1.55 -149.976 -0.896
+}
+$grp DecalEntity : "{CCE57C4C9C0E5009}Prefabs/Decals/Blood/BloodStain_Small_01.et" {
+ {
+  coords 2042.765 -0 3670.279
+  angles -90 -180 -180
+  scale 0.8
+ }
+ {
+  coords 2040.351 -0 3689.183
+  angles -90 -180 -180
+  scale 0.8
+ }
+ {
+  coords 2039.334 0 3692.094
+  angles -90 0 0
+  scale 0.8
+ }
+ {
+  coords 2064.44 -0 3640.611
+  angles -90 -180 -180
+  scale 0.8
+ }
+}
+$grp DecalEntity : "{D1D104EBCB9C5E2D}Prefabs/Decals/Miscellaneous/Decal_Damage_Burnt_02.et" {
+ {
+  coords 2040.956 19.61 3677.946
+  angles -90 -180 -180
+  scale 10
+ }
+ {
+  coords 2040.673 19.61 3683.454
+  angles -90 0 -60
+  scale 10
+ }
+ {
+  coords 2038.121 18.556 3703.256
+  angles -90 180 120
+  scale 10
+ }
+ {
+  coords 2066.997 20.837 3637.399
+  angles -90 -180 -180
+  scale 10
+ }
+ {
+  coords 2084.509 21.18 3620.536
+  angles -90 -180 -180
+  scale 10
+ }
+ {
+  coords 2058.151 20.59 3644.855
+  angles -90 0 0
+  scale 10
+ }
+}
+Vehicle M1151_armed_M2HB_Tan_DIMKII2 : "{D26E78556481B9CB}Prefabs/Vehicles/Wheeled/M998/M1151_armed_M2HB_Tan_DIMKII.et" {
+ components {
+  SCR_UniversalInventoryStorageComponent "{5916C587FC993363}" {
+   MultiSlots {
+    MultiSlotConfiguration "{66F2D69AD3FC9116}" {
+     SlotTemplate InventoryStorageSlot M2Ammo {
+      Prefab "{50A242E5D9742C62}Prefabs/Weapons/Magazines/Box_127x99_M2_100rnd_4AP_1Tracer.et"
+     }
+    }
+   }
+  }
+ }
+ coords 2050.344 20.435 3658.085
+ angles 6.233 -15.052 -3.25
+}
+$grp DecalEntity : "{D53741D03AB3A652}Prefabs/Decals/Fluids/Decal_OilStain_01_extralarge.et" {
+ {
+  coords 2042.167 0 3666.137
+  angles -90 -180 -180
+ }
+ {
+  coords 2038.293 -0 3669.919
+  angles -90 -180 -180
+ }
+ {
+  coords 2041.638 0 3672.563
+  angles -90 -180 -180
+ }
+}
+StaticModelEntity : "{DCA52051AB33BE89}Prefabs/Structures/Debris/Debris_HouseVillage/Debris_HouseVillage_Concrete_Corner_v2.et" {
+ coords 2052.257 20.12 3656.362
+ angles 0 90 -3.707
+}
+DecalEntity : "{EE58596A0C85394E}Prefabs/Decals/Fluids/Decal_OilStain_01_small.et" {
+ coords 2045.675 0 3662.436
+ angles -90 -180 -180
+}
+Vehicle M1083_Transport_Armed_Tan1 : "{EEF937341E143F0F}Prefabs/Vehicles/Wheeled/M1083/Armed/M1083_Transport_Armed_Tan.et" {
+ components {
+  SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+   FuelNodes {
+    SCR_FuelNode "{5622A70CD4036C5A}" {
+     MaxFuel 0
+     m_fInitialFuelTankState 0
+    }
+   }
+  }
+  SCR_UniversalInventoryStorageComponent "{65B6498665024F6E}" {
+   MultiSlots {
+    MultiSlotConfiguration "{65B6498665024F1D}" {
+     SlotTemplate InventoryStorageSlot Bandages {
+      Prefab "{1742632597955A55}Prefabs/Items/Misc/Sandbags/Part_Sandbag_Plastic.et"
+     }
+     NumSlots 150
+    }
+    MultiSlotConfiguration "{668B7B34953252B3}" {
+     SlotTemplate InventoryStorageSlot Magazines {
+      Prefab "{50A242E5D9742C62}Prefabs/Weapons/Magazines/Box_127x99_M2_100rnd_4AP_1Tracer.et"
+     }
+    }
+   }
+  }
+ }
+ coords 2053.62 20.484 3653.062
+ angles 1.035 -55.667 0.235
+}
+$grp GenericEntity : "{F2A6A3DA58AFD5D2}Prefabs/Compositions/Misc/CustomEntities/CompositionDecals/CompositionDecal_Dirt_Tracks_01.et" {
+ {
+  coords 2035.906 19.403 3683.113
+  angles 0 60 0
+ }
+ {
+  coords 2041.249 18.618 3701.074
+  angles 0 -120 0
+ }
+}
