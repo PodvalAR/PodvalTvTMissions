@@ -9,6 +9,17 @@ PerceptionManager PerceptionManager1 : "{028DAEAD63E056BE}Prefabs/World/Game/Per
  coords 1674.143 0.001 6464.051
 }
 PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
+ components {
+  SCR_TimeAndWeatherHandlerComponent "{5EE3229927D4D2F5}" {
+   m_bUsePredefineStartingTimeAndWeather 1
+   m_aStartingWeatherAndTime {
+    SCR_TimeAndWeatherState "{68EA785D65C72DB4}" {
+     m_sWeatherPresetName "Cloudy"
+     m_iStartingHour 2
+    }
+   }
+  }
+ }
  coords 1494.586 0.001 6444.671
 }
 GenericEntity : "{2B24356C351A2538}Prefabs/Props/Wrecks/M113_wreck/M113_wreck.et" {
