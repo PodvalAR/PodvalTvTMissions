@@ -1,0 +1,58 @@
+PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ coords -127.668 0 7374.638
+ m_sTitle "Правила и задачи"
+ m_sTextData "ПРАВИЛА:"\
+ ""\
+ "1. Командиру РФ запрещено покидать территорию минарета (красный тригер);"\
+ "2. Вертолету запрещено использовать тактику \"КАМИКАДЗЕ\"."\
+ ""\
+ "ЗАДАЧИ:"\
+ ""\
+ "* РФ:"\
+ ""\
+ "1. Удержать минарет (красный тригер);"\
+ "2. Не допустить ликвидацию командира РФ."\
+ ""\
+ "* США:"\
+ ""\
+ "1. Захватить минарет (красный тригер);"\
+ "2. Ликвидировать командира РФ."\
+ ""\
+ "ДОПОЛНИТЕЛЬНОЕ:"\
+ ""\
+ "1. У РФ есть мешки с песком"\
+ "2. Снимать штаны с реджи СТРОГО запрещено"
+ m_aVisibleForFactions {
+  "RHS_AFRF"
+  "RHS_USAF"
+  ""
+ }
+ m_bEmptyFactionVisibility 1
+ m_bShowForAnyFaction 1
+}
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ {
+  coords -83.32 0 7523.981
+  m_sTitle "Командир выжил"
+  m_iScore 40
+  m_sFactionKey "RHS_AFRF"
+ }
+ {
+  coords -120.503 0 7523.981
+  m_sTitle "Командир ликвидирован"
+  m_iScore 40
+  m_sFactionKey "RHS_USAF"
+ }
+ {
+  coords -76.363 0 7451.025
+  m_sTitle "Минарет удержан"
+  m_iScore 60
+  m_sFactionKey "RHS_AFRF"
+ }
+ {
+  coords -120.503 0 7451.025
+  m_sTitle "Минарет захвачен"
+  m_iScore 60
+  m_sFactionKey "RHS_USAF"
+ }
+}
