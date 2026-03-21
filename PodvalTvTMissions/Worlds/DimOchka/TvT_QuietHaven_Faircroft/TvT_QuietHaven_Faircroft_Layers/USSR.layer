@@ -1,0 +1,139 @@
+$grp SCR_AIGroup : "{2E11F5063753932B}Prefabs/Groups/OPFOR/USSR/dim_Group_USSR_GRU.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B351898A1AB}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 3987.173 8.938 7288.795
+  angles 0 37.463 0
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B351898A1AB}" {
+    m_iCompanyCallsign 3
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 3290.804 5.149 7945.64
+  angles 0 -150 0
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B351898A1AB}" {
+    m_iCompanyCallsign 3
+    m_iPlatoonCallsign 2
+   }
+  }
+  coords 4208.878 8.667 9064.708
+  angles 0 -150 0
+  m_aUnitPrefabSlots {
+   "{F2CD51EBFE885435}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/dim_USSR_SPN_SL_Light.et"
+   "{498C13903BA8CB62}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/dim_USSR_SPN_GL_Light.et"
+   "{A9C4CAD9BCBA7288}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/dim_USSR_SPN_Sapper_Light.et"
+   "{BE5DC28EC176FEEB}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/dim_USSR_SPN_Rifleman_Light.et"
+   "{8B84A52BE53EC8CD}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/dim_USSR_SPN_MG_Light.et"
+   "{6C47F50D12CE7F9D}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/dim_USSR_SPN_Medic.et"
+   "{DE246DF87905FE00}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/dim_USSR_SPN_Sniper_VSS_Backpack.et"
+  }
+ }
+}
+$grp SCR_AIGroup : "{46EDA9AE5FBA3A4B}Prefabs/Groups/OPFOR/USSR/dim_Group_USSR_GRU_Shturm.et" {
+ SPN {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B351898A1AB}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 4763.214 1.531 7757.637
+  angles 0 87.4 0
+ }
+ SPN3 {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B351898A1AB}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 4763.235 1.531 7787.985
+  angles 0 89.623 0
+ }
+ SPN2 {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B351898A1AB}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 4763.061 1.531 7773.187
+  angles 0 90.545 0
+ }
+ SPN4 {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B351898A1AB}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 5049.342 1.531 7900.563
+  angles 0 156.124 0
+ }
+ SPN5 {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B351898A1AB}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 5060.652 1.531 7905.57
+  angles 0 156.124 0
+ }
+ SPN7 {
+  coords 4789.421 1.531 7791.97
+  angles 0 173.845 0
+  m_aUnitPrefabSlots {
+   "{2A3A8CE5A122CF5A}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/dim_USSR_SPN_Officer.et"
+  }
+ }
+}
+$grp StaticModelEntity : "{979A564D476B5AAE}Prefabs/Structures/Military/Radar/ApproachRadar_RPL5_01/ApproachRadar_RPL5_01_tall.et" {
+ {
+  coords 4740.97 0 7726.462
+  angles 0 66.455 0
+  {
+   $grp GenericEntity : "{1304FA1829C44690}Prefabs/Structures/Military/Camps/TentFIA_01/TentFIA_01_floor.et" {
+    {
+     coords -0.105 4.812 0.47
+     angles 0 -178.889 0
+    }
+    {
+     coords -0.105 4.887 0.47
+     angles 0 -178.889 -180
+    }
+   }
+   Turret : "{1A407760EEAE4156}Prefabs/Vehicles/Static/BaconZU23/BaconZU23_Turret_Deployed.et" {
+    coords -0.128 4.892 0.085
+    angles 0 179.532 0
+   }
+  }
+ }
+ {
+  coords 5080.649 0 7893.678
+  angles 0 -113.545 0
+  {
+   $grp GenericEntity : "{1304FA1829C44690}Prefabs/Structures/Military/Camps/TentFIA_01/TentFIA_01_floor.et" {
+    {
+     coords -0.105 4.887 0.47
+     angles 0 -178.889 -180
+    }
+    {
+     coords -0.105 4.812 0.47
+     angles 0 -178.889 0
+    }
+   }
+   Turret : "{1A407760EEAE4156}Prefabs/Vehicles/Static/BaconZU23/BaconZU23_Turret_Deployed.et" {
+    coords -0.128 4.892 0.085
+    angles 0 179.532 0
+   }
+  }
+ }
+}
