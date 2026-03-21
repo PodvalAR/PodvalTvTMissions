@@ -11,7 +11,7 @@ PolylineShapeEntity {
     ""
     "RHS_USAF"
     "RHS_AFRF"
-    ""
+    "Ses_ChDKZ"
    }
   }
  }
@@ -207,93 +207,4 @@ PolylineShapeEntity {
    Position 11.039 0 -32.138
   }
  }
-}
-$grp GenericEntity : "{21D83950DF36F250}Prefabs/Props/Military/Sandbags/Sandbag_01_long_burlap.et" {
- {
-  components {
-   Hierarchy "{5D6C78DA2270B0F6}" {
-    Enabled 1
-   }
-  }
-  coords 6339.125 305.416 7781.653
-  angles 0 34.51 0
- }
- {
-  components {
-   Hierarchy "{5D6C78DA2270B0F6}" {
-    Enabled 1
-   }
-  }
-  coords 6339.713 305.384 7782.536
-  angles 0 33.308 0
- }
-}
-$grp GenericEntity : "{6D518F289805B8A1}Prefabs/Weapons/Magazines/NSV/Box_127x108_KORD_50rnd_4AP_1APIT.et" {
- {
-  coords 6302.984 306.149 7808.554
-  angles -10.467 126.346 6.024
- }
- {
-  coords 6302.958 306.119 7807.979
-  angles 6.654 126.201 -3.883
- }
- {
-  coords 6302.621 306.151 7808.147
-  angles 1.769 124.891 -13.467
- }
- {
-  coords 6302.82 306.166 7808.67
-  angles 0.349 127.33 4.165
- }
- {
-  coords 6340.941 306.1 7782.063
-  angles 7.324 25.588 3.177
- }
- {
-  coords 6340.685 306.102 7781.599
-  angles 5.687 25.794 -7.096
- }
- {
-  coords 6340.575 306.115 7782.286
-  angles 7.449 25.609 9.51
- }
- {
-  coords 6340.263 306.104 7781.905
-  angles -10.241 24.784 2.64
- }
-}
-$grp GenericEntity : "{977FF11A13375BEB}PrefabsEditable/Auto/Compositions/Misc/FreeRoamBuilding/E_SandbagLongBurlap_S_USSR_01.et" {
- {
-  coords 6301.529 305.452 7808.021
-  angles 0 35.049 0
-  {
-   GenericEntity {
-    ID "5D66ED107747B9FD"
-    coords 0 0 0
-   }
-  }
- }
- {
-  coords 6302.12 305.42 7808.861
-  angles 0 36.463 0
-  {
-   GenericEntity {
-    ID "5D66ED107747B9FD"
-    coords 0 0 0
-   }
-  }
- }
-}
-$grp Turret : "{CB76594700021AD3}Prefabs/Weapons/Tripods/6T7/Deployable_Tripod_6T7_KORD_SPP.et" {
- {
-  coords 6301.982 306.114 7808.785
-  angles 0 -145.584 0
- }
- {
-  coords 6339.787 306.078 7782.299
-  angles 0 -144.173 0
- }
-}
-GenericEntity : "{F401D58CD490C872}Prefabs/Props/Civilian/BeerBottle_01_slava.et" {
- coords 6340.65 305.397 7783.645
 }

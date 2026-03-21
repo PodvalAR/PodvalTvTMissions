@@ -1,0 +1,250 @@
+PolylineShapeEntity Capture {
+ components {
+  PS_PolyZone "{68E53E2D43D28817}" {
+   m_cPolygonColor 0.259 0.686 0.686 1
+   m_fPolygonUVScale 0.333
+   m_cPolygonBorderColor 0.071 0.192 0.561 1
+   m_fPolygonBorderUVScale 1.07
+   m_aVisibleForFactions {
+    ""
+    "RHS_USAF"
+    "RHS_AFRF"
+    "Ses_CDF"
+   }
+  }
+ }
+ coords 6883.329 5.387 2256.076
+ Points {
+  ShapePoint "{68E53E2EAB16B56A}" {
+   Position 7.637 -3.199 -10.337
+  }
+  ShapePoint "{68E53E2EAB164280}" {
+   Position 8.27 -4.837 -2.298
+  }
+  ShapePoint "{68E53E2EAF4E6728}" {
+   Position 45.03 0 31.809
+  }
+  ShapePoint "{68E53E2EACD48555}" {
+   Position 63.155 0 40.056
+  }
+  ShapePoint "{68E53E2EB1774ACD}" {
+   Position 67.124 0 43.264
+  }
+  ShapePoint "{68E53E2EB1F2814F}" {
+   Position 61.993 0 49.974
+  }
+  ShapePoint "{68E53E2EB0ED318B}" {
+   Position 74.538 0 59.435
+  }
+  ShapePoint "{68E53E2EB6633CC8}" {
+   Position 79.06 0 53.712
+  }
+  ShapePoint "{68E53E2EB40192DA}" {
+   Position 108.843 0 76.771
+  }
+  ShapePoint "{68E53E2EBA56E603}" {
+   Position 167.406 0 120.564
+  }
+  ShapePoint "{68E53E2E8B214B14}" {
+   Position 204.032 0 148.15
+  }
+  ShapePoint "{68E53E2E89414B05}" {
+   Position 211.539 0 149.548
+  }
+  ShapePoint "{68E53E2E8F262DA8}" {
+   Position 236.228 0 119.79
+  }
+  ShapePoint "{68E53E2E8D307E1E}" {
+   Position 210.352 0 96.48
+  }
+  ShapePoint "{68E53E2E908FCD16}" {
+   Position 94.819 0 5.436
+  }
+  ShapePoint "{68E53E2E96CCD299}" {
+   Position 67.976 0.638 -15.525
+  }
+  ShapePoint "{68E53E2D734D1C70}" {
+   Position 72.046 0 -20.871
+  }
+  ShapePoint "{68E53E2D764AD680}" {
+   Position 59.778 0 -32.759
+  }
+  ShapePoint "{68E53E2D7539BD3A}" {
+   Position 51.482 0 -23.334
+  }
+  ShapePoint "{68E53E2D75AECAEC}" {
+   Position 38.731 0 -34.134
+  }
+  ShapePoint "{68E53E2D7490B60E}" {
+   Position 29.096 0 -38.788
+  }
+  ShapePoint "{68E53E2D7B1C9F2F}" {
+   Position 10.72 0 -15.881
+  }
+ }
+}
+$grp GenericEntity : "{3D78D7D606FF9818}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_NoCapture.et" {
+ flag1 {
+  coords 7016.677 24.118 2320.646
+  angles 0 90.715 -25.626
+ }
+ flag2 {
+  coords 6976.596 26.579 2290.278
+  angles -0.538 6.257 -16.243
+ }
+}
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{68E6FDB8C1CCD5F9}" {
+     m_Timer GUB_ZoneControlTimer "{68E6FDB8C5F73C7D}" {
+      timeToComplete 150
+     }
+     m_ZoneController GUB_ZoneController "{68E6FDB8CD348E17}" {
+      m_sZoneEntityName "Capture"
+     }
+     m_FlagController GUB_FlagController "{68E6FDB8DD904ED7}" {
+      m_aFlagNames {
+       "flag1"
+       "flag2"
+      }
+      m_fStartFactionKey "RHS_USAF"
+      m_fEndFactionKey "RHS_AFRF"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{68E6FDB8AD6CEE74}" {
+       m_sFirstFactionKey "RHS_AFRF"
+       m_sSecondFactionKey "RHS_USAF"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 7129.569 0 1756.204
+}
+$grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+ {
+  coords 6919.557 13.055 2235.459
+  m_sImageSet "{2BB7155CD562F1DE}UI/Textures/Icons/icon_excl_mark.edds"
+  m_sImageSetGlow "{67B3A6DC2D712B52}UI/Textures/Icons/icons_mapMarkersUI-glow.imageset"
+  m_MarkerColor 0.502 0 0 1
+  m_sQuadName "circle-2"
+  m_fWorldSize 30
+  m_sDescription "ZU-23"
+  m_bUseWorldScale 1
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "RHS_ION"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+   "Drg_IGF"
+   "Drg_PIR"
+   "UK"
+   "USSR"
+   "US"
+   "FIA"
+   "Drg_VCA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+  }
+  m_iZOrder 0
+ }
+ {
+  coords 7092.812 13.436 2387.592
+  m_sImageSet "{2BB7155CD562F1DE}UI/Textures/Icons/icon_excl_mark.edds"
+  m_sImageSetGlow "{67B3A6DC2D712B52}UI/Textures/Icons/icons_mapMarkersUI-glow.imageset"
+  m_MarkerColor 0.502 0 0 1
+  m_sQuadName "circle-2"
+  m_fWorldSize 30
+  m_sDescription "ZU-23"
+  m_bUseWorldScale 1
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "RHS_ION"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+   "Drg_IGF"
+   "Drg_PIR"
+   "UK"
+   "USSR"
+   "US"
+   "FIA"
+   "Drg_VCA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+  }
+  m_iZOrder 0
+ }
+ {
+  coords 6966.148 13.055 2273.554
+  m_sImageSet "{87A3330CFC4BDDAD}UI/Textures/Icons/icon_pickup.edds"
+  m_sImageSetGlow "{67B3A6DC2D712B52}UI/Textures/Icons/icons_mapMarkersUI-glow.imageset"
+  m_MarkerColor 0 0.502 0.125 1
+  m_sQuadName "circle-2"
+  m_fWorldSize 30
+  m_sDescription "Грузовики с песком"
+  m_bUseWorldScale 1
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "RHS_ION"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+   "Drg_IGF"
+   "Drg_PIR"
+   "UK"
+   "USSR"
+   "US"
+   "FIA"
+   "Drg_VCA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+  }
+  m_iZOrder 0
+ }
+ {
+  coords 6999.149 13.05 2313.13
+  m_sImageSet "{15A293B1904F942B}UI/Textures/Icons/icon_objective.edds"
+  m_sImageSetGlow "{67B3A6DC2D712B52}UI/Textures/Icons/icons_mapMarkersUI-glow.imageset"
+  m_MarkerColor 0 0.502 0.125 1
+  m_sQuadName "circle-2"
+  m_fWorldSize 45
+  m_sDescription "Авианосец \"Khe Shan\""
+  m_bUseWorldScale 1
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "RHS_ION"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+   "Drg_IGF"
+   "Drg_PIR"
+   "UK"
+   "USSR"
+   "US"
+   "FIA"
+   "Drg_VCA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+  }
+  m_iZOrder 0
+ }
+}

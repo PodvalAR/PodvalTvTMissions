@@ -39,17 +39,10 @@ $grp SCR_AIGroup : "{18CF53AE14B14060}Prefabs/Groups/BLUFOR/RHS_USAF/Recon/Group
   m_sCustomNameSet "Западные друзья "
  }
 }
-$grp Vehicle : "{601CE970D8C88268}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed_gunship_HE_sharkNose.et" {
- UH1H_armed_gunship_HE_sharkNose1 {
-  coords 4745.869 9.25 2534.222
-  angles 0 -150.191 0
-  m_sAttachmentGroupName "us2"
- }
- UH1H_armed_gunship_HE_sharkNose2 {
-  coords 4717.868 9.25 2550.098
-  angles 0 -148.98 0
-  m_sAttachmentGroupName "us3"
- }
+Vehicle UH1H_armed_gunship_HE_sharkNose2 : "{601CE970D8C88268}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed_gunship_HE_sharkNose.et" {
+ coords 4717.868 9.25 2550.098
+ angles 0 -148.98 0
+ m_sAttachmentGroupName "us3"
 }
 $grp SCR_AIGroup : "{6981CA4A67B1A730}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_Heli.et" {
  us2 {
@@ -82,6 +75,11 @@ SCR_AIGroup us1 : "{8BE5C4D411C5E59C}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Grou
   "{DD0FB453D60AFC0F}Worlds/Vanya/ChernarusMinus/TVT_SHTURM_chernarus/dim_USMC_Sniper.et"
  }
  m_sCustomNameSet "Западный инструктор"
+}
+Vehicle UH1H_armed_AP1 : "{999FC99369291EA4}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed_AP.et" {
+ coords 4744.894 9.25 2537.882
+ angles 0 -152.985 0
+ m_sAttachmentGroupName "us2"
 }
 Vehicle M151A2 : "{F649585ABB3706C4}Prefabs/Vehicles/Wheeled/M151A2/M151A2.et" {
  coords 10468.021 6.001 2278.796
