@@ -62,6 +62,24 @@ $grp GenericEntity : "{21D83950DF36F250}Prefabs/Props/Military/Sandbags/Sandbag_
   coords 6348.646 300.502 7762.64
   angles 0.106 -142.573 -3.178
  }
+ {
+  components {
+   Hierarchy "{5D6C78DA2270B0F6}" {
+    Enabled 1
+   }
+  }
+  coords 6339.125 305.416 7781.653
+  angles 0 34.51 0
+ }
+ {
+  components {
+   Hierarchy "{5D6C78DA2270B0F6}" {
+    Enabled 1
+   }
+  }
+  coords 6339.713 305.384 7782.536
+  angles 0 33.308 0
+ }
 }
 $grp GameEntity : "{2521D0D11FB543C7}PrefabsEditable/Auto/Props/Civilian/E_Fireplace_01.et" {
  {
@@ -187,6 +205,40 @@ StaticModelEntity : "{605A7848CB4D361A}Prefabs/Compositions/Misc/SubCompositions
  coords 6354.984 294.314 7800.535
  angles 0 36.991 0
 }
+$grp GenericEntity : "{6D518F289805B8A1}Prefabs/Weapons/Magazines/NSV/Box_127x108_KORD_50rnd_4AP_1APIT.et" {
+ {
+  coords 6302.984 306.149 7808.554
+  angles -10.467 126.346 6.024
+ }
+ {
+  coords 6302.958 306.119 7807.979
+  angles 6.654 126.201 -3.883
+ }
+ {
+  coords 6302.621 306.151 7808.147
+  angles 1.769 124.891 -13.467
+ }
+ {
+  coords 6302.82 306.166 7808.67
+  angles 0.349 127.33 4.165
+ }
+ {
+  coords 6340.941 306.1 7782.063
+  angles 7.324 25.588 3.177
+ }
+ {
+  coords 6340.685 306.102 7781.599
+  angles 5.687 25.794 -7.096
+ }
+ {
+  coords 6340.575 306.115 7782.286
+  angles 7.449 25.609 9.51
+ }
+ {
+  coords 6340.263 306.104 7781.905
+  angles -10.241 24.784 2.64
+ }
+}
 StaticModelEntity : "{8BF02124660AB745}PrefabsEditable/Auto/Structures/Military/Camps/TentSmallFIA_01/E_TentSmallFIA_01.et" {
  coords 5328.856 313.176 7424.375
  angles 4.918 -82.015 -2.911
@@ -290,6 +342,26 @@ $grp GenericEntity : "{977FF11A13375BEB}PrefabsEditable/Auto/Compositions/Misc/F
  {
   coords 6347.139 299.625 7733.379
   angles 3.18 -53.674 0.045
+ }
+ {
+  coords 6301.529 305.452 7808.021
+  angles 0 35.049 0
+  {
+   GenericEntity {
+    ID "5D66ED107747B9FD"
+    coords 0 0 0
+   }
+  }
+ }
+ {
+  coords 6302.12 305.42 7808.861
+  angles 0 36.463 0
+  {
+   GenericEntity {
+    ID "5D66ED107747B9FD"
+    coords 0 0 0
+   }
+  }
  }
 }
 SCR_DestructibleBuildingEntity : "{9C4A147C0B339841}PrefabLibrary/CainLibrary/Structures/Military/Barracks_USSR_03.et" {
@@ -822,6 +894,16 @@ $grp GenericEntity : "{BE16EE8FAA315FE2}Prefabs/Props/Military/Sandbags/Sandbag_
   angles -0.004 -54.728 1.157
  }
 }
+$grp Turret : "{CB76594700021AD3}Prefabs/Weapons/Tripods/6T7/Deployable_Tripod_6T7_KORD_SPP.et" {
+ {
+  coords 6301.982 306.114 7808.785
+  angles 0 -145.584 0
+ }
+ {
+  coords 6339.787 306.078 7782.299
+  angles 0 -144.173 0
+ }
+}
 GenericEntity : "{CD37561561F93B58}PrefabsEditable/Auto/Compositions/Misc/SubCompositions/E_Sandbag_Wall_Sign_USSR_01.et" {
  coords 6232.068 292.903 7799.507
  angles 0 -144.826 0
@@ -913,11 +995,6 @@ GenericEntity : "{E249C09D69AAE6C8}Prefabs/Compositions/Slotted/SlotFlatSmall/Sa
  angles 0 123.626 0
 }
 GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
- components {
-  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
-   m_iMissionTime 2700
-  }
- }
  coords 6255.83 292.437 7727.741
 }
 GenericEntity : "{EB22348C6EB71B2C}PrefabsEditable/Auto/Compositions/Misc/SubCompositions/E_Sandbag_Barricade_USSR_03.et" {
@@ -929,6 +1006,9 @@ GenericEntity : "{EB22348C6EB71B2C}PrefabsEditable/Auto/Compositions/Misc/SubCom
    coords 1.516 0 1.399
   }
  }
+}
+GenericEntity : "{F401D58CD490C872}Prefabs/Props/Civilian/BeerBottle_01_slava.et" {
+ coords 6340.65 305.397 7783.645
 }
 GenericEntity : "{F671303E925C437A}PrefabsEditable/Auto/Compositions/Misc/SubCompositions/Fortifications/E_Sandbag_MG_USSR_01_NSV_SPP.et" {
  coords 6377.189 295.256 7776.405

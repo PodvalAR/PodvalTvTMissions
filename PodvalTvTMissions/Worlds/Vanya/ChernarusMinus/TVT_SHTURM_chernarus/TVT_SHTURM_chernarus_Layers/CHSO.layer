@@ -38,52 +38,28 @@ $grp Turret : "{1A407760EEAE4156}Prefabs/Vehicles/Static/BaconZU23/BaconZU23_Tur
   angles 0 -36.388 0
  }
 }
-$grp Vehicle : "{3312ADBF53A16DD9}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS.et" {
- LAV25_RHS1 {
-  coords 8911.234 5.75 2232.781
-  angles 0 137.711 0
-  m_sAttachmentGroupName "cdf2"
- }
- LAV25_RHS2 {
-  coords 8903.874 5.75 2241.029
-  angles 0 137.711 0
-  m_sAttachmentGroupName "cdf3"
- }
+Vehicle LAV25_RHS1 : "{3312ADBF53A16DD9}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS.et" {
+ coords 8911.234 5.75 2232.781
+ angles 0 137.711 0
+ m_sAttachmentGroupName "cdf2"
 }
 StaticModelEntity : "{367F172BA690BB48}PrefabsEditable/Auto/Compositions/Misc/SubCompositions/E_Sandbag_Bunker_Cluttered_USSR_01.et" {
  coords 10478.638 6.116 2297.986
  angles 0 56.234 0
 }
-$grp SCR_AIGroup : "{3F29EA2D79388D65}Prefabs/Groups/BLUFOR/Ses_CDF/Group_A2F_CDF_Motorized.et" {
- cdf2 {
-  components {
-   PS_GroupCallsignAssigner "{68A30C9A9E8D83F4}" {
-    m_iCompanyCallsign 3
-   }
+SCR_AIGroup cdf2 : "{3F29EA2D79388D65}Prefabs/Groups/BLUFOR/Ses_CDF/Group_A2F_CDF_Motorized.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A30C9A9E8D83F4}" {
+   m_iCompanyCallsign 3
   }
-  coords 8915.321 5.75 2236.732
-  angles 0 -132.348 0
-  m_aUnitPrefabSlots {
-   "{84D5A1539E639EA0}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_CC_Random.et"
-   "{90CD8E3B3F9CA0D7}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_Crew_Random.et"
-  }
-  m_sCustomNameSet "Обученый экипаж LAV"
  }
- cdf3 {
-  components {
-   PS_GroupCallsignAssigner "{68A30C9A9E8D83F4}" {
-    m_iCompanyCallsign 3
-    m_iSquadCallsign 1
-   }
-  }
-  coords 8908.461 5.75 2244.196
-  angles 0 -132.348 0
-  m_aUnitPrefabSlots {
-   "{84D5A1539E639EA0}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_CC_Random.et"
-   "{90CD8E3B3F9CA0D7}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_Crew_Random.et"
-  }
-  m_sCustomNameSet "Обученный экипаж LAV"
+ coords 8915.321 5.75 2236.732
+ angles 0 -132.348 0
+ m_aUnitPrefabSlots {
+  "{84D5A1539E639EA0}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_CC_Random.et"
+  "{90CD8E3B3F9CA0D7}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_Crew_Random.et"
  }
+ m_sCustomNameSet "Обученый экипаж LAV"
 }
 $grp GenericEntity : "{598B1859AF3422F4}PrefabsEditable/Auto/Compositions/Misc/SubCompositions/E_Sandbag_round_Cluttered_USSR_02.et" {
  {
@@ -122,7 +98,17 @@ $grp SCR_AIGroup : "{6449AAD99869C0D5}Prefabs/Groups/BLUFOR/Ses_CDF/Group_A2F_CD
   }
   coords 10428.683 6.062 2279.813
   angles 0 139.042 0
-  m_aUnitPrefabSlots +{
+  m_aUnitPrefabSlots {
+   "{98918C4F8902542E}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_SL_Random.et"
+   "{DF081FFC7A479F9B}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_SR_Random.et"
+   "{7E8CF24A35AC6A2D}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_AT_Random.et"
+   "{B2AAD7B334EC1507}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_AAT_Random.et"
+   "{2AC4BD0DD870A673}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_AR_Random.et"
+   "{D01975FC83367BD9}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_GL_Random.et"
+   "{7AB6CF75D8A31BEB}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_Rifle_Random.et"
+   "{7494538873206D04}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_Medic_Random.et"
+   "{50C53F58D3742548}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_Rifle_SD_Random.et"
+   "{D01975FC83367BD9}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_GL_Random.et"
    "{2C802DE0AEBE184A}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_Sniper_Random.et"
   }
   m_sCustomNameSet "Защитники Электрозаводска"
@@ -135,7 +121,17 @@ $grp SCR_AIGroup : "{6449AAD99869C0D5}Prefabs/Groups/BLUFOR/Ses_CDF/Group_A2F_CD
   }
   coords 10441.059 6.062 2288.087
   angles 0 147.367 0
-  m_aUnitPrefabSlots +{
+  m_aUnitPrefabSlots {
+   "{98918C4F8902542E}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_SL_Random.et"
+   "{DF081FFC7A479F9B}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_SR_Random.et"
+   "{7E8CF24A35AC6A2D}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_AT_Random.et"
+   "{B2AAD7B334EC1507}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_AAT_Random.et"
+   "{2AC4BD0DD870A673}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_AR_Random.et"
+   "{D01975FC83367BD9}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_GL_Random.et"
+   "{7AB6CF75D8A31BEB}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_Rifle_Random.et"
+   "{7494538873206D04}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_Medic_Random.et"
+   "{7494538873206D04}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_Medic_Random.et"
+   "{AA9F3BAA3A3987D0}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_LAT_Random.et"
    "{2C802DE0AEBE184A}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_Sniper_Random.et"
   }
   m_sCustomNameSet "Защитники Электрозаводска"
@@ -562,52 +558,8 @@ $grp GenericEntity : "{F671303E925C437A}PrefabsEditable/Auto/Compositions/Misc/S
   angles 0 -52.972 0
  }
  {
-  coords 10489.596 11.964 2369.437
-  angles 0 -34.267 0
-  {
-   GenericEntity {
-    ID "570C9564D02F5C92"
-    coords 0.021 0 -0.53
-   }
-   GenericEntity {
-    ID "5C5AC612D4755239"
-    coords -0.123 0.367 0.28
-   }
-   GenericEntity {
-    ID "5C5AC612D47552FB"
-    coords 0.037 0.202 0.391
-   }
-   StaticModelEntity {
-    ID "570CFD7463457965"
-    Flags 0x200000 0
-   }
-   StaticModelEntity {
-    ID "570CFD7476FFB12E"
-    Flags 0x200000 0
-   }
-   Turret {
-    ID "605ECD8C01B355D2"
-    coords 0.016 0.656 -0.677
-   }
-  }
- }
- {
   coords 10710.647 11.167 2236.528
   angles 0 -44.575 0
- }
- {
-  coords 10346.186 15.01 2244.71
-  angles 0 -64.548 0
-  {
-   StaticModelEntity {
-    ID "570CFD7463457965"
-    Flags 0x200000 0
-   }
-   StaticModelEntity {
-    ID "570CFD7476FFB12E"
-    Flags 0x200000 0
-   }
-  }
  }
 }
 $grp GenericEntity : "{F79CBAB09747E291}PrefabsEditable/Auto/Compositions/Slotted/SlotFlatSmall/E_SandbagPosition_S_USSR_02.et" {
