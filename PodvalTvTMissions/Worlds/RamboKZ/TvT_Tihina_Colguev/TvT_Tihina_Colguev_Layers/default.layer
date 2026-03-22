@@ -1,0 +1,70 @@
+SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
+ coords 9768.495 0 7005.728
+}
+GenericWorldFogEntity : "{78D9BBF0F423FEB4}Prefabs/World/DefaultWorld/FogHaze_Default.et" {
+ coords 9783.819 61.755 8673.404
+ HeightDensity 0.221
+ DistanceDensity 0.632
+ HazeDensity 0.658
+ FogHeightStart entity
+}
+PerceptionManager PerceptionManager2 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 9420.6 0 6764.167
+}
+PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
+ components {
+  SCR_TimeAndWeatherHandlerComponent "{5EE3229927D4D2F5}" {
+   m_bUsePredefineStartingTimeAndWeather 1
+   m_aStartingWeatherAndTime {
+    SCR_TimeAndWeatherState "{68E8630D9D441A25}" {
+     m_sWeatherPresetName "Cloudy"
+     m_iStartingHour 6
+     m_iStartingMinutes 35
+    }
+   }
+  }
+ }
+ coords 9641.479 53.83 9233.565
+ {
+  SCR_FactionManager "68E8E5AD023FA45E" {
+   ID "5ED9088735FF2D8B"
+   coords 0 5.474 0
+  }
+ }
+}
+GenericEntity Flag_Control : "{CA1FF8EE196359C6}Prefabs/System/DRG_FlagControlPrefab.et" {
+ components {
+  DRG_FlagControlComponent "{66294262AC006581}" {
+   m_aFlagLogics {
+    FlagLogic "{669057355AD62ACA}" {
+     m_iAdvanceAfterSec 1
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "US_WIN"
+     }
+     m_sFailedObjectiveNames {
+      "USSR_WIN"
+     }
+     m_sNotificationMessage "Флаг захвачен. Победа атаки!"
+     m_aFlagControls {
+      FlagControl "{6690573551DE2822}" {
+       m_sFactionKey "US"
+       m_sFlagEntityName "FLAG_USSR"
+       m_sFlagPreviewName "Флаг"
+      }
+     }
+     m_iCompleteAfterSeconds 5
+    }
+   }
+  }
+ }
+ coords 10407.429 247.12 8634.225
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 10083.236 0 8817.999
+}

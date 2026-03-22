@@ -1,0 +1,65 @@
+SCR_AIGroup RF_pl_000 : "{496070641528229D}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_PL.et" {
+ coords 2856.04 20.91 1896.123
+ angles -2.353 62.542 6.511
+ m_aUnitPrefabSlots {
+  "{9AEBC61DAD798672}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_PL_opt.et"
+ }
+}
+$grp SCR_AIGroup : "{EB131DDF464F90FD}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Squad.et" {
+ RF_SQ_200 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 3216.317 17.657 1819.167
+  angles 0 -99.935 0
+ }
+ RF_SQ_001 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iSquadCallsign 1
+   }
+  }
+  coords 2822.405 21.686 1918.583
+  angles 6.619 82.854 -2.026
+ }
+ RF_SQ_002 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iSquadCallsign 2
+   }
+  }
+  coords 2830.065 19.191 1792.712
+  angles 6.619 82.854 -2.026
+ }
+ RF_SQ_100 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 2988.912 18.012 2225.211
+  angles 6.619 82.854 -2.026
+ }
+ RF_SQ_101 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 2990.528 18.458 2247.304
+  angles 6.067 128.808 3.338
+ }
+ RF_SQ_102 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 3002.259 17.563 2131.673
+  angles 6.619 82.854 -2.026
+ }
+}

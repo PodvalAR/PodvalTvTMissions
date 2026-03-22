@@ -1,0 +1,89 @@
+SCR_AIGroup TKA_000 : "{371433587517EBAC}Prefabs/Groups/OPFOR/Ses_TKA/Group_A2F_TKA_PL.et" {
+ components {
+  PS_GroupCallsignAssigner "{68E1259194AA80CD}" {
+   m_iCompanyCallsign 0
+   m_iPlatoonCallsign 0
+  }
+ }
+ coords 4372.72 18.113 4802.586
+ angles 0 45.738 0
+}
+$grp SCR_AIGroup : "{B2829E998DF41555}Prefabs/Groups/OPFOR/Ses_TKA/Group_A2F_TKA_Squad.et" {
+ TKA_201 {
+  components {
+   PS_GroupCallsignAssigner "{68E12591FAEAA93D}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 4331.303 18.01 4848.38
+  angles 0 46.229 0
+  m_bSnapToTerrain 0
+ }
+ TKA_202 {
+  components {
+   PS_GroupCallsignAssigner "{68E12591FC3E8F60}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 2
+   }
+  }
+  coords 4321.987 17.88 4858.674
+  angles 0 48.214 0
+  m_bSnapToTerrain 0
+ }
+ TKA_300 {
+  components {
+   PS_GroupCallsignAssigner "{68E12591F5732A34}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 4318.01 17.977 4862.489
+  angles 0 46.415 0
+  m_aUnitPrefabSlots {
+   "{AFFB63AA07D712D2}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_SL.et"
+   "{2FEEAC2DF6EE5B19}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_Sharpshooter.et"
+   ""
+   ""
+   ""
+   ""
+   ""
+   ""
+   ""
+  }
+  m_bSnapToTerrain 0
+ }
+}
+$grp SCR_AIGroup : "{D98C1540C5C05A6C}Prefabs/Groups/OPFOR/Ses_TKA/Group_A2F_TKA_Motorized.et" {
+ TKA_101 {
+  components {
+   PS_GroupCallsignAssigner "{68E12591F00BA9BA}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 4352.522 18.111 4824.612
+  angles 0 49.326 0
+  m_bSnapToTerrain 0
+ }
+ TKA_100 {
+  components {
+   PS_GroupCallsignAssigner "{68E12591F1F8FB48}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 4364.411 17.91 4812.083
+  angles 0 48.43 0
+  m_bSnapToTerrain 0
+ }
+ TKA_200 {
+  components {
+   PS_GroupCallsignAssigner "{68E12591F7D4A965}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 0
+   }
+  }
+  coords 4342.091 18.143 4836.369
+  angles 0 46.742 0
+  m_bSnapToTerrain 0
+ }
+}

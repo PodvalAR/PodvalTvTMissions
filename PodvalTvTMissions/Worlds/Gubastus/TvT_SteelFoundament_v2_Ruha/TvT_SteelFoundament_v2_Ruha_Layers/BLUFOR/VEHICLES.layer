@@ -1,81 +1,74 @@
-$grp Vehicle : "{21E9A875C0A3C409}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed_gunship_HE.et" {
- UH1H_armed_gunship_HE1 {
-  coords 6555.126 96.69 1274.957
-  m_sAttachmentGroupName "USAF_400"
+$grp Vehicle : "{3312ADBF53A16DD8}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS.et" {
+ LAV25_RHS1 {
+  coords 6669.294 96.25 1620.375
+  angles 0 -73.134 0
+  m_sAttachmentGroupName "USAF_110"
  }
- UH1H_armed_gunship_HE2 {
-  coords 6505.625 96.681 1290.971
+ LAV25_RHS2 {
+  coords 2962.156 68.844 79.657
+  angles 0 21.935 0
+  m_sAttachmentGroupName "USAF_210"
+ }
+}
+$grp Vehicle : "{7BC74A3F9EDBEFF4}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed_AP_HE.et" {
+ UH1H_armed_AP_HE1 {
+  coords 6505.604 96.656 1290.983
   m_sAttachmentGroupName "USAF_401"
  }
+ UH1H_armed_AP_HE2 {
+  coords 6555.118 96.656 1274.953
+  m_sAttachmentGroupName "USAF_400"
+ }
 }
-Vehicle M923A1_command_MERDC1 : "{38186F12F27A61C6}Prefabs/Vehicles/Wheeled/M923A1/M923A1_command_MERDC.et" {
- coords 6691.921 96.249 1613.003
- angles 0 -72.253 0
-}
-$grp Vehicle : "{7F0CE77CBE1A1F65}Prefabs/Vehicles/Wheeled/M1240A1_MATV/M1240A1_MATV_Turret_Camo.et" {
- M1240A1_MATV_Turret_Camo5 {
-  coords 6611.251 96.25 1641.219
-  angles 0 -72.253 0
-  m_sAttachmentGroupName "USAF_102"
- }
- M1240A1_MATV_Turret_Camo4 {
-  coords 6623.689 96.25 1636.42
-  angles 0 -72.253 0
-  m_sAttachmentGroupName "USAF_102"
- }
- M1240A1_MATV_Turret_Camo9 {
-  coords 2982.439 68.906 122.02
-  angles 0 22.956 0
-  m_sAttachmentGroupName "USAF_200"
- }
- M1240A1_MATV_Turret_Camo2 {
-  coords 6661.583 96.25 1623.495
-  angles 0 -72.253 0
-  m_sAttachmentGroupName "USAF_100"
- }
- M1240A1_MATV_Turret_Camo6 {
-  coords 6672.647 96.25 1619.663
-  angles 0 -72.253 0
-  m_sAttachmentGroupName "USAF_100"
- }
- M1240A1_MATV_Turret_Camo1 {
-  coords 6648.517 96.25 1628.221
-  angles 0 -72.253 0
-  m_sAttachmentGroupName "USAF_101"
- }
- M1240A1_MATV_Turret_Camo10 {
-  coords 2966.128 68.905 85.455
-  angles 0 22.956 0
-  m_sAttachmentGroupName "USAF_202"
- }
- M1240A1_MATV_Turret_Camo11 {
-  coords 2961.307 68.905 74.785
-  angles 0 22.956 0
-  m_sAttachmentGroupName "USAF_202"
- }
- M1240A1_MATV_Turret_Camo12 {
-  coords 2972.02 68.905 98.04
-  angles 0 22.956 0
-  m_sAttachmentGroupName "USAF_201"
- }
- M1240A1_MATV_Turret_Camo8 {
-  coords 2977.024 68.905 110.416
-  angles 0 22.956 0
-  m_sAttachmentGroupName "USAF_201"
- }
- M1240A1_MATV_Turret_Camo7 {
-  coords 2988.347 68.906 133.971
-  angles 0 22.956 0
-  m_sAttachmentGroupName "USAF_200"
- }
- M1240A1_MATV_Turret_Camo3 {
-  coords 6635.737 96.25 1632.081
-  angles 0 -72.253 0
-  m_sAttachmentGroupName "USAF_101"
- }
+Vehicle M998_covered_long1 : "{9B1BF9644E0378D6}Prefabs/Vehicles/Wheeled/M998/M998_covered_long.et" {
+ coords 6691.952 96.262 1613.037
+ angles 0 -70.01 0
+ m_sAttachmentGroupName "USAF_000"
 }
 Vehicle M923A1_repair1 : "{A042ACE5C2B13206}Prefabs/Vehicles/Wheeled/M923A1/M923A1_repair.et" {
  coords 6575.305 96.837 1185
+}
+$grp Vehicle : "{D574C943C9F8C9DF}Prefabs/Vehicles/Wheeled/M998/M1151_armed_M2HB_AP.et" {
+ M1151_armed_M2HB_AP3 {
+  coords 6648.524 96.25 1628.218
+  angles 0 -71.809 0
+  m_sAttachmentGroupName "USAF_101"
+ }
+ M1151_armed_M2HB_AP4 {
+  coords 6635.716 96.25 1632.087
+  angles 0 -71.809 0
+  m_sAttachmentGroupName "USAF_101"
+ }
+ M1151_armed_M2HB_AP5 {
+  coords 6623.681 96.265 1636.423
+  angles 0 -71.809 0
+  m_sAttachmentGroupName "USAF_100"
+ }
+ M1151_armed_M2HB_AP6 {
+  coords 6611.248 96.25 1641.217
+  angles 0 -71.809 0
+  m_sAttachmentGroupName "USAF_100"
+ }
+ M1151_armed_M2HB_AP1 {
+  coords 2971.821 68.875 98.096
+  angles 0 22.891 0
+  m_sAttachmentGroupName "USAF_201"
+ }
+ M1151_armed_M2HB_AP2 {
+  coords 2976.975 68.875 110.488
+  angles 0 22.891 0
+  m_sAttachmentGroupName "USAF_201"
+ }
+ M1151_armed_M2HB_AP7 {
+  coords 2982.365 68.875 122.004
+  angles 0 22.891 0
+  m_sAttachmentGroupName "USAF_200"
+ }
+ M1151_armed_M2HB_AP8 {
+  coords 2988.237 68.906 134.026
+  angles 0 22.891 0
+  m_sAttachmentGroupName "USAF_200"
+ }
 }
 Vehicle M923A1_ammo_MERDC1 : "{EC657C9B3C73E192}Prefabs/Vehicles/Wheeled/M923A1/M923A1_ammo_MERDC.et" {
  coords 6585.305 96.837 1185

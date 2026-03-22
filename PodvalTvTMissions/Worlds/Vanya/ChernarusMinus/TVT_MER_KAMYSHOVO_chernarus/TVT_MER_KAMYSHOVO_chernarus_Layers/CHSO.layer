@@ -1,0 +1,619 @@
+$grp GenericEntity : "{0EBE787562528C47}PrefabsEditable/Auto/Compositions/Misc/SubCompositions/E_Sandbag_Barricade_USSR_02.et" {
+ {
+  coords 12086.471 5.761 3564.306
+  angles 0 -106.194 0
+  {
+   GenericEntity {
+    ID "59A2DAE3F37E9388"
+    coords 1.819 0 -0.076
+    angles 0 -15.497 0
+   }
+   GenericEntity {
+    ID "59A2DAE3F37E938E"
+    coords 0.059 0 -0.383
+    angles 0 179.093 0
+   }
+   GenericEntity {
+    ID "59A2EDE55B810E95"
+    coords -1.525 0 -0.374
+    angles 0 179.623 0
+    {
+     GenericEntity {
+      ID "59A2EA8548F2D78C"
+      Flags 0x200000 0
+      coords -0.32 0.71 0.078
+      angles 0 -5.501 0
+     }
+     GenericEntity {
+      ID "59A2EA8548F2D78F"
+      coords 0.702 0.47 0.043
+      angles 0 169.405 0
+     }
+    }
+   }
+  }
+ }
+ {
+  coords 12047.51 5.734 3479.083
+  angles 0 28.105 0
+  {
+   GenericEntity {
+    ID "59A2EDE55B810E95"
+    {
+     GenericEntity {
+      ID "59A2EA8548F2D78C"
+      Flags 0x200000 0
+      coords -0.321 0.71 0.079
+     }
+    }
+   }
+  }
+ }
+}
+GenericEntity : "{350AFA8CB574F70B}PrefabsEditable/Auto/Compositions/Misc/SubCompositions/E_Sandbag_MG_USSR_02_PKM.et" {
+ coords 12057.594 8.985 3538.497
+ angles 0.529 -30.804 -8.494
+ {
+  GenericEntity {
+   ID "59D87A542BADBE33"
+   coords -0.092 0 0.238
+  }
+  GenericEntity {
+   ID "59D87A542BADBE39"
+   coords -0.171 0.007 0.449
+   angles 3.305 41.682 1.013
+  }
+ }
+}
+$grp GenericEntity : "{3EF310C373E39AAB}PrefabsEditable/Auto/Compositions/Misc/SubCompositions/E_Sandbag_Wall_BarbedWire_USSR_01.et" {
+ {
+  coords 12001.659 1.491 3141.525
+  angles 0 -55.79 0
+  {
+   GenericEntity {
+    ID "5CB0D991B00CC650"
+    coords 2.026 0 -0.043
+    angles 0 56.735 0
+   }
+   GenericEntity {
+    ID "5CB0D991B00CC653"
+    coords -1.8 0.959 0.472
+   }
+   GenericEntity {
+    ID "5CB0D991B00CC655"
+    coords 1.986 0 0.68
+    angles 0 -30 0
+   }
+   GenericEntity {
+    ID "5CB0D991B00CC65E"
+    coords -1.846 0 0.499
+   }
+   GenericEntity {
+    ID "5CB0D991B00CC66C"
+    coords -0.14 0 0.551
+   }
+   GenericEntity {
+    ID "5CB0D991B00CC66E"
+    coords -0.2 0.542 1.205
+    angles 0.047 89.391 94.39
+   }
+   GenericEntity {
+    ID "5CB0D991B00D09E9"
+    coords 1.021 0 0.531
+   }
+  }
+ }
+ {
+  coords 12009.071 1.806 3138.917
+  angles 0 65.727 0
+ }
+ {
+  coords 12058.596 5.75 3509.439
+  angles 0 76.152 0
+ }
+ {
+  coords 12059.51 5.749 3505.456
+  angles 0 -100.568 0
+ }
+}
+$grp SCR_AIGroup : "{3F29EA2D79388D65}Prefabs/Groups/BLUFOR/Ses_CDF/Group_A2F_CDF_Motorized.et" {
+ cdf4 {
+  components {
+   PS_GroupCallsignAssigner "{68A30C9A9E8D83F4}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 2
+   }
+  }
+  coords 12048.237 6.125 3482.305
+  angles 0 -5.573 0
+  m_aUnitPrefabSlots {
+   "{98918C4F8902542E}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_SL_Random.et"
+   "{DF081FFC7A479F9B}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_SR_Random.et"
+   "{7E8CF24A35AC6A2D}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_AT_Random.et"
+   "{B2AAD7B334EC1507}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_AAT_Random.et"
+   "{2AC4BD0DD870A673}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_AR_Random.et"
+   "{D01975FC83367BD9}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_GL_Random.et"
+   "{7AB6CF75D8A31BEB}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_Rifle_Random.et"
+   "{4274EDBD07470805}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_Sapper_Random.et"
+   "{2C802DE0AEBE184A}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_Sniper_Random.et"
+  }
+  m_sCustomNameSet "Патрульный отряд Камышово"
+ }
+ cdf3 {
+  components {
+   PS_GroupCallsignAssigner "{68A30C9A9E8D83F4}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 12034.988 6.125 3578.528
+  angles 0 -13 0
+ }
+}
+Vehicle BTR70_Ses_CDF1 : "{3F3F663ED52E08B5}Prefabs/Vehicles/Wheeled/BTR70/BTR70_Ses_CDF.et" {
+ coords 12037.756 6.125 3584.287
+ angles 0 78.22 0
+ m_sAttachmentGroupName "cdf3"
+}
+$grp GenericEntity : "{42887801DB9228B5}PrefabsEditable/Auto/Compositions/Misc/SubCompositions/E_Sandbag_Corner_Left_USSR_01.et" {
+ {
+  coords 12074.679 6.125 3565.634
+  angles 0 81.726 0
+ }
+ {
+  coords 12087.993 6.125 3546.959
+  angles 0 74.758 0
+ }
+}
+$grp StaticModelEntity : "{51AB40A39B944585}PrefabsEditable/Auto/Compositions/Misc/SubCompositions/E_Sandbag_Bunker_Camouflaged_USSR_01.et" {
+ {
+  coords 12157.412 5.75 3509.383
+  angles 0 86.675 0
+ }
+ {
+  coords 12042.019 6.125 3554.887
+  angles 0 -62.998 0
+ }
+}
+$grp SCR_AIGroup : "{6449AAD99869C0D5}Prefabs/Groups/BLUFOR/Ses_CDF/Group_A2F_CDF_Squad.et" {
+ cdf1 {
+  coords 12054.127 6.119 3515.732
+  angles 0 -96.859 0
+  m_aUnitPrefabSlots {
+   "{58A382CD6C2EB5C8}Worlds/Vanya/ChernarusMinus/TVT_MER_KAMYSHOVO_chernarus/Vane4ka_MER_KAMYSHOVO_VIP.et"
+  }
+  m_sCustomNameSet "Мэр Камышово"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A30C9A9E8D83F4}" {
+    m_iSquadCallsign 2
+   }
+  }
+  coords 12053.515 6.116 3527.581
+  angles 0 -95.641 0
+  m_sCustomNameSet "Защитники порядка в Камышово"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A30C9A9E8D83F4}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 4707.849 9.25 2533.389
+  angles 0 30.478 0
+  m_aUnitPrefabSlots {
+   "{98918C4F8902542E}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_SL_Random.et"
+   "{DF081FFC7A479F9B}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_SR_Random.et"
+   "{107B2619EBE9881E}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_LAT_SD_Random.et"
+   "{107B2619EBE9881E}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_LAT_SD_Random.et"
+   "{107B2619EBE9881E}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_LAT_SD_Random.et"
+   "{2C802DE0AEBE184A}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_Sniper_Random.et"
+   "{DF081FFC7A479F9B}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_SR_Random.et"
+   "{DF081FFC7A479F9B}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_SR_Random.et"
+  }
+  m_sCustomNameSet "Десант ЧСО"
+ }
+ cdf2 {
+  components {
+   PS_GroupCallsignAssigner "{68A30C9A9E8D83F4}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 12062.615 6.125 3594.476
+  angles 0 167.006 0
+  m_aUnitPrefabSlots {
+   "{98918C4F8902542E}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_SL_Random.et"
+   "{DF081FFC7A479F9B}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_SR_Random.et"
+   "{7E8CF24A35AC6A2D}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_AT_Random.et"
+   "{B2AAD7B334EC1507}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_AAT_Random.et"
+   "{2AC4BD0DD870A673}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_AR_Random.et"
+   "{D01975FC83367BD9}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_GL_Random.et"
+  }
+  m_sCustomNameSet "Элитный отряд ЧСО"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A30C9A9E8D83F4}" {
+    m_iSquadCallsign 1
+   }
+  }
+  coords 12046.38 6.125 3517.961
+  angles 0 81.563 0
+  m_sCustomNameSet "Защитники порядка в Камышово"
+ }
+}
+SCR_AIGroup cdf6 : "{6BF534002C76924B}Prefabs/Groups/BLUFOR/Ses_CDF/Group_A2F_CDF_Heli.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A30C9A9E8D83F4}" {
+   m_iCompanyCallsign 4
+  }
+ }
+ coords 4720.497 9.25 2525.8
+ angles 0 31.586 0
+ m_sCustomNameSet "Обученные пилоты ЧСО"
+}
+$grp GenericEntity : "{87DDB867EAD6C494}PrefabsEditable/Auto/Compositions/Misc/SubCompositions/E_Sandbag_MG_USSR_01_PKM.et" {
+ {
+  coords 12085.719 6.125 3548.827
+  angles 0 -14.209 0
+  {
+   GenericEntity {
+    ID "570C9564D02F5C92"
+    coords 0.021 0 -0.53
+   }
+   GenericEntity {
+    ID "570CFD743B9A8A64"
+    coords -1.304 0 -0.653
+   }
+   GenericEntity {
+    ID "5C5AC612D4755239"
+    coords -0.122 0.367 0.28
+   }
+   GenericEntity {
+    ID "5C5AC612D47552FB"
+    coords 0.036 0.202 0.392
+   }
+   Turret {
+    ID "58FEB999CF41D2D6"
+    coords 0.004 0.656 -0.753
+   }
+  }
+ }
+ {
+  coords 12140.902 5.872 3552.063
+  angles 0 98.714 0
+ }
+}
+$grp GenericEntity : "{932D432E1D7D726D}PrefabsEditable/Auto/Compositions/Misc/SubCompositions/Fortifications/E_Sandbag_MG_USSR_01_PKM.et" {
+ {
+  coords 12042.309 5.75 3491.497
+  angles 0 -96.242 0
+  {
+   GenericEntity {
+    ID "570C9564D02F5C92"
+    coords 0.02 0 -0.529
+    angles 0 90.188 0
+   }
+   GenericEntity {
+    ID "570CFD743B9A8A19"
+    coords 1.362 0 -0.57
+    angles 0 -141.802 0
+   }
+   GenericEntity {
+    ID "570CFD743B9A8A64"
+    coords -1.304 0 -0.652
+    angles 0 128.198 0
+   }
+   GenericEntity {
+    ID "570CFD7463457874"
+    coords 1.427 0 -0.563
+    angles 0 -169.66 0
+   }
+   GenericEntity {
+    ID "570CFD7463457953"
+    coords 1.769 0 -0.933
+    angles 0 84.642 0
+   }
+   GenericEntity {
+    ID "570CFD746345798D"
+    coords -1.325 0 -0.431
+    angles 0 -2.082 0
+   }
+   GenericEntity {
+    ID "570CFD74634579FD"
+    coords -1.711 0 -0.84
+    angles 0 106.183 0
+   }
+   GenericEntity {
+    ID "5C5AC612D4755239"
+    coords -0.123 0.367 0.281
+    angles 0 -180 0
+   }
+   GenericEntity {
+    ID "5C5AC612D47552FB"
+    coords 0.038 0.202 0.393
+   }
+   StaticModelEntity {
+    ID "570CFD7476FFB12E"
+    coords -0.264 -0.045 0.045
+    angles 0 0.094 0
+   }
+   Turret {
+    ID "5CC6B4BEF18D0296"
+    coords 0.004 0.656 -0.753
+   }
+  }
+ }
+ {
+  coords 12059.696 5.823 3518.97
+  angles 0 -39.156 0
+ }
+}
+GenericEntity : "{93C99155F356A38A}PrefabsEditable/Auto/Compositions/Misc/FreeRoamBuilding/E_SandbagLongHighBurlap_S_USSR_01.et" {
+ coords 12062.421 5.776 3520.019
+ angles 0 -9.989 0
+ {
+  GenericEntity {
+   ID "5D6CFDF279517B23"
+   coords 1.299 0 -0.124
+   angles 0 -2.383 0
+  }
+ }
+}
+$grp GenericEntity : "{977FF11A13375BEB}PrefabsEditable/Auto/Compositions/Misc/FreeRoamBuilding/E_SandbagLongBurlap_S_USSR_01.et" {
+ {
+  coords 12056.485 8.732 3537.126
+  angles 8.45 62.556 1.018
+  {
+   GenericEntity {
+    ID "5D66ED107747B9FD"
+    coords 0.291 0 0.042
+    angles 0 3.877 0
+   }
+  }
+ }
+ {
+  coords 12059.334 9.227 3538.313
+  angles 10.91 64.15 -1.066
+ }
+}
+Vehicle UH1H_armed_AP1 : "{999FC99369291EA4}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed_AP.et" {
+ coords 4718.621 9.251 2552.739
+ angles 0 -158.506 0
+ m_sAttachmentGroupName "cdf6"
+}
+GenericEntity : "{9AA7840FE3C3F664}PrefabsEditable/Auto/Compositions/Misc/SubCompositions/E_Sandbag_Sign_USSR_01.et" {
+ coords 12029.037 5.75 3478.877
+ angles 0 -97.224 0
+ {
+  GenericEntity {
+   ID "571A8EA21462F3E8"
+   coords -0.875 0 -0.047
+  }
+  GenericEntity {
+   ID "571A8EA21462F3EA"
+   coords 1.088 0 0.032
+  }
+  GenericEntity {
+   ID "571A8EA21462F3EC"
+   coords 0 0.666 0
+  }
+  StaticModelEntity {
+   ID "571A8EA3A152A8B4"
+   coords 0.211 0 -0.05
+  }
+ }
+}
+$grp Vehicle : "{B3BE9258C89E8491}Prefabs/Vehicles/Wheeled/Ural4320/Ses_CDF/Ural4320_Ses_CDF_transport_covered.et" {
+ Ural4320_Ses_CDF_transport_covered2 {
+  coords 12060.463 6.125 3590.308
+  angles 0 77.995 0
+  m_sAttachmentGroupName "cdf2"
+ }
+ Ural4320_Ses_CDF_transport_covered3 {
+  components {
+   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+    FuelNodes {
+     SCR_FuelNode "{5628CA84B129D4CE}" {
+      m_fInitialFuelTankState 0
+     }
+    }
+   }
+   SCR_UniversalInventoryStorageComponent "{5916C58171230A92}" {
+    MultiSlots {
+     MultiSlotConfiguration "{5A60D38EDB3709A9}" {
+      SlotTemplate InventoryStorageSlot Bandages {
+       Prefab "{07BC23F8D9223863}Prefabs/Items/Misc/Sandbags/Part_Sandbag_Burlap.et"
+      }
+      NumSlots 300
+     }
+    }
+   }
+  }
+  coords 12065.964 6.125 3534.532
+  angles 0 67.172 0
+ }
+}
+$grp GenericEntity : "{C762BA61BAD5B536}PrefabsEditable/Auto/Compositions/Misc/SubCompositions/E_Sandbag_Corner_BarbedWire_USSR_01.et" {
+ {
+  coords 12082.882 6.125 3546.24
+ }
+ {
+  coords 12040.281 6.125 3538.033
+  angles 0 -16.115 0
+ }
+}
+$grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+ Ses_CDF_G_400_M {
+  coords 4720.497 9.25 2525.8
+  m_sImageSet "{1228936E5DB30403}UI/Textures/GroupManagement/FlagIcons/GroupFlagsBlufor.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 1 1 1 1
+  m_sQuadName "undefined"
+  m_fWorldSize 50
+  m_sDescription "(Обученные пилоты ЧСО) Eagle Red 1"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "RHS_ION"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+   "Drg_IGF"
+   "Drg_PIR"
+   "UK"
+   "USSR"
+   "US"
+   "FIA"
+   "Drg_VCA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+  }
+  m_iZOrder 10
+ }
+ Ses_CDF_G_300_M {
+  coords 4707.849 9.25 2533.389
+  m_sImageSet "{1228936E5DB30403}UI/Textures/GroupManagement/FlagIcons/GroupFlagsBlufor.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 1 1 1 1
+  m_sQuadName "undefined"
+  m_fWorldSize 50
+  m_sDescription "(Десант ЧСО) Disco Red 1"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "RHS_ION"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+   "Drg_IGF"
+   "Drg_PIR"
+   "UK"
+   "USSR"
+   "US"
+   "FIA"
+   "Drg_VCA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+  }
+  m_iZOrder 10
+ }
+ {
+  coords 4718.621 9.251 2552.739
+  angles 0 -68.506 0
+  m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 0.016 0.552 0.905 1
+  m_sQuadName "Helicopter"
+  m_fWorldSize 6.487
+  m_sDescription "#AR-Vehicle_UH1H_Armed_Name"
+  m_bUseWorldScale 1
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+   "Drg_IGF"
+   "Drg_PIR"
+   "UK"
+   "USSR"
+   "US"
+   "FIA"
+   "Drg_VCA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+   GAME
+  }
+  m_iZOrder 0
+ }
+}
+$grp GenericEntity : "{D61611B41BDB921B}PrefabsEditable/Auto/Compositions/Misc/SubCompositions/E_Sandbag_Barricade_USSR_04.et" {
+ {
+  coords 12157.68 5.75 3494.643
+  angles 0 -97.69 0
+ }
+ {
+  coords 12042.685 5.75 3497.063
+  angles 0 -96.556 0
+  {
+   GenericEntity {
+    ID "59D87A54778D00CA"
+    coords 1.02 0 0.531
+   }
+   GenericEntity {
+    ID "59D87A54778D00CB"
+    coords -1.846 0 0.497
+   }
+   GenericEntity {
+    ID "59D87A54778D1540"
+    coords 1.224 0.959 0.505
+   }
+   GenericEntity {
+    ID "59D87A54778D1545"
+    coords 1.987 0 0.679
+    angles 0 -30 0
+   }
+   GenericEntity {
+    ID "59D87A54778D154A"
+    coords -1.801 0.959 0.471
+   }
+   GenericEntity {
+    ID "59D87A54778D154E"
+    coords -0.141 0 0.551
+   }
+   GenericEntity {
+    ID "59D87A54778D157C"
+    coords -0.2 0.542 1.205
+    angles 0.047 89.391 94.39
+   }
+  }
+ }
+}
+$grp GenericEntity : "{EB22348C6EB71B2C}PrefabsEditable/Auto/Compositions/Misc/SubCompositions/E_Sandbag_Barricade_USSR_03.et" {
+ {
+  coords 12084.542 6.125 3567.806
+  angles 0 87.977 0
+ }
+ {
+  coords 12044.42 5.75 3481.022
+  angles 0 -70.3 0
+ }
+ {
+  coords 12042.146 6.125 3558.564
+  angles 0 40.255 0
+ }
+ {
+  coords 12156.989 5.75 3505.406
+  angles 0 119.478 0
+ }
+ {
+  coords 12156.906 5.75 3490.212
+  angles 0 174.088 0
+ }
+ {
+  coords 12139.044 6.032 3543.717
+  angles 0 -177.816 0
+ }
+ {
+  coords 12041.346 6.125 3551.938
+  angles 0 -81.331 0
+ }
+}
+GenericEntity : "{EE85508997C5E8F1}PrefabsEditable/Auto/Compositions/Misc/SubCompositions/E_Sandbag_short_Cluttered_USSR_01.et" {
+ coords 12066.417 5.75 3509.239
+ angles 0 -99.583 0
+}
+GenericEntity : "{F671303E925C437A}PrefabsEditable/Auto/Compositions/Misc/SubCompositions/Fortifications/E_Sandbag_MG_USSR_01_NSV_SPP.et" {
+ coords 12005.604 1.67 3143.734
+ angles 0 2.032 0
+}

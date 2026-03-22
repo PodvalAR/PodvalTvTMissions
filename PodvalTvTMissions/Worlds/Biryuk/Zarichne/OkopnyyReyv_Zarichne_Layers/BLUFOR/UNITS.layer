@@ -1,0 +1,90 @@
+$grp SCR_AIGroup : "{00317932FDF37911}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/MarpatWD/Group_RHS_USAF_Marpat_Squad_Motorized.et" {
+ US_SM_003 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iSquadCallsign 3
+   }
+  }
+  coords 4546.788 19.898 2038.938
+ }
+ US_SM_102 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 4549.509 19.906 2134.552
+ }
+}
+SCR_AIGroup US_SPN_300 : "{00BDD00EE2FD900E}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_SpeZNaZ.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+   m_iCompanyCallsign 3
+  }
+ }
+ coords 3350.958 22.879 2139.024
+ angles 0 86.563 0
+ m_sCustomNameSet "Отделение спецназа"
+}
+SCR_AIGroup US_HQ_000 : "{884817505DB7808F}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/MarpatWD/Group_RHS_USAF_Marpat_HQ.et" {
+ coords 4513.604 19.719 2077.02
+}
+SCR_AIGroup US_MG_004 : "{BE43F35924B7D407}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/MarpatWD/Group_RHS_USAF_Marpat_MG.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+   m_iSquadCallsign 4
+  }
+ }
+ coords 4516.802 19.343 2093.328
+}
+$grp SCR_AIGroup : "{F7883B3CE7CC7F99}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/MarpatWD/Group_RHS_USAF_Marpat_Squad.et" {
+ US_SQ_001 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iSquadCallsign 1
+   }
+  }
+  coords 4545.019 19.895 2004.611
+  angles 0 4.997 0
+ }
+ US_SQ_002 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iSquadCallsign 2
+   }
+  }
+  coords 4545.558 19.676 2020.241
+  angles 0 7.688 0
+ }
+ US_SQ_100 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 4549.003 19.738 2095.965
+  angles 0 12.634 0
+ }
+ US_SQ_101 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 4548.304 19.688 2112.398
+  angles 0 4.979 0
+ }
+ US_SQ_200 {
+  components {
+   SCR_EditableGroupComponent "{50D291F6C83FA532}" {
+    m_UIInfo SCR_EditableGroupUIInfo "{5298E609432D192D}" {
+     Name "#PDVL_Squad_Rifle ( Передовое )"
+    }
+   }
+  }
+  coords 3600.136 18.813 1714.021
+  angles 0 70.06 0
+ }
+}

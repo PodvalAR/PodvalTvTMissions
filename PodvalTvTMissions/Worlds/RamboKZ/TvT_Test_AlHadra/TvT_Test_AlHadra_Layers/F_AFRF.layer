@@ -1,0 +1,274 @@
+$grp Vehicle : "{1FBB492E86002BF5}Prefabs/Vehicles/Wheeled/UAZ452/UAZ452_transport.et" {
+ AFRF_200_V {
+  coords 4178.416 17.844 2782.881
+  angles 0 -119.936 0
+  m_sAttachmentGroupName "AFRF_200"
+ }
+ AFRF_201_V {
+  coords 2116.175 17.847 5320.582
+  angles 0 48.684 0
+  m_sAttachmentGroupName "AFRF_201"
+ }
+}
+SCR_AIGroup AFRF_000 : "{496070641528229D}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_PL.et" {
+ coords 3578.614 18.375 1408.62
+ angles 0 -77.279 0
+ m_aUnitPrefabSlots {
+  "{552177162DF26397}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_PL.et"
+  "{A65FD76193BDAC03}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_Medic.et"
+  "{EA09A14A3C0DE997}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_Sharpshooter_SVDM.et"
+ }
+}
+Vehicle AFRF_100_V : "{5C38170BFBE9F966}Prefabs/Vehicles/Wheeled/TIGR/KORD/GAZ_TIGR_v2_KORD_SSP_ARMOR_CAMO.et" {
+ coords 1559.721 18.281 6872.067
+ angles -0.106 175.964 1.776
+ m_sAttachmentGroupName "AFRF_000"
+}
+Vehicle Ural4320_transport_covered_tan1 : "{78E46A3CAC36BB1E}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_covered_tan.et" {
+ coords 1586.217 18.529 6326.966
+}
+$grp SCR_AIGroup : "{B851352F042E4F0B}Prefabs/Groups/OPFOR/RHS_AFRF/Recon/Group_RHS_AFRF_Recon_Squad.et" {
+ AFRF_200 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 4178.741 17.844 2787.404
+  angles 0 150.957 0
+  ListenToEvents {
+   ""
+  }
+  DangerEventRange 1000
+  m_aUnitPrefabSlots {
+   "{4C46B416166D1A0E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_SL_Opt.et"
+   "{F66140DF5A7A0D21}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_SR_Opt.et"
+   "{27278CD98CA86707}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_MG_Opt.et"
+   "{3841D72C18594176}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_GL.et"
+   "{B80041ECF565397A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_Sapper.et"
+   "{7BAD8DF7468D7216}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_LAT.et"
+   "{9B7078FF37FEA321}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_Sharpshooter.et"
+  }
+  m_aStaticWaypoints {
+   ""
+  }
+  m_aStaticVehicles {
+   ""
+  }
+  m_iMaxMembers 1
+  m_sCustomNameSet "Отряд спецназа"
+ }
+ AFRF_201 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 2116.14 17.843 5325.278
+  angles 0 138.799 0
+  ListenToEvents {
+   ""
+  }
+  DangerEventRange 1000
+  m_aUnitPrefabSlots {
+   "{4C46B416166D1A0E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_SL_Opt.et"
+   "{F66140DF5A7A0D21}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_SR_Opt.et"
+   "{27278CD98CA86707}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_MG_Opt.et"
+   "{3841D72C18594176}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_GL.et"
+   "{B80041ECF565397A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_Sapper.et"
+   "{7BAD8DF7468D7216}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_LAT.et"
+   "{9B7078FF37FEA321}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_Sharpshooter.et"
+  }
+  m_aStaticWaypoints {
+   ""
+  }
+  m_aStaticVehicles {
+   ""
+  }
+  m_iMaxMembers 1
+  m_sCustomNameSet "Отряд спецназа"
+ }
+}
+$grp Vehicle : "{C012BB3488BEA0C2}Prefabs/Vehicles/Wheeled/BTR70/BTR70.et" {
+ AFRF_012_V {
+  coords 3559.653 18.378 1343.921
+  angles 0.175 11.236 -0.879
+  m_sAttachmentGroupName "AFRF_103"
+ }
+ AFRF_112_V {
+  coords 1556.484 18.281 6934.009
+  angles 0.074 175.22 0.894
+  m_sAttachmentGroupName "AFRF_112"
+ }
+}
+$grp Vehicle : "{D9B91FAB817A6033}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_covered.et" {
+ AFRF_011_V {
+  coords 3563.555 18.376 1367.572
+  angles 0 11.199 0
+  m_sAttachmentGroupName "AFRF_102"
+ }
+ AFRF_010_V {
+  coords 3568.947 18.375 1391
+  angles 0 11.912 0
+  m_sAttachmentGroupName "AFRF_010"
+ }
+ AFRF_110_V {
+  coords 1559.096 18.281 6886.767
+  angles -0.171 178.059 1.77
+  m_sAttachmentGroupName "AFRF_110"
+ }
+ AFRF_111_V {
+  coords 1558.271 18.281 6908.906
+  angles -0.178 178.292 1.769
+  m_sAttachmentGroupName "AFRF_111"
+ }
+}
+$grp SCR_AIGroup : "{EB131DDF464F90FD}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Squad.et" {
+ AFRF_010 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 3573.693 18.375 1386.119
+  angles 0 -78.221 0
+  m_aUnitPrefabSlots {
+   "{E745C9C74AC2205F}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_SL_Opt.et"
+   "{5D623D0E06D53770}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_SR_opt.et"
+   "{791F56517B18EE48}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_AT.et"
+   "{D42BB8F51B68538D}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_AAT.et"
+   "{09D586FF655F697C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_AR_opt.et"
+   "{AC6241B1F526993E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_GL.et"
+   "{C33B709D769207BC}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_Rifle.et"
+   "{A65FD76193BDAC03}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_Medic.et"
+   "{EA09A14A3C0DE997}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_Sharpshooter_SVDM.et"
+  }
+ }
+ AFRF_011 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 3569.223 18.375 1362.749
+  angles 0 -77.426 0
+  m_aUnitPrefabSlots {
+   "{E745C9C74AC2205F}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_SL_Opt.et"
+   "{5D623D0E06D53770}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_SR_opt.et"
+   "{791F56517B18EE48}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_AT.et"
+   "{D42BB8F51B68538D}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_AAT.et"
+   "{09D586FF655F697C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_AR_opt.et"
+   "{AC6241B1F526993E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_GL.et"
+   "{C33B709D769207BC}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_Rifle.et"
+   "{A65FD76193BDAC03}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_Medic.et"
+   "{EA09A14A3C0DE997}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_Sharpshooter_SVDM.et"
+  }
+ }
+ AFRF_012 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 3564.706 18.375 1338.534
+  angles 0 -78.201 0
+  m_aUnitPrefabSlots {
+   "{E745C9C74AC2205F}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_SL_Opt.et"
+   "{5D623D0E06D53770}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_SR_opt.et"
+   "{791F56517B18EE48}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_AT.et"
+   "{D42BB8F51B68538D}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_AAT.et"
+   "{8C24F108D0075D56}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_MG_opt.et"
+   "{5E940F2E0CAE5932}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_AMG.et"
+   "{AC6241B1F526993E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_GL.et"
+   "{A65FD76193BDAC03}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_Medic.et"
+   "{EA09A14A3C0DE997}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_Sharpshooter_SVDM.et"
+  }
+ }
+ AFRF_100 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 1554.192 18.282 6872.257
+  angles 1.77 88.317 0.178
+  m_aUnitPrefabSlots {
+   "{E745C9C74AC2205F}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_SL_Opt.et"
+   "{A65FD76193BDAC03}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_Medic.et"
+   "{EA09A14A3C0DE997}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_Sharpshooter_SVDM.et"
+  }
+ }
+ AFRF_110 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 1553.417 18.281 6891.057
+  angles 1.771 87.682 0.159
+  m_aUnitPrefabSlots {
+   "{E745C9C74AC2205F}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_SL_Opt.et"
+   "{5D623D0E06D53770}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_SR_opt.et"
+   "{791F56517B18EE48}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_AT.et"
+   "{D42BB8F51B68538D}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_AAT.et"
+   "{09D586FF655F697C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_AR_opt.et"
+   "{AC6241B1F526993E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_GL.et"
+   "{C33B709D769207BC}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_Rifle.et"
+   "{A65FD76193BDAC03}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_Medic.et"
+   "{EA09A14A3C0DE997}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_Sharpshooter_SVDM.et"
+  }
+ }
+ AFRF_111 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 1552.436 18.281 6912.819
+  angles 1.77 87.763 0.161
+  m_aUnitPrefabSlots {
+   "{E745C9C74AC2205F}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_SL_Opt.et"
+   "{5D623D0E06D53770}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_SR_opt.et"
+   "{791F56517B18EE48}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_AT.et"
+   "{D42BB8F51B68538D}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_AAT.et"
+   "{09D586FF655F697C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_AR_opt.et"
+   "{AC6241B1F526993E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_GL.et"
+   "{C33B709D769207BC}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_Rifle.et"
+   "{A65FD76193BDAC03}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_Medic.et"
+   "{EA09A14A3C0DE997}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_Sharpshooter_SVDM.et"
+  }
+ }
+ AFRF_112 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 1550.615 18.281 6937.385
+  angles 1.773 86.989 0.137
+  m_aUnitPrefabSlots {
+   "{E745C9C74AC2205F}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_SL_Opt.et"
+   "{5D623D0E06D53770}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_SR_opt.et"
+   "{791F56517B18EE48}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_AT.et"
+   "{D42BB8F51B68538D}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_AAT.et"
+   "{8C24F108D0075D56}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_MG_opt.et"
+   "{5E940F2E0CAE5932}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_AMG.et"
+   "{AC6241B1F526993E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_GL.et"
+   "{A65FD76193BDAC03}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_Medic.et"
+   "{EA09A14A3C0DE997}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_Sharpshooter_SVDM.et"
+  }
+ }
+}
+Vehicle AFRF_000_V : "{EB1805C9B001DE8D}Prefabs/Vehicles/Wheeled/TIGR/KORD/GAZ_TIGR_v2_KORD_SPP_Tan.et" {
+ coords 3572.889 18.376 1411.132
+ angles 0 13.403 0
+ m_sAttachmentGroupName "AFRF_000"
+}
