@@ -35,6 +35,7 @@ $grp Vehicle : "{855C78199FBCC53A}Prefabs/Vehicles/Wheeled/M998/M1025_armed_M2HB
 SCR_AIGroup ion : "{963AB6930837A26F}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_HQ.et" {
  coords 12006.574 152.594 12666.709
  angles 0 19.289 0
+ m_sCustomNameSet "Командир наемников"
 }
 Vehicle M1025_ION1 : "{CD1B5570AF3D50B6}Prefabs/Vehicles/Wheeled/M998/M1025_ION.et" {
  coords 12005.528 152.594 12672.047
@@ -50,6 +51,7 @@ $grp SCR_AIGroup : "{CD4A8C98E6B2357B}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_STK_
   }
   coords 12021.452 152.594 12662.134
   angles 0 19.092 0
+  m_sCustomNameSet "Наемники"
  }
  ion2 {
   components {
@@ -60,6 +62,7 @@ $grp SCR_AIGroup : "{CD4A8C98E6B2357B}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_STK_
   }
   coords 12041.764 152.594 12656.063
   angles 0 18.718 0
+  m_sCustomNameSet "Наемники"
  }
  ion3 {
   components {
@@ -69,7 +72,8 @@ $grp SCR_AIGroup : "{CD4A8C98E6B2357B}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_STK_
    }
   }
   coords 12063.885 152.594 12648.768
-  angles 0 18.718 0
+  angles 0 17.272 0
+  m_sCustomNameSet "Наемники"
  }
 }
 Vehicle UH1H_armed_gunship_HE_UK1 : "{CD887C4D54D7F827}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed_gunship_HE_UK.et" {
@@ -85,4 +89,5 @@ SCR_AIGroup IONpilot : "{E1F03F7213D8B57D}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_
  }
  coords 12116.521 152.594 12650.453
  angles 0 20.111 0
+ m_sCustomNameSet "Экипаж UH1H"
 }
