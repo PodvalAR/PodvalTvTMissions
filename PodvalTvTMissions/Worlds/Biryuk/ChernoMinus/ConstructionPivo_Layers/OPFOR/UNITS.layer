@@ -1,0 +1,89 @@
+$grp SCR_AIGroup : "{45C4A9C03900631E}Prefabs/Groups/OPFOR/Ses_ChDKZ/Group_ChDKZ_Motorized.et" {
+ SQm_103 {
+  components {
+   PS_GroupCallsignAssigner "{68A3601C92B4A58B}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 3
+   }
+  }
+  coords 9654.218 219.005 6454.02
+  angles 0 -125.197 0
+ }
+ SQm_004 {
+  components {
+   PS_GroupCallsignAssigner "{68A3601C92B4A58B}" {
+    m_iSquadCallsign 4
+   }
+  }
+  coords 9321.188 315.231 8853.895
+  angles 0 11.141 0
+ }
+}
+$grp SCR_AIGroup : "{68FC03D21BDA0859}Prefabs/Groups/OPFOR/Ses_ChDKZ/Group_ChDKZ_RifleSquad.et" {
+ RFSQ_001 {
+  coords 9420.785 295.356 8815.54
+  angles 0 6.397 0
+ }
+ RFSQ_002 {
+  components {
+   PS_GroupCallsignAssigner "{68A3601C92B4A58B}" {
+    m_iSquadCallsign 2
+   }
+  }
+  coords 9376.729 302.703 8828.525
+  angles 0 22.171 0
+ }
+ RFSQ_003 {
+  components {
+   PS_GroupCallsignAssigner "{68A3601C92B4A58B}" {
+    m_iSquadCallsign 3
+   }
+  }
+  coords 9349.708 308.717 8841.736
+  angles 0 26.083 0
+ }
+ RFSQ_102 {
+  components {
+   PS_GroupCallsignAssigner "{68A3601C92B4A58B}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 9625.919 213.328 6490.688
+  angles 0 -136.577 0
+ }
+ RFSQ_101 {
+  components {
+   PS_GroupCallsignAssigner "{68A3601C92B4A58B}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 9626.594 204.878 6531.457
+  angles 0 -19.173 0
+ }
+ RFSQ_100 {
+  components {
+   PS_GroupCallsignAssigner "{68A3601C92B4A58B}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 0
+   }
+  }
+  coords 9641.944 201.442 6575.034
+  angles 0 -165.396 0
+  m_aUnitPrefabSlots {
+   "{A7C99EAA24EC8048}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_SL_Random.et"
+   "{E0500D19D7A94BFD}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_SR_Random.et"
+   "{4EE9F8C57C51387B}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_MG_Random.et"
+   "{448EDFF48D360135}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_LAT_Random.et"
+   "{E7117041B898A159}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_Sharpshooter_Random.et"
+  }
+ }
+}
+SCR_AIGroup HQ_000 : "{BF97ECB4D954314C}Prefabs/Groups/OPFOR/Ses_ChDKZ/Group_ChDKZ_HQ_PL.et" {
+ coords 9459.088 292.216 8813.615
+ m_aUnitPrefabSlots {
+  "{5813C3FEA418100E}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_PL_Random.et"
+  "{E0500D19D7A94BFD}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_SR_Random.et"
+  "{E7117041B898A159}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_Sharpshooter_Random.et"
+ }
+}

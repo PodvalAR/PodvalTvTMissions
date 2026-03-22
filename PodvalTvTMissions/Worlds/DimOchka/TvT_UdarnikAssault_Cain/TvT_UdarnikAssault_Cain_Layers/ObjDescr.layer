@@ -1,0 +1,102 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ {
+  coords 5407.876 422.625 5212.957
+  m_sTitle "Правила и задачи"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "ПРАВИЛА:"\
+  "1. Николаю Змеёву и Николасу Снейкусу запрещено покидать здание, в котором они появились;"\
+  "2. Николасу Снейкусу (тот что в маске) запрещено снимать маску;"\
+  "3. Вертолетам запрещено использовать тактику \"КАМИКАДЗЕ\"."\
+  ""\
+  "ЗАДАЧИ:"\
+  "• Британии: "\
+  " 1. Захватить базу."\
+  ""\
+  "• СССР:"\
+  " 1. Удержать базу."\
+  ""\
+  "ДОПОЛНИТЕЛЬНО:"\
+  " 1. СССР имеют ПТУРы и Корд;"\
+  " 2. У СССР имеются грузовики с мешками с песком. Грузовики без топлива;"\
+  " 3. У Британии 3 миномета."
+  m_aVisibleForFactions {
+   "US"
+   "USSR"
+   "CIV"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+ }
+ {
+  coords 5407.876 422.625 5212.957
+  m_sTitle "Обстановка"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "Николай Змеёв - сотрудник специального отряда КГБ. После успешной операции на территории дружественного СССР государства - Кубы - он решил уйти со службы из-за разногласий с начальством. Обладая высоким авторитетом среди товарищей и поддержкой кубинского руководства, Змеёв вместе с ними основал частную военную организацию на территории Кубы."\
+  ""\
+  "Дела шли успешно, однако в СССР опасались, что Куба откажется от присутствия советских вооружённых сил и начнёт полагаться на структуру Змеёва. В связи с этим было принято решение провести диверсию на базе организации. Пока Змеёв со своей группой находился на очередной миссии, специальное подразделение КГБ и ГРУ уничтожило его базу."\
+  ""\
+  "Поняв, что за его голову назначена крупная награда, Змеёв решает бежать к американцам на остров Колгуев, который не так давно они выкупили у СССР. В его планах сделать пластическую операцию и «обменяться лицами» с агентом ЦРУ взамен на ценную информацию. Однако войска СССР не обнаружив тела Змеёва на разрушенной базе и сумев вычислить его текущее местоположение теперь готовят операцию по его ликвидации."
+  m_aVisibleForFactions {
+   "US"
+   "USSR"
+   "CIV"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+ }
+}
+GenericEntity flag : "{3D78D7D606FF9818}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_NoCapture.et" {
+ coords 4338.198 98.626 3133.622
+}
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{68E2974DB636E690}" {
+     m_Timer GUB_ZoneControlTimer "{68E2974DB08FC261}" {
+      timeToComplete 150
+     }
+     m_ZoneController GUB_ZoneController "{68E2974DB3DADD04}" {
+      m_sZoneEntityName "capture"
+     }
+     m_FlagController GUB_FlagController "{68E2974DBC9BAF7F}" {
+      m_aFlagNames {
+       "flag"
+      }
+      m_fStartFactionKey "USSR"
+      m_fEndFactionKey "UK"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{68E2974DBB881562}" {
+       m_sFirstFactionKey "UK"
+       m_sSecondFactionKey "USSR"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 4454.262 344.808 5211.172
+}
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ {
+  coords 5418.199 418.579 5588.529
+  m_sTitle "База захвачена"
+  m_sFactionKey "UK"
+ }
+ {
+  coords 5451.62 418.579 5644.321
+  m_sTitle "База удержана"
+  m_sFactionKey "USSR"
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 6527.042 473.872 6508.644
+}

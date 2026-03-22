@@ -1,0 +1,159 @@
+Vehicle UAZ469_Camo_uncovered1 : "{03D9932135924AEF}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_Camo_uncovered.et" {
+ coords 6227.542 289.172 7656.555
+ angles -1.266 134.707 0.007
+ m_sAttachmentGroupName "ru2"
+}
+$grp SCR_AIGroup : "{1128EBD3DDFF1D07}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Motorized.et" {
+ ru3 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iSquadCallsign 1
+   }
+  }
+  coords 6213.049 289.389 7662.789
+  angles 0 40.176 0
+ }
+ ru4 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iSquadCallsign 2
+   }
+  }
+  coords 6201.165 289.802 7671.97
+  angles 0 39.814 0
+ }
+}
+$grp Vehicle : "{16C1F16C9B053801}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport.et" {
+ Ural4320_transport2 {
+  coords 6178.604 290.686 7695.126
+  angles -1.979 125.116 -0.297
+  m_sAttachmentGroupName "ruv3"
+ }
+ Ural4320_transport1 {
+  coords 6191.184 290.311 7686.294
+  angles -1.97 126.604 -0.349
+  m_sAttachmentGroupName "ru5"
+ }
+ Ural4320_transport3 {
+  coords 6167 291.032 7703.554
+  angles -1.452 125.833 -1.048
+  m_sAttachmentGroupName "ru7"
+ }
+ Ural4320_transport4 {
+  coords 6153.775 291.346 7711.9
+  angles -1.236 122.469 0.274
+  m_sAttachmentGroupName "ru8"
+ }
+}
+Vehicle Mi8MT_armed_Podval1 : "{31E004EC353C42B2}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_armed_Podval.et" {
+ coords 12048.706 152.279 12673.838
+ angles 0 107.599 0
+ m_sAttachmentGroupName "ru1"
+}
+$grp Vehicle : "{447CFE8D73F95C3E}Prefabs/Vehicles/Wheeled/BTR70/BTR70_AFRF.et" {
+ BTR70_AFRF1 {
+  coords 6218.754 289.438 7664.825
+  angles -1.262 130.685 0.095
+  m_sAttachmentGroupName "ru3"
+ }
+ BTR70_AFRF2 {
+  coords 6208.234 289.763 7673.097
+  angles -1.262 130.685 0.095
+  m_sAttachmentGroupName "ru4"
+ }
+}
+SCR_AIGroup ru2 : "{496070641528229D}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_PL.et" {
+ coords 6224.161 289.335 7652.896
+ angles 0 43.397 0
+ m_aUnitPrefabSlots {
+  "{7551E181CE4C6845}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Officer.et"
+ }
+ m_sCustomNameSet "Будующий герой Камышово"
+}
+$grp SCR_AIGroup : "{B851352F042E4F0B}Prefabs/Groups/OPFOR/RHS_AFRF/Recon/Group_RHS_AFRF_Recon_Squad.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 12035.849 153.209 12653.722
+  angles 0 16.629 0
+  m_sCustomNameSet "Десантное отделение"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 12042.542 152.609 12651.573
+  angles 0 16.629 0
+  m_sCustomNameSet "Десантное отделение"
+ }
+}
+SCR_AIGroup ru1 : "{D43A9753198C5D8F}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Heli.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+   m_iCompanyCallsign 3
+  }
+ }
+ coords 12035.061 152.594 12659.544
+ angles 0 116.692 0
+}
+$grp SCR_AIGroup : "{EB131DDF464F90FD}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Squad.et" {
+ ru5 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 6184.66 290.41 7684.856
+  angles 0 35.691 0
+  m_sCustomNameSet "Отряд штурмовиков"
+ }
+ ruv3 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 6172.136 290.557 7693.012
+  angles 0 35.363 0
+  m_sCustomNameSet "Отряд штурмовиков"
+ }
+ ru8 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 3
+   }
+  }
+  coords 6149.376 291.387 7708.719
+  angles 0 35.363 0
+  m_aUnitPrefabSlots {
+   "{998515E06ED7A4C9}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_SL.et"
+   "{E49DF9180B449850}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_SR.et"
+   "{2CA58D3E25DA1886}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_AT.et"
+   "{D90B2AEF04BBE301}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_AAT.et"
+   "{F40DE4FF5C5306DA}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_AR.et"
+   "{F9D89ADEABE46FF0}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_GL.et"
+   "{78410A549262E06D}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Rifle.et"
+   "{E4C1E22F77E5DBEF}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Sharpshooter.et"
+  }
+  m_sCustomNameSet "Отряд штурмовиков"
+ }
+ ru7 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 6161.222 291.089 7700.92
+  angles 0 35.363 0
+  m_sCustomNameSet "Отряд штурмовиков"
+ }
+}

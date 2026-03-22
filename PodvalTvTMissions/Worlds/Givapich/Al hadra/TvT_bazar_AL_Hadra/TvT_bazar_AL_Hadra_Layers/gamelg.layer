@@ -1,0 +1,32 @@
+GenericEntity : "{7A333AFB11EA847A}Prefabs/System/DRG_VehicleDestroyPrefab.et" {
+ components {
+  DRG_VehicleDestroyComponent "{65733BD6110AE8FC}" {
+   m_aVehicleLossLogics {
+    VehicleLossLogic "{68E2F15A926C73EE}" {
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "US_WIN"
+      "US_WIN1"
+     }
+     m_sFailedObjectiveNames {
+      "TKA_WIN"
+      "TKA_WIN1"
+     }
+     m_sVehicleEntityNames {
+      "TRUCK_1"
+      "TRUCK_2"
+     }
+     m_sMessage "Грузовики уничтожены!"
+    }
+   }
+  }
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 4421.796 17.843 4649.611
+}

@@ -1,0 +1,52 @@
+GenericEntity Cpature_Logic : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{68D908DE45D43EAE}" {
+     m_sZonePreviewName "Стройка"
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "AFRF_2"
+     }
+     m_sFailedObjectiveNames {
+      "ION_2"
+     }
+     m_Timer GUB_ZoneControlTimer "{68D908DEBA582EEA}" {
+      timeToComplete 180
+     }
+     m_ZoneController GUB_ZoneController "{68D908DEBC20A804}" {
+      m_sZoneEntityName "Capture"
+     }
+     m_FlagController GUB_FlagController "{68D908DEA32AEDC4}" {
+      m_aFlagNames {
+       "FLAG_1"
+       "FLAG_2"
+      }
+      m_fStartFactionKey "RHS_ION"
+      m_fEndFactionKey "RHS_AFRF"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{68D908DE94C94EAB}" {
+       m_sFirstFactionKey "RHS_AFRF"
+       m_sSecondFactionKey "RHS_ION"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 29.83 21.868 5291.163
+}
+GenericEntity Time_End : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+   m_aTimeLeftWarningTimers {
+    300
+   }
+  }
+ }
+ coords 2328.628 233.775 1651.503
+}

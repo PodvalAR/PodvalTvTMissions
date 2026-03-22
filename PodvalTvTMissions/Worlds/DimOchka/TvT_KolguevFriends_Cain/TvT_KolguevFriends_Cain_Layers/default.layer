@@ -1,0 +1,30 @@
+SCR_AIWorld : "{672531FAC0834C06}Prefabs/AI/SCR_AIWorld_Cain.et" {
+ coords 6440.598 43.305 4087.548
+}
+PerceptionManager PerceptionManager2 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 6441.56 43.339 4089.815
+ angles 0 41.777 0
+}
+PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
+ components {
+  PS_CutsceneManager "{60E6C661B81E7619}" {
+   m_aCutscenes {
+    PS_Cutscene "{684371472B78C46C}" {
+     m_sCutsceneEntityName "Sex"
+     m_iCutsceneTime 30000
+    }
+   }
+  }
+  SCR_TimeAndWeatherHandlerComponent "{5EE3229927D4D2F5}" {
+   m_bUsePredefineStartingTimeAndWeather 1
+   m_aStartingWeatherAndTime {
+    SCR_TimeAndWeatherState "{68EA785C2C00CDD4}" {
+     m_sWeatherPresetName "Cloudy"
+     m_iStartingHour 9
+    }
+   }
+  }
+ }
+ coords 6442.018 43.311 4092.601
+ m_iFreezeTime 360000
+}

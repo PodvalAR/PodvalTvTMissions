@@ -1,0 +1,152 @@
+PolylineShapeEntity capture {
+ components {
+  PS_PolyZone "{68DB53476AD1C372}" {
+   m_mPolygonTexture "{62F4404928D33DB5}UI/layouts/Textures/Grid1b.edds"
+   m_cPolygonColor 0 0.502 0.125 1
+   m_fPolygonUVScale 0.44
+   m_mPolygonTextureBorder ""
+   m_cPolygonBorderColor 0.502 0 0 1
+   m_fPolygonBorderWidth 5
+   m_aVisibleForFactions {
+    "RHS_ION"
+    "USSR"
+    "CIV"
+    ""
+   }
+  }
+ }
+ coords 7619.421 26.656 5149.664
+ Points {
+  ShapePoint "{68DB53474FBDBD90}" {
+   Position 0 0 0
+  }
+  ShapePoint "{68DB53474FBDE16A}" {
+   Position 88.492 -4.892 -21.701
+  }
+  ShapePoint "{68DB53475F6C910E}" {
+   Position 97.982 -5.135 -65.763
+  }
+  ShapePoint "{68DB53475BD06D0B}" {
+   Position 95.789 -10.22 -177.889
+  }
+  ShapePoint "{68DB534767D0959F}" {
+   Position 34.745 -5.013 -439.943
+  }
+  ShapePoint "{68DB5347661229C7}" {
+   Position -131.61 -3.591 -416.061
+  }
+  ShapePoint "{68DB534763AD4654}" {
+   Position -96.604 -1.922 -153.415
+  }
+  ShapePoint "{68DB53476DF45226}" {
+   Position -10.736 0.414 2.296
+  }
+ }
+ IsClosed 1
+}
+$grp GenericEntity : "{3D78D7D606FF9818}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_NoCapture.et" {
+ flag3 {
+  coords 7514.146 27.991 4878.983
+  angles 0 7.421 0
+ }
+ flag4 {
+  coords 7558.879 28.078 4780.748
+  angles 0 7.421 0
+ }
+ flag7 {
+  coords 7690.81 35.636 5117.446
+  angles 0 7.421 0
+ }
+ flag6 {
+  coords 7702.887 33.873 5032.417
+  angles 0 7.421 0
+ }
+ flag5 {
+  coords 7657.393 21.697 4870.353
+  angles 0 7.421 0
+ }
+ flag2 {
+  coords 7580.102 32.975 5066.403
+  angles 0 13.868 0
+ }
+ flag1 {
+  coords 7639.773 35.635 5130.054
+  angles 0 13.868 0
+ }
+}
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{68DB53478F9C89B3}" {
+     m_Timer GUB_ZoneControlTimer "{68DB53478EE9CC69}" {
+      timeToComplete 150
+     }
+     m_ZoneController GUB_ZoneController "{68DB5347892F2B0B}" {
+      m_sZoneEntityName "capture"
+     }
+     m_FlagController GUB_FlagController "{68DB53478B2867DC}" {
+      m_aFlagNames {
+       "flag1"
+       "flag2"
+       "flag3"
+       "flag4"
+       "flag5"
+       "flag6"
+       "flag7"
+      }
+      m_fStartFactionKey "USSR"
+      m_fEndFactionKey "RHS_ION"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{68DB5347A2A80C19}" {
+       m_sFirstFactionKey "RHS_ION"
+       m_sSecondFactionKey "USSR"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 10125.858 0 4740.55
+}
+GenericEntity : "{98A61E5FF5898619}Prefabs/Structures/Military/Houses/GarageMilitary_E_01/GarageMilitary_E_01_furniture_01.et" {
+ coords 7519.982 20.67 4857.7
+ angles 0 97.666 0
+}
+$grp SCR_DestructibleEntity : "{9AE2BF8692551FE0}Prefabs/Structures/Walls/BarbedWire/NetFence_USSR_01/NetFence_USSR_01_3m.et" {
+ {
+  coords 7655.528 0 4827.417
+  angles 0 105 0
+ }
+ {
+  coords 7654.989 0 4824.432
+  angles 0 15 0
+ }
+ {
+  coords 7657.931 0 4823.644
+  angles 0 15 0
+ }
+ {
+  coords 7660.779 0 4822.881
+  angles 0 15 0
+ }
+ {
+  coords 7663.821 -0.028 4822.209
+  angles 0 -75 0
+ }
+ {
+  coords 7664.583 -0.009 4825.059
+  angles 0 -75 0
+ }
+ {
+  coords 7665.377 0 4828.025
+  angles 0 -75 0
+ }
+}
+SCR_DestructibleEntity : "{E06B2F4B00343A36}Prefabs/Structures/Walls/BarbedWire/NetFence_USSR_01/NetFence_USSR_01_base.et" {
+ coords 7665.915 0 4830.772
+ angles 0 -86.518 0
+}

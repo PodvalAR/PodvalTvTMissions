@@ -1,0 +1,81 @@
+GenericEntity : "{21D83950DF36F250}Prefabs/Props/Military/Sandbags/Sandbag_01_long_burlap.et" {
+ coords 1835.762 390.558 7985.938
+ angles 0 -51.837 0
+}
+$grp SCR_IndestructibleEnvironmentalEntity : "{3EA83F7ADE809234}Prefabs/Rocks/Desert/Desert_Boulder_01.et" {
+ {
+  coords 1837.059 2.716 7987.96
+  angles 0 145.079 0
+ }
+ {
+  coords 1836.041 3.178 7986.437
+  angles 0 145.079 0
+ }
+ {
+  coords 1833.795 5.776 7983.585
+  angles -23.975 -86.602 -89.212
+ }
+}
+StaticModelEntity : "{732A335C72D8ADE2}Prefabs/Props/Military/Sandbags/Sandbag_01_bunker_burlap_foundation.et" {
+ coords 1837.838 390.618 7991.004
+ angles 0 127.479 0
+ {
+  GenericEntity {
+   ID "5A532DCF487275B2"
+   coords 0 -0.047 0
+  }
+  GenericEntity {
+   ID "5A532DCF78E7126A"
+   coords 8.101 -0.002 -0.093
+  }
+  $grp GenericEntity : "{21D83950DF36F250}Prefabs/Props/Military/Sandbags/Sandbag_01_long_burlap.et" {
+   {
+    coords 2.066 -0.039 1.733
+    angles 0 -2.306 0
+   }
+   {
+    coords 5.357 -0.03 1.733
+    angles 0 2.251 0
+   }
+  }
+  Tree : "{23C0BE9D80929DBD}Prefabs/Vegetation/Bush/b_salix_cinerea_1w.et" {
+   coords 200.923 -21.291 587.323
+   angles 0 17.6 0
+  }
+  $grp GenericEntity : "{27B3CECB6489D952}Prefabs/Props/Military/Sandbags/Sandbag_01_foundation_burlap.et" {
+   {
+    coords 8.094 -0.044 -0.07
+   }
+   {
+    coords 3.934 -0.047 -0.036
+   }
+   {
+    coords 4.726 -0.047 -3.51
+   }
+   {
+    coords 0.329 -0.047 -3.633
+   }
+   {
+    coords 8.11 -0.047 -3.216
+   }
+  }
+ }
+}
+SCR_IndestructibleEnvironmentalEntity : "{9B3485F7C995A370}Prefabs/Rocks/Desert/DesertCliff_NS_01.et" {
+ coords 1835.964 387.688 7986.41
+ angles -76.843 159.73 147.09
+}
+$grp SCR_DestructibleBuildingEntity : "{A24E20F839D2EB6F}Prefabs/Structures/Stairs/MEStairs.et" {
+ {
+  coords 1817.699 -5.914 7984.096
+  angles 0 86.418 0
+ }
+ {
+  coords 1816.844 -8.937 7997.583
+  angles 0 86.418 0
+ }
+}
+SCR_DestructibleBuildingEntity : "{BC75DD14FA38D773}Prefabs/Structures/Bulding/Military/Toilet.et" {
+ coords 1828.235 5.812 7986.214
+ angles 0 -142.229 0
+}

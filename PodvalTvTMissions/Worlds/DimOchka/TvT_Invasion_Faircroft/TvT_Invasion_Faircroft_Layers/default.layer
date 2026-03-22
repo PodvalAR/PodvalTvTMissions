@@ -1,0 +1,66 @@
+SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
+ coords 4659.633 66.639 10799.45
+}
+PerceptionManager PerceptionManager1 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 5499.515 50.564 10793.642
+}
+PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
+ coords 5072.487 45.327 10778.519
+}
+$grp GenericEntity : "{3D78D7D606FF9818}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_NoCapture.et" {
+ flag {
+  coords 2011.411 15.492 3121.666
+ }
+ flag2 {
+  coords 1906.828 20.416 3055.135
+ }
+ flag3 {
+  coords 1998.299 46.188 3009.945
+ }
+ flag4 {
+  coords 2095.672 5.765 3185.358
+ }
+}
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{68D9057073F448A9}" {
+     m_Timer GUB_ZoneControlTimer "{68D905707997A51E}" {
+      timeToComplete 150
+     }
+     m_ZoneController GUB_ZoneController "{68D90570783D3672}" {
+      m_sZoneEntityName "capture"
+     }
+     m_FlagController GUB_FlagController "{68D905707A66A379}" {
+      m_aFlagNames {
+       "flag"
+       "flag2"
+       "flag3"
+       "flag4"
+      }
+      m_fStartFactionKey "USSR"
+      m_fEndFactionKey "UK"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{68D905708679E657}" {
+       m_sFirstFactionKey "UK"
+       m_sSecondFactionKey "USSR"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 1897.566 0 2139.09
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 2653.313 0 6316.014
+}

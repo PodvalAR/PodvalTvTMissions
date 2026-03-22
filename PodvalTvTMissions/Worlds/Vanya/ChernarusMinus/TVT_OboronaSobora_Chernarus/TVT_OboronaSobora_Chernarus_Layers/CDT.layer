@@ -1,0 +1,91 @@
+Vehicle Ural4320_ChDKZ_ZU1 : "{89ACA856D113A305}Prefabs/Vehicles/Wheeled/Ural4320/Ses_ChDKZ/Ural4320_ChDKZ_ZU23.et" {
+ coords 5395.446 173.189 12312.795
+ angles -1.862 131.961 0.732
+ m_sAttachmentGroupName "CDF3"
+}
+Vehicle UAZ469_uncovered_Turret_Ses_ChDKZ_AGS1 : "{B2EB0D29B109D2DC}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_uncovered_Turret_Ses_ChDKZ_AGS.et" {
+ coords 6623.941 331.832 6585.429
+ angles -2.499 54.001 -0.396
+ m_sAttachmentGroupName "sds1"
+}
+SCR_AIGroup CDF3 : "{BBD03C84805699CA}Prefabs/Groups/OPFOR/Ses_ChDKZ/Group_ChDKZ_CREW.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A3601C92B4A58B}" {
+   m_iCompanyCallsign 2
+   m_iSquadCallsign 1
+  }
+ }
+ coords 5397.534 173.179 12315.172
+ angles 0 -134.157 0
+ m_sCustomNameSet "Расчет ЗУ-23 "
+}
+$grp SCR_AIGroup : "{BF97ECB4D954314C}Prefabs/Groups/OPFOR/Ses_ChDKZ/Group_ChDKZ_HQ_PL.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A3601C92B4A58B}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 5333.169 312.915 7424.646
+  angles 2.611 -80.79 1.444
+  m_aUnitPrefabSlots {
+   "{5813C3FEA418100E}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_PL_Random.et"
+   "{41D4E0AF9842BE4B}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_AT_Random.et"
+  }
+  m_sCustomNameSet "Диверсанты  ЧДКЗ"
+ }
+ sds1 {
+  components {
+   PS_GroupCallsignAssigner "{68A3601C92B4A58B}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 6625.635 331.82 6582.884
+  angles 0.793 -35.156 2.876
+  m_aUnitPrefabSlots {
+   "{5813C3FEA418100E}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_PL_Random.et"
+   "{EF4167192ED8AFBF}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_GL_Random.et"
+  }
+  m_sCustomNameSet "Диверсанты ЧДКЗ"
+ }
+ CDF2 {
+  components {
+   PS_GroupCallsignAssigner "{68A3601C92B4A58B}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 5415.443 172.116 12302.457
+  angles 0 -139.106 0
+  m_aUnitPrefabSlots {
+   "{5813C3FEA418100E}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_PL_Random.et"
+   "{E0500D19D7A94BFD}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_SR_Random.et"
+   "{432739FBF5773868}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_Rifleman_SD_Random.et"
+   "{87714ABCCFCB07C3}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_Medic_Random.et"
+  }
+  m_sCustomNameSet "Группа помощи ЧДКЗ"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A3601C92B4A58B}" {
+    m_iSquadCallsign 1
+   }
+  }
+  coords 6329.848 294.031 7776.035
+  angles 0 -144.046 0
+  m_aUnitPrefabSlots {
+   "{5813C3FEA418100E}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_PL_Random.et"
+   "{7FD097AC1200164F}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_LAT_SD_Random.et"
+   "{E7117041B898A159}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_Sharpshooter_Random.et"
+  }
+  m_sCustomNameSet "Охрана генерала ЧДКЗ"
+ }
+ {
+  coords 6325.071 294.031 7779.457
+  angles 0 -144.046 0
+  m_aUnitPrefabSlots {
+   "{A482F8D1F5EE2F8E}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_Oficer_Random.et"
+  }
+  m_sCustomNameSet "Генерал ЧДКЗ"
+ }
+}
