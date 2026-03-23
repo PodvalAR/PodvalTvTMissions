@@ -1,0 +1,41 @@
+SCR_AIWorld : "{0CB65E4CC0AFBCC0}Prefabs/SCR_AIWorld_Kunar.et" {
+ coords 98.21 366.425 1734.262
+}
+PerceptionManager PerceptionManager1 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 124.876 388.433 1727.976
+}
+PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
+ components {
+  PS_CutsceneManager "{60E6C661B81E7619}" {
+   m_aCutscenes {
+    PS_Cutscene "{68EA330EAF58F29F}" {
+     m_sCutsceneEntityName "Scene"
+     m_sCutsceneSound "{31B1A9523A923AFF}Music/Moh.acp"
+     m_iCutsceneTime 126000
+    }
+   }
+  }
+  SCR_TimeAndWeatherHandlerComponent "{5EE3229927D4D2F5}" {
+   m_bUsePredefineStartingTimeAndWeather 1
+   m_aStartingWeatherAndTime {
+    SCR_TimeAndWeatherState "{68E7469A8E3F7EE2}" {
+     m_sWeatherPresetName "Clear Fog"
+     m_iStartingHour 16
+     m_iStartingMinutes 30
+    }
+   }
+   m_iMonth 7
+   m_iYear 2002
+  }
+ }
+ coords 112.459 384.676 1732.071
+ m_bShowCutscene 1
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 128.022 295.987 2504.098
+}

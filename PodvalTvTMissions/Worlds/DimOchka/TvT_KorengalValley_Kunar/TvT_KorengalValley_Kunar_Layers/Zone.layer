@@ -1,0 +1,85 @@
+$grp SCR_EditorRestrictionZoneEntity : "{6144B0BE2EAC6897}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneMedium.et" {
+ {
+  coords 2354.951 163.366 1834.211
+ }
+ {
+  coords 2718.804 104.656 1955.666
+ }
+ {
+  coords 1027.426 289.821 1768.755
+ }
+ {
+  coords 3310.428 309.841 342.848
+ }
+ {
+  coords 1777.849 182.957 464.525
+ }
+ {
+  coords 2341.874 131.754 1368.316
+ }
+}
+GenericEntity : "{6D56FED1E55A8F84}Prefabs/Items/Misc/IntelligenceFolder_E_01/IntelligenceFolder_E_01.et" {
+ coords 1288.76 263.676 193.818
+ angles 0 -89.693 0
+ {
+  PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+   coords 0 0 0
+   angles 0 179.693 0
+   m_sImageSet "{10C0A9A305E8B3A4}UI/Imagesets/Tasks/Task_Icons.imageset"
+   m_sImageSetGlow "{10C0A9A305E8B3A4}UI/Imagesets/Tasks/Task_Icons.imageset"
+   m_MarkerColor 0.502 0 0 1
+   m_sQuadName "Icon_Task_Intel_UI"
+   m_fWorldSize 30
+   m_aVisibleForFactions {
+    "RHS_ION"
+    "Ses_TKR"
+    "RHS_USAF"
+    "CIV"
+   }
+   m_bVisibleForEmptyFaction 1
+  }
+ }
+}
+$grp SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+ {
+  coords 1888.677 205.646 1373.056
+ }
+ {
+  coords 1417.984 228.271 299.734
+  m_fWarnRadius 264
+  m_fZoneRadius 304
+  m_fZoneTeleportedRadius 314
+  {
+   GenericEntity {
+    ID "59D673B36B893D84"
+    components {
+     SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+      m_bFollowTerrain 1
+      m_fRadius 264
+     }
+    }
+   }
+  }
+ }
+}
+GenericEntity : "{CF84120477F3A54E}Prefabs/Compositions/Misc/SubCompositions/Furniture/Chair_Light_USSR_01.et" {
+ coords 1288.62 263.17 193.927
+ angles 2.53 -135.692 -0.031
+}
+$grp SCR_EditorRestrictionZoneEntity : "{EF72FA7CD87618D5}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneSmall.et" {
+ {
+  coords 678.315 280.808 1601.742
+ }
+ {
+  coords 1928.87 298.081 2298.731
+ }
+ {
+  coords 3212.539 154.1 2307.636
+ }
+ {
+  coords 2663.285 125.924 2599.082
+ }
+ {
+  coords 2868.999 233.829 1333.758
+ }
+}
