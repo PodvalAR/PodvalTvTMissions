@@ -6,15 +6,6 @@ PerceptionManager PerceptionManager1 : "{028DAEAD63E056BE}Prefabs/World/Game/Per
 }
 PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
  components {
-  PS_CutsceneManager "{60E6C661B81E7619}" {
-   m_aCutscenes {
-    PS_Cutscene "{68EA330EAF58F29F}" {
-     m_sCutsceneEntityName "Scene"
-     m_sCutsceneSound "{31B1A9523A923AFF}Music/Moh.acp"
-     m_iCutsceneTime 126000
-    }
-   }
-  }
   SCR_TimeAndWeatherHandlerComponent "{5EE3229927D4D2F5}" {
    m_bUsePredefineStartingTimeAndWeather 1
    m_aStartingWeatherAndTime {
@@ -29,7 +20,6 @@ PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_Game
   }
  }
  coords 112.459 384.676 1732.071
- m_bShowCutscene 1
 }
 GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
  components {
