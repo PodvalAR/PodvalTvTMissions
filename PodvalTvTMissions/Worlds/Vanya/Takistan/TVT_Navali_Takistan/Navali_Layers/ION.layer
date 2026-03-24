@@ -1,0 +1,64 @@
+SCR_AIGroup : "{4482F48156932D3E}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_STK_3.et" {
+ components {
+  PS_GroupCallsignAssigner "{68B17A4778D2B8BD}" {
+   m_iSquadCallsign 2
+  }
+ }
+ coords 5855.148 109.312 11419.984
+ angles 0 -42.821 0
+ m_sCustomNameSet "Отряд наемников"
+}
+Vehicle UH1H_civ_livery_v1 : "{7A29940A71EF5F5C}Prefabs/Vehicles/Helicopters/UH1H/UH1H_civ_livery_v1.et" {
+ coords 5836.993 109.313 11439.088
+ angles 0 134.466 0
+ m_sAttachmentGroupName "us2"
+}
+SCR_AIGroup : "{963AB6930837A26F}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_HQ.et" {
+ coords 5882.355 109.312 11448.121
+ angles 0 -47.705 0
+ m_sCustomNameSet "Главный наемник Егор"
+}
+SCR_AIGroup : "{A11EB8785A76BA55}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_STK_2.et" {
+ components {
+  PS_GroupCallsignAssigner "{68B17A477EB020B5}" {
+   m_iSquadCallsign 1
+  }
+ }
+ coords 5870.191 109.313 11434.4
+ angles 0 -46.851 0
+ m_sCustomNameSet "Отряд наемников"
+}
+$grp SCR_AIGroup : "{E1F03F7213D8B57D}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_HeliCrew.et" {
+ us1 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 5878.284 109.312 11443.033
+  angles 0 -44.843 0
+  m_aUnitPrefabSlots {
+   "{E3BA31640CD7F87F}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Pilot.et"
+  }
+  m_sCustomNameSet "Пилот наемник"
+ }
+ us2 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 5864.566 109.313 11428.632
+  angles 0 -44.843 0
+  m_aUnitPrefabSlots {
+   "{E3BA31640CD7F87F}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Pilot.et"
+  }
+  m_sCustomNameSet "Пилот наемник"
+ }
+}
+Vehicle UH1H_sharkNose1 : "{EEE291940A9DA42A}Prefabs/Vehicles/Helicopters/UH1H/UH1H_sharkNose.et" {
+ coords 5855.333 109.313 11456.478
+ angles 0 132.475 0
+ m_sAttachmentGroupName "us1"
+}

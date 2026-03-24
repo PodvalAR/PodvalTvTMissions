@@ -1,0 +1,112 @@
+SCR_AIGroup : "{371433587517EBAC}Prefabs/Groups/OPFOR/Ses_TKA/Group_A2F_TKA_PL.et" {
+ components {
+  PS_GroupCallsignAssigner "{68F10CE1E5018CEE}" {
+  }
+ }
+ coords 10224.53 373.806 2375.348
+ angles 0 -118.024 0
+ m_aUnitPrefabSlots {
+  "{83271AFF2A5DF79D}Worlds/Vanya/Takistan/Van_prez5.et"
+ }
+ m_sCustomNameSet "Такистанский президент Аль Навали"
+}
+Vehicle BRDM2_TKA1 : "{5C1D77700F472327}Prefabs/Vehicles/Wheeled/BRDM2/BRDM2_TKA.et" {
+ coords 10227.383 373.288 2362.825
+ angles -0.898 -111.144 0.043
+ m_sAttachmentGroupName "tka3"
+}
+Vehicle BTR70_Ses_TKA1 : "{6F963B40DE04868B}Prefabs/Vehicles/Wheeled/BTR70/BTR70_Ses_TKA.et" {
+ coords 10191.144 373.037 2386.174
+ angles 0 178.425 0
+ m_sAttachmentGroupName "tka5"
+}
+Vehicle UAZ452_transport_TKA1 : "{A5D524D387AEFC4B}Prefabs/Vehicles/Wheeled/UAZ452/UAZ452_transport_TKA.et" {
+ coords 10251.203 373.854 2372.276
+ angles -2.06 -110.993 0.182
+ m_sAttachmentGroupName "tka4"
+}
+$grp SCR_AIGroup : "{B2829E998DF41555}Prefabs/Groups/OPFOR/Ses_TKA/Group_A2F_TKA_Squad.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68EF396E7AA4410E}" {
+    m_iSquadCallsign 2
+   }
+  }
+  coords 10221.243 373.585 2380.895
+  angles 0 148.186 0
+  m_sCustomNameSet "Охрана президента"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68EF396E72216A6C}" {
+    m_iSquadCallsign 1
+   }
+  }
+  coords 10219.492 373.279 2367.387
+  angles 0 -25.547 0
+  m_sCustomNameSet "Охрана президента"
+ }
+ ru1 {
+  components {
+   PS_GroupCallsignAssigner "{68EF396E7D99951C}" {
+    m_iSquadCallsign 3
+   }
+  }
+  coords 10215.03 373.013 2354.911
+  angles -0.104 -12.933 -1.725
+  m_aUnitPrefabSlots {
+   "{7117673FDAF2259D}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_Sapper.et"
+   "{7117673FDAF2259D}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_Sapper.et"
+   "{7117673FDAF2259D}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_Sapper.et"
+  }
+  m_sCustomNameSet "Отряд саперов"
+ }
+ tka4 {
+  components {
+   PS_GroupCallsignAssigner "{68EF396E7D99951C}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 10250.82 373.818 2367.301
+  angles -0.321 -20.193 -1.698
+  m_aUnitPrefabSlots {
+   "{AFFB63AA07D712D2}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_SL.et"
+   "{AD11AF5C866B83E8}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_Rifle.et"
+   "{AD11AF5C866B83E8}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_Rifle.et"
+   "{AD11AF5C866B83E8}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_Rifle.et"
+  }
+  m_sCustomNameSet "Отряд 9K"
+ }
+}
+Vehicle Ural4320_Ses_CDF_transport_covered1 : "{B3BE9258C89E8491}Prefabs/Vehicles/Wheeled/Ural4320/Ses_CDF/Ural4320_Ses_CDF_transport_covered.et" {
+ coords 10201.646 373.455 2386.926
+ angles -0.835 178.813 0.87
+}
+$grp SCR_AIGroup : "{D98C1540C5C05A6C}Prefabs/Groups/OPFOR/Ses_TKA/Group_A2F_TKA_Motorized.et" {
+ tka5 {
+  components {
+   PS_GroupCallsignAssigner "{68EF396E6855C6BE}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 10189.785 372.97 2375.523
+  angles 0 90.945 0
+  m_sCustomNameSet "Подвижная охрана президента"
+ }
+ tka3 {
+  components {
+   PS_GroupCallsignAssigner "{68EF394755DE6EF8}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 10227.457 373.271 2358.197
+  angles 0 -19.754 0
+  m_aUnitPrefabSlots {
+   "{CE8BA9D55FB9D7BD}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_CC.et"
+   "{D02632E464A522A2}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_Crew.et"
+  }
+  m_sCustomNameSet "Экипаж БРДМ"
+ }
+}

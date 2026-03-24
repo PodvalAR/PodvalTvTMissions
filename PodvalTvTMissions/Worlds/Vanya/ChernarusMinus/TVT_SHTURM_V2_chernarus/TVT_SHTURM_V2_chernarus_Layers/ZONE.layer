@@ -1,0 +1,57 @@
+$grp SCR_EditorRestrictionZoneEntity : "{6144B0BE2EAC6897}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneMedium.et" {
+ {
+  coords 8912.477 5.76 2234.048
+ }
+ {
+  coords 4726.837 9.25 2538.62
+ }
+ {
+  coords 12049.057 6.124 3523.551
+ }
+}
+$grp SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+ {
+  coords 6181.057 290.517 7679.828
+ }
+ {
+  coords 10454.765 6.063 2288.707
+ }
+}
+$grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+ {
+  coords 14119.017 0 1949.722
+  m_sImageSet "{707AF7C18BDD2A9B}Assets/Icons/flagCDF.edds"
+  m_sImageSetGlow "{707AF7C18BDD2A9B}Assets/Icons/flagCDF.edds"
+  m_sQuadName ""
+  m_fWorldSize 2700
+  m_bVisibleForEmptyFaction 1
+  m_bShowForAnyFaction 1
+ }
+ {
+  coords 2495.657 243.491 11142.104
+  m_sImageSet "{72E8159766C00C3D}UI/Textures/Flags/rhs_flag_rus.edds"
+  m_sImageSetGlow "{72E8159766C00C3D}UI/Textures/Flags/rhs_flag_rus.edds"
+  m_sQuadName ""
+  m_fWorldSize 2700
+  m_bVisibleForEmptyFaction 1
+  m_bShowForAnyFaction 1
+ }
+}
+GenericEntity : "{F9EBA10CC445ED63}PrefabsEditable/Auto/Structures/Military/Flags/FlagPole_02_V1_CDF_Editable.et" {
+ components {
+  SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+   m_sDefaultMaterial "{1D4A447A3E34C70D}Assets/Props/Fabric/Flags/Data/Flag_1_2_Chernarus.emat"
+   m_sFactionKey "Ses_CDF"
+   m_iAdvanceAfterSec 15
+  }
+  BaseActionsManagerComponent "{6202D4E6F133BF4A}" {
+   additionalActions {
+    PS_FlagChangeAction "{6202D4E6A53D4B3C}" {
+     Duration 20
+    }
+   }
+  }
+ }
+ coords 10448.119 20.402 2269.583
+ angles 11.252 79.574 -29.48
+}
