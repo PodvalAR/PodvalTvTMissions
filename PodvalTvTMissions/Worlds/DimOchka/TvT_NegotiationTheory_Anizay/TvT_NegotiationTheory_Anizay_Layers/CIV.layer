@@ -1,0 +1,33 @@
+$grp SCR_AIGroup : "{000CD338713F2B5A}Prefabs/AI/Groups/Group_Base.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68EF505A7A21D8B8}" {
+   }
+  }
+  coords 4819.336 143.938 8335.321
+  angles 0 -177.824 0
+  m_faction "CIV"
+  m_aUnitPrefabSlots {
+   "{C6653C5DB134189C}Prefabs/Characters/Factions/INDFOR/CIV/VIP/dim_CIV_VIP_4.et"
+  }
+  m_sCustomNameSet "Президент Такистана"
+ }
+ {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "1"
+   }
+   PS_GroupCallsignAssigner "{68EF505A7A21D8B8}" {
+    m_iSquadCallsign 1
+   }
+  }
+  coords 4817.139 143.938 8335.405
+  angles 0 -177.824 0
+  m_faction "CIV"
+  m_aUnitPrefabSlots {
+   "{1ECD559CC8BD06C0}Prefabs/Characters/Factions/INDFOR/CIV/VIP/dim_CIV_VIP_2.et"
+   "{FB511965C45891AB}Prefabs/Characters/Factions/INDFOR/CIV/VIP/dim_CIV_VIP_3.et"
+  }
+  m_sCustomNameSet "Дипломаты"
+ }
+}
