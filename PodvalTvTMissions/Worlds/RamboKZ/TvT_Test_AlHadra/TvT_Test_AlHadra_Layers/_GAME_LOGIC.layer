@@ -21,6 +21,7 @@ GenericEntity Cpature_Logic : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlB
       m_aFlagNames {
        "FLAG_1"
        "FLAG_2"
+       "FLAG_3"
       }
       m_fStartFactionKey "RHS_ION"
       m_fEndFactionKey "RHS_AFRF"
@@ -29,8 +30,7 @@ GenericEntity Cpature_Logic : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlB
       GUB_ZoneControlBetweenFactionsCondition "{68D908DE94C94EAB}" {
        m_sFirstFactionKey "RHS_AFRF"
        m_sSecondFactionKey "RHS_ION"
-       m_fComparisonMultiplier 2
-       m_iOperator GREATER
+       m_iOperator GREATER_OR_EQUALS
       }
      }
     }
