@@ -1,61 +1,46 @@
-PolylineShapeEntity : "{1D807ABE94FE2618}Prefabs/PolyZone/PolyZone_Capture.et" {
+GenericEntity PRIME_PIDRONES : "{3D78D7D606FF9818}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_NoCapture.et" {
+ coords 2941.67 39.264 4825.872
+}
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
  components {
-  PS_PolyZone "{60E90266F25533F6}" {
-   m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
-   m_cPolygonColor 0.561 0.071 0.071 1
-   m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
-   m_cPolygonBorderColor 0.561 0.071 0.071 1
-   m_bLineMode 1
-   m_aVisibleForFactions {
-    ""
-    "UK"
-    "Ses_TKA"
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{68F309B7323164CE}" {
+     m_sZonePreviewName "Терминал"
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "AFRF_WIN"
+     }
+     m_sFailedObjectiveNames {
+      "UK_WIN"
+     }
+     m_sMessage "ВС СК захватила терминал!"
+     m_Timer GUB_ZoneControlTimer "{68F309B722134A09}" {
+      timeToComplete 150
+     }
+     m_ZoneController GUB_ZoneController "{68F309B721A31BA9}" {
+      m_sZoneEntityName "MISHA_GOBLIN"
+     }
+     m_FlagController GUB_FlagController "{68F309B720805269}" {
+      m_aFlagNames {
+       "PRIME_PIDRONES"
+      }
+      m_fStartFactionKey "RHS_AFRF"
+      m_fEndFactionKey "UK"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{68F309B353FA5A90}" {
+       m_sFirstFactionKey "UK"
+       m_sSecondFactionKey "RHS_AFRF"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
    }
   }
  }
- coords 2982.565 27.306 4803.313
- angles -0.894 -0.028 1.79
- Points {
-  ShapePoint "{60E90266E922A02A}" {
-   Position -1.756 0 0.116
-  }
-  ShapePoint "{68F0BD3173F92778}" {
-   Position 6.722 0 -0.245
-  }
-  ShapePoint "{68F0BD3171D7ACD2}" {
-   Position 7.184 0 22.949
-  }
-  ShapePoint "{68F0BD317E814C41}" {
-   Position -20.667 0 45.725
-  }
-  ShapePoint "{68F0BD3178ED73A5}" {
-   Position -36.762 0 64.74
-  }
-  ShapePoint "{68F0BD31671BF37B}" {
-   Position -67.975 1.256 91.362
-  }
-  ShapePoint "{68F0BD318F759167}" {
-   Position -122.734 -2.588 34.761
-  }
-  ShapePoint "{68F0BD316C449E0C}" {
-   Position -109.936 -3.869 -20.673
-  }
-  ShapePoint "{68F0BD31A5B574C3}" {
-   Position -101.194 -4.077 -58.526
-  }
-  ShapePoint "{68F0BD31D1CD181D}" {
-   Position 4.223 -1.08 -77.614
-  }
-  ShapePoint "{68F0BD31DD62E940}" {
-   Position 9.77 -0.172 -30.563
-  }
-  ShapePoint "{68F0BD31DABF3C53}" {
-   Position -2.024 -0.494 -27.581
-  }
-  ShapePoint "{68F0BD3254C442C2}" {
-   Position -1.769 -0.053 0.146
-  }
- }
+ coords 2982.667 27.304 4803.238
 }
 $grp SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
  {
@@ -67,5 +52,59 @@ $grp SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/Restri
  {
   coords 2885.234 20.469 3351.821
   angles 0.895 0.014 0.895
+ }
+}
+PolylineShapeEntity MISHA_GOBLIN : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
+ components {
+  PS_PolyZone "{60E90266F25533F6}" {
+   m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
+   m_cPolygonColor 0.561 0.071 0.071 1
+   m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+   m_cPolygonBorderColor 0.502 0 0 1
+   m_aVisibleForFactions {
+    ""
+    "RHS_AFRF"
+    "UK"
+   }
+  }
+ }
+ coords 2982.48 27.306 4803.434
+ Points {
+  ShapePoint "{60E90266E922A02A}" {
+   Position 0.062 0 -0.275
+  }
+  ShapePoint "{68F309B6A7891430}" {
+   Position 6.986 0 -0.422
+  }
+  ShapePoint "{68F309B6A5EC5850}" {
+   Position 7.271 0 23.203
+  }
+  ShapePoint "{68F309B6A3C6000C}" {
+   Position -20.552 0 45.568
+  }
+  ShapePoint "{68F309B6AFDEEA58}" {
+   Position -36.66 0 64.314
+  }
+  ShapePoint "{68F309B6ADBD1EC9}" {
+   Position -67.53 0 90.547
+  }
+  ShapePoint "{68F309B6ABA9854F}" {
+   Position -104.57 0 52.124
+  }
+  ShapePoint "{68F309B6A94421FF}" {
+   Position -124.575 0 43.296
+  }
+  ShapePoint "{68F309B6D6B2FB8A}" {
+   Position -101.214 0 -57.131
+  }
+  ShapePoint "{68F309B6D3EFAB36}" {
+   Position 4.19 0 -77.542
+  }
+  ShapePoint "{68F309B6D1639EFB}" {
+   Position 9.387 0 -30.974
+  }
+  ShapePoint "{68F309B6DFC7648C}" {
+   Position -2.065 0 -28.164
+  }
  }
 }
