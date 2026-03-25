@@ -1,68 +1,3 @@
-PolylineShapeEntity Triger {
- components {
-  PS_PolyZone "{68EA81AB75E6F7AD}" {
-   m_mPolygonTexture "{62F4404928D33DB5}UI/layouts/Textures/Grid1b.edds"
-   m_cPolygonColor 0.259 0.365 0.686 1
-   m_fPolygonUVScale 0.44
-   m_cPolygonBorderColor 0 0.125 0.502 1
-   m_fPolygonBorderWidth 5
-   m_aVisibleForFactions {
-    "Ses_ChDKZ"
-    "RHS_AFRF"
-    "RHS_ION"
-    ""
-   }
-  }
- }
- coords 12919.626 5.751 10008.703
- Points {
-  ShapePoint "{68EA81A9E00C56C7}" {
-   Position 1.942 -0.001 1.688
-  }
-  ShapePoint "{68EA81A9E00C2188}" {
-   Position -3.326 -0.001 -50.826
-  }
-  ShapePoint "{68EA81A99AAE7909}" {
-   Position -11.188 0 -78.936
-  }
-  ShapePoint "{68EA81A99B8A8951}" {
-   Position -17.172 0 -117.237
-  }
-  ShapePoint "{68EA81A998579344}" {
-   Position -25.773 0 -174.028
-  }
-  ShapePoint "{68EA81A9B82A3EAB}" {
-   Position -48.241 0 -165.325
-  }
-  ShapePoint "{68EA81A9B4A0291F}" {
-   Position -88.472 0 -149.843
-  }
-  ShapePoint "{68EA81A9B3C4B7F0}" {
-   Position -124.099 0 -136.074
-  }
-  ShapePoint "{68EA81A9B11FD28C}" {
-   Position -114.76 0 -119.837
-  }
-  ShapePoint "{68EA81A9AF98F3E3}" {
-   Position -103.765 0 -100.403
-  }
-  ShapePoint "{68EA81A9AB37B18C}" {
-   Position -99.972 0 -93.819
-  }
-  ShapePoint "{68EA81A9A9C497B2}" {
-   Position -91.397 0 -78.557
-  }
-  ShapePoint "{68EA81A9A42B4CA0}" {
-   Position -72.595 0 -43.226
-  }
-  ShapePoint "{68EA81A9A3E07A3C}" {
-   Position -45.171 0 6.613
-  }
-  ShapePoint "{68EA81A9A1683AE3}" {
-   Position -18.629 0 3.598
-  }
- }
-}
 $grp GenericEntity : "{3D78D7D606FF9818}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_NoCapture.et" {
  Flag3 {
   coords 12807.119 13.318 9883.388
@@ -120,6 +55,57 @@ GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactions
   }
  }
  coords 13944.74 0 9740.42
+}
+PolylineShapeEntity : "{7019844BAD5C4DD8}Prefabs/PolyZone/PolyZone_Border.et" {
+ components {
+  PS_PolyZone "{60E90266F25533F6}" {
+   m_mPolygonTexture "{62F4404928D33DB5}UI/layouts/Textures/Grid1b.edds"
+   m_fPolygonUVScale 0.44
+   m_fPolygonBorderWidth 5
+   m_aVisibleForFactions {
+    "RHS_AFRF"
+    ""
+    "RHS_ION"
+    "RHS_USAF"
+   }
+  }
+ }
+ coords 12893.846 5.75 9834.679
+ Points {
+  ShapePoint "{60E90266E922A02A}" {
+   Position -0.053 -0 0.012
+  }
+  ShapePoint "{68F3375F478B07BA}" {
+   Position -9.595 -0 3.621
+  }
+  ShapePoint "{68F3375F7F22276E}" {
+   Position -64.576 -0 25.147
+  }
+  ShapePoint "{68F3375F7C3EFE05}" {
+   Position -98.013 0.001 38.093
+  }
+  ShapePoint "{68F3375F78153177}" {
+   Position -54.628 0 115.742
+  }
+  ShapePoint "{68F3375F768D9A32}" {
+   Position -19.028 -0 180.241
+  }
+  ShapePoint "{68F3375F74A2152D}" {
+   Position 26.984 0 175.007
+  }
+  ShapePoint "{68F3375F7533E508}" {
+   Position 20.479 -0.001 104.904
+  }
+ }
+ {
+  PS_PolyZoneTrigger {
+   ID "60FD050E1E83544C"
+   m_polyZoneEffect PS_PolyZoneEffectRestricted "{60FD050E0DC2A2AB}" {
+    m_fKillTime 15
+   }
+   m_sGroupKey "comusa"
+  }
+ }
 }
 GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
  components {
