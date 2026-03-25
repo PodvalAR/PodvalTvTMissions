@@ -1,0 +1,329 @@
+$grp Vehicle : "{1247D68D2A76907D}Prefabs/Vehicles/Wheeled/UAZ452/UAZ452_ambulance_base.et" {
+ UAZ452_ambulance_base1 {
+  coords 4226.212 350.193 565.376
+  angles -0.282 82.237 0.038
+  m_sAttachmentGroupName "tk11"
+ }
+ UAZ452_ambulance_base2 {
+  coords 4219.654 350.261 564.682
+  angles 0 81.722 0
+  m_sAttachmentGroupName "tk11"
+ }
+}
+$grp Vehicle : "{16A674FE31B0921C}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_uncovered.et" {
+ UAZ469_uncovered1 {
+  coords 9140.541 229.336 6857.141
+  angles 0 130.55 0
+  m_sAttachmentGroupName "tk2"
+ }
+ UAZ469_uncovered2 {
+  coords 4268.844 350.138 570.63
+  angles -0.284 86.093 0.019
+  m_sAttachmentGroupName "tk8"
+ }
+}
+Vehicle M997_maxi_ambulance_MERDC1 : "{3B1EB924602C7A07}Prefabs/Vehicles/Wheeled/M998/M997_maxi_ambulance_MERDC.et" {
+ coords 4242.457 350.156 567.628
+ angles 0 81.735 0
+ m_sAttachmentGroupName "tk10"
+}
+Vehicle Ural4320_tanker_CIV_orange1 : "{4A59DAEFE645E8A0}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_tanker_CIV_orange.et" {
+ coords 9126.56 229.453 6869.216
+ angles 0 139.187 0
+ m_sAttachmentGroupName "tk3"
+}
+Vehicle M151A2_M2HB_MERDC1 : "{5168FEA3054D6D15}Prefabs/Vehicles/Wheeled/M151A2/M151A2_M2HB_MERDC.et" {
+ coords 4234.601 350.156 566.195
+ angles 0 82.919 0
+ m_sAttachmentGroupName "tk10"
+}
+Vehicle S105_beige1 : "{54C3CC22DEBD57BE}Prefabs/Vehicles/Wheeled/S105/S105_beige.et" {
+ coords 4275.53 350.125 570.966
+ angles 0 91.384 0
+ m_sAttachmentGroupName "tk8"
+}
+Vehicle S105_red1 : "{85F0BD6AF0F42D6D}Prefabs/Vehicles/Wheeled/S105/S105_red.et" {
+ coords 9145.234 229.319 6853.309
+ angles 0 131.499 0
+ m_sAttachmentGroupName "tk2"
+ {
+  GameEnvironmentProbeEntity {
+   ID "654C8CD2D72839C5"
+   coords -0.001 0.864 -0.173
+  }
+ }
+}
+Vehicle UAZ469_covered_CIV_forest1 : "{B6D330E7E40FE7DD}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_covered_CIV_forest.et" {
+ coords 9132.279 229.392 6863.099
+ angles 0 125.984 0
+ m_sAttachmentGroupName "tk3"
+}
+Vehicle UAZ452_transport_CIV_orange1 : "{BB84BDE1707A38EB}Prefabs/Vehicles/Wheeled/UAZ452/UAZ452_transport_CIV_orange.et" {
+ coords 9073.01 228.867 6921.378
+ angles 0 138.068 0
+ m_sAttachmentGroupName "tk7"
+}
+Vehicle UAZ469_uncovered_Turret_Ses_CDF_KORD_SPP1 : "{C259537CF2AC1053}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_uncovered_Turret_Ses_CDF_KORD_SPP.et" {
+ coords 9119.39 229.79 6876.096
+ angles 0 135.811 0
+ m_sAttachmentGroupName "tk4"
+}
+Vehicle LAV25_CDF1 : "{C9CDC54E051CF8DB}Prefabs/Vehicles/Wheeled/LAV25/LAV25_CDF.et" {
+ coords 9101.362 229.962 6892.819
+ angles 0 135.051 0
+ m_sAttachmentGroupName "tk5"
+}
+$grp SCR_AIGroup : "{CD4A8C98E6B2357B}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_STK_1.et" {
+ tk1 {
+  coords 9155.754 229.312 6849.495
+  angles 0 -134.102 0
+  m_faction "Ses_TKR"
+  m_aUnitPrefabSlots {
+   "{44F829A0BCF2F1DA}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_PL.et"
+  }
+  m_sCustomNameSet "Аль Гэгэшус"
+ }
+ tk2 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A477D63A783}" {
+    m_iSquadCallsign 1
+   }
+  }
+  coords 9148.693 229.316 6856.208
+  angles 0.195 -136.664 -0.207
+  m_faction "Ses_TKR"
+  m_aUnitPrefabSlots {
+   "{3EAB31BD43ECDF10}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_SL_1.et"
+   "{C8DC8AFF9B099571}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL_3.et"
+   "{F77ABDD02B6EE454}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AR_2.et"
+   "{AF36A3AE58906F21}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AT_3.et"
+   "{0C896A45E89D9B8F}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AAT_2.et"
+   "{E279BF3CFDDE76BA}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_MG.et"
+   "{BDBB1F0764260B73}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL.et"
+   "{D0E3CB03406978A3}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Marksman.et"
+  }
+  m_sCustomNameSet "Отряд несогласных"
+ }
+ tk4 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A477D63A783}" {
+    m_iSquadCallsign 3
+   }
+  }
+  coords 9120.295 229.752 6882.5
+  angles -0.263 -138.539 -0.99
+  m_faction "Ses_TKR"
+  m_aUnitPrefabSlots {
+   "{833007A59429D956}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_SL_4.et"
+   "{4114F2E62B288D34}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL_1.et"
+   "{4AAAEF575475F84A}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AT_2.et"
+   "{878B3AA80A71C6A6}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_MG_3.et"
+   "{DCB95034932A16B8}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman_1.et"
+   "{2C69E9F8133F4FF7}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Sapper_2.et"
+   "{4114F2E62B288D34}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL_1.et"
+   "{08705F90B79D0BFA}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Sniper.et"
+  }
+  m_sCustomNameSet "Отряд несогласных"
+ }
+ tk8 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A477D63A783}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 4268.633 350.126 566.808
+  angles 0 -1.815 0
+  m_faction "Ses_TKR"
+  m_aUnitPrefabSlots {
+   "{52FF055DFF28503E}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_SL_2.et"
+   "{62177651069451CD}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_MG_2.et"
+   "{68C608E7EA187C05}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AT.et"
+   "{0C896A45E89D9B8F}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AAT_2.et"
+   "{68450D15566787CA}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman_4.et"
+   "{C9F5A5011FDAD89C}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Sapper_3.et"
+   "{C8DC8AFF9B099571}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL_3.et"
+   "{0280BB939933F116}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Marksman_3.et"
+  }
+  m_sCustomNameSet "Отряд несогласных"
+ }
+ tk3 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A477D63A783}" {
+    m_iSquadCallsign 2
+   }
+  }
+  coords 9137.079 229.369 6867.46
+  angles -0.238 -138.541 -0.589
+  m_faction "Ses_TKR"
+  m_aUnitPrefabSlots {
+   "{B76349A4F3CDC755}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_SL_3.et"
+   "{4114F2E62B288D34}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL_1.et"
+   "{AF36A3AE58906F21}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AT_3.et"
+   "{62177651069451CD}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_MG_2.et"
+   "{0C896A45E89D9B8F}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AAT_2.et"
+   "{C9F5A5011FDAD89C}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Sapper_3.et"
+   "{4114F2E62B288D34}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL_1.et"
+   "{E71CF76A95D6667D}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Marksman_2.et"
+  }
+  m_sCustomNameSet "Отряд несогласных"
+ }
+ tk5 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A477D63A783}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 9106.326 230.072 6895.388
+  angles -0.202 -135.053 -1.005
+  m_faction "Ses_TKR"
+  m_aUnitPrefabSlots {
+   "{DCB95034932A16B8}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman_1.et"
+   "{B0ED64D42FEE9996}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman_2.et"
+  }
+  m_sCustomNameSet "Экипаж LAV"
+ }
+ tk6 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A477D63A783}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 9094.167 229.725 6907.552
+  angles -0.202 -135.053 -1.005
+  m_faction "Ses_TKR"
+  m_aUnitPrefabSlots {
+   "{DCB95034932A16B8}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman_1.et"
+   "{B0ED64D42FEE9996}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman_2.et"
+  }
+  m_sCustomNameSet "Экипаж ЗУ-23я"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68B17A477D63A783}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 8779.447 357.434 1866.532
+  angles -0.256 -10.903 4.67
+  m_faction "Ses_TKR"
+  m_aUnitPrefabSlots {
+   "{C8DC8AFF9B099571}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL_3.et"
+   "{AF36A3AE58906F21}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AT_3.et"
+   "{E279BF3CFDDE76BA}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_MG.et"
+   "{D0E3CB03406978A3}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Marksman.et"
+  }
+  m_sCustomNameSet "Отряд очень несогласных"
+ }
+ tk9 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A477D63A783}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 4253.518 350.195 564.786
+  angles 0.911 -6.405 0.47
+  m_faction "Ses_TKR"
+  m_aUnitPrefabSlots {
+   "{833007A59429D956}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_SL_4.et"
+   "{4114F2E62B288D34}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL_1.et"
+   "{4AAAEF575475F84A}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AT_2.et"
+   "{878B3AA80A71C6A6}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_MG_3.et"
+   "{DCB95034932A16B8}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman_1.et"
+   "{2C69E9F8133F4FF7}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Sapper_2.et"
+   "{4114F2E62B288D34}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL_1.et"
+   "{08705F90B79D0BFA}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Sniper.et"
+  }
+  m_sCustomNameSet "Отряд несогласных"
+ }
+ tk10 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A477D63A783}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 2
+   }
+  }
+  coords 4235.772 350.166 562.076
+  angles 0.911 -6.405 0.47
+  m_faction "Ses_TKR"
+  m_aUnitPrefabSlots {
+   "{833007A59429D956}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_SL_4.et"
+   "{4114F2E62B288D34}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL_1.et"
+   "{4AAAEF575475F84A}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AT_2.et"
+   "{878B3AA80A71C6A6}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_MG_3.et"
+   "{DCB95034932A16B8}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman_1.et"
+   "{2C69E9F8133F4FF7}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Sapper_2.et"
+   "{4114F2E62B288D34}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL_1.et"
+   "{08705F90B79D0BFA}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Sniper.et"
+  }
+  m_sCustomNameSet "Отряд несогласных"
+ }
+ tk11 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A477D63A783}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 3
+   }
+  }
+  coords 4219.517 350.252 559.379
+  angles 0.911 -6.405 0.47
+  m_faction "Ses_TKR"
+  m_aUnitPrefabSlots {
+   "{833007A59429D956}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_SL_4.et"
+   "{4114F2E62B288D34}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL_1.et"
+   "{4AAAEF575475F84A}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AT_2.et"
+   "{878B3AA80A71C6A6}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_MG_3.et"
+   "{DCB95034932A16B8}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman_1.et"
+   "{2C69E9F8133F4FF7}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Sapper_2.et"
+   "{4114F2E62B288D34}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL_1.et"
+   "{08705F90B79D0BFA}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Sniper.et"
+  }
+  m_sCustomNameSet "Отряд несогласных"
+ }
+ tk7 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A477D63A783}" {
+    m_iSquadCallsign 4
+   }
+  }
+  coords 9079.082 228.902 6923.232
+  angles -0.073 -127.765 -1.022
+  m_faction "Ses_TKR"
+  m_aUnitPrefabSlots {
+   "{833007A59429D956}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_SL_4.et"
+   "{4114F2E62B288D34}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL_1.et"
+   "{4AAAEF575475F84A}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AT_2.et"
+   "{878B3AA80A71C6A6}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_MG_3.et"
+   "{2C69E9F8133F4FF7}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Sapper_2.et"
+   "{4114F2E62B288D34}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL_1.et"
+   "{08705F90B79D0BFA}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Sniper.et"
+  }
+  m_sCustomNameSet "Отряд несогласных"
+ }
+}
+Vehicle UAZ469_uncovered_CIV_teal1 : "{D4855501D5B12AF2}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_uncovered_CIV_teal.et" {
+ coords 9153.033 229.312 6846.106
+ angles 0 131.949 0
+ m_sAttachmentGroupName "tk1"
+}
+Vehicle M151A1 : "{F649585ABB3706C4}Prefabs/Vehicles/Wheeled/M151A2/M151A2.et" {
+ coords 9109.787 229.905 6885.396
+ angles 0 133.006 0
+ m_sAttachmentGroupName "tk4"
+}
+Vehicle Ural4320_transport_covered_CIV_blue1 : "{F66EAD0D2016B6BA}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_covered_CIV_blue.et" {
+ coords 4256.164 350.156 570.056
+ angles 0 84.797 0
+ m_sAttachmentGroupName "tk9"
+}
+Vehicle Ural4320_ZU1 : "{FD109F3702AAB392}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_ZU23.et" {
+ coords 9090.135 229.653 6903.798
+ angles 0 137.992 0
+ m_sAttachmentGroupName "tk6"
+}
+Vehicle UAZ469_uncovered_Turret_Ses_CDF_AGS_PAG1 : "{FF6B22224BA2B885}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_uncovered_Turret_Ses_CDF_AGS_PAG.et" {
+ coords 9114.896 229.694 6880.586
+ angles 0 132.549 0
+ m_sAttachmentGroupName "tk4"
+}
