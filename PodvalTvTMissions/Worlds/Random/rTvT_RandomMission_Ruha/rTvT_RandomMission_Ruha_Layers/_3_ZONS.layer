@@ -1,0 +1,54 @@
+PolylineShapeEntity BLOCK_ZONE_1 : "{7019844BAD5C4DD8}Prefabs/PolyZone/PolyZone_Border.et" {
+ components {
+  PS_PolyZone "{60E90266F25533F6}" {
+   m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
+   m_cPolygonColor 0.01 0.01 0.01 0.337
+   m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+   m_cPolygonBorderColor 0 0 0 1
+   m_fPolygonBorderWidth 11.1
+   m_bReversed 0
+   m_aVisibleForFactions {
+    "RHS_AFRF"
+    "RHS_USAF"
+    "RHS_ION"
+    "Ses_CDF"
+    "Ses_ChDKZ"
+    "Ses_TKR"
+    "Ses_TKA"
+    "Drg_IGF"
+    "Drg_PIR"
+    "UK"
+    "USSR"
+    "US"
+    "FIA"
+    "Drg_VCA"
+    ""
+   }
+  }
+ }
+ coords 3861.885 96.264 7025.207
+ Points {
+  ShapePoint "{68F3340976EEF02C}" {
+   Position 569.917 -9.437 3.466
+  }
+  ShapePoint "{68F3340972D0C6AD}" {
+   Position 568.994 -15.05 864.09
+  }
+  ShapePoint "{68F334090E8F5A1F}" {
+   Position 555.062 -14.401 884.108
+  }
+  ShapePoint "{68F334090DAD8C14}" {
+   Position 2.947 5.147 887.625
+  }
+  ShapePoint "{60E90266E922A02A}" {
+   Position 1.937 -3.982 3.558
+  }
+ }
+ LineColor 1 0 0 1
+ {
+  PS_PolyZoneTrigger {
+   ID "60FD050E1E83544C"
+   m_bReversed 0
+  }
+ }
+}
