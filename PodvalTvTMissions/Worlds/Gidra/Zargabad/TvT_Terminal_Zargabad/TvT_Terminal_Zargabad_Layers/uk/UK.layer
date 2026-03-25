@@ -1,0 +1,167 @@
+$grp Vehicle : "{3312ADBF53A16DD8}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS.et" {
+ LAV25_RHS1 {
+  components {
+   SCR_VehicleFactionAffiliationComponent "{5882CBD9AC741CEC}" {
+    "faction affiliation" "UK"
+   }
+  }
+  coords 4033.693 25.066 3559.949
+  angles 0 24.985 0
+  m_sAttachmentGroupName "MH_110"
+ }
+ LAV25_RHS2 {
+  components {
+   SCR_VehicleFactionAffiliationComponent "{5882CBD9AC741CEC}" {
+    "faction affiliation" "UK"
+   }
+  }
+  coords 2883.685 16.496 3336.046
+  angles 1.217 28.97 -0.35
+  m_sAttachmentGroupName "MH_210"
+ }
+}
+Vehicle _Series_LWB_Recce_M2HB1 : "{57FE9BCA625CA0E3}Prefabs/Vehicles/Wheeled/LR_3Series/3Series_LWB_Recce_M2HB.et" {
+ coords 4055.992 25.108 3626.627
+ angles 0 18.559 0
+ m_sAttachmentGroupName "PL_000"
+}
+$grp SCR_AIGroup : "{5A6D0239E30D205D}Prefabs/Groups/BLUFOR/British Forces/Regular/Group_UK_Motorized.et" {
+ MH_110 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 4035.985 25.026 3555.139
+  angles 0 -68.71 0
+ }
+ MH_210 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 2884.449 16.362 3331.184
+  angles 0 -54.048 0
+ }
+}
+$grp SCR_AIGroup : "{654E3A922B11EC94}Prefabs/Groups/BLUFOR/British Forces/Regular/Group_UK_Squad.et" {
+ PM_102 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 4037.02 25.292 3579.533
+  angles 0 110.964 0
+ }
+ PM_100 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 4047.327 25.142 3612.969
+  angles 0 107.431 0
+ }
+ PM_200 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 2926.537 16.625 3380.998
+  angles 0 143.622 0
+ }
+ PM_201 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 2906.12 16.625 3356.079
+  angles 0 -40.688 0
+ }
+ PM_202 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 2
+   }
+  }
+  coords 2895.182 16.625 3354.975
+  angles 0 135.468 0
+ }
+}
+Vehicle M1240A1_MATV_Turret_optic_mdo_black2 : "{670D61A58F552457}Prefabs/Vehicles/Wheeled/M1240A1_MATV/M1240A1_MATV_Turret_optic_mdo_black.et" {
+ components {
+  SCR_VehicleFactionAffiliationComponent "{5882CBD9AC741CEC}" {
+   "faction affiliation" "UK"
+  }
+  SlotManagerComponent "{55BCE45E438E4CFF}" {
+   Slots {
+    RegisteringComponentSlotInfo Turret {
+     Prefab ""
+    }
+   }
+  }
+ }
+ coords 2920.592 16.612 3373.055
+ angles 0 52.949 0
+ m_sAttachmentGroupName "PM_200"
+}
+SCR_AIGroup PL_000 : "{BBA36FB95553E79C}Prefabs/Groups/BLUFOR/British Forces/Regular/Group_UK_PL.et" {
+ coords 4059.227 25.094 3625.124
+ angles 0 -71.764 0
+ m_aUnitPrefabSlots +{
+  "{9F1558B8A8DE9FBC}Prefabs/Characters/Factions/BLUFOR/UK/Regular/Char_UK_Regular_Rifle.et"
+  "{BBF99633B60997D6}Prefabs/Characters/Factions/BLUFOR/UK/Regular/Char_UK_Regular_Medic.et"
+ }
+}
+$grp Vehicle : "{D63E8CFB4CAA9B32}Prefabs/Vehicles/Wheeled/M1083/M1083_Transport_Covered.et" {
+ M1083_Transport_Covered1 {
+  coords 2907.767 16.68 3362.415
+  angles 0 47.695 0
+  m_sAttachmentGroupName "PM_201"
+ }
+ M1083_Transport_Covered2 {
+  coords 2895.437 16.521 3350.764
+  angles 0.024 43.923 1.266
+  m_sAttachmentGroupName "PM_202"
+ }
+}
+Vehicle M1240A1_MATV_Turret_Green1 : "{D9AC0E3578809137}Prefabs/Vehicles/Wheeled/M1240A1_MATV/M1240A1_MATV_Turret_Green.et" {
+ coords 2930.017 16.54 3379.927
+ angles 0 55.371 0
+}
+SCR_AIGroup PM_101 : "{F95993F1D0ECB936}Prefabs/Groups/BLUFOR/British Forces/Regular/Group_UK_Squad_2.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+   m_iCompanyCallsign 1
+   m_iSquadCallsign 1
+  }
+ }
+ coords 4048.297 25.25 3587.298
+ angles 0 -70.127 0
+}
+$grp Vehicle : "{F9FD7E24B28538EE}Prefabs/Vehicles/Wheeled/M923A1/M923A1_transport_covered_UK.et" {
+ M923A1_transport_covered_UK1 {
+  coords 4050.444 25.128 3608.903
+  angles 0 16.673 0
+  m_sAttachmentGroupName "PM_100"
+ }
+ M923A1_transport_covered_UK2 {
+  coords 4045.285 25.128 3591.89
+  angles 0 17.524 0
+  m_sAttachmentGroupName "PM_101"
+ }
+ M923A1_transport_covered_UK3 {
+  coords 4040.022 25.128 3575.84
+  angles 0 19.195 0
+  m_sAttachmentGroupName "PM_102"
+ }
+}

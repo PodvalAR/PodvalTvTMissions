@@ -1,0 +1,44 @@
+SCR_ChimeraCharacter : "{EB278E8098B3F2C5}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_Officer.et" {
+ ID "520EC961A090B1EE"
+ components {
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{98A85E28A7B3180D}Prefabs/Characters/HeadGear/All_Cap/Variants/GD_Cap_Green (Headphones).et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{3CAAF09E83B1DC3C}Prefabs/Characters/Uniforms/Shirt_FROG/Shirt_FROG_WD.et"
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{76D80043D6BFFB57}Prefabs/Characters/Uniforms/Pants_FROG_Trousers.et"
+    }
+    LoadoutSlotInfo Back {
+     Prefab "{BC997778D02FBAA4}Prefabs/Items/Equipment/Radios/Radio_ANPRC_77_USA_Backpack.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{6720F9CB5344D10E}" {
+     TargetStorage "Pants/Pants_FROG_Trousers.et"
+     PrefabsToSpawn {
+      "{A81F501D3EF6F38E}Prefabs/Items/Medicine/FieldDressing_01/FieldDressing_US_01.et" "{A81F501D3EF6F38E}Prefabs/Items/Medicine/FieldDressing_01/FieldDressing_US_01.et" "{A81F501D3EF6F38E}Prefabs/Items/Medicine/FieldDressing_01/FieldDressing_US_01.et" "{A81F501D3EF6F38E}Prefabs/Items/Medicine/FieldDressing_01/FieldDressing_US_01.et" "{D70216B1B2889129}Prefabs/Items/Medicine/Tourniquet_01/Tourniquet_US_01.et" "{D70216B1B2889129}Prefabs/Items/Medicine/Tourniquet_01/Tourniquet_US_01.et" "{0D9A5DCF89AE7AA9}Prefabs/Items/Medicine/MorphineInjection_01/MorphineInjection_01.et" "{0D9A5DCF89AE7AA9}Prefabs/Items/Medicine/MorphineInjection_01/MorphineInjection_01.et"
+     }
+    }
+    ItemsInitConfigurationItem "{6720F9CB52FFCEB5}" {
+     TargetStorage "Pants/Pants_FROG_Trousers.et"
+    }
+    ItemsInitConfigurationItem "{689534819B7B5ACD}" {
+     TargetStorage "Jacket/Shirt_FROG_WD.et"
+    }
+    ItemsInitConfigurationItem "{689610050B41E57A}" {
+     TargetStorage "Vest/GD_Gen3_Light_TF.et/raid/Pouch_Shaw_Raid.et"
+    }
+    ItemsInitConfigurationItem "{689534B98CA83826}" {
+     TargetStorage "Vest/GD_Gen3_Light_TF.et/holster/Pouch_Highspeed_Bleeder.et"
+    }
+   }
+  }
+ }
+ coords 6190.521 149.367 778.691
+}
