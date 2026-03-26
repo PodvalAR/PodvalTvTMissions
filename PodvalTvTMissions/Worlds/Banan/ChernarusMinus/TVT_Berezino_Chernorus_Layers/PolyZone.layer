@@ -1,6 +1,6 @@
 PolylineShapeEntity Triger {
  components {
-  PS_PolyZone "{68F33ACB7E1996DC}" {
+  PS_PolyZone "{68F3490B6670F657}" {
    m_mPolygonTexture "{62F4404928D33DB5}UI/layouts/Textures/Grid1b.edds"
    m_cPolygonColor 0.259 0.365 0.686 1
    m_fPolygonUVScale 0.44
@@ -14,25 +14,25 @@ PolylineShapeEntity Triger {
    }
   }
  }
- coords 12796.098 5.75 9872.521
+ coords 12893.491 5.75 9836.098
  Points {
-  ShapePoint "{68F33ACBA8AAC265}" {
+  ShapePoint "{68F3490B7BD0148C}" {
    Position 0 0 0
   }
-  ShapePoint "{68F33ACB4A26B1A0}" {
-   Position 97.354 0 -37.207
+  ShapePoint "{68F3490B6FF0D995}" {
+   Position -97.459 0 36.423
   }
-  ShapePoint "{68F33ACB4C653317}" {
-   Position 116.782 0 70.115
+  ShapePoint "{68F3490B71CB54FA}" {
+   Position -21.082 -0 179.689
   }
-  ShapePoint "{68F33ACB50008380}" {
-   Position 124.783 0 137.644
+  ShapePoint "{68F3490B723B4ABB}" {
+   Position 27.816 -0.002 174.347
   }
-  ShapePoint "{68F33ACB5223D0F6}" {
-   Position 78.479 0.002 142.72
+  ShapePoint "{68F3490B72D9FD35}" {
+   Position 23.164 0.001 122.706
   }
-  ShapePoint "{68F33ACBA8AAF0D7}" {
-   Position 19.879 0 34.569
+  ShapePoint "{68F3490B7BD0328A}" {
+   Position 18.113 -0 101.915
   }
  }
 }
@@ -63,6 +63,7 @@ GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactions
   GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
    m_aControlLogics {
     GUB_ZoneControlLogic "{68EA81A91B1FF9B1}" {
+     m_sMessage "Промзона захвачена"
      m_Timer GUB_ZoneControlTimer "{68EA81A9155CB9C9}" {
       timeToComplete 150
      }

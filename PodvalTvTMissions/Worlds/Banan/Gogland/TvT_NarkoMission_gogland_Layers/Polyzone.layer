@@ -1,137 +1,3 @@
-PolylineShapeEntity Triger {
- components {
-  PS_PolyZone "{68F305823EE21B69}" {
-   m_mPolygonTexture "{62F4404928D33DB5}UI/layouts/Textures/Grid1b.edds"
-   m_cPolygonColor 0.259 0.365 0.686 1
-   m_fPolygonUVScale 0.44
-   m_cPolygonBorderColor 0 0.125 0.502 1
-   m_fPolygonBorderWidth 5
-   m_aVisibleForFactions {
-    "CIV"
-    "RHS_ION"
-    "RHS_USAF"
-    ""
-   }
-  }
- }
- coords 5893.563 39.774 5666.609
- Points {
-  ShapePoint "{68F305827DD38ADA}" {
-   Position 0 0 0
-  }
-  ShapePoint "{68F305827DD33EAA}" {
-   Position -9.459 -0.804 -7.311
-  }
-  ShapePoint "{68F3058276809630}" {
-   Position -25.009 -1.877 -7.536
-  }
-  ShapePoint "{68F3058277FDAD78}" {
-   Position -38.483 -0.837 -5.917
-  }
-  ShapePoint "{68F3058277038B50}" {
-   Position -45.676 -0.785 2.99
-  }
-  ShapePoint "{68F30582748F1870}" {
-   Position -54.676 -4.083 18.357
-  }
-  ShapePoint "{68F30582752A3B71}" {
-   Position -73.972 -4.621 43.831
-  }
-  ShapePoint "{68F30582724819B2}" {
-   Position -84.383 -3.695 63.543
-  }
-  ShapePoint "{68F3058273B76678}" {
-   Position -118.176 -6.248 84.759
-  }
-  ShapePoint "{68F3058270779073}" {
-   Position -129.129 -3.571 127.512
-  }
-  ShapePoint "{68F305827129E346}" {
-   Position -138.159 -4.217 144.018
-  }
-  ShapePoint "{68F305826EBEEF73}" {
-   Position -137.404 -2.897 163.204
-  }
-  ShapePoint "{68F305826FD597EF}" {
-   Position -152.266 -2.324 193.597
-  }
-  ShapePoint "{68F305826C99EE50}" {
-   Position -145.65 -2.831 222.66
-  }
-  ShapePoint "{68F305826C0D9091}" {
-   Position -126.762 -2.818 241.4
-  }
-  ShapePoint "{68F305826DB77429}" {
-   Position -109.072 -2.135 248.817
-  }
-  ShapePoint "{68F305826A947880}" {
-   Position -84.736 -4.785 245.982
-  }
-  ShapePoint "{68F30582688B316B}" {
-   Position -38.572 -8.476 221.391
-  }
-  ShapePoint "{68F3058269C2D587}" {
-   Position -10.141 -7.9 229.226
-  }
-  ShapePoint "{68F305826967C3E6}" {
-   Position -9.96 -10.327 252.405
-  }
-  ShapePoint "{68F305826771472C}" {
-   Position 7.841 -5.466 257.836
-  }
-  ShapePoint "{68F3058264EB9BB4}" {
-   Position 12.119 -6.709 301.87
-  }
-  ShapePoint "{68F3058264039200}" {
-   Position 27.163 -0.458 331.119
-  }
-  ShapePoint "{68F3058265EAD487}" {
-   Position 42.776 -1.322 335.883
-  }
-  ShapePoint "{68F305826561ECAC}" {
-   Position 53.542 -2.139 327.817
-  }
-  ShapePoint "{68F3058262FAD096}" {
-   Position 61.677 -4.041 311.57
-  }
-  ShapePoint "{68F3058262003AD4}" {
-   Position 73.773 -1.199 284.157
-  }
-  ShapePoint "{68F305826361ACFF}" {
-   Position 92.436 -1.786 261.505
-  }
-  ShapePoint "{68F3058261A9D3A3}" {
-   Position 131.719 1.331 220.935
-  }
-  ShapePoint "{68F305826128C6AA}" {
-   Position 133.008 -1.984 199.509
-  }
-  ShapePoint "{68F305821E79DFAF}" {
-   Position 139.063 -1.156 188.556
-  }
-  ShapePoint "{68F305821FF9D3E9}" {
-   Position 135.976 -2.734 146.551
-  }
-  ShapePoint "{68F305821C9E39A5}" {
-   Position 135.036 -0.322 112.479
-  }
-  ShapePoint "{68F305821C7A8ED0}" {
-   Position 118.503 -1.246 89.417
-  }
-  ShapePoint "{68F305821D543EF7}" {
-   Position 104.523 -1.104 73.719
-  }
-  ShapePoint "{68F305821AC3DD4C}" {
-   Position 83.548 -2.414 66.518
-  }
-  ShapePoint "{68F305821A5F987F}" {
-   Position 65.084 -1.073 62.925
-  }
-  ShapePoint "{68F305821B0C3ECC}" {
-   Position 34.268 2.982 23.605
-  }
- }
-}
 $grp GenericEntity : "{3D78D7D606FF9818}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_NoCapture.et" {
  Flag {
   coords 5911.779 49.393 5815.172
@@ -159,6 +25,7 @@ GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactions
   GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
    m_aControlLogics {
     GUB_ZoneControlLogic "{68F3058381FE4AF0}" {
+     m_sMessage "Барон убит"
      m_Timer GUB_ZoneControlTimer "{68F3058492BBD9F3}" {
       timeToComplete 120
      }
@@ -188,5 +55,55 @@ GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactions
    }
   }
  }
- coords 7730.195 -0 6627.184
+ coords 7730.195 0 6627.184
+}
+PolylineShapeEntity Triger : "{7019844BAD5C4DD8}Prefabs/PolyZone/PolyZone_Border.et" {
+ components {
+  PS_PolyZone "{60E90266F25533F6}" {
+   m_mPolygonTexture "{62F4404928D33DB5}UI/layouts/Textures/Grid1b.edds"
+   m_cPolygonColor 0.686 0.259 0.259 1
+   m_fPolygonUVScale 0.44
+   m_cPolygonBorderColor 0.502 0 0 1
+   m_fPolygonBorderWidth 5
+   m_aVisibleForFactions {
+    "RHS_ION"
+    "CIV"
+    "RHS_USAF"
+    ""
+   }
+  }
+ }
+ coords 5782.966 38.321 5911.439
+ Points {
+  ShapePoint "{60E90266E922A02A}" {
+   Position 30.644 -5.46 15.39
+  }
+  ShapePoint "{68F488B70860BFCD}" {
+   Position 98.958 1.209 -124.449
+  }
+  ShapePoint "{68F488B70A4ECFEA}" {
+   Position 111.757 1.595 -241.777
+  }
+  ShapePoint "{68F488B70DDE7794}" {
+   Position 74.461 0.257 -250.172
+  }
+  ShapePoint "{68F488B70F4B79C7}" {
+   Position 53.521 -3.014 -225.74
+  }
+  ShapePoint "{68F488B70E1D571F}" {
+   Position 2.585 -3.683 -167.25
+  }
+  ShapePoint "{68F488B7136C2CE8}" {
+   Position -50.69 0.761 -28.797
+  }
+ }
+ {
+  PS_PolyZoneTrigger {
+   ID "60FD050E1E83544C"
+   m_polyZoneEffect PS_PolyZoneEffectRestricted "{60FD050E0DC2A2AB}" {
+    m_fKillTime 15
+   }
+   m_sGroupKey "comion"
+  }
+ }
 }
