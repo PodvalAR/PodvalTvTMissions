@@ -115,4 +115,32 @@ $grp GUB_DefendPointEntity : "{C7CE0DC3D5144B7D}Prefabs/System/MissionRandomizer
    }
   }
  }
+ DEFENS_METSALA {
+  coords 6645.404 96.25 1630.317
+  angles 0 0 0
+  {
+   SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+    components {
+     SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+      m_bFollowTerrain 1
+     }
+    }
+    coords 50.17 0 -21.56
+    m_fWarnRadius 150
+    m_fZoneRadius 160
+    m_fZoneTeleportedRadius 170
+    {
+     GenericEntity {
+      ID "59D673B36B893D84"
+      components {
+       SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+        m_bFollowTerrain 1
+        m_fRadius 150
+       }
+      }
+     }
+    }
+   }
+  }
+ }
 }
