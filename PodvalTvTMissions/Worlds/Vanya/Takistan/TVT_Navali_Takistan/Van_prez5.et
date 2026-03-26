@@ -1,0 +1,49 @@
+SCR_ChimeraCharacter : "{4F242994A930974D}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_BaseLoadout.et" {
+ ID "520EC961A090B1EE"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Аль Навали"
+    Icon "{F6E96286D0D0D781}UI/Icons/rebel.edds"
+   }
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{37C6B212CED994BF}Prefabs/Characters/HeadGear/Hat_FlatCap_01/TakCivHat04.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{2C3C7169BC418EE6}Prefabs/Characters/Uniforms/Jacket_ShirtLong_6.et"
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{ADBC10EA4D0D97C2}Prefabs/Characters/Uniforms/Pants_Taksuit_7.et"
+    }
+    LoadoutSlotInfo Back {
+     Prefab "{59B5FF71DBDFB29D}Prefabs/Items/Equipment/Radios/Radio_R107M_TKA.et"
+    }
+    LoadoutSlotInfo Vest {
+     Prefab "{C8516078375CBE45}Prefabs/Characters/Vests/Vest_Lifchik/Vest_Lifchik_GL.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{689E8CB9648064D4}" {
+     TargetStorage "Pants/Pants_Taksuit_7.et"
+    }
+    ItemsInitConfigurationItem "{689E8CB964B2847B}" {
+     TargetStorage "Jacket/Jacket_ShirtLong_6.et"
+    }
+    ItemsInitConfigurationItem "{689E8CB9645E7E2A}" {
+     TargetStorage "Jacket/Jacket_ShirtLong_6.et"
+    }
+    ItemsInitConfigurationItem "{689E8CB9644AA5CA}" {
+     Enabled 0
+     TargetStorage "Jacket/Jacket_ShirtLong_6.et"
+    }
+   }
+  }
+ }
+ coords 10223.706 373.822 2376.894
+ angles 0 -117.669 0
+}

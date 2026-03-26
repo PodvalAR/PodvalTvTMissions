@@ -1,0 +1,107 @@
+$grp SCR_AIGroup : "{0261BC928498DE59}Prefabs/Groups/BLUFOR/RHS_USAF/USMC/Summer/Recon/dim_USMC_Recon.et" {
+ civ3 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4381220E55}" {
+    m_iSquadCallsign 2
+   }
+  }
+  coords 3285.906 3.526 4580.819
+  angles 2.694 -179.33 -0.863
+  m_faction "CIV"
+  m_aUnitPrefabSlots {
+   "{FB511965C45891AB}Prefabs/Characters/Factions/INDFOR/CIV/VIP/dim_CIV_VIP_3.et"
+   "{DD3F71F99E92A220}Prefabs/Characters/Factions/INDFOR/CIV/General (FIA)/FIA_CIV_DenimJacket_2_dimkii.et"
+   "{D7056E7B44BF018F}Prefabs/Characters/Factions/INDFOR/CIV/General (FIA)/FIA_CIV_Shirt_1.et"
+   "{BB515A9BF87B8EA1}Prefabs/Characters/Factions/INDFOR/CIV/General (FIA)/FIA_CIV_Shirt_2.et"
+   "{F9C0001F08C4603C}Prefabs/Characters/Factions/INDFOR/CIV/General (FIA)/FIA_CIV_T_Shirt_1.et"
+   "{959434FFB400EF12}Prefabs/Characters/Factions/INDFOR/CIV/General (FIA)/FIA_CIV_T_Shirt_2.et"
+   "{29D2C6E0802C1423}Prefabs/Characters/Factions/INDFOR/CIV/General (FIA)/FIA_CIV_CottonShirt_1_dimkii.et"
+   "{328485EB14244E24}Prefabs/Characters/Factions/INDFOR/CIV/General (FIA)/FIA_CIV_Businessman_1_dimkii.et"
+  }
+  m_sCustomNameSet "Воставшее население "
+ }
+ civ1 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4381220E55}" {
+    m_iSquadCallsign 3
+   }
+   SCR_GroupIdentityComponent "{56366C5C50AD3CF2}" {
+    m_MilitarySymbol SCR_MilitarySymbol "{56366C5C4E32A359}" {
+     m_Identity CIVILIAN
+    }
+   }
+  }
+  coords 3270.355 4 4572.666
+  angles 0 7.504 0
+  m_faction "CIV"
+  m_aUnitPrefabSlots {
+   "{1ECD559CC8BD06C0}Prefabs/Characters/Factions/INDFOR/CIV/VIP/dim_CIV_VIP_2.et"
+   "{DD3F71F99E92A220}Prefabs/Characters/Factions/INDFOR/CIV/General (FIA)/FIA_CIV_DenimJacket_2_dimkii.et"
+   "{214336012EA294A1}Prefabs/Characters/Factions/INDFOR/CIV/General (FIA)/FIA_CIV_Turtleneck_1_dimkii.et"
+   "{D32B539AED4F3D1A}Prefabs/Characters/Factions/INDFOR/CIV/General (FIA)/FIA_CIV_Turtleneck_3_dimkii.et"
+   "{C4F425277DA8E90B}Prefabs/Characters/Factions/INDFOR/CIV/General (FIA)/FIA_CIV_T_Shirt_6.et"
+   "{C0ECE070D7C9E79F}Prefabs/Characters/Factions/INDFOR/CIV/General (FIA)/FIA_CIV_Businessman_3_dimkii.et"
+   "{F9C0001F08C4603C}Prefabs/Characters/Factions/INDFOR/CIV/General (FIA)/FIA_CIV_T_Shirt_1.et"
+   "{216869DE714D7E60}Prefabs/Characters/Factions/INDFOR/CIV/General (FIA)/FIA_CIV_T_Shirt_7.et"
+  }
+  m_sCustomNameSet "Воставшее население "
+ }
+ civ2 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4381220E55}" {
+    m_iSquadCallsign 1
+   }
+  }
+  coords 3272.894 3.93 4581.139
+  angles 0 -179.289 0
+  m_faction "CIV"
+  m_aUnitPrefabSlots {
+   "{FB511965C45891AB}Prefabs/Characters/Factions/INDFOR/CIV/VIP/dim_CIV_VIP_3.et"
+   "{DD3F71F99E92A220}Prefabs/Characters/Factions/INDFOR/CIV/General (FIA)/FIA_CIV_DenimJacket_2_dimkii.et"
+   "{D7056E7B44BF018F}Prefabs/Characters/Factions/INDFOR/CIV/General (FIA)/FIA_CIV_Shirt_1.et"
+   "{216869DE714D7E60}Prefabs/Characters/Factions/INDFOR/CIV/General (FIA)/FIA_CIV_T_Shirt_7.et"
+   "{F9C0001F08C4603C}Prefabs/Characters/Factions/INDFOR/CIV/General (FIA)/FIA_CIV_T_Shirt_1.et"
+   "{4D3C5D3ECD89F14E}Prefabs/Characters/Factions/INDFOR/CIV/General (FIA)/FIA_CIV_T_Shirt_4.et"
+   "{29D2C6E0802C1423}Prefabs/Characters/Factions/INDFOR/CIV/General (FIA)/FIA_CIV_CottonShirt_1_dimkii.et"
+   "{214336012EA294A1}Prefabs/Characters/Factions/INDFOR/CIV/General (FIA)/FIA_CIV_Turtleneck_1_dimkii.et"
+  }
+  m_sCustomNameSet "Воставшее население "
+ }
+}
+Vehicle S1203_transport_white1 : "{23B8C20ACAEC164B}Prefabs/Vehicles/Wheeled/S1203/S1203_transport_white.et" {
+ coords 3248.663 3.932 4580.962
+ angles 0 135.665 0
+ m_sAttachmentGroupName "civ3"
+}
+Vehicle M997_maxi_ambulance_MERDC1 : "{3B1EB924602C7A07}Prefabs/Vehicles/Wheeled/M998/M997_maxi_ambulance_MERDC.et" {
+ coords 2982.623 39 4521.678
+ angles 0 35.981 0
+}
+Vehicle S1203_transport_yellow1 : "{4C79EB5FADB89B7A}Prefabs/Vehicles/Wheeled/S1203/S1203_transport_yellow.et" {
+ coords 3253.675 3.932 4581.179
+ angles 0 134.328 0
+ m_sAttachmentGroupName "civ1"
+}
+$grp GenericEntity : "{B112DD31A5B9A6C1}Prefabs/Items/Equipment/Radios/Radio_ANPRC77_USA.et" {
+ {
+  coords 3258.555 3.928 4580.013
+  angles -35.349 134.312 -0.98
+ }
+ {
+  coords 3258.205 3.95 4579.679
+  angles -35.349 134.312 -0.98
+ }
+ {
+  coords 3258.929 3.91 4580.383
+  angles -35.349 134.312 -0.98
+ }
+ {
+  coords 3259.338 3.945 4580.707
+  angles -35.349 134.312 -0.98
+ }
+}
+Vehicle S1203_transport_blue1 : "{F77C41245A580FD1}Prefabs/Vehicles/Wheeled/S1203/S1203_transport_blue.et" {
+ coords 3248.331 3.932 4585.902
+ angles 0 136.458 0
+ m_sAttachmentGroupName "civ2"
+}
