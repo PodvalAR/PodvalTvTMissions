@@ -220,6 +220,12 @@ $grp PolylineShapeEntity : "{7019844BAD5C4DD8}Prefabs/PolyZone/PolyZone_Border.e
    }
   }
   LineColor 0.8196 0.9373 0.9373 1
+  {
+   PS_PolyZoneTrigger {
+    ID "60FD050E1E83544C"
+    m_bReversed 0
+   }
+  }
  }
  {
   components {
@@ -813,7 +819,7 @@ PolylineShapeEntity Trigger : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
  components {
   PS_PolyZone "{60E90266F25533F6}" {
    m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
-   m_cPolygonColor 0.502 0 0 1
+   m_cPolygonColor 0.502 0 0 0.519
    m_fPolygonUVScale 0.05
    m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
    m_cPolygonBorderColor 0.502 0 0 1
