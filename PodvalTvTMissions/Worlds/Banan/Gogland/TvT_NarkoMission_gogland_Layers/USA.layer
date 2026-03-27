@@ -1,0 +1,158 @@
+SCR_AIGroup : "{18CF53AE14B14060}Prefabs/Groups/BLUFOR/RHS_USAF/Recon/Group_RHS_USAF_Recon_Squad_7.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+   m_iCompanyCallsign 5
+  }
+ }
+ coords 5432.989 6.875 4653.755
+ angles 0 -63.526 0
+}
+$grp Vehicle : "{3277F8B1FA06A2BC}Prefabs/Vehicles/Wheeled/M998/M1025_armed_M2HB_USAF.et" {
+ M1025_armed_M2HB_USAF1 {
+  coords 7502.995 18.406 3239.429
+  angles 0 29.357 0
+  m_sAttachmentGroupName "usa3"
+ }
+ M1025_armed_M2HB_USAF2 {
+  coords 7487.164 18.563 3205.465
+  angles 0 17.97 0
+  m_sAttachmentGroupName "usa2"
+ }
+ M1025_armed_M2HB_USAF3 {
+  coords 7475.441 18.736 3158.266
+  angles 0 12.1 0
+  m_sAttachmentGroupName "usa"
+ }
+ M1025_armed_M2HB_USAF4 {
+  coords 6234.637 56.702 2249.085
+  angles 0 12.607 0
+  m_sAttachmentGroupName "usa7"
+ }
+ M1025_armed_M2HB_USAF6 {
+  coords 6237.74 55.1 2262.525
+  angles -1.952 8.082 0
+  m_sAttachmentGroupName "usa8"
+ }
+ M1025_armed_M2HB_USAF7 {
+  coords 6233.055 56.702 2242.012
+  angles 0 12.607 0
+  m_sAttachmentGroupName "usa7"
+ }
+ M1025_armed_M2HB_USAF5 {
+  coords 6239.897 53.623 2272.309
+  angles -3.115 10.549 -0.527
+  m_sAttachmentGroupName "usa8"
+ }
+}
+$grp Vehicle : "{3312ADBF53A16DD8}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS.et" {
+ LAV25_RHS1 {
+  coords 7465.395 18.562 3220.483
+  angles 0 96.579 0
+  m_sAttachmentGroupName "usa5"
+ }
+ LAV25_RHS2 {
+  coords 7481.783 18.563 3232.103
+  angles 0 104.746 0
+  m_sAttachmentGroupName "usa4"
+ }
+}
+$grp Vehicle : "{5E1DC2C51D589FC6}Prefabs/Vehicles/Wheeled/M998/M1025_armed_M2HB_su231c_USAF.et" {
+ M1025_armed_M2HB_su231c_USAF1 {
+  coords 7498.956 18.462 3232.486
+  angles 0 29.222 0
+  m_sAttachmentGroupName "usa3"
+ }
+ M1025_armed_M2HB_su231c_USAF2 {
+  coords 7484.246 18.562 3196.129
+  angles 0 16.579 0
+  m_sAttachmentGroupName "usa2"
+ }
+ M1025_armed_M2HB_su231c_USAF3 {
+  coords 7473.804 18.508 3149.559
+  angles 0 10.707 0
+  m_sAttachmentGroupName "usa"
+ }
+}
+SCR_AIGroup comusa : "{8BE5C4D411C5E59C}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_PL.et" {
+ coords 7511.993 18.563 3245.634
+ angles 0 -56.106 0
+ m_aUnitPrefabSlots +{
+  "{0D659E49AD2F5FF6}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/Char_RHS_USAF_Regular_Medic.et"
+ }
+}
+$grp SCR_AIGroup : "{955623450C88D6F3}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_Squad.et" {
+ usa {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 7478.086 18.528 3148.622
+  angles 0 -76.933 0
+ }
+ usa2 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 7488.313 18.562 3196.87
+  angles 0 -71.874 0
+ }
+ usa3 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 7499.095 18.421 3242.079
+  angles 0 118.964 0
+ }
+ usa8 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 4
+    m_iSquadCallsign 1
+   }
+  }
+  coords 6240.496 56.707 2262.173
+  angles 0 -77.164 0
+ }
+ usa7 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 4
+   }
+  }
+  coords 6236.16 56.707 2240.609
+  angles 0 -77.548 0
+ }
+}
+Vehicle M1025_USAF1 : "{CC55611936C21F25}Prefabs/Vehicles/Wheeled/M998/M1025_USAF.et" {
+ coords 7510.374 18.542 3250.321
+ angles 0 30.585 0
+ m_sAttachmentGroupName "comusa"
+}
+$grp SCR_AIGroup : "{F722F19CDE6535BA}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Squad_Motorized.et" {
+ usa5 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 7456.973 18.562 3216.988
+  angles 0 17.123 0
+ }
+ usa4 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 7486.533 18.562 3235.554
+  angles 0 -159.784 0
+ }
+}

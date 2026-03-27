@@ -1,0 +1,75 @@
+SCR_ChimeraCharacter : "{33B313818C46457C}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/Force_Recon/dim_USMC_TL.et" {
+ ID "520EC961A090B1EE"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "#AR-Role_Sniper"
+    Icon "{0C058E04C5ACCE05}UI/Icons/sniper.edds"
+   }
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{8909A91CFF369BB3}Prefabs/Weapons/Rifles/M40/Rifle_M40A5_Optic.et"
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFB7}" {
+   AttachType InventoryStorageSlot "{0C3DA650B52E127A}" {
+    Offset 0.029 -0.1063 0.114
+    Angles -69.8437 -3.9784 5.7731
+   }
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Back {
+    }
+    LoadoutSlotInfo Vest {
+     Prefab "{CDDD74E066712E76}Prefabs/Characters/Vests/GEN3_Pouches/Light/GD_Gen3_Light_Sniper_1.et"
+    }
+    LoadoutSlotInfo HandWear {
+     Prefab "{ABB779CFC2E11E89}Prefabs/Characters/Handwear/Gloves_MechanixMpact/Gloves_mpack_Covert.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{68934730EC96E78A}" {
+     TargetStorage "Vest/GD_Gen3_Light_Sniper_1.et/triple/Pouch_Blueforce_Tri.et"
+    }
+    ItemsInitConfigurationItem "{68934730FD287580}" {
+     PrefabsToSpawn {
+      "{C632D04DD25D3ABF}Prefabs/Weapons/Magazines/Pmag/Magazine_556x45_PmagWindowed_30rnd_M855A1.et" "{C632D04DD25D3ABF}Prefabs/Weapons/Magazines/Pmag/Magazine_556x45_PmagWindowed_30rnd_M855A1.et"
+     }
+    }
+    ItemsInitConfigurationItem "{68934730F8EB90F0}" {
+     TargetStorage "Vest/GD_Gen3_Light_Sniper_1.et/raid/Pouch_Shaw_Raid.et"
+     PrefabsToSpawn {
+      "{925F3A6F7FE0DE64}Prefabs/Weapons/Magazines/Magazine_762x51_M40_5rnd_M61AP.et" "{925F3A6F7FE0DE64}Prefabs/Weapons/Magazines/Magazine_762x51_M40_5rnd_M61AP.et" "{925F3A6F7FE0DE64}Prefabs/Weapons/Magazines/Magazine_762x51_M40_5rnd_M61AP.et" "{925F3A6F7FE0DE64}Prefabs/Weapons/Magazines/Magazine_762x51_M40_5rnd_M61AP.et"
+     }
+    }
+    ItemsInitConfigurationItem "{6893473303960BA9}" {
+     TargetStorage "Vest/GD_Gen3_Light_Sniper_1.et/holster3/Pouch_Filbe_M67_2.et"
+    }
+    ItemsInitConfigurationItem "{689347330D500C12}" {
+     TargetStorage "Vest/GD_Gen3_Light_Sniper_1.et/holster2/Pouch_Filbe_M67_Base.et"
+    }
+    ItemsInitConfigurationItem "{689347330A94E8FF}" {
+     TargetStorage "Vest/GD_Gen3_Light_Sniper_1.et/pistol/Pouch_HP103_Holster_Coyout.et"
+    }
+    ItemsInitConfigurationItem "{689347331C18C584}" {
+     TargetStorage "Pants/Pants_FROG_WD.et"
+     PrefabsToSpawn {
+      "{925F3A6F7FE0DE64}Prefabs/Weapons/Magazines/Magazine_762x51_M40_5rnd_M61AP.et" "{925F3A6F7FE0DE64}Prefabs/Weapons/Magazines/Magazine_762x51_M40_5rnd_M61AP.et" "{925F3A6F7FE0DE64}Prefabs/Weapons/Magazines/Magazine_762x51_M40_5rnd_M61AP.et" "{925F3A6F7FE0DE64}Prefabs/Weapons/Magazines/Magazine_762x51_M40_5rnd_M61AP.et"
+     }
+    }
+    ItemsInitConfigurationItem "{6893473323FF74C2}" {
+     TargetStorage "Vest/GD_Gen3_Light_Sniper_1.et/admin/Pouch_Shaw_Nerd_Mini.et"
+     PrefabsToSpawn {
+      "{925F3A6F7FE0DE64}Prefabs/Weapons/Magazines/Magazine_762x51_M40_5rnd_M61AP.et" "{925F3A6F7FE0DE64}Prefabs/Weapons/Magazines/Magazine_762x51_M40_5rnd_M61AP.et" "{925F3A6F7FE0DE64}Prefabs/Weapons/Magazines/Magazine_762x51_M40_5rnd_M61AP.et" "{925F3A6F7FE0DE64}Prefabs/Weapons/Magazines/Magazine_762x51_M40_5rnd_M61AP.et"
+     }
+    }
+    ItemsInitConfigurationItem "{689347334C694702}" {
+     Enabled 0
+    }
+   }
+  }
+ }
+ coords 3475.129 17.844 5463.685
+}

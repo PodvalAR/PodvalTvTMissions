@@ -1,0 +1,337 @@
+SCR_AIGroup rus3 : "{1128EBD3DDFF1D07}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Motorized.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+   m_iSquadCallsign 2
+  }
+ }
+ coords 12047.907 6.125 3509.781
+ angles 0 83.653 0
+ m_sCustomNameSet "Остатки группировки"
+}
+Vehicle Ural4320_command1 : "{1BABF6B33DA0AEB6}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_command.et" {
+ coords 12049.802 6.125 3541.608
+ angles 0 -171.303 0
+ m_sAttachmentGroupName "rus1"
+}
+$grp Vehicle : "{2CCD539A7AB35B2F}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_camo1.et" {
+ Ural4320_transport_camo2 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{5916C58171230A92}" {
+    MultiSlots {
+     MultiSlotConfiguration "{5A60D38EDB3709A9}" {
+      SlotTemplate InventoryStorageSlot Bandages {
+       Prefab "{95544A428439B73E}Prefabs/Weapons/Magazines/2B9/Magazine__82mm_2B9_HE.et"
+      }
+     }
+     MultiSlotConfiguration "{68D723AD9FB732DB}" {
+      SlotTemplate InventoryStorageSlot smoke {
+       Prefab "{AE998243157183A5}Prefabs/Weapons/Magazines/2B9/Magazine__82mm_2B9_Smoke.et"
+      }
+      NumSlots 50
+     }
+     MultiSlotConfiguration "{68D723AA4980E984}" {
+      SlotTemplate InventoryStorageSlot smoke {
+       Prefab "{DD96BA1FF0C2E5CD}Prefabs/Items/Equipment/BallisticTable/TF_BallisticTable_USSR_2B9.et"
+      }
+      NumSlots 2
+     }
+    }
+   }
+  }
+  coords 4919.257 327.406 9993.532
+  angles 0 -123.669 0
+  m_sAttachmentGroupName "ru55"
+ }
+ Ural4320_transport_camo1 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{5916C58171230A92}" {
+    MultiSlots {
+     MultiSlotConfiguration "{5A60D38EDB3709A9}" {
+      SlotTemplate InventoryStorageSlot Bandages {
+       Prefab "{95544A428439B73E}Prefabs/Weapons/Magazines/2B9/Magazine__82mm_2B9_HE.et"
+      }
+     }
+     MultiSlotConfiguration "{68D723AD9FB732DB}" {
+      SlotTemplate InventoryStorageSlot smoke {
+       Prefab "{AE998243157183A5}Prefabs/Weapons/Magazines/2B9/Magazine__82mm_2B9_Smoke.et"
+      }
+      NumSlots 50
+     }
+     MultiSlotConfiguration "{68D723AA4980E984}" {
+      SlotTemplate InventoryStorageSlot smoke {
+       Prefab "{DD96BA1FF0C2E5CD}Prefabs/Items/Equipment/BallisticTable/TF_BallisticTable_USSR_2B9.et"
+      }
+      NumSlots 2
+     }
+    }
+   }
+  }
+  coords 4925.831 327.406 9983.833
+  angles 0 -124.739 0
+  m_sAttachmentGroupName "ru55"
+ }
+ Ural4320_transport_camo3 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{5916C58171230A92}" {
+    MultiSlots {
+     MultiSlotConfiguration "{5A60D38EDB3709A9}" {
+      SlotTemplate InventoryStorageSlot Bandages {
+       Prefab "{95544A428439B73E}Prefabs/Weapons/Magazines/2B9/Magazine__82mm_2B9_HE.et"
+      }
+     }
+     MultiSlotConfiguration "{68D723AD9FB732DB}" {
+      SlotTemplate InventoryStorageSlot smoke {
+       Prefab "{AE998243157183A5}Prefabs/Weapons/Magazines/2B9/Magazine__82mm_2B9_Smoke.et"
+      }
+      NumSlots 50
+     }
+     MultiSlotConfiguration "{68D723AA4980E984}" {
+      SlotTemplate InventoryStorageSlot smoke {
+       Prefab "{DD96BA1FF0C2E5CD}Prefabs/Items/Equipment/BallisticTable/TF_BallisticTable_USSR_2B9.et"
+      }
+      NumSlots 2
+     }
+    }
+   }
+  }
+  coords 4932.673 327.406 9973.529
+  angles 0 -122.167 0
+  m_sAttachmentGroupName "ru55"
+ }
+}
+$grp Vehicle : "{3EC2F73F0C7D04CF}Prefabs/Vehicles/Wheeled/K4386/K4386_Armed_Camo_3UBR11_NoTeplak.et" {
+ K4386_Armed_Camo_3UBR11_NoTeplak1 {
+  coords 6189.198 290.147 7687.506
+  angles 0 123.237 0
+  m_sAttachmentGroupName "rus4"
+ }
+ K4386_Armed_Camo_3UBR11_NoTeplak2 {
+  coords 6177.151 290.733 7696
+  angles 0 123.237 0
+  m_sAttachmentGroupName "rus5"
+ }
+}
+$grp Vehicle : "{447CFE8D73F95C40}Prefabs/Vehicles/Wheeled/BTR70/BTR70_AFRF.et" {
+ BTR70_AFRF1 {
+  coords 12052.935 5.75 3506.369
+  angles 0 172.997 0
+  m_sAttachmentGroupName "rus3"
+ }
+ BTR70_AFRF2 {
+  coords 12050.331 6.018 3520.282
+  angles -3.549 172.97 0.437
+  m_sAttachmentGroupName "rus2"
+ }
+}
+SCR_AIGroup rus1 : "{496070641528229D}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_PL.et" {
+ coords 12044.742 6.125 3540.219
+ angles 0 110.677 0
+ m_aUnitPrefabSlots {
+  "{7551E181CE4C6845}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Officer.et"
+ }
+ m_sCustomNameSet "Герой битвы за \"Камышово\""
+}
+$grp Vehicle : "{5C38170BFBE9F966}Prefabs/Vehicles/Wheeled/TIGR/KORD/GAZ_TIGR_v2_KORD_SSP_ARMOR_CAMO.et" {
+ GAZ_TIGR_v2_KORD_SSP_ARMOR_CAMO2 {
+  coords 6165.987 291.085 7704.484
+  angles 0 123.981 0
+  m_sAttachmentGroupName "rus6"
+ }
+ GAZ_TIGR_v2_KORD_SSP_ARMOR_CAMO3 {
+  coords 6153.675 291.341 7712.513
+  angles 0 123.981 0
+  m_sAttachmentGroupName "rus7"
+ }
+ GAZ_TIGR_v2_KORD_SSP_ARMOR_CAMO4 {
+  coords 6143.877 291.573 7718.074
+  angles 0 121.65 0
+  m_sAttachmentGroupName "rus9"
+ }
+}
+$grp SCR_AIGroup : "{B851352F042E4F0B}Prefabs/Groups/OPFOR/RHS_AFRF/Recon/Group_RHS_AFRF_Recon_Squad.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 1
+   }
+  }
+  coords 4937.444 327.404 9934.956
+  angles 0 58.974 0
+  m_sCustomNameSet "Отряд десанта"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 4932.247 327.405 9943.108
+  angles 0 58.974 0
+  m_sCustomNameSet "Отряд десанта"
+ }
+}
+$grp SCR_AIGroup : "{D266A249A174B7C7}Prefabs/Groups/OPFOR/RHS_AFRF/Recon/Group_RHS_AFRF_Recon_Squad_7.et" {
+ rus4 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 6183.31 290.499 7685.844
+  angles 0 34.225 0
+  m_aUnitPrefabSlots {
+   "{A3AA1922DBC58B2E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/FSB/Shturm/dim_FSB_Shturm_SL.et"
+   "{A46DE373BD4331ED}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/FSB/Shturm/dim_FSB_Shturm_TL.et"
+   "{BBDFDBBF246219A7}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/FSB/Shturm/dim_FSB_Shturm_Rifleman.et"
+   "{012A86F6711E5FA2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/FSB/Shturm/dim_FSB_Shturm_Rifleman_2.et"
+   "{762780535F28CADC}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/FSB/Shturm/dim_FSB_Shturm_Rifleman_3.et"
+   "{C3F7961C1EF64017}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/FSB/Shturm/dim_FSB_Shturm_GL.et"
+   "{A0B06BC89D12FE3D}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/FSB/Shturm/dim_FSB_LightAT.et"
+  }
+  m_sCustomNameSet "Специалисты по штурму городов"
+ }
+ rus5 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 6172.386 290.769 7693.384
+  angles 0 34.225 0
+  m_aUnitPrefabSlots {
+   "{A3AA1922DBC58B2E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/FSB/Shturm/dim_FSB_Shturm_SL.et"
+   "{A46DE373BD4331ED}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/FSB/Shturm/dim_FSB_Shturm_TL.et"
+   "{BBDFDBBF246219A7}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/FSB/Shturm/dim_FSB_Shturm_Rifleman.et"
+   "{012A86F6711E5FA2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/FSB/Shturm/dim_FSB_Shturm_Rifleman_2.et"
+   "{762780535F28CADC}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/FSB/Shturm/dim_FSB_Shturm_Rifleman_3.et"
+   "{C3F7961C1EF64017}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/FSB/Shturm/dim_FSB_Shturm_GL.et"
+   "{A0B06BC89D12FE3D}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/FSB/Shturm/dim_FSB_LightAT.et"
+  }
+  m_sCustomNameSet "Специалисты по штурму городов"
+ }
+ rus6 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 6160.715 291.168 7701.751
+  angles 0 34.225 0
+  m_aUnitPrefabSlots {
+   "{581C5812DD6A8A4F}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_SL.et"
+   "{2504B4EAB8F9B6D6}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_SR.et"
+   "{87927E73B0E976C2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_RPO.et"
+   "{6783771781A13CBF}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_MG.et"
+   "{3841D72C18594176}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_GL.et"
+   "{9B7078FF37FEA321}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_Sharpshooter.et"
+  }
+  m_sCustomNameSet "Штрумовая группа "
+ }
+ rus7 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 6148.447 291.429 7709.861
+  angles 0 34.225 0
+  m_aUnitPrefabSlots {
+   "{581C5812DD6A8A4F}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_SL.et"
+   "{2504B4EAB8F9B6D6}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_SR.et"
+   "{87927E73B0E976C2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_RPO.et"
+   "{6783771781A13CBF}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_MG.et"
+   "{B80041ECF565397A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_Sapper.et"
+   "{9B7078FF37FEA321}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_Sharpshooter.et"
+  }
+  m_sCustomNameSet "Штрумовая группа "
+ }
+ rus9 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 6139.517 291.62 7715.231
+  angles 0 34.225 0
+  m_aUnitPrefabSlots {
+   "{581C5812DD6A8A4F}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_SL.et"
+   "{2504B4EAB8F9B6D6}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_SR.et"
+   "{87927E73B0E976C2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_RPO.et"
+   "{6783771781A13CBF}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_MG.et"
+   "{B80041ECF565397A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_Sapper.et"
+   "{9B7078FF37FEA321}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_Sharpshooter.et"
+  }
+  m_sCustomNameSet "Штрумовая группа "
+ }
+}
+$grp Turret : "{D2E76AD59A5A3F41}Prefabs/Weapons/Core/Turret_2B9.et" {
+ {
+  coords 4941.085 327.406 9979.355
+  angles 0 56.104 0
+ }
+ {
+  coords 4926.52 327.406 9998.788
+  angles 0 55.09 0
+ }
+ {
+  coords 4934.001 327.406 9989.756
+  angles 0 56.104 0
+ }
+}
+SCR_AIGroup rus10 : "{D43A9753198C5D8F}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Heli.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+   m_iCompanyCallsign 4
+  }
+ }
+ coords 4927.879 327.405 9950.242
+ angles 0 58.493 0
+ m_sCustomNameSet "Экипаж отвественный за снос"
+}
+Vehicle Mi8MT_armed_gunship_HE_Podval2 : "{DA92C428D572C1C7}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_armed_gunship_HE_Podval.et" {
+ coords 4945.531 327.406 9952.683
+ angles 0 -35.638 0
+ m_sAttachmentGroupName "rus10"
+}
+SCR_AIGroup ru55 : "{E625399A1E96672A}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_PL_2.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+   m_iCompanyCallsign 5
+  }
+ }
+ coords 4910.841 327.406 9983.897
+ angles 0 62.574 0
+ m_aUnitPrefabSlots {
+  "{94F58255908E89A8}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_SL_Opt.et"
+  "{78410A549262E06D}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Rifle.et"
+  "{78410A549262E06D}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Rifle.et"
+  "{78410A549262E06D}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Rifle.et"
+ }
+ m_sCustomNameSet "Группа 2Б9"
+}
+SCR_AIGroup rus2 : "{EB131DDF464F90FD}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Squad.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+   m_iSquadCallsign 1
+  }
+ }
+ coords 12045.937 6.057 3524.664
+ angles 0 84.194 0
+ m_aUnitPrefabSlots {
+  "{998515E06ED7A4C9}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_SL.et"
+  "{E49DF9180B449850}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_SR.et"
+  "{2CA58D3E25DA1886}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_AT.et"
+  "{D90B2AEF04BBE301}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_AAT.et"
+  "{F40DE4FF5C5306DA}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_AR.et"
+  "{F9D89ADEABE46FF0}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_GL.et"
+  "{78410A549262E06D}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Rifle.et"
+  "{1D25ADA8774D4BD2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Medic.et"
+  "{C71B7D7DEAD5B6F3}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Crew.et"
+  "{C71B7D7DEAD5B6F3}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Crew.et"
+ }
+ m_sCustomNameSet "Остатки группировки"
+}

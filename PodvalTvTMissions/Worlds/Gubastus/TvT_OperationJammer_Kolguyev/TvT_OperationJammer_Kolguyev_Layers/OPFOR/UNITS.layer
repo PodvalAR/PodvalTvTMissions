@@ -1,180 +1,200 @@
-SCR_AIGroup USSR_000 : "{0D10CCEEC7B3EC34}Prefabs/Groups/OPFOR/Group_USSR_PlatoonHQ.et" {
- components {
-  AIFormationComponent "{507E9DC12F541FE6}" {
-   DefaultFormation ""
-  }
-  PS_GroupCallsignAssigner "{66C87705D1C078D6}" {
-   m_iPlatoonCallsign 0
-  }
- }
- coords 10521.317 22.406 9726.991
- angles 0 16.738 0
- m_sCustomNameSet "Командир стороны"
- m_bSetPlayable 1
-}
-$grp SCR_AIGroup : "{666A2B0A6B1967AE}Prefabs/Groups/OPFOR/Spetsnaz/Suppressed/Group_USSR_Spetsnaz_ReconSquad.et" {
- USSR_301 {
+$grp SCR_AIGroup : "{1041E60A9AB94408}Prefabs/Groups/OPFOR/USSR/Group_USSR_Rifle_BTR_SQ.et" {
+ USSR_110 {
   components {
-   AIFormationComponent "{507E9DC12F541FE6}" {
-    DefaultFormation ""
-   }
-   PS_GroupCallsignAssigner "{66C87705D6AEB3EF}" {
-    m_iCompanyCallsign 3
-    m_iPlatoonCallsign 0
-    m_iSquadCallsign 1
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
    }
   }
-  coords 10534.726 22.407 9722.959
-  angles 0 16.738 0
-  m_sCustomNameSet "Отряд СПН"
-  m_bSetPlayable 1
- }
- USSR_300 {
-  components {
-   AIFormationComponent "{507E9DC12F541FE6}" {
-    DefaultFormation ""
-   }
-   PS_GroupCallsignAssigner "{66C87705D7017525}" {
-    m_iCompanyCallsign 3
-    m_iPlatoonCallsign 0
-   }
+  coords 9575.017 11.563 8658.372
+  angles 0 40.015 0
+  m_aUnitPrefabSlots {
+   "{8A7E668F5E102151}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_SL_RANDOM.et"
+   "{CDE7F53CAD55EAE4}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_SR_RANDOM.et"
+   "{635E00E006AD9962}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_MG_RANDOM.et"
+   "{D67D1D2E58DBC25B}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_AMG_RANDOM.et"
+   "{6C63188AE2BE1F52}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_AT_RANDOM.et"
+   "{D9400544BCC8446B}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_AAT_RANDOM.et"
+   "{29786A5DBA2EC48A}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_Rifleman.et"
+   "{BA92838DA2F16499}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_Sharpshooter_RANDOM.et"
+   "{963A4B934971EBDF}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_CC_RANDOM.et"
+   "{7DE3DB256DCC5CB6}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_CREW_RANDOM.et"
   }
-  coords 10528.979 22.407 9724.688
-  angles 0 16.738 0
-  m_sCustomNameSet "Отряд СПН"
-  m_bSetPlayable 1
- }
-}
-$grp SCR_AIGroup : "{E552DABF3636C2AD}Prefabs/Groups/OPFOR/Group_USSR_RifleSquad.et" {
- USSR_202 {
-  components {
-   AIFormationComponent "{507E9DC12F541FE6}" {
-    DefaultFormation ""
-   }
-   PS_GroupCallsignAssigner "{66C87705CCA860D4}" {
-    m_iCompanyCallsign 2
-    m_iPlatoonCallsign 0
-    m_iSquadCallsign 2
-   }
-  }
-  coords 8603.242 95.676 9303.521
-  angles 0 135 0
-  m_sCustomNameSet "Пехотный отряд"
-  m_bSetPlayable 1
  }
  USSR_210 {
   components {
-   AIFormationComponent "{507E9DC12F541FE6}" {
-    DefaultFormation ""
-   }
-   PS_GroupCallsignAssigner "{66C87705CE80DB98}" {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
     m_iCompanyCallsign 2
     m_iPlatoonCallsign 1
    }
   }
-  coords 8597.938 95.841 9298.218
-  angles 0 135 0
-  m_aUnitPrefabSlots +{
-   "{DCB41B3746FDD1BE}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Rifleman.et"
-   "{DCB41B3746FDD1BE}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Rifleman.et"
-   "{9FFEF10757E742EB}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Crew.et"
-   "{9FFEF10757E742EB}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Crew.et"
+  coords 8593.162 95.965 9291.081
+  angles 0 -42.134 0
+  m_aUnitPrefabSlots {
+   "{8A7E668F5E102151}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_SL_RANDOM.et"
+   "{CDE7F53CAD55EAE4}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_SR_RANDOM.et"
+   "{635E00E006AD9962}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_MG_RANDOM.et"
+   "{D67D1D2E58DBC25B}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_AMG_RANDOM.et"
+   "{6C63188AE2BE1F52}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_AT_RANDOM.et"
+   "{D9400544BCC8446B}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_AAT_RANDOM.et"
+   "{29786A5DBA2EC48A}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_Rifleman.et"
+   "{BA92838DA2F16499}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_Sharpshooter_RANDOM.et"
+   "{963A4B934971EBDF}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_CC_RANDOM.et"
+   "{7DE3DB256DCC5CB6}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_CREW_RANDOM.et"
   }
-  m_sCustomNameSet "Комбинированный отряд"
-  m_bSetPlayable 1
  }
- USSR_201 {
+}
+SCR_AIGroup USSR_000 : "{706340F7481FF22F}Prefabs/Groups/OPFOR/USSR/Group_USSR_PL.et" {
+ coords 10525.143 22.406 9728.617
+ angles 0 -160.726 0
+ m_aUnitPrefabSlots {
+  "{426F7FAAC77A2A6E}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_PL.et"
+  "{A6692ACBBF0E2764}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_SR.et"
+  "{BB2C490D1FAED0C4}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_GL.et"
+  "{611EE4D65E98F87B}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_AR.et"
+  "{F34FC121F4B43694}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_Sharpshooter.et"
+ }
+}
+$grp SCR_AIGroup : "{84AF92E239A71FCE}Prefabs/Groups/OPFOR/USSR/Group_USSR_Rifle_SQ.et" {
+ USSR_300 {
   components {
-   AIFormationComponent "{507E9DC12F541FE6}" {
-    DefaultFormation ""
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 3
    }
-   PS_GroupCallsignAssigner "{66C87705CF75B17C}" {
-    m_iCompanyCallsign 2
+  }
+  coords 10534.376 22.406 9726.046
+  angles 0 -161.885 0
+  m_aUnitPrefabSlots {
+   "{DB71C633DA9D1BFD}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_SL.et"
+   "{A6692ACBBF0E2764}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_SR.et"
+   "{6E515EED9190A7B2}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_AT.et"
+   "{723C3899F7BC9B08}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_AAT.et"
+   "{29786A5DBA2EC48A}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_Rifleman.et"
+   "{F34FC121F4B43694}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_Sharpshooter.et"
+  }
+ }
+ USSR_100 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 9592.613 11.563 8643.318
+  angles 0 40.662 0
+  m_aUnitPrefabSlots {
+   "{DB71C633DA9D1BFD}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_SL.et"
+   "{A6692ACBBF0E2764}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_SR.et"
+   "{6E515EED9190A7B2}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_AT.et"
+   "{723C3899F7BC9B08}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_AAT.et"
+   "{29786A5DBA2EC48A}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_Rifleman.et"
+   "{F34FC121F4B43694}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_Sharpshooter.et"
+  }
+ }
+ USSR_301 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 3
     m_iSquadCallsign 1
    }
   }
-  coords 8607.484 95.574 9307.764
-  angles 0 135 0
-  m_sCustomNameSet "Пехотный отряд"
-  m_bSetPlayable 1
- }
- USSR_200 {
-  components {
-   AIFormationComponent "{507E9DC12F541FE6}" {
-    DefaultFormation ""
-   }
-   PS_GroupCallsignAssigner "{66C87705C804545F}" {
-    m_iCompanyCallsign 2
-   }
+  coords 10543.268 22.406 9723.439
+  angles 0 -161.885 0
+  m_aUnitPrefabSlots {
+   "{DB71C633DA9D1BFD}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_SL.et"
+   "{A6692ACBBF0E2764}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_SR.et"
+   "{6E515EED9190A7B2}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_AT.et"
+   "{723C3899F7BC9B08}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_AAT.et"
+   "{29786A5DBA2EC48A}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_Rifleman.et"
+   "{F34FC121F4B43694}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_Sharpshooter.et"
   }
-  coords 8611.727 95.469 9312.006
-  angles 0 135 0
-  m_sCustomNameSet "Пехотный отряд"
-  m_bSetPlayable 1
  }
- USSR_110 {
+ USSR_101 {
   components {
-   AIFormationComponent "{507E9DC12F541FE6}" {
-    DefaultFormation ""
-   }
-   PS_GroupCallsignAssigner "{66C87705CAEDB83F}" {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
     m_iCompanyCallsign 1
-    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
    }
   }
-  coords 9582.842 11.563 8654.288
-  angles 0 -140.507 0
-  m_aUnitPrefabSlots +{
-   "{DCB41B3746FDD1BE}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Rifleman.et"
-   "{DCB41B3746FDD1BE}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Rifleman.et"
-   "{9FFEF10757E742EB}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Crew.et"
-   "{9FFEF10757E742EB}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Crew.et"
+  coords 9588.062 11.563 8647.228
+  angles 0 40.662 0
+  m_aUnitPrefabSlots {
+   "{DB71C633DA9D1BFD}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_SL.et"
+   "{A6692ACBBF0E2764}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_SR.et"
+   "{6E515EED9190A7B2}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_AT.et"
+   "{723C3899F7BC9B08}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_AAT.et"
+   "{29786A5DBA2EC48A}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_Rifleman.et"
+   "{F34FC121F4B43694}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_Sharpshooter.et"
   }
-  m_sCustomNameSet "Комбинированный отряд"
-  m_bSetPlayable 1
  }
  USSR_102 {
   components {
-   AIFormationComponent "{507E9DC12F541FE6}" {
-    DefaultFormation ""
-   }
-   PS_GroupCallsignAssigner "{66C87705CBE4C7CA}" {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
     m_iCompanyCallsign 1
     m_iSquadCallsign 2
    }
   }
-  coords 9588.63 11.563 8649.518
-  angles 0 -140.507 0
-  m_sCustomNameSet "Пехотный отряд"
-  m_bSetPlayable 1
+  coords 9583.51 11.563 8651.137
+  angles 0 40.662 0
+  m_aUnitPrefabSlots {
+   "{DB71C633DA9D1BFD}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_SL.et"
+   "{A6692ACBBF0E2764}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_SR.et"
+   "{6E515EED9190A7B2}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_AT.et"
+   "{723C3899F7BC9B08}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_AAT.et"
+   "{29786A5DBA2EC48A}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_Rifleman.et"
+   "{F34FC121F4B43694}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_Sharpshooter.et"
+  }
  }
- USSR_101 {
+ USSR_200 {
   components {
-   AIFormationComponent "{507E9DC12F541FE6}" {
-    DefaultFormation ""
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 2
    }
-   PS_GroupCallsignAssigner "{66C87705D4923155}" {
-    m_iCompanyCallsign 1
+  }
+  coords 8610.145 95.545 9306.974
+  angles 0 -42.962 0
+  m_aUnitPrefabSlots {
+   "{DB71C633DA9D1BFD}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_SL.et"
+   "{A6692ACBBF0E2764}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_SR.et"
+   "{6E515EED9190A7B2}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_AT.et"
+   "{723C3899F7BC9B08}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_AAT.et"
+   "{29786A5DBA2EC48A}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_Rifleman.et"
+   "{F34FC121F4B43694}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_Sharpshooter.et"
+  }
+ }
+ USSR_201 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 2
     m_iSquadCallsign 1
    }
   }
-  coords 9593.26 11.563 8645.702
-  angles 0 -140.507 0
-  m_sCustomNameSet "Пехотный отряд"
-  m_bSetPlayable 1
+  coords 8605.754 95.646 9302.885
+  angles 0 -42.962 0
+  m_aUnitPrefabSlots {
+   "{DB71C633DA9D1BFD}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_SL.et"
+   "{A6692ACBBF0E2764}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_SR.et"
+   "{6E515EED9190A7B2}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_AT.et"
+   "{723C3899F7BC9B08}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_AAT.et"
+   "{29786A5DBA2EC48A}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_Rifleman.et"
+   "{F34FC121F4B43694}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_Sharpshooter.et"
+  }
  }
- USSR_100 {
+ USSR_202 {
   components {
-   AIFormationComponent "{507E9DC12F541FE6}" {
-    DefaultFormation ""
-   }
-   PS_GroupCallsignAssigner "{66C87705D583FB47}" {
-    m_iCompanyCallsign 1
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 2
    }
   }
-  coords 9597.89 11.563 8641.886
-  angles 0 -140.507 0
-  m_sCustomNameSet "Пехотный отряд"
-  m_bSetPlayable 1
+  coords 8601.363 95.779 9298.796
+  angles 0 -42.962 0
+  m_aUnitPrefabSlots {
+   "{DB71C633DA9D1BFD}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_SL.et"
+   "{A6692ACBBF0E2764}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_SR.et"
+   "{6E515EED9190A7B2}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_AT.et"
+   "{723C3899F7BC9B08}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_AAT.et"
+   "{29786A5DBA2EC48A}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_Rifleman.et"
+   "{F34FC121F4B43694}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_Sharpshooter.et"
+  }
  }
 }

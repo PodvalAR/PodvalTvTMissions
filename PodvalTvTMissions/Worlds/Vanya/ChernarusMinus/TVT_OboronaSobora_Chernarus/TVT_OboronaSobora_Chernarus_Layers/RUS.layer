@@ -1,0 +1,190 @@
+Vehicle dim_UAZ2 : "{0ACA2ED6AD52D641}Prefabs/Vehicles/Wheeled/UAZ469/dim_UAZ469.et" {
+ coords 6283.739 294.031 7821.798
+ angles 0 -56.425 0
+ m_sAttachmentGroupName "ruu4"
+}
+$grp SCR_AIGroup : "{1128EBD3DDFF1D07}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Motorized.et" {
+ ruu6 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 6321.501 294.031 7747.899
+  angles 0 34.496 0
+  m_sCustomNameSet "Патруль Старого Собора"
+ }
+ ruu5 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 6343.104 294.031 7767.483
+  angles 0 -146.109 0
+  m_aUnitPrefabSlots {
+   "{998515E06ED7A4C9}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_SL.et"
+   "{E49DF9180B449850}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_SR.et"
+   "{2CA58D3E25DA1886}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_AT.et"
+   "{D90B2AEF04BBE301}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_AAT.et"
+   "{F40DE4FF5C5306DA}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_AR.et"
+   "{9B17487B1BB8E272}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Rifle_opt.et"
+   "{E4C1E22F77E5DBEF}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Sharpshooter.et"
+   "{C71B7D7DEAD5B6F3}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Crew.et"
+   "{E6D5BAE5703C9AA7}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Crew_Gunner.et"
+  }
+  m_sCustomNameSet "Патруль Старого Собора"
+ }
+}
+Turret : "{1A407760EEAE4156}Prefabs/Vehicles/Static/BaconZU23/BaconZU23_Turret_Deployed.et" {
+ coords 6307.671 305.338 7810.279
+ angles -0.977 -0.012 0.677
+}
+$grp Vehicle : "{2C95509CA3E61DE1}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_command_camo1.et" {
+ Ural4320_command_camo1 {
+  coords 6354.408 294.031 7773.635
+  angles 0 -142.956 0
+ }
+ Ural4320_command_camo2 {
+  coords 6348.844 294.031 7778.079
+  angles 0 -142.956 0
+ }
+}
+Vehicle Mi8MT_armed_Podval1 : "{31E004EC353C42B2}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_armed_Podval.et" {
+ coords 6274.033 294.362 7791.884
+ angles 0 34.869 0
+ m_sAttachmentGroupName "ruu2"
+}
+$grp Vehicle : "{447CFE8D73F95C40}Prefabs/Vehicles/Wheeled/BTR70/BTR70_AFRF.et" {
+ BTR70_AFRF4 {
+  coords 6326.711 294.031 7750.739
+  angles 0 -56.714 0
+  m_sAttachmentGroupName "ruu6"
+ }
+ BTR70_AFRF2 {
+  coords 6337.399 294.031 7765.528
+  angles 0 -54.906 0
+  m_sAttachmentGroupName "ruu5"
+ }
+}
+SCR_AIGroup ruu1 : "{496070641528229D}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_PL.et" {
+ coords 6321.584 294.031 7781.847
+ angles 0 -145.073 0
+ m_aUnitPrefabSlots {
+  "{7551E181CE4C6845}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Officer.et"
+ }
+ m_sCustomNameSet "Штабной генерал "
+}
+SCR_AIGroup ruu4 : "{8418108290CF1C16}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Sniper.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+   m_iCompanyCallsign 2
+  }
+ }
+ coords 6285.666 294.031 7824.815
+ angles 0 -147.29 0
+ m_sCustomNameSet "Снайперcкая пара"
+}
+SCR_AIGroup : "{B851352F042E4F0B}Prefabs/Groups/OPFOR/RHS_AFRF/Recon/Group_RHS_AFRF_Recon_Squad.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+   m_iCompanyCallsign 2
+   m_iSquadCallsign 1
+  }
+ }
+ coords 6289.117 294.031 7804.935
+ angles 0 -146.561 0
+ m_sCustomNameSet "Резверный отряд десанта"
+}
+SCR_AIGroup ruu2 : "{D43A9753198C5D8F}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Heli.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+   m_iCompanyCallsign 4
+  }
+ }
+ coords 6279.657 294.031 7811.88
+ angles 0 -143.22 0
+ m_sCustomNameSet "Отряд запасных пилотов"
+}
+Vehicle Ural4320_transport_covered1 : "{D9B91FAB817A6033}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_covered.et" {
+ components {
+  SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+   FuelNodes {
+    SCR_FuelNode "{5622A70CD4036C5A}" {
+     m_fInitialFuelTankState 0
+    }
+    SCR_FuelNode "{5628CA84B129D4CE}" {
+     MaxFuel 0
+     m_fInitialFuelTankState 0
+    }
+   }
+  }
+  SCR_UniversalInventoryStorageComponent "{5916C58171230A92}" {
+   MultiSlots {
+    MultiSlotConfiguration "{5A60D38EDB3709A9}" {
+     SlotTemplate InventoryStorageSlot Bandages {
+      Prefab "{1742632597955A55}Prefabs/Items/Misc/Sandbags/Part_Sandbag_Plastic.et"
+     }
+     NumSlots 300
+    }
+   }
+  }
+ }
+ coords 6305.321 294.031 7779.141
+ angles 0 127.365 0
+ m_sAttachmentGroupName "ruu1"
+}
+$grp SCR_AIGroup : "{E625399A1E96672A}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_PL_2.et" {
+ ru4 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iSquadCallsign 1
+   }
+  }
+  coords 6319.272 294.031 7783.504
+  angles 0 -145.03 0
+  m_aUnitPrefabSlots {
+   "{94F58255908E89A8}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_SL_Opt.et"
+   "{78410A549262E06D}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Rifle.et"
+   "{78410A549262E06D}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Rifle.et"
+   "{78410A549262E06D}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Rifle.et"
+   "{78410A549262E06D}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Rifle.et"
+   "{60B377AF7386AADC}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Sapper.et"
+   "{1D25ADA8774D4BD2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Medic.et"
+  }
+  m_sCustomNameSet "Срочники"
+ }
+ ru2 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iSquadCallsign 2
+   }
+  }
+  coords 6308.943 294.031 7790.597
+  angles 0 -145.03 0
+  m_aUnitPrefabSlots {
+   "{94F58255908E89A8}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_SL_Opt.et"
+   "{78410A549262E06D}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Rifle.et"
+   "{78410A549262E06D}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Rifle.et"
+   "{78410A549262E06D}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Rifle.et"
+   "{78410A549262E06D}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Rifle.et"
+   "{60B377AF7386AADC}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Sapper.et"
+   "{1D25ADA8774D4BD2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Medic.et"
+  }
+  m_sCustomNameSet "Срочники"
+ }
+}
+GenericEntity : "{F5EF4223ACA6169D}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_02_V1_AFRF.et" {
+ components {
+  BaseActionsManagerComponent "{6202D4E6F133BF4A}" {
+   additionalActions {
+    PS_FlagChangeAction "{6202D4E6A53D4B3C}" {
+     Duration 15
+    }
+   }
+  }
+ }
+ coords 6309.056 305.377 7802.966
+ angles 1.232 -52.008 -34.276
+}

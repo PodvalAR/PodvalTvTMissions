@@ -1,5 +1,14 @@
 GenericEntity : "{574B8B93E7DDD76D}Prefabs/System/MissionRandomizer/GUB_RandomizeMissionPrefab.et" {
  components {
+  GUB_RandomizeLossesComponent "{68DEB995D025C63E}" {
+   m_bIsAdvanceGameStage 0
+   m_sMessageDefendWin "Атака понесла критические потери! Победа Обороны!"
+   m_sMessageAttackWin "Оборона понесла критические потери! Победа Атаки!"
+   m_aObjectiveNames {
+    "ObjectiveAttackWin"
+    "ObjectiveDefendWin"
+   }
+  }
   GUB_RandomizeMissionComponent "{68A6D25C69D035C5}" {
    m_aFactionPrefabs {
     GUB_FactionPrefab "{68B6C7459A1E0B05}" : "{585DAD11963FFC1F}Configs/RandomPrefabConfig_AFRF.conf" {

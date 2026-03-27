@@ -1,0 +1,415 @@
+$grp SCR_AIGroup : "{3F29EA2D79388D65}Prefabs/Groups/BLUFOR/Ses_CDF/Group_A2F_CDF_Motorized.et" {
+ crew3 {
+  components {
+   PS_GroupCallsignAssigner "{68A30C9A9E8D83F4}" {
+    m_iSquadCallsign 1
+   }
+  }
+  coords 12749.252 5.749 9839.312
+  angles 0 141.569 0
+ }
+ crew8 {
+  components {
+   PS_GroupCallsignAssigner "{68A30C9A9E8D83F4}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 5913.082 298.324 8029.838
+  angles 0.299 -121.337 -1.23
+ }
+}
+Vehicle BTR70_Ses_CDF1 : "{3F3F663ED52E08B5}Prefabs/Vehicles/Wheeled/BTR70/BTR70_Ses_CDF.et" {
+ coords 12750.323 5.723 9835.403
+ angles 0 -128.459 0
+ m_sAttachmentGroupName "crew3"
+}
+$grp SCR_AIGroup : "{6449AAD99869C0D5}Prefabs/Groups/BLUFOR/Ses_CDF/Group_A2F_CDF_Squad.et" {
+ crew5 {
+  components {
+   PS_GroupCallsignAssigner "{68A30C9A9E8D83F4}" {
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 12767.751 5.75 9846.607
+  angles 0 -42.632 0
+ }
+ crew6 {
+  components {
+   PS_GroupCallsignAssigner "{68A30C9A9E8D83F4}" {
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 12782.101 5.75 9876.244
+  angles 0 127.497 0
+ }
+ crew9 {
+  components {
+   PS_GroupCallsignAssigner "{68A30C9A9E8D83F4}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 5884.698 299.25 8056.522
+  angles 0 60.357 0
+ }
+ crew10 {
+  components {
+   PS_GroupCallsignAssigner "{68A30C9A9E8D83F4}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 5880.803 299.206 8082.568
+  angles 0 -116.489 0
+ }
+ crew15 {
+  components {
+   PS_GroupCallsignAssigner "{68A30C9A9E8D83F4}" {
+    m_iPlatoonCallsign 2
+   }
+  }
+  coords 12802.85 5.749 9894.339
+  angles 0 -60.607 0
+  m_aUnitPrefabSlots {
+   "{98918C4F8902542E}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_SL_Random.et"
+   "{DF081FFC7A479F9B}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_SR_Random.et"
+   "{0C6A72D37683F186}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Char_A2F_CDF_LAT_2.et"
+   "{288DECDA7343ED90}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Char_A2F_CDF_MG_3.et"
+   "{0C6A72D37683F186}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Char_A2F_CDF_LAT_2.et"
+  }
+ }
+ crew16 {
+  components {
+   PS_GroupCallsignAssigner "{68A30C9A9E8D83F4}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 2
+   }
+  }
+  coords 5847.826 299.219 8125.867
+  angles 0 54.351 0
+  m_aUnitPrefabSlots {
+   "{98918C4F8902542E}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_SL_Random.et"
+   "{DF081FFC7A479F9B}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_SR_Random.et"
+   "{0C6A72D37683F186}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Char_A2F_CDF_LAT_2.et"
+   "{288DECDA7343ED90}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Char_A2F_CDF_MG_3.et"
+   "{0C6A72D37683F186}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Char_A2F_CDF_LAT_2.et"
+  }
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A30C9A9E8D83F4}" {
+    m_iPlatoonCallsign 3
+   }
+  }
+  coords 9788.121 209.84 9760.637
+  m_aUnitPrefabSlots {
+   "{551ECBE2D7A071B1}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Char_A2F_CDF_SL_Opt_3.et"
+   "{0D75B106A99B2CD7}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Char_A2F_CDF_Rifle_SD_4.et"
+   "{0D75B106A99B2CD7}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Char_A2F_CDF_Rifle_SD_4.et"
+  }
+  m_sCustomNameSet "Группа Разведки"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A30C9A9E8D83F4}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 9033.473 266.884 7864.148
+  m_aUnitPrefabSlots {
+   "{551ECBE2D7A071B1}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Char_A2F_CDF_SL_Opt_3.et"
+   "{0D75B106A99B2CD7}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Char_A2F_CDF_Rifle_SD_4.et"
+   "{0D75B106A99B2CD7}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Char_A2F_CDF_Rifle_SD_4.et"
+  }
+  m_sCustomNameSet "Группа Разведки"
+ }
+}
+PolylineShapeEntity : "{7019844BAD5C4DD8}Prefabs/PolyZone/PolyZone_Border.et" {
+ components {
+  PS_PolyZone "{60E90266F25533F6}" {
+   m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
+   m_cPolygonColor 1 1 1 0
+   m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+   m_cPolygonBorderColor 0 0.125 0.502 1
+   m_aVisibleForFactions {
+    "Ses_ChDKZ"
+    "Ses_CDF"
+    ""
+    ""
+   }
+  }
+ }
+ coords 10734.554 229.174 7816.788
+ angles -2.62 0.41 -8.89
+ Points {
+  ShapePoint "{60E90266E922A02A}" {
+   Position -77.067 -5.293 0.382
+  }
+  ShapePoint "{68EA64FD6E5314A0}" {
+   Position -44.751 -8.503 89.418
+  }
+  ShapePoint "{68EA64FD6EE18834}" {
+   Position 179.89 -12.188 386.691
+  }
+  ShapePoint "{68F30C7C26C5E67F}" {
+   Position 220.23 27.12 800.649
+  }
+  ShapePoint "{68F30C7C257CCB01}" {
+   Position 289.593 -15.764 880.592
+  }
+  ShapePoint "{68F30C7C25E27A0D}" {
+   Position 368.215 -87.726 1072.538
+  }
+  ShapePoint "{68F30C7C2B211AFF}" {
+   Position 249.34 -54.481 1202.386
+  }
+  ShapePoint "{68F30C7C2B9D821D}" {
+   Position 185.069 -61.297 1414.291
+  }
+  ShapePoint "{68EA64FD7258410D}" {
+   Position 324.284 -107.282 1739.71
+  }
+  ShapePoint "{68F30C7C2D56943C}" {
+   Position 276.399 -101.564 1778.986
+  }
+  ShapePoint "{68F30C76F77161D1}" {
+   Position 383.529 -124.846 2013.379
+  }
+  ShapePoint "{68F30C76CDF70202}" {
+   Position 263.346 -113.251 2137.849
+  }
+  ShapePoint "{68EA64FD75A77754}" {
+   Position 149.086 -84.368 2183.401
+  }
+  ShapePoint "{68EA64FD7AE6EC2F}" {
+   Position -469.517 74.448 2127.072
+  }
+  ShapePoint "{68F30C7DA9D86FB1}" {
+   Position -599.167 114.378 2212.643
+  }
+  ShapePoint "{68F30C7DAE98319B}" {
+   Position -792.737 173.265 2221.286
+  }
+  ShapePoint "{68F30C7DAC3EF11C}" {
+   Position -865.902 192.758 2142.615
+  }
+  ShapePoint "{68F30C7DB6244CEE}" {
+   Position -1044.274 249.474 2120.236
+  }
+  ShapePoint "{68F30C7DB5FB8AB9}" {
+   Position -1100.377 268.985 1981.073
+  }
+  ShapePoint "{68F30C7DBA8A8F72}" {
+   Position -1523.145 380.453 1818.748
+  }
+  ShapePoint "{68F30C7DB9A2087A}" {
+   Position -1633.203 430.872 1904.521
+  }
+  ShapePoint "{68F30C7F9B405E63}" {
+   Position -1881.88 503.542 1863.324
+  }
+  ShapePoint "{68F30C7F98711188}" {
+   Position -2057.86 539.86 1798.132
+  }
+  ShapePoint "{68F30C7F9E11D1D3}" {
+   Position -2431.439 632.515 1691.567
+  }
+  ShapePoint "{68F30C7FB55A661D}" {
+   Position -2724.967 719.436 1696.722
+  }
+  ShapePoint "{68F30C7F82974145}" {
+   Position -2906.281 727.106 1650.98
+  }
+  ShapePoint "{68EA64FD79BD9C95}" {
+   Position -2989.27 725.103 1624.98
+  }
+  ShapePoint "{68F30C7D82A7F1E0}" {
+   Position -3024.565 718.005 1536.323
+  }
+  ShapePoint "{68F30C7D807D0B85}" {
+   Position -2927.848 705.019 1411.986
+  }
+  ShapePoint "{68F30C7D87971227}" {
+   Position -2829.541 681.29 1157.65
+  }
+  ShapePoint "{68F30C7D86F32F37}" {
+   Position -2805.785 676.685 1046.605
+  }
+  ShapePoint "{68F30C7D8BC8D0B3}" {
+   Position -2725.43 674.348 929.499
+  }
+  ShapePoint "{68F30C7D89B30AE7}" {
+   Position -2676.733 624.529 707.334
+  }
+  ShapePoint "{68EA64FD7EFF8A45}" {
+   Position -2629.681 593.992 489.536
+  }
+  ShapePoint "{68F30C7A4559D565}" {
+   Position -2448.987 575.104 428.67
+  }
+  ShapePoint "{68F30C7A7D4D6A2B}" {
+   Position -2290.021 504.145 449.462
+  }
+  ShapePoint "{68F30C7D91842168}" {
+   Position -2138.672 433.87 43.233
+  }
+  ShapePoint "{68F30C7D90DD97C7}" {
+   Position -2118.82 434.724 -69.269
+  }
+  ShapePoint "{68F30C7D9BA97BFE}" {
+   Position -2018.932 417.197 -247.705
+  }
+  ShapePoint "{68F30C7D9950C7C7}" {
+   Position -1964.031 413.618 -322.638
+  }
+  ShapePoint "{68F30C7D9823A07B}" {
+   Position -2047.325 449.907 -391.857
+  }
+  ShapePoint "{68F30C7D9F1136BF}" {
+   Position -2089.456 463.114 -389.91
+  }
+  ShapePoint "{68F30C7D9F9028E3}" {
+   Position -2114.56 462.964 -459.129
+  }
+  ShapePoint "{68EA64FD435FA315}" {
+   Position -2130.804 412.354 -725.199
+  }
+  ShapePoint "{68EA64FD44C0C490}" {
+   Position -1675.208 297.015 -676.933
+  }
+  ShapePoint "{68F30C7DED1B9282}" {
+   Position -1628.605 295.773 -647.292
+  }
+  ShapePoint "{68F30C7DCFC6CBC2}" {
+   Position -1552.035 271.532 -676.949
+  }
+  ShapePoint "{68F30C7DCECF69ED}" {
+   Position -1418.749 234.742 -646.288
+  }
+  ShapePoint "{68F30C7DCC2AD8FB}" {
+   Position -1322.05 187.56 -693.659
+  }
+  ShapePoint "{68F30C7DD24DA869}" {
+   Position -1277.954 171.329 -699.328
+  }
+  ShapePoint "{68F30C7DD13624C7}" {
+   Position -1160.599 128.82 -851.415
+  }
+  ShapePoint "{68F30C7DD07B04F7}" {
+   Position -1034.343 75.529 -879.806
+  }
+  ShapePoint "{68F30C7DD629B7DA}" {
+   Position -981.603 63.609 -830.856
+  }
+  ShapePoint "{68F30C7DD6A4C1B2}" {
+   Position -928.813 53.832 -821.849
+  }
+  ShapePoint "{68EA64FD4A3903F4}" {
+   Position -900.537 52.912 -787.2
+  }
+  ShapePoint "{68EA64FD49B8823C}" {
+   Position -356.528 -81.127 -668.764
+  }
+  ShapePoint "{68F30C7FFFE45CFB}" {
+   Position -285.214 -83.321 -596.778
+  }
+ }
+ LineColor 0 0.1255 0.502 1
+ {
+  PS_PolyZoneTrigger {
+   ID "60FD050E1E83544C"
+   m_polyZoneEffect PS_PolyZoneEffectRestricted "{60FD050E0DC2A2AB}" {
+    m_fKillTime 15
+   }
+   m_sFactionKey "Ses_ChDKZ"
+  }
+ }
+}
+Vehicle UAZ469_uncovered_Turret_Ses_CDF_KORD1 : "{97C9C929746F6081}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_uncovered_Turret_Ses_CDF_KORD.et" {
+ coords 12736.919 5.719 9823.395
+ angles 0 -112.834 0
+ m_sAttachmentGroupName "crew4"
+}
+Vehicle UAZ469_uncovered_Turret_Ses_CDF_AGS1 : "{9B4F4245F8F62C70}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_uncovered_Turret_Ses_CDF_AGS.et" {
+ coords 5920.589 298.356 8007.255
+ angles 0 149.628 0
+ m_sAttachmentGroupName "crew7"
+}
+$grp Vehicle : "{B3BE9258C89E8491}Prefabs/Vehicles/Wheeled/Ural4320/Ses_CDF/Ural4320_Ses_CDF_transport_covered.et" {
+ Ural4320_Ses_CDF_transport_covered1 {
+  coords 12768.519 5.75 9851.227
+  angles 0 -130.468 0
+  m_sAttachmentGroupName "crew5"
+ }
+ Ural4320_Ses_CDF_transport_covered2 {
+  coords 12782.077 5.75 9871.27
+  angles 0 -141.919 0
+  m_sAttachmentGroupName "crew6"
+ }
+ Ural4320_Ses_CDF_transport_covered3 {
+  coords 5888.862 299.243 8055.597
+  angles 0 147.892 0
+  m_sAttachmentGroupName "crew9"
+ }
+ Ural4320_Ses_CDF_transport_covered4 {
+  coords 5876.128 299.25 8084.628
+  angles 0 151.587 0
+  m_sAttachmentGroupName "crew10"
+ }
+}
+Vehicle LAV25_CDF1 : "{C9CDC54E051CF8DB}Prefabs/Vehicles/Wheeled/LAV25/LAV25_CDF.et" {
+ coords 5909.979 298.348 8030.302
+ angles -1.225 149.658 -0.32
+ m_sAttachmentGroupName "crew8"
+}
+$grp Vehicle : "{D574C943C9F8C9DF}Prefabs/Vehicles/Wheeled/M998/M1151_armed_M2HB_AP.et" {
+ M1151_armed_M2HB_AP1 {
+  coords 5852.524 299.335 8125.616
+  angles -0.495 146.406 -0.746
+  m_sAttachmentGroupName "crew16"
+ }
+ M1151_armed_M2HB_AP2 {
+  coords 12801.771 5.75 9897.639
+  angles 0 -146.907 0
+  m_sAttachmentGroupName "crew15"
+ }
+}
+$grp SCR_AIGroup : "{F2ABAC37E4537895}Prefabs/Groups/BLUFOR/Ses_CDF/Group_A2F_CDF_PL.et" {
+ crew4 {
+  components {
+   PS_GroupAttachmentComponent "{68EA64F850E80191}" {
+   }
+   PS_GroupAttachmentComponent "{68EA64F8B6AE25D2}" {
+   }
+   PS_GroupCallsignAssigner "{68EA64F88ABAC81B}" {
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 12736.604 5.719 9820.352
+  angles 0 -40.783 0
+  m_aUnitPrefabSlots +{
+   "{024CD8FA035D164B}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Char_A2F_CDF_Medic_1.et"
+   "{F08FADA471F1C7BA}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Char_A2F_CDF_Sniper_1.et"
+  }
+  m_sCustomNameSet "Командир серевной группы"
+ }
+ crew7 {
+  components {
+   PS_GroupCallsignAssigner "{68A30C9A9E8D83F4}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 5917.617 298.107 8006.573
+  angles 0 57.018 0
+  m_aUnitPrefabSlots +{
+   "{6E18EC1ABF999965}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Char_A2F_CDF_Medic_2.et"
+   "{F08FADA471F1C7BA}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Char_A2F_CDF_Sniper_1.et"
+  }
+  m_sCustomNameSet "Командир южной группы"
+ }
+}

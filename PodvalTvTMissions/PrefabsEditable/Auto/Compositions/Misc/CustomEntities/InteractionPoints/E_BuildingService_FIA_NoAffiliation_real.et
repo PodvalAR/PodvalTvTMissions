@@ -1,0 +1,44 @@
+GenericEntity : "{23ECA9C4E8FDC8E7}Prefabs/Compositions/Misc/CustomEntities/InteractionPoints/BuildingService_FIA_NoAffiliation.et" {
+ ID "F0DBA538AC2A0552"
+ components {
+  SCR_CampaignBuildingProviderComponent "{5EBCED04D0321687}" {
+   m_bAnyFactionCanUse 1
+   m_aAvailableTraits {
+    TRAIT_FORTIFICATION THEME_MILITARY
+   }
+  }
+  SCR_EditableEntityComponent "{5DD888102FAE8031}" : "{996046FE206C699A}Prefabs/Editor/Components/Default_SCR_EditableEntityComponent.ct" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "(BuildingService_FIA_NoAffiliation)"
+    m_Image "{1F2DC2AE853B277E}UI/Textures/EditorPreviews/Auto/Compositions/Misc/CustomEntities/InteractionPoints/E_BuildingService_FIA_NoAffiliation.edds"
+    m_sFaction "US"
+    m_aAuthoredLabels {
+    }
+    m_aAutoLabels {
+     FACTION_US ENTITYTYPE_OBJECT SIZE_S
+    }
+   }
+  }
+  SCR_FactionAffiliationComponent "{5CB66A0F780C9329}" {
+   "faction affiliation" "US"
+  }
+  SCR_PreviewEntityComponent "{5DD888102E5789DB}" : "{6CADA7A88A6265FD}Prefabs/Editor/Components/PreviewEntityComponentClass.ct" {
+   m_bRuntime 0
+   m_aEntries {
+    SCR_BasePreviewEntry "{68C68E3AE82B0099}" {
+     m_iParentID -1
+     m_Mesh "{41884513B4CDA708}Assets/Props/Military/InteractionPoints/BuildingService/BuildingService_Table_FIA_01.xob"
+     m_Flags 0
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+   }
+  }
+  Hierarchy "{68C68E3A5603F89C}" {
+  }
+ }
+ coords -0.813 -11.103 69.821
+}

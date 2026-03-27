@@ -1,0 +1,255 @@
+$grp Vehicle : "{7DA1A9D5AC06CC9F}Prefabs/Vehicles/Wheeled/S105/S105_DarkRed_ION.et" {
+ S105_DarkRed_ION1 {
+  coords 1939.31 132.5 7406.126
+  angles 0 135 0
+  m_sAttachmentGroupName "STK"
+ }
+ S105_DarkRed_ION2 {
+  coords 1932.197 132.5 7410.698
+  angles 0 120 0
+  m_sAttachmentGroupName "STK"
+ }
+ S105_DarkRed_ION3 {
+  coords 8029.001 182.707 7755.263
+  angles 0 0 0
+  m_sAttachmentGroupName "STK4"
+ }
+ S105_DarkRed_ION4 {
+  coords 8034.18 182.707 7755.263
+  angles 0 0 0
+  m_sAttachmentGroupName "STK4"
+ }
+}
+Vehicle S105_darkred1 : "{8000A0F649FB4B0D}Prefabs/Vehicles/Wheeled/S105/S105_darkred.et" {
+ coords 7635.309 27.185 5174.748
+ angles -4.891 131.543 2.82
+}
+Vehicle S105_lightblue1 : "{8EB38BBD860DA06E}Prefabs/Vehicles/Wheeled/S105/S105_lightblue.et" {
+ coords 7641.858 27.473 5183.899
+ angles 2.673 0.167 3.58
+}
+$grp Vehicle : "{A2C4DBCDDE967600}Prefabs/Vehicles/Wheeled/UAZ452/UAZ452_transport_CIV_blue.et" {
+ UAZ452_transport_CIV_blue1 {
+  coords 1925.273 132.5 7413.463
+  angles 0 120 0
+  m_sAttachmentGroupName "STK2"
+ }
+ UAZ452_transport_CIV_blue2 {
+  coords 1916.32 132.5 7422.379
+  angles 0 150 0
+  m_sAttachmentGroupName "STK3"
+ }
+ UAZ452_transport_CIV_blue3 {
+  coords 9641.647 130.276 10057.974
+  angles -0.797 -117.097 0.408
+  m_sAttachmentGroupName "STK5"
+ }
+ UAZ452_transport_CIV_blue4 {
+  coords 9630.563 130.424 10052.304
+  angles 1.204 -117.084 0.389
+  m_sAttachmentGroupName "STK6"
+ }
+ UAZ452_transport_CIV_blue5 {
+  coords 6345.037 36.501 8091.946
+  angles 0.895 -180 0
+  m_sAttachmentGroupName "STK8"
+ }
+ UAZ452_transport_CIV_blue6 {
+  coords 6345.037 36.722 8079.782
+  angles 0 -180 0
+  m_sAttachmentGroupName "STK7"
+ }
+ UAZ452_transport_CIV_blue7 {
+  coords 7525.745 21.109 4845.104
+  angles 0 75 0
+ }
+}
+$grp SCR_AIGroup : "{CD4A8C98E6B2357B}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_STK_1.et" {
+ STK4 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A477D63A783}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 8035.116 182.689 7761.232
+  angles 0 180 0
+  m_aUnitPrefabSlots {
+   "{86452F341C0AFDD6}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_SL_1.et"
+   "{D5B6358321844788}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_TL.et"
+   "{92E21B28B03C7C34}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_Rifleman_3.et"
+   "{AFD63E10C550F503}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_Rifleman_4.et"
+   "{6FAE233816940DCE}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_Sapper.et"
+   "{F0A1E261525F800C}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_Medic.et"
+   "{9F8AC05A67D5A98C}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_M72_1.et"
+   "{208FC46F06E114B4}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_Marksman_2.et"
+  }
+  m_sCustomNameSet "ЧВК ION"
+ }
+ {
+  coords 7638.645 27.172 5175.577
+  angles 0 165 0
+  m_aUnitPrefabSlots {
+   "{7DDD72E8B1279A4E}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_Officer.et"
+  }
+  m_sCustomNameSet "Ванька Зрелый"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68B17A477D63A783}" {
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 7638.5 27.172 5177.615
+  angles 0 165 0
+  m_aUnitPrefabSlots {
+   "{D7A6B8018D980E5E}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_SL_Pistol.et"
+   "{FE0488D63D6E85F2}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_TL_Pistol.et"
+   "{F3510B3050BC1547}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_Rifleman_5_Pistol.et"
+  }
+  m_sCustomNameSet "Лучшие друзья Ванечки"
+ }
+ STK5 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A477D63A783}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 1
+   }
+  }
+  coords 9641.734 130.203 10061.032
+  angles 0 150 0
+  m_aUnitPrefabSlots {
+   "{EA111BD4A0CE72F8}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_SL_2.et"
+   "{D5B6358321844788}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_TL.et"
+   "{1B2A6331001D6471}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_Rifleman_1.et"
+   "{777E57D1BCD9EB5F}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_Rifleman_2.et"
+   "{6FAE233816940DCE}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_Sapper.et"
+   "{F0A1E261525F800C}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_Medic.et"
+   "{9F8AC05A67D5A98C}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_M72_1.et"
+   "{4CDBF08FBA259B9A}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_Marksman_1.et"
+  }
+  m_sCustomNameSet "ЧВК ION"
+ }
+ STK6 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A477D63A783}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 9632.39 130.349 10056.1
+  angles 0 153.471 0
+  m_aUnitPrefabSlots {
+   "{0F8D572DAC2BE593}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_SL_3.et"
+   "{D5B6358321844788}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_TL.et"
+   "{1B2A6331001D6471}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_Rifleman_1.et"
+   "{92E21B28B03C7C34}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_Rifleman_3.et"
+   "{6FAE233816940DCE}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_Sapper.et"
+   "{F0A1E261525F800C}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_Medic.et"
+   "{9F8AC05A67D5A98C}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_M72_1.et"
+   "{208FC46F06E114B4}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_Marksman_2.et"
+  }
+  m_sCustomNameSet "ЧВК ION"
+ }
+ STK8 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A477D63A783}" {
+    m_iCompanyCallsign 4
+    m_iSquadCallsign 1
+   }
+  }
+  coords 6349.419 36.557 8088.369
+  angles 0 -88.177 0
+  m_aUnitPrefabSlots {
+   "{32B97215D9476CA4}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_SL_4.et"
+   "{D5B6358321844788}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_TL.et"
+   "{777E57D1BCD9EB5F}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_Rifleman_2.et"
+   "{AFD63E10C550F503}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_Rifleman_4.et"
+   "{6FAE233816940DCE}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_Sapper.et"
+   "{F0A1E261525F800C}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_Medic.et"
+   "{9F8AC05A67D5A98C}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_M72_1.et"
+   "{4CDBF08FBA259B9A}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_Marksman_1.et"
+  }
+  m_sCustomNameSet "ЧВК ION"
+ }
+ STK7 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A477D63A783}" {
+    m_iCompanyCallsign 4
+   }
+  }
+  coords 6348.692 36.658 8076.614
+  angles 0 -86.012 0
+  m_aUnitPrefabSlots {
+   "{86452F341C0AFDD6}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_SL_1.et"
+   "{D5B6358321844788}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_TL.et"
+   "{777E57D1BCD9EB5F}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_Rifleman_2.et"
+   "{92E21B28B03C7C34}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_Rifleman_3.et"
+   "{6FAE233816940DCE}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_Sapper.et"
+   "{F0A1E261525F800C}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_Medic.et"
+   "{9F8AC05A67D5A98C}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_M72_1.et"
+   "{4CDBF08FBA259B9A}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_Marksman_1.et"
+  }
+  m_sCustomNameSet "ЧВК ION"
+ }
+ STK2 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A477D63A783}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 1931.159 132.5 7415.649
+  angles 0 -150 0
+  m_aUnitPrefabSlots {
+   "{32B97215D9476CA4}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_SL_4.et"
+   "{D5B6358321844788}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_TL.et"
+   "{1B2A6331001D6471}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_Rifleman_1.et"
+   "{AFD63E10C550F503}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_Rifleman_4.et"
+   "{6FAE233816940DCE}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_Sapper.et"
+   "{F0A1E261525F800C}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_Medic.et"
+   "{9F8AC05A67D5A98C}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_M72_1.et"
+   "{4CDBF08FBA259B9A}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_Marksman_1.et"
+  }
+  m_sCustomNameSet "ЧВК ION"
+ }
+ STK {
+  components {
+   PS_GroupCallsignAssigner "{68B17A477D63A783}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 1941.67 132.5 7409.733
+  angles 0 -150 0
+  m_aUnitPrefabSlots {
+   "{86452F341C0AFDD6}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_SL_1.et"
+   "{D5B6358321844788}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_TL.et"
+   "{92E21B28B03C7C34}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_Rifleman_3.et"
+   "{AFD63E10C550F503}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_Rifleman_4.et"
+   "{6FAE233816940DCE}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_Sapper.et"
+   "{F0A1E261525F800C}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_Medic.et"
+   "{9F8AC05A67D5A98C}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_M72_1.et"
+   "{208FC46F06E114B4}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_Marksman_2.et"
+  }
+  m_sCustomNameSet "ЧВК ION"
+ }
+ STK3 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A477D63A783}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 1921.48 132.5 7421.875
+  angles 0 -120 0
+  m_aUnitPrefabSlots {
+   "{86452F341C0AFDD6}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_SL_1.et"
+   "{D5B6358321844788}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_TL.et"
+   "{AFD63E10C550F503}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_Rifleman_4.et"
+   "{6FAE233816940DCE}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_Sapper.et"
+   "{F0A1E261525F800C}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_Medic.et"
+   "{9F8AC05A67D5A98C}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_M72_1.et"
+   "{208FC46F06E114B4}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/ColdWar/dim_ION_CW_Marksman_2.et"
+  }
+  m_sCustomNameSet "ЧВК ION"
+ }
+}

@@ -1,0 +1,223 @@
+$grp GenericEntity {
+ {
+  components {
+   MeshObject "{68E2D5F800CE2FD5}" {
+    Object "{9183ADD7B83475BD}Assets/Structures/BuildingsParts/Doors/Door_MetalGate_06/Door_MetalGate_06_small_LEFT_EXT_ST_B.xob"
+   }
+   RigidBody "{68E2D5F809F78037}" {
+    Static 1
+   }
+  }
+  coords 4356.375 17.887 4447.794
+  angles 47.019 -14.958 0.007
+  scale 1.52
+ }
+ {
+  components {
+   MeshObject "{68E2D5F800CE2FD5}" {
+    Object "{9183ADD7B83475BD}Assets/Structures/BuildingsParts/Doors/Door_MetalGate_06/Door_MetalGate_06_small_LEFT_EXT_ST_B.xob"
+   }
+   RigidBody "{68E2D5F809F78037}" {
+    Static 1
+   }
+  }
+  coords 4356.384 17.887 4447.796
+  angles -47.019 165.042 -0.007
+  scale 1.52
+ }
+}
+$grp StaticModelEntity : "{07F043DD6AACCD0B}Prefabs/Structures/Infrastructure/Barriers/BarGate_01/BarGate_01.et" {
+ {
+  coords 3860.019 0 3305.109
+  angles 0 -15 0
+ }
+ {
+  coords 3844.964 0 3301.075
+  angles 0 165 0
+ }
+}
+GenericEntity : "{0D99D135D46EC969}Prefabs/Props/Military/H Barrier/Hesco barrier Triple.et" {
+ coords 4356.81 0.149 4445.57
+ angles 0 75 0
+}
+$grp GenericEntity : "{3F8BE66EB83CD81F}Prefabs/Props/Military/H Barrier/Hesco barrier Five v2.et" {
+ {
+  coords 3849.931 0 3306.18
+  angles 0 -17.514 0
+ }
+ {
+  coords 3847.683 0 3313.303
+  angles 0 -17.514 0
+ }
+ {
+  coords 3849.389 0 3318.6
+  angles 0 72.486 0
+ }
+ {
+  coords 3856.007 0 3329.05
+  angles 0 132.486 0
+ }
+ {
+  coords 3837.641 0 3300.354
+  angles 0 75 0
+ }
+ {
+  coords 3839.444 0 3305.598
+  angles 0 -15 0
+ }
+}
+$grp SCR_DestructibleBuildingEntity : "{4CAD092CA8A63407}Prefabs/Structures/towers/GuardTower Small.et" {
+ {
+  coords 4388.518 0 4461.482
+  angles 0 135 0
+ }
+ {
+  coords 4247.663 0 4465.086
+  angles 0 -90 0
+ }
+}
+$grp Tree : "{5147BC570D2AE063}Prefabs/Structures/Tree/palm1.et" {
+ {
+  coords 3838.371 0.583 3360.554
+  angles -5.172 146.325 0.845
+ }
+ {
+  coords 3841.329 0.583 3344.82
+  angles -5.172 146.325 0.845
+ }
+}
+$grp GenericEntity : "{57FB5E487EC91D64}Prefabs/Compositions/Misc/SubCompositions/Fortifications/Barricade_Logs_02.et" {
+ {
+  coords 4311.525 17.844 4446.486
+  angles 0 -60 0
+ }
+ {
+  coords 4309.038 17.844 4437.978
+  angles 0 -105 0
+ }
+}
+SCR_DestructibleBuildingEntity : "{5B4927667C3291EF}Prefabs/Structures/Wall/CityDoor.et" {
+ coords 3844.691 -3.579 3299.99
+ angles 0 163.5 0
+ scale 1.365
+}
+$grp GenericEntity : "{6D56FED1E55A8F84}Prefabs/Items/Misc/IntelligenceFolder_E_01/IntelligenceFolder_E_01.et" {
+ {
+  coords 4334.471 18.75 4501.055
+  angles 0 -131.102 0
+  {
+   PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+    coords 0.034 0 -0.03
+    angles 0 -140.822 0
+    m_sImageSet "{10C0A9A305E8B3A4}UI/Imagesets/Tasks/Task_Icons.imageset"
+    m_sImageSetGlow "{10C0A9A305E8B3A4}UI/Imagesets/Tasks/Task_Icons.imageset"
+    m_MarkerColor 0.502 0 0 1
+    m_sQuadName "Icon_M_Task_Intel"
+    m_fWorldSize 100
+    m_bUseWorldScale 0
+    m_aVisibleForFactions {
+     "RHS_USAF"
+     "Ses_TKA"
+     "CIV"
+     ""
+    }
+    m_bVisibleForEmptyFaction 1
+   }
+  }
+ }
+ {
+  coords 4333.958 18.75 4501.646
+  angles 0 -131.102 0
+  {
+   PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+    coords 0.032 0 -0.029
+    angles 0 -140.822 0
+    m_sImageSet "{10C0A9A305E8B3A4}UI/Imagesets/Tasks/Task_Icons.imageset"
+    m_sImageSetGlow "{10C0A9A305E8B3A4}UI/Imagesets/Tasks/Task_Icons.imageset"
+    m_MarkerColor 0.502 0 0 1
+    m_sQuadName "Icon_M_Task_Intel"
+    m_fWorldSize 100
+    m_bUseWorldScale 0
+    m_aVisibleForFactions {
+     "RHS_USAF"
+     "Ses_TKA"
+     "CIV"
+     ""
+    }
+    m_bVisibleForEmptyFaction 1
+   }
+  }
+ }
+ {
+  coords 4333.463 18.75 4502.212
+  angles 0 -131.102 0
+  {
+   PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+    coords 0.034 0 -0.025
+    angles 0 -140.822 0
+    m_sImageSet "{10C0A9A305E8B3A4}UI/Imagesets/Tasks/Task_Icons.imageset"
+    m_sImageSetGlow "{10C0A9A305E8B3A4}UI/Imagesets/Tasks/Task_Icons.imageset"
+    m_MarkerColor 0.502 0 0 1
+    m_sQuadName "Icon_M_Task_Intel"
+    m_fWorldSize 100
+    m_bUseWorldScale 0
+    m_aVisibleForFactions {
+     "RHS_USAF"
+     "Ses_TKA"
+     "CIV"
+     ""
+    }
+    m_bVisibleForEmptyFaction 1
+   }
+  }
+ }
+}
+GenericEntity : "{757FCCE8E756175C}Prefabs/Props/Furniture/MeetingTable_01.et" {
+ coords 4333.906 17.844 4501.648
+ angles 0 -131.543 0
+}
+GenericEntity : "{A36E2BB100CDE4F1}Prefabs/Structures/BuildingParts/Doors/Door_MetalGate_06/DoorSet_MetalGate_USSR_06_B.et" {
+ coords 4340.024 17.844 4439.807
+ angles 0 -18.231 0
+ scale 1.41
+ {
+  GenericEntity {
+   ID "6476EA1C27F3075A"
+   coords 0 0 0
+  }
+ }
+}
+$grp GenericEntity : "{A799F8BA47DB69F5}PrefabsEditable/Auto/Structures/Military/Flags/FlagPole_02_V1_TKA_Editable.et" {
+ {
+  coords 3836.32 27.381 3297.334
+  angles 0 162.993 0
+ }
+ {
+  coords 3865.638 27.381 3306.196
+  angles 0 162.993 0
+ }
+}
+$grp GenericEntity : "{E55FC02F8C1518A2}Prefabs/Structures/Military/Flags/FlagPole_02/FlagPole_02_V1_US.et" {
+ {
+  coords 4329.057 32.184 4460.572
+ }
+ {
+  coords 4300.505 27.664 4496.571
+ }
+ {
+  coords 4336.453 29.074 4537.857
+ }
+ {
+  coords 4369.209 28.764 4501.853
+ }
+}
+$grp GenericEntity : "{FC609C179F576083}Prefabs/Props/Military/H Barrier/Hesco barrier.et" {
+ {
+  coords 4353.277 0.258 4444.52
+  angles 0 -13.185 0
+ }
+ {
+  coords 4351.874 0.258 4444.191
+  angles 0 121.815 0
+ }
+}

@@ -1,189 +1,90 @@
-$grp SCR_AIGroup : "{35681BE27C302FF5}Prefabs/Groups/BLUFOR/GreenBerets/Group_US_GreenBeret_SentryTeam.et" {
- US_200 {
-  components {
-   AIFormationComponent "{507E9DC12F541FE6}" {
-    DefaultFormation ""
-   }
-   PS_GroupCallsignAssigner "{66C87702496DA00C}" {
-    m_iCompanyCallsign 2
-    m_iPlatoonCallsign 0
-   }
-  }
-  coords 11974.114 7.376 10551.96
-  angles 0 93.401 0
-  m_aUnitPrefabSlots {
-   "{85261D5B04BFA7EE}Prefabs/Characters/Factions/BLUFOR/US_Army/GreenBerets/Character_US_SF_SL.et"
-   "{5228D8F587B5EEDC}Prefabs/Characters/Factions/BLUFOR/US_Army/GreenBerets/Character_US_SF_RTO.et"
-   "{EC8C02BC296EEEA0}Prefabs/Characters/Factions/BLUFOR/US_Army/GreenBerets/Suppressed/Character_US_SF_Sharpshooter_S.et"
-  }
-  m_sCustomNameSet "Отряд разведки"
-  m_bSetPlayable 1
- }
- US_201 {
-  components {
-   AIFormationComponent "{507E9DC12F541FE6}" {
-    DefaultFormation ""
-   }
-   PS_GroupCallsignAssigner "{66C8770252EEC4E1}" {
-    m_iCompanyCallsign 2
-    m_iSquadCallsign 1
-   }
-  }
-  coords 11974.47 7.251 10557.95
-  angles 0 93.401 0
-  m_aUnitPrefabSlots {
-   "{85261D5B04BFA7EE}Prefabs/Characters/Factions/BLUFOR/US_Army/GreenBerets/Character_US_SF_SL.et"
-   "{5228D8F587B5EEDC}Prefabs/Characters/Factions/BLUFOR/US_Army/GreenBerets/Character_US_SF_RTO.et"
-   "{EC8C02BC296EEEA0}Prefabs/Characters/Factions/BLUFOR/US_Army/GreenBerets/Suppressed/Character_US_SF_Sharpshooter_S.et"
-  }
-  m_sCustomNameSet "Отряд разведки"
-  m_bSetPlayable 1
+SCR_AIGroup US_000 : "{15062749E6AB45DE}Prefabs/Groups/BLUFOR/US/Regular/Group_US_Regular_PL.et" {
+ coords 11980.457 7.597 10535.994
+ angles 0 -90 0
+ m_aUnitPrefabSlots {
+  "{9D5319F0ED3516A5}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_PL_Opt.et"
+  "{296AA9719CD50E50}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_SR_Opt.et"
+  "{7FB18B47A7957C05}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_Medic.et"
+  "{C82717B4CE8F27E8}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_Marksman_Opt.et"
  }
 }
-SCR_AIGroup US_000 : "{B7AB5D3F8A7ADAE4}Prefabs/Groups/BLUFOR/Group_US_PlatoonHQ.et" {
- components {
-  AIFormationComponent "{507E9DC12F541FE6}" {
-   DefaultFormation ""
-  }
-  PS_GroupCallsignAssigner "{66C877024BE753F3}" {
-   m_iCompanyCallsign 0
-   m_iPlatoonCallsign 0
-  }
- }
- coords 11981.27 7.546 10537.511
- angles 0 -86.599 0
- m_sCustomNameSet "Командир стороны"
- m_bSetPlayable 1
-}
-$grp SCR_AIGroup : "{DDF3799FA1387848}Prefabs/Groups/BLUFOR/Group_US_RifleSquad.et" {
+$grp SCR_AIGroup : "{EE2BCF5671083A76}Prefabs/Groups/BLUFOR/US/Regular/Group_US_Regular_Squad.et" {
  US_001 {
   components {
-   AIFormationComponent "{507E9DC12F541FE6}" {
-    DefaultFormation ""
-   }
-   PS_GroupCallsignAssigner "{66C8770254BA8EAF}" {
-    m_iCompanyCallsign 0
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
     m_iSquadCallsign 1
    }
   }
-  coords 11981.508 7.515 10541.505
-  angles 0 -86.599 0
-  m_aUnitPrefabSlots {
-   "{E45F1E163F5CA080}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_SL.et"
-   "{E398E44759DA1A43}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_TL.et"
-   "{84029128FA6F6BB9}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_GL.et"
-   "{5B1996C05B1E51A4}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_AR.et"
-   "{27BF1FF235DD6036}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_LAT.et"
-   "{E398E44759DA1A43}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_TL.et"
-   "{84029128FA6F6BB9}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_GL.et"
-   "{5B1996C05B1E51A4}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_AR.et"
-   "{27BF1FF235DD6036}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_LAT.et"
-  }
-  m_sCustomNameSet "Пехотный отряд"
-  m_bSetPlayable 1
- }
- US_111 {
-  components {
-   AIFormationComponent "{507E9DC12F541FE6}" {
-    DefaultFormation ""
-   }
-   PS_GroupCallsignAssigner "{66C87702556F9D11}" {
-    m_iCompanyCallsign 1
-    m_iPlatoonCallsign 1
-    m_iSquadCallsign 1
-   }
-  }
-  coords 11979.187 4.939 10637.31
-  angles 0 93.401 0
-  m_aUnitPrefabSlots {
-   "{E45F1E163F5CA080}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_SL.et"
-   "{E398E44759DA1A43}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_TL.et"
-   "{84029128FA6F6BB9}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_GL.et"
-   "{5B1996C05B1E51A4}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_AR.et"
-   "{27BF1FF235DD6036}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_LAT.et"
-   "{E398E44759DA1A43}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_TL.et"
-   "{84029128FA6F6BB9}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_GL.et"
-   "{5B1996C05B1E51A4}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_AR.et"
-   "{27BF1FF235DD6036}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_LAT.et"
-  }
-  m_sCustomNameSet "Мобильный отряд"
-  m_bSetPlayable 1
- }
- US_110 {
-  components {
-   AIFormationComponent "{507E9DC12F541FE6}" {
-    DefaultFormation ""
-   }
-   PS_GroupCallsignAssigner "{66C87702561508F8}" {
-    m_iCompanyCallsign 1
-    m_iPlatoonCallsign 1
-   }
-  }
-  coords 11977.941 5.807 10616.347
-  angles 0 93.401 0
-  m_aUnitPrefabSlots {
-   "{E45F1E163F5CA080}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_SL.et"
-   "{E398E44759DA1A43}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_TL.et"
-   "{84029128FA6F6BB9}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_GL.et"
-   "{5B1996C05B1E51A4}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_AR.et"
-   "{27BF1FF235DD6036}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_LAT.et"
-   "{E398E44759DA1A43}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_TL.et"
-   "{84029128FA6F6BB9}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_GL.et"
-   "{5B1996C05B1E51A4}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_AR.et"
-   "{27BF1FF235DD6036}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_LAT.et"
-  }
-  m_sCustomNameSet "Мобильный отряд"
-  m_bSetPlayable 1
- }
- US_101 {
-  components {
-   AIFormationComponent "{507E9DC12F541FE6}" {
-    DefaultFormation ""
-   }
-   PS_GroupCallsignAssigner "{66C87702572C962F}" {
-    m_iCompanyCallsign 1
-    m_iSquadCallsign 1
-   }
-  }
-  coords 11976.697 6.3 10595.384
-  angles 0 93.401 0
-  m_aUnitPrefabSlots {
-   "{E45F1E163F5CA080}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_SL.et"
-   "{E398E44759DA1A43}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_TL.et"
-   "{84029128FA6F6BB9}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_GL.et"
-   "{5B1996C05B1E51A4}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_AR.et"
-   "{27BF1FF235DD6036}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_LAT.et"
-   "{E398E44759DA1A43}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_TL.et"
-   "{84029128FA6F6BB9}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_GL.et"
-   "{5B1996C05B1E51A4}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_AR.et"
-   "{27BF1FF235DD6036}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_LAT.et"
-  }
-  m_sCustomNameSet "Мобильный отряд"
-  m_bSetPlayable 1
+  coords 11980.631 7.509 10542.713
+  angles 0 -90 0
  }
  US_100 {
   components {
-   AIFormationComponent "{507E9DC12F541FE6}" {
-    DefaultFormation ""
-   }
-   PS_GroupCallsignAssigner "{66C8770251C0C20A}" {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
     m_iCompanyCallsign 1
    }
   }
-  coords 11975.449 6.862 10574.421
-  angles 0 93.401 0
-  m_aUnitPrefabSlots {
-   "{E45F1E163F5CA080}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_SL.et"
-   "{E398E44759DA1A43}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_TL.et"
-   "{84029128FA6F6BB9}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_GL.et"
-   "{5B1996C05B1E51A4}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_AR.et"
-   "{27BF1FF235DD6036}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_LAT.et"
-   "{E398E44759DA1A43}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_TL.et"
-   "{84029128FA6F6BB9}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_GL.et"
-   "{5B1996C05B1E51A4}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_AR.et"
-   "{27BF1FF235DD6036}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_LAT.et"
+  coords 11977.224 7.04 10567.406
+  angles 0 -86.78 0
+ }
+ US_101 {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
   }
-  m_sCustomNameSet "Мобильный отряд"
-  m_bSetPlayable 1
+  coords 11978.929 6.491 10588.281
+  angles 0 -86.78 0
+ }
+ US_200 {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 11980.246 6.001 10607.944
+  angles 0 -86.78 0
+ }
+ US_201 {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 11981.826 5.335 10629.192
+  angles 0 -86.78 0
+ }
+ US_300 {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 11976.404 7.422 10549.022
+  angles 0 -85.483 0
+  m_aUnitPrefabSlots {
+   "{ED4E0ACF6FD3C80A}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_SL.et"
+   "{F7FE66E14E368DF9}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_RTO.et"
+   "{07DB2A2C2FD68F06}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_Sniper.et"
+  }
+  m_sCustomNameSet "#PDVL_Squad_Recon"
+ }
+ US_301 {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 1
+   }
+  }
+  coords 11976.822 7.281 10555.982
+  angles 0 -85.483 0
+  m_aUnitPrefabSlots {
+   "{ED4E0ACF6FD3C80A}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_SL.et"
+   "{F7FE66E14E368DF9}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_RTO.et"
+   "{07DB2A2C2FD68F06}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_Sniper.et"
+  }
+  m_sCustomNameSet "#PDVL_Squad_Recon"
  }
 }

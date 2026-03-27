@@ -7,7 +7,7 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
     COMMAND_2 {
      coords -7.89 9.9 108.977
      angles 0 38.851 0
-     m_eGroupType Command_1
+     m_eGroupType Command_7
     }
     SQUAD_3 {
      coords 18.983 5.857 87.902
@@ -80,6 +80,120 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
      m_eGroupType Helicopter_Recon
      m_iCompanyCallsign 4
      m_iSquadCallsign 1
+    }
+   }
+   SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+    components {
+     SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+      m_bFollowTerrain 1
+     }
+    }
+    coords 0.001 -0.004 0.003
+    m_fWarnRadius 120
+    m_fZoneRadius 130
+    m_fZoneTeleportedRadius 135
+    {
+     GenericEntity {
+      ID "59D673B36B893D84"
+      components {
+       SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+        m_bFollowTerrain 1
+        m_fRadius 120
+       }
+      }
+     }
+    }
+   }
+   $grp SCR_EditorRestrictionZoneEntity : "{EF72FA7CD87618D5}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneSmall.et" {
+    {
+     components {
+      SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+       m_bFollowTerrain 1
+      }
+     }
+     coords 622.341 -10.361 -1354.762
+     {
+      GenericEntity {
+       ID "59D673B36B893D84"
+       components {
+        SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+         m_bFollowTerrain 1
+        }
+       }
+      }
+     }
+    }
+    {
+     components {
+      SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+       m_bFollowTerrain 1
+      }
+     }
+     coords 1895.818 4.39 -96.894
+     {
+      GenericEntity {
+       ID "59D673B36B893D84"
+       components {
+        SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+         m_bFollowTerrain 1
+        }
+       }
+      }
+     }
+    }
+    {
+     components {
+      SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+       m_bFollowTerrain 1
+      }
+     }
+     coords -206.518 20.738 208.952
+     {
+      GenericEntity {
+       ID "59D673B36B893D84"
+       components {
+        SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+         m_bFollowTerrain 1
+        }
+       }
+      }
+     }
+    }
+    {
+     components {
+      SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+       m_bFollowTerrain 1
+      }
+     }
+     coords 211.599 294.005 897.571
+     {
+      GenericEntity {
+       ID "59D673B36B893D84"
+       components {
+        SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+         m_bFollowTerrain 1
+        }
+       }
+      }
+     }
+    }
+    {
+     components {
+      SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+       m_bFollowTerrain 1
+      }
+     }
+     coords -504.813 193.834 -388.687
+     {
+      GenericEntity {
+       ID "59D673B36B893D84"
+       components {
+        SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+         m_bFollowTerrain 1
+        }
+       }
+      }
+     }
     }
    }
   }
@@ -164,6 +278,91 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
      m_iCompanyCallsign 4
      m_iSquadCallsign 2
     }
+    RECON_24 {
+     coords -400.716 105.718 506.785
+     angles 0 15.368 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+     m_iSquadCallsign 3
+    }
+   }
+   SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+    components {
+     SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+      m_bFollowTerrain 1
+     }
+    }
+    coords 0.003 -0.001 -0.018
+    m_fWarnRadius 120
+    m_fZoneRadius 130
+    m_fZoneTeleportedRadius 135
+    {
+     GenericEntity {
+      ID "59D673B36B893D84"
+      components {
+       SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+        m_bFollowTerrain 1
+        m_fRadius 120
+       }
+      }
+     }
+    }
+   }
+   $grp SCR_EditorRestrictionZoneEntity : "{EF72FA7CD87618D5}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneSmall.et" {
+    {
+     components {
+      SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+       m_bFollowTerrain 1
+      }
+     }
+     coords -370.468 -61.412 -364.412
+     {
+      GenericEntity {
+       ID "59D673B36B893D84"
+       components {
+        SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+         m_bFollowTerrain 1
+        }
+       }
+      }
+     }
+    }
+    {
+     components {
+      SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+       m_bFollowTerrain 1
+      }
+     }
+     coords 442.125 -121.652 182.092
+     {
+      GenericEntity {
+       ID "59D673B36B893D84"
+       components {
+        SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+         m_bFollowTerrain 1
+        }
+       }
+      }
+     }
+    }
+    {
+     components {
+      SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+       m_bFollowTerrain 1
+      }
+     }
+     coords -406.448 106.755 506.741
+     {
+      GenericEntity {
+       ID "59D673B36B893D84"
+       components {
+        SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+         m_bFollowTerrain 1
+        }
+       }
+      }
+     }
+    }
    }
   }
  }
@@ -233,6 +432,73 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
      angles 0 57.403 0
      m_eGroupType Command_8
     }
+    RECON_27 {
+     coords -88.229 12.198 69.459
+     angles 0 56.73 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+     m_iSquadCallsign 3
+    }
+   }
+   SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+    components {
+     SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+      m_bFollowTerrain 1
+     }
+    }
+    coords -0.029 0.004 0.068
+    m_fWarnRadius 120
+    m_fZoneRadius 130
+    m_fZoneTeleportedRadius 135
+    {
+     GenericEntity {
+      ID "59D673B36B893D84"
+      components {
+       SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+        m_bFollowTerrain 1
+        m_fRadius 120
+       }
+      }
+     }
+    }
+   }
+   $grp SCR_EditorRestrictionZoneEntity : "{EF72FA7CD87618D5}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneSmall.et" {
+    {
+     components {
+      SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+       m_bFollowTerrain 1
+      }
+     }
+     coords -747.365 65.92 43.119
+     {
+      GenericEntity {
+       ID "59D673B36B893D84"
+       components {
+        SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+         m_bFollowTerrain 1
+        }
+       }
+      }
+     }
+    }
+    {
+     components {
+      SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+       m_bFollowTerrain 1
+      }
+     }
+     coords -241.273 51.463 403.012
+     {
+      GenericEntity {
+       ID "59D673B36B893D84"
+       components {
+        SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+         m_bFollowTerrain 1
+        }
+       }
+      }
+     }
+    }
    }
   }
  }
@@ -294,7 +560,7 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
     COMMAND_33 {
      coords -108.066 -2.549 19.38
      angles 0 -2.75 0
-     m_eGroupType Command_1
+     m_eGroupType Command_7
     }
     HELI_ATTACK_5 {
      coords -40.352 4.372 -77.023
@@ -309,6 +575,84 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
      m_eGroupType Helicopter_Recon
      m_iCompanyCallsign 4
      m_iSquadCallsign 1
+    }
+   }
+   SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+    components {
+     SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+      m_bFollowTerrain 1
+     }
+    }
+    coords 0.036 0.001 -0.014
+    m_fWarnRadius 120
+    m_fZoneRadius 130
+    m_fZoneTeleportedRadius 135
+    {
+     GenericEntity {
+      ID "59D673B36B893D84"
+      components {
+       SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+        m_bFollowTerrain 1
+        m_fRadius 120
+       }
+      }
+     }
+    }
+   }
+   $grp SCR_EditorRestrictionZoneEntity : "{EF72FA7CD87618D5}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneSmall.et" {
+    {
+     components {
+      SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+       m_bFollowTerrain 1
+      }
+     }
+     coords 279.441 52.275 -322.869
+     {
+      GenericEntity {
+       ID "59D673B36B893D84"
+       components {
+        SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+         m_bFollowTerrain 1
+        }
+       }
+      }
+     }
+    }
+    {
+     components {
+      SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+       m_bFollowTerrain 1
+      }
+     }
+     coords 192.354 -11.867 295.849
+     {
+      GenericEntity {
+       ID "59D673B36B893D84"
+       components {
+        SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+         m_bFollowTerrain 1
+        }
+       }
+      }
+     }
+    }
+    {
+     components {
+      SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+       m_bFollowTerrain 1
+      }
+     }
+     coords -467.626 -43.486 -40.437
+     {
+      GenericEntity {
+       ID "59D673B36B893D84"
+       components {
+        SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+         m_bFollowTerrain 1
+        }
+       }
+      }
+     }
     }
    }
   }
@@ -379,6 +723,72 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
      m_eGroupType Helicopter_Recon
      m_iCompanyCallsign 4
     }
+    RECON_9 {
+     coords 211.831 21.478 526.091
+     angles 0 65.483 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+    }
+   }
+   SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+    components {
+     SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+      m_bFollowTerrain 1
+     }
+    }
+    coords -0.011 -0.001 0.004
+    m_fWarnRadius 120
+    m_fZoneRadius 130
+    m_fZoneTeleportedRadius 135
+    {
+     GenericEntity {
+      ID "59D673B36B893D84"
+      components {
+       SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+        m_bFollowTerrain 1
+        m_fRadius 120
+       }
+      }
+     }
+    }
+   }
+   $grp SCR_EditorRestrictionZoneEntity : "{EF72FA7CD87618D5}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneSmall.et" {
+    {
+     components {
+      SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+       m_bFollowTerrain 1
+      }
+     }
+     coords 209.206 21.478 533.632
+     {
+      GenericEntity {
+       ID "59D673B36B893D84"
+       components {
+        SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+         m_bFollowTerrain 1
+        }
+       }
+      }
+     }
+    }
+    {
+     components {
+      SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+       m_bFollowTerrain 1
+      }
+     }
+     coords 470.405 137.007 -336.695
+     {
+      GenericEntity {
+       ID "59D673B36B893D84"
+       components {
+        SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+         m_bFollowTerrain 1
+        }
+       }
+      }
+     }
+    }
    }
   }
  }
@@ -448,6 +858,72 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
      m_eGroupType Helicopter_Recon
      m_iCompanyCallsign 4
     }
+    RECON_3 {
+     coords 48.153 -0.988 -18.429
+     angles 0 -146.466 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+     m_iSquadCallsign 2
+    }
+   }
+   SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+    components {
+     SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+      m_bFollowTerrain 1
+     }
+    }
+    m_fWarnRadius 120
+    m_fZoneRadius 130
+    m_fZoneTeleportedRadius 135
+    {
+     GenericEntity {
+      ID "59D673B36B893D84"
+      components {
+       SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+        m_bFollowTerrain 1
+        m_fRadius 120
+       }
+      }
+     }
+    }
+   }
+   $grp SCR_EditorRestrictionZoneEntity : "{EF72FA7CD87618D5}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneSmall.et" {
+    {
+     components {
+      SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+       m_bFollowTerrain 1
+      }
+     }
+     coords 285.862 -0.825 -162.179
+     {
+      GenericEntity {
+       ID "59D673B36B893D84"
+       components {
+        SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+         m_bFollowTerrain 1
+        }
+       }
+      }
+     }
+    }
+    {
+     components {
+      SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+       m_bFollowTerrain 1
+      }
+     }
+     coords -304.61 17.476 120.418
+     {
+      GenericEntity {
+       ID "59D673B36B893D84"
+       components {
+        SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+         m_bFollowTerrain 1
+        }
+       }
+      }
+     }
+    }
    }
   }
  }
@@ -510,6 +986,73 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
      m_iCompanyCallsign 1
      m_iSquadCallsign 3
     }
+    RECON_12 {
+     coords 199.543 -59.925 -328.515
+     angles 0 -121.843 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+     m_iSquadCallsign 2
+    }
+   }
+   SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+    components {
+     SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+      m_bFollowTerrain 1
+     }
+    }
+    coords 0.005 0.001 0.013
+    m_fWarnRadius 120
+    m_fZoneRadius 130
+    m_fZoneTeleportedRadius 135
+    {
+     GenericEntity {
+      ID "59D673B36B893D84"
+      components {
+       SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+        m_bFollowTerrain 1
+        m_fRadius 120
+       }
+      }
+     }
+    }
+   }
+   $grp SCR_EditorRestrictionZoneEntity : "{EF72FA7CD87618D5}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneSmall.et" {
+    {
+     components {
+      SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+       m_bFollowTerrain 1
+      }
+     }
+     coords -317.678 -28.747 64.829
+     {
+      GenericEntity {
+       ID "59D673B36B893D84"
+       components {
+        SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+         m_bFollowTerrain 1
+        }
+       }
+      }
+     }
+    }
+    {
+     components {
+      SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+       m_bFollowTerrain 1
+      }
+     }
+     coords 202.499 -60.428 -336.495
+     {
+      GenericEntity {
+       ID "59D673B36B893D84"
+       components {
+        SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+         m_bFollowTerrain 1
+        }
+       }
+      }
+     }
+    }
    }
   }
  }
@@ -564,7 +1107,7 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
     COMMAND_37 {
      coords -67.431 12.462 79.913
      angles 0 43.972 0
-     m_eGroupType Command_1
+     m_eGroupType Command_7
     }
     RECON_99 {
      coords -351.292 -9.075 -42.024
@@ -578,6 +1121,84 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
      angles 0 0.698 0
      m_iCompanyCallsign 1
      m_iSquadCallsign 3
+    }
+   }
+   SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+    components {
+     SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+      m_bFollowTerrain 1
+     }
+    }
+    coords 0.008 0.004 0.032
+    m_fWarnRadius 120
+    m_fZoneRadius 130
+    m_fZoneTeleportedRadius 135
+    {
+     GenericEntity {
+      ID "59D673B36B893D84"
+      components {
+       SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+        m_bFollowTerrain 1
+        m_fRadius 120
+       }
+      }
+     }
+    }
+   }
+   $grp SCR_EditorRestrictionZoneEntity : "{EF72FA7CD87618D5}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneSmall.et" {
+    {
+     components {
+      SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+       m_bFollowTerrain 1
+      }
+     }
+     coords -348.521 -8.942 -39.354
+     {
+      GenericEntity {
+       ID "59D673B36B893D84"
+       components {
+        SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+         m_bFollowTerrain 1
+        }
+       }
+      }
+     }
+    }
+    {
+     components {
+      SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+       m_bFollowTerrain 1
+      }
+     }
+     coords 125.314 4.108 -183.736
+     {
+      GenericEntity {
+       ID "59D673B36B893D84"
+       components {
+        SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+         m_bFollowTerrain 1
+        }
+       }
+      }
+     }
+    }
+    {
+     components {
+      SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+       m_bFollowTerrain 1
+      }
+     }
+     coords -189.626 39.438 233.585
+     {
+      GenericEntity {
+       ID "59D673B36B893D84"
+       components {
+        SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+         m_bFollowTerrain 1
+        }
+       }
+      }
+     }
     }
    }
   }
@@ -649,6 +1270,73 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
      m_iCompanyCallsign 4
      m_iSquadCallsign 1
     }
+    RECON_15 {
+     coords 86.986 14.888 -218.477
+     angles 0 -109.225 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+     m_iSquadCallsign 2
+    }
+   }
+   SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+    components {
+     SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+      m_bFollowTerrain 1
+     }
+    }
+    coords -0.014 -0.001 -0.006
+    m_fWarnRadius 120
+    m_fZoneRadius 130
+    m_fZoneTeleportedRadius 135
+    {
+     GenericEntity {
+      ID "59D673B36B893D84"
+      components {
+       SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+        m_bFollowTerrain 1
+        m_fRadius 120
+       }
+      }
+     }
+    }
+   }
+   $grp SCR_EditorRestrictionZoneEntity : "{EF72FA7CD87618D5}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneSmall.et" {
+    {
+     components {
+      SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+       m_bFollowTerrain 1
+      }
+     }
+     coords 85.533 15.516 -225.234
+     {
+      GenericEntity {
+       ID "59D673B36B893D84"
+       components {
+        SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+         m_bFollowTerrain 1
+        }
+       }
+      }
+     }
+    }
+    {
+     components {
+      SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+       m_bFollowTerrain 1
+      }
+     }
+     coords -64.388 -5.911 271.995
+     {
+      GenericEntity {
+       ID "59D673B36B893D84"
+       components {
+        SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+         m_bFollowTerrain 1
+        }
+       }
+      }
+     }
+    }
    }
   }
  }
@@ -703,7 +1391,7 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
     COMMAND_39 {
      coords -67.815 10.693 -89.983
      angles 0 -54.56 0
-     m_eGroupType Command_1
+     m_eGroupType Command_7
     }
     SQUAD_101 {
      coords 70.032 -11.681 83.146
@@ -717,6 +1405,84 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
      m_eGroupType Recon
      m_iCompanyCallsign 3
      m_iSquadCallsign 2
+    }
+   }
+   SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+    components {
+     SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+      m_bFollowTerrain 1
+     }
+    }
+    coords -0.018 0.007 -0.013
+    m_fWarnRadius 120
+    m_fZoneRadius 130
+    m_fZoneTeleportedRadius 135
+    {
+     GenericEntity {
+      ID "59D673B36B893D84"
+      components {
+       SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+        m_bFollowTerrain 1
+        m_fRadius 120
+       }
+      }
+     }
+    }
+   }
+   $grp SCR_EditorRestrictionZoneEntity : "{EF72FA7CD87618D5}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneSmall.et" {
+    {
+     components {
+      SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+       m_bFollowTerrain 1
+      }
+     }
+     coords -321.338 -14.22 36.189
+     {
+      GenericEntity {
+       ID "59D673B36B893D84"
+       components {
+        SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+         m_bFollowTerrain 1
+        }
+       }
+      }
+     }
+    }
+    {
+     components {
+      SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+       m_bFollowTerrain 1
+      }
+     }
+     coords 162.477 -27.112 188.13
+     {
+      GenericEntity {
+       ID "59D673B36B893D84"
+       components {
+        SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+         m_bFollowTerrain 1
+        }
+       }
+      }
+     }
+    }
+    {
+     components {
+      SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+       m_bFollowTerrain 1
+      }
+     }
+     coords -89.761 13.087 -286.561
+     {
+      GenericEntity {
+       ID "59D673B36B893D84"
+       components {
+        SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+         m_bFollowTerrain 1
+        }
+       }
+      }
+     }
     }
    }
   }
@@ -772,7 +1538,7 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
     COMMAND_40 {
      coords -36.411 2.217 -105.508
      angles 0 -71.893 0
-     m_eGroupType Command_1
+     m_eGroupType Command_7
     }
     HELI_ATTACK_4 {
      coords -61.017 2.272 59.314
@@ -793,6 +1559,84 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
      m_eGroupType Recon
      m_iCompanyCallsign 3
      m_iSquadCallsign 2
+    }
+   }
+   SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+    components {
+     SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+      m_bFollowTerrain 1
+     }
+    }
+    coords -0.007 0.002 -0.008
+    m_fWarnRadius 120
+    m_fZoneRadius 130
+    m_fZoneTeleportedRadius 135
+    {
+     GenericEntity {
+      ID "59D673B36B893D84"
+      components {
+       SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+        m_bFollowTerrain 1
+        m_fRadius 120
+       }
+      }
+     }
+    }
+   }
+   $grp SCR_EditorRestrictionZoneEntity : "{EF72FA7CD87618D5}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneSmall.et" {
+    {
+     components {
+      SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+       m_bFollowTerrain 1
+      }
+     }
+     coords -84.585 -0.137 -282.4
+     {
+      GenericEntity {
+       ID "59D673B36B893D84"
+       components {
+        SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+         m_bFollowTerrain 1
+        }
+       }
+      }
+     }
+    }
+    {
+     components {
+      SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+       m_bFollowTerrain 1
+      }
+     }
+     coords -805.11 1.874 -205.394
+     {
+      GenericEntity {
+       ID "59D673B36B893D84"
+       components {
+        SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+         m_bFollowTerrain 1
+        }
+       }
+      }
+     }
+    }
+    {
+     components {
+      SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+       m_bFollowTerrain 1
+      }
+     }
+     coords -449.077 3.634 -231.75
+     {
+      GenericEntity {
+       ID "59D673B36B893D84"
+       components {
+        SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+         m_bFollowTerrain 1
+        }
+       }
+      }
+     }
     }
    }
   }
@@ -848,7 +1692,7 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
     COMMAND_41 {
      coords 60.248 9.009 94.467
      angles 0 117.291 0
-     m_eGroupType Command_1
+     m_eGroupType Command_7
     }
     RECON_110 {
      coords -7.985 -0.412 -1.746
@@ -862,6 +1706,66 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
      angles 0 -42.589 0
      m_iCompanyCallsign 1
      m_iSquadCallsign 3
+    }
+   }
+   SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+    components {
+     SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+      m_bFollowTerrain 1
+     }
+    }
+    coords 0.034 0.017 0.242
+    m_fWarnRadius 120
+    m_fZoneRadius 130
+    m_fZoneTeleportedRadius 135
+    {
+     GenericEntity {
+      ID "59D673B36B893D84"
+      components {
+       SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+        m_bFollowTerrain 1
+        m_fRadius 120
+       }
+      }
+     }
+    }
+   }
+   $grp SCR_EditorRestrictionZoneEntity : "{EF72FA7CD87618D5}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneSmall.et" {
+    {
+     components {
+      SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+       m_bFollowTerrain 1
+      }
+     }
+     coords -146.137 -34.819 -263.027
+     {
+      GenericEntity {
+       ID "59D673B36B893D84"
+       components {
+        SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+         m_bFollowTerrain 1
+        }
+       }
+      }
+     }
+    }
+    {
+     components {
+      SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+       m_bFollowTerrain 1
+      }
+     }
+     coords 192.617 13.488 235.687
+     {
+      GenericEntity {
+       ID "59D673B36B893D84"
+       components {
+        SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+         m_bFollowTerrain 1
+        }
+       }
+      }
+     }
     }
    }
   }
@@ -939,6 +1843,73 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
      m_eGroupType Helicopter_Recon
      m_iCompanyCallsign 4
     }
+    RECON_29 {
+     coords 21.215 0.017 -2.004
+     angles 0 -92.057 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+     m_iSquadCallsign 3
+    }
+   }
+   SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+    components {
+     SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+      m_bFollowTerrain 1
+     }
+    }
+    coords -0.046 0.001 0.087
+    m_fWarnRadius 120
+    m_fZoneRadius 130
+    m_fZoneTeleportedRadius 135
+    {
+     GenericEntity {
+      ID "59D673B36B893D84"
+      components {
+       SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+        m_bFollowTerrain 1
+        m_fRadius 120
+       }
+      }
+     }
+    }
+   }
+   $grp SCR_EditorRestrictionZoneEntity : "{EF72FA7CD87618D5}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneSmall.et" {
+    {
+     components {
+      SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+       m_bFollowTerrain 1
+      }
+     }
+     coords -299.604 46.259 -179.49
+     {
+      GenericEntity {
+       ID "59D673B36B893D84"
+       components {
+        SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+         m_bFollowTerrain 1
+        }
+       }
+      }
+     }
+    }
+    {
+     components {
+      SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+       m_bFollowTerrain 1
+      }
+     }
+     coords 219.894 3.314 114.624
+     {
+      GenericEntity {
+       ID "59D673B36B893D84"
+       components {
+        SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+         m_bFollowTerrain 1
+        }
+       }
+      }
+     }
+    }
    }
   }
  }
@@ -993,7 +1964,7 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
     COMMAND_43 {
      coords -111.115 -15.683 12.491
      angles 0 -34.324 0
-     m_eGroupType Command_1
+     m_eGroupType Command_7
     }
     RECON_116 {
      coords 47.345 27.078 -267.55
@@ -1014,6 +1985,84 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
      m_eGroupType Helicopter_Attack
      m_iCompanyCallsign 4
      m_iPlatoonCallsign 1
+    }
+   }
+   SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+    components {
+     SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+      m_bFollowTerrain 1
+     }
+    }
+    coords -0.037 -0.005 0.016
+    m_fWarnRadius 120
+    m_fZoneRadius 130
+    m_fZoneTeleportedRadius 135
+    {
+     GenericEntity {
+      ID "59D673B36B893D84"
+      components {
+       SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+        m_bFollowTerrain 1
+        m_fRadius 120
+       }
+      }
+     }
+    }
+   }
+   $grp SCR_EditorRestrictionZoneEntity : "{EF72FA7CD87618D5}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneSmall.et" {
+    {
+     components {
+      SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+       m_bFollowTerrain 1
+      }
+     }
+     coords 295.824 1.42 83.428
+     {
+      GenericEntity {
+       ID "59D673B36B893D84"
+       components {
+        SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+         m_bFollowTerrain 1
+        }
+       }
+      }
+     }
+    }
+    {
+     components {
+      SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+       m_bFollowTerrain 1
+      }
+     }
+     coords -288.371 -14.864 -72.073
+     {
+      GenericEntity {
+       ID "59D673B36B893D84"
+       components {
+        SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+         m_bFollowTerrain 1
+        }
+       }
+      }
+     }
+    }
+    {
+     components {
+      SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+       m_bFollowTerrain 1
+      }
+     }
+     coords 43.714 27.03 -269.051
+     {
+      GenericEntity {
+       ID "59D673B36B893D84"
+       components {
+        SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+         m_bFollowTerrain 1
+        }
+       }
+      }
+     }
     }
    }
   }
@@ -1085,6 +2134,73 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
      m_iCompanyCallsign 3
      m_iSquadCallsign 3
     }
+    RECON_18 {
+     coords -65.862 -2.915 -24.493
+     angles 0 155.721 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+     m_iSquadCallsign 4
+    }
+   }
+   SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+    components {
+     SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+      m_bFollowTerrain 1
+     }
+    }
+    coords -0.018 0.003 0.041
+    m_fWarnRadius 120
+    m_fZoneRadius 130
+    m_fZoneTeleportedRadius 135
+    {
+     GenericEntity {
+      ID "59D673B36B893D84"
+      components {
+       SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+        m_bFollowTerrain 1
+        m_fRadius 120
+       }
+      }
+     }
+    }
+   }
+   $grp SCR_EditorRestrictionZoneEntity : "{EF72FA7CD87618D5}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneSmall.et" {
+    {
+     components {
+      SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+       m_bFollowTerrain 1
+      }
+     }
+     coords -81.161 15.854 235.07
+     {
+      GenericEntity {
+       ID "59D673B36B893D84"
+       components {
+        SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+         m_bFollowTerrain 1
+        }
+       }
+      }
+     }
+    }
+    {
+     components {
+      SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+       m_bFollowTerrain 1
+      }
+     }
+     coords 237.605 17.171 -139.18
+     {
+      GenericEntity {
+       ID "59D673B36B893D84"
+       components {
+        SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+         m_bFollowTerrain 1
+        }
+       }
+      }
+     }
+    }
    }
   }
  }
@@ -1154,6 +2270,73 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
      m_eGroupType Recon
      m_iCompanyCallsign 3
      m_iSquadCallsign 3
+    }
+    RECON_21 {
+     coords 15.362 -0.694 40.897
+     angles 0 -24.137 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+     m_iSquadCallsign 4
+    }
+   }
+   SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+    components {
+     SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+      m_bFollowTerrain 1
+     }
+    }
+    coords -0.032 -0.008 -0.15
+    m_fWarnRadius 120
+    m_fZoneRadius 130
+    m_fZoneTeleportedRadius 135
+    {
+     GenericEntity {
+      ID "59D673B36B893D84"
+      components {
+       SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+        m_bFollowTerrain 1
+        m_fRadius 120
+       }
+      }
+     }
+    }
+   }
+   $grp SCR_EditorRestrictionZoneEntity : "{EF72FA7CD87618D5}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneSmall.et" {
+    {
+     components {
+      SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+       m_bFollowTerrain 1
+      }
+     }
+     coords -190.419 22.291 241.242
+     {
+      GenericEntity {
+       ID "59D673B36B893D84"
+       components {
+        SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+         m_bFollowTerrain 1
+        }
+       }
+      }
+     }
+    }
+    {
+     components {
+      SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+       m_bFollowTerrain 1
+      }
+     }
+     coords 195.834 -29.712 -276.372
+     {
+      GenericEntity {
+       ID "59D673B36B893D84"
+       components {
+        SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+         m_bFollowTerrain 1
+        }
+       }
+      }
+     }
     }
    }
   }

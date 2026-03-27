@@ -1,133 +1,104 @@
-$grp SCR_AIGroup : "{3EDA372443FD105F}Prefabs/Groups/OPFOR/drg_AFRF_RifleSquad.et" {
- AFRF_101 {
-  components {
-   PS_GroupCallsignAssigner "{6454F7D129837B5A}" {
-    m_iCompanyCallsign 1
-    m_iSquadCallsign 1
-   }
-  }
-  coords 4321.15 58.888 2127.288
-  angles 0 115.251 0
-  m_sCustomNameSet "Моторизированный отряд"
- }
- AFRF_100 {
-  components {
-   PS_GroupCallsignAssigner "{6454F7D129837B5A}" {
-    m_iCompanyCallsign 1
-   }
-  }
-  coords 4326.471 58.836 2138.343
-  angles 0 115.251 0
-  m_sCustomNameSet "Моторизированный отряд"
- }
- AFRF_001 {
-  components {
-   PS_GroupCallsignAssigner "{6454F7D129837B5A}" {
-    m_iCompanyCallsign 0
-    m_iSquadCallsign 1
-   }
-  }
-  coords 4326.623 58.822 2124.762
-  angles 0 115.251 0
-  m_aUnitPrefabSlots {
-   "{0DF8C7583D0AAA9A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_SL_v2.et"
-   "{2EBF7FD7B32EE3FA}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_SR.et"
-   "{E6870BF19DB0632C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_AT.et"
-   "{C0F50DDFB6CFA87B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_AAT.et"
-   "{9CBAF5396A6DDC9C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_MG_opt.et"
-   "{FAC6AB61E4CA97F5}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_MGAB.et"
-   "{2836211FE98BA458}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_Rifleman.et"
-   "{D9234F6644B47143}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_Medic.et"
-   "{6D10A06D248FCD0B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_Sniper.et"
-  }
-  m_sCustomNameSet "Пехотный отряд"
- }
- AFRF_002 {
-  components {
-   PS_GroupCallsignAssigner "{6454F7D129837B5A}" {
-    m_iCompanyCallsign 0
-    m_iSquadCallsign 2
-   }
-  }
-  coords 4331.998 58.823 2136.31
-  angles 0 115.251 0
-  m_aUnitPrefabSlots {
-   "{0DF8C7583D0AAA9A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_SL_v2.et"
-   "{2EBF7FD7B32EE3FA}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_SR.et"
-   "{E6870BF19DB0632C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_AT.et"
-   "{C0F50DDFB6CFA87B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_AAT.et"
-   "{9CBAF5396A6DDC9C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_MG_opt.et"
-   "{FAC6AB61E4CA97F5}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_MGAB.et"
-   "{2836211FE98BA458}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_Rifleman.et"
-   "{D9234F6644B47143}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_Medic.et"
-   "{6D10A06D248FCD0B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_Sniper.et"
-  }
-  m_sCustomNameSet "Пехотный отряд"
- }
-}
-SCR_AIGroup AFRF_000 : "{52DBD8AD794AA412}Prefabs/Groups/OPFOR/drg_AFRF_CompanyHQ.et" {
- coords 4336.333 58.747 2123.859
- angles 0 -68.157 0
- m_aUnitPrefabSlots {
-  "{B9CD243AF2A9C3FC}Worlds/Gubastus/TvT_SteelFoundament_v2_Ruha/Prefabs/drg_Role_RHS_AFRF_Army_Officer_VIP.et"
- }
- m_sCustomNameSet "Командир стороны"
-}
-$grp SCR_AIGroup : "{F06FB64E53D6E4AE}Prefabs/Groups/OPFOR/drg_RHS_Recon_Squad.et" {
+$grp SCR_AIGroup : "{1128EBD3DDFF1D07}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Motorized.et" {
  AFRF_201 {
   components {
-   PS_GroupCallsignAssigner "{6454F7D129837B5A}" {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
     m_iCompanyCallsign 2
     m_iSquadCallsign 1
    }
   }
-  coords 4509.784 54.031 4321.146
-  angles 0 -129.758 0
-  m_aUnitPrefabSlots {
-   "{964F7C7E17A618E4}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/drg_Role_RHS_AFRF_Recon_SquadLeader.et"
-   "{89072075B73F4C52}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/drg_Role_RHS_AFRF_Recon_SeniorRifleman.et"
-   "{A985CD90251A1939}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/drg_Role_RHS_AFRF_Recon_MG.et"
-   "{DF973A765CF4CE88}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/drg_Role_RHS_AFRF_Recon_Rifle_GM94.et"
-   "{1AB049064B53BD02}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/drg_Role_RHS_AFRF_Recon_Grenadier.et"
-   "{2BB6F9C635CFFE8B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/drg_Role_RHS_AFRF_Recon_Sniper.et"
-  }
-  m_sCustomNameSet "Отряд СПН"
+  coords 4320.973 58.891 2127.241
+  angles 0 115.927 0
  }
  AFRF_200 {
   components {
-   PS_GroupCallsignAssigner "{6454F7D129837B5A}" {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
     m_iCompanyCallsign 2
    }
   }
-  coords 4518.266 54.043 4311.235
-  angles 0 -129.758 0
-  m_aUnitPrefabSlots {
-   "{964F7C7E17A618E4}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/drg_Role_RHS_AFRF_Recon_SquadLeader.et"
-   "{89072075B73F4C52}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/drg_Role_RHS_AFRF_Recon_SeniorRifleman.et"
-   "{A985CD90251A1939}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/drg_Role_RHS_AFRF_Recon_MG.et"
-   "{DF973A765CF4CE88}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/drg_Role_RHS_AFRF_Recon_Rifle_GM94.et"
-   "{1AB049064B53BD02}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/drg_Role_RHS_AFRF_Recon_Grenadier.et"
-   "{2BB6F9C635CFFE8B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/drg_Role_RHS_AFRF_Recon_Sniper.et"
-  }
-  m_sCustomNameSet "Отряд СПН"
+  coords 4326.272 58.84 2138.949
+  angles 0 115.186 0
  }
- AFRF_202 {
+}
+SCR_AIGroup AFRF_000 : "{496070641528229D}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_PL.et" {
+ coords 4336.292 58.748 2123.863
+ angles 0 -65.089 0
+ m_aUnitPrefabSlots {
+  "{B9CD243AF2A9C3FC}Worlds/Gubastus/TvT_SteelFoundament_v2_Ruha/Prefabs/AFRF_PL_VIP.et"
+  "{E49DF9180B449850}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_SR.et"
+  "{78410A549262E06D}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Rifle.et"
+  "{78410A549262E06D}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Rifle.et"
+ }
+}
+$grp SCR_AIGroup : "{B851352F042E4F0B}Prefabs/Groups/OPFOR/RHS_AFRF/Recon/Group_RHS_AFRF_Recon_Squad.et" {
+ AFRF_301 {
   components {
-   PS_GroupCallsignAssigner "{6454F7D129837B5A}" {
-    m_iCompanyCallsign 2
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 1
+   }
+  }
+  coords 4509.801 54.054 4321.14
+  angles 0 -130.172 0
+  m_aUnitPrefabSlots {
+   "{581C5812DD6A8A4F}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_SL.et"
+   "{2504B4EAB8F9B6D6}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_SR.et"
+   "{6783771781A13CBF}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_MG.et"
+   "{3841D72C18594176}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_GL.et"
+   "{B80041ECF565397A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_Sapper.et"
+  }
+ }
+ AFRF_300 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 4518.258 54.043 4311.233
+  angles 0 -130.172 0
+  m_aUnitPrefabSlots {
+   "{581C5812DD6A8A4F}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_SL.et"
+   "{2504B4EAB8F9B6D6}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_SR.et"
+   "{6783771781A13CBF}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_MG.et"
+   "{3841D72C18594176}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_GL.et"
+   "{B80041ECF565397A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_Sapper.et"
+  }
+ }
+ AFRF_302 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 3
     m_iSquadCallsign 2
    }
   }
-  coords 4501.06 54.031 4331.447
-  angles 0 -129.758 0
+  coords 4501.076 54.055 4331.444
+  angles 0 -130.172 0
   m_aUnitPrefabSlots {
-   "{964F7C7E17A618E4}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/drg_Role_RHS_AFRF_Recon_SquadLeader.et"
-   "{89072075B73F4C52}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/drg_Role_RHS_AFRF_Recon_SeniorRifleman.et"
-   "{A985CD90251A1939}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/drg_Role_RHS_AFRF_Recon_MG.et"
-   "{DF973A765CF4CE88}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/drg_Role_RHS_AFRF_Recon_Rifle_GM94.et"
-   "{1AB049064B53BD02}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/drg_Role_RHS_AFRF_Recon_Grenadier.et"
-   "{2BB6F9C635CFFE8B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/drg_Role_RHS_AFRF_Recon_Sniper.et"
+   "{581C5812DD6A8A4F}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_SL.et"
+   "{2504B4EAB8F9B6D6}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_SR.et"
+   "{6783771781A13CBF}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_MG.et"
+   "{3841D72C18594176}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_GL.et"
+   "{B80041ECF565397A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_Sapper.et"
   }
-  m_sCustomNameSet "Отряд СПН"
+ }
+}
+$grp SCR_AIGroup : "{EB131DDF464F90FD}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Squad.et" {
+ AFRF_101 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 4326.417 58.819 2124.92
+  angles 0 115.676 0
+ }
+ AFRF_100 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 4331.876 58.764 2136.431
+  angles 0 115.676 0
  }
 }

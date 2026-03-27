@@ -1,0 +1,253 @@
+Vehicle AH1S_Marines_x3_Opt1 : "{016DEB59D539D387}Prefabs/Vehicles/Helicopters/AH1S/AH1S_Marines_x3_Opt.et" {
+ components {
+  SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+   FuelNodes {
+    SCR_FuelNode "{5622A70CD4036C5A}" {
+     m_fInitialFuelTankState 0
+    }
+    SCR_FuelNode "{6242ECBBA87B4D69}" {
+     m_fInitialFuelTankState 0
+    }
+   }
+  }
+ }
+ coords 2360.679 163.591 1879.643
+ angles 0 90 0
+ m_sAttachmentGroupName "USMC6"
+}
+$grp SCR_AIGroup : "{09F6CBFB9260D79C}Prefabs/Groups/BLUFOR/RHS_USAF/USMC/Desert/dim_USMC_D_HQ.et" {
+ {
+  coords 424.017 352 322.966
+  angles 0 -138.942 0
+  m_sCustomNameSet "Полковник Адамс"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iCompanyCallsign 5
+   }
+  }
+  coords 1943.308 225.833 2484.808
+  angles 0 99.891 0
+  m_aUnitPrefabSlots {
+   "{B83EE9A01852E1F1}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/Desert_Cover/dim_AFO_SL.et"
+   "{F2613EA3D80FB51F}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/Desert_Cover/dim_AFO_Rifleman_2.et"
+   "{BFF913F17ED45B32}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/Desert_Cover/dim_AFO_TL.et"
+   "{197EE33B2F836685}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/Desert_Cover/dim_AFO_Rifleman.et"
+   "{A72626DF67CC32DC}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/Desert_Cover/dim_AFO_M107.et"
+  }
+  m_sCustomNameSet "6-й отряд SEAL"
+ }
+}
+$grp SCR_AIGroup : "{3298D6DA95D73EAD}Prefabs/Groups/BLUFOR/RHS_USAF/USMC/Desert/dim_USMC_D_Rifle_Squad.et" {
+ ranger {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iCompanyCallsign 4
+   }
+  }
+  coords 2049.556 20.375 3650.795
+  angles 0 51.77 0
+  m_aUnitPrefabSlots {
+   "{80C46F847BD12C33}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/75th Ranger/Ranger (2000s)/dim_US_Ranger2000_SL.et"
+   "{870395D51D5796F0}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/75th Ranger/Ranger (2000s)/dim_US_Ranger2000_TL.et"
+   "{ED4C9E9B49558E20}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/75th Ranger/Ranger (2000s)/dim_US_Ranger2000_AR.et"
+   "{B74C51ED9085B8EE}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/75th Ranger/Ranger (2000s)/dim_US_Ranger2000_Grenadier.et"
+   "{7D39806615C8327E}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/75th Ranger/Ranger (2000s)/dim_US_Ranger2000_Sapper.et"
+   "{870395D51D5796F0}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/75th Ranger/Ranger (2000s)/dim_US_Ranger2000_TL.et"
+   "{ED4C9E9B49558E20}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/75th Ranger/Ranger (2000s)/dim_US_Ranger2000_AR.et"
+   "{B74C51ED9085B8EE}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/75th Ranger/Ranger (2000s)/dim_US_Ranger2000_Grenadier.et"
+  }
+  m_sCustomNameSet "75 Полк Рейнджеров"
+ }
+ USMC {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 419.647 351.91 324.028
+  angles 0 -173.25 0
+  m_aUnitPrefabSlots {
+   "{97A29C60BAF66AA0}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_SL_D.et"
+   "{C1A4BA040B46DC13}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_TF_D.et"
+   "{322724ED6EB0DECA}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_AR_D.et"
+   "{A0D97D555EAC6433}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_Grenadier_D.et"
+   "{C1A4BA040B46DC13}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_TF_D.et"
+   "{322724ED6EB0DECA}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_AR_D.et"
+   "{A2D464E007388EE7}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_GL_2.et"
+  }
+  m_sCustomNameSet "COP Viper - отряд USMC"
+ }
+ USMC2 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 422.648 352 307.602
+  angles 0 -86.841 0
+  m_aUnitPrefabSlots {
+   "{97A29C60BAF66AA0}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_SL_D.et"
+   "{C1A4BA040B46DC13}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_TF_D.et"
+   "{322724ED6EB0DECA}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_AR_D.et"
+   "{A0D97D555EAC6433}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_Grenadier_D.et"
+   "{C1A4BA040B46DC13}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_TF_D.et"
+   "{322724ED6EB0DECA}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_AR_D.et"
+   "{A2D464E007388EE7}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_GL_2.et"
+  }
+  m_sCustomNameSet "COP Viper - отряд USMC"
+ }
+ USMC3 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 408.36 352 312.744
+  angles 0 91.098 0
+  m_aUnitPrefabSlots {
+   "{1A17B98FF01798DA}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Force Recon/Assault/dim_Role_Character_USMC_FR_A_SL.et"
+   "{1DD043DE96912219}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Force Recon/Assault/dim_Role_Character_USMC_FR_A_TL.et"
+   "{0F4590EC9C9E8349}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Force Recon/Assault/dim_Role_Character_USMC_FR_A_TL_2.et"
+   "{65CC0200D6C7F409}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Force Recon/Assault/dim_Role_Character_USMC_FR_A_GL.et"
+  }
+  m_sCustomNameSet "COP Viper - Force Recon"
+ }
+ USMC4 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 1908.661 205.507 1341.043
+  angles 0 146.657 0
+  m_aUnitPrefabSlots {
+   "{97A29C60BAF66AA0}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_SL_D.et"
+   "{C1A4BA040B46DC13}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_TF_D.et"
+   "{322724ED6EB0DECA}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_AR_D.et"
+   "{A0D97D555EAC6433}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_Grenadier_D.et"
+   "{C1A4BA040B46DC13}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_TF_D.et"
+   "{322724ED6EB0DECA}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_AR_D.et"
+   "{A2D464E007388EE7}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_GL_2.et"
+  }
+  m_sCustomNameSet "COP Restrepo - отряд USMC"
+ }
+ USMC5 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 2375.041 163.5 1861.473
+  angles 0 -85.328 0
+  m_aUnitPrefabSlots {
+   "{97A29C60BAF66AA0}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_SL_D.et"
+   "{C1A4BA040B46DC13}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_TF_D.et"
+   "{322724ED6EB0DECA}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_AR_D.et"
+   "{A0D97D555EAC6433}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_Grenadier_D.et"
+   "{C1A4BA040B46DC13}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_TF_D.et"
+   "{322724ED6EB0DECA}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_AR_D.et"
+   "{A2D464E007388EE7}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_GL_2.et"
+  }
+  m_sCustomNameSet "COP Korengal - отряд USMC"
+ }
+ USMC6 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iCompanyCallsign 3
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 1872.407 207.489 1364.856
+  angles 0 -1.961 0
+  m_aUnitPrefabSlots {
+   "{CADEA2B9EA05B694}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_Pilot.et"
+   "{A155A134627CBABF}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_CoPilot.et"
+  }
+  m_sCustomNameSet "Экипаж Кобры"
+ }
+ ranger2 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iCompanyCallsign 4
+    m_iSquadCallsign 1
+   }
+  }
+  coords 2060.492 20.759 3636.864
+  angles 0 51.77 0
+  m_aUnitPrefabSlots {
+   "{80C46F847BD12C33}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/75th Ranger/Ranger (2000s)/dim_US_Ranger2000_SL.et"
+   "{870395D51D5796F0}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/75th Ranger/Ranger (2000s)/dim_US_Ranger2000_TL.et"
+   "{ED4C9E9B49558E20}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/75th Ranger/Ranger (2000s)/dim_US_Ranger2000_AR.et"
+   "{B74C51ED9085B8EE}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/75th Ranger/Ranger (2000s)/dim_US_Ranger2000_Grenadier.et"
+   "{87C3C0F036803D0D}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/75th Ranger/Ranger (2000s)/dim_US_Ranger2000_Rifleman.et"
+   "{870395D51D5796F0}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/75th Ranger/Ranger (2000s)/dim_US_Ranger2000_TL.et"
+   "{ED4C9E9B49558E20}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/75th Ranger/Ranger (2000s)/dim_US_Ranger2000_AR.et"
+   "{B74C51ED9085B8EE}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/75th Ranger/Ranger (2000s)/dim_US_Ranger2000_Grenadier.et"
+   "{42FC3A9B5866DB5F}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/75th Ranger/Ranger (2000s)/dim_US_Ranger2000_Marksman_2.et"
+  }
+  m_sCustomNameSet "75 Полк Рейнджеров"
+ }
+}
+Vehicle M1091_Tanker_Tan2 : "{4F780C30D239F63C}Prefabs/Vehicles/Wheeled/M1083/M1091_Tanker_Tan.et" {
+ coords 1872.873 205.614 1376.182
+ angles 0 -148.251 0
+ m_sAttachmentGroupName "USMC6"
+}
+$grp Vehicle : "{5AB4A22570AD6B48}Prefabs/Vehicles/Wheeled/M1083/Armed/M1083_Transport_Covered_Armed_Tan.et" {
+ M1083_Transport_Covered_Armed_Tan1 {
+  coords 418.991 352 299.408
+  angles 0 4.013 0
+  m_sAttachmentGroupName "USMC2"
+ }
+ M1083_Transport_Covered_Armed_Tan2 {
+  coords 414.345 352 299.734
+  angles 0 4.013 0
+  m_sAttachmentGroupName "USMC"
+ }
+}
+Vehicle M1151_armed_M2HB_Tan_MBO1 : "{7C66F189E0FB7BF7}Prefabs/Vehicles/Wheeled/M998/M1151_armed_M2HB_Tan_MBO.et" {
+ coords 409.767 352 299.59
+ angles 0 3.974 0
+ m_sAttachmentGroupName "USMC3"
+}
+$grp Vehicle : "{9C07B4B8CF07B8A1}Prefabs/Vehicles/Wheeled/M998/M1151_armed_M2HB_Tan_AP.et" {
+ M1151_armed_M2HB_Tan_AP1 {
+  coords 1912.037 205.874 1354.034
+  angles -2.747 -32.257 0.675
+  m_sAttachmentGroupName "USMC4"
+ }
+ M1151_armed_M2HB_Tan_AP2 {
+  coords 1907.319 205.52 1360.682
+  angles -2.507 -52.79 0.343
+  m_sAttachmentGroupName "USMC4"
+ }
+ M1151_armed_M2HB_Tan_AP3 {
+  coords 2377.766 163.5 1877.455
+  m_sAttachmentGroupName "USMC5"
+ }
+ M1151_armed_M2HB_Tan_AP4 {
+  coords 2379.597 163.5 1885.323
+  angles 0 24.622 0
+  m_sAttachmentGroupName "USMC5"
+ }
+}
+Vehicle M1151_armed_M2HB_Tan_DIMKII1 : "{D26E78556481B9CB}Prefabs/Vehicles/Wheeled/M998/M1151_armed_M2HB_Tan_DIMKII.et" {
+ components {
+  SCR_UniversalInventoryStorageComponent "{5916C587FC993363}" {
+   MultiSlots {
+    MultiSlotConfiguration "{66F2D69AD3FC9116}" {
+     SlotTemplate InventoryStorageSlot M2Ammo {
+      Prefab "{50A242E5D9742C62}Prefabs/Weapons/Magazines/Box_127x99_M2_100rnd_4AP_1Tracer.et"
+     }
+    }
+   }
+  }
+ }
+ coords 2034.236 19.197 3689.063
+ angles -2.684 -0.012 0.895
+}
