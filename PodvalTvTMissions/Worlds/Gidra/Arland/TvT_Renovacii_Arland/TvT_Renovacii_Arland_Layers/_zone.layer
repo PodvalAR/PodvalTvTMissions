@@ -1,3 +1,46 @@
+GenericEntity ADMIRAL_KRIKER : "{3D78D7D606FF9818}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_NoCapture.et" {
+ coords 3108.186 38.774 2734.813
+}
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{68F7572918E9E6F0}" {
+     m_sZonePreviewName "GOIDA"
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "USAF_WIN"
+     }
+     m_sFailedObjectiveNames {
+      "AFRF_WIN"
+     }
+     m_sMessage "ВС РФ захватили город"
+     m_Timer GUB_ZoneControlTimer "{68F7572906F8D2B3}" {
+     }
+     m_ZoneController GUB_ZoneController "{68F7572906677970}" {
+      m_sZoneEntityName "BLACK_JACK"
+     }
+     m_FlagController GUB_FlagController "{68F7572905610C54}" {
+      m_aFlagNames {
+       "ADMIRAL_KRIKER"
+      }
+      m_fStartFactionKey "RHS_USAF"
+      m_fEndFactionKey "RHS_AFRF"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{68F7572955F042EB}" {
+       m_sFirstFactionKey "RHS_AFRF"
+       m_sSecondFactionKey "RHS_USAF"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 3193.134 16.315 2690.998
+}
 $grp SCR_EditorRestrictionZoneEntity : "{6144B0BE2EAC6897}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneMedium.et" {
  {
   coords 3259.375 2 2926.207
@@ -9,7 +52,7 @@ $grp SCR_EditorRestrictionZoneEntity : "{6144B0BE2EAC6897}PrefabsEditable/Restri
   coords 2511.225 143.299 2245.286
  }
 }
-PolylineShapeEntity : "{7019844BAD5C4DD8}Prefabs/PolyZone/PolyZone_Border.et" {
+PolylineShapeEntity BLACK_JACK : "{7019844BAD5C4DD8}Prefabs/PolyZone/PolyZone_Border.et" {
  components {
   PS_PolyZone "{60E90266F25533F6}" {
    m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
@@ -96,7 +139,7 @@ PolylineShapeEntity : "{7019844BAD5C4DD8}Prefabs/PolyZone/PolyZone_Border.et" {
 }
 $grp SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
  {
-  coords 3151.578 25.317 2761.793
+  coords 3151.578 17.194 2761.793
  }
  {
   coords 2068.182 20.945 3445.811

@@ -173,6 +173,15 @@ GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactions
   GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
    m_aControlLogics {
     GUB_ZoneControlLogic "{68F29AABE5CD362B}" {
+     m_sZonePreviewName "Черногорск"
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "CDF_WIN"
+     }
+     m_sFailedObjectiveNames {
+      "ChDKZ_WIN"
+     }
+     m_sMessage "Город захвачен"
      m_Timer GUB_ZoneControlTimer "{68F29AABDF3FDEAD}" {
       timeToComplete 150
      }
@@ -201,12 +210,4 @@ GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactions
   }
  }
  coords 6920.664 0 1563.814
-}
-GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
- components {
-  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
-   m_iMissionTime 2700
-  }
- }
- coords 7069.072 0 1826.292
 }

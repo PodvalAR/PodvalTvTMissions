@@ -1,0 +1,66 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ {
+  coords 10110.596 0 16108.392
+  m_sTitle "Правила и задачи "
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "ПРАВИЛА:"\
+  "1. Командиру США и строительному отряду США запрещено покидать узел связи (черная линия);"\
+  "2. Строительному отряду США запрещается полная блокировка всех входов/выходов, проходов и лестниц в зданиях и сооружениях: в любую точку зданий и сооружений должен существовать хотя бы один свободный проход;"\
+  "3. Вертолетам запрещена тактика \"Камикадзе\";"\
+  "4. Запрещено надевать форму, головные уборы, разгрузки, бронежилеты противника (рюкзаки можно) / снимать с себя униформу, разгрузку, головные уборы или обувь;"\
+  "5. Миномётчикам ВС РФ разрешается открывать огонь через 5 минут после окончания фризтайма. "\
+  ""\
+  "ЗАДАЧИ армии США: "\
+  "1. Не допустить захвата узла связи (синий триггер);"\
+  ""\
+  "ЗАДАЧИ армии ВС РФ:"\
+  "1. Захватить узел связи (синий триггер);"\
+  ""\
+  "ДОПОЛНИТЕЛЬНО:"\
+  "1. У строительного отряда США в ГРУЗОВИКЕ находится 200 мешков с песком;"\
+  "2. У стрелкового отряда с TOW-2 в ХАМВИ находится по 3 снаряда ПТУР;"\
+  "3. У миномётчиков ВС РФ в ГРУЗОВИКЕ лежит 2 руководства к миномету.   "\
+  "  "
+  m_aVisibleForFactions {
+   "RHS_USAF"
+   "RHS_AFRF"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+ {
+  coords 10113.558 -0.037 16108.633
+  m_sTitle "Ситуация"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "Двое суток назад подразделения 1-й пехотной дивизии США в результате наступательной операции захватили стратегический узел связи «Fob Obeh» — старый советский военный городок №3 и вышку РЛС. С этой позиции американские подразделения планирует в течение ближайших 2 часов нанести удар тактическими группами в направлении узла связи «Fob Nauzad» военный городок №4."\
+  "Армия ВС РФ планирует вернуть военный городок №3 до начала операции США."
+  m_aVisibleForFactions {
+   "RHS_USAF"
+   "RHS_AFRF"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+}
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ RU_WIN {
+  coords 10103.487 0 16114.521
+  m_sTitle "Узел связи захвачен"
+  m_sFactionKey "RHS_AFRF"
+ }
+ USA_WIN {
+  coords 10125.017 -2.209 16127.025
+  m_sTitle "Узел связи удержан"
+  m_sFactionKey "RHS_USAF"
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 10167.828 0 16147.103
+}
