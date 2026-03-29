@@ -1,25 +1,3 @@
-$grp Vehicle : "{3312ADBF53A16DD8}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS.et" {
- LAV25_RHS1 {
-  components {
-   SCR_VehicleFactionAffiliationComponent "{5882CBD9AC741CEC}" {
-    "faction affiliation" "UK"
-   }
-  }
-  coords 4033.693 25.066 3559.949
-  angles 0 24.985 0
-  m_sAttachmentGroupName "MH_110"
- }
- LAV25_RHS2 {
-  components {
-   SCR_VehicleFactionAffiliationComponent "{5882CBD9AC741CEC}" {
-    "faction affiliation" "UK"
-   }
-  }
-  coords 2815.809 7.814 2642.757
-  angles -7.178 8.545 -0.177
-  m_sAttachmentGroupName "MH_210"
- }
-}
 Vehicle _Series_LWB_Recce_M2HB1 : "{57FE9BCA625CA0E3}Prefabs/Vehicles/Wheeled/LR_3Series/3Series_LWB_Recce_M2HB.et" {
  coords 4055.992 25.108 3626.627
  angles 0 18.559 0
@@ -43,7 +21,7 @@ $grp SCR_AIGroup : "{5A6D0239E30D205D}Prefabs/Groups/BLUFOR/British Forces/Regul
     m_iPlatoonCallsign 1
    }
   }
-  coords 2817.567 9.389 2638.315
+  coords 2817.409 8.411 2638.351
   angles -7.741 -72.842 3.076
  }
 }
@@ -113,6 +91,16 @@ Vehicle M1240A1_MATV_Turret_optic_mdo_black2 : "{670D61A58F552457}Prefabs/Vehicl
  coords 2828.084 4.94 2691.932
  angles -2.798 10.015 0.414
  m_sAttachmentGroupName "PM_200"
+}
+$grp Vehicle : "{9FE42DBCD77A8BC0}Vehicles/Wiled/ROSOMAK/ROSOMAK.et" {
+ ROSOMAK1 {
+  coords 4033.903 25.062 3559.409
+  angles 0 19.524 0
+ }
+ ROSOMAK2 {
+  coords 2815.961 7.846 2642.484
+  angles -7.575 15.478 0.671
+ }
 }
 SCR_AIGroup PL_000 : "{BBA36FB95553E79C}Prefabs/Groups/BLUFOR/British Forces/Regular/Group_UK_PL.et" {
  coords 4059.227 25.094 3625.124
