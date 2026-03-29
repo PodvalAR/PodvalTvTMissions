@@ -1,103 +1,33 @@
-PolylineShapeEntity zona_zaxvata : "{1D807ABE94FE2618}Prefabs/PolyZone/PolyZone_Capture.et" {
- components {
-  PS_PolyZone "{60E90266F25533F6}" {
-   m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
-   m_cPolygonColor 1 1 1 0
-   m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
-   m_cPolygonBorderColor 0.502 0 0 1
-   m_aVisibleForFactions {
-    ""
-    "Ses_CDF"
-    "Ses_ChDKZ"
-   }
-  }
- }
- editor EntityEditorProps "{68F51AAFD6D1F1BD}" {
- }
- coords 9228.757 319.071 8819.117
- Points {
-  ShapePoint "{68F51AAF1361C124}" {
-   Position 4.911 -0.059 0.009
-  }
-  ShapePoint "{68F51AAF12D10FEF}" {
-   Position 52.778 -2.044 -7.814
-  }
-  ShapePoint "{68F51AAF104533EA}" {
-   Position 103.334 -4.137 -16.171
-  }
-  ShapePoint "{68F51AAF1645F467}" {
-   Position 185.845 -21.785 -35.785
-  }
-  ShapePoint "{68F51AAF1470848E}" {
-   Position 262.135 -28.019 -58.812
-  }
-  ShapePoint "{68F51AAF1ACFC6F6}" {
-   Position 433.791 -47.745 -92.515
-  }
-  ShapePoint "{68F51AAF18742C83}" {
-   Position 573.872 -47.564 -128.801
-  }
-  ShapePoint "{68F51AAF1E0FBA50}" {
-   Position 711.799 -48.483 -85.886
-  }
-  ShapePoint "{68F51AAF1DA29F7D}" {
-   Position 678.953 -48.704 30.978
-  }
-  ShapePoint "{68F51AAF63E1C971}" {
-   Position 535.562 -32.615 44.116
-  }
-  ShapePoint "{68F51AAF6148F302}" {
-   Position 532.66 -30.751 123.109
-  }
-  ShapePoint "{68F51AAF60DDF544}" {
-   Position 472.317 -35.121 230.405
-  }
-  ShapePoint "{68F51AAF65700D7C}" {
-   Position 166 10.225 221.092
-  }
-  ShapePoint "{68F51AAF6A17788D}" {
-   Position 67.2 17.846 181.292
-  }
-  ShapePoint "{68F51AAF68189C18}" {
-   Position 18.229 12.503 88.803
-  }
-  ShapePoint "{68F51AAF6F88B5C4}" {
-   Position 1.049 8.874 56.226
-  }
-  ShapePoint "{68F51AAF6EAF4A59}" {
-   Position -14.041 2.672 12.135
-  }
- }
- LineColor 0 0.1255 0.502 1
-}
 GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
  components {
   GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
    m_aControlLogics {
-    GUB_ZoneControlLogic "{68EA64E32F07D2C1}" {
-     m_sSuccessObjectiveNames {
-      "Город захвачен"
+    GUB_ZoneControlLogic "{6864AEE2C4769D8E}" {
+     m_sZonePreviewName "База Генерала Бисовича"
+     m_sMessage "Армия США захватила базу Генерала Бисовича"
+     m_Timer GUB_ZoneControlTimer "{6864AEE53D6DFE4D}" {
+      timeToComplete 300
      }
-     m_sFailedObjectiveNames {
-      "Город удержан"
+     m_ZoneController GUB_ZoneController "{6864AEE53F5936B3}" {
+      m_sZoneEntityName "BASE_TRIG"
      }
-     m_Timer GUB_ZoneControlTimer "{68EA64E3317D779F}" {
-      timeToComplete 150
-     }
-     m_ZoneController GUB_ZoneController "{68EA64E3659F79D1}" {
-      m_sZoneEntityName "zona_zaxvata"
-     }
-     m_FlagController GUB_FlagController "{68EA64E36DA89987}" {
+     m_FlagController GUB_FlagController "{6864AEE5257D2941}" {
       m_aFlagNames {
-       "flag"
+       "FLAG_1"
+       "FLAG_2"
+       "FLAG_3"
+       "FLAG_4"
+       "FLAG_5"
+       "FLAG_6"
+       "FLAG_7"
       }
-      m_fStartFactionKey "Ses_ChDKZ"
-      m_fEndFactionKey "Ses_CDF"
+      m_fStartFactionKey "RHS_AFRF"
+      m_fEndFactionKey "RHS_USAF"
      }
      m_aConditions {
-      GUB_ZoneControlBetweenFactionsCondition "{68EA64E398E90DF3}" {
-       m_sFirstFactionKey "Ses_CDF"
-       m_sSecondFactionKey "Ses_ChDKZ"
+      GUB_ZoneControlBetweenFactionsCondition "{6864AEE52C6A9CE2}" {
+       m_sFirstFactionKey "RHS_USAF"
+       m_sSecondFactionKey "RHS_AFRF"
        m_fComparisonMultiplier 2
        m_iOperator GREATER
       }
@@ -106,12 +36,16 @@ GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactions
    }
   }
  }
- coords 14253.74 0 5531.496
+ coords 3999.977 281.656 9234.268
 }
 GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
  components {
   DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
    m_iMissionTime 2700
+   m_aTimeLeftWarningTimers {
+    300
+   }
   }
  }
+ coords 6848.398 138.546 2486.788
 }
