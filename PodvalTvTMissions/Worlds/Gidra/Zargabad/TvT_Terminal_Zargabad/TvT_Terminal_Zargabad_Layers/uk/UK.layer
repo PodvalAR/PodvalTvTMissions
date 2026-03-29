@@ -15,8 +15,8 @@ $grp Vehicle : "{3312ADBF53A16DD8}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS.et" {
     "faction affiliation" "UK"
    }
   }
-  coords 2883.685 16.496 3336.046
-  angles 1.217 28.97 -0.35
+  coords 2815.809 7.814 2642.757
+  angles -7.178 8.545 -0.177
   m_sAttachmentGroupName "MH_210"
  }
 }
@@ -43,8 +43,8 @@ $grp SCR_AIGroup : "{5A6D0239E30D205D}Prefabs/Groups/BLUFOR/British Forces/Regul
     m_iPlatoonCallsign 1
    }
   }
-  coords 2884.449 16.362 3331.184
-  angles 0 -54.048 0
+  coords 2817.567 9.389 2638.315
+  angles -7.741 -72.842 3.076
  }
 }
 $grp SCR_AIGroup : "{654E3A922B11EC94}Prefabs/Groups/BLUFOR/British Forces/Regular/Group_UK_Squad.et" {
@@ -73,8 +73,8 @@ $grp SCR_AIGroup : "{654E3A922B11EC94}Prefabs/Groups/BLUFOR/British Forces/Regul
     m_iCompanyCallsign 2
    }
   }
-  coords 2926.537 16.625 3380.998
-  angles 0 143.622 0
+  coords 2825.86 6.67 2702.065
+  angles -5.582 98.472 6.189
  }
  PM_201 {
   components {
@@ -83,8 +83,8 @@ $grp SCR_AIGroup : "{654E3A922B11EC94}Prefabs/Groups/BLUFOR/British Forces/Regul
     m_iSquadCallsign 1
    }
   }
-  coords 2906.12 16.625 3356.079
-  angles 0 -40.688 0
+  coords 2826.918 6.368 2672.786
+  angles 0 -74.762 0
  }
  PM_202 {
   components {
@@ -93,8 +93,8 @@ $grp SCR_AIGroup : "{654E3A922B11EC94}Prefabs/Groups/BLUFOR/British Forces/Regul
     m_iSquadCallsign 2
    }
   }
-  coords 2895.182 16.625 3354.975
-  angles 0 135.468 0
+  coords 2818.474 6.368 2665.742
+  angles 0 101.394 0
  }
 }
 Vehicle M1240A1_MATV_Turret_optic_mdo_black2 : "{670D61A58F552457}Prefabs/Vehicles/Wheeled/M1240A1_MATV/M1240A1_MATV_Turret_optic_mdo_black.et" {
@@ -105,13 +105,13 @@ Vehicle M1240A1_MATV_Turret_optic_mdo_black2 : "{670D61A58F552457}Prefabs/Vehicl
   SlotManagerComponent "{55BCE45E438E4CFF}" {
    Slots {
     RegisteringComponentSlotInfo Turret {
-     Prefab ""
+     Prefab "{5FBCB8D8738061F0}Prefabs/Vehicles/Wheeled/IvecoLMV/VehParts/Turret/LMV_gun_mount_M2HB_Shield.et"
     }
    }
   }
  }
- coords 2920.592 16.612 3373.055
- angles 0 52.949 0
+ coords 2828.084 4.94 2691.932
+ angles -2.798 10.015 0.414
  m_sAttachmentGroupName "PM_200"
 }
 SCR_AIGroup PL_000 : "{BBA36FB95553E79C}Prefabs/Groups/BLUFOR/British Forces/Regular/Group_UK_PL.et" {
@@ -124,19 +124,28 @@ SCR_AIGroup PL_000 : "{BBA36FB95553E79C}Prefabs/Groups/BLUFOR/British Forces/Reg
 }
 $grp Vehicle : "{D63E8CFB4CAA9B32}Prefabs/Vehicles/Wheeled/M1083/M1083_Transport_Covered.et" {
  M1083_Transport_Covered1 {
-  coords 2907.767 16.68 3362.415
-  angles 0 47.695 0
+  coords 2825.153 5.576 2676.057
+  angles -3.915 14.878 0.809
   m_sAttachmentGroupName "PM_201"
  }
  M1083_Transport_Covered2 {
-  coords 2895.437 16.521 3350.764
-  angles 0.024 43.923 1.266
+  coords 2821.343 6.476 2661.959
+  angles -3.333 11.281 -1.575
   m_sAttachmentGroupName "PM_202"
  }
 }
 Vehicle M1240A1_MATV_Turret_Green1 : "{D9AC0E3578809137}Prefabs/Vehicles/Wheeled/M1240A1_MATV/M1240A1_MATV_Turret_Green.et" {
- coords 2930.017 16.54 3379.927
- angles 0 55.371 0
+ components {
+  SlotManagerComponent "{55BCE45E438E4CFF}" {
+   Slots {
+    RegisteringComponentSlotInfo Turret {
+     Prefab "{5FBCB8D8738061F0}Prefabs/Vehicles/Wheeled/IvecoLMV/VehParts/Turret/LMV_gun_mount_M2HB_Shield.et"
+    }
+   }
+  }
+ }
+ coords 2830.404 4.533 2703.366
+ angles -1.069 11.541 0.754
 }
 SCR_AIGroup PM_101 : "{F95993F1D0ECB936}Prefabs/Groups/BLUFOR/British Forces/Regular/Group_UK_Squad_2.et" {
  components {
