@@ -1,0 +1,93 @@
+Vehicle M1151_armed_M2HB_Tan_PAS13G1 : "{1032C5695C3FF4D9}Prefabs/Vehicles/Wheeled/M998/M1151_armed_M2HB_Tan_PAS13G.et" {
+ coords 4897.591 37.761 4611.31
+ angles 0 127.858 0
+ m_sAttachmentGroupName "Pivo"
+}
+Vehicle LAV25_RHS_D1 : "{123595894023C474}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS_D.et" {
+ coords 4875.542 37.336 4632.067
+ angles 0 130.789 0
+ m_sAttachmentGroupName "Lav25"
+}
+$grp Vehicle : "{7009ED8FBA7A1E7E}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_engineer_sand.et" {
+ Ural4320_engineer_sand1 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{5916C58171230A92}" {
+    MultiSlots {
+     MultiSlotConfiguration "{65C300964ED41EAF}" {
+      NumSlots 1000
+     }
+     MultiSlotConfiguration "{68F665F8287ECA4B}" {
+      SlotTemplate InventoryStorageSlot c4 {
+       Prefab "{33CBDE73AB48172A}Prefabs/Weapons/Explosives/DemoBlock_M112/DemoBlock_M112.et"
+      }
+     }
+     MultiSlotConfiguration "{68F665F8A993BD77}" {
+      SlotTemplate InventoryStorageSlot Mine {
+       Prefab "{E4C9F0A4090CFE4D}Prefabs/Weapons/Explosives/Mine_M14/Mine_M14.et"
+      }
+      NumSlots 100
+     }
+     MultiSlotConfiguration "{68F665FB7624685C}" {
+      SlotTemplate InventoryStorageSlot PT_Mine {
+       Prefab "{3BF82FD68BBC845C}Prefabs/Weapons/Explosives/Mine_M15AT/Mine_M15AT_base.et"
+      }
+      NumSlots 10
+     }
+    }
+   }
+  }
+  coords 4828.245 37.98 4586.72
+  angles 0 -115.504 0
+  m_sAttachmentGroupName "Stroybat"
+  m_bEnableMoveOnFreeze 1
+ }
+ Ural4320_engineer_sand2 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{5916C58171230A92}" {
+    MultiSlots {
+     MultiSlotConfiguration "{65C300964ED41EAF}" {
+      NumSlots 1000
+     }
+     MultiSlotConfiguration "{68F665F983101380}" {
+      SlotTemplate InventoryStorageSlot c4 {
+       Prefab "{33CBDE73AB48172A}Prefabs/Weapons/Explosives/DemoBlock_M112/DemoBlock_M112.et"
+      }
+      NumSlots 50
+     }
+     MultiSlotConfiguration "{68F665F8D5457BB6}" {
+      SlotTemplate InventoryStorageSlot mine {
+       Prefab "{E4C9F0A4090CFE4D}Prefabs/Weapons/Explosives/Mine_M14/Mine_M14.et"
+      }
+      NumSlots 100
+     }
+     MultiSlotConfiguration "{68F665FB7624685C}" {
+      SlotTemplate InventoryStorageSlot PT_Mine {
+       Prefab "{3BF82FD68BBC845C}Prefabs/Weapons/Explosives/Mine_M15AT/Mine_M15AT_base.et"
+      }
+      NumSlots 10
+     }
+    }
+   }
+  }
+  coords 4870.05 44.729 4677.277
+  m_sAttachmentGroupName "Stroybat"
+  m_bEnableMoveOnFreeze 1
+ }
+}
+$grp Vehicle : "{DE32642254476DD6}Prefabs/Vehicles/Wheeled/M1240A1_MATV/M1240A1_MATV_Turret_optic_pas13g_Tan.et" {
+ M1240A1_MATV_Turret_optic_pas13g_Tan1 {
+  coords 4883.435 37.705 4624.753
+  angles 0 130.778 0
+  m_sAttachmentGroupName "Pivo"
+ }
+ M1240A1_MATV_Turret_optic_pas13g_Tan2 {
+  coords 4891.169 37.705 4618.082
+  angles 0 130.778 0
+  m_sAttachmentGroupName "Pivo"
+ }
+}
+Vehicle AH6M_RKTO1 : "{FAA52C8EBB0EBCF7}Prefabs/Vehicles/Helicopters/AH6M/AH6M_RKTO.et" {
+ coords 4885.792 44.936 4678.104
+ angles 0 -167.518 0
+ m_sAttachmentGroupName "Heli"
+}

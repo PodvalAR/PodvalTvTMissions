@@ -1,0 +1,112 @@
+SCR_AIGroup : "{18CF53AE14B14060}Prefabs/Groups/BLUFOR/RHS_USAF/Recon/Group_RHS_USAF_Recon_Squad_7.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+   m_iCompanyCallsign 2
+   m_iSquadCallsign 2
+  }
+ }
+ coords 4869.746 37.483 4615.643
+ angles 0 -134.725 0
+ m_sCustomNameSet "Отряд спецназа"
+}
+$grp SCR_AIGroup : "{3EECAF1E0650D775}Prefabs/Groups/BLUFOR/RHS_USAF/Recon/Group_RHS_USAF_Recon_Squad.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 4868.531 37.363 4614.446
+  angles 0 -134.725 0
+  m_sCustomNameSet "Отряд спецназа"
+ }
+ Lav25 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 4867.231 37.297 4613.155
+  angles 0 -134.725 0
+  m_sCustomNameSet "Отряд спецназа"
+ }
+}
+SCR_AIGroup Pivo : "{AA616949A51D9409}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/MTVT/Group_RHS_USAF_DEF_Regular_MG.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+   m_iCompanyCallsign 1
+  }
+ }
+ coords 4860.582 37.457 4610.375
+ angles 0 43.893 0
+ m_aUnitPrefabSlots {
+  "{EA76D6411B37A155}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_Officer.et"
+ }
+ m_sCustomNameSet "Командир спецназа"
+}
+SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+ coords 4880.916 52.005 4607.757
+ m_fWarnRadius 140
+ m_fZoneRadius 180
+ m_fZoneTeleportedRadius 190
+ {
+  GenericEntity {
+   ID "59D673B36B893D84"
+   components {
+    SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+     m_fRadius 140
+    }
+   }
+  }
+ }
+}
+$grp SCR_AIGroup : "{FD531F571854D70B}Prefabs/Groups/BLUFOR/RHS_USAF/Recon/Group_RHS_USAF_Recon_Squad_6.et" {
+ Stroybat {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 4827.771 37.427 4581.46
+  angles 0 -17.766 0
+  m_sCustomNameSet "Инженерная группа"
+ }
+ {
+  coords 4859.463 37.5 4611.459
+  angles 0 44.896 0
+  m_aUnitPrefabSlots {
+   "{09A297C32E2DC287}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/75th Ranger/Ranger (2000s)/dim_US_Ranger2000_Officer.et"
+  }
+  m_sCustomNameSet "Полковник Реджински"
+ }
+ Heli {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 4
+   }
+  }
+  coords 4870.879 37.427 4616.813
+  angles 0 -134.725 0
+  m_aUnitPrefabSlots {
+   "{CFB9AD45454644A2}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_Pilot.et"
+   "{A004F9F5E1F8E92F}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_CoPilot.et"
+   ""
+   ""
+   ""
+   ""
+  }
+  m_sCustomNameSet "Пилоты"
+ }
+ Stroybat2 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 1
+   }
+  }
+  coords 4876.015 45.575 4673.184
+  angles 0 -84.084 0
+  m_sCustomNameSet "Инженерная группа"
+ }
+}
