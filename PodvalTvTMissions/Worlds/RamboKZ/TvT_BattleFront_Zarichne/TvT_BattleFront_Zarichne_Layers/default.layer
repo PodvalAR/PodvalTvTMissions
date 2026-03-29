@@ -1,0 +1,3538 @@
+SCR_MapEntity MapEntity_Zarichne1 : "{AAA23254C87C0B55}Prefabs/World/Game/Zarichne/MapEntity_Zarichne.et" {
+ coords 2465.662 19.796 3069.353
+}
+SCR_AIWorld : "{66048E60E9D7AB77}Prefabs/AI/SCR_AIWorld_Zarichne.et" {
+ coords 2525.366 17.037 2839.243
+}
+PerceptionManager PerceptionManager1 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 3416.963 185.784 1577.288
+}
+PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
+ components {
+  SCR_TimeAndWeatherHandlerComponent "{5EE3229927D4D2F5}" {
+   m_iStartingHours 10
+  }
+ }
+ coords 2931.594 19.954 2318.804
+ m_iFreezeTime 300000
+}
+$grp SCR_AIGroup {
+ {
+  components {
+   PS_GroupCallsignAssigner "{6454F7D129837B5A}" {
+    m_iCompanyCallsign 0
+   }
+  }
+  coords 2643.478 9.068 2480.88
+  angles -1.1 -105.309 -0.627
+  m_aUnitPrefabSlots {
+   "{CAB92AB6CB5AEEF3}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_PL.et"
+   "{F9DC5087D19D437A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_PLD.et"
+   "{4DFC393FBCBFB6BA}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_SR_opt.et"
+   "{33FA1C11138E145A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_GL.et"
+   "{D9234F6644B47143}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_Medic.et"
+   "{6D10A06D248FCD0B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_Sniper.et"
+  }
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{6454F7D129837B5A}" {
+    m_iCompanyCallsign 0
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 2385.631 9.598 2477.619
+  angles -7.676 -114.068 2.445
+  m_aUnitPrefabSlots {
+   "{0DF8C7583D0AAA9A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_SL_v2.et"
+   "{2EBF7FD7B32EE3FA}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_SR.et"
+   "{E6870BF19DB0632C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_AT.et"
+   "{C0F50DDFB6CFA87B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_AAT.et"
+   "{33FA1C11138E145A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_GL.et"
+   "{6C38BC2A8A766993}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_MG.et"
+   "{FAC6AB61E4CA97F5}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_MGAB.et"
+   "{6D10A06D248FCD0B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_Sniper.et"
+  }
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{6454F7D129837B5A}" {
+    m_iCompanyCallsign 0
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 2627.2 9.031 2568.652
+  angles 0 -117.358 0
+  m_aUnitPrefabSlots {
+   "{0DF8C7583D0AAA9A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_SL_v2.et"
+   "{2EBF7FD7B32EE3FA}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_SR.et"
+   "{E6870BF19DB0632C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_AT.et"
+   "{C0F50DDFB6CFA87B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_AAT.et"
+   "{6C38BC2A8A766993}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_MG.et"
+   "{FAC6AB61E4CA97F5}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_MGAB.et"
+   "{039D380C13A082E1}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_Sapper.et"
+   "{6D10A06D248FCD0B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_Sniper.et"
+  }
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{6454F7D129837B5A}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 2472.441 16.75 2820.992
+  angles -0.154 -94.926 -1.783
+  m_aUnitPrefabSlots {
+   "{0DF8C7583D0AAA9A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_SL_v2.et"
+   "{2EBF7FD7B32EE3FA}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_SR.et"
+   "{E6870BF19DB0632C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_AT.et"
+   "{C0F50DDFB6CFA87B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_AAT.et"
+   "{33FA1C11138E145A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_GL.et"
+   "{6C38BC2A8A766993}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_MG.et"
+   "{FAC6AB61E4CA97F5}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_MGAB.et"
+   "{6D10A06D248FCD0B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_Sniper.et"
+  }
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{6454F7D129837B5A}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 2475.03 10.515 2639.849
+  angles -1.312 -95.037 5.49
+  m_aUnitPrefabSlots {
+   "{0DF8C7583D0AAA9A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_SL_v2.et"
+   "{2EBF7FD7B32EE3FA}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_SR.et"
+   "{E6870BF19DB0632C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_AT.et"
+   "{C0F50DDFB6CFA87B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_AAT.et"
+   "{33FA1C11138E145A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_GL.et"
+   "{6C38BC2A8A766993}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_MG.et"
+   "{FAC6AB61E4CA97F5}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_MGAB.et"
+   "{6D10A06D248FCD0B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_Sniper.et"
+  }
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{6454F7D129837B5A}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 2523.332 8.969 2395.927
+  angles 0 -108.116 0
+  m_aUnitPrefabSlots {
+   "{0DF8C7583D0AAA9A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_SL_v2.et"
+   "{2EBF7FD7B32EE3FA}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_SR.et"
+   "{E6870BF19DB0632C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_AT.et"
+   "{C0F50DDFB6CFA87B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_AAT.et"
+   "{33FA1C11138E145A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_GL.et"
+   "{6C38BC2A8A766993}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_MG.et"
+   "{FAC6AB61E4CA97F5}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_MGAB.et"
+   "{6D10A06D248FCD0B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_Sniper.et"
+  }
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{6454F7D129837B5A}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 2324.708 12.772 2742.494
+  angles -2.718 -106.23 -2.932
+  m_aUnitPrefabSlots {
+   "{0DF8C7583D0AAA9A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_SL_v2.et"
+   "{2EBF7FD7B32EE3FA}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_SR.et"
+   "{AB7ACE98B91B5A85}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_Flamethrower.et"
+   "{33FA1C11138E145A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_GL.et"
+   "{6C38BC2A8A766993}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_MG.et"
+   "{FAC6AB61E4CA97F5}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_MGAB.et"
+   "{33FA1C11138E145A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_GL.et"
+   "{6D10A06D248FCD0B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_Sniper.et"
+  }
+ }
+ ks {
+  coords 4036.309 21.517 2935.348
+  angles 0 -99.345 0
+  m_aUnitPrefabSlots {
+   "{F910309D8C211296}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_PL.et"
+   "{67C97355F74099C5}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_TL.et"
+   "{893533817C25A8B0}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_Medic.et"
+  }
+ }
+ lav1 {
+  components {
+   PS_GroupCallsignAssigner "{6564F0339CB2D893}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 4077.228 21.833 2922.655
+  angles 0.909 89.141 0.881
+  m_aUnitPrefabSlots {
+   "{600E890491C62306}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_SL.et"
+   "{67C97355F74099C5}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_TL.et"
+   "{0D86781BA3428115}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_AR.et"
+   "{0053063A54F5E83F}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_GL.et"
+   "{74A02B02FD60CB8E}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_Rifleman_LAT.et"
+   "{0053063A54F5E83F}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_GL.et"
+   "{7F23D266011DAD4D}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_CrewGunner.et"
+   "{9808758629EAA4E0}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_CrewDriver.et"
+  }
+  m_sCustomNameSet "#DRG-Sq-MachineGunnerSquad"
+ }
+ lav2 {
+  components {
+   PS_GroupCallsignAssigner "{6564F0339CB2D893}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 4069.924 22.172 2969.368
+  angles 1.036 80.073 0.727
+  m_aUnitPrefabSlots {
+   "{600E890491C62306}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_SL.et"
+   "{67C97355F74099C5}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_TL.et"
+   "{0D86781BA3428115}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_AR.et"
+   "{0053063A54F5E83F}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_GL.et"
+   "{74A02B02FD60CB8E}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_Rifleman_LAT.et"
+   "{0053063A54F5E83F}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_GL.et"
+   "{7F23D266011DAD4D}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_CrewGunner.et"
+   "{9808758629EAA4E0}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_CrewDriver.et"
+  }
+  m_sCustomNameSet ""
+ }
+ loxi {
+  components {
+   PS_GroupCallsignAssigner "{6564F0339CB2D893}" {
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 4041.189 21.427 2912.14
+  angles -1.018 -98.488 -0.753
+  m_sCustomNameSet ""
+ }
+ loxi2 {
+  components {
+   PS_GroupCallsignAssigner "{6564F0339CB2D893}" {
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 4033.454 21.669 2955.912
+  angles -1.004 -97.465 -0.771
+  m_sCustomNameSet ""
+ }
+ loxi3 {
+  components {
+   PS_GroupCallsignAssigner "{6564F0339CB2D893}" {
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 4043.744 21.703 2942.823
+  angles 1.049 79.07 0.71
+  m_aUnitPrefabSlots {
+   "{600E890491C62306}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_SL.et"
+   "{67C97355F74099C5}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_TL.et"
+   "{0D86781BA3428115}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_AR.et"
+   "{36FE68EB81398B5C}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_MG_opt.et"
+   "{FEA8A03109D0FC66}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_MGA.et"
+   "{0D86781BA3428115}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_AR.et"
+   "{0053063A54F5E83F}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_GL.et"
+   "{26AD8B80E8C02793}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_Marksman.et"
+  }
+  m_sCustomNameSet ""
+ }
+ mor {
+  components {
+   PS_GroupCallsignAssigner "{6564F0339CB2D893}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 4481.399 23.922 2914.9
+  angles -1.018 -98.488 -0.753
+  m_aUnitPrefabSlots {
+   "{A25CCAC020E867E6}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_Mortar_TeamLeader.et"
+   "{1CB207D10EB55F66}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_MortarGunner.et"
+   "{D851B6F91F3B31BA}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_MortarLoader.et"
+   "{4F562E308714607E}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_MortarAmmoBearer.et"
+  }
+  m_sCustomNameSet ""
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{65667AD89AE572E5}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 3
+   }
+  }
+  coords 3279.724 22.99 2731.839
+  angles 0 84.893 0
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{653B380F33F8D93C}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 2069.122 2.907 2596.559
+  angles 9.781 66.738 2.536
+  m_aUnitPrefabSlots {
+   "{CEDCC068342815AB}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Recon/drg_Role_RHS_USAF_Recon_SL.et"
+   "{B3C42C9051BB2932}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Recon/drg_Role_RHS_USAF_Recon_SR.et"
+   "{9C7B97483A24CEF9}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Recon/drg_Role_RHS_USAF_Recon_Rifleman.et"
+   "{7F9C9F5B2FFAF470}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Recon/drg_Role_RHS_USAF_Recon_LAT.et"
+   "{3C517FA8422C4B0A}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Recon/drg_Role_RHS_USAF_Recon_Grenadier.et"
+  }
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{653B380F33F8D93C}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 2204.784 2.038 2235.754
+  angles 3.601 70.203 -3.191
+  m_aUnitPrefabSlots {
+   "{CEDCC068342815AB}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Recon/drg_Role_RHS_USAF_Recon_SL.et"
+   "{B3C42C9051BB2932}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Recon/drg_Role_RHS_USAF_Recon_SR.et"
+   "{9C7B97483A24CEF9}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Recon/drg_Role_RHS_USAF_Recon_Rifleman.et"
+   "{3C517FA8422C4B0A}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Recon/drg_Role_RHS_USAF_Recon_Grenadier.et"
+   "{7F9C9F5B2FFAF470}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Recon/drg_Role_RHS_USAF_Recon_LAT.et"
+  }
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{653B380F33F8D93C}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 3186.423 24.031 3004.876
+  angles 0 78.895 0
+  m_aUnitPrefabSlots {
+   "{CEDCC068342815AB}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Recon/drg_Role_RHS_USAF_Recon_SL.et"
+   "{B3C42C9051BB2932}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Recon/drg_Role_RHS_USAF_Recon_SR.et"
+   "{9C7B97483A24CEF9}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Recon/drg_Role_RHS_USAF_Recon_Rifleman.et"
+   "{7F9C9F5B2FFAF470}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Recon/drg_Role_RHS_USAF_Recon_LAT.et"
+   "{3C517FA8422C4B0A}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Recon/drg_Role_RHS_USAF_Recon_Grenadier.et"
+   "{9C7B97483A24CEF9}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Recon/drg_Role_RHS_USAF_Recon_Rifleman.et"
+  }
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{653B380F33F8D93C}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 3224.634 21.625 2431.283
+  angles 0 88.162 0
+  m_aUnitPrefabSlots {
+   "{CEDCC068342815AB}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Recon/drg_Role_RHS_USAF_Recon_SL.et"
+   "{B3C42C9051BB2932}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Recon/drg_Role_RHS_USAF_Recon_SR.et"
+   "{9C7B97483A24CEF9}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Recon/drg_Role_RHS_USAF_Recon_Rifleman.et"
+   "{7F9C9F5B2FFAF470}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Recon/drg_Role_RHS_USAF_Recon_LAT.et"
+   "{3C517FA8422C4B0A}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Recon/drg_Role_RHS_USAF_Recon_Grenadier.et"
+   "{9C7B97483A24CEF9}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Recon/drg_Role_RHS_USAF_Recon_Rifleman.et"
+  }
+ }
+}
+$grp GenericEntity : "{039F825B8B83B86D}Prefabs/Props/Military/AmmoBoxes/drg_AmmoBox_81mm_mortar_10rnd_HE.et" {
+ {
+  coords 4488.822 25.032 2927.032
+  angles 0 -24.818 0
+ }
+ {
+  coords 4488.706 25.032 2927.263
+  angles 0 -24.818 0
+ }
+ {
+  coords 4488.611 25.032 2927.492
+  angles 0 -24.818 0
+ }
+}
+$grp Tree : "{05A3738C33E15AA8}PrefabLibrary/DefaultLibrary/Vegetation/Trees/t_picea_abies_3d_fallen_mossy.et" {
+ {
+  coords 2545.099 0 2936.24
+  angles 0 64.799 0
+  scale 0.824
+ }
+ {
+  coords 2602.195 0 2937.119
+  angles -3.616 -156.62 -7.362
+  scale 1.126
+ }
+ {
+  coords 2571.365 0.001 2859.204
+  angles -0.4 54.081 2.499
+  scale 0.855
+ }
+}
+GenericEntity : "{0A6B5B1CC60EC137}Prefabs/Props/Wrecks/LAV25_wreck/LAV25_wreck_static.et" {
+ coords 2538.854 16.414 2816.854
+ angles 0 67.978 0
+}
+GenericEntity : "{1D0B32AA80873228}Prefabs/Props/Wrecks/LAV25_wreck/LAV25_wreck.et" {
+ coords 2478.774 16.14 2822.191
+ angles -1.84 -130.252 -0.788
+}
+$grp GenericEntity : "{25B265F3E7CBDFC8}Prefabs/Props/Wrecks/BMP1_wreck/BMP1_wreck.et" {
+ {
+  coords 2702.269 11.598 2512.029
+  angles -1.833 31.834 0.184
+ }
+ {
+  coords 2841.863 14.6 2419.777
+  angles -8.657 0 0
+ }
+ {
+  coords 2788.449 12.807 2422.252
+  angles -4.701 -81.35 8.563
+ }
+ {
+  coords 2910.307 19.404 2649.296
+  angles 0.658 -5.006 -2.751
+ }
+ {
+  coords 2909.032 18.128 2559.956
+  angles -3.355 -67.352 -1.935
+ }
+ {
+  coords 2805.117 12.237 2486.791
+  angles -4.428 -0.365 0.055
+ }
+ {
+  coords 2860.444 18.072 2330.315
+  angles -3.037 0 0
+ }
+ {
+  coords 3199.496 21.152 2373.129
+  angles -3.05 -64.75 1.511
+ }
+ {
+  coords 2885.567 23.625 3062.123
+  angles -3.532 0 0
+ }
+ {
+  coords 2629.333 20.817 2986.664
+  angles -0.687 -85.48 6.837
+ }
+ {
+  coords 2759.091 18.672 2904.298
+  angles -9.918 -86.451 8.755
+ }
+ {
+  coords 2613.599 18.07 2932.486
+  angles -0.764 0 0
+ }
+ {
+  coords 2640.533 15.14 2800.731
+  angles 2.003 0 5.667
+ }
+ {
+  coords 2904.094 20.962 2771.356
+  angles -4.06 0 0
+ }
+ {
+  coords 2545.581 19.861 2947.203
+  angles 1.79 0 0
+ }
+ {
+  coords 2469.741 18.304 2911.301
+  angles -1.372 35.274 -4.252
+ }
+ {
+  coords 2446.05 17.407 2860.707
+  angles -0.11 -81.724 0.756
+ }
+ {
+  coords 2556.436 16.848 2833.319
+  angles 0.033 -87.862 -0.895
+ }
+ {
+  coords 2596.838 8.438 2619.725
+  angles -1.786 0.119 0.866
+ }
+ {
+  coords 2701.912 12.181 2578.115
+  angles -2.194 41.091 3.928
+ }
+ {
+  coords 2699.374 10.487 2462.702
+  angles 0.495 68.011 3.062
+ }
+ {
+  coords 2792.241 11.47 2502.819
+  angles 0.357 -104.138 0.212
+ }
+ {
+  coords 2727.611 17.617 2867.407
+  angles -2.485 -0.454 6.154
+ }
+ {
+  coords 2713.495 18.396 2952.097
+  angles -3.407 -93.904 -5.486
+ }
+}
+GenericEntity : "{2B24356C351A2538}Prefabs/Props/Wrecks/M113_wreck/M113_wreck.et" {
+ coords 2596.5 14.576 2817.46
+ angles 0.57 39.538 -0.69
+}
+GenericEntity : "{2BD8F0769429AC4A}Prefabs/Props/Military/AmmoBoxes/drg_AmmoBox_81mm_MortarCluster_100rnd_HE.et" {
+ coords 4488.93 25.031 2926.846
+ angles 0 -23.3 0
+}
+$grp Tree : "{2EDFC252CB2EC3F1}PrefabLibrary/DefaultLibrary/Vegetation/Trees/t_picea_abies_3d_high.et" {
+ {
+  coords 2600.318 -0.001 2905.067
+  angles 1.859 61.295 -3.177
+  scale 0.809
+ }
+ {
+  coords 2569.456 0 2866.254
+  angles 4.767 105.461 1.302
+  scale 1.016
+ }
+ {
+  coords 2551.159 0 2907.48
+  angles -4.358 283.258 -4.49
+  scale 0.899
+ }
+}
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ {
+  coords 2594.981 13.178 2770.201
+  m_sTitle "Условности Миссии"
+  m_sTextData "Всем запрещено заходить в черный маркер."\
+  "Красным запрещено выходить за красный маркер."
+  m_aVisibleForFactions {
+   ""
+   "RHS_AFRF"
+   "RHS_USAF"
+  }
+  m_bEmptyFactionVisibility 1
+ }
+ {
+  coords 3568.461 23.43 2740.376
+  m_sTitle "Цель Миссии"
+  m_sTextData "США:"\
+  ""\
+  "Нужно захватить Коровник"\
+  ""\
+  "Нужно захватить Блиндаж"\
+  ""\
+  "ВС РФ:"\
+  ""\
+  "Нужно удержать Коровник"\
+  ""\
+  "Нужно удержать Блиндаж"\
+  ""\
+  ""\
+  "Условие захвата:"\
+  ""\
+  "Для захвата нужно поднять флаг, флаг нельзя перезахватить.(За каждый флаг дают 50 очков)"
+  m_aVisibleForFactions {
+   ""
+   "RHS_AFRF"
+   "RHS_USAF"
+  }
+  m_bEmptyFactionVisibility 1
+ }
+ {
+  coords 3545.578 23.562 2756.788
+  m_sTitle "Описание Миссии"
+  m_sTextData "ВС РФ закрепились в Коровнике и Блиндаже, США хотят выбить их с этих позиций."
+  m_aVisibleForFactions {
+   ""
+   "RHS_AFRF"
+   "RHS_USAF"
+  }
+  m_bEmptyFactionVisibility 1
+ }
+}
+$grp Vehicle : "{3312ADBF53A16DD8}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS.et" {
+ LAV25_RHS1 {
+  coords 4078.775 22.125 2967.983
+  angles 0 -7.313 0
+  m_sAttachmentGroupName "lav2"
+  {
+   EnvironmentProbeEntity {
+    coords -0.138 0 -0.609
+   }
+  }
+ }
+ LAV25_RHS2 {
+  coords 4083.336 21.716 2919.848
+  angles 0.894 -3.258 -0.051
+  m_sAttachmentGroupName "lav1"
+  {
+   EnvironmentProbeEntity {
+    coords -0.138 0 -0.609
+   }
+  }
+ }
+}
+Tree : "{3B137DBFF3AF57C6}PrefabLibrary/DefaultLibrary/Vegetation/Bushes/b_juniperus_communis_0.et" {
+ coords 2775.076 0 2887.635
+ angles 0.416 25.19 -1.685
+ scale 0.919
+}
+$grp Tree : "{5CA1D12C1B27CAE2}PrefabLibrary/DefaultLibrary/Vegetation/Trees/t_picea_abies_stump_02.et" {
+ {
+  coords 2561.628 0.049 2860.109
+  angles 2.904 146.375 2.666
+  scale 0.781
+ }
+ {
+  coords 2553.388 0.008 2878.236
+  angles 0.266 351.947 4.149
+  scale 1.174
+ }
+ {
+  coords 2588.916 -0.048 2923.393
+  angles -4.767 250.529 -0.766
+  scale 0.582
+ }
+ {
+  coords 2557.991 0.003 2933.651
+  angles 1.037 40.387 -0.687
+  scale 1.162
+ }
+ {
+  coords 2593.39 0.013 2962.572
+  angles -4.609 257.253 -1.764
+  scale 1.145
+ }
+}
+$grp GameEntity : "{6113990D163E5249}Prefabs/Items/Equipment/BalisticTable/BalisticTable_US.et" {
+ {
+  coords 4488.593 25.031 2927.923
+  angles 0 64.579 0
+ }
+ {
+  coords 4492.114 25.032 2919.9
+  angles 0 64.828 0
+ }
+}
+SCR_EditorRestrictionZoneEntity : "{6144B0BE2EAC6897}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneMedium.et" {
+ coords 4480.463 24.29 2921.602
+}
+$grp PolylineShapeEntity : "{7019844BAD5C4DD8}Prefabs/PolyZone/PolyZone_Border.et" {
+ red {
+  components {
+   PS_PolyZone "{60E90266F25533F6}" {
+    m_mPolygonTexture ""
+    m_cPolygonColor 0 0 0 0
+    m_mPolygonTextureBorder ""
+    m_cPolygonBorderColor 0.502 0 0 1
+    m_fPolygonBorderWidth 5
+    m_aVisibleForFactions {
+     ""
+     "RHS_AFRF"
+     "RHS_USAF"
+    }
+   }
+  }
+  coords 0.498 20.828 0.825
+  Points {
+   ShapePoint "{60E90266E922A02A}" {
+    Position 2178.768 0.57 2051.608
+   }
+   ShapePoint "{652CD5171706CA0B}" {
+    Position 1775.93 -54.185 2925.978
+   }
+   ShapePoint "{652CD51734D23C57}" {
+    Position 1878.276 -0.21 2911.97
+   }
+   ShapePoint "{652CD5172731C49E}" {
+    Position 1907.489 0 2907.419
+   }
+   ShapePoint "{652CD517217107DD}" {
+    Position 1957.84 0 2910.25
+   }
+   ShapePoint "{652CD517231ACBB6}" {
+    Position 2033.597 0 2928.75
+   }
+   ShapePoint "{652CD51728BF9036}" {
+    Position 2060.258 0 2893.276
+   }
+   ShapePoint "{652CD51729006EF4}" {
+    Position 2064.778 0 2885.419
+   }
+   ShapePoint "{652CD5172AD0814D}" {
+    Position 2091.903 0 2894.406
+   }
+   ShapePoint "{652CD5172B7F1A60}" {
+    Position 2126.887 0 2896.316
+   }
+   ShapePoint "{652CD51755E23C44}" {
+    Position 2181.566 0 2906.941
+   }
+   ShapePoint "{652CD5175617A72E}" {
+    Position 2248.776 0 2930.721
+   }
+   ShapePoint "{652CD51750B919D6}" {
+    Position 2313.702 0 2951.009
+   }
+   ShapePoint "{652CD51751098BDB}" {
+    Position 2338.225 0 2947.952
+   }
+   ShapePoint "{652CD5175FA6187A}" {
+    Position 2352.31 0 2937.717
+   }
+   ShapePoint "{652CD5175F43649C}" {
+    Position 2370.168 0 2929.873
+   }
+   ShapePoint "{652CD517593A9E31}" {
+    Position 2393.658 0 2922.461
+   }
+   ShapePoint "{652CD5174484E183}" {
+    Position 2413.514 0 2914.928
+   }
+   ShapePoint "{652CD51746D7BF89}" {
+    Position 2426.443 0 2914.804
+   }
+   ShapePoint "{652CD51740F2C4C0}" {
+    Position 2435.35 0 2915.837
+   }
+   ShapePoint "{652CD51741ACCD2D}" {
+    Position 2458.738 0 2926.155
+   }
+   ShapePoint "{652CD51742EA8596}" {
+    Position 2482.133 0 2934.379
+   }
+   ShapePoint "{652CD5174CAC4854}" {
+    Position 2536.357 0 2951.987
+   }
+   ShapePoint "{652CD5174F7429DD}" {
+    Position 2604.054 0 2973.947
+   }
+   ShapePoint "{652CD5174AA46079}" {
+    Position 2709.9 0 3006.625
+   }
+   ShapePoint "{652CD517758D419F}" {
+    Position 2837.134 2.915 3044.73
+   }
+   ShapePoint "{652D47953A794DB0}" {
+    Position 2856.326 2.453 2972.637
+   }
+   ShapePoint "{652D4795268C0057}" {
+    Position 2876.666 1.947 2908.424
+   }
+   ShapePoint "{652D4795260599DF}" {
+    Position 2898.684 1.597 2840.247
+   }
+   ShapePoint "{652D479520732B8C}" {
+    Position 2923.104 1.325 2790.28
+   }
+   ShapePoint "{652D47956F3C92F3}" {
+    Position 2968.165 1.464 2750.905
+   }
+   ShapePoint "{652D479569B7B782}" {
+    Position 2996.986 1.578 2726.244
+   }
+   ShapePoint "{652D479569CC6106}" {
+    Position 3006.105 1.569 2713.223
+   }
+   ShapePoint "{652D4795695B9690}" {
+    Position 3003.326 1.388 2701.127
+   }
+   ShapePoint "{652D47956A3B849A}" {
+    Position 2972.57 0.938 2694.033
+   }
+   ShapePoint "{652D47956B94CB63}" {
+    Position 2936.285 0.308 2686.294
+   }
+   ShapePoint "{652D479594F0A844}" {
+    Position 2910.219 -0.517 2680.973
+   }
+   ShapePoint "{652D479591B4622E}" {
+    Position 2911.091 -0.473 2681.108
+   }
+   ShapePoint "{652D47959110A52E}" {
+    Position 2891.258 -1.363 2675.656
+   }
+   ShapePoint "{652D479592868133}" {
+    Position 2870.301 -2.415 2669.772
+   }
+   ShapePoint "{652D47959218B4AE}" {
+    Position 2860.035 -2.928 2660.657
+   }
+   ShapePoint "{652D479593AA0E92}" {
+    Position 2854.655 -3.216 2654.895
+   }
+   ShapePoint "{652D479522BAE1D8}" {
+    Position 2853.204 -3.45 2643.521
+   }
+   ShapePoint "{652D479523D9DA45}" {
+    Position 2853.501 -4.455 2628.161
+   }
+   ShapePoint "{652D479EDD7299C7}" {
+    Position 2951.719 -0.543 2354.36
+   }
+   ShapePoint "{652CD517A29801D7}" {
+    Position 2775.688 0 2323.682
+   }
+  }
+  {
+   PS_PolyZoneTrigger {
+    ID "60FD050E1E83544C"
+    m_polyZoneEffect PS_PolyZoneEffectRestricted "{60FD050E0DC2A2AB}" {
+     m_fKillTime 5
+    }
+    m_sFactionKey "RHS_AFRF"
+   }
+  }
+ }
+ full {
+  components {
+   PS_PolyZone "{60E90266F25533F6}" {
+    m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
+    m_cPolygonColor 0 0 0 0.781
+    m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+    m_cPolygonBorderColor 0 0 0 1
+    m_aVisibleForFactions {
+     ""
+     "RHS_AFRF"
+     "RHS_USAF"
+    }
+   }
+  }
+  coords 0.498 20.828 0.825
+  Points {
+   ShapePoint "{60E90266E922A02A}" {
+    Position 4607.702 -20.828 3292.514
+   }
+   ShapePoint "{68DEF462B91394F5}" {
+    Position 4565.024 5.562 3298.118
+   }
+   ShapePoint "{68DEF462B63D684B}" {
+    Position 4463.042 5.103 3288.906
+   }
+   ShapePoint "{68DEF462B73B7926}" {
+    Position 4339.62 4.535 3274.367
+   }
+   ShapePoint "{68DEF462B5B7608A}" {
+    Position 4077.271 4.435 3234.019
+   }
+   ShapePoint "{68DEF462B20AFE06}" {
+    Position 3798.806 2.183 3201.337
+   }
+   ShapePoint "{68DEF462B0F64D5E}" {
+    Position 3665.1 3.491 3185.102
+   }
+   ShapePoint "{68DEF462B1187A0E}" {
+    Position 3276.177 3.422 3132.719
+   }
+   ShapePoint "{68DEF4624CA623E1}" {
+    Position 3029.733 3.05 3092.903
+   }
+   ShapePoint "{68DEF4624DBD4027}" {
+    Position 2963.891 2.459 3078.33
+   }
+   ShapePoint "{68DEF4624803C7A8}" {
+    Position 2840.124 2.891 3044.568
+   }
+   ShapePoint "{68DEF4624702ADA2}" {
+    Position 2604.147 0.081 2974.046
+   }
+   ShapePoint "{68DEF462406F911A}" {
+    Position 2473.946 -2.189 2930.847
+   }
+   ShapePoint "{68DEF4624198F669}" {
+    Position 2457.734 -2.545 2922.34
+   }
+   ShapePoint "{68DEF4625FB3EB24}" {
+    Position 2446.903 -2.775 2917.342
+   }
+   ShapePoint "{68DEF4625A77DD05}" {
+    Position 2436.208 -3.174 2912.328
+   }
+   ShapePoint "{68DEF4625B8AC0FB}" {
+    Position 2424.025 -3.328 2911.561
+   }
+   ShapePoint "{68DEF46259988A31}" {
+    Position 2417.903 -3.393 2912.644
+   }
+   ShapePoint "{68DEF46257E2EAC5}" {
+    Position 2412.815 -3.404 2913.44
+   }
+   ShapePoint "{68DEF4625703E72E}" {
+    Position 2407.763 -3.338 2915.999
+   }
+   ShapePoint "{68DEF4625454EDCF}" {
+    Position 2402.242 -3.513 2918.743
+   }
+   ShapePoint "{68DEF46255305C06}" {
+    Position 2396.905 -3.565 2921.292
+   }
+   ShapePoint "{68DEF46262E19786}" {
+    Position 2393.872 -3.618 2922.819
+   }
+   ShapePoint "{68DEF46262B93B06}" {
+    Position 2379.997 -3.758 2925.401
+   }
+   ShapePoint "{68DEF4626275F15B}" {
+    Position 2366.959 -3.93 2930.209
+   }
+   ShapePoint "{68DEF462634F6B43}" {
+    Position 2343.129 -4.155 2942.617
+   }
+   ShapePoint "{68DEF46261513C2C}" {
+    Position 2332.804 -4.234 2949.002
+   }
+   ShapePoint "{68DEF4627FA31139}" {
+    Position 2323.925 -4.377 2951.576
+   }
+   ShapePoint "{68DEF4627CF065BE}" {
+    Position 2314.904 -4.644 2950.127
+   }
+   ShapePoint "{68DEF4627C2E3496}" {
+    Position 2291.982 -5.454 2944.17
+   }
+   ShapePoint "{68DEF4627D550990}" {
+    Position 2258.19 -6.66 2932.549
+   }
+   ShapePoint "{68DEF4627A801C5C}" {
+    Position 2210.018 -8.181 2915.044
+   }
+   ShapePoint "{68DEF4627BFCF4E0}" {
+    Position 2188.259 -8.579 2906.6
+   }
+   ShapePoint "{68DEF4627945C6D7}" {
+    Position 2175.901 -8.93 2904.914
+   }
+   ShapePoint "{68DEF46276B69824}" {
+    Position 2150.365 -9.502 2901.321
+   }
+   ShapePoint "{68DEF46272E11BBE}" {
+    Position 2123.236 -10.661 2895.47
+   }
+   ShapePoint "{68DEF4627244D6EE}" {
+    Position 2115.13 -11.232 2895.65
+   }
+   ShapePoint "{68DEF462731FD4B6}" {
+    Position 2099.532 -12.395 2895.587
+   }
+   ShapePoint "{68DEF46271D9E8E8}" {
+    Position 2074.914 -12.6 2890.459
+   }
+   ShapePoint "{68DEF4620E9DDD1F}" {
+    Position 2094.422 -13.268 2831.527
+   }
+   ShapePoint "{68DEF4620BD84889}" {
+    Position 2084.293 -13.419 2828.732
+   }
+   ShapePoint "{68DEF4620B5AD243}" {
+    Position 2079.658 -13.156 2831.347
+   }
+   ShapePoint "{68DEF46208A0743A}" {
+    Position 2070.019 -13.275 2827.252
+   }
+   ShapePoint "{68DEF462083BE049}" {
+    Position 2057.72 -13.383 2825.627
+   }
+   ShapePoint "{68DEF46209125775}" {
+    Position 2043.475 -14.395 2821.528
+   }
+   ShapePoint "{68DEF4620753C9C5}" {
+    Position 1957.148 -21.366 2786.086
+   }
+   ShapePoint "{68DEF46161B575FD}" {
+    Position 1941.901 -21.48 2849.402
+   }
+   ShapePoint "{68DEF46217E0719A}" {
+    Position 1941.41 -21.624 2868.3
+   }
+   ShapePoint "{68DEF462142CA0E3}" {
+    Position 1936.855 -20.737 2885.838
+   }
+   ShapePoint "{68DEF46215A5735F}" {
+    Position 1930.173 -21.201 2892.549
+   }
+   ShapePoint "{68DEF462154AF634}" {
+    Position 1920.875 -21.163 2897.064
+   }
+   ShapePoint "{68DEF46212DE5128}" {
+    Position 1899.285 -21.23 2898.29
+   }
+   ShapePoint "{68DEF4617D602606}" {
+    Position 1885.237 -21.074 2897.474
+   }
+   ShapePoint "{68DEF46176F6B002}" {
+    Position 1878.331 -20.884 2900.786
+   }
+   ShapePoint "{68DEF4617459482B}" {
+    Position 1873.814 -19.033 2907.912
+   }
+   ShapePoint "{68DEF46172BAE37E}" {
+    Position 1772.21 -19.02 2907.969
+   }
+   ShapePoint "{68DEF46171FBB857}" {
+    Position 1737.04 -18.044 2892.993
+   }
+   ShapePoint "{68DEF4617116D8EB}" {
+    Position 1734.228 -17.812 2881.021
+   }
+   ShapePoint "{68DEF4610E4BD9FD}" {
+    Position 1714.669 -17.318 2855.762
+   }
+   ShapePoint "{68DEF4610C565922}" {
+    Position 1669.185 -14.317 2813.057
+   }
+   ShapePoint "{68DEF4613F55A9F7}" {
+    Position 1605.715 -14.437 2883.817
+   }
+   ShapePoint "{68DEF4613C87205B}" {
+    Position 1588.74 -14.606 2911.327
+   }
+   ShapePoint "{68DEF4613DE73DBB}" {
+    Position 1564.923 -15.399 2952.208
+   }
+   ShapePoint "{68DEF4613D359087}" {
+    Position 1538.391 -17.107 2982.151
+   }
+   ShapePoint "{68DEF4613A62F254}" {
+    Position 1521.303 -17.831 3021.707
+   }
+   ShapePoint "{68DEF4613BB1EBB3}" {
+    Position 1527.678 -19.664 3074.901
+   }
+   ShapePoint "{68DEF46138ED46F4}" {
+    Position 1515.998 -19.62 3151.859
+   }
+   ShapePoint "{68DEF46132698F85}" {
+    Position 1499.047 -18.3 3191.612
+   }
+   ShapePoint "{68DEF46130FD8D8D}" {
+    Position 1367.281 -16.155 3345.044
+   }
+   ShapePoint "{68DEF4613064D819}" {
+    Position 1380.813 -20.352 3357.777
+   }
+   ShapePoint "{68DEF466CC2CDA16}" {
+    Position 1401.568 -20.556 3391.204
+   }
+   ShapePoint "{68DEF466C6076C14}" {
+    Position 1445.131 -22.664 3531.948
+   }
+   ShapePoint "{68DEF466C460713E}" {
+    Position 1493.173 -23.772 3654.563
+   }
+   ShapePoint "{68DEF466C12EC851}" {
+    Position 1618.853 -21.981 3748.784
+   }
+   ShapePoint "{68DEF466DE3738EB}" {
+    Position 1649.83 -21.432 3828.327
+   }
+   ShapePoint "{68DEF466DF262271}" {
+    Position 1664.353 -21.83 3907.362
+   }
+   ShapePoint "{68DEF466DA764FAC}" {
+    Position 1662.269 -22.498 3932.668
+   }
+   ShapePoint "{68DEF466D8D6995B}" {
+    Position 1746.181 -13.756 3928.131
+   }
+   ShapePoint "{68DEF466D828E5F6}" {
+    Position 1758.555 -13.479 3906.873
+   }
+   ShapePoint "{68DEF466D3EAC738}" {
+    Position 1769.575 -11.787 3901.55
+   }
+   ShapePoint "{68DEF466D095032D}" {
+    Position 1793.212 -11.882 3893.497
+   }
+   ShapePoint "{68DEF466D000D49A}" {
+    Position 1806.202 -11.492 3904.683
+   }
+   ShapePoint "{68DEF466690F189F}" {
+    Position 1822.084 -11.413 3917.453
+   }
+   ShapePoint "{652CD5171706CA0B}" {
+    Position 1848.702 -11.159 3923.441
+   }
+   ShapePoint "{68DEF4668CAE039C}" {
+    Position 1891.446 -11.038 3904.541
+   }
+   ShapePoint "{68DEF4668BD3DF8D}" {
+    Position 2865.565 6.97 4033.492
+   }
+   ShapePoint "{68DEF46688EE838F}" {
+    Position 2872.149 7.016 4034.943
+   }
+   ShapePoint "{68DEF466890CFD1C}" {
+    Position 2879.632 6.976 4037.454
+   }
+   ShapePoint "{68DEF46687EEF71A}" {
+    Position 2910.192 6.891 4054.316
+   }
+   ShapePoint "{68DEF46680960853}" {
+    Position 2931.721 6.735 4070.248
+   }
+   ShapePoint "{68DEF4669E2B02F0}" {
+    Position 2978.747 6.297 4110.347
+   }
+   ShapePoint "{68DEF4669CB66FD7}" {
+    Position 3016.377 5.922 4068.129
+   }
+   ShapePoint "{68DEF4669D849548}" {
+    Position 3076.734 5.578 4124.35
+   }
+   ShapePoint "{68DEF46699893CE8}" {
+    Position 3337.808 5.579 4163.602
+   }
+   ShapePoint "{68DEF466954B2257}" {
+    Position 3347.157 5.578 4199.425
+   }
+   ShapePoint "{68DEF466B5A23CB5}" {
+    Position 3604.782 7.192 4232.716
+   }
+   ShapePoint "{68DEF466B0FEFB6B}" {
+    Position 3804.576 7.322 4257.673
+   }
+   ShapePoint "{68DEF4664FECD91D}" {
+    Position 4490.983 6.883 4349.9
+   }
+   ShapePoint "{68DEF46645050390}" {
+    Position 4500.952 6.641 4365.681
+   }
+   ShapePoint "{652CD5176B4A84A2}" {
+    Position 4607.279 6.61 4377.524
+   }
+  }
+  LineColor 0 0.251 1 1
+  {
+   PS_PolyZoneTrigger {
+    ID "60FD050E1E83544C"
+    m_polyZoneEffect PS_PolyZoneEffectRestricted "{60FD050E0DC2A2AB}" {
+     m_fKillTime 10
+    }
+   }
+  }
+ }
+}
+$grp Tree : "{779DF03FAB7A131E}PrefabLibrary/DefaultLibrary/Vegetation/Trees/t_picea_abies_stump_01.et" {
+ {
+  coords 2583.097 0 2904.267
+  angles 0 302.364 0
+  scale 0.904
+ }
+ {
+  coords 2609.946 0 2896.919
+  angles 0 208 0
+  scale 0.875
+ }
+}
+$grp Vehicle : "{7F0CE77CBE1A1F65}Prefabs/Vehicles/Wheeled/M1240A1_MATV/M1240A1_MATV_Turret_Camo.et" {
+ M1240A1_MATV_Turret_Camo1 {
+  coords 4034.372 21.318 2912.012
+  angles -0.886 -98.252 0.128
+  m_sAttachmentGroupName "loxi"
+ }
+ M1240A1_MATV_Turret_Camo2 {
+  coords 4030.553 21.406 2936.327
+  angles 0 -102.335 0
+  m_sAttachmentGroupName "ks"
+ }
+ M1240A1_MATV_Turret_Camo3 {
+  coords 4026.119 21.596 2963.051
+  angles -0.885 -98.718 0.136
+  m_sAttachmentGroupName "loxi2"
+ }
+ M1240A1_MATV_Turret_Camo4 {
+  coords 4050.809 21.794 2944.411
+  angles -0.885 -98.794 0.137
+  m_sAttachmentGroupName "loxi3"
+ }
+}
+$grp Turret : "{8094D99689ABE241}Prefabs/Weapons/Mortars/M252/Mortar_M252_hand.et" {
+ {
+  components {
+   PS_GroupAttachmentComponent "{652D47981B98D00E}" {
+    m_sAttachmentGroupName "Mortar"
+   }
+  }
+  coords 4474.962 24.073 2920.799
+  angles -1.911 -99.321 -0.593
+ }
+ {
+  components {
+   PS_GroupAttachmentComponent "{652D47981B98D00E}" {
+    m_sAttachmentGroupName "Mortar"
+   }
+  }
+  coords 4471.389 23.998 2920.534
+  angles -2.056 -99.317 -1.476
+ }
+}
+$grp StaticModelEntity : "{8B7B5323534404A7}Prefabs/Structures/Military/Fortifications/Dragontooth_01/Dragontooth_01_V2.et" {
+ {
+  coords 2755.617 0 2562.203
+  angles -5.525 73.889 -3.041
+ }
+ {
+  coords 2751.991 0 2575.412
+  angles 5.909 40.566 10.782
+ }
+ {
+  coords 2743.412 0 2589.691
+  angles -2.627 73.597 -5.734
+ }
+ {
+  coords 2758.92 0 2545.847
+  angles 0.11 74.253 3.684
+ }
+ {
+  coords 2762.039 0 2528.142
+  angles -0.501 73.738 -1.718
+ }
+ {
+  coords 2757.884 0 2512.763
+  angles 1.831 43.78 -3.2
+ }
+ {
+  coords 2758.2 0 2497.114
+  angles 2.823 104.956 -0.172
+ }
+ {
+  coords 2767.853 0 2477.872
+  angles 0.536 4.904 -6.219
+ }
+ {
+  coords 2750.813 0 2484.382
+  angles -1.455 73.321 -7.922
+ }
+ {
+  coords 2748.862 0.001 2504.313
+  angles -0.513 74.31 4.782
+ }
+ {
+  coords 2749.225 0 2533.746
+  angles -0.25 73.81 -0.86
+ }
+ {
+  coords 2738.808 0 2629.433
+  angles -2.333 73.979 1.6
+ }
+ {
+  coords 2762.042 0 2609.871
+  angles -0.514 54.948 -0.733
+ }
+ {
+  coords 2828.875 0 2576.864
+  angles 2.826 73.906 0.116
+ }
+ {
+  coords 2828.897 0 2601.52
+  angles 2.826 73.906 0.116
+ }
+ {
+  coords 2840.62 0 2542.527
+  angles 4.227 74.796 5.313
+ }
+ {
+  coords 2874.448 0 2466.24
+  angles 3.434 73.733 -1.001
+ }
+ {
+  coords 2693.371 0 2755.886
+  angles 2.612 41.049 1.087
+ }
+ {
+  coords 2712.758 0 2745.116
+  angles 1.083 37.211 -1.425
+ }
+ {
+  coords 2710.039 0 2765.158
+  angles 1.593 74.181 2.338
+ }
+ {
+  coords 2674.948 0 2767.38
+  angles 2.641 42.437 2.412
+ }
+ {
+  coords 2683.217 0 2798.217
+  angles 3.148 45.257 3.171
+ }
+ {
+  coords 2736.057 0 2744.752
+  angles 0.255 19.238 1.985
+ }
+ {
+  coords 2715.681 0 2720.172
+  angles 1.774 7.549 0.235
+ }
+ {
+  coords 2660.334 0 2798.564
+  angles 3.122 29.21 1.744
+ }
+ {
+  coords 2645.691 0 2814.054
+  angles 0.768 30.946 0.46
+ }
+ {
+  coords 2656.47 0 2774.266
+  angles 2.932 23.296 2.234
+ }
+ {
+  coords 2563.224 0 2822.995
+  angles -3.458 88.491 4.551
+ }
+ {
+  coords 2574.227 0.001 2846.614
+  angles -1.105 41.416 2.604
+ }
+ {
+  coords 2537.178 0 2832.638
+  angles 0.445 60.185 0.777
+ }
+ {
+  coords 2582.162 -0.001 2768.475
+  angles 1.095 83.407 1.675
+ }
+ {
+  coords 2616.268 0 2761.639
+  angles 1.265 46.391 0.031
+ }
+ {
+  coords 2632.787 0.001 2651.459
+  angles 0.985 56.057 -1.742
+ }
+ {
+  coords 2672.348 0 2714.342
+  angles -7.63 30.855 0.623
+ }
+ {
+  coords 2688.298 0 2696.329
+  angles 1.722 15.881 0.49
+ }
+ {
+  coords 2753.308 0 2462.826
+  angles 4.629 93.672 -2.384
+ }
+ {
+  coords 2761.257 0.001 2441.759
+  angles 2.284 50.092 -4.234
+ }
+ {
+  coords 2779.69 0 2430.362
+  angles -1.074 31.001 -1.689
+ }
+ {
+  coords 2772.922 0 2410.408
+  angles -3.195 67.783 -5.438
+ }
+ {
+  coords 2793.197 0 2402.728
+  angles -4.121 31.248 -3.538
+ }
+ {
+  coords 2761.199 0 2630.477
+  angles 1.688 30.929 -1.075
+ }
+}
+$grp StaticModelEntity : "{9639C7B3CF572320}Prefabs/Structures/Military/Fortifications/Dragontooth_01/Dragontooth_01_old_V2.et" {
+ {
+  coords 2754.757 0.001 2566.183
+  angles 3.562 0.223 3.583
+ }
+ {
+  coords 2749.01 -0.001 2578.148
+  angles 7.444 -35.206 1.281
+ }
+ {
+  coords 2742.551 0 2593.671
+  angles -8.617 -1.702 9.035
+ }
+ {
+  coords 2758.059 0.001 2549.827
+  angles 2.681 0.209 0.904
+ }
+ {
+  coords 2761.179 0 2532.122
+  angles 0 0.223 0
+ }
+ {
+  coords 2755.167 0 2515.776
+  angles -0.983 -30.002 3.663
+ }
+ {
+  coords 2759.527 0 2500.967
+  angles -4.616 30.175 9.614
+ }
+ {
+  coords 2763.868 0 2478.502
+  angles -2.038 -68.736 -4.623
+ }
+ {
+  coords 2749.953 0 2488.362
+  angles -1.768 0.474 -2.697
+ }
+ {
+  coords 2748.002 0 2508.293
+  angles -1.789 -0.028 2.683
+ }
+ {
+  coords 2748.364 0 2537.726
+  angles 2.684 0.223 0.01
+ }
+ {
+  coords 2737.947 0 2633.413
+  angles 1.785 0.167 1.794
+ }
+ {
+  coords 2759.943 0 2613.349
+  angles -0.557 -18.922 1.137
+ }
+ {
+  coords 2828.014 0 2580.844
+  angles 0.911 0.347 -2.678
+ }
+ {
+  coords 2828.037 0 2605.5
+  angles 0.911 0.347 -2.678
+ }
+ {
+  coords 2839.759 0 2546.507
+  angles 2.696 0.263 -2.668
+ }
+ {
+  coords 2873.588 0 2470.22
+  angles 0.028 0.444 -3.576
+ }
+ {
+  coords 2690.474 0 2758.744
+  angles 2.249 -33.083 -1.465
+ }
+ {
+  coords 2709.7 0 2747.784
+  angles -0.881 -36.575 -2.688
+ }
+ {
+  coords 2709.178 -0.001 2769.138
+  angles 2.684 0.223 0.01
+ }
+ {
+  coords 2672.123 0 2770.298
+  angles 3.038 -31.875 -1.888
+ }
+ {
+  coords 2680.533 0 2801.266
+  angles 3.124 -29.148 -1.741
+ }
+ {
+  coords 2732.333 0 2746.315
+  angles -0.954 -55.036 -1.759
+ }
+ {
+  coords 2711.719 0 2720.945
+  angles 3.394 -66.983 -3.41
+ }
+ {
+  coords 2656.928 0 2800.753
+  angles 3.149 -45.232 -3.17
+ }
+ {
+  coords 2642.357 0 2816.358
+  angles 1.345 -43.181 -2.488
+ }
+ {
+  coords 2652.853 0 2776.084
+  angles 2.243 -51.205 -2.787
+ }
+ {
+  coords 2563.394 0 2827.038
+  angles 2.786 14.594 3.493
+ }
+ {
+  coords 2571.372 0 2849.488
+  angles 2.201 -32.629 1.777
+ }
+ {
+  coords 2535.398 0 2836.275
+  angles 0.869 -13.869 -0.215
+ }
+ {
+  coords 2581.96 -0.001 2772.519
+  angles 1.766 9.365 0.291
+ }
+ {
+  coords 2613.67 0 2764.747
+  angles 0.377 -27.67 -1.208
+ }
+ {
+  coords 2630.755 0 2654.961
+  angles 0.576 -17.921 -1.127
+ }
+ {
+  coords 2669.014 -0.001 2716.646
+  angles 1.755 -43.149 4.479
+ }
+ {
+  coords 2684.481 0 2697.689
+  angles 2.752 -58.211 0.653
+ }
+ {
+  coords 2753.868 0.001 2466.835
+  angles -1.988 20.156 0.223
+ }
+ {
+  coords 2758.877 0 2445.037
+  angles 1.999 -23.793 0.097
+ }
+ {
+  coords 2776.356 0 2432.667
+  angles -1.265 -43.18 -0.04
+ }
+ {
+  coords 2771.637 0 2414.245
+  angles -8.37 -7.243 4.621
+ }
+ {
+  coords 2789.863 0 2405.032
+  angles -5.756 -43.553 3.002
+ }
+ {
+  coords 2757.865 0 2632.781
+  angles 0.653 -43.174 -0.613
+ }
+}
+$grp Tree : "{A35E15EBC6033C07}PrefabLibrary/DefaultLibrary/Vegetation/Bushes/b_corylus_avellana_1.et" {
+ {
+  coords 2749.943 0 2977.544
+  angles 0.884 177.16 -0.694
+  scale 0.713
+ }
+ {
+  coords 2783.576 0 2901.795
+  angles 0.837 214.899 -0.095
+  scale 0.826
+ }
+ {
+  coords 2662.249 0 2824.979
+  angles 1.569 105.648 0.118
+  scale 0.873
+ }
+}
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ {
+  coords 2831.869 434.767 4239.76
+  m_sTitle "Захватили Коровник"
+  m_iScore 50
+  m_sFactionKey "RHS_USAF"
+ }
+ {
+  coords 2831.212 435.163 4239.13
+  m_sTitle "Удержали Коровник"
+  m_iScore 50
+  m_sFactionKey "RHS_AFRF"
+ }
+ {
+  coords 1541.702 268.963 1331.719
+  m_sTitle "Удержали Блиндаж"
+  m_iScore 50
+  m_sFactionKey "RHS_AFRF"
+ }
+ {
+  coords 1560.183 256.297 1334.721
+  m_sTitle "Захватили Блиндаж"
+  m_iScore 50
+  m_sFactionKey "RHS_USAF"
+ }
+}
+$grp Tree : "{AA14F25DFBDF4945}PrefabLibrary/DefaultLibrary/Vegetation/Trees/t_picea_abies_3d_fallen.et" {
+ {
+  coords 2579.341 0 2920.538
+  angles -1.71 158.704 5.452
+  scale 0.837
+ }
+ {
+  coords 2576.404 0 2884.1
+  angles 1.358 -69.302 1.47
+  scale 0.845
+ }
+ {
+  coords 2575.645 0 2950.733
+  angles -1.754 124.68 0.962
+  scale 0.944
+ }
+ {
+  coords 2793.661 0 2565.505
+  angles -1.371 88.087 12.386
+  scale 1.048
+ }
+ {
+  coords 2870.535 -0.171 2519.064
+  angles 1.06 23.244 -2.466
+  scale 1.048
+ }
+ {
+  coords 2783.829 0.001 2792.248
+  angles 0.293 88.264 6.075
+  scale 1.048
+ }
+ {
+  coords 2772.582 0.377 2816.036
+  angles -3.046 132.941 3.269
+  scale 1.048
+ }
+}
+$grp Tree : "{AFCFB75E18071FAC}PrefabLibrary/DefaultLibrary/Vegetation/Trees/t_picea_abies_2d.et" {
+ {
+  coords 2538.845 0 2922.814
+  angles -2.065 270.503 2.432
+  scale 0.935
+ }
+ {
+  coords 2566.204 0.001 2904.298
+  angles -3.657 201.21 -0.228
+  scale 1.111
+ }
+ {
+  coords 2532.018 0 2942.723
+  angles 4.939 127.896 2.729
+  scale 0.837
+ }
+ {
+  coords 2553.189 0 2945.049
+  angles 0.598 6.614 -3.613
+  scale 1.172
+ }
+ {
+  coords 2831.178 0 2623.126
+  angles -3.657 201.21 -0.228
+  scale 1.111
+ }
+ {
+  coords 2861.261 0 2535.779
+  angles -3.657 201.21 -0.228
+  scale 1.111
+ }
+ {
+  coords 2870.107 0 2489.389
+  angles -3.657 201.21 -0.228
+  scale 1.111
+ }
+ {
+  coords 2804.341 0.001 2466.477
+  angles -3.657 201.21 -0.228
+  scale 1.111
+ }
+ {
+  coords 2822.582 0 2509.149
+  angles -3.657 201.21 -0.228
+  scale 1.111
+ }
+ {
+  coords 2818.495 0 2440.886
+  angles -3.657 201.21 -0.228
+  scale 1.111
+ }
+ {
+  coords 2898.27 0 2470.749
+  angles -3.657 201.21 -0.228
+  scale 1.111
+ }
+ {
+  coords 2796.215 0 2558.439
+  angles -3.657 201.21 -0.228
+  scale 1.111
+ }
+ {
+  coords 2769.357 0 2599.197
+  angles -3.657 201.21 -0.228
+  scale 1.111
+ }
+ {
+  coords 2776.037 0 2515.588
+  angles -3.657 201.21 -0.228
+  scale 1.111
+ }
+ {
+  coords 2777.302 0 2629.33
+  angles -3.657 201.21 -0.228
+  scale 1.111
+ }
+ {
+  coords 2801.227 0 2591.734
+  angles -3.657 201.21 -0.228
+  scale 1.111
+ }
+ {
+  coords 2852.995 0 2570.847
+  angles -3.657 201.21 -0.228
+  scale 1.111
+ }
+ {
+  coords 2846.155 0 2607.318
+  angles -3.657 201.21 -0.228
+  scale 1.111
+ }
+ {
+  coords 2757.441 0 2704.214
+  angles -3.657 201.21 -0.228
+  scale 1.111
+ }
+ {
+  coords 2693.921 0 2694.875
+  angles -3.657 201.21 -0.228
+  scale 1.111
+ }
+ {
+  coords 2753.224 0 2722.188
+  angles -3.657 201.21 -0.228
+  scale 1.111
+ }
+ {
+  coords 2703.995 0 2727.484
+  angles -3.657 201.21 -0.228
+  scale 1.111
+ }
+ {
+  coords 2656.922 0 2741.848
+  angles -3.657 201.21 -0.228
+  scale 1.111
+ }
+ {
+  coords 2695.344 0 2774.567
+  angles -3.657 201.21 -0.228
+  scale 1.111
+ }
+ {
+  coords 2645.526 0 2789.136
+  angles -3.657 201.21 -0.228
+  scale 1.111
+ }
+ {
+  coords 2744.543 0 2778.735
+  angles -3.657 201.21 -0.228
+  scale 1.111
+ }
+ {
+  coords 2798.48 0 2764.108
+  angles -3.657 201.21 -0.228
+  scale 1.111
+ }
+ {
+  coords 2737.106 0.001 2827.019
+  angles -3.657 201.21 -0.228
+  scale 1.111
+ }
+ {
+  coords 2779.625 0 2877.365
+  angles -3.657 201.21 -0.228
+  scale 1.111
+ }
+ {
+  coords 2738.285 0 2862.444
+  angles -3.657 201.21 -0.228
+  scale 1.111
+ }
+ {
+  coords 2780.66 0 2915.015
+  angles -3.657 201.21 -0.228
+  scale 1.111
+ }
+ {
+  coords 2713.98 -0.001 2925.339
+  angles -3.657 201.21 -0.228
+  scale 1.111
+ }
+ {
+  coords 2790.725 0 2817.426
+  angles -3.657 201.21 -0.228
+  scale 1.111
+ }
+ {
+  coords 2855.529 0 2817.883
+  angles -3.657 201.21 -0.228
+  scale 1.111
+ }
+ {
+  coords 2884.278 0 2757.218
+  angles -3.657 201.21 -0.228
+  scale 1.111
+ }
+}
+SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+ coords 4056.651 21.916 2940.7
+}
+$grp GenericEntity : "{BBA557BEB5D28779}Prefabs/Props/Military/AmmoBoxes/drg_AmmoBox_81mm_mortar_3rnd_Smoke.et" {
+ {
+  coords 4490.306 25.032 2923.755
+  angles 0 -24.579 0
+ }
+ {
+  coords 4490.394 25.031 2923.527
+  angles 0 -25.044 0
+ }
+ {
+  coords 4490.506 25.031 2923.299
+  angles 0 -25.259 0
+ }
+ {
+  coords 4490.59 25.031 2923.067
+  angles 0 -25.969 0
+ }
+ {
+  coords 4490.698 25.032 2922.864
+  angles 0 -25.396 0
+ }
+ {
+  coords 4490.803 25.031 2922.652
+  angles 0 -23.756 0
+ }
+ {
+  coords 4490.903 25.031 2922.424
+  angles 0 -25.816 0
+ }
+ {
+  coords 4490.998 25.031 2922.209
+  angles 0 -25.959 0
+ }
+ {
+  coords 4491.071 25.031 2922.005
+  angles 0 -25.959 0
+ }
+ {
+  coords 4491.178 25.031 2921.793
+  angles 0 -25.959 0
+ }
+ {
+  coords 4491.29 25.031 2921.554
+  angles 0 -25.959 0
+ }
+ {
+  coords 4491.411 25.031 2921.33
+  angles 0 -25.959 0
+ }
+ {
+  coords 4491.491 25.031 2921.103
+  angles 0 -25.959 0
+ }
+ {
+  coords 4491.603 25.031 2920.88
+  angles 0 -25.959 0
+ }
+ {
+  coords 4491.698 25.031 2920.643
+  angles 0 -25.959 0
+ }
+ {
+  coords 4491.799 25.031 2920.394
+  angles 0 -25.959 0
+ }
+ {
+  coords 4491.911 25.032 2920.159
+  angles 0 -25.959 0
+ }
+}
+$grp StaticModelEntity : "{C16C62041E2AAAB2}Prefabs/Structures/Military/Fortifications/Dragontooth_01/Dragontooth_01_V1.et" {
+ {
+  coords 2759.112 0 2566.278
+  angles 0 64.371 0
+ }
+ {
+  coords 2752.48 0 2580.758
+  angles 4.155 29.176 5.37
+ }
+ {
+  coords 2746.906 0 2593.766
+  angles -2.387 64.406 -0.84
+ }
+ {
+  coords 2762.414 0 2549.921
+  angles -4.025 64.234 1.94
+ }
+ {
+  coords 2765.534 0 2532.217
+  angles 0 64.371 0
+ }
+ {
+  coords 2758.894 0 2518.033
+  angles -3.986 33.879 5.911
+ }
+ {
+  coords 2763.295 0 2498.791
+  angles -2.496 95.622 -2.042
+ }
+ {
+  coords 2765.335 0 2482.6
+  angles 9.297 -5.433 -5.303
+ }
+ {
+  coords 2754.308 0 2488.457
+  angles 4.715 64.674 3.689
+ }
+ {
+  coords 2752.357 0 2508.388
+  angles -11.479 66.036 -8.314
+ }
+ {
+  coords 2752.719 0 2537.821
+  angles 0.387 64.376 0.807
+ }
+ {
+  coords 2742.302 0 2633.508
+  angles -3.245 64.169 3.552
+ }
+ {
+  coords 2764.035 0 2614.856
+  angles -1.257 45.388 -1.274
+ }
+ {
+  coords 2832.369 0 2580.938
+  angles 2.806 64.353 -0.355
+ }
+ {
+  coords 2832.392 0 2605.595
+  angles 2.001 64.372 0.033
+ }
+ {
+  coords 2844.114 0 2546.602
+  angles 3.959 64.514 2.071
+ }
+ {
+  coords 2877.942 0 2470.315
+  angles 3.223 64.283 -1.551
+ }
+ {
+  coords 2694.064 0 2761.209
+  angles 3.522 31.203 1.087
+ }
+ {
+  coords 2713.126 0 2750.469
+  angles 2.033 27.504 -1.967
+ }
+ {
+  coords 2713.533 0 2769.232
+  angles 1.966 64.44 2.035
+ }
+ {
+  coords 2675.764 0 2772.684
+  angles 3.019 32.463 1.919
+ }
+ {
+  coords 2684.284 0 2803.478
+  angles 2.924 35.184 2.06
+ }
+ {
+  coords 2734.729 0 2749.946
+  angles 4.088 8.958 -2.969
+ }
+ {
+  coords 2713.31 0 2724.987
+  angles 3.448 -2.666 -2.842
+ }
+ {
+  coords 2659.915 0 2803.912
+  angles 4.513 19.168 0.622
+ }
+ {
+  coords 2645.456 0 2819.413
+  angles 4.995 21.202 1.934
+ }
+ {
+  coords 2655.495 0.001 2779.541
+  angles 4.35 13.178 1.017
+ }
+ {
+  coords 2567.653 0 2826.049
+  angles -3.495 78.554 5.251
+ }
+ {
+  coords 2574.98 0 2851.925
+  angles 0.586 31.627 2.462
+ }
+ {
+  coords 2539.6 0 2837.427
+  angles 1.26 50.582 0.123
+ }
+ {
+  coords 2586.275 0 2771.927
+  angles 0.25 73.755 0.859
+ }
+ {
+  coords 2617.474 0 2766.867
+  angles 1.97 36.728 0.353
+ }
+ {
+  coords 2634.867 0 2656.407
+  angles 1.265 46.515 0.034
+ }
+ {
+  coords 2672.113 0 2719.701
+  angles 1.348 21.108 1.479
+ }
+ {
+  coords 2686.674 0 2701.442
+  angles 1.971 6.127 -1.588
+ }
+ {
+  coords 2757.995 0 2465.447
+  angles -2.345 84.84 -6.053
+ }
+ {
+  coords 2762.82 0 2446.892
+  angles 1.753 40.748 -2.033
+ }
+ {
+  coords 2779.454 0 2435.721
+  angles 0.325 21.271 -0.834
+ }
+ {
+  coords 2775.954 0 2414.839
+  angles -0.521 58.455 -5.961
+ }
+ {
+  coords 2792.961 0 2408.087
+  angles -5.133 21.905 -3.977
+ }
+ {
+  coords 2760.964 0 2635.837
+  angles 1.159 21.237 -0.51
+ }
+}
+$grp GenericEntity : "{C707F02B5A64AA08}Prefabs/Props/Wrecks/BRDM2_wreck/BRDM2_wreck.et" {
+ {
+  coords 2504.157 16.228 2809.396
+  angles -7.098 175.739 0
+ }
+ {
+  coords 2663.915 8.667 2484.625
+  angles 6.326 105.368 5.885
+ }
+ {
+  coords 2591.828 17.427 2912.805
+  angles -2.294 34.388 4.922
+ }
+ {
+  coords 2566.655 18.674 2939.392
+  angles -2.351 116.227 -1.566
+ }
+ {
+  coords 2558.519 16.833 2869.677
+  angles -2.841 40.938 4.629
+ }
+ {
+  coords 2613.977 19.026 2961.739
+  angles -11.898 129.238 -2.714
+ }
+ {
+  coords 2535.957 18.719 2927.299
+  angles 4.152 -120.742 -3.502
+ }
+ {
+  coords 2591.429 16.382 2865.874
+  angles 2.181 -14.158 4.973
+ }
+ {
+  coords 2640.507 13.059 2776.891
+  angles 0.661 34.642 4.919
+ }
+ {
+  coords 2556.592 17.694 2889.179
+  angles 1.476 -6.263 5.226
+ }
+ {
+  coords 2677.993 11.537 2745.668
+  angles -5.388 106.526 -0.667
+ }
+ {
+  coords 2675.708 16.371 2862.635
+  angles -2.294 34.388 4.922
+ }
+ {
+  coords 2743.683 12.087 2603.299
+  angles 0.767 1.361 5.375
+ }
+ {
+  coords 2771.533 11.264 2455.471
+  angles -5.173 117.181 -1.65
+ }
+ {
+  coords 2934.926 18.952 2570.877
+  angles 1.976 -11.823 5.058
+ }
+ {
+  coords 2947.826 18.685 2478.479
+  angles -4.186 -139.667 -4.693
+ }
+ {
+  coords 2652.663 11.404 2365.758
+  angles 6.42 116.847 -1.654
+ }
+ {
+  coords 2684.52 15.182 2334.614
+  angles -1.803 170.117 -5.122
+ }
+ {
+  coords 2661.595 9.003 2414.139
+  angles -1.393 174.638 -5.248
+ }
+ {
+  coords 2616.727 8.455 2396.442
+  angles -0.948 179.441 -5.346
+ }
+ {
+  coords 2453.868 15.229 2817.088
+  angles -5.411 104.161 -0.444
+ }
+ {
+  coords 2441.337 15.79 2832.458
+  angles 3.345 -28.49 4.279
+ }
+ {
+  coords 2421.328 13.727 2811.797
+  angles -5.215 115.66 -1.512
+ }
+ {
+  coords 2438.648 10.627 2766.363
+  angles -3.897 143.682 -3.783
+ }
+ {
+  coords 2580.723 12.107 2762.4
+  angles -5.309 111.603 -1.14
+ }
+ {
+  coords 2598.963 20.471 2978.228
+  angles -2.614 166.911 0.608
+ }
+ {
+  coords 2493.465 18.279 2942.761
+  angles -2.351 116.227 -1.566
+ }
+ {
+  coords 2663.474 14.301 2300.827
+  angles -2.351 116.227 -1.566
+ }
+ {
+  coords 2980.484 19.622 2354.787
+  angles -2.351 116.227 -1.566
+ }
+ {
+  coords 2982.428 19.783 2349.061
+  angles -2.02 38.181 1.975
+ }
+ {
+  coords 3157.761 20.336 2368.111
+  angles -2.351 116.227 -1.566
+ }
+ {
+  coords 2848.187 22.548 3051.896
+  angles -2.351 116.227 -1.566
+ }
+ {
+  coords 2599.95 12.255 2767.125
+  angles 0.158 79.857 0.881
+ }
+ {
+  coords 2623.645 14.796 2833.394
+  angles 1.635 36.28 2.309
+ }
+ {
+  coords 2518.679 17.051 2863.539
+  angles -2.521 159.939 0.92
+ }
+ {
+  coords 2605.553 16.933 2888.767
+  angles -3.288 126.019 -4.589
+ }
+}
+$grp Tree : "{C8E68C4C6AF159DA}PrefabLibrary/DefaultLibrary/Vegetation/Trees/t_betula_pendula_2sw.et" {
+ {
+  coords 2585.458 0 2926.559
+  angles 0.961 34.76 1.755
+  scale 0.855
+ }
+ {
+  coords 2592.867 0 2948.902
+  angles 2.818 -13.423 0.247
+  scale 1.188
+ }
+ {
+  coords 2610.003 0 2909.2
+  angles -0.335 34.642 5.195
+  scale 0.855
+ }
+ {
+  coords 2741.321 0 2909.571
+  angles 1.021 34.758 -1.47
+  scale 0.855
+ }
+ {
+  coords 2803.42 0 2915.293
+  angles 11.243 33.447 -7.313
+  scale 0.855
+ }
+ {
+  coords 2765.748 0 2987.073
+  angles 0.17 34.698 4.464
+  scale 0.855
+ }
+ {
+  coords 2708.674 0 2983.151
+  angles -0.959 34.819 -1.757
+  scale 0.855
+ }
+ {
+  coords 2831.448 0 2591.247
+  angles 0.961 34.76 1.755
+  scale 0.855
+ }
+ {
+  coords 2850.967 0 2515.234
+  angles 0.961 34.76 1.755
+  scale 0.855
+ }
+ {
+  coords 2768.393 0 2581.26
+  angles 0.961 34.76 1.755
+  scale 0.855
+ }
+ {
+  coords 2860.106 0 2436.378
+  angles 0.961 34.76 1.755
+  scale 0.855
+ }
+ {
+  coords 2803.483 0 2409.935
+  angles 0.961 34.76 1.755
+  scale 0.855
+ }
+ {
+  coords 2758.298 0 2399.589
+  angles 0.961 34.76 1.755
+  scale 0.855
+ }
+ {
+  coords 2792.882 0 2394.078
+  angles 0.961 34.76 1.755
+  scale 0.855
+ }
+ {
+  coords 2772.817 0 2394.241
+  angles 0.961 34.76 1.755
+  scale 0.855
+ }
+ {
+  coords 2747.537 0 2380.542
+  angles 0.961 34.76 1.755
+  scale 0.855
+ }
+ {
+  coords 2743.714 0 2390.252
+  angles 0.961 34.76 1.755
+  scale 0.855
+ }
+ {
+  coords 2669.108 0 2503.89
+  angles 0.961 34.76 1.755
+  scale 0.855
+ }
+ {
+  coords 2622.279 0 2653.277
+  angles 0.961 34.76 1.755
+  scale 0.855
+ }
+ {
+  coords 2627.015 0 2677.739
+  angles 0.961 34.76 1.755
+  scale 0.855
+ }
+ {
+  coords 2644.097 0 2655.713
+  angles 0.961 34.76 1.755
+  scale 0.855
+ }
+ {
+  coords 2676.876 0 2652.784
+  angles 0.961 34.76 1.755
+  scale 0.855
+ }
+}
+$grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+ {
+  coords 2684.006 11.227 2493.268
+  angles 0 73.816 0
+  m_sImageSetGlow ""
+  m_MarkerColor 0 0 0 1
+  m_sQuadName "flag-2"
+  m_fWorldSize 50
+  m_sDescription "Блиндаж"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   ""
+   "RHS_AFRF"
+   "RHS_USAF"
+  }
+  m_bVisibleForEmptyFaction 1
+ }
+ {
+  coords 2485.901 28.593 2813.884
+  angles 0 84.894 0
+  m_sImageSetGlow ""
+  m_MarkerColor 0 0 0 1
+  m_sQuadName "flag-2"
+  m_fWorldSize 50
+  m_sDescription "Коровник"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   ""
+   "RHS_AFRF"
+   "RHS_USAF"
+  }
+  m_bVisibleForEmptyFaction 1
+ }
+ RHS_AFRF_G_000_M {
+  coords 2643.478 9.068 2480.88
+  m_sImageSet "{7CD99D22C7AE8195}UI/Textures/GroupManagement/FlagIcons/GroupFlagsOpfor.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 1 1 1 1
+  m_sQuadName "undefined"
+  m_fWorldSize 50
+  m_sDescription "(#DRG-Sq-PlatoonHQ) Aktiv 1–1"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+  }
+  m_iZOrder 10
+ }
+ RHS_AFRF_G_010_M {
+  coords 2385.631 9.598 2477.619
+  m_sImageSet "{7CD99D22C7AE8195}UI/Textures/GroupManagement/FlagIcons/GroupFlagsOpfor.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 1 1 1 1
+  m_sQuadName "undefined"
+  m_fWorldSize 50
+  m_sDescription "(#DRG-Sq-RifleSquad) Aktiv 2–1"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+  }
+  m_iZOrder 10
+ }
+ RHS_AFRF_G_011_M {
+  coords 2627.2 9.031 2568.652
+  m_sImageSet "{7CD99D22C7AE8195}UI/Textures/GroupManagement/FlagIcons/GroupFlagsOpfor.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 1 1 1 1
+  m_sQuadName "undefined"
+  m_fWorldSize 50
+  m_sDescription "(#DRG-Sq-RifleSquad) Aktiv 2–2"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+  }
+  m_iZOrder 10
+ }
+ RHS_AFRF_G_100_M {
+  coords 2472.441 16.75 2820.992
+  m_sImageSet "{7CD99D22C7AE8195}UI/Textures/GroupManagement/FlagIcons/GroupFlagsOpfor.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 1 1 1 1
+  m_sQuadName "undefined"
+  m_fWorldSize 50
+  m_sDescription "(#DRG-Sq-RifleSquad) Buran 1–1"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+  }
+  m_iZOrder 10
+ }
+ RHS_AFRF_G_110_M {
+  coords 2475.03 10.515 2639.849
+  m_sImageSet "{7CD99D22C7AE8195}UI/Textures/GroupManagement/FlagIcons/GroupFlagsOpfor.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 1 1 1 1
+  m_sQuadName "undefined"
+  m_fWorldSize 50
+  m_sDescription "(#DRG-Sq-RifleSquad) Buran 2–1"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+  }
+  m_iZOrder 10
+ }
+ RHS_AFRF_G_111_M {
+  coords 2523.332 8.969 2395.927
+  m_sImageSet "{7CD99D22C7AE8195}UI/Textures/GroupManagement/FlagIcons/GroupFlagsOpfor.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 1 1 1 1
+  m_sQuadName "undefined"
+  m_fWorldSize 50
+  m_sDescription "(#DRG-Sq-RifleSquad) Buran 2–2"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+  }
+  m_iZOrder 10
+ }
+ RHS_AFRF_G_112_M {
+  coords 2324.708 12.772 2742.494
+  m_sImageSet "{7CD99D22C7AE8195}UI/Textures/GroupManagement/FlagIcons/GroupFlagsOpfor.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 1 1 1 1
+  m_sQuadName "undefined"
+  m_fWorldSize 50
+  m_sDescription "(#DRG-Sq-RifleSquad) Buran 2–3"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+  }
+  m_iZOrder 10
+ }
+ RHS_USAF_G_000_M {
+  coords 4036.309 21.517 2935.348
+  m_sImageSet "{1228936E5DB30403}UI/Textures/GroupManagement/FlagIcons/GroupFlagsBlufor.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 1 1 1 1
+  m_sQuadName "undefined"
+  m_fWorldSize 50
+  m_sDescription "(#DRG-Sq-PlatoonHQ) Atlas 1–1"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+  }
+  m_iZOrder 10
+ }
+ RHS_USAF_G_010_M {
+  coords 4041.189 21.427 2912.14
+  m_sImageSet "{1228936E5DB30403}UI/Textures/GroupManagement/FlagIcons/GroupFlagsBlufor.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 1 1 1 1
+  m_sQuadName "undefined"
+  m_fWorldSize 50
+  m_sDescription "Atlas White–1"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+  }
+  m_iZOrder 10
+ }
+ RHS_USAF_G_011_M {
+  coords 4033.454 21.669 2955.912
+  m_sImageSet "{1228936E5DB30403}UI/Textures/GroupManagement/FlagIcons/GroupFlagsBlufor.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 1 1 1 1
+  m_sQuadName "undefined"
+  m_fWorldSize 50
+  m_sDescription "Atlas White–2"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+  }
+  m_iZOrder 10
+ }
+ RHS_USAF_G_012_M {
+  coords 4043.744 21.703 2942.823
+  m_sImageSet "{1228936E5DB30403}UI/Textures/GroupManagement/FlagIcons/GroupFlagsBlufor.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 1 1 1 1
+  m_sQuadName "undefined"
+  m_fWorldSize 50
+  m_sDescription "Atlas White–3"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+  }
+  m_iZOrder 10
+ }
+ RHS_USAF_G_100_M {
+  coords 4069.924 22.172 2969.368
+  m_sImageSet "{1228936E5DB30403}UI/Textures/GroupManagement/FlagIcons/GroupFlagsBlufor.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 1 1 1 1
+  m_sQuadName "undefined"
+  m_fWorldSize 50
+  m_sDescription "Blazer 1–1"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+  }
+  m_iZOrder 10
+ }
+ RHS_USAF_G_110_M {
+  coords 4077.228 21.833 2922.655
+  m_sImageSet "{1228936E5DB30403}UI/Textures/GroupManagement/FlagIcons/GroupFlagsBlufor.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 1 1 1 1
+  m_sQuadName "undefined"
+  m_fWorldSize 50
+  m_sDescription "(#DRG-Sq-MachineGunnerSquad) Blazer 2–1"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+  }
+  m_iZOrder 10
+ }
+ RHS_USAF_G_110_M2 {
+  coords 4077.228 21.833 2922.655
+  m_sImageSet "{1228936E5DB30403}UI/Textures/GroupManagement/FlagIcons/GroupFlagsBlufor.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 1 1 1 1
+  m_sQuadName "undefined"
+  m_fWorldSize 50
+  m_sDescription "Blazer White–1"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+  }
+  m_iZOrder 10
+ }
+ RHS_USAF_G_200_M {
+  coords 3224.634 21.625 2431.283
+  angles 0 90 0
+  m_sImageSet "{1228936E5DB30403}UI/Textures/GroupManagement/FlagIcons/GroupFlagsBlufor.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 1 1 1 1
+  m_sQuadName "undefined"
+  m_fWorldSize 50
+  m_sDescription "Chaos 1–1"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+  }
+  m_iZOrder 10
+ }
+ RHS_USAF_G_210_M {
+  coords 2204.782 2.038 2235.755
+  angles 4.016 78.352 -2.649
+  m_sImageSet "{1228936E5DB30403}UI/Textures/GroupManagement/FlagIcons/GroupFlagsBlufor.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 1 1 1 1
+  m_sQuadName "undefined"
+  m_fWorldSize 50
+  m_sDescription "Chaos White–1"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+  }
+  m_iZOrder 10
+ }
+ RHS_USAF_G_211_M {
+  coords 2069.122 2.907 2596.559
+  angles 9.304 75.259 3.951
+  m_sImageSet "{1228936E5DB30403}UI/Textures/GroupManagement/FlagIcons/GroupFlagsBlufor.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 1 1 1 1
+  m_sQuadName "undefined"
+  m_fWorldSize 50
+  m_sDescription "Chaos White–2"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+  }
+  m_iZOrder 10
+ }
+ RHS_USAF_G_212_M {
+  coords 3186.423 24.031 3004.876
+  angles 0 90 0
+  m_sImageSet "{1228936E5DB30403}UI/Textures/GroupManagement/FlagIcons/GroupFlagsBlufor.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 1 1 1 1
+  m_sQuadName "undefined"
+  m_fWorldSize 50
+  m_sDescription "Chaos White–3"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+  }
+  m_iZOrder 10
+ }
+ RHS_USAF_G_213_M {
+  coords 3279.724 22.99 2731.839
+  angles 0 90 0
+  m_sImageSet "{1228936E5DB30403}UI/Textures/GroupManagement/FlagIcons/GroupFlagsBlufor.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 1 1 1 1
+  m_sQuadName "undefined"
+  m_fWorldSize 50
+  m_sDescription "(Sniper Team) Chaos White–4"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+  }
+  m_iZOrder 10
+ }
+ RHS_USAF_G_300_M {
+  coords 4481.399 23.922 2914.9
+  angles 0 90 0
+  m_sImageSet "{1228936E5DB30403}UI/Textures/GroupManagement/FlagIcons/GroupFlagsBlufor.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 1 1 1 1
+  m_sQuadName "undefined"
+  m_fWorldSize 50
+  m_sDescription "Disco 1–1"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+  }
+  m_iZOrder 10
+ }
+ {
+  coords 4078.775 22.125 2967.983
+  angles 0 82.687 0
+  m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 0.016 0.552 0.905 1
+  m_sQuadName "APC"
+  m_fWorldSize 3.263
+  m_sDescription "#AR-Vehicle_LAV25_Name"
+  m_bUseWorldScale 1
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+   GAME
+  }
+  m_iZOrder 0
+ }
+ {
+  coords 4473.539 23.924 2914.065
+  angles -1.898 -8.121 -0.633
+  m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 0.016 0.552 0.905 1
+  m_sQuadName "Truck"
+  m_fWorldSize 4.123
+  m_sDescription "#AR-Vehicle_M923A1_Transport_Name"
+  m_bUseWorldScale 1
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+   GAME
+  }
+  m_iZOrder 0
+ }
+ {
+  coords 4034.372 21.318 2912.012
+  angles -0.886 -8.252 0.128
+  m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 0.157 0.275 0.624 1
+  m_sQuadName "Car"
+  m_fWorldSize 3.246
+  m_sDescription "#TF-Vehicle_MATV_Name"
+  m_bUseWorldScale 1
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+   GAME
+  }
+  m_iZOrder 0
+ }
+ {
+  coords 4030.553 21.406 2936.327
+  angles 0 -12.335 0
+  m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 0.157 0.275 0.624 1
+  m_sQuadName "Car"
+  m_fWorldSize 3.246
+  m_sDescription "#TF-Vehicle_MATV_Name"
+  m_bUseWorldScale 1
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+   GAME
+  }
+  m_iZOrder 0
+ }
+ {
+  coords 4026.119 21.596 2963.051
+  angles -0.885 -8.718 0.136
+  m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 0.157 0.275 0.624 1
+  m_sQuadName "Car"
+  m_fWorldSize 3.246
+  m_sDescription "#TF-Vehicle_MATV_Name"
+  m_bUseWorldScale 1
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+   GAME
+  }
+  m_iZOrder 0
+ }
+ {
+  coords 4050.809 21.794 2944.411
+  angles -0.885 -8.794 0.137
+  m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 0.157 0.275 0.624 1
+  m_sQuadName "Car"
+  m_fWorldSize 3.246
+  m_sDescription "#TF-Vehicle_MATV_Name"
+  m_bUseWorldScale 1
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+   GAME
+  }
+  m_iZOrder 0
+ }
+ {
+  coords 4033.15 21.348 2919.125
+  angles -1.012 -8.105 -0.76
+  m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 0.157 0.275 0.624 1
+  m_sQuadName "Car"
+  m_fWorldSize 3.246
+  m_sDescription "#TF-Vehicle_MATV_Name"
+  m_bUseWorldScale 1
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+   GAME
+  }
+  m_iZOrder 0
+ }
+ {
+  coords 4027.247 21.538 2955.185
+  angles -1.011 -7.96 -0.762
+  m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 0.157 0.275 0.624 1
+  m_sQuadName "Car"
+  m_fWorldSize 3.246
+  m_sDescription "#TF-Vehicle_MATV_Name"
+  m_bUseWorldScale 1
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+   GAME
+  }
+  m_iZOrder 0
+ }
+ {
+  coords 4052.19 21.878 2935.11
+  angles -0.879 -10.823 0.168
+  m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 0.157 0.275 0.624 1
+  m_sQuadName "Car"
+  m_fWorldSize 3.246
+  m_sDescription "#TF-Vehicle_MATV_Name"
+  m_bUseWorldScale 1
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+   GAME
+  }
+  m_iZOrder 0
+ }
+}
+$grp Tree : "{CF0A210B7AC7B329}PrefabLibrary/DefaultLibrary/Vegetation/Bushes/b_corylus_avellana_2.et" {
+ {
+  coords 2735.306 0 2883.605
+  angles 1.962 14.711 -0.647
+  scale 0.759
+ }
+ {
+  coords 2774.922 0 2946.172
+  angles 1.757 353.353 1.061
+  scale 0.923
+ }
+}
+$grp Tree : "{D8C5DFD6ECA5F0DC}PrefabLibrary/DefaultLibrary/Vegetation/Trees/t_picea_abies_3d.et" {
+ {
+  coords 2563.349 0 2922.344
+  angles 1.818 72.083 0.593
+  scale 0.806
+ }
+ {
+  coords 2583.584 0 2956.034
+  angles -2.885 57.471 0.562
+  scale 1.013
+ }
+ {
+  coords 2587.958 0 2889.398
+  angles 0.364 199.419 1.43
+  scale 0.822
+ }
+ {
+  coords 2547.405 0 2888.448
+  angles 3.527 236.85 -1.046
+  scale 0.809
+ }
+ {
+  coords 2585.037 0.001 2936.27
+  angles 3.704 -68.139 1.939
+  scale 0.961
+ }
+}
+$grp Vehicle : "{D9AC0E3578809137}Prefabs/Vehicles/Wheeled/M1240A1_MATV/M1240A1_MATV_Turret_Green.et" {
+ M1240A1_MATV_Turret_Green1 {
+  coords 4033.15 21.348 2919.125
+  angles -1.012 -98.105 -0.76
+  m_sAttachmentGroupName "loxi"
+ }
+ M1240A1_MATV_Turret_Green2 {
+  coords 4027.247 21.538 2955.185
+  angles -1.01 -97.96 -0.762
+  m_sAttachmentGroupName "loxi2"
+ }
+ M1240A1_MATV_Turret_Green3 {
+  coords 4052.19 21.878 2935.11
+  angles -0.879 -100.823 0.168
+  m_sAttachmentGroupName "loxi3"
+ }
+}
+$grp Tree : "{D9D5932A42E3288B}PrefabLibrary/DefaultLibrary/Vegetation/Trees/t_betula_pendula_stump_01.et" {
+ {
+  coords 2567.865 0 2931.573
+  angles -1.478 60.94 2.866
+  scale 1.117
+ }
+ {
+  coords 2591.592 -0.001 2899.889
+  angles 3.837 30.844 2.289
+  scale 0.829
+ }
+ {
+  coords 2602.187 0 2930.041
+  angles 0.204 -57.593 -1.991
+  scale 0.981
+ }
+ {
+  coords 2567.795 0 2848.939
+  angles -0.685 -167.769 -1.064
+  scale 0.854
+ }
+}
+$grp StaticModelEntity : "{DA1B42FB9AEC02BE}Prefabs/Structures/Military/Fortifications/Dragontooth_01/Dragontooth_01_V3.et" {
+ {
+  coords 2758.985 0 2560.339
+  angles -5.335 -0.334 3.592
+ }
+ {
+  coords 2757.95 0 2570.493
+  angles 4.569 59.673 2.498
+ }
+ {
+  coords 2749.067 -0.001 2583.521
+  angles 11.155 23.324 -5.723
+ }
+ {
+  coords 2755.824 0 2575.848
+  angles 2.713 -36.555 -5.335
+ }
+ {
+  coords 2745.744 0 2597.981
+  angles -3.219 59.699 -0.191
+ }
+ {
+  coords 2746.78 0 2587.827
+  angles -3.644 -0.545 -7.077
+ }
+ {
+  coords 2761.253 0 2554.137
+  angles -2.447 59.752 -0.644
+ }
+ {
+  coords 2762.288 0 2543.982
+  angles 0.9 -0.139 1.788
+ }
+ {
+  coords 2764.372 0 2536.432
+  angles -0.451 59.741 -0.773
+ }
+ {
+  coords 2765.407 0 2526.278
+  angles 0 0 3.576
+ }
+ {
+  coords 2755.784 0.001 2521.104
+  angles -0.876 29.31 1.561
+ }
+ {
+  coords 2761.748 0 2512.826
+  angles -7.021 -30.058 9.108
+ }
+ {
+  coords 2764.498 0 2502.988
+  angles -0.911 91.017 0.879
+ }
+ {
+  coords 2760.105 0 2493.778
+  angles 6.708 29.441 -6.405
+ }
+ {
+  coords 2760.987 0 2483.03
+  angles 2.209 -9.445 -8.467
+ }
+ {
+  coords 2770.794 0 2480.345
+  angles 1.156 -69.039 -0.516
+ }
+ {
+  coords 2753.147 0 2492.673
+  angles 3.989 59.676 -0.262
+ }
+ {
+  coords 2754.182 0 2482.518
+  angles -1.796 0.054 6.237
+ }
+ {
+  coords 2751.195 0 2512.603
+  angles -3.778 60.107 -2.979
+ }
+ {
+  coords 2752.23 0 2502.448
+  angles -7.134 -0.28 -1.741
+ }
+ {
+  coords 2751.558 0.001 2542.036
+  angles 0.137 59.518 1.996
+ }
+ {
+  coords 2752.593 0 2531.881
+  angles -0.895 -0.334 0.005
+ }
+ {
+  coords 2741.141 0 2637.723
+  angles 11.193 59.866 1.667
+ }
+ {
+  coords 2742.177 0 2627.569
+  angles -4.438 -0.124 13.161
+ }
+ {
+  coords 2761.569 0 2618.46
+  angles -2.034 40.737 -1.751
+ }
+ {
+  coords 2765.838 0 2609.204
+  angles -0.845 -19.187 0.294
+ }
+ {
+  coords 2831.207 0 2585.154
+  angles 1.546 59.721 -0.902
+ }
+ {
+  coords 2832.242 0 2574.999
+  angles 0.866 -0.627 -2.693
+ }
+ {
+  coords 2831.23 0 2609.81
+  angles 2.768 59.691 -0.582
+ }
+ {
+  coords 2832.265 0.001 2599.655
+  angles 0.866 -0.627 -2.693
+ }
+ {
+  coords 2842.952 0 2550.817
+  angles 1.546 59.721 -0.902
+ }
+ {
+  coords 2843.988 0 2540.663
+  angles 4.38 -1.105 -4.539
+ }
+ {
+  coords 2876.781 0 2474.53
+  angles 1.422 59.832 -2.894
+ }
+ {
+  coords 2877.816 0 2464.375
+  angles -0.027 -0.584 -2.684
+ }
+ {
+  coords 2690.778 0 2764.102
+  angles 3.211 26.173 1.577
+ }
+ {
+  coords 2697.207 0 2756.171
+  angles 2.477 -33.784 -2.731
+ }
+ {
+  coords 2709.664 0 2753.15
+  angles 2.685 22.672 -1.786
+ }
+ {
+  coords 2716.571 0 2745.64
+  angles -1.456 -37.27 -3.387
+ }
+ {
+  coords 2712.371 0 2773.447
+  angles 2.583 59.581 2.63
+ }
+ {
+  coords 2713.406 0 2763.292
+  angles 2.677 -0.463 -0.916
+ }
+ {
+  coords 2672.542 0 2775.648
+  angles 3.175 27.416 1.646
+ }
+ {
+  coords 2678.793 -0.001 2767.58
+  angles 3.02 -32.426 -1.917
+ }
+ {
+  coords 2681.207 -0.001 2806.589
+  angles 3.864 30.159 2.243
+ }
+ {
+  coords 2687.067 0 2798.235
+  angles 3.108 -29.695 -1.771
+ }
+ {
+  coords 2730.607 0 2751.397
+  angles 0.957 4.132 -0.828
+ }
+ {
+  coords 2739.502 0 2746.454
+  angles 3.224 -55.2 0.062
+ }
+ {
+  coords 2708.995 0 2725.575
+  angles 0.364 -7.798 2.659
+ }
+ {
+  coords 2718.732 -0.001 2722.537
+  angles -0.603 -68.749 -10.675
+ }
+ {
+  coords 2656.103 0 2806.058
+  angles 3.469 14.099 0.871
+ }
+ {
+  coords 2664.027 0 2799.642
+  angles 2.497 -45.76 -2.561
+ }
+ {
+  coords 2641.712 0 2821.687
+  angles 1.861 16.244 -3.183
+ }
+ {
+  coords 2649.418 0 2815.006
+  angles -1.88 -43.417 -0.685
+ }
+ {
+  coords 2651.479 0 2781.274
+  angles 3.666 8.076 -0.382
+ }
+ {
+  coords 2660.027 0 2775.725
+  angles 2.213 -51.816 -2.81
+ }
+ {
+  coords 2567.567 0 2830.429
+  angles -2.687 73.783 3.57
+ }
+ {
+  coords 2565.992 0 2820.377
+  angles 4.689 14.688 6.731
+ }
+ {
+  coords 2571.713 0 2854.845
+  angles 1.195 26.785 1.605
+ }
+ {
+  coords 2578.068 0 2846.869
+  angles 3.439 -32.749 2.039
+ }
+ {
+  coords 2537.443 0 2841.239
+  angles 0 45.514 0
+ }
+ {
+  coords 2540.897 0.155 2831.649
+  angles -6.716 -14.286 0.383
+ }
+ {
+  coords 2585.798 0 2776.278
+  angles 0.65 68.708 1.668
+ }
+ {
+  coords 2585.188 0 2766.105
+  angles 1.906 8.854 -0.609
+ }
+ {
+  coords 2614.471 0 2770.056
+  angles 1.993 31.72 0.18
+ }
+ {
+  coords 2620.116 0 2761.564
+  angles 0.369 -28.039 -1.211
+ }
+ {
+  coords 2632.448 0.001 2660.057
+  angles 2.603 41.483 1.107
+ }
+ {
+  coords 2636.567 0 2650.735
+  angles -0.562 -18.302 -1.699
+ }
+ {
+  coords 2668.369 0 2721.975
+  angles 0.959 16.093 9.505
+ }
+ {
+  coords 2676.075 0 2715.294
+  angles 0.615 -43.389 0.65
+ }
+ {
+  coords 2682.469 0 2702.667
+  angles 0 1.151 0
+ }
+ {
+  coords 2691.646 0 2698.214
+  angles 4.3 -58.89 -3.658
+ }
+ {
+  coords 2758.34 0 2469.812
+  angles -0.391 79.495 2.802
+ }
+ {
+  coords 2755.834 0 2459.932
+  angles 16.472 17.987 -5.54
+ }
+ {
+  coords 2760.043 0.001 2450.277
+  angles 1.14 35.63 3.016
+ }
+ {
+  coords 2765.092 0 2441.422
+  angles -1.912 -24.075 -2.085
+ }
+ {
+  coords 2775.71 0.001 2437.995
+  angles -0.356 16.32 -1.969
+ }
+ {
+  coords 2783.416 -0.001 2431.314
+  angles -3.143 -43.401 -0.72
+ }
+ {
+  coords 2774.314 0 2418.9
+  angles -3.548 53.393 -6.246
+ }
+ {
+  coords 2776.481 0 2408.942
+  angles -8.053 -6.764 0.059
+ }
+ {
+  coords 2789.217 0 2410.361
+  angles -6.314 16.779 -3.753
+ }
+ {
+  coords 2796.923 0 2403.68
+  angles -4.5 -43.556 3.04
+ }
+ {
+  coords 2757.219 0 2638.111
+  angles 1.719 16.243 0.501
+ }
+ {
+  coords 2764.925 0 2631.429
+  angles -0.615 -43.432 -0.65
+ }
+}
+$grp Tree : "{DA7492F3E6B63251}PrefabLibrary/DefaultLibrary/Vegetation/Bushes/b_corylus_avellana_1l.et" {
+ {
+  coords 2718.947 0 2902.835
+  angles -1.596 61.152 1.614
+  scale 0.923
+ }
+ {
+  coords 2806.927 0 2938.608
+  angles -1.513 349.837 0.527
+  scale 0.714
+ }
+ {
+  coords 2739.232 0 2985.395
+  angles 0.146 71.501 1.428
+  scale 1.029
+ }
+ {
+  coords 2726.423 0 2948.594
+  angles -0.321 125.468 0.465
+  scale 0.717
+ }
+ {
+  coords 2715.657 0 2971.045
+  angles -1.406 153.088 1.517
+  scale 0.702
+ }
+ {
+  coords 2721.867 0 2990.077
+  angles 1.57 98.462 0.148
+  scale 0.964
+ }
+ {
+  coords 2751.196 0 2921.45
+  angles -0.818 189.026 1.881
+  scale 0.917
+ }
+ {
+  coords 2766.156 0 2870.909
+  angles 0.435 15.513 -1.416
+  scale 0.884
+ }
+ {
+  coords 2750.308 0 2852.827
+  angles 0.879 194.706 0.426
+  scale 0.952
+ }
+ {
+  coords 2645.573 0 2825.505
+  angles -1.017 46.682 -0.753
+  scale 0.813
+ }
+ {
+  coords 2630.828 0 2804.431
+  angles 0.505 29.565 1.36
+  scale 0.702
+ }
+ {
+  coords 2610.289 0 2747.011
+  angles 1.584 261.131 0.95
+  scale 1.007
+ }
+ {
+  coords 2592.477 0 2752.849
+  angles -1.614 19.655 -1.975
+  scale 0.791
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2100
+  }
+ }
+ coords 2772.594 276.388 4116.711
+}
+$grp SCR_EditorRestrictionZoneEntity : "{EF72FA7CD87618D5}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneSmall.et" {
+ {
+  coords 3278.159 22.968 2730.864
+ }
+ {
+  coords 2206.505 2.199 2235.418
+  angles -3.005 -11.534 -5.755
+ }
+ {
+  coords 3223.341 21.625 2429.394
+ }
+ {
+  coords 2067.54 2.414 2593.741
+  angles 4.134 -15.388 -8.483
+ }
+ {
+  coords 3187.963 24.031 3003.079
+ }
+ {
+  coords 2644.124 9.064 2479.615
+  angles 0.163 10.471 -0.88
+ }
+ {
+  coords 2478.488 16.9 2825.597
+  angles 0.895 0 0
+ }
+ {
+  coords 2628.283 9.036 2572.558
+  angles 0 0.014 -0.895
+ }
+ {
+  coords 2387.169 9.615 2480.661
+  angles -5.26 0.772 -7.166
+ }
+ {
+  coords 2478.029 10.287 2643.951
+  angles -4.446 0.335 -3.592
+ }
+ {
+  coords 2526.904 9.043 2399.858
+  angles 0.895 0 -0.895
+ }
+ {
+  coords 2328.48 13.123 2745.333
+  angles 3.536 -2.37 -1.04
+ }
+}
+Vehicle M923A1_transport1 : "{F1FBD0972FA5FE09}Prefabs/Vehicles/Wheeled/M923A1/M923A1_transport.et" {
+ coords 4473.539 23.924 2914.065
+ angles -1.898 -98.121 -0.633
+ m_sAttachmentGroupName "mor"
+}
+$grp GenericEntity : "{F5EF4223ACA6169C}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_02_V1_AFRF.et" {
+ {
+  components {
+   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+    m_aFlagData {
+     PS_FlagData "{6588FCB6C8DD7B29}" {
+      m_sFactionKey "RHS_AFRF"
+     }
+     PS_FlagData "{6588FCB6C83102AD}" {
+      m_sFactionKey "RHS_USAF"
+      m_iCaptureCounter 1
+     }
+    }
+   }
+  }
+  coords 2485.152 19.808 2815.596
+  angles 23.692 -5.079 -1.972
+  scale 1.31
+ }
+ {
+  components {
+   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+    m_aFlagData {
+     PS_FlagData "{6588FCB6C8DD7B29}" {
+      m_sFactionKey "RHS_AFRF"
+     }
+     PS_FlagData "{6588FCB6C83102AD}" {
+      m_sFactionKey "RHS_USAF"
+      m_iCaptureCounter 1
+     }
+    }
+   }
+  }
+  coords 2684.162 11.241 2493.406
+  angles -0.825 0.754 -0.102
+  scale 1.17
+ }
+}
+Tree : "{FA0813CCD98B815B}PrefabLibrary/DefaultLibrary/Vegetation/Trees/t_malus_domestica_2s.et" {
+ coords 2556.262 0 2857.283
+ angles 0.06 42.3 1.265
+ scale 0.867
+}

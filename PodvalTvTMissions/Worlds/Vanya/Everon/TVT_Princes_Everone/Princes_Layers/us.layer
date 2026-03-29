@@ -1,0 +1,454 @@
+Vehicle M923A1_tanker1 : "{2BE1F8B9299B67C1}Prefabs/Vehicles/Wheeled/M923A1/M923A1_tanker.et" {
+ coords 7521.489 6.242 6740.576
+ angles -0.719 -53.465 -0.533
+}
+$grp Vehicle : "{601CE970D8C88268}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed_gunship_HE_sharkNose.et" {
+ UH1H_armed_gunship_HE_sharkNose1 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{5E1E994304F0E0D3}" {
+    MultiSlots {
+     MultiSlotConfiguration "{68EEB82E9366CC7C}" {
+      SlotTemplate InventoryStorageSlot bin {
+       Prefab "{0CF54B9A85D8E0D4}Prefabs/Items/Equipment/Binoculars/Binoculars_M22/Binoculars_M22.et"
+      }
+      NumSlots 5
+     }
+    }
+   }
+  }
+  coords 7470.939 164.563 4332.35
+  angles 0 104.693 0
+  m_sAttachmentGroupName "us2"
+ }
+ UH1H_armed_gunship_HE_sharkNose2 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{5E1E994304F0E0D3}" {
+    MultiSlots {
+     MultiSlotConfiguration "{68EEB82E9366CC7C}" {
+      SlotTemplate InventoryStorageSlot bin {
+       Prefab "{0CF54B9A85D8E0D4}Prefabs/Items/Equipment/Binoculars/Binoculars_M22/Binoculars_M22.et"
+      }
+      NumSlots 5
+     }
+    }
+   }
+  }
+  coords 7462.143 164.562 4305.874
+  angles 0 106.619 0
+  m_sAttachmentGroupName "us1"
+ }
+ UH1H_armed_gunship_HE_sharkNose3 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{5E1E994304F0E0D3}" {
+    MultiSlots {
+     MultiSlotConfiguration "{68EEB82E9366CC7C}" {
+      SlotTemplate InventoryStorageSlot bin {
+       Prefab "{0CF54B9A85D8E0D4}Prefabs/Items/Equipment/Binoculars/Binoculars_M22/Binoculars_M22.et"
+      }
+      NumSlots 5
+     }
+    }
+   }
+  }
+  coords 7576.33 166.156 4246.62
+  angles 0 -76.506 0
+  m_sAttachmentGroupName "us6"
+  {
+   GameEnvironmentProbeEntity {
+    ID "654C8CC81C957F97"
+    coords 0 1.813 1.073
+   }
+  }
+ }
+}
+$grp SCR_AIGroup : "{6E2296FB529E9097}Prefabs/Groups/BLUFOR/US/dim_US_SPN_Force_Recon.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B0F0D80A730}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 7483.446 164.562 4318.106
+  angles 0 -75.365 0
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B0F0D80A730}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 7479.112 164.563 4303.325
+  angles 0 -72.99 0
+ }
+ us7 {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B0F0D80A730}" {
+    m_iSquadCallsign 5
+   }
+  }
+  coords 7434.218 162.818 4348.496
+  angles 0 113.007 0
+  m_aUnitPrefabSlots +{
+   "{A5EA776B389D1583}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_Crew.et"
+   "{0004529856D9B351}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_CrewGunner.et"
+  }
+ }
+ us8 {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B0F0D80A730}" {
+    m_iSquadCallsign 6
+   }
+  }
+  coords 7441.086 162.599 4365.631
+  angles 0 110.434 0
+  m_aUnitPrefabSlots +{
+   "{A5EA776B389D1583}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_Crew.et"
+   "{0004529856D9B351}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_CrewGunner.et"
+  }
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B0F0D80A730}" {
+    m_iCompanyCallsign 5
+   }
+  }
+  coords 10740.581 61.531 2790.855
+  angles 0 -65.927 0
+  m_aUnitPrefabSlots {
+   "{F7FE66E14E368DF9}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_RTO.et"
+   "{6956B24D18F9C0EC}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_Sapper.et"
+   "{07DB2A2C2FD68F06}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_Sniper.et"
+  }
+  m_sCustomNameSet "Разведчики"
+ }
+ us9 {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B0F0D80A730}" {
+    m_iSquadCallsign 1
+   }
+  }
+  coords 7457.855 164.463 4281.792
+  angles 0 6.66 0
+  m_aUnitPrefabSlots {
+   "{ED4E0ACF6FD3C80A}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_SL.et"
+   "{8D1385F1AAE00333}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_GL.et"
+   "{61F3754A8D172C22}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_Rifleman.et"
+   "{F7FE66E14E368DF9}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_RTO.et"
+   "{07DB2A2C2FD68F06}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_Sniper.et"
+   "{A5EA776B389D1583}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_Crew.et"
+   "{0004529856D9B351}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_CrewGunner.et"
+  }
+ }
+ us4 {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B0F0D80A730}" {
+    m_iSquadCallsign 3
+   }
+  }
+  coords 7416.943 162.928 4309.553
+  angles 0 113.007 0
+  m_aUnitPrefabSlots +{
+   "{A5EA776B389D1583}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_Crew.et"
+   "{0004529856D9B351}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_CrewGunner.et"
+  }
+ }
+ us3 {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B0F0D80A730}" {
+    m_iSquadCallsign 4
+   }
+  }
+  coords 7425.022 162.861 4327.939
+  angles 0 113.007 0
+  m_aUnitPrefabSlots +{
+   "{A5EA776B389D1583}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_Crew.et"
+   "{0004529856D9B351}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_CrewGunner.et"
+  }
+ }
+ us5 {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B0F0D80A730}" {
+    m_iSquadCallsign 2
+   }
+  }
+  coords 7441.916 163.512 4285.016
+  angles -0.261 13.155 -2.817
+  m_aUnitPrefabSlots +{
+   "{A5EA776B389D1583}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_Crew.et"
+   "{0004529856D9B351}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_CrewGunner.et"
+  }
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B0F0D80A730}" {
+    m_iCompanyCallsign 4
+   }
+  }
+  coords 7572.791 166.156 4235.827
+  angles 0 13.922 0
+ }
+ {
+  coords 7477.226 164.178 4294.16
+  angles 0 -82.062 0
+  m_aUnitPrefabSlots {
+   "{267E8D9A85DE03AE}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_PL.et"
+  }
+  m_sCustomNameSet "Командующий силами "
+ }
+}
+GenericEntity : "{77BBA2866AE3E861}PrefabsEditable/Auto/Structures/Signs/Military/Supplies/E_Sign_SupplyStorage_Supplies_US_01.et" {
+ coords 7522.455 6.144 6759.143
+ angles 0 -141.941 0
+}
+Vehicle M923A1_ammo1 : "{92264FF932676C13}Prefabs/Vehicles/Wheeled/M923A1/M923A1_ammo.et" {
+ coords 7525.214 6.249 6746.159
+ angles 0 -53.207 0
+}
+Vehicle M923A1_repair1 : "{A042ACE5C2B13206}Prefabs/Vehicles/Wheeled/M923A1/M923A1_repair.et" {
+ coords 7503.127 6.683 6750.739
+ angles -4.462 124.208 0.207
+}
+$grp SCR_AIGroup : "{AC37A0539DB4CA1C}Prefabs/Groups/BLUFOR/US/Regular/Group_US_Regular_Heli.et" {
+ us1 {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 1
+   }
+  }
+  coords 7477.797 164.594 4298.198
+  angles 0 -76.102 0
+ }
+ us2 {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 7487.285 164.543 4331.493
+  angles 0 -76.102 0
+ }
+ us6 {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 4
+    m_iSquadCallsign 1
+   }
+  }
+  coords 7567.199 166.156 4244.459
+  angles 0 -79.15 0
+ }
+}
+$grp Vehicle : "{BA1C2367A4C6580C}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS_CAMO.et" {
+ LAV25_RHS_CAMO2 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{60488A9A95F85114}" {
+    MultiSlots {
+     MultiSlotConfiguration "{68EEB82E5491B956}" {
+      SlotTemplate InventoryStorageSlot Bin {
+       Prefab "{0CF54B9A85D8E0D4}Prefabs/Items/Equipment/Binoculars/Binoculars_M22/Binoculars_M22.et"
+      }
+      NumSlots 5
+     }
+    }
+   }
+  }
+  coords 7444.81 162.898 4359.032
+  angles 0 -158.119 0
+  m_sAttachmentGroupName "us8"
+ }
+ LAV25_RHS_CAMO1 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{60488A9A95F85114}" {
+    MultiSlots {
+     MultiSlotConfiguration "{68EEB82E5491B956}" {
+      SlotTemplate InventoryStorageSlot Bin {
+       Prefab "{0CF54B9A85D8E0D4}Prefabs/Items/Equipment/Binoculars/Binoculars_M22/Binoculars_M22.et"
+      }
+      NumSlots 5
+     }
+    }
+   }
+  }
+  coords 7438.034 162.982 4343.84
+  angles 0 -156.615 0
+  m_sAttachmentGroupName "us7"
+ }
+ LAV25_RHS_CAMO3 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{60488A9A95F85114}" {
+    MultiSlots {
+     MultiSlotConfiguration "{68EEB82E5491B956}" {
+      SlotTemplate InventoryStorageSlot Bin {
+       Prefab "{0CF54B9A85D8E0D4}Prefabs/Items/Equipment/Binoculars/Binoculars_M22/Binoculars_M22.et"
+      }
+      NumSlots 5
+     }
+    }
+   }
+  }
+  coords 7428.759 162.963 4322.714
+  angles 0 -155.122 0
+  m_sAttachmentGroupName "us3"
+ }
+ LAV25_RHS_CAMO5 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{60488A9A95F85114}" {
+    MultiSlots {
+     MultiSlotConfiguration "{68EEB82E5491B956}" {
+      SlotTemplate InventoryStorageSlot Bin {
+       Prefab "{0CF54B9A85D8E0D4}Prefabs/Items/Equipment/Binoculars/Binoculars_M22/Binoculars_M22.et"
+      }
+      NumSlots 5
+     }
+    }
+   }
+  }
+  coords 7446.205 163.619 4288.394
+  angles 4.157 105.369 -1.636
+  m_sAttachmentGroupName "us5"
+ }
+ LAV25_RHS_CAMO6 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{60488A9A95F85114}" {
+    MultiSlots {
+     MultiSlotConfiguration "{68EEB82E5491B956}" {
+      SlotTemplate InventoryStorageSlot Bin {
+       Prefab "{0CF54B9A85D8E0D4}Prefabs/Items/Equipment/Binoculars/Binoculars_M22/Binoculars_M22.et"
+      }
+      NumSlots 5
+     }
+    }
+   }
+  }
+  coords 7460.468 164.343 4286.481
+  angles 3.907 97.828 -2.167
+  m_sAttachmentGroupName "us9"
+ }
+ LAV25_RHS_CAMO4 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{60488A9A95F85114}" {
+    MultiSlots {
+     MultiSlotConfiguration "{68EEB82E5491B956}" {
+      SlotTemplate InventoryStorageSlot Bin {
+       Prefab "{0CF54B9A85D8E0D4}Prefabs/Items/Equipment/Binoculars/Binoculars_M22/Binoculars_M22.et"
+      }
+      NumSlots 5
+     }
+    }
+   }
+  }
+  coords 7421.102 162.992 4304.636
+  angles 0 -159.477 0
+  m_sAttachmentGroupName "us4"
+ }
+}
+$grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+ CIV_G_000_M2 {
+  coords 7511.501 6.094 6741.484
+  m_sImageSet "{87A3330CFC4BDDAD}UI/Textures/Icons/icon_pickup.edds"
+  m_sImageSetGlow "{67B3A6DC2D712B52}UI/Textures/Icons/icons_mapMarkersUI-glow.imageset"
+  m_MarkerColor 0.502 0 0 1
+  m_sQuadName "circle-2"
+  m_fWorldSize 300
+  m_sDescription "Перезарядка для вертолета"
+  m_bUseWorldScale 1
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "RHS_ION"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+   "Drg_IGF"
+   "Drg_PIR"
+   "UK"
+   "USSR"
+   "US"
+   "CIV"
+   "Drg_VCA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+  }
+  m_iZOrder 0
+ }
+ CIV_G_000_M3 {
+  coords 11805.841 29.569 2693.184
+  m_sImageSet "{15A293B1904F942B}UI/Textures/Icons/icon_objective.edds"
+  m_sImageSetGlow "{67B3A6DC2D712B52}UI/Textures/Icons/icons_mapMarkersUI-glow.imageset"
+  m_MarkerColor 0.502 0 0 1
+  m_sQuadName "circle-2"
+  m_fWorldSize 60
+  m_sDescription "Нефтянная станция"
+  m_bUseWorldScale 1
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "RHS_ION"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+   "Drg_IGF"
+   "Drg_PIR"
+   "UK"
+   "USSR"
+   "US"
+   "CIV"
+   "Drg_VCA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+  }
+  m_iZOrder 0
+ }
+}
+GenericEntity : "{E8064D678E35371C}PrefabsEditable/Auto/Compositions/Misc/SubCompositions/Storage/Slotted/E_Storage_Supplies_Containers_US_04.et" {
+ coords 7524.857 6.123 6760.64
+ angles 0 -147.182 0
+ {
+  GenericEntity {
+   ID "62F4A407B8DE2D97"
+   components {
+    SCR_ResourceComponent "{5D247A59598D71AE}" {
+     m_aContainers {
+      SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
+       m_fResourceValueCurrent 1000
+      }
+     }
+    }
+   }
+  }
+  GenericEntity {
+   ID "62F4A407B8DE2DA9"
+   components {
+    SCR_ResourceComponent "{5D247A59598D71AE}" {
+     m_aContainers {
+      SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
+       m_fResourceValueCurrent 1000
+      }
+     }
+    }
+   }
+  }
+  GenericEntity {
+   ID "62F4A407B8DFA02D"
+   components {
+    SCR_ResourceComponent "{5D247A59598D71AE}" {
+     m_aContainers {
+      SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
+       m_fResourceValueCurrent 1000
+      }
+     }
+    }
+   }
+  }
+ }
+}
+Vehicle M923A1_transport1 : "{F1FBD0972FA5FE09}Prefabs/Vehicles/Wheeled/M923A1/M923A1_transport.et" {
+ coords 7499.304 6.595 6746.019
+ angles 0 124.827 0
+}

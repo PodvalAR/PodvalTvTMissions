@@ -1,0 +1,110 @@
+GenericEntity PRIME_PIDRONES : "{3D78D7D606FF9818}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_NoCapture.et" {
+ coords 2941.67 39.264 4825.872
+}
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{68F309B7323164CE}" {
+     m_sZonePreviewName "Терминал"
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "AFRF_WIN"
+     }
+     m_sFailedObjectiveNames {
+      "UK_WIN"
+     }
+     m_sMessage "ВС СК захватила терминал!"
+     m_Timer GUB_ZoneControlTimer "{68F309B722134A09}" {
+      timeToComplete 150
+     }
+     m_ZoneController GUB_ZoneController "{68F309B721A31BA9}" {
+      m_sZoneEntityName "MISHA_GOBLIN"
+     }
+     m_FlagController GUB_FlagController "{68F309B720805269}" {
+      m_aFlagNames {
+       "PRIME_PIDRONES"
+      }
+      m_fStartFactionKey "RHS_AFRF"
+      m_fEndFactionKey "UK"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{68F309B353FA5A90}" {
+       m_sFirstFactionKey "UK"
+       m_sSecondFactionKey "RHS_AFRF"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 2982.667 27.304 4803.238
+}
+$grp SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+ {
+  coords 2921.133 27.505 4851.876
+ }
+ {
+  coords 4034.665 25.287 3569.254
+ }
+ {
+  coords 2885.234 20.469 3351.821
+  angles 0.895 0.014 0.895
+ }
+}
+PolylineShapeEntity MISHA_GOBLIN : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
+ components {
+  PS_PolyZone "{60E90266F25533F6}" {
+   m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
+   m_cPolygonColor 0.561 0.071 0.071 1
+   m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+   m_cPolygonBorderColor 0.502 0 0 1
+   m_aVisibleForFactions {
+    ""
+    "RHS_AFRF"
+    "UK"
+   }
+  }
+ }
+ coords 2982.48 27.306 4803.434
+ Points {
+  ShapePoint "{60E90266E922A02A}" {
+   Position 0.062 0 -0.275
+  }
+  ShapePoint "{68F309B6A7891430}" {
+   Position 6.986 0 -0.422
+  }
+  ShapePoint "{68F309B6A5EC5850}" {
+   Position 7.271 0 23.203
+  }
+  ShapePoint "{68F309B6A3C6000C}" {
+   Position -20.552 0 45.568
+  }
+  ShapePoint "{68F309B6AFDEEA58}" {
+   Position -36.66 0 64.314
+  }
+  ShapePoint "{68F309B6ADBD1EC9}" {
+   Position -67.53 0 90.547
+  }
+  ShapePoint "{68F309B6ABA9854F}" {
+   Position -104.57 0 52.124
+  }
+  ShapePoint "{68F309B6A94421FF}" {
+   Position -124.575 0 43.296
+  }
+  ShapePoint "{68F309B6D6B2FB8A}" {
+   Position -101.214 0 -57.131
+  }
+  ShapePoint "{68F309B6D3EFAB36}" {
+   Position 4.19 0 -77.542
+  }
+  ShapePoint "{68F309B6D1639EFB}" {
+   Position 9.387 0 -30.974
+  }
+  ShapePoint "{68F309B6DFC7648C}" {
+   Position -2.065 0 -28.164
+  }
+ }
+}

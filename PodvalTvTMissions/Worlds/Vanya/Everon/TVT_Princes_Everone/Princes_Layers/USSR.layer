@@ -1,0 +1,119 @@
+Vehicle UAZ452_transport_CIV_base1 : "{1F514A6916B34568}Prefabs/Vehicles/Wheeled/UAZ452/UAZ452_transport_CIV_base.et" {
+ coords 10355.718 34.323 388.363
+ angles 0 13.224 0
+ m_sAttachmentGroupName "ru3"
+}
+Vehicle UAZ1 : "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et" {
+ coords 11670.668 8.203 2199.24
+ angles 0 -172.703 0
+ m_sAttachmentGroupName "ru5"
+}
+$grp SCR_AIGroup : "{2E11F5063753932B}Prefabs/Groups/OPFOR/USSR/dim_Group_USSR_GRU.et" {
+ ru1 {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B351898A1AB}" {
+    m_iSquadCallsign 1
+   }
+  }
+  coords 11780.695 36.169 2657.848
+  angles 0 179.977 0
+  m_bSnapToTerrain 0
+  m_sCustomNameSet "Охрана нефтяной вышки"
+ }
+ ru7 {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B351898A1AB}" {
+    m_iSquadCallsign 2
+   }
+  }
+  coords 11772.012 36.163 2652.17
+  angles 0 86.025 0
+  m_bSnapToTerrain 0
+  m_sCustomNameSet "Охрана нефтяной вышки"
+ }
+ ru3 {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B351898A1AB}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 10358.828 34.329 385.151
+  angles 0 -75.241 0
+ }
+}
+$grp SCR_AIGroup : "{706340F7481FF22F}Prefabs/Groups/OPFOR/USSR/Group_USSR_PL.et" {
+ ru5 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 11673.152 8.602 2197.503
+  angles 0 -79.473 0
+  m_aUnitPrefabSlots {
+   "{8A7E668F5E102151}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_SL_RANDOM.et"
+   "{CDE7F53CAD55EAE4}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_SR_RANDOM.et"
+   "{635E00E006AD9962}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_MG_RANDOM.et"
+  }
+ }
+ ru4 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 11677.184 8.656 2215.056
+  angles 0 -79.473 0
+  m_aUnitPrefabSlots {
+   "{9FFEF10757E742EC}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_CREW.et"
+   "{9FFEF10757E742EC}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_CREW.et"
+  }
+  m_sCustomNameSet "Экипаж ЗУ-23"
+ }
+ ru6 {
+  coords 11784.728 36.17 2648.229
+  angles 0 -88.325 0
+  m_aUnitPrefabSlots {
+   "{8A7E668F5E102151}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_SL_RANDOM.et"
+   "{CDE7F53CAD55EAE4}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_SR_RANDOM.et"
+   "{635E00E006AD9962}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_MG_RANDOM.et"
+  }
+  m_bSnapToTerrain 0
+  m_sCustomNameSet "Управляющий нефтяной вышкой"
+ }
+ {
+  coords 11778.604 36.17 2642.071
+  angles 0 -0.323 0
+  m_faction "CIV"
+  m_aUnitPrefabSlots {
+   "{A4C819E52261F2D7}Prefabs/Characters/Factions/INDFOR/CIV/VIP/dim_Shepard.et"
+  }
+  m_bSnapToTerrain 0
+  m_sCustomNameSet "Америксанский генерал"
+ }
+}
+SCR_AIGroup ru55 : "{84AF92E239A71FCE}Prefabs/Groups/OPFOR/USSR/Group_USSR_Rifle_SQ.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+   m_iCompanyCallsign 1
+   m_iSquadCallsign 1
+  }
+ }
+ coords 11679.251 8.549 2226.819
+ angles 0 -72.496 0
+}
+Vehicle BTR2 : "{C012BB3488BEA0C2}Prefabs/Vehicles/Wheeled/BTR70/BTR70.et" {
+ coords 11683.81 8.016 2249.597
+ angles 1.982 -161.249 -0.272
+ m_sAttachmentGroupName "ru77"
+}
+Vehicle Ural4320_transport_covered1 : "{D9B91FAB817A6033}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_covered.et" {
+ coords 11676.792 8.571 2231.614
+ angles 0 -165.263 0
+ m_sAttachmentGroupName "ru55"
+}
+Vehicle Ural4320_ZU1 : "{FD109F3702AAB392}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_ZU23.et" {
+ coords 11673.479 8.656 2216.905
+ angles 0 -162.583 0
+ m_sAttachmentGroupName "ru4"
+}
