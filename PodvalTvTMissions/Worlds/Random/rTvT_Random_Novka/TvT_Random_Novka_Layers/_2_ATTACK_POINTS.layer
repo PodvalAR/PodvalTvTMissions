@@ -1,0 +1,97 @@
+GUB_AttackPointEntity ATTACK_POWER : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer/AttackPointEntity.et" {
+ coords 1145.84 5.346 1090.63
+ angles 0 0 0
+ {
+  $grp GUB_SpawnPointEntity : "{0DCCBC83322A0A0D}Prefabs/System/MissionRandomizer/SpawnPointEntity.et" {
+   Squad_Attack_13 {
+    coords -5.546 2.28 15.145
+    angles 0 -111.399 0
+    m_iCompanyCallsign 1
+   }
+   Squad_Attack_14 {
+    coords -13.186 3.231 29.72
+    angles 0 -112.889 0
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+   Squad_Attack_15 {
+    coords -20.939 -0.79 49.698
+    angles 0 -108.382 0
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+   Motorized_Attack_5 {
+    coords 4.258 0.731 -14.678
+    angles 0 -120.081 0
+    m_eGroupType Motorized
+    m_iCompanyCallsign 2
+   }
+   Recon_Attack_17 {
+    coords 54.268 2.454 -39.511
+    angles 0 -171.316 0
+    m_eGroupType Recon
+    m_iCompanyCallsign 3
+   }
+   HeliAttack_Attack_5 {
+    coords -3.1 -2.123 51.436
+    angles 0 70.442 0
+    m_eGroupType Helicopter_Attack
+    m_iCompanyCallsign 5
+   }
+   HeliRecon_Attack_5 {
+    coords -13.41 -4.523 49.372
+    angles 0 70.715 0
+    m_eGroupType Helicopter_Recon
+    m_iCompanyCallsign 4
+   }
+   Commander_Attack_5 {
+    coords -22.6 0.431 62.986
+    angles 0 -102.912 0
+    m_eGroupType Command_8
+   }
+   Recon_Attack_18 {
+    coords 45.115 -0.755 -35.951
+    angles 0 -152.831 0
+    m_eGroupType Recon
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 1
+   }
+   Recon_Attack_19 {
+    coords 31.192 -1.106 -28.982
+    angles 0 -148.741 0
+    m_eGroupType Recon
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 2
+   }
+   Recon_Attack_20 {
+    coords 16.129 -0.797 -22.545
+    angles 5.988 -139.98 1.786
+    m_eGroupType Recon
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 4
+   }
+   Sniper_Attack_5 {
+    coords 0.839 -3.9 2.841
+    angles 0 -122.352 0
+    m_eGroupType Sniper
+    m_iCompanyCallsign 4
+    m_iSquadCallsign 1
+   }
+  }
+  $grp SCR_EditorRestrictionZoneEntity : "{6144B0BE2EAC6897}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneMedium.et" {
+   {
+    coords -593.672 18.601 -53.062
+   }
+   {
+    coords 307.256 -55.919 470.64
+   }
+  }
+  SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+   coords -0.198 0.012 0.398
+  }
+ }
+}
+StaticModelEntity : "{CF1FFB7BAA1A0769}Prefabs/Structures/Military/Camps/HelipadImprovised_01/HelipadImprovised_US_01.et" {
+ coords 1149.59 0.595 1131.144
+ angles 0 -24.02 0
+}
