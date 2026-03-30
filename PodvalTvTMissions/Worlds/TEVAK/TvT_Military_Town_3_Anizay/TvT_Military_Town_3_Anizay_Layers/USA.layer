@@ -1,0 +1,177 @@
+$grp SCR_AIGroup : "{00BDD00EE2FD900E}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_SpeZNaZ.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 3
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 3088.995 144.218 8437.583
+  angles 0 -94.165 0
+  m_aUnitPrefabSlots +{
+   "{0E12ACF1B2CE68EA}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Recon/Char_RHS_USAF_Rifle.et"
+   "{8F85FC08D9D6033B}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Recon/Char_RHS_USAF_Sapper.et"
+   "{E1086469EEF94CD1}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Recon/Char_RHS_USAF_Sniper.et"
+  }
+  m_sCustomNameSet "Воздушно-десантное отделение"
+ }
+ razvm2 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 2305.868 140.079 7861.833
+  angles 0 -87.054 0
+  m_aUnitPrefabSlots +{
+   "{E1086469EEF94CD1}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Recon/Char_RHS_USAF_Sniper.et"
+  }
+  m_sCustomNameSet "Отряд разведки"
+ }
+}
+Vehicle LAV25_RHS_D1 : "{123595894023C474}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS_D.et" {
+ coords 3078.932 144.437 8488.883
+ angles 0 -50.799 0
+ m_sAttachmentGroupName "lav251"
+}
+SCR_AIGroup un1h : "{6981CA4A67B1A730}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_Heli.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+   m_iCompanyCallsign 4
+  }
+ }
+ coords 3089.514 144.312 8432.914
+ angles 0 -97.341 0
+ m_sCustomNameSet "Пилоты UH1H"
+}
+Vehicle M923A1_transport_covered1 : "{81FDAD5EB644CC3D}Prefabs/Vehicles/Wheeled/M923A1/M923A1_transport_covered.et" {
+ components {
+  SCR_UniversalInventoryStorageComponent "{5916C580F1DA28BB}" {
+   MultiSlots {
+    MultiSlotConfiguration "{5A60CECA66163838}" {
+     SlotTemplate InventoryStorageSlot Bandages {
+      Prefab "{1742632597955A55}Prefabs/Items/Misc/Sandbags/Part_Sandbag_Plastic.et"
+     }
+     NumSlots 200
+    }
+   }
+  }
+ }
+ coords 3118.079 144.219 8453.17
+ angles 0 172.784 0
+ m_sAttachmentGroupName "stroi1"
+}
+SCR_AIGroup komanderusa : "{8BE5C4D411C5E59C}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_PL.et" {
+ coords 3112.534 144.219 8435.846
+ angles 0 -9.344 0
+ m_aUnitPrefabSlots +{
+  "{0D659E49AD2F5FF6}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/Char_RHS_USAF_Regular_Medic.et"
+ }
+ m_sCustomNameSet "Командир "
+}
+$grp Turret : "{8FB601FB0E816582}Prefabs/Weapons/Tripods/BGM71TOW/Deployable_Tripod_BGM71_TOW.et" {
+ {
+  coords 3003.933 143.157 8509.945
+  angles 0 66.443 0
+ }
+ {
+  coords 3001.288 143.142 8516.982
+  angles 0 67.626 0
+ }
+}
+$grp SCR_AIGroup : "{955623450C88D6F3}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_Squad.et" {
+ tow21 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 3016.712 143.125 8502.84
+  angles 0 -19.835 0
+  m_sCustomNameSet "Стрелковый отряд c TOW-2"
+ }
+ stroi1 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 3116.738 144.219 8436.509
+  angles 1.416 -7.826 0.087
+  m_sCustomNameSet "Строительный отряд"
+ }
+ tow22 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 3012.198 143.125 8533.823
+  angles 0 157.597 0
+  m_sCustomNameSet "Стрелковый отряд с TOW-2"
+ }
+}
+$grp Vehicle : "{B8C827A45C1347A4}Prefabs/Vehicles/Wheeled/M998/M1025_armed_M2HB_USAF_D.et" {
+ M1025_armed_M2HB_USAF_D1 {
+  coords 3007.848 143.127 8502.022
+  angles -0.839 69.63 0.312
+  m_sAttachmentGroupName "tow22"
+ }
+ M1025_armed_M2HB_USAF_D2 {
+  coords 2998.305 143.137 8524.801
+  angles 0.295 70.751 0.845
+  m_sAttachmentGroupName "tow21"
+ }
+}
+$grp Vehicle : "{BC58478FE724BCEF}Prefabs/Vehicles/Wheeled/M998/M1025_USAF_D.et" {
+ M1025_USAF_D1 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{5916C587FC993363}" {
+    MultiSlots {
+     MultiSlotConfiguration "{5A60CECB549327C1}" {
+      SlotTemplate InventoryStorageSlot Bandages {
+       Prefab "{DE25A434026D99AC}Prefabs/Weapons/Tripods/BGM71TOW/Part_BGM-71D_Launcher.et"
+      }
+      NumSlots 3
+     }
+    }
+   }
+  }
+  coords 3000.414 143.125 8520.35
+  angles 0 70.21 0
+  m_sAttachmentGroupName "tow21"
+ }
+ M1025_USAF_D2 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{5916C587FC993363}" {
+    MultiSlots {
+     MultiSlotConfiguration "{5A60CECB549327C1}" {
+      SlotTemplate InventoryStorageSlot Bandages {
+       Prefab "{DE25A434026D99AC}Prefabs/Weapons/Tripods/BGM71TOW/Part_BGM-71D_Launcher.et"
+      }
+      NumSlots 3
+     }
+    }
+   }
+  }
+  coords 3006.028 143.156 8506.603
+  angles -0.839 69.663 0.311
+  m_sAttachmentGroupName "tow22"
+ }
+}
+Vehicle UH1H_armed1 : "{DDDD9B51F1234DF3}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed.et" {
+ coords 3084.085 144.397 8418.608
+ angles 0.315 -5.205 1.221
+ m_sAttachmentGroupName "un1h"
+}
+SCR_AIGroup lav251 : "{F722F19CDE6535BA}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Squad_Motorized.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+   m_iCompanyCallsign 1
+  }
+ }
+ coords 3086.366 144.311 8492.648
+ angles 0 -144.569 0
+ m_sCustomNameSet "Экипаж LAV-25"
+}
