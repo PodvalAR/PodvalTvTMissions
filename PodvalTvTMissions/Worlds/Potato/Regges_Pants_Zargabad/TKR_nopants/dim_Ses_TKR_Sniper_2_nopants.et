@@ -1,0 +1,39 @@
+SCR_ChimeraCharacter : "{08705F90B79D0BFA}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Sniper.et" {
+ ID "520EC961A090B1EE"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Командир"
+    Icon "{CBC6AA0CB2D01388}UI/Icons/dim/ter_sniper.edds"
+   }
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{EA7F9FFEBEC9E311}Prefabs/Characters/HeadGear/Hat_FlatCap_01/TurbanC01.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{2C3C7169BC418EE6}Prefabs/Characters/Uniforms/Jacket_ShirtLong_6.et"
+    }
+    LoadoutSlotInfo Pants {
+     Enabled 0
+     Prefab "{ADBC10EA4D0D97C2}Prefabs/Characters/Uniforms/Pants_Taksuit_7.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{68A8820B1B87DF9C}" {
+     TargetStorage "Pants/Pants_Taksuit_7.et"
+    }
+    ItemsInitConfigurationItem "{68A8820B008B5065}" {
+     TargetStorage "Jacket/Jacket_ShirtLong_6.et"
+    }
+    ItemsInitConfigurationItem "{68A8820B371119B4}" {
+     TargetStorage "Jacket/Jacket_ShirtLong_6.et"
+    }
+   }
+  }
+ }
+ coords 4915.473 29.838 6139.817
+}

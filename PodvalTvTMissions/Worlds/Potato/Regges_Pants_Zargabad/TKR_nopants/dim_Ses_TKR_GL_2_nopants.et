@@ -1,0 +1,64 @@
+SCR_ChimeraCharacter : "{68450D15566787CA}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman_4.et" {
+ ID "520EC961A090B1EE"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "#AR-Role_Grenadier"
+   }
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{12F201068CBB48EA}Prefabs/Weapons/Rifles/AK74/Rifle_AK74_GP25_RHSmag.et"
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{9AF938A5A8F48A99}Prefabs/Characters/HeadGear/Hat_FlatCap_01/Shemag_2.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{88EFDDF294A918FC}Prefabs/Characters/Uniforms/Jacket_Bomber_5.et"
+    }
+    LoadoutSlotInfo Pants {
+     Prefab ""
+    }
+    LoadoutSlotInfo Back {
+     Prefab "{752C6BCDF74E4169}Prefabs/Items/Equipment/Backpacks/Backpack_Small.et"
+    }
+    LoadoutSlotInfo Vest {
+     Prefab "{6923BCE821E23E40}Prefabs/Characters/Vests/Vest_ChestRigSmal/Vest_ChestRigSmall_3.et"
+    }
+    LoadoutSlotInfo HandWear {
+     Prefab "{8266820FFDE17477}Prefabs/Characters/Handwear/Gloves_Wool_01/Gloves_Wool_01.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{68A8820B1B87DF9C}" {
+     TargetStorage "Pants/Pants_Taksuit_3.et"
+    }
+    ItemsInitConfigurationItem "{68A8820B008B5065}" {
+     TargetStorage "Jacket/Jacket_Bomber_5.et"
+    }
+    ItemsInitConfigurationItem "{68A8820B371119B4}" {
+     TargetStorage "Jacket/Jacket_Bomber_5.et"
+    }
+    ItemsInitConfigurationItem "{68EA046792400867}" {
+     TargetStorage "Vest/Vest_ChestRigSmall_3.et"
+    }
+    ItemsInitConfigurationItem "{68EA784A26FD97ED}" {
+     TargetStorage "Jacket/Jacket_Bomber_5.et"
+    }
+    ItemsInitConfigurationItem "{68EA784A26DF3773}" {
+     TargetStorage "Pants/Pants_Taksuit_3.et"
+    }
+    ItemsInitConfigurationItem "{68FC6C82174BCAF8}" {
+     TargetStorage "Back/Backpack_Small.et"
+     PrefabsToSpawn {
+      "{262F0D09C4130826}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_VOG25.et" "{262F0D09C4130826}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_VOG25.et" "{262F0D09C4130826}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_VOG25.et" "{262F0D09C4130826}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_VOG25.et" "{262F0D09C4130826}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_VOG25.et" "{262F0D09C4130826}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_VOG25.et" "{262F0D09C4130826}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_VOG25.et" "{262F0D09C4130826}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_VOG25.et" "{262F0D09C4130826}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_VOG25.et" "{262F0D09C4130826}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_VOG25.et" "{262F0D09C4130826}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_VOG25.et" "{262F0D09C4130826}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_VOG25.et"
+     }
+    }
+   }
+  }
+ }
+ coords 28.168 1 147.497
+}

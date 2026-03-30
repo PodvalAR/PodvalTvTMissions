@@ -1,0 +1,36 @@
+SCR_ChimeraCharacter : "{7DDFCA38F96FBAC5}Prefabs/Characters/Factions/INDFOR/TKR/Character_Ses_TKR_BaseLoadout.et" {
+ ID "520EC961A090B1EE"
+ components {
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{5A293B86B4EDF486}Prefabs/Characters/HeadGear/Hat_FlatCap_01/Pakol_Hat_1.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{3BEA9917D6AFC894}Prefabs/Characters/Uniforms/Jacket_ShirtLong_1.et"
+    }
+    LoadoutSlotInfo Pants {
+     Prefab ""
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{68A8820B1B87DF9C}" {
+     TargetStorage "Pants/Pants_Taksuit_1.et"
+    }
+    ItemsInitConfigurationItem "{68A8820B008B5065}" {
+     TargetStorage "Jacket/Jacket_ShirtLong_1.et"
+    }
+    ItemsInitConfigurationItem "{68A8820B371119B4}" {
+     TargetStorage "Jacket/Jacket_ShirtLong_1.et"
+     PrefabsToSpawn {
+      "{F773AC419437D7D6}Prefabs/Items/Equipment/Radios/Radio_R148_TKR_Singl.et" "{062E2F1D7F6739D6}Prefabs/Items/Equipment/Accessories/ETool_MPL50/ETool_MPL50_FreeRoamBuilding_Gadget.et"
+     }
+    }
+   }
+  }
+ }
+ coords 2869.929 10 3070.816
+ angles 0 75 0
+}
