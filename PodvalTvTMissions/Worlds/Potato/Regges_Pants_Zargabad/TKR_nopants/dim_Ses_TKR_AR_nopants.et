@@ -1,0 +1,64 @@
+SCR_ChimeraCharacter : "{82583650C8E9B5B4}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman.et" {
+ ID "520EC961A090B1EE"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "#AR-Role_AutomaticRifleman"
+    Icon "{AAA0518DE4F7B5DA}UI/Icons/dim/ter_mg.edds"
+   }
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{4B93B4CBA99AE54B}Prefabs/Weapons/MachineGuns/RPK74N/MG_RPK74N_7N10.et"
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Jacket {
+     Prefab "{B7C33E13550505CB}Prefabs/Characters/Uniforms/Jacket_ShirtSmall_6.et"
+    }
+    LoadoutSlotInfo Pants {
+     Prefab ""
+    }
+    LoadoutSlotInfo Boots {
+     Prefab "{19B57111BB3FC780}Prefabs/Characters/Footwear/ACU_boots/ACU_boots2.et"
+    }
+    LoadoutSlotInfo Back {
+     Prefab "{752C6BCDF74E4169}Prefabs/Items/Equipment/Backpacks/Backpack_Small.et"
+    }
+    LoadoutSlotInfo Vest {
+     Prefab "{1E9DC6DD146293C8}Prefabs/Characters/Vests/AmmoCase/AmmoCase_base.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{68A8820B008B5065}" {
+     TargetStorage "Jacket/Jacket_ShirtSmall_6.et"
+    }
+    ItemsInitConfigurationItem "{68A8820B371119B4}" {
+     TargetStorage "Jacket/Jacket_ShirtSmall_6.et"
+    }
+    ItemsInitConfigurationItem "{68EA046792400867}" {
+     TargetStorage "Back/Backpack_Small.et"
+     PrefabsToSpawn {
+      "{D78C667F59829718}Prefabs/Weapons/Magazines/Magazine_545x39_RPK_45rnd_4Ball_1Tracer_n10.et" "{D78C667F59829718}Prefabs/Weapons/Magazines/Magazine_545x39_RPK_45rnd_4Ball_1Tracer_n10.et" "{D78C667F59829718}Prefabs/Weapons/Magazines/Magazine_545x39_RPK_45rnd_4Ball_1Tracer_n10.et" "{D78C667F59829718}Prefabs/Weapons/Magazines/Magazine_545x39_RPK_45rnd_4Ball_1Tracer_n10.et" "{D78C667F59829718}Prefabs/Weapons/Magazines/Magazine_545x39_RPK_45rnd_4Ball_1Tracer_n10.et" "{D78C667F59829718}Prefabs/Weapons/Magazines/Magazine_545x39_RPK_45rnd_4Ball_1Tracer_n10.et" "{D78C667F59829718}Prefabs/Weapons/Magazines/Magazine_545x39_RPK_45rnd_4Ball_1Tracer_n10.et" "{645C73791ECA1698}Prefabs/Weapons/Grenades/Grenade_RGD5.et" "{645C73791ECA1698}Prefabs/Weapons/Grenades/Grenade_RGD5.et" "{77EAE5E07DC4678A}Prefabs/Weapons/Grenades/Smoke_RDG2.et" "{77EAE5E07DC4678A}Prefabs/Weapons/Grenades/Smoke_RDG2.et"
+     }
+    }
+    ItemsInitConfigurationItem "{68EA78464042A823}" {
+     Enabled 0
+    }
+    ItemsInitConfigurationItem "{68EA7846405BCA01}" {
+     Enabled 0
+     TargetStorage "Jacket/Jacket_ShirtSmall_6.et"
+    }
+    ItemsInitConfigurationItem "{68FC6C81EC7F4607}" {
+     TargetStorage "Vest/AmmoCase_base.et"
+     PrefabsToSpawn {
+      "{D78C667F59829718}Prefabs/Weapons/Magazines/Magazine_545x39_RPK_45rnd_4Ball_1Tracer_n10.et" "{D78C667F59829718}Prefabs/Weapons/Magazines/Magazine_545x39_RPK_45rnd_4Ball_1Tracer_n10.et" "{D78C667F59829718}Prefabs/Weapons/Magazines/Magazine_545x39_RPK_45rnd_4Ball_1Tracer_n10.et" "{D78C667F59829718}Prefabs/Weapons/Magazines/Magazine_545x39_RPK_45rnd_4Ball_1Tracer_n10.et"
+     }
+    }
+   }
+  }
+ }
+ coords 20.719 1 130.558
+ angles 0 0 0
+}

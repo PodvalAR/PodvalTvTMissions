@@ -1,0 +1,58 @@
+SCR_ChimeraCharacter : "{5571282D230B0EFD}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman_3.et" {
+ ID "520EC961A090B1EE"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "#AR-Role_AntiTankAssistant"
+   }
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{F6AD0C45143005B7}Prefabs/Characters/HeadGear/Hat_FlatCap_01/Shemag_1.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{FD7A125C90244EFF}Prefabs/Characters/Uniforms/TakShirts/TakShirt07.et"
+    }
+    LoadoutSlotInfo Pants {
+     Prefab ""
+    }
+    LoadoutSlotInfo Back {
+     Prefab "{0F92877F8C6A2298}Prefabs/Items/Equipment/Backpacks/Backpack_RPG_Insurgents.et"
+    }
+    LoadoutSlotInfo Vest {
+     Prefab "{9713FE6DDCC9510D}Prefabs/Characters/Vests/Vest_Lifchik/Vest_Lifchik.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{68A8820B1B87DF9C}" {
+     TargetStorage "Pants/Pants_Cargo_3.et"
+    }
+    ItemsInitConfigurationItem "{68A8820B008B5065}" {
+     TargetStorage "Jacket/TakShirt07.et"
+    }
+    ItemsInitConfigurationItem "{68A8820B371119B4}" {
+     TargetStorage "Jacket/TakShirt07.et"
+    }
+    ItemsInitConfigurationItem "{68EA046792400867}" {
+     TargetStorage "Vest/Vest_Lifchik.et"
+    }
+    ItemsInitConfigurationItem "{68EA784A118D396B}" {
+     TargetStorage "Pants/Pants_Cargo_3.et"
+    }
+    ItemsInitConfigurationItem "{68EA784A11F09C98}" {
+     TargetStorage "Jacket/TakShirt07.et"
+    }
+    ItemsInitConfigurationItem "{68FC6C81B9BE5380}" {
+     TargetStorage "Back/Backpack_RPG_Insurgents.et"
+     PrefabsToSpawn {
+      "{32E12D322E107F1C}Prefabs/Weapons/Ammo/Ammo_Rocket_PG7VM.et" "{32E12D322E107F1C}Prefabs/Weapons/Ammo/Ammo_Rocket_PG7VM.et" "{32E12D322E107F1C}Prefabs/Weapons/Ammo/Ammo_Rocket_PG7VM.et"
+     }
+    }
+   }
+  }
+ }
+ coords 50.616 1 146.084
+}

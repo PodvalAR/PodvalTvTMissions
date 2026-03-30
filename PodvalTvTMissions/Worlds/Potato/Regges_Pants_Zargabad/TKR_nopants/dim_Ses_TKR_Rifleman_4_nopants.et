@@ -1,0 +1,71 @@
+SCR_ChimeraCharacter : "{82583650C8E9B5B4}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman.et" {
+ ID "520EC961A090B1EE"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Icon "{702AB9F4CD4CF5A2}UI/Icons/terrorist.edds"
+   }
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{4698384E95783A91}Prefabs/Weapons/Rifles/AK74/Rifle_AK74.et"
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{5AC8FFB6010AA8C1}Prefabs/Characters/HeadGear/Shemagh/Green/GD_Shemagh_Green.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{DB970AF3E9C18AE5}Prefabs/Characters/Uniforms/Jacket_ShirtSmall_5.et"
+    }
+    LoadoutSlotInfo Pants {
+     Prefab ""
+    }
+    LoadoutSlotInfo Boots {
+     Prefab "{C2821F92F4613F4D}Prefabs/Characters/Footwear/TakShoes02.et"
+    }
+    LoadoutSlotInfo Vest {
+     Prefab "{6BB450E1A88B5D11}Prefabs/Characters/Vests/Vest_ChestRigLarge/Vest_ChestRigLarge_3.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{68A8820B1B87DF9C}" {
+     TargetStorage "Pants/Pants_Taksuit_6.et"
+    }
+    ItemsInitConfigurationItem "{68A8820B008B5065}" {
+     TargetStorage "Jacket/Jacket_ShirtSmall_5.et"
+    }
+    ItemsInitConfigurationItem "{68A8820B371119B4}" {
+     TargetStorage "Jacket/Jacket_ShirtSmall_5.et"
+    }
+    ItemsInitConfigurationItem "{68EA046792400867}" {
+     TargetStorage "Vest/Vest_ChestRigLarge_3.et"
+     PrefabsToSpawn {
+      "{2C6530C410195644}Prefabs/Weapons/Magazines/Magazine_545x39_AK_30rnd_Last_5Tracer_7n10.et" "{2C6530C410195644}Prefabs/Weapons/Magazines/Magazine_545x39_AK_30rnd_Last_5Tracer_7n10.et" "{2C6530C410195644}Prefabs/Weapons/Magazines/Magazine_545x39_AK_30rnd_Last_5Tracer_7n10.et" "{2C6530C410195644}Prefabs/Weapons/Magazines/Magazine_545x39_AK_30rnd_Last_5Tracer_7n10.et" "{2C6530C410195644}Prefabs/Weapons/Magazines/Magazine_545x39_AK_30rnd_Last_5Tracer_7n10.et" "{2C6530C410195644}Prefabs/Weapons/Magazines/Magazine_545x39_AK_30rnd_Last_5Tracer_7n10.et" "{2C6530C410195644}Prefabs/Weapons/Magazines/Magazine_545x39_AK_30rnd_Last_5Tracer_7n10.et" "{645C73791ECA1698}Prefabs/Weapons/Grenades/Grenade_RGD5.et" "{645C73791ECA1698}Prefabs/Weapons/Grenades/Grenade_RGD5.et" "{77EAE5E07DC4678A}Prefabs/Weapons/Grenades/Smoke_RDG2.et" "{77EAE5E07DC4678A}Prefabs/Weapons/Grenades/Smoke_RDG2.et"
+     }
+    }
+    ItemsInitConfigurationItem "{68EA78464042A823}" {
+     Enabled 0
+    }
+    ItemsInitConfigurationItem "{68EA7846405BCA01}" {
+     Enabled 0
+    }
+    ItemsInitConfigurationItem "{68FC6C826EB600B9}" {
+     TargetStorage "Jacket/Jacket_ShirtSmall_5.et"
+     PrefabsToSpawn {
+      "{2C6530C410195644}Prefabs/Weapons/Magazines/Magazine_545x39_AK_30rnd_Last_5Tracer_7n10.et"
+     }
+    }
+    ItemsInitConfigurationItem "{68FC6C826EB600B4}" {
+     TargetStorage "Pants/Pants_Taksuit_6.et"
+     PrefabsToSpawn {
+      "{2C6530C410195644}Prefabs/Weapons/Magazines/Magazine_545x39_AK_30rnd_Last_5Tracer_7n10.et" "{2C6530C410195644}Prefabs/Weapons/Magazines/Magazine_545x39_AK_30rnd_Last_5Tracer_7n10.et"
+     }
+    }
+   }
+  }
+ }
+ coords 54.947 1 138.205
+ angles 0 0 0
+}

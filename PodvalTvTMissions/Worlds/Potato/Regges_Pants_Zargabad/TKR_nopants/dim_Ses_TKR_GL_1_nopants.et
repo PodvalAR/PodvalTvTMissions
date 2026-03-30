@@ -1,0 +1,78 @@
+SCR_ChimeraCharacter : "{68450D15566787CA}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman_4.et" {
+ ID "520EC961A090B1EE"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "#AR-Role_Grenadier"
+   }
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{12F201068CBB48EA}Prefabs/Weapons/Rifles/AK74/Rifle_AK74_GP25_RHSmag.et"
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{63B7E7E70EE8FB54}Prefabs/Characters/HeadGear/Hat_FlatCap_01/TurbanC03.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{7D5C60B175E988FF}Prefabs/Characters/Uniforms/Jacket_ShirtLong_2.et"
+    }
+    LoadoutSlotInfo Pants {
+     Prefab ""
+    }
+    LoadoutSlotInfo Back {
+     Prefab "{752C6BCDF74E4169}Prefabs/Items/Equipment/Backpacks/Backpack_Small.et"
+    }
+    LoadoutSlotInfo Vest {
+     Prefab "{C8516078375CBE45}Prefabs/Characters/Vests/Vest_Lifchik/Vest_Lifchik_GL.et"
+    }
+    LoadoutSlotInfo HandWear {
+     Prefab "{8266820FFDE17477}Prefabs/Characters/Handwear/Gloves_Wool_01/Gloves_Wool_01.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{68A8820B1B87DF9C}" {
+     TargetStorage "Pants/Pants_Cargo_2.et"
+    }
+    ItemsInitConfigurationItem "{68A8820B008B5065}" {
+     TargetStorage "Jacket/Jacket_ShirtLong_2.et"
+    }
+    ItemsInitConfigurationItem "{68A8820B371119B4}" {
+     TargetStorage "Jacket/Jacket_ShirtLong_2.et"
+    }
+    ItemsInitConfigurationItem "{68EA046792400867}" {
+     TargetStorage "Vest/Vest_Lifchik_GL.et"
+    }
+    ItemsInitConfigurationItem "{68EA78464042A823}" {
+     TargetStorage "Pants/Pants_Cargo_2.et"
+     PrefabsToSpawn {
+      "{2C6530C410195644}Prefabs/Weapons/Magazines/Magazine_545x39_AK_30rnd_Last_5Tracer_7n10.et" "{2C6530C410195644}Prefabs/Weapons/Magazines/Magazine_545x39_AK_30rnd_Last_5Tracer_7n10.et"
+     }
+    }
+    ItemsInitConfigurationItem "{68EA7846405BCA01}" {
+     TargetStorage "Jacket/Jacket_ShirtLong_2.et"
+     PrefabsToSpawn {
+      "{2C6530C410195644}Prefabs/Weapons/Magazines/Magazine_545x39_AK_30rnd_Last_5Tracer_7n10.et"
+     }
+    }
+    ItemsInitConfigurationItem "{68EA784A26FD97ED}" {
+     Enabled 0
+     TargetStorage "Jacket/Jacket_ShirtSmall_4.et"
+    }
+    ItemsInitConfigurationItem "{68EA784A26DF3773}" {
+     Enabled 0
+     TargetStorage "Pants/Pants_Cargo_5.et"
+    }
+    ItemsInitConfigurationItem "{68FC6C820B705D10}" {
+     TargetStorage "Back/Backpack_Small.et"
+     PrefabsToSpawn {
+      "{262F0D09C4130826}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_VOG25.et" "{262F0D09C4130826}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_VOG25.et" "{262F0D09C4130826}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_VOG25.et" "{262F0D09C4130826}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_VOG25.et" "{262F0D09C4130826}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_VOG25.et" "{262F0D09C4130826}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_VOG25.et" "{262F0D09C4130826}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_VOG25.et" "{262F0D09C4130826}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_VOG25.et" "{262F0D09C4130826}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_VOG25.et" "{262F0D09C4130826}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_VOG25.et" "{262F0D09C4130826}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_VOG25.et" "{262F0D09C4130826}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_VOG25.et"
+     }
+    }
+   }
+  }
+ }
+ coords 28.956 1 147.336
+}

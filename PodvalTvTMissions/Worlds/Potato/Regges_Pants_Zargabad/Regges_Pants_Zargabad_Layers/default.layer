@@ -1,0 +1,75 @@
+SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
+ coords 258.054 145.251 7530.752
+}
+PerceptionManager PerceptionManager1 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 308.51 160.45 7672.431
+}
+PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
+ coords 298.376 107.054 7869.567
+}
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ {
+  coords 7989.042 155.755 8057.519
+  m_sTitle "Лор"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "Здесь будет мегалор"
+  m_aVisibleForFactions {
+   "RHS_ION"
+   "Ses_TKR"
+   "RHS_USAF"
+  }
+  m_bShowForAnyFaction 1
+ }
+ {
+  coords 7989.042 155.755 8057.519
+  m_sTitle "Правила и задачи"
+  m_sTextData "Здесь будут мегазадачи"
+  m_aVisibleForFactions {
+   "RHS_ION"
+   "Ses_TKR"
+   "RHS_USAF"
+  }
+  m_bShowForAnyFaction 1
+ }
+}
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ TKR_Objective1 {
+  coords 7890.713 193.579 8021.791
+  m_sTitle "Полковник Реджински наказан"
+  m_iScore 50
+  m_sFactionKey "Ses_TKR"
+ }
+ TKR_Objective2 {
+  coords 7831.694 193.579 8021.791
+  m_sTitle "Штаны полковника захвачены"
+  m_iScore 50
+  m_sFactionKey "Ses_TKR"
+ }
+ US_Objective1 {
+  coords 7831.694 193.579 7936.917
+  m_sTitle "Полковник Реджински уцелел"
+  m_iScore 50
+  m_sFactionKey "RHS_USAF"
+ }
+ US_Objective2 {
+  coords 7890.713 193.579 7936.917
+  m_sTitle "Штаны полковника на месте"
+  m_iScore 50
+  m_sFactionKey "RHS_USAF"
+ }
+ ION_Objective1 {
+  coords 7890.713 193.579 7941.168
+  m_sTitle "Полковник Реджински наказан"
+  m_iScore 50
+  m_sFactionKey "RHS_ION"
+ }
+ ION_Objective2 {
+  coords 7831.694 193.579 7941.168
+  m_sTitle "Штаны полковника захвачены"
+  m_iScore 50
+  m_sFactionKey "RHS_ION"
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ coords 7993.707 156.726 8042.377
+}
