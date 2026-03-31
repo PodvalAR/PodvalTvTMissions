@@ -469,77 +469,6 @@ Vehicle BTR70_Ses_TKA1 : "{6F963B40DE04868B}Prefabs/Vehicles/Wheeled/BTR70/BTR70
  m_sAttachmentGroupName "OIL"
 }
 $grp Vehicle : "{7DA1A9D5AC06CC9F}Prefabs/Vehicles/Wheeled/S105/S105_DarkRed_ION.et" {
- S105_DarkRed_ION4 {
-  components {
-   SCR_UniversalInventoryStorageComponent "{607097C4DCC32AFC}" {
-    MultiSlots {
-     MultiSlotConfiguration "{6072948F3F668390}" {
-      SlotTemplate InventoryStorageSlot Bandages {
-       Prefab "{B41607EAB58A4252}Prefabs/Items/Equipment/BallisticTable/BallisticTable_USSR.et"
-      }
-      NumSlots 3
-     }
-     MultiSlotConfiguration "{68FC174FF706BB10}" {
-      SlotTemplate InventoryStorageSlot rnds {
-       Prefab "{98EC9C526AFBA282}Prefabs/Weapons/Ammo/Ammo_Shell_82mm_HE_O832DU.et"
-      }
-      NumSlots 20
-     }
-     MultiSlotConfiguration "{68FC174A8C02D75E}" {
-      SlotTemplate InventoryStorageSlot rnds2 {
-       Prefab "{A544A2C131DE2C64}Prefabs/Weapons/Ammo/Ammo_Shell_82mm_Smoke_D832DU.et"
-      }
-      NumSlots 60
-     }
-     MultiSlotConfiguration "{68FC4678BFE64381}" {
-      SlotTemplate InventoryStorageSlot Shashka {
-       Prefab "{97064F8597F2D7BF}Prefabs/Weapons/Explosives/DemoBlock_TSh400g/DemoBlock_TSh400g.et"
-      }
-      NumSlots 6
-     }
-     MultiSlotConfiguration "{68FC6C8F9812D0C2}" {
-      SlotTemplate InventoryStorageSlot Morphine {
-       Prefab "{0D9A5DCF89AE7AA9}Prefabs/Items/Medicine/MorphineInjection_01/MorphineInjection_01.et"
-      }
-      NumSlots 6
-     }
-     MultiSlotConfiguration "{68FC6C8F98388757}" {
-      SlotTemplate InventoryStorageSlot Zhgut {
-       Prefab "{80E75A71C29190DB}Prefabs/Items/Medicine/Tourniquet_01/Tourniquet_USSR_01.et"
-      }
-      NumSlots 6
-     }
-     MultiSlotConfiguration "{68FC6C8F982659F0}" {
-      SlotTemplate InventoryStorageSlot bint {
-       Prefab "{C3F1FA1E2EC2B345}Prefabs/Items/Medicine/FieldDressing_01/FieldDressing_USSR_01.et"
-      }
-      NumSlots 12
-     }
-     MultiSlotConfiguration "{68FC6C8F98CFAFE6}" {
-      SlotTemplate InventoryStorageSlot compas {
-       Prefab "{7CEF68E2BC68CE71}Prefabs/Items/Equipment/Compass/Compass_Adrianov.et"
-      }
-      NumSlots 3
-     }
-     MultiSlotConfiguration "{68FC6C8F98BAFD99}" {
-      SlotTemplate InventoryStorageSlot Map {
-       Prefab "{F849217AB3BA88BE}Prefabs/Items/Equipment/Maps/Map_Paper_01/PaperMap_01_folded_USSR.et"
-      }
-      NumSlots 3
-     }
-     MultiSlotConfiguration "{68FC6C9AC9AE816C}" {
-      SlotTemplate InventoryStorageSlot Backpack {
-       Prefab "{41A9C55B61F375F0}Prefabs/Items/Equipment/Backpacks/Backpack_Kolobok.et"
-      }
-      NumSlots 3
-     }
-    }
-   }
-  }
-  coords 2889.215 29.812 4967.7
-  angles 0 -140.616 0
-  m_sAttachmentGroupName "Nango3"
- }
  S105_DarkRed_ION5 {
   components {
    SCR_UniversalInventoryStorageComponent "{607097C4DCC32AFC}" {
@@ -694,18 +623,6 @@ $grp Vehicle : "{7DA1A9D5AC06CC9F}Prefabs/Vehicles/Wheeled/S105/S105_DarkRed_ION
       }
       NumSlots 3
      }
-     MultiSlotConfiguration "{68FC174FF706BB10}" {
-      SlotTemplate InventoryStorageSlot rnds {
-       Prefab "{98EC9C526AFBA282}Prefabs/Weapons/Ammo/Ammo_Shell_82mm_HE_O832DU.et"
-      }
-      NumSlots 20
-     }
-     MultiSlotConfiguration "{68FC174A8C02D75E}" {
-      SlotTemplate InventoryStorageSlot rnds2 {
-       Prefab "{A544A2C131DE2C64}Prefabs/Weapons/Ammo/Ammo_Shell_82mm_Smoke_D832DU.et"
-      }
-      NumSlots 60
-     }
      MultiSlotConfiguration "{68FC4678BFE64381}" {
       SlotTemplate InventoryStorageSlot Shashka {
        Prefab "{97064F8597F2D7BF}Prefabs/Weapons/Explosives/DemoBlock_TSh400g/DemoBlock_TSh400g.et"
@@ -747,6 +664,12 @@ $grp Vehicle : "{7DA1A9D5AC06CC9F}Prefabs/Vehicles/Wheeled/S105/S105_DarkRed_ION
        Prefab "{41A9C55B61F375F0}Prefabs/Items/Equipment/Backpacks/Backpack_Kolobok.et"
       }
       NumSlots 3
+     }
+     MultiSlotConfiguration "{68FF0B1810336CB1}" {
+      SlotTemplate InventoryStorageSlot mortar_rnds {
+       Prefab "{7DF4266A58BF088F}Prefabs/Props/Military/AmmoBoxes/AmmoBox_82mm_mortar_3rnd.et"
+      }
+      NumSlots 10
      }
     }
    }
@@ -765,17 +688,70 @@ $grp Vehicle : "{7DA1A9D5AC06CC9F}Prefabs/Vehicles/Wheeled/S105/S105_DarkRed_ION
       }
       NumSlots 3
      }
-     MultiSlotConfiguration "{68FC174FF706BB10}" {
-      SlotTemplate InventoryStorageSlot rnds {
-       Prefab "{98EC9C526AFBA282}Prefabs/Weapons/Ammo/Ammo_Shell_82mm_HE_O832DU.et"
+     MultiSlotConfiguration "{68FC4678BFE64381}" {
+      SlotTemplate InventoryStorageSlot Shashka {
+       Prefab "{97064F8597F2D7BF}Prefabs/Weapons/Explosives/DemoBlock_TSh400g/DemoBlock_TSh400g.et"
       }
-      NumSlots 20
+      NumSlots 6
      }
-     MultiSlotConfiguration "{68FC174A8C02D75E}" {
-      SlotTemplate InventoryStorageSlot rnds2 {
-       Prefab "{A544A2C131DE2C64}Prefabs/Weapons/Ammo/Ammo_Shell_82mm_Smoke_D832DU.et"
+     MultiSlotConfiguration "{68FC6C8F9812D0C2}" {
+      SlotTemplate InventoryStorageSlot Morphine {
+       Prefab "{0D9A5DCF89AE7AA9}Prefabs/Items/Medicine/MorphineInjection_01/MorphineInjection_01.et"
       }
-      NumSlots 60
+      NumSlots 6
+     }
+     MultiSlotConfiguration "{68FC6C8F98388757}" {
+      SlotTemplate InventoryStorageSlot Zhgut {
+       Prefab "{80E75A71C29190DB}Prefabs/Items/Medicine/Tourniquet_01/Tourniquet_USSR_01.et"
+      }
+      NumSlots 6
+     }
+     MultiSlotConfiguration "{68FC6C8F982659F0}" {
+      SlotTemplate InventoryStorageSlot bint {
+       Prefab "{C3F1FA1E2EC2B345}Prefabs/Items/Medicine/FieldDressing_01/FieldDressing_USSR_01.et"
+      }
+      NumSlots 12
+     }
+     MultiSlotConfiguration "{68FC6C8F98CFAFE6}" {
+      SlotTemplate InventoryStorageSlot compas {
+       Prefab "{7CEF68E2BC68CE71}Prefabs/Items/Equipment/Compass/Compass_Adrianov.et"
+      }
+      NumSlots 3
+     }
+     MultiSlotConfiguration "{68FC6C8F98BAFD99}" {
+      SlotTemplate InventoryStorageSlot Map {
+       Prefab "{F849217AB3BA88BE}Prefabs/Items/Equipment/Maps/Map_Paper_01/PaperMap_01_folded_USSR.et"
+      }
+      NumSlots 3
+     }
+     MultiSlotConfiguration "{68FC6C9AC9AE816C}" {
+      SlotTemplate InventoryStorageSlot Backpack {
+       Prefab "{41A9C55B61F375F0}Prefabs/Items/Equipment/Backpacks/Backpack_Kolobok.et"
+      }
+      NumSlots 3
+     }
+     MultiSlotConfiguration "{68FF0B1810336CB1}" {
+      SlotTemplate InventoryStorageSlot mortar_rnds {
+       Prefab "{7DF4266A58BF088F}Prefabs/Props/Military/AmmoBoxes/AmmoBox_82mm_mortar_3rnd.et"
+      }
+      NumSlots 10
+     }
+    }
+   }
+  }
+  coords 2908.283 29.848 4974.04
+  angles 0 -140.616 0
+  m_sAttachmentGroupName "Nango2"
+ }
+ S105_DarkRed_ION4 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{607097C4DCC32AFC}" {
+    MultiSlots {
+     MultiSlotConfiguration "{6072948F3F668390}" {
+      SlotTemplate InventoryStorageSlot Bandages {
+       Prefab "{B41607EAB58A4252}Prefabs/Items/Equipment/BallisticTable/BallisticTable_USSR.et"
+      }
+      NumSlots 3
      }
      MultiSlotConfiguration "{68FC4678BFE64381}" {
       SlotTemplate InventoryStorageSlot Shashka {
@@ -819,12 +795,18 @@ $grp Vehicle : "{7DA1A9D5AC06CC9F}Prefabs/Vehicles/Wheeled/S105/S105_DarkRed_ION
       }
       NumSlots 3
      }
+     MultiSlotConfiguration "{68FF0B1810336CB1}" {
+      SlotTemplate InventoryStorageSlot mortar_rnds {
+       Prefab "{7DF4266A58BF088F}Prefabs/Props/Military/AmmoBoxes/AmmoBox_82mm_mortar_3rnd.et"
+      }
+      NumSlots 10
+     }
     }
    }
   }
-  coords 2913.201 29.934 4974.161
+  coords 2888.34 29.805 4965.18
   angles 0 -140.616 0
-  m_sAttachmentGroupName "Nango2"
+  m_sAttachmentGroupName "Nango3"
  }
 }
 Vehicle UAZ469_Ses_ChDKZ1 : "{EF3C004C1F1E24C7}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_Ses_ChDKZ.et" {
