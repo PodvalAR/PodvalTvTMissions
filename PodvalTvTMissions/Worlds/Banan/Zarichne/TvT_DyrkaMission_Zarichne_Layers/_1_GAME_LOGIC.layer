@@ -1,0 +1,49 @@
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{68FE7AC6CD7DC8DE}" {
+     m_sSuccessObjectiveNames {
+      "AFRF_AFRF"
+     }
+     m_sFailedObjectiveNames {
+      "AFRF_USAF"
+     }
+     m_sMessage "Церковь захвачена"
+     m_Timer GUB_ZoneControlTimer "{68FE7AC6F70331F4}" {
+      timeToComplete 100
+     }
+     m_ZoneController GUB_ZoneController "{68FE7AC6F308A102}" {
+      m_sZoneEntityName "Triger"
+     }
+     m_FlagController GUB_FlagController "{68FE7AC6E7F856C7}" {
+      m_aFlagNames {
+       "Flag"
+       "Flag2"
+       "Flag3"
+      }
+      m_fStartFactionKey "RHS_USAF"
+      m_fEndFactionKey "RHS_AFRF"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{68FE7AC650D4CBEE}" {
+       m_sFirstFactionKey "RHS_AFRF"
+       m_sSecondFactionKey "RHS_USAF"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+}
+GenericEntity : "{6A3CDCFB475BF1B2}Prefabs/System/DRG_CriticalLossPrefab.et" {
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 3000
+  }
+ }
+}
