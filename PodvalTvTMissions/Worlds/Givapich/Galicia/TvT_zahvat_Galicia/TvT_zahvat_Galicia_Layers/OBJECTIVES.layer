@@ -1,0 +1,21 @@
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ USAF_WIN {
+  coords 0 63.31 35.446
+  m_sTitle "Флаг захвачен"
+  m_sTextData "RHS_USAF"
+  m_sFactionKey "RHS_USAF"
+ }
+ AFRF_WIN {
+  coords 2306.516 40.098 44.96
+  m_sTitle "Флаг удержан"
+  m_sTextData "RHS_USAF"
+  m_sFactionKey "RHS_AFRF"
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+}
