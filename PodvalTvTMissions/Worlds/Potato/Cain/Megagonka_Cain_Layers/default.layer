@@ -7,8 +7,140 @@ PerceptionManager PerceptionManager2 : "{028DAEAD63E056BE}Prefabs/World/Game/Per
 PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
  coords 7484.79 0 1323.569
  m_iFreezeTime 120000
+ m_bDisableGarbageSystem 0
 }
-SCR_PrefabDeleterEntity {
- coords 3009.763 25.973 4947.364
- m_fRadius 101
+$grp SCR_PrefabDeleterEntity {
+ {
+  editor EntityEditorProps "{68FF454CA5CF94FD}" {
+   Style sphere
+  }
+  coords 2990.373 25.973 4978.512
+  m_fRadius 78
+ }
+ {
+  editor EntityEditorProps "{68FF454CA5CF94FD}" {
+   Style sphere
+  }
+  coords 3057.131 25.973 4870.029
+  m_fRadius 78
+ }
+ {
+  editor EntityEditorProps "{68FF454CA5CF94FD}" {
+   Style sphere
+  }
+  coords 3118.219 25.973 4789.639
+  m_fRadius 78
+ }
+ {
+  editor EntityEditorProps "{68FF454CA5CF94FD}" {
+   Style sphere
+  }
+  coords 3175.609 25.973 4670.217
+  m_fRadius 78
+ }
+ {
+  editor EntityEditorProps "{68FF454CA5CF94FD}" {
+   Style sphere
+  }
+  coords 3146.907 25.973 4575.296
+  m_fRadius 78
+ }
+ {
+  editor EntityEditorProps "{68FF454CA5CF94FD}" {
+   Style sphere
+  }
+  coords 3057.427 25.973 5079.154
+  m_fRadius 78
+ }
+ {
+  editor EntityEditorProps "{68FF454CA5CF94FD}" {
+   Style sphere
+  }
+  coords 3062.433 25.973 5194.008
+  m_fRadius 78
+ }
+ {
+  editor EntityEditorProps "{68FF454CA5CF94FD}" {
+   Style sphere
+  }
+  coords 3057.143 25.973 5290.174
+  m_fRadius 78
+ }
+ {
+  editor EntityEditorProps "{68FF454CA5CF94FD}" {
+   Style sphere
+  }
+  coords 2958.694 25.973 5244.521
+  m_fRadius 78
+ }
+ {
+  editor EntityEditorProps "{68FF454CA5CF94FD}" {
+   Style sphere
+  }
+  coords 2858.258 25.973 5253.998
+  m_fRadius 78
+ }
+ {
+  editor EntityEditorProps "{68FF454CA5CF94FD}" {
+   Style sphere
+  }
+  coords 2799.314 25.973 5196.512
+  m_fRadius 78
+ }
+ {
+  editor EntityEditorProps "{68FF454CA5CF94FD}" {
+   Style sphere
+  }
+  coords 2770.354 25.973 5316.16
+  m_fRadius 78
+ }
+ {
+  editor EntityEditorProps "{68FF454CA5CF94FD}" {
+   Style sphere
+  }
+  coords 2879.202 25.973 5375.691
+  m_fRadius 78
+ }
+ {
+  editor EntityEditorProps "{68FF454CA5CF94FD}" {
+   Style sphere
+  }
+  coords 2987.163 25.973 5375.007
+  m_fRadius 78
+ }
+}
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ {
+  coords 7475.513 0 1429.732
+  m_sTitle "Обстановка"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "												Официальная легенда: это «спортивно-тактическое мероприятие по развитию навыков экстремального вождения в условиях хаоса»."\
+  ""\
+  "												Реальность: пока командование жрет блины с икрой, а связисты подменяют спутниковые карты мемами с котами, объявлена Великая Гонка."\
+  "	"\
+  "												Победитель получит не просто звание «Ас логистики», а банку редчайшей тушенки, ящик самогону (из спирта, добытого из радиаторов БТР) и коллекционные штаны на зависть Реджи"
+  m_aVisibleForFactions {
+   "CIV"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+ {
+  coords 7473.555 0 1398.83
+  m_sTitle "Правила и задачи"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "Правила:"\
+  "Гонка происходит вдоль главной дороги вокруг всего острова"\
+  ""\
+  "Задачи:"\
+  "1. ВЫЖИТЬ"\
+  "2. Совершить объезд всего острова и вернуться на место старта"
+  m_aVisibleForFactions {
+   "CIV"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
 }
