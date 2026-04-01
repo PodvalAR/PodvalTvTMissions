@@ -349,67 +349,6 @@ $grp Vehicle : "{0ACA2ED6AD52D641}Prefabs/Vehicles/Wheeled/UAZ469/dim_UAZ469.et"
   angles 0 0 0
   m_sAttachmentGroupName "Mount1"
  }
- dim_UAZ9 {
-  components {
-   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
-    FuelNodes {
-     SCR_FuelNode "{5622A70CD4036C5A}" {
-      MaxFuel 0
-      m_fInitialFuelTankState 0.05
-     }
-     SCR_FuelNode "{5AD4F813E67ECBD3}" {
-      MaxFuel 0
-      m_fInitialFuelTankState 0
-     }
-    }
-   }
-   SCR_UniversalInventoryStorageComponent "{5AD4F813E67ECB5D}" {
-    MultiSlots {
-     MultiSlotConfiguration "{5AD4F813E67ECB53}" {
-      NumSlots 20
-     }
-     MultiSlotConfiguration "{68FC4679D5D6D76C}" {
-      SlotTemplate InventoryStorageSlot Shashka {
-       Prefab "{97064F8597F2D7BF}Prefabs/Weapons/Explosives/DemoBlock_TSh400g/DemoBlock_TSh400g.et"
-      }
-      NumSlots 10
-     }
-     MultiSlotConfiguration "{68FC6C98AD272BAD}" {
-      SlotTemplate InventoryStorageSlot Compas {
-       Prefab "{7CEF68E2BC68CE71}Prefabs/Items/Equipment/Compass/Compass_Adrianov.et"
-      }
-      NumSlots 5
-     }
-     MultiSlotConfiguration "{68FC6C98ADC65177}" {
-      SlotTemplate InventoryStorageSlot Map {
-       Prefab "{F849217AB3BA88BE}Prefabs/Items/Equipment/Maps/Map_Paper_01/PaperMap_01_folded_USSR.et"
-      }
-      NumSlots 5
-     }
-     MultiSlotConfiguration "{68FC6C98AE44753F}" {
-      SlotTemplate InventoryStorageSlot Backpack {
-       Prefab "{41A9C55B61F375F0}Prefabs/Items/Equipment/Backpacks/Backpack_Kolobok.et"
-      }
-      NumSlots 4
-     }
-     MultiSlotConfiguration "{68FC6C98AEEF1DC5}" {
-      SlotTemplate InventoryStorageSlot Morphine {
-       Prefab "{0D9A5DCF89AE7AA9}Prefabs/Items/Medicine/MorphineInjection_01/MorphineInjection_01.et"
-      }
-      NumSlots 10
-     }
-     MultiSlotConfiguration "{68FC6C98AE96F270}" {
-      SlotTemplate InventoryStorageSlot Zhgut {
-       Prefab "{80E75A71C29190DB}Prefabs/Items/Medicine/Tourniquet_01/Tourniquet_USSR_01.et"
-      }
-      NumSlots 10
-     }
-    }
-   }
-  }
-  coords 4316.729 16.353 3107.294
-  angles 0 -74.834 0
- }
 }
 Vehicle BRDM2_Ses_ChDKZ2 : "{1799AE4958D0D24B}Prefabs/Vehicles/Wheeled/BRDM2/BRDM2_Ses_ChDKZ.et" {
  components {
@@ -813,6 +752,7 @@ Vehicle UAZ469_Ses_ChDKZ1 : "{EF3C004C1F1E24C7}Prefabs/Vehicles/Wheeled/UAZ469/U
      SlotTemplate InventoryStorageSlot Detonator {
       Prefab "{0D9A5DCF89AE7AA9}Prefabs/Items/Medicine/MorphineInjection_01/MorphineInjection_01.et"
      }
+     NumSlots 6
     }
     MultiSlotConfiguration "{68FC467B55173942}" {
      SlotTemplate InventoryStorageSlot Morphine {
