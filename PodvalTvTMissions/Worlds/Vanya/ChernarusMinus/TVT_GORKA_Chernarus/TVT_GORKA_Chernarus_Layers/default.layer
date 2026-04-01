@@ -27,3 +27,26 @@ GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" 
  }
  coords 12106.504 28.838 3680.141
 }
+GenericEntity : "{F9EBA10CC445ED63}PrefabsEditable/Auto/Structures/Military/Flags/FlagPole_02_V1_CDF_Editable.et" {
+ components {
+  SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+   m_sDefaultMaterial "{1D4A447A3E34C70D}Assets/Props/Fabric/Flags/Data/Flag_1_2_Chernarus.emat"
+   m_aFlagData {
+    PS_FlagData "{6902F8EF6B7820BE}" {
+     m_sFactionKey "Ses_CDF"
+    }
+   }
+   m_sFactionKey "Ses_CDF"
+  }
+  BaseActionsManagerComponent "{6202D4E6F133BF4A}" {
+   additionalActions {
+    PS_FlagChangeAction "{6202D4E6A53D4B3C}" {
+     Duration 15
+     m_bUseAnimation 1
+    }
+   }
+  }
+ }
+ coords 9442.737 298.211 8803.404
+ angles 21.294 -135.729 -20.431
+}
