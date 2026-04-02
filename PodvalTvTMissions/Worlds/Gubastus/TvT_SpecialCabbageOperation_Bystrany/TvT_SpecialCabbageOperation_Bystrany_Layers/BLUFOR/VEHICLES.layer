@@ -3,13 +3,38 @@ Vehicle REAPER_NH90_BRD1 : "{32DEDDEE795721AA}Prefabs/Vehicles/Helicopters/REAPE
  angles 0 180 0
  m_sAttachmentGroupName "USAF_110"
 }
-Vehicle M1083_Transport_Covered_Armed_Woodland1 : "{D8FD77F7A4CC7ED6}Prefabs/Vehicles/Wheeled/M1083/Armed/M1083_Transport_Covered_Armed_Woodland.et" {
- coords 4598.699 267.319 7057.535
- angles -1.186 83.46 0.136
- m_sAttachmentGroupName "USAF_001"
+$grp Vehicle : "{D8FD77F7A4CC7ED6}Prefabs/Vehicles/Wheeled/M1083/Armed/M1083_Transport_Covered_Armed_Woodland.et" {
+ M1083_Transport_Covered_Armed_Woodland1 {
+  coords 4589.938 267.228 7056.52
+  angles -1.186 83.46 0.136
+  m_sAttachmentGroupName "USAF_001"
+  {
+   GameEnvironmentProbeEntity {
+    ID "66D767E667DE6663"
+    coords 0.005 -0.431 1.931
+   }
+  }
+ }
+ M1083_Transport_Covered_Armed_Woodland2 {
+  coords 4606.751 267.276 7058.283
+  angles -1.186 83.46 0.136
+  m_sAttachmentGroupName "USAF_002"
+  {
+   GameEnvironmentProbeEntity {
+    ID "66D767E667DE6663"
+    coords 0.005 -0.431 1.931
+   }
+  }
+ }
 }
 Vehicle M1083_Command1 : "{D9E287595E3AF7C5}Prefabs/Vehicles/Wheeled/M1083/M1083_Command.et" {
- coords 4583.929 267.152 7055.759
+ coords 4575.168 266.432 7054.744
  angles 3.553 83.427 -0.409
  m_sAttachmentGroupName "USAF_000"
+ {
+  GameEnvironmentProbeEntity {
+   ID "66D767E667DE6663"
+   coords -0.016 -0.355 1.744
+  }
+ }
 }
