@@ -1,6 +1,51 @@
 GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{68FF2B3457B19155}" {
+     m_sZonePreviewName "Завод"
+     m_sSuccessObjectiveNames {
+      "UK_WIN_1"
+     }
+     m_sFailedObjectiveNames {
+      "AFRF_WIN_1"
+     }
+     m_Timer GUB_ZoneControlTimer "{68FF2B345CD496DA}" {
+      timeToComplete 180
+     }
+     m_ZoneController GUB_ZoneController "{68FF2B344178B672}" {
+      m_sZoneEntityName "TRIG_ZAVOD"
+     }
+     m_FlagController GUB_FlagController "{68FF2B344B0043DC}" {
+      m_aFlagNames {
+       "FLAG_1"
+       "FLAG_2"
+      }
+      m_fStartFactionKey "RHS_AFRF"
+      m_fEndFactionKey "UK"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{68FF2B34B7830EA6}" {
+       m_sFirstFactionKey "UK"
+       m_sSecondFactionKey "RHS_AFRF"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
 }
 GenericEntity : "{6A3CDCFB475BF1B2}Prefabs/System/DRG_CriticalLossPrefab.et" {
+ components {
+  DRG_CriticalLossComponent "{65213D368F1BD792}" {
+   m_aLossLogics {
+    LossLogic "{68FF2B34A2399881}" {
+    }
+   }
+  }
+ }
 }
 GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
  components {
