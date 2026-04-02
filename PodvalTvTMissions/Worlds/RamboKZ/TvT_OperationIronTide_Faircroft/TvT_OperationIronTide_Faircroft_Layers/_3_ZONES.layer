@@ -1,71 +1,170 @@
-PolylineShapeEntity TRIG_1 : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
- coords 5527.448 29.314 2249.235
- Points {
-  ShapePoint "{68F939703B6C6F4F}" {
-   Position -7.22 -0.056 4.779
+$grp PolylineShapeEntity : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
+ TRIG_ZAVOD {
+  components {
+   PS_PolyZone "{60E90266F25533F6}" {
+    m_mPolygonTexture ""
+    m_cPolygonColor 1 0.749 0 0.263
+    m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+    m_cPolygonBorderColor 1 0.749 0 1
+    m_fPolygonBorderWidth 9
+    m_aVisibleForFactions {
+     "RHS_AFRF"
+     "RHS_USAF"
+     ""
+    }
+   }
   }
-  ShapePoint "{68F939703901CC2A}" {
-   Position -24.517 0.443 21.15
+  coords 5527.448 29.314 2249.235
+  Points {
+   ShapePoint "{68F939703B6C6F4F}" {
+    Position -7.22 -0.056 4.779
+   }
+   ShapePoint "{68F939703901CC2A}" {
+    Position -24.517 0.443 21.15
+   }
+   ShapePoint "{68F93970360BE193}" {
+    Position -35.972 -0.64 34.372
+   }
+   ShapePoint "{68F9397033530FE1}" {
+    Position -40.375 -1.581 45.637
+   }
+   ShapePoint "{68F9397031C075E4}" {
+    Position -32.268 -1.79 67.652
+   }
+   ShapePoint "{68F93973CC3A4DCE}" {
+    Position -23.081 -1.229 79.398
+   }
+   ShapePoint "{68F93973CACE087A}" {
+    Position -18.458 -1.906 87.139
+   }
+   ShapePoint "{68F93973C990BD33}" {
+    Position 5.359 -1.769 157.022
+   }
+   ShapePoint "{68F93973C60B890C}" {
+    Position 10.08 -2.048 164.536
+   }
+   ShapePoint "{68F93973C452031B}" {
+    Position 39.198 0.058 184.257
+   }
+   ShapePoint "{68F93973C2D588C2}" {
+    Position 47.134 0.062 193.542
+   }
+   ShapePoint "{68F93973C3BBF498}" {
+    Position 56.081 -0.89 195.496
+   }
+   ShapePoint "{68F93973DEE31078}" {
+    Position 64.012 -2.167 191.886
+   }
+   ShapePoint "{68F93973DC051F30}" {
+    Position 79.911 -1.991 182.78
+   }
+   ShapePoint "{68F93973DA7E4056}" {
+    Position 88.195 -2.388 174.401
+   }
+   ShapePoint "{68F93973D8FBA8BF}" {
+    Position 80.957 -2.807 142.822
+   }
+   ShapePoint "{68F93973D9469F88}" {
+    Position 67.049 -2.953 131.298
+   }
+   ShapePoint "{68F93973D2649C31}" {
+    Position 37.293 -2.306 26.391
+   }
+   ShapePoint "{68F93973D06BA480}" {
+    Position 35.763 -1.826 14.473
+   }
+   ShapePoint "{68F93973EEE31109}" {
+    Position 26.249 -0.198 0.099
+   }
+   ShapePoint "{68F93973EC1188AA}" {
+    Position 20.65 -0.111 -1.153
+   }
+   ShapePoint "{68F93973EBDF4E38}" {
+    Position 8.971 -0.521 -1.252
+   }
   }
-  ShapePoint "{68F93970360BE193}" {
-   Position -35.972 -0.64 34.372
+ }
+ TRIG_ATTACK {
+  components {
+   PS_PolyZone "{60E90266F25533F6}" {
+    m_mPolygonTexture ""
+    m_cPolygonColor 1 0 0 0.263
+    m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+    m_cPolygonBorderColor 1 0 0 1
+    m_fPolygonBorderWidth 9
+    m_aVisibleForFactions {
+     "RHS_USAF"
+    }
+   }
   }
-  ShapePoint "{68F9397033530FE1}" {
-   Position -40.375 -1.581 45.637
-  }
-  ShapePoint "{68F9397031C075E4}" {
-   Position -32.268 -1.79 67.652
-  }
-  ShapePoint "{68F93973CC3A4DCE}" {
-   Position -23.081 -1.229 79.398
-  }
-  ShapePoint "{68F93973CACE087A}" {
-   Position -18.458 -1.906 87.139
-  }
-  ShapePoint "{68F93973C990BD33}" {
-   Position 5.359 -1.769 157.022
-  }
-  ShapePoint "{68F93973C60B890C}" {
-   Position 10.08 -2.048 164.536
-  }
-  ShapePoint "{68F93973C452031B}" {
-   Position 39.198 0.058 184.257
-  }
-  ShapePoint "{68F93973C2D588C2}" {
-   Position 47.134 0.062 193.542
-  }
-  ShapePoint "{68F93973C3BBF498}" {
-   Position 56.081 -0.89 195.496
-  }
-  ShapePoint "{68F93973DEE31078}" {
-   Position 64.012 -2.167 191.886
-  }
-  ShapePoint "{68F93973DC051F30}" {
-   Position 79.911 -1.991 182.78
-  }
-  ShapePoint "{68F93973DA7E4056}" {
-   Position 88.195 -2.388 174.401
-  }
-  ShapePoint "{68F93973D8FBA8BF}" {
-   Position 80.957 -2.807 142.822
-  }
-  ShapePoint "{68F93973D9469F88}" {
-   Position 67.049 -2.953 131.298
-  }
-  ShapePoint "{68F93973D2649C31}" {
-   Position 37.293 -2.306 26.391
-  }
-  ShapePoint "{68F93973D06BA480}" {
-   Position 35.763 -1.826 14.473
-  }
-  ShapePoint "{68F93973EEE31109}" {
-   Position 26.249 -0.198 0.099
-  }
-  ShapePoint "{68F93973EC1188AA}" {
-   Position 20.65 -0.111 -1.153
-  }
-  ShapePoint "{68F93973EBDF4E38}" {
-   Position 8.971 -0.521 -1.252
+  coords 5527.448 29.314 2249.235
+  Points {
+   ShapePoint "{68F939703B6C6F4F}" {
+    Position -7.22 -0.056 4.779
+   }
+   ShapePoint "{68F939703901CC2A}" {
+    Position -24.517 0.443 21.15
+   }
+   ShapePoint "{68F93970360BE193}" {
+    Position -35.972 -0.64 34.372
+   }
+   ShapePoint "{68F9397033530FE1}" {
+    Position -40.375 -1.581 45.637
+   }
+   ShapePoint "{68F9397031C075E4}" {
+    Position -32.268 -1.79 67.652
+   }
+   ShapePoint "{68F93973CC3A4DCE}" {
+    Position -23.081 -1.229 79.398
+   }
+   ShapePoint "{68F93973CACE087A}" {
+    Position -18.458 -1.906 87.139
+   }
+   ShapePoint "{68F93973C990BD33}" {
+    Position 5.359 -1.769 157.022
+   }
+   ShapePoint "{68F93973C60B890C}" {
+    Position 10.08 -2.048 164.536
+   }
+   ShapePoint "{68F93973C452031B}" {
+    Position 39.198 0.058 184.257
+   }
+   ShapePoint "{68F93973C2D588C2}" {
+    Position 47.134 0.062 193.542
+   }
+   ShapePoint "{68F93973C3BBF498}" {
+    Position 56.081 -0.89 195.496
+   }
+   ShapePoint "{68F93973DEE31078}" {
+    Position 64.012 -2.167 191.886
+   }
+   ShapePoint "{68F93973DC051F30}" {
+    Position 79.911 -1.991 182.78
+   }
+   ShapePoint "{68F93973DA7E4056}" {
+    Position 88.195 -2.388 174.401
+   }
+   ShapePoint "{68F93973D8FBA8BF}" {
+    Position 80.957 -2.807 142.822
+   }
+   ShapePoint "{68F93973D9469F88}" {
+    Position 67.049 -2.953 131.298
+   }
+   ShapePoint "{68F93973D2649C31}" {
+    Position 37.293 -2.306 26.391
+   }
+   ShapePoint "{68F93973D06BA480}" {
+    Position 35.763 -1.826 14.473
+   }
+   ShapePoint "{68F93973EEE31109}" {
+    Position 26.249 -0.198 0.099
+   }
+   ShapePoint "{68F93973EC1188AA}" {
+    Position 20.65 -0.111 -1.153
+   }
+   ShapePoint "{68F93973EBDF4E38}" {
+    Position 8.971 -0.521 -1.252
+   }
   }
  }
 }

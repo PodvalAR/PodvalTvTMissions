@@ -1,10 +1,24 @@
 $grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
- USSR_WIN {
-  m_sTitle ""
-  m_sFactionKey "USSR"
+ UK_WIN_1 {
+  m_sTitle "Завод захвачен"
+  m_iScore 50
+  m_sFactionKey "UK"
  }
- US_WIN {
-  m_sTitle ""
-  m_sFactionKey "US"
+ AFRF_WIN_1 {
+  m_sTitle "Завод удержан"
+  m_iScore 50
+  m_sFactionKey "RHS_AFRF"
+ }
+ AFRF_WIN_2 {
+  coords 5250.361 37.171 2608.117
+  m_sTitle "Руины"
+  m_iScore 50
+  m_sFactionKey "RHS_AFRF"
+ }
+ UK_WIN_2 {
+  coords 5205.811 35.125 2654.389
+  m_sTitle "Руины захвачен"
+  m_iScore 50
+  m_sFactionKey "UK"
  }
 }
