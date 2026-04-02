@@ -1,0 +1,131 @@
+$grp Vehicle : "{160E1EDDBFFF8CFE}Prefabs/Vehicles/Wheeled/BTR70/BTR70_Ses_ChDKZ.et" {
+ BTR70_Ses_ChDKZ3 {
+  coords 320.399 5.679 1625.92
+  angles -0.008 89.493 -0.895
+  m_sAttachmentGroupName "cdkz4"
+ }
+ BTR70_Ses_ChDKZ2 {
+  coords 342.254 5.762 1626.393
+  angles 0.005 90.294 -0.895
+  m_sAttachmentGroupName "cdkz5"
+ }
+}
+$grp GenericEntity : "{41A9C55B61F375F0}Prefabs/Items/Equipment/Backpacks/Backpack_Kolobok.et" {
+ {
+  coords 1706.409 138.753 3817.309
+  angles -47.087 -137.978 0
+ }
+ {
+  coords 1706.609 138.703 3816.853
+  angles -26.729 -137.978 0
+ }
+ {
+  coords 1703.533 138.832 3826.583
+  angles -41.792 -54.967 -8.061
+ }
+ {
+  coords 1704.159 138.656 3824.601
+  angles 0 -120.314 0
+ }
+ {
+  coords 1704.492 138.656 3824.233
+  angles 0 -120.314 0
+ }
+}
+$grp SCR_AIGroup : "{45C4A9C03900631E}Prefabs/Groups/OPFOR/Ses_ChDKZ/Group_ChDKZ_Motorized.et" {
+ cdkz4 {
+  components {
+   PS_GroupCallsignAssigner "{68A3601C92B4A58B}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 317.5 5.895 1617.185
+  angles -0.715 -0.632 0.886
+ }
+ cdkz5 {
+  components {
+   PS_GroupCallsignAssigner "{68A3601C92B4A58B}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 338.038 5.819 1617.858
+  angles -0.715 -0.632 0.886
+ }
+}
+$grp SCR_AIGroup : "{68FC03D21BDA0859}Prefabs/Groups/OPFOR/Ses_ChDKZ/Group_ChDKZ_RifleSquad.et" {
+ {
+  coords 1687.669 138.656 3843.416
+  angles 0 73.517 0
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A3601C92B4A58B}" {
+    m_iSquadCallsign 2
+   }
+  }
+  coords 1691.999 138.638 3830.092
+  angles 0 73.517 0
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A3601C92B4A58B}" {
+    m_iSquadCallsign 3
+   }
+  }
+  coords 1696.713 138.625 3814.413
+  angles 0 73.517 0
+ }
+}
+Vehicle Ural4320_Ses_ChDKZ_transport1 : "{8918EDE86C8CB551}Prefabs/Vehicles/Wheeled/Ural4320/Ses_ChDKZ/Ural4320_Ses_ChDKZ_transport.et" {
+ components {
+  SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+   FuelNodes {
+    SCR_FuelNode "{5622A70CD4036C5A}" {
+     m_fInitialFuelTankState 0
+    }
+    SCR_FuelNode "{5628CA84B129D4CE}" {
+     m_fInitialFuelTankState 0
+    }
+   }
+  }
+  SCR_UniversalInventoryStorageComponent "{5916C58171230A92}" {
+   MultiSlots {
+    MultiSlotConfiguration "{5A60D38EDB3709A9}" {
+     SlotTemplate InventoryStorageSlot Bandages {
+      Prefab "{1742632597955A55}Prefabs/Items/Misc/Sandbags/Part_Sandbag_Plastic.et"
+     }
+     NumSlots 500
+    }
+   }
+  }
+ }
+ coords 1703.761 138.515 3855.213
+ angles 0 -17.486 0
+}
+Vehicle UAZ452_transport_ChDKZ1 : "{935188308D14805E}Prefabs/Vehicles/Wheeled/UAZ452/UAZ452_transport_ChDKZ.et" {
+ coords 1706.287 138.656 3800.843
+ angles 0 -14.564 0
+ m_sAttachmentGroupName "cdkz1"
+}
+$grp SCR_AIGroup : "{BF97ECB4D954314C}Prefabs/Groups/OPFOR/Ses_ChDKZ/Group_ChDKZ_HQ_PL.et" {
+ {
+  coords 1682.52 138.656 3857.045
+  angles 0 72.469 0
+ }
+ cdkz1 {
+  components {
+   PS_GroupCallsignAssigner "{68A3601C92B4A58B}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 1701.081 138.656 3800.195
+  angles 0 73.294 0
+  m_aUnitPrefabSlots {
+   "{A7C99EAA24EC8048}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_SL_Random.et"
+   "{38C1DC2B685E638A}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_Rifleman_Random.et"
+   "{38C1DC2B685E638A}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_Rifleman_Random.et"
+  }
+  m_sCustomNameSet "Отряд 9К"
+ }
+}

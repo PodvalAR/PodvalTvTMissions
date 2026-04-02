@@ -1,0 +1,154 @@
+$grp SCR_AIGroup : "{1128EBD3DDFF1D07}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Motorized.et" {
+ ru4 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iSquadCallsign 3
+   }
+  }
+  coords 13438.442 5.75 6117.003
+  angles 0 96.306 0
+ }
+ ru8 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 3
+   }
+  }
+  coords 5325.829 323.512 8598.517
+  angles 0 -127.955 0
+ }
+ ru7 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 5338.278 323.012 8589.073
+  angles 0 -146.313 0
+ }
+}
+Vehicle UAZ1 : "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et" {
+ coords 13449.195 5.75 6161.603
+ angles 0 8.136 0
+ m_sAttachmentGroupName "ru1"
+}
+$grp Vehicle : "{447CFE8D73F95C40}Prefabs/Vehicles/Wheeled/BTR70/BTR70_AFRF.et" {
+ BTR70_AFRF1 {
+  coords 13443.736 5.75 6112.314
+  angles 0 6.862 0
+  m_sAttachmentGroupName "ru4"
+ }
+ BTR70_AFRF2 {
+  coords 5332.309 323.162 8586.727
+  angles -1.243 124.107 0.239
+  m_sAttachmentGroupName "ru7"
+ }
+ BTR70_AFRF3 {
+  coords 5319.979 323.594 8597.776
+  angles -0.623 135.867 -0.642
+  m_sAttachmentGroupName "ru8"
+ }
+}
+$grp Vehicle : "{B845B8B82C76BA68}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_filled.et" {
+ Ural4320_transport_filled1 {
+  coords 5354.439 322.122 8574.713
+  angles -2.001 116.717 -0.005
+  m_sAttachmentGroupName "ru6"
+ }
+ Ural4320_transport_filled2 {
+  coords 5374.31 321.325 8566.266
+  angles 0 116.717 0
+  m_sAttachmentGroupName "ru5"
+ }
+}
+SCR_AIGroup : "{B851352F042E4F0B}Prefabs/Groups/OPFOR/RHS_AFRF/Recon/Group_RHS_AFRF_Recon_Squad.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+   m_iCompanyCallsign 2
+   m_iSquadCallsign 1
+  }
+ }
+ coords 4660.89 327.406 9729.157
+ angles 0 62.132 0
+}
+SCR_AIGroup ru9 : "{D43A9753198C5D8F}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Heli.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+   m_iCompanyCallsign 2
+  }
+ }
+ coords 4655.838 327.406 9737.035
+ angles 0 54.451 0
+}
+$grp Vehicle : "{D9B91FAB817A6033}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_covered.et" {
+ Ural4320_transport_covered1 {
+  coords 13448.059 5.75 6150.545
+  angles 0 7.146 0
+  m_sAttachmentGroupName "ru2"
+ }
+ Ural4320_transport_covered2 {
+  coords 13445.567 5.749 6133.104
+  angles 0 7.578 0
+  m_sAttachmentGroupName "ru3"
+ }
+}
+Vehicle Mi8MT_armed_gunship_HE_Podval1 : "{DA92C428D572C1C7}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_armed_gunship_HE_Podval.et" {
+ coords 4684.387 327.406 9744.525
+ angles 0 -117.477 0
+ m_sAttachmentGroupName "ru9"
+}
+SCR_AIGroup ru1 : "{E625399A1E96672A}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_PL_2.et" {
+ coords 13444.336 5.75 6162.5
+ angles 0 98.607 0
+}
+$grp SCR_AIGroup : "{EB131DDF464F90FD}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Squad.et" {
+ ru2 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iSquadCallsign 1
+   }
+  }
+  coords 13443.408 5.75 6154.676
+  angles 0 97.836 0
+ }
+ ru3 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iSquadCallsign 2
+   }
+  }
+  coords 13440.976 5.75 6136.824
+  angles 0 96.864 0
+ }
+ ru6 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 5359.321 322.018 8579.136
+  angles 0.314 -155.205 -2.811
+  m_aUnitPrefabSlots {
+   "{998515E06ED7A4C9}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_SL.et"
+   "{E49DF9180B449850}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_SR.et"
+   "{2CA58D3E25DA1886}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_AT.et"
+   "{D90B2AEF04BBE301}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_AAT.et"
+   "{F40DE4FF5C5306DA}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_AR.et"
+   "{F9D89ADEABE46FF0}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_GL.et"
+   "{78410A549262E06D}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Rifle.et"
+   "{E4C1E22F77E5DBEF}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Sharpshooter.et"
+  }
+ }
+ ru5 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 5380.076 321.178 8569.466
+  angles 0 -155.189 0
+ }
+}

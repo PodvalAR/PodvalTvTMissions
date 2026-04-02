@@ -1,0 +1,75 @@
+Vehicle AH1S_Marines_AIM1 : "{4BE0F3AE27C9FC29}Prefabs/Vehicles/Helicopters/AH1S/AH1S_Marines_AIM9.et" {
+ coords 4352.619 15.01 1279.816
+ angles 0 -85.942 0
+ m_sAttachmentGroupName "USAF_300"
+}
+$grp Tank : "{8C56ABBA9DFE03D8}Prefabs/Vehicles/Tracked/M1A1/M1A1_TUSK.et" {
+ M1A1_TUSK2 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{5E38B84FCEFF0E6D}" {
+    MultiSlots {
+     MultiSlotConfiguration "{68FEC68AE67ECD9B}" {
+      SlotTemplate InventoryStorageSlot DV {
+       Prefab "{B112DD31A5B9A6C1}Prefabs/Items/Equipment/Radios/Radio_ANPRC77_USA.et"
+      }
+      NumSlots 1
+     }
+    }
+   }
+  }
+  coords 2469.727 6.679 1940.172
+  angles 0 87.889 0
+  m_sAttachmentGroupName "USAF_402"
+ }
+ M1A1_TUSK1 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{5E38B84FCEFF0E6D}" {
+    MultiSlots {
+     MultiSlotConfiguration "{68FEC68A769F3563}" {
+      SlotTemplate InventoryStorageSlot DV {
+       Prefab "{B112DD31A5B9A6C1}Prefabs/Items/Equipment/Radios/Radio_ANPRC77_USA.et"
+      }
+      NumSlots 1
+     }
+    }
+   }
+  }
+  coords 2488.002 6.945 1912.505
+  angles 0 87.889 0
+  m_sAttachmentGroupName "USAF_400"
+ }
+ M1A1_TUSK3 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{5E38B84FCEFF0E6D}" {
+    MultiSlots {
+     MultiSlotConfiguration "{68FEC68A6B373F62}" {
+      SlotTemplate InventoryStorageSlot DV {
+       Prefab "{B112DD31A5B9A6C1}Prefabs/Items/Equipment/Radios/Radio_ANPRC77_USA.et"
+      }
+      NumSlots 1
+     }
+    }
+   }
+  }
+  coords 2469.577 6.535 1911.08
+  angles 0 87.889 0
+  m_sAttachmentGroupName "USAF_401"
+ }
+ M1A1_TUSK4 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{5E38B84FCEFF0E6D}" {
+    MultiSlots {
+     MultiSlotConfiguration "{68FEC68A49695CD1}" {
+      SlotTemplate InventoryStorageSlot DV {
+       Prefab "{B112DD31A5B9A6C1}Prefabs/Items/Equipment/Radios/Radio_ANPRC77_USA.et"
+      }
+      NumSlots 1
+     }
+    }
+   }
+  }
+  coords 2487.292 6.679 1940.837
+  angles 0 87.889 0
+  m_sAttachmentGroupName "USAF_403"
+ }
+}

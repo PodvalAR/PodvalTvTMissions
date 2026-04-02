@@ -1,0 +1,197 @@
+Vehicle dim_UAZ1 : "{0ACA2ED6AD52D641}Prefabs/Vehicles/Wheeled/UAZ469/dim_UAZ469.et" {
+ coords 9156.281 288.703 9638.632
+ angles 1.939 -12.281 0.494
+ m_sAttachmentGroupName "ru55"
+}
+Vehicle UAZ452_transport1 : "{1FBB492E86002BF5}Prefabs/Vehicles/Wheeled/UAZ452/UAZ452_transport.et" {
+ coords 9649.625 80.531 13558.063
+ angles 0 70.031 0
+ m_sAttachmentGroupName "ru1"
+}
+$grp SCR_AIGroup : "{2E11F5063753932B}Prefabs/Groups/OPFOR/USSR/dim_Group_USSR_GRU.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B351898A1AB}" {
+    m_iSquadCallsign 1
+   }
+  }
+  coords 9598.269 80.093 13755.12
+  angles 0 -145.763 0
+  m_sCustomNameSet "Личная охрана генерала"
+ }
+ ru55 {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B351898A1AB}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 3
+   }
+  }
+  coords 9152.488 288.742 9638.988
+  angles -0.59 80.585 1.912
+  m_aUnitPrefabSlots {
+   "{F2CD51EBFE885435}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/dim_USSR_SPN_SL_Light.et"
+   "{498C13903BA8CB62}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/dim_USSR_SPN_GL_Light.et"
+   "{A9C4CAD9BCBA7288}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/dim_USSR_SPN_Sapper_Light.et"
+   "{8B84A52BE53EC8CD}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/dim_USSR_SPN_MG_Light.et"
+   "{DE246DF87905FE00}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/dim_USSR_SPN_Sniper_VSS_Backpack.et"
+  }
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B351898A1AB}" {
+    m_iSquadCallsign 2
+   }
+  }
+  coords 9589.978 80.442 13749.509
+  angles 0 30.744 0
+  m_sCustomNameSet "Личная охрана генерала"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B351898A1AB}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 9510.668 95.385 13851.385
+  angles -1.222 100.408 11.451
+  m_aUnitPrefabSlots {
+   "{F2CD51EBFE885435}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/dim_USSR_SPN_SL_Light.et"
+   "{ACD11AD911B304A9}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/dim_USSR_SPN_Sniper_VSS.et"
+   "{9C7EC9EDA4C0555B}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/dim_USSR_SPN_Sniper_SVD.et"
+  }
+  m_sCustomNameSet "Снайперское отделение"
+ }
+}
+$grp Vehicle : "{447CFE8D73F95C40}Prefabs/Vehicles/Wheeled/BTR70/BTR70_AFRF.et" {
+ BTR70_AFRF1 {
+  coords 9674.401 80.572 13562.394
+  angles 0 52.283 0
+  m_sAttachmentGroupName "ru2"
+ }
+ BTR70_AFRF2 {
+  coords 9686.206 80.587 13567.144
+  angles 1.819 88.048 0.833
+  m_sAttachmentGroupName "ru3"
+ }
+}
+Vehicle S105_white1 : "{63880E311299A016}Prefabs/Vehicles/Wheeled/S105/S105_white.et" {
+ components {
+  SCR_UniversalInventoryStorageComponent "{607097C4DCC32AFC}" {
+   MultiSlots {
+    MultiSlotConfiguration "{6072948F3F668390}" {
+     SlotTemplate InventoryStorageSlot Bandages {
+      Prefab "{97064F8597F2D7BF}Prefabs/Weapons/Explosives/DemoBlock_TSh400g/DemoBlock_TSh400g.et"
+     }
+     NumSlots 5
+    }
+    MultiSlotConfiguration "{690312599CF1055D}" {
+     SlotTemplate InventoryStorageSlot Mine {
+      Prefab "{90976DC90A223095}Prefabs/Items/Equipment/Detonators/BlastingMachine_KPM_3U1/BlastingMachine_KPM_3U1.et"
+     }
+     NumSlots 1
+    }
+   }
+  }
+ }
+ coords 10657.992 281.759 12741.159
+ angles -3.907 -177.859 8.724
+ m_sAttachmentGroupName "ru4"
+}
+SCR_AIGroup : "{706340F7481FF22F}Prefabs/Groups/OPFOR/USSR/Group_USSR_PL.et" {
+ coords 9590.207 80.142 13754.866
+ angles 0 128.502 0
+ m_aUnitPrefabSlots {
+  "{4D0B4E340206F292}Worlds/Vanya/ChernarusMinus/TVT_GUBA_Chernarus/GUBA.et"
+ }
+ m_sCustomNameSet "Генерал Губа"
+}
+$grp SCR_AIGroup : "{84AF92E239A71FCE}Prefabs/Groups/OPFOR/USSR/Group_USSR_Rifle_SQ.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 9623.574 80.532 13516.006
+  angles 0 -32.597 0
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 2
+   }
+  }
+  coords 9634.98 80.531 13523.728
+  angles 0 -32.597 0
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 9611.225 80.532 13508.699
+  angles 0 -32.597 0
+ }
+ ru1 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 9652.251 80.532 13553.068
+  angles 0 -25.292 0
+  m_aUnitPrefabSlots {
+   "{8A7E668F5E102151}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_SL_RANDOM.et"
+   "{C425B14F87DAE72F}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_Rifleman_RANDOM.et"
+   "{C425B14F87DAE72F}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_Rifleman_RANDOM.et"
+  }
+  m_sCustomNameSet "Отряд 9К"
+ }
+ ru2 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 1
+   }
+  }
+  coords 9676.339 80.627 13559.302
+  angles 0 -42.401 0
+  m_aUnitPrefabSlots {
+   "{963A4B934971EBDF}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_CC_RANDOM.et"
+   "{7DE3DB256DCC5CB6}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_CREW_RANDOM.et"
+  }
+  m_sCustomNameSet "Экипаж БТР"
+ }
+ ru3 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 2
+   }
+  }
+  coords 9687.019 80.58 13563.1
+  angles 0.599 -9.159 -1.909
+  m_aUnitPrefabSlots {
+   "{963A4B934971EBDF}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_CC_RANDOM.et"
+   "{7DE3DB256DCC5CB6}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_CREW_RANDOM.et"
+  }
+  m_sCustomNameSet "Экипаж БТР"
+ }
+ ru4 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 10660.814 282.263 12741.743
+  angles -8.865 -89.8 -4.445
+  m_aUnitPrefabSlots {
+   "{63F054736DDC8314}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/dim_USSR_SPN_Unarmed.et"
+  }
+  m_sCustomNameSet "Наблюдатель с секретом"
+ }
+}
