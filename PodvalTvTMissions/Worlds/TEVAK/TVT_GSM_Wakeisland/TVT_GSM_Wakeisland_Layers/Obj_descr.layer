@@ -1,0 +1,54 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ {
+  coords 10110.596 0 16108.392
+  m_sTitle "Правила и задачи "
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "Правила проведения игры в соответствии с Настоящими правилами указанными на сайте."\
+  ""\
+  "ЗАДАЧИ армии США: "\
+  "1. Захватить склад ГСМ (зеленный триггер) и удерживать в течении 5 минут."\
+  ""\
+  "ЗАДАЧИ армии ВС РФ:"\
+  "1. Захватить склад ГСМ (зеленный триггер) и удерживать в течении 5 минут."
+  m_aVisibleForFactions {
+   "RHS_USAF"
+   "RHS_AFRF"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+ {
+  coords 10113.558 -0.037 16108.633
+  m_sTitle "Ситуация"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "Напряжение между Соединенными Штатами Америки и Российской Федерацией достигло пика. На острове Пробуждения расположенном в Атлантике, обнаружен крупный склад горюче-смазочных материалов (ГСМ), оставленный гражданскими. Он не принадлежит ни одной из сторон. Этот объект — ключ к господству в регионе, контроль над ним даёт решающее преимущество: возможность оперативно заправлять корабли и пополнять запасы топлива. Армия США и Армия РФ одновременно получают разведданные об объекте и бросают свои передовые отряды на его захват. Побеждает тот, кто первым займёт склад и успеет организовать оборону до подхода резервов противника."
+  m_aVisibleForFactions {
+   "RHS_USAF"
+   "RHS_AFRF"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+}
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ RU_WIN {
+  coords 10103.487 0 16114.521
+  m_sTitle "Склад ГСМ захвачен РФ"
+  m_sFactionKey "RHS_AFRF"
+ }
+ USA_WIN {
+  coords 10125.017 -2.209 16127.025
+  m_sTitle "Склад ГСМ захвачен США"
+  m_sFactionKey "RHS_USAF"
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 10167.828 0 16147.103
+}
