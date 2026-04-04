@@ -7,6 +7,17 @@ $grp SCR_AIGroup : "{1128EBD3DDFF1D07}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Grou
   }
   coords 3167.374 4.906 3389.74
   angles 0 42.537 0
+  m_aUnitPrefabSlots {
+   "{998515E06ED7A4C9}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_SL.et"
+   "{E49DF9180B449850}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_SR.et"
+   "{2CA58D3E25DA1886}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_AT.et"
+   "{D90B2AEF04BBE301}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_AAT.et"
+   "{F40DE4FF5C5306DA}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_AR.et"
+   "{F9D89ADEABE46FF0}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_GL.et"
+   "{78410A549262E06D}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Rifle.et"
+   "{1D25ADA8774D4BD2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Medic.et"
+   "{B884B787D4886422}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Sharpshooter_SVDM.et"
+  }
  }
  btr {
   components {
@@ -26,11 +37,6 @@ $grp SCR_AIGroup : "{1128EBD3DDFF1D07}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Grou
   coords 3201.427 4.907 3359.098
   angles 0 40.735 0
  }
-}
-Vehicle APC_K17_Epoch_NoPTUR1 : "{136AF62C14074BD6}Prefabs/Vehicles/Wheeled/K17/APC_K17_Epoch_NoPTUR.et" {
- coords 3182.016 4.906 3399.585
- angles 0 131.86 0
- m_sAttachmentGroupName "bumer"
 }
 Vehicle UAZ1 : "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et" {
  coords 3235.8 4.906 3351.481
@@ -57,6 +63,16 @@ Vehicle Mi8MT_unarmed_transport_Podval_Black1 : "{4E0950A86BBCFB8F}Prefabs/Vehic
  coords 3126.317 4.906 3374.946
  angles 0 45.101 0
  m_sAttachmentGroupName "heli"
+}
+Vehicle K4386_Armed_TeplakOF1 : "{7645417BF4895416}Prefabs/Vehicles/Wheeled/K4386/K4386_Armed_TeplakOF.et" {
+ coords 3186.246 4.906 3396.129
+ angles 0 131.701 0
+ m_sAttachmentGroupName "bumer"
+}
+Vehicle K1 : "{A61E5C16E9A2161B}Prefabs/Vehicles/Wheeled/K4386/K4386.et" {
+ coords 3176.1 4.906 3405.072
+ angles 0 132.665 0
+ m_sAttachmentGroupName "bumer"
 }
 SCR_AIGroup : "{D266A249A174B7C7}Prefabs/Groups/OPFOR/RHS_AFRF/Recon/Group_RHS_AFRF_Recon_Squad_7.et" {
  components {
