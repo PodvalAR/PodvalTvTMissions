@@ -1,0 +1,65 @@
+SCR_AIGroup RHS_AFRF_100 : "{1128EBD3DDFF1D07}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Motorized.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+   m_iCompanyCallsign 1
+  }
+ }
+ coords 4413.654 1.597 11074.356
+ angles -3.515 19.63 -5.966
+}
+SCR_AIGroup RHS_AFRF_000 : "{496070641528229D}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_PL.et" {
+ coords 4443.819 1.59 11071.707
+ angles 0 -158.607 0
+}
+$grp SCR_AIGroup : "{D266A249A174B7C7}Prefabs/Groups/OPFOR/RHS_AFRF/Recon/Group_RHS_AFRF_Recon_Squad_7.et" {
+ RHS_AFRF_400 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 4
+   }
+  }
+  coords 4579.472 24.165 11128.296
+  angles 0 87.016 0
+ }
+ RHS_AFRF_401 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 4
+    m_iSquadCallsign 1
+   }
+  }
+  coords 4578.194 24.345 11143.923
+  angles 0 84.74 0
+ }
+}
+$grp SCR_AIGroup : "{EB131DDF464F90FD}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Squad.et" {
+ RHS_AFRF_200 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 4422.4 1.691 11063.454
+  angles 0 27.792 0
+ }
+ RHS_AFRF_201 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 4432.798 1.919 11054.033
+  angles 0.436 29.116 -0.782
+ }
+ RHS_AFRF_202 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 2
+   }
+  }
+  coords 4439.965 1.317 11091.831
+  angles 0 119.699 0
+ }
+}
