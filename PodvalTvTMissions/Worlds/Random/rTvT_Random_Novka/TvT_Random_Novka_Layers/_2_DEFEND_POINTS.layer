@@ -1,53 +1,161 @@
-GUB_DefendPointEntity DEFEND_POWER : "{C7CE0DC3D5144B7D}Prefabs/System/MissionRandomizer/DefendPointEntity.et" {
- coords 1740.186 74.184 1405.349
- angles 0 0 0
- m_sFlagName "FLAG_ARLEVILE"
- {
-  $grp GUB_SpawnPointEntity : "{0DCCBC83322A0A0D}Prefabs/System/MissionRandomizer/SpawnPointEntity.et" {
-   Squad_1 {
-    coords -31.502 -7.452 -3.002
-    angles 0 98.183 0
-    m_iCompanyCallsign 1
+$grp GUB_DefendPointEntity : "{C7CE0DC3D5144B7D}Prefabs/System/MissionRandomizer/DefendPointEntity.et" {
+ DEFEND_POWER {
+  coords 1740.186 74.184 1405.349
+  angles 0 0 0
+  m_sFlagName "FLAG_ARLEVILE"
+  {
+   $grp GUB_SpawnPointEntity : "{0DCCBC83322A0A0D}Prefabs/System/MissionRandomizer/SpawnPointEntity.et" {
+    Squad_1 {
+     coords -31.502 -7.452 -3.002
+     angles 0 98.183 0
+     m_iCompanyCallsign 1
+    }
+    Squad_2 {
+     coords -31.904 -7.511 3.727
+     angles 0 -92.249 0
+     m_iCompanyCallsign 1
+     m_iSquadCallsign 1
+    }
+    Recon_2 {
+     coords -28.123 -6.229 -60.524
+     angles -11.822 -106.471 0.162
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+     m_iSquadCallsign 1
+    }
+    Recon_1 {
+     coords -24.172 -6.541 -73.461
+     angles 0 -105.733 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+    }
+    Motorized_1 {
+     coords -28.703 -7.955 -30.658
+     angles 0 -82.617 0
+     m_eGroupType Motorized
+     m_iCompanyCallsign 2
+    }
+    Commander_1 {
+     coords -27.443 -7.475 -7.129
+     angles 0 92.702 0
+     m_eGroupType Command_1
+    }
+    Squad_3 {
+     coords -29.117 -2.576 27.577
+     angles 0 98.513 0
+     m_iCompanyCallsign 1
+     m_iSquadCallsign 2
+    }
    }
-   Squad_2 {
-    coords -31.904 -7.511 3.727
-    angles 0 -92.249 0
-    m_iCompanyCallsign 1
-    m_iSquadCallsign 1
-   }
-   Recon_2 {
-    coords -28.123 -6.229 -60.524
-    angles -11.822 -106.471 0.162
-    m_eGroupType Recon
-    m_iCompanyCallsign 3
-    m_iSquadCallsign 1
-   }
-   Recon_1 {
-    coords -24.172 -6.541 -73.461
-    angles 0 -105.733 0
-    m_eGroupType Recon
-    m_iCompanyCallsign 3
-   }
-   Motorized_1 {
-    coords -28.703 -7.955 -30.658
-    angles 0 -82.617 0
-    m_eGroupType Motorized
-    m_iCompanyCallsign 2
-   }
-   Commander_1 {
-    coords -27.443 -7.475 -7.129
-    angles 0 92.702 0
-    m_eGroupType Command_1
-   }
-   Squad_3 {
-    coords -29.117 -2.576 27.577
-    angles 0 98.513 0
-    m_iCompanyCallsign 1
-    m_iSquadCallsign 2
+   SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+    coords 14.204 -0.464 -17.164
    }
   }
-  SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
-   coords 14.204 -0.464 -17.164
+ }
+ DEFEND_PLANT {
+  coords 2296.852 75.781 887.607
+  angles 0 0 0
+  m_sFlagName "FLAG_ARLEVILE"
+  {
+   $grp GUB_SpawnPointEntity : "{0DCCBC83322A0A0D}Prefabs/System/MissionRandomizer/SpawnPointEntity.et" {
+    Squad_4 {
+     coords -0.736 -0.952 15.963
+     angles 0 -101.587 0
+     m_iCompanyCallsign 1
+    }
+    Squad_5 {
+     coords 2.218 -0.96 2.315
+     angles 0 -105.372 0
+     m_iCompanyCallsign 1
+     m_iSquadCallsign 1
+    }
+    Recon_3 {
+     coords 14.28 1.945 46.475
+     angles 0 -12.058 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+     m_iSquadCallsign 1
+    }
+    Recon_4 {
+     coords 1.813 2.267 42.757
+     angles 0 -13.24 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+    }
+    Motorized_2 {
+     coords -2.641 -7.299 29.051
+     angles 0 -102.115 0
+     m_eGroupType Motorized
+     m_iCompanyCallsign 2
+    }
+    Commander_2 {
+     coords 1.204 -1.388 -22.49
+     angles 0 92.702 0
+     m_eGroupType Command_1
+    }
+    Squad_6 {
+     coords 4.094 -1.871 -9.521
+     angles 0 -94.694 0
+     m_iCompanyCallsign 1
+     m_iSquadCallsign 2
+    }
+   }
+   SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+    coords 14.204 -0.464 -17.164
+   }
+  }
+ }
+ DEFEND_KRASNY {
+  coords 1521.898 67.121 696.292
+  angles 0 0 0
+  m_sFlagName "FLAG_ARLEVILE"
+  {
+   $grp GUB_SpawnPointEntity : "{0DCCBC83322A0A0D}Prefabs/System/MissionRandomizer/SpawnPointEntity.et" {
+    Squad_7 {
+     coords -0.736 -0.952 15.963
+     angles 0 -101.587 0
+     m_iCompanyCallsign 1
+    }
+    Squad_8 {
+     coords 2.218 -0.96 2.315
+     angles 0 -105.372 0
+     m_iCompanyCallsign 1
+     m_iSquadCallsign 1
+    }
+    Recon_5 {
+     coords 14.28 1.945 46.475
+     angles 0 -12.058 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+     m_iSquadCallsign 1
+    }
+    Recon_6 {
+     coords 1.813 2.267 42.757
+     angles 0 -13.24 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+    }
+    Motorized_3 {
+     coords -2.641 -7.299 29.051
+     angles 0 -102.115 0
+     m_eGroupType Motorized
+     m_iCompanyCallsign 2
+    }
+    Commander_3 {
+     coords 1.204 -1.388 -22.49
+     angles 0 92.702 0
+     m_eGroupType Command_1
+    }
+    Squad_9 {
+     coords 4.094 -1.871 -9.521
+     angles 0 -94.694 0
+     m_iCompanyCallsign 1
+     m_iSquadCallsign 2
+    }
+   }
+   SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+    coords 14.204 -0.464 -17.164
+   }
   }
  }
 }
