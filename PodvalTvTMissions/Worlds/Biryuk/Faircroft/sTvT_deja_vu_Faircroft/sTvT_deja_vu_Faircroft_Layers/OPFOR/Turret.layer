@@ -1,0 +1,55 @@
+$grp GenericEntity : "{31E55F3EDA8463C1}Prefabs/Props/Military/AmmoBoxes/drg_AmmoBox_82mm_mortar_100rnd_HE.et" {
+ {
+  coords 4058.692 6.146 4264.477
+  angles 90 40.651 5.106
+ }
+ {
+  coords 4058.427 6.137 4264.674
+  angles 90 -139.349 -174.894
+  {
+   GenericEntity {
+    ID "65FAC1C208B8B352"
+    coords 0.004 0.874 -0.004
+   }
+  }
+ }
+}
+GenericEntity : "{8EFDFF8205A28E26}Prefabs/Props/Military/AmmoBoxes/drg_AmmoBox_82mm_mortar_3rnd_Smoke.et" {
+ coords 4058.014 6.152 4264.864
+ angles 89.972 29.989 -3.546
+ {
+  $grp GenericEntity : "{8EFDFF8205A28E26}Prefabs/Props/Military/AmmoBoxes/drg_AmmoBox_82mm_mortar_3rnd_Smoke.et" {
+   {
+    coords 0 0.096 0
+   }
+   {
+    coords 0 0.193 0
+   }
+   {
+    coords 0 0.287 0
+   }
+   {
+    coords 0 0.382 0
+   }
+   {
+    coords 0 0.474 0
+   }
+   {
+    coords 0 0.568 0
+   }
+   {
+    coords 0 0.658 0
+   }
+   {
+    coords 0 0.756 0
+   }
+  }
+ }
+}
+GameEntity : "{B41607EAB58A4252}Prefabs/Items/Equipment/BalisticTable/BalisticTable_USSR.et" {
+ coords 4059.208 5.971 4263.853
+}
+Turret : "{D1FFE458E8AC4BDB}Prefabs/Weapons/Mortars/2B14/Mortar_2B14_hand.et" {
+ coords 4059.625 5.966 4262.593
+ angles 0 36.916 0
+}
