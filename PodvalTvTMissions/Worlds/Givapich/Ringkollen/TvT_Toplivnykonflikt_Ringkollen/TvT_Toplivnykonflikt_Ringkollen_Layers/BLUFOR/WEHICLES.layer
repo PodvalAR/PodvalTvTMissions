@@ -1,0 +1,39 @@
+Vehicle M923A1_tanker_MERDC1 : "{26013123314183EA}Prefabs/Vehicles/Wheeled/M923A1/M923A1_tanker_MERDC.et" {
+ components {
+  SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+   m_fFuelConsumption 0
+  }
+  SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+   FuelNodes {
+    SCR_FuelNode "{5622A70CD4036C5A}" {
+     m_fInitialFuelTankState 0
+    }
+   }
+  }
+ }
+ coords 817.789 378.318 2411.819
+ angles 0 33.226 0
+ m_sAttachmentGroupName "Ses_CDF_000"
+}
+$grp Vehicle : "{B120CDDBEF8DB007}Prefabs/Vehicles/Wheeled/M998/M1025_armed_base.et" {
+ M1025_armed_base1 {
+  coords 794.61 378.221 2454.905
+  angles 0 60.813 0
+  m_sAttachmentGroupName "Ses_CDF_201"
+ }
+ M1025_armed_base2 {
+  coords 812.939 379.02 2465.116
+  angles 4.419 45.333 0.657
+  m_sAttachmentGroupName "Ses_CDF_200s"
+ }
+ M1025_armed_base3 {
+  coords 818.407 379.879 2472.613
+  angles 5.176 37.087 0.554
+  m_sAttachmentGroupName "Ses_CDF_200"
+ }
+ M1025_armed_base4 {
+  coords 802.523 378.437 2458.383
+  angles 2.828 70.706 -0.042
+  m_sAttachmentGroupName "Ses_CDF_201"
+ }
+}

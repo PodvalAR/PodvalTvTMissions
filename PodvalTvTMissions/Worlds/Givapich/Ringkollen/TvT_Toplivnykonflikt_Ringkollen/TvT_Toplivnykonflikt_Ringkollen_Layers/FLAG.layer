@@ -1,0 +1,39 @@
+GenericEntity : "{52327EA0926E4EC7}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_02_V1_USAF.et" {
+ components {
+  SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+   m_sDefaultMaterial "{1D4A447A3E34C70E}Assets/Props/Fabric/Flags/Data/Flag_1_2_CDF.emat"
+   m_aObjectiveNames {
+    "AFRF_FLAG"
+    "CDF_FLAG"
+   }
+   m_aFlagData {
+    PS_FlagData "{690EF45F30C0D0DE}" {
+     m_sFactionKey "Ses_CDF"
+    }
+   }
+   m_sFactionKey "Ses_CDF"
+   m_bUseAdvanceGameState 0
+   m_sNotificationText "Флаг захвачен ВС РФ"
+  }
+  BaseActionsManagerComponent "{6202D4E6F133BF4A}" {
+   additionalActions {
+    PS_FlagChangeAction "{6202D4E6A53D4B3C}" {
+     Duration 10
+     m_bUseAnimation 1
+    }
+   }
+  }
+ }
+ coords 811.394 389.517 2496.305
+ angles 21.447 0 0
+}
+PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+ coords 808.234 387.773 2497.733
+ m_MarkerColor 0.007 0.002 0.002 1
+ m_sQuadName "flag-2"
+ m_sDescription "Флаг"
+ m_bVisibleForEmptyFaction 1
+ m_aHideOnGameModeStates {
+ }
+ m_bShowForAnyFaction 1
+}
