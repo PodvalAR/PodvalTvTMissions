@@ -1,0 +1,903 @@
+$grp GenericEntity : "{3D78D7D606FF9818}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_NoCapture.et" {
+ flag {
+  coords 369.791 6.866 742.914
+ }
+ flag2 {
+  coords 423.76 7.057 760.831
+  angles 2.069 0.039 1.079
+ }
+ flag4 {
+  coords 614.781 7.979 861.914
+ }
+ flag6 {
+  coords 542.09 7.918 505.16
+ }
+ flag7 {
+  coords 451.346 8.397 478.792
+ }
+ flagbig {
+  coords 470.282 6.682 631.812
+  angles 0.883 0.087 5.641
+ }
+ flagbig2 {
+  coords 475.282 6.668 683.162
+  angles 0.004 0 1.885
+ }
+}
+$grp GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ Bunker1 {
+  components {
+   GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+    m_aControlLogics {
+     GUB_ZoneControlLogic "{690CF004BF2242E4}" {
+      m_sZonePreviewName "Бункер №1"
+      m_sSuccessObjectiveNames {
+       "US_WIN"
+      }
+      m_sFailedObjectiveNames {
+       "USSR_WIN"
+      }
+      m_sMessage "Бункер №1 захвачен"
+      m_Timer GUB_ZoneControlTimer "{690CF004B7B4FF73}" {
+       timeToComplete 20
+      }
+      m_ZoneController GUB_ZoneController "{690CF004BB50FB95}" {
+       m_sZoneEntityName "Bunkerzone1"
+      }
+      m_FlagController GUB_FlagController "{690CF004BA3C84E2}" {
+       m_aFlagNames {
+        "flag"
+       }
+       m_fStartFactionKey "USSR"
+       m_fEndFactionKey "US"
+      }
+      m_aConditions {
+       GUB_ZoneControlBetweenFactionsCondition "{690CFAC089A0DDC1}" {
+        m_sFirstFactionKey "US"
+        m_sSecondFactionKey "USSR"
+        m_fComparisonMultiplier 2
+        m_iOperator GREATER
+       }
+      }
+     }
+    }
+   }
+  }
+  editor EntityEditorProps "{690CF0075D0F9B6E}" {
+  }
+  coords 4.703 0.937 676.811
+ }
+ Bunker2 {
+  components {
+   GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+    m_aControlLogics {
+     GUB_ZoneControlLogic "{690CF004BF2242E4}" {
+      m_sZonePreviewName "Бункер №2"
+      m_sSuccessObjectiveNames {
+       "US_WIN2"
+      }
+      m_sFailedObjectiveNames {
+       "USSR_WIN2"
+      }
+      m_sMessage "Бункер №2 захвачен"
+      m_Timer GUB_ZoneControlTimer "{690CF004B7B4FF73}" {
+       timeToComplete 20
+      }
+      m_ZoneController GUB_ZoneController "{690CF004BB50FB95}" {
+       m_sZoneEntityName "Bunkerzone2"
+      }
+      m_FlagController GUB_FlagController "{690CF004BA3C84E2}" {
+       m_aFlagNames {
+        "flag2"
+       }
+       m_fStartFactionKey "USSR"
+       m_fEndFactionKey "US"
+      }
+      m_aConditions {
+       GUB_ZoneControlBetweenFactionsCondition "{690CFAC089A0DDC1}" {
+        m_sFirstFactionKey "US"
+        m_sSecondFactionKey "USSR"
+        m_fComparisonMultiplier 2
+        m_iOperator GREATER
+       }
+      }
+     }
+    }
+   }
+  }
+  editor EntityEditorProps "{690CF0075D0F9B6E}" {
+  }
+  coords 4.703 0.937 676.811
+ }
+ Bunker4 {
+  components {
+   GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+    m_aControlLogics {
+     GUB_ZoneControlLogic "{690CF004BF2242E4}" {
+      m_sZonePreviewName "Бункер №3"
+      m_sSuccessObjectiveNames {
+       "US_WIN3"
+      }
+      m_sFailedObjectiveNames {
+       "USSR_WIN3"
+      }
+      m_sMessage "Бункер №3 захвачен"
+      m_Timer GUB_ZoneControlTimer "{690CF004B7B4FF73}" {
+       timeToComplete 20
+      }
+      m_ZoneController GUB_ZoneController "{690CF004BB50FB95}" {
+       m_sZoneEntityName "Bunkerzone4"
+      }
+      m_FlagController GUB_FlagController "{690CF004BA3C84E2}" {
+       m_aFlagNames {
+        "flag4"
+       }
+       m_fStartFactionKey "USSR"
+       m_fEndFactionKey "US"
+      }
+      m_aConditions {
+       GUB_ZoneControlBetweenFactionsCondition "{690CFAC089A0DDC1}" {
+        m_sFirstFactionKey "US"
+        m_sSecondFactionKey "USSR"
+        m_fComparisonMultiplier 2
+        m_iOperator GREATER
+       }
+      }
+     }
+    }
+   }
+  }
+  editor EntityEditorProps "{690CF0075D0F9B6E}" {
+  }
+  coords 4.703 0.937 676.811
+ }
+ Bunker6 {
+  components {
+   GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+    m_aControlLogics {
+     GUB_ZoneControlLogic "{690CF004BF2242E4}" {
+      m_sZonePreviewName "Бункер №4"
+      m_sSuccessObjectiveNames {
+       "US_WIN4"
+      }
+      m_sFailedObjectiveNames {
+       "USSR_WIN4"
+      }
+      m_sMessage "Бункер №4 захвачен"
+      m_Timer GUB_ZoneControlTimer "{690CF004B7B4FF73}" {
+       timeToComplete 20
+      }
+      m_ZoneController GUB_ZoneController "{690CF004BB50FB95}" {
+       m_sZoneEntityName "Bunkerzone6"
+      }
+      m_FlagController GUB_FlagController "{690CF004BA3C84E2}" {
+       m_aFlagNames {
+        "flag6"
+       }
+       m_fStartFactionKey "USSR"
+       m_fEndFactionKey "US"
+      }
+      m_aConditions {
+       GUB_ZoneControlBetweenFactionsCondition "{690CFAC089A0DDC1}" {
+        m_sFirstFactionKey "US"
+        m_sSecondFactionKey "USSR"
+        m_fComparisonMultiplier 2
+        m_iOperator GREATER
+       }
+      }
+     }
+    }
+   }
+  }
+  editor EntityEditorProps "{690CF0075D0F9B6E}" {
+  }
+  coords 4.703 0.937 676.811
+ }
+ Bunker7 {
+  components {
+   GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+    m_aControlLogics {
+     GUB_ZoneControlLogic "{690CF004BF2242E4}" {
+      m_sZonePreviewName "Бункер №5"
+      m_sSuccessObjectiveNames {
+       "US_WIN5"
+      }
+      m_sFailedObjectiveNames {
+       "USSR_WIN5"
+      }
+      m_sMessage "Бункер №5 захвачен"
+      m_Timer GUB_ZoneControlTimer "{690CF004B7B4FF73}" {
+       timeToComplete 20
+      }
+      m_ZoneController GUB_ZoneController "{690CF004BB50FB95}" {
+       m_sZoneEntityName "Bunkerzone7"
+      }
+      m_FlagController GUB_FlagController "{690CF004BA3C84E2}" {
+       m_aFlagNames {
+        "flag7"
+       }
+       m_fStartFactionKey "USSR"
+       m_fEndFactionKey "US"
+      }
+      m_aConditions {
+       GUB_ZoneControlBetweenFactionsCondition "{690CFAC089A0DDC1}" {
+        m_sFirstFactionKey "US"
+        m_sSecondFactionKey "USSR"
+        m_fComparisonMultiplier 2
+        m_iOperator GREATER
+       }
+      }
+     }
+    }
+   }
+  }
+  editor EntityEditorProps "{690CF0075D0F9B6E}" {
+  }
+  coords 4.703 0.937 676.811
+ }
+ Bunkerbig {
+  components {
+   GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+    m_aControlLogics {
+     GUB_ZoneControlLogic "{690CF004BF2242E4}" {
+      m_sZonePreviewName "Большой бункер"
+      m_bAdvanceGameStage 1
+      m_sSuccessObjectiveNames {
+       "US_WIN6"
+      }
+      m_sFailedObjectiveNames {
+       "USSR_WIN6"
+      }
+      m_sMessage "Большой бункер захвачен"
+      m_Timer GUB_ZoneControlTimer "{690CF004B7B4FF73}" {
+       timeToComplete 120
+      }
+      m_ZoneController GUB_ZoneController "{690CF004BB50FB95}" {
+       m_sZoneEntityName "BunkerzoneBIG"
+      }
+      m_FlagController GUB_FlagController "{690CF004BA3C84E2}" {
+       m_aFlagNames {
+        "flagbig"
+        "flagbig2"
+       }
+       m_fStartFactionKey "USSR"
+       m_fEndFactionKey "US"
+      }
+      m_aConditions {
+       GUB_ZoneControlBetweenFactionsCondition "{690CFAC089A0DDC1}" {
+        m_sFirstFactionKey "US"
+        m_sSecondFactionKey "USSR"
+        m_fComparisonMultiplier 2
+        m_iOperator GREATER
+       }
+      }
+     }
+    }
+   }
+  }
+  editor EntityEditorProps "{690CF0075D0F9B6E}" {
+  }
+  coords 4.703 0.937 676.811
+ }
+}
+$grp PolylineShapeEntity : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
+ Bunkerzone1 {
+  components {
+   PS_PolyZone "{60E90266F25533F6}" {
+    m_mPolygonTexture ""
+    m_cPolygonColor 0.235 0.178 0.026 1
+    m_fPolygonUVScale 0.44
+    m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+    m_cPolygonBorderColor 0.174 0.099 0.018 1
+    m_fPolygonBorderWidth 5
+    m_aVisibleForFactions {
+     "RHS_USAF"
+     "RHS_AFRF"
+     ""
+    }
+   }
+  }
+  coords 360.178 1.25 746.5
+  Points {
+   ShapePoint "{690CF004E32F8297}" {
+    Position -0.548 0.031 -2.748
+   }
+   ShapePoint "{690CF004FDC93699}" {
+    Position 1.893 0.031 -4.082
+   }
+   ShapePoint "{690CF004FC314498}" {
+    Position 2.373 0.062 -7.078
+   }
+   ShapePoint "{690CF004FF150EC1}" {
+    Position 0.606 0.094 -10.923
+   }
+   ShapePoint "{690CF004F95BACD9}" {
+    Position 6.778 0.124 -14.465
+   }
+   ShapePoint "{690CF004F828454C}" {
+    Position 8.759 0.094 -12.272
+   }
+   ShapePoint "{690CF004FB2AC5B3}" {
+    Position 13.879 0.094 -11.144
+   }
+   ShapePoint "{690CF004FA0669AF}" {
+    Position 15.657 0.116 -13.901
+   }
+   ShapePoint "{690CF004F6515852}" {
+    Position 17.738 0.102 -13.047
+   }
+   ShapePoint "{690CF004F1C3DFAB}" {
+    Position 19.311 0.094 -11.846
+   }
+   ShapePoint "{690CF004F131F7B6}" {
+    Position 20.753 0.086 -10.034
+   }
+   ShapePoint "{690CF004F0B5D44D}" {
+    Position 21.837 0.063 -7.818
+   }
+   ShapePoint "{690CF004F33BA6D9}" {
+    Position 21.983 0.039 -5.019
+   }
+   ShapePoint "{690CF004F24DEF10}" {
+    Position 18.932 0.031 -4.121
+   }
+   ShapePoint "{690CF0070DBB5A06}" {
+    Position 19.014 0 -0.244
+   }
+   ShapePoint "{690CF0070C48138E}" {
+    Position 20.684 -0.031 3.753
+   }
+   ShapePoint "{690CF0070F008BBF}" {
+    Position 14.296 -0.058 7.24
+   }
+   ShapePoint "{690CF0070980AD2D}" {
+    Position 12.046 -0.031 5.261
+   }
+   ShapePoint "{690CF00708EE1F71}" {
+    Position 11.193 -0.031 5.479
+   }
+   ShapePoint "{690CF007088F1757}" {
+    Position 10.022 -0.031 5.44
+   }
+   ShapePoint "{690CF007082EF43E}" {
+    Position 8.561 -0.031 5.076
+   }
+   ShapePoint "{690CF0070BA015A0}" {
+    Position 7.809 -0.031 4.359
+   }
+   ShapePoint "{690CF0070AE0522D}" {
+    Position 6.137 -0.031 6.382
+   }
+   ShapePoint "{690CF00705AE014B}" {
+    Position 3.386 -0.031 4.98
+   }
+   ShapePoint "{690CF0070460C7A4}" {
+    Position 2.396 -0.006 1.905
+   }
+  }
+ }
+ Bunkerzone2 {
+  components {
+   PS_PolyZone "{60E90266F25533F6}" {
+    m_mPolygonTexture ""
+    m_cPolygonColor 0.235 0.178 0.026 1
+    m_fPolygonUVScale 0.44
+    m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+    m_cPolygonBorderColor 0.174 0.099 0.018 1
+    m_fPolygonBorderWidth 5
+    m_aVisibleForFactions {
+     "RHS_USAF"
+     "RHS_AFRF"
+     ""
+    }
+   }
+  }
+  coords 413.192 1.036 763.744
+  angles 0 1.057 0
+  Points {
+   ShapePoint "{690CF004E32F8297}" {
+    Position -0.548 0.031 -2.748
+   }
+   ShapePoint "{690CF004FDC93699}" {
+    Position 1.893 0.031 -4.082
+   }
+   ShapePoint "{690CF004FC314498}" {
+    Position 2.373 0.062 -7.078
+   }
+   ShapePoint "{690CF004FF150EC1}" {
+    Position 0.606 0.094 -10.923
+   }
+   ShapePoint "{690CF004F95BACD9}" {
+    Position 6.778 0.124 -14.465
+   }
+   ShapePoint "{690CF004F828454C}" {
+    Position 8.759 0.094 -12.272
+   }
+   ShapePoint "{690CF004FB2AC5B3}" {
+    Position 13.879 0.094 -11.144
+   }
+   ShapePoint "{690CF004FA0669AF}" {
+    Position 15.657 0.116 -13.901
+   }
+   ShapePoint "{690CF004F6515852}" {
+    Position 17.738 0.102 -13.047
+   }
+   ShapePoint "{690CF004F1C3DFAB}" {
+    Position 19.311 0.094 -11.846
+   }
+   ShapePoint "{690CF004F131F7B6}" {
+    Position 20.753 0.086 -10.034
+   }
+   ShapePoint "{690CF004F0B5D44D}" {
+    Position 21.837 0.063 -7.818
+   }
+   ShapePoint "{690CF004F33BA6D9}" {
+    Position 21.983 0.039 -5.019
+   }
+   ShapePoint "{690CF004F24DEF10}" {
+    Position 18.932 0.031 -4.121
+   }
+   ShapePoint "{690CF0070DBB5A06}" {
+    Position 19.014 0 -0.244
+   }
+   ShapePoint "{690CF0070C48138E}" {
+    Position 20.684 -0.031 3.753
+   }
+   ShapePoint "{690CF0070F008BBF}" {
+    Position 14.296 -0.058 7.24
+   }
+   ShapePoint "{690CF0070980AD2D}" {
+    Position 12.046 -0.031 5.261
+   }
+   ShapePoint "{690CF00708EE1F71}" {
+    Position 11.193 -0.031 5.479
+   }
+   ShapePoint "{690CF007088F1757}" {
+    Position 10.022 -0.031 5.44
+   }
+   ShapePoint "{690CF007082EF43E}" {
+    Position 8.561 -0.031 5.076
+   }
+   ShapePoint "{690CF0070BA015A0}" {
+    Position 7.809 -0.031 4.359
+   }
+   ShapePoint "{690CF0070AE0522D}" {
+    Position 6.137 -0.031 6.382
+   }
+   ShapePoint "{690CF00705AE014B}" {
+    Position 3.386 -0.031 4.98
+   }
+   ShapePoint "{690CF0070460C7A4}" {
+    Position 2.396 -0.006 1.905
+   }
+  }
+ }
+ Bunkerzone4 {
+  components {
+   PS_PolyZone "{60E90266F25533F6}" {
+    m_mPolygonTexture ""
+    m_cPolygonColor 0.235 0.178 0.026 1
+    m_fPolygonUVScale 0.44
+    m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+    m_cPolygonBorderColor 0.174 0.099 0.018 1
+    m_fPolygonBorderWidth 5
+    m_aVisibleForFactions {
+     "RHS_USAF"
+     "RHS_AFRF"
+     ""
+    }
+   }
+  }
+  coords 606.083 0.794 869.362
+  angles 0 19.318 0
+  Points {
+   ShapePoint "{690CF004E32F8297}" {
+    Position -0.548 0.031 -2.748
+   }
+   ShapePoint "{690CF004FDC93699}" {
+    Position 1.893 0.031 -4.082
+   }
+   ShapePoint "{690CF004FC314498}" {
+    Position 2.373 0.062 -7.078
+   }
+   ShapePoint "{690CF004FF150EC1}" {
+    Position 0.606 0.094 -10.923
+   }
+   ShapePoint "{690CF004F95BACD9}" {
+    Position 6.778 0.124 -14.465
+   }
+   ShapePoint "{690CF004F828454C}" {
+    Position 8.759 0.094 -12.272
+   }
+   ShapePoint "{690CF004FB2AC5B3}" {
+    Position 13.879 0.094 -11.144
+   }
+   ShapePoint "{690CF004FA0669AF}" {
+    Position 15.657 0.116 -13.901
+   }
+   ShapePoint "{690CF004F6515852}" {
+    Position 17.738 0.102 -13.047
+   }
+   ShapePoint "{690CF004F1C3DFAB}" {
+    Position 19.311 0.094 -11.846
+   }
+   ShapePoint "{690CF004F131F7B6}" {
+    Position 20.753 0.086 -10.034
+   }
+   ShapePoint "{690CF004F0B5D44D}" {
+    Position 21.837 0.063 -7.818
+   }
+   ShapePoint "{690CF004F33BA6D9}" {
+    Position 21.983 0.039 -5.019
+   }
+   ShapePoint "{690CF004F24DEF10}" {
+    Position 18.932 0.031 -4.121
+   }
+   ShapePoint "{690CF0070DBB5A06}" {
+    Position 19.014 0 -0.244
+   }
+   ShapePoint "{690CF0070C48138E}" {
+    Position 20.684 -0.031 3.753
+   }
+   ShapePoint "{690CF0070F008BBF}" {
+    Position 14.296 -0.058 7.24
+   }
+   ShapePoint "{690CF0070980AD2D}" {
+    Position 12.046 -0.031 5.261
+   }
+   ShapePoint "{690CF00708EE1F71}" {
+    Position 11.193 -0.031 5.479
+   }
+   ShapePoint "{690CF007088F1757}" {
+    Position 10.022 -0.031 5.44
+   }
+   ShapePoint "{690CF007082EF43E}" {
+    Position 8.561 -0.031 5.076
+   }
+   ShapePoint "{690CF0070BA015A0}" {
+    Position 7.809 -0.031 4.359
+   }
+   ShapePoint "{690CF0070AE0522D}" {
+    Position 6.137 -0.031 6.382
+   }
+   ShapePoint "{690CF00705AE014B}" {
+    Position 3.386 -0.031 4.98
+   }
+   ShapePoint "{690CF0070460C7A4}" {
+    Position 2.396 -0.006 1.905
+   }
+  }
+ }
+ Bunkerzone6 {
+  components {
+   PS_PolyZone "{60E90266F25533F6}" {
+    m_mPolygonTexture ""
+    m_cPolygonColor 0.235 0.178 0.026 1
+    m_fPolygonUVScale 0.44
+    m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+    m_cPolygonBorderColor 0.174 0.099 0.018 1
+    m_fPolygonBorderWidth 5
+    m_aVisibleForFactions {
+     "RHS_USAF"
+     "RHS_AFRF"
+     ""
+    }
+   }
+  }
+  coords 531.494 2.062 508.355
+  angles -0.072 -2.911 -0.416
+  Points {
+   ShapePoint "{690CF004E32F8297}" {
+    Position -0.548 0.031 -2.748
+   }
+   ShapePoint "{690CF004FDC93699}" {
+    Position 1.893 0.031 -4.082
+   }
+   ShapePoint "{690CF004FC314498}" {
+    Position 2.373 0.062 -7.078
+   }
+   ShapePoint "{690CF004FF150EC1}" {
+    Position 0.606 0.094 -10.923
+   }
+   ShapePoint "{690CF004F95BACD9}" {
+    Position 7.214 0.024 -14.17
+   }
+   ShapePoint "{690CF004F828454C}" {
+    Position 8.918 -0.017 -12.009
+   }
+   ShapePoint "{690CF004FB2AC5B3}" {
+    Position 14.096 -0.09 -10.74
+   }
+   ShapePoint "{690CF004FA0669AF}" {
+    Position 16.046 -0.101 -13.424
+   }
+   ShapePoint "{690CF004F6515852}" {
+    Position 17.704 -0.123 -12.431
+   }
+   ShapePoint "{690CF004F1C3DFAB}" {
+    Position 19.056 0.007 -11.559
+   }
+   ShapePoint "{690CF004F131F7B6}" {
+    Position 20.579 0.031 -9.87
+   }
+   ShapePoint "{690CF004F0B5D44D}" {
+    Position 21.692 0.031 -7.811
+   }
+   ShapePoint "{690CF004F33BA6D9}" {
+    Position 22.037 -0.241 -4.384
+   }
+   ShapePoint "{690CF004F24DEF10}" {
+    Position 18.719 -0.203 -3.536
+   }
+   ShapePoint "{690CF0070DBB5A06}" {
+    Position 19.052 -0.233 0.295
+   }
+   ShapePoint "{690CF0070C48138E}" {
+    Position 20.396 -0.296 4.453
+   }
+   ShapePoint "{690CF0070F008BBF}" {
+    Position 13.961 -0.248 7.649
+   }
+   ShapePoint "{690CF0070980AD2D}" {
+    Position 11.73 -0.203 5.514
+   }
+   ShapePoint "{690CF00708EE1F71}" {
+    Position 11.033 -0.198 5.623
+   }
+   ShapePoint "{690CF007088F1757}" {
+    Position 9.89 -0.189 5.666
+   }
+   ShapePoint "{690CF007082EF43E}" {
+    Position 8.479 -0.175 5.252
+   }
+   ShapePoint "{690CF0070BA015A0}" {
+    Position 7.555 -0.146 4.703
+   }
+   ShapePoint "{690CF0070AE0522D}" {
+    Position 5.806 -0.144 6.402
+   }
+   ShapePoint "{690CF00705AE014B}" {
+    Position 3.237 -0.103 4.994
+   }
+   ShapePoint "{690CF0070460C7A4}" {
+    Position 2.396 -0.006 1.905
+   }
+  }
+ }
+ Bunkerzone7 {
+  components {
+   PS_PolyZone "{60E90266F25533F6}" {
+    m_mPolygonTexture ""
+    m_cPolygonColor 0.235 0.178 0.026 1
+    m_fPolygonUVScale 0.44
+    m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+    m_cPolygonBorderColor 0.174 0.099 0.018 1
+    m_fPolygonBorderWidth 5
+    m_aVisibleForFactions {
+     "RHS_USAF"
+     "RHS_AFRF"
+     ""
+    }
+   }
+  }
+  coords 442.596 2.361 487.835
+  angles -0.662 32.492 -2.08
+  Points {
+   ShapePoint "{60E90266E922A02A}" {
+    Position 0.386 -0.057 -0.313
+   }
+   ShapePoint "{690CF004E32F8297}" {
+    Position 0.276 -0.078 -3.182
+   }
+   ShapePoint "{690CF004FDC93699}" {
+    Position 3.129 -0.158 -4.382
+   }
+   ShapePoint "{690CF004FC314498}" {
+    Position 3.605 -0.198 -7.063
+   }
+   ShapePoint "{690CF004FF150EC1}" {
+    Position 2.365 -0.169 -11.083
+   }
+   ShapePoint "{690CF004F95BACD9}" {
+    Position 8.751 -0.362 -13.571
+   }
+   ShapePoint "{690CF004F828454C}" {
+    Position 10.435 -0.411 -11.239
+   }
+   ShapePoint "{690CF004FB2AC5B3}" {
+    Position 15.43 -0.535 -9.781
+   }
+   ShapePoint "{690CF004FA0669AF}" {
+    Position 17.664 -0.614 -12.032
+   }
+   ShapePoint "{690CF004F6515852}" {
+    Position 18.824 -0.648 -11.169
+   }
+   ShapePoint "{690CF004F1C3DFAB}" {
+    Position 20.038 -0.678 -10.32
+   }
+   ShapePoint "{690CF004F131F7B6}" {
+    Position 22.191 -0.716 -7.681
+   }
+   ShapePoint "{690CF004F0B5D44D}" {
+    Position 22.753 -0.736 -5.067
+   }
+   ShapePoint "{690CF004F33BA6D9}" {
+    Position 22.689 -0.713 -2.39
+   }
+   ShapePoint "{690CF004F24DEF10}" {
+    Position 19.537 -0.62 -2.114
+   }
+   ShapePoint "{690CF0070DBB5A06}" {
+    Position 19.159 -0.585 2.024
+   }
+   ShapePoint "{690CF0070C48138E}" {
+    Position 20.195 -0.589 6.165
+   }
+   ShapePoint "{690CF0070F008BBF}" {
+    Position 13.53 -0.376 8.662
+   }
+   ShapePoint "{690CF0070980AD2D}" {
+    Position 11.505 -0.347 6.343
+   }
+   ShapePoint "{690CF00708EE1F71}" {
+    Position 10.751 -0.326 6.437
+   }
+   ShapePoint "{690CF007088F1757}" {
+    Position 9.32 -0.285 6.227
+   }
+   ShapePoint "{690CF007082EF43E}" {
+    Position 8.386 -0.259 5.853
+   }
+   ShapePoint "{690CF0070BA015A0}" {
+    Position 7.534 -0.234 5.098
+   }
+   ShapePoint "{690CF0070AE0522D}" {
+    Position 5.531 -0.173 6.597
+   }
+   ShapePoint "{690CF00705AE014B}" {
+    Position 3.237 -0.103 4.994
+   }
+   ShapePoint "{690CF0070460C7A4}" {
+    Position 2.396 -0.006 1.905
+   }
+  }
+ }
+ BunkerzoneBIG {
+  components {
+   PS_PolyZone "{60E90266F25533F6}" {
+    m_mPolygonTexture ""
+    m_cPolygonColor 0.235 0.178 0.026 1
+    m_fPolygonUVScale 0.44
+    m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+    m_cPolygonBorderColor 0.174 0.099 0.018 1
+    m_fPolygonBorderWidth 5
+    m_aVisibleForFactions {
+     "RHS_USAF"
+     "RHS_AFRF"
+     ""
+    }
+   }
+  }
+  coords 444.884 6.646 672.409
+  angles -0.662 32.492 -2.08
+  Points {
+   ShapePoint "{60E90266E922A02A}" {
+    Position 26.166 -5.825 -16.801
+   }
+   ShapePoint "{690D078FBA6B7F2F}" {
+    Position 35.272 -1.581 -28.441
+   }
+   ShapePoint "{690D078AAD842EB9}" {
+    Position 45.101 -1.898 -22.488
+   }
+   ShapePoint "{690D078AAF008EF0}" {
+    Position 52.805 -2.093 -15.136
+   }
+   ShapePoint "{690D078AA8E331C9}" {
+    Position 43.375 -1.605 -2.554
+   }
+   ShapePoint "{690D078AAB7B6338}" {
+    Position 40.2 -1.518 -4.985
+   }
+   ShapePoint "{690D078AA4C33FEF}" {
+    Position 28.334 -0.904 10.832
+   }
+   ShapePoint "{690D078AA7DB6DE9}" {
+    Position 30.022 -0.866 19.464
+   }
+   ShapePoint "{690D078AA6A668FB}" {
+    Position 17.46 -0.303 28.677
+   }
+   ShapePoint "{690D078AA04E2EC7}" {
+    Position 2.743 0.299 34.453
+   }
+   ShapePoint "{690D078AA2B4E8C5}" {
+    Position -5.828 0.725 44.348
+   }
+   ShapePoint "{690D078ABC18E10B}" {
+    Position -17.71 1.038 34.155
+   }
+   ShapePoint "{690D078ABEF0FCA8}" {
+    Position -9.777 0.644 24.939
+   }
+   ShapePoint "{690D078AB9EB4581}" {
+    Position -12.393 0.552 8.79
+   }
+   ShapePoint "{690D078AB85CA55F}" {
+    Position -0.147 0.002 -0.254
+   }
+   ShapePoint "{690D078ABB106AF9}" {
+    Position 14.453 -0.594 -5.921
+   }
+   ShapePoint "{690D078ABA3259BD}" {
+    Position 20.16 -0.746 -1.185
+   }
+   ShapePoint "{690D078AB538916B}" {
+    Position 28.656 -1.187 -12.628
+   }
+   ShapePoint "{690F3AD7ACC94FE9}" {
+    Position 25.19 -5.775 -15.499
+   }
+  }
+ }
+ Zone {
+  components {
+   PS_PolyZone "{60E90266F25533F6}" {
+    m_mPolygonTexture "{0750C59EDB7D77E5}UI/layouts/Textures/Grid1.edds"
+    m_cPolygonColor 1 0.22 0.22 1
+    m_fPolygonUVScale 0.44
+    m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+    m_cPolygonBorderColor 0.443 0.018 0.018 1
+    m_fPolygonBorderWidth 5
+    m_aVisibleForFactions {
+     "RHS_USAF"
+     "RHS_AFRF"
+     ""
+    }
+   }
+  }
+  coords 454.452 2.246 508.946
+  Points {
+   ShapePoint "{690D07965E6C6E60}" {
+    Position -0.907 0.163 -29.128
+   }
+   ShapePoint "{690D07965351A391}" {
+    Position 25.533 0.223 -30.1
+   }
+   ShapePoint "{690D07966FA9C7E7}" {
+    Position 87.319 -0.241 -1.258
+   }
+   ShapePoint "{690D07966BD22250}" {
+    Position 74.102 -0.434 145.434
+   }
+   ShapePoint "{690D079660B068AB}" {
+    Position 163.982 -0.092 359.21
+   }
+   ShapePoint "{690D079678BCDD05}" {
+    Position 65.642 -0.814 374.647
+   }
+   ShapePoint "{690D07967049582E}" {
+    Position -23.29 -0.965 250.763
+   }
+   ShapePoint "{690D0796840BAAF4}" {
+    Position -106.85 -0.896 224.639
+   }
+   ShapePoint "{690D079680231AE4}" {
+    Position -78.556 -0.371 121.95
+   }
+   ShapePoint "{690D0796825B01BA}" {
+    Position -134.732 -0.59 103.75
+   }
+   ShapePoint "{690D07969C730893}" {
+    Position -106.583 -0.34 10.825
+   }
+   ShapePoint "{690D07969960AF1B}" {
+    Position -24.353 -0.362 26.452
+   }
+   ShapePoint "{690D07969B8D4BE6}" {
+    Position -17.459 -0.118 0.846
+   }
+  }
+ }
+}

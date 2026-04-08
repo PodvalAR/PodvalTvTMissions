@@ -9,11 +9,14 @@ GenericEntity zonecontrol : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBet
    m_aControlLogics {
     GUB_ZoneControlLogicCapture "{69071C6288A1D755}" {
      m_sZonePreviewName "Склад ГСМ"
+     m_bAdvanceGameStage 1
      m_sSuccessObjectiveNames {
       "USA_WIN"
+      "USA_FEIL"
      }
      m_sFailedObjectiveNames {
       "RU_WIN"
+      "RU_FEIL"
      }
      m_sMessage "Склад ГСМ захвачен!"
      m_Timer GUB_ZoneControlTimer "{69071C61A332C178}" {

@@ -6,10 +6,10 @@ $grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescripti
   m_sTextData "Правила проведения игры в соответствии с Настоящими правилами указанными на сайте."\
   ""\
   "ЗАДАЧИ армии США: "\
-  "1. Захватить склад ГСМ (зеленный триггер) и удерживать в течении 5 минут."\
+  "1. Захватить склад ГСМ (зеленный триггер) и удерживать в течении 5 минут с перевесом более 1 человека."\
   ""\
   "ЗАДАЧИ армии ВС РФ:"\
-  "1. Захватить склад ГСМ (зеленный триггер) и удерживать в течении 5 минут."
+  "1. Захватить склад ГСМ (зеленный триггер) и удерживать в течении 5 минут с перевесом более 1 человека."
   m_aVisibleForFactions {
    "RHS_USAF"
    "RHS_AFRF"
@@ -35,12 +35,24 @@ $grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescripti
 $grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
  RU_WIN {
   coords 10103.487 0 16114.521
-  m_sTitle "Склад ГСМ захвачен РФ"
+  m_sTitle "Склад ГСМ захвачен "
   m_sFactionKey "RHS_AFRF"
  }
  USA_WIN {
   coords 10125.017 -2.209 16127.025
-  m_sTitle "Склад ГСМ захвачен США"
+  m_sTitle "Склад ГСМ захвачен "
+  m_sFactionKey "RHS_USAF"
+ }
+ RU_FEIL {
+  coords 10103.487 0 16114.521
+  m_sTitle "Склад ГСМ утерян"
+  m_iScore 0
+  m_sFactionKey "RHS_AFRF"
+ }
+ USA_FEIL {
+  coords 10125.017 -2.209 16127.025
+  m_sTitle "Склад ГСМ утерян"
+  m_iScore 0
   m_sFactionKey "RHS_USAF"
  }
 }

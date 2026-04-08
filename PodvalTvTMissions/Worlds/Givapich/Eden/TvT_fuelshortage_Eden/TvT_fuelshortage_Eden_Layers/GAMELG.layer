@@ -1,0 +1,35 @@
+GenericEntity : "{7A333AFB11EA847A}Prefabs/System/DRG_VehicleDestroyPrefab.et" {
+ components {
+  DRG_VehicleDestroyComponent "{65733BD6110AE8FC}" {
+   m_aVehicleLossLogics {
+    VehicleLossLogic "{690AC7BF8261FA29}" {
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "USAF_WIN1"
+      "USAF_WIN2"
+      "USAF_WIN3"
+     }
+     m_sFailedObjectiveNames {
+      "AFRF_WIN1"
+      "AFRF_WIN2"
+      "AFRF_WIN3"
+     }
+     m_sVehicleEntityNames {
+      "Ural4320_tanker1"
+      "Ural4320_tanker2"
+      "Ural4320_tanker3"
+     }
+     m_sMessage "Бензовозы уничтожены"
+    }
+   }
+  }
+ }
+ coords 4603.909 12.168 11593.722
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+}

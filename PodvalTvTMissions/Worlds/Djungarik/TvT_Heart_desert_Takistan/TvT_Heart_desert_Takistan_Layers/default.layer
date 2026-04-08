@@ -1,0 +1,35 @@
+SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
+ coords 6417.752 313.316 8311.022
+}
+PerceptionManager PerceptionManager1 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 6418.453 314.014 8315.767
+}
+PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
+ components {
+  SCR_TimeAndWeatherHandlerComponent "{5EE3229927D4D2F5}" {
+   m_bUsePredefineStartingTimeAndWeather 1
+   m_aStartingWeatherAndTime {
+    SCR_TimeAndWeatherState "{69087423076C52FE}" {
+     m_sWeatherPresetName "Clear"
+     m_iStartingHour 4
+     m_iStartingMinutes 40
+    }
+   }
+  }
+ }
+ coords 6418.635 315.716 8314.715
+}
+$grp GenericEntity : "{3D78D7D606FF9818}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_NoCapture.et" {
+ Flag_1 {
+  coords 8298.289 335.463 2102.528
+ }
+ Flag_2 {
+  coords 8342.796 333.381 2123.934
+ }
+ Flag_3 {
+  coords 10158.851 382.948 2372.194
+ }
+ Flag_4 {
+  coords 10393.351 411.263 2365.846
+ }
+}
