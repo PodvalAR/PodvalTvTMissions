@@ -1,43 +1,6 @@
-$grp Vehicle : "{28EAB17D6376D746}Prefabs/Vehicles/Wheeled/MB_Bus/MB_Bus.et" {
- MB_Bus1 {
-  coords 5255.028 171.543 6140.449
-  angles 0 -106.646 0
-  m_sAttachmentGroupName "AulFA"
- }
- MB_Bus2 {
-  coords 2147.368 288.118 7769.218
-  angles -5.564 73.72 0.149
-  m_sAttachmentGroupName "AulMUL"
- }
-}
-$grp Vehicle : "{2A6C93F2519318C4}Prefabs/Vehicles/Wheeled/S1203/S1203_BTR.et" {
- S1203_BTR1 {
-  coords 5232.607 171.625 6133.68
-  angles 0 -106.565 0
-  m_sAttachmentGroupName "AulFA"
- }
- S1203_BTR2 {
-  coords 2181.139 284.621 7779.549
-  angles -5.644 73.184 -0.07
-  m_sAttachmentGroupName "AulMUL"
- }
-}
-$grp Vehicle : "{795522D98BA1927E}Prefabs/Vehicles/Wheeled/PAZ/PAZ_GR.et" {
- PAZ_GR1 {
-  coords 5242.637 170.995 6136.762
-  angles 0 -107.901 0
-  m_sAttachmentGroupName "AulFA"
- }
- PAZ_GR2 {
-  coords 2166.046 285.503 7774.804
-  angles -5.643 73.832 -0.133
-  m_sAttachmentGroupName "AulMUL"
- }
-}
-Vehicle S105_white_shit1 : "{8194AFCEAF5E867F}Prefabs/Vehicles/Wheeled/S105/S105_white_shit.et" {
- coords 5218.999 171.625 6109.303
- angles 0 -16.334 0
- m_sAttachmentGroupName "Kom"
+Vehicle UAZ469_covered_CIV_teal1 : "{870EB660433857D3}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_covered_CIV_teal.et" {
+ coords 5222.805 171.625 6109.713
+ angles 0 -18.92 0
 }
 $grp SCR_AIGroup : "{A33B404F66AC1ED8}Prefabs/Groups/INDFOR/TKR/Group_Ses_TKR_Rifle.et" {
  BPLA2 {
@@ -51,26 +14,6 @@ $grp SCR_AIGroup : "{A33B404F66AC1ED8}Prefabs/Groups/INDFOR/TKR/Group_Ses_TKR_Ri
   angles 1.133 61.445 -1.701
   m_aUnitPrefabSlots {
    "{AAFFC8778E347777}Worlds/TEVAK/TVT_Strike_from_the_sky_Takistan/TKR_SL_Operator.et"
-   "{FF46B8D79FF9E847}Worlds/TEVAK/TVT_Strike_from_the_sky_Takistan/TKR_BPLA_Operator_2.et"
-   "{FF46B8D79FF9E847}Worlds/TEVAK/TVT_Strike_from_the_sky_Takistan/TKR_BPLA_Operator_2.et"
-   "{FF46B8D79FF9E847}Worlds/TEVAK/TVT_Strike_from_the_sky_Takistan/TKR_BPLA_Operator_2.et"
-   "{FF46B8D79FF9E847}Worlds/TEVAK/TVT_Strike_from_the_sky_Takistan/TKR_BPLA_Operator_2.et"
-  }
-  m_sCustomNameSet "Операторы БПЛА \"Шахед\""
- }
- BPLA3 {
-  components {
-   PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
-    m_iCompanyCallsign 3
-    m_iPlatoonCallsign 2
-   }
-  }
-  coords 8242.182 322.618 2083.49
-  angles 1.133 61.445 -1.701
-  m_aUnitPrefabSlots {
-   "{AAFFC8778E347777}Worlds/TEVAK/TVT_Strike_from_the_sky_Takistan/TKR_SL_Operator.et"
-   "{FF46B8D79FF9E847}Worlds/TEVAK/TVT_Strike_from_the_sky_Takistan/TKR_BPLA_Operator_2.et"
-   "{FF46B8D79FF9E847}Worlds/TEVAK/TVT_Strike_from_the_sky_Takistan/TKR_BPLA_Operator_2.et"
    "{FF46B8D79FF9E847}Worlds/TEVAK/TVT_Strike_from_the_sky_Takistan/TKR_BPLA_Operator_2.et"
    "{FF46B8D79FF9E847}Worlds/TEVAK/TVT_Strike_from_the_sky_Takistan/TKR_BPLA_Operator_2.et"
   }
@@ -88,8 +31,6 @@ $grp SCR_AIGroup : "{A33B404F66AC1ED8}Prefabs/Groups/INDFOR/TKR/Group_Ses_TKR_Ri
    "{AAFFC8778E347777}Worlds/TEVAK/TVT_Strike_from_the_sky_Takistan/TKR_SL_Operator.et"
    "{FF46B8D79FF9E847}Worlds/TEVAK/TVT_Strike_from_the_sky_Takistan/TKR_BPLA_Operator_2.et"
    "{FF46B8D79FF9E847}Worlds/TEVAK/TVT_Strike_from_the_sky_Takistan/TKR_BPLA_Operator_2.et"
-   "{FF46B8D79FF9E847}Worlds/TEVAK/TVT_Strike_from_the_sky_Takistan/TKR_BPLA_Operator_2.et"
-   "{FF46B8D79FF9E847}Worlds/TEVAK/TVT_Strike_from_the_sky_Takistan/TKR_BPLA_Operator_2.et"
   }
   m_sCustomNameSet "Операторы БПЛА \"Шахед\""
  }
@@ -99,7 +40,7 @@ $grp SCR_AIGroup : "{A33B404F66AC1ED8}Prefabs/Groups/INDFOR/TKR/Group_Ses_TKR_Ri
     m_iCompanyCallsign 1
    }
   }
-  coords 5238.954 171.625 6111.131
+  coords 5237.554 171.625 6110.765
   angles 0 -14.666 0
   m_aUnitPrefabSlots +{
    "{C00096717E140FE4}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_GL_Random.et"
@@ -121,6 +62,10 @@ $grp SCR_AIGroup : "{A33B404F66AC1ED8}Prefabs/Groups/INDFOR/TKR/Group_Ses_TKR_Ri
    "{C00096717E140FE4}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_GL_Random.et"
    "{6E9511C7C88E1E10}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_AT_Random.et"
    "{AAA88BB9DF1D6B4D}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_AAT_Random.et"
+   "{8E68A198939D2E8D}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Rifleman_Random.et"
+   "{C472228F83886D43}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Sapper_Random.et"
+   "{AA86E2D22A717D0C}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Sniper_Random.et"
+   "{8E68A198939D2E8D}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Rifleman_Random.et"
   }
   m_sCustomNameSet "Аул Феруз Абада"
  }
@@ -152,6 +97,10 @@ $grp SCR_AIGroup : "{A33B404F66AC1ED8}Prefabs/Groups/INDFOR/TKR/Group_Ses_TKR_Ri
    "{C00096717E140FE4}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_GL_Random.et"
    "{6E9511C7C88E1E10}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_AT_Random.et"
    "{AAA88BB9DF1D6B4D}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_AAT_Random.et"
+   "{8E68A198939D2E8D}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Rifleman_Random.et"
+   "{6E9511C7C88E1E10}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_AT_Random.et"
+   "{AAA88BB9DF1D6B4D}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_AAT_Random.et"
+   "{C472228F83886D43}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Sapper_Random.et"
   }
   m_sCustomNameSet "Аул Мулладоста"
  }
@@ -160,28 +109,22 @@ $grp SCR_AIGroup : "{A33B404F66AC1ED8}Prefabs/Groups/INDFOR/TKR/Group_Ses_TKR_Ri
   angles 0 -12.007 0
   m_aUnitPrefabSlots {
    "{44F829A0BCF2F1DA}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_PL.et"
+   "{8E68A198939D2E8D}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Rifleman_Random.et"
   }
   m_sCustomNameSet "Командир ополчения"
  }
 }
-$grp Vehicle : "{B70E6D12A8EC2410}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_FIA_transport_covered.et" {
- Ural4320_FIA_transport_covered1 {
-  components {
-   SCR_UniversalInventoryStorageComponent "{5916C58171230A92}" {
-    MultiSlots {
-     MultiSlotConfiguration "{5A60D38EDB3709A9}" {
-      SlotTemplate InventoryStorageSlot Bandages {
-       Prefab "{C397E98DFA8E5CCA}Prefabs/Drones/Shahed 136/Shahed_Base.et"
-      }
-      NumSlots 10
-     }
-    }
-   }
-  }
-  coords 8256.582 322.271 2090.052
-  angles 0 150.284 0
-  m_sAttachmentGroupName "BPLA3"
+$grp Vehicle : "{B47110AA1A806556}Prefabs/Vehicles/Wheeled/BTR70/BTR70_FIA.et" {
+ BTR70_FIA1 {
+  coords 5232.157 171.625 6132.04
+  angles 0 -108.667 0
  }
+ BTR70_FIA2 {
+  coords 2186.03 284.135 7780.387
+  angles -5.643 73.555 -0.106
+ }
+}
+$grp Vehicle : "{B70E6D12A8EC2410}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_FIA_transport_covered.et" {
  Ural4320_FIA_transport_covered3 {
   components {
    SCR_UniversalInventoryStorageComponent "{5916C58171230A92}" {
@@ -190,7 +133,7 @@ $grp Vehicle : "{B70E6D12A8EC2410}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_FIA
       SlotTemplate InventoryStorageSlot Bandages {
        Prefab "{C397E98DFA8E5CCA}Prefabs/Drones/Shahed 136/Shahed_Base.et"
       }
-      NumSlots 10
+      NumSlots 6
      }
     }
    }
@@ -207,7 +150,7 @@ $grp Vehicle : "{B70E6D12A8EC2410}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_FIA
       SlotTemplate InventoryStorageSlot Bandages {
        Prefab "{C397E98DFA8E5CCA}Prefabs/Drones/Shahed 136/Shahed_Base.et"
       }
-      NumSlots 10
+      NumSlots 6
      }
     }
    }
@@ -215,5 +158,43 @@ $grp Vehicle : "{B70E6D12A8EC2410}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_FIA
   coords 8244.312 322.258 2111.322
   angles 0 150.284 0
   m_sAttachmentGroupName "BPLA1"
+ }
+ Ural4320_FIA_transport_covered1 {
+  coords 5242.902 171.625 6135.877
+  angles 0 -108.802 0
+ }
+ Ural4320_FIA_transport_covered2 {
+  coords 5252.652 171.579 6139.253
+  angles 0 -108.802 0
+ }
+ Ural4320_FIA_transport_covered5 {
+  coords 2173.31 285.429 7776.55
+  angles -5.565 74.169 0.105
+ }
+ Ural4320_FIA_transport_covered6 {
+  coords 2159.141 286.883 7772.422
+  angles -5.912 74.201 -0.093
+ }
+}
+$grp GenericEntity : "{C397E98DFA8E5CCA}Prefabs/Drones/Shahed 136/Shahed_Base.et" {
+ {
+  coords 8230.914 322.187 2011.622
+  angles -30.215 -45.373 0.209
+ }
+ {
+  coords 8233.032 322.187 2013.742
+  angles -30.215 -45.373 0.209
+ }
+ {
+  coords 8235.319 322.177 2016.051
+  angles -30.215 -45.373 0.209
+ }
+ {
+  coords 8237.767 322.166 2018.522
+  angles -30.215 -45.373 0.209
+ }
+ {
+  coords 8240.106 322.156 2020.884
+  angles -30.215 -45.373 0.209
  }
 }

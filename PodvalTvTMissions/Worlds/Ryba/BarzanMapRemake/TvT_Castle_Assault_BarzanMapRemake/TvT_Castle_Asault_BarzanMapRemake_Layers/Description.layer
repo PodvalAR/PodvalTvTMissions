@@ -1,0 +1,60 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ Main_Description {
+  coords 1591.023 0 913.985
+  m_sTitle "Описание миссии"
+  m_sTextData "ВС РФ намерены взять под контроль остров, с которого морские пираты совершают рейды на корабли. Однако бандиты укрылись в местном старинном замке. ВС РФ планируют взять замок штурмом."
+  m_aVisibleForFactions {
+   ""
+   "RHS_AFRF"
+   "Ses_NAPA"
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+ Rules {
+  coords 1591.898 0 912.391
+  m_sTitle "Условности"
+  m_sTextData "НАПА запрещено выходить из красной зоны."\
+  "КСу НАПА запрещено покидать замок, отмеченный зелёной зоной."\
+  ""\
+  "Флаг захватывается через взаимодействие."\
+  "После убийства КСа НАПА необходимо подтвердить смерть через взаимодействие."
+  m_aVisibleForFactions {
+   ""
+   "RHS_AFRF"
+   "Ses_NAPA"
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+ Tasks {
+  coords 1592.468 0 911.066
+  m_sTitle "Цели "
+  m_sTextData "Для победы ВС РФ необходимо:"\
+  "— поменять флаг;"\
+  "— ликвидировать и подтвердить смерть КСа НАПА."\
+  ""\
+  "Для победы НАПА необходимо:"\
+  "— не дать поменять флаг;"\
+  "— защитить КСа."
+  m_aVisibleForFactions {
+   ""
+   "RHS_AFRF"
+   "Ses_NAPA"
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+ Rules2 {
+  coords 1591.337 0 912.853
+  m_sTitle "Правила"
+  m_sTextData "Разрешено всё, что не запрещено правилами проекта и условностями миссии."
+  m_aVisibleForFactions {
+   ""
+   "RHS_AFRF"
+   "Ses_NAPA"
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+}

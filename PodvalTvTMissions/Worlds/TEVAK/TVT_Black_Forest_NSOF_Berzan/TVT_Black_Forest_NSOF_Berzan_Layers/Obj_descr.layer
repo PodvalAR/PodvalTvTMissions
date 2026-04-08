@@ -1,0 +1,140 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ {
+  coords 10110.596 0 16108.392
+  m_sTitle "Правила и задачи "
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "Правила проведения игры в соответствии с Настоящими правилами указанными на сайте."\
+  ""\
+  "ЗАДАЧИ армии США: "\
+  "1. Взять под полный контроль лесопилку (красный триггер) и фортификационные сооружения (коричневые триггеры), а именно:"\
+  "-Бункер №1 (10 очков);"\
+  "-Бункер №2 (10 очков);"\
+  "-Бункер №3 (10 очков);"\
+  "-Бункер №4 (10 очков);"\
+  "-Бункер №5 (10 очков);"\
+  "-Большой бункер (50 очков)."\
+  ""\
+  "ЗАДАЧИ армии СССР:"\
+  "1. Удержать лесопилку (красный триггер) и фортификационные сооружения (коричневые триггеры)."\
+  "-Бункер №1 (10 очков);"\
+  "-Бункер №2 (10 очков);"\
+  "-Бункер №3 (10 очков);"\
+  "-Бункер №4 (10 очков);"\
+  "-Бункер №5 (10 очков);"\
+  "-Большой бункер (50 очков)."\
+  ""\
+  "Победа присваиваться стороне набравшей 60 и более очков."\
+  ""\
+  "ДОПОЛНИТЕЛЬНО:"\
+  "1. У миномётчиков США в МАШИНЕ лежит руководство к миномету.   "\
+  "  "
+  m_aVisibleForFactions {
+   "US"
+   "USSR"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+ {
+  coords 10113.558 -0.037 16108.633
+  m_sTitle "Ситуация"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "10 августа 1989 года. Северо-западный регион, бывшая Югославия."\
+  ""\
+  "Несмотря на официальные заявления о «восстановлении лесов», советские силы уже более года контролируют крупный лесозаготовительный комплекс. Под видом мирной хозяйственной деятельности СССР ведёт масштабную вырубку ценных пород дерева и отправляет его морским путём в Китай. Доходы от нелегальной торговли лесом идут на финансирование советского военного присутствия в регионе."\
+  ""\
+  "Американское командование рассматривает это не только как экологическое преступление, но и как прямую угрозу экономическим интересам США. Контроль над этим лесным районом позволит американцам вытеснить СССР с регионального рынка древесины."\
+  ""\
+  "Советские войска глубоко укрепились на территории лесопилки, построив развитую систему фортификационных сооружений: блиндажи, траншеи, ДОТы и огневые точки. Лесопилка превратилась в настоящую крепость."
+  m_aVisibleForFactions {
+   "US"
+   "USSR"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+}
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ USSR_WIN {
+  coords 10103.487 0 16114.521
+  m_sTitle "Бункер №1 удержан"
+  m_iScore 10
+  m_sFactionKey "USSR"
+ }
+ US_WIN {
+  coords 10125.017 -2.209 16127.025
+  m_sTitle "Бункер №1 захвачен"
+  m_iScore 10
+  m_sFactionKey "US"
+ }
+ USSR_WIN2 {
+  coords 10103.487 0 16114.521
+  m_sTitle "Бункер №2 удержан"
+  m_iScore 10
+  m_sFactionKey "USSR"
+ }
+ USSR_WIN3 {
+  coords 10103.487 0 16114.521
+  m_sTitle "Бункер №2 удержан"
+  m_iScore 10
+  m_sFactionKey "USSR"
+ }
+ USSR_WIN4 {
+  coords 10103.487 0 16114.521
+  m_sTitle "Бункер №4 удержан"
+  m_iScore 10
+  m_sFactionKey "USSR"
+ }
+ USSR_WIN5 {
+  coords 10103.487 0 16114.521
+  m_sTitle "Бункер №5 удержан"
+  m_iScore 10
+  m_sFactionKey "USSR"
+ }
+ USSR_WIN6 {
+  coords 10103.487 0 16114.521
+  m_sTitle "Большой бункер удержан"
+  m_iScore 50
+  m_sFactionKey "USSR"
+ }
+ US_WIN2 {
+  coords 10125.017 -2.209 16127.025
+  m_sTitle "Бункер №2 захвачен"
+  m_iScore 10
+  m_sFactionKey "US"
+ }
+ US_WIN3 {
+  coords 10125.017 -2.209 16127.025
+  m_sTitle "Бункер №3 захвачен"
+  m_iScore 10
+  m_sFactionKey "US"
+ }
+ US_WIN4 {
+  coords 10125.017 -2.209 16127.025
+  m_sTitle "Бункер №4 захвачен"
+  m_iScore 10
+  m_sFactionKey "US"
+ }
+ US_WIN5 {
+  coords 10125.017 -2.209 16127.025
+  m_sTitle "Бункер №5 захвачен"
+  m_iScore 10
+  m_sFactionKey "US"
+ }
+ US_WIN6 {
+  coords 397.214 7.182 518.68
+  m_sTitle "Большой бункер захвачен"
+  m_iScore 50
+  m_sFactionKey "US"
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 10167.828 0 16147.103
+}

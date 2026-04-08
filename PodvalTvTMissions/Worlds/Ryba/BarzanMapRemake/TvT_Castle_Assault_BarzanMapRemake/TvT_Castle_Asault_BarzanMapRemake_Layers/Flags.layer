@@ -1,0 +1,30 @@
+GenericEntity : "{F9EBA10CC445ED63}PrefabsEditable/Auto/Structures/Military/Flags/FlagPole_02_V1_CDF_Editable.et" {
+ components {
+  SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+   m_sDefaultMaterial "{4A4C10958E6E1882}Assets/Props/Fabric/Flags/Data/Flag_1_2_NAPA.emat"
+   m_aObjectiveNames {
+    "NAPA_FlagSafe"
+    "RU_FlagCapt"
+   }
+   m_aFlagData {
+    PS_FlagData "{68F48348FC4844EE}" {
+     m_sFactionKey "Ses_NAPA"
+    }
+    PS_FlagData "{68F48348FDB1489A}" {
+     m_sFactionKey "RHS_AFRF"
+     m_iCaptureCounter 1
+    }
+   }
+   m_sFactionKey "Ses_NAPA"
+  }
+  BaseActionsManagerComponent "{6202D4E6F133BF4A}" {
+   additionalActions {
+    PS_FlagChangeAction "{6202D4E6A53D4B3C}" {
+     Duration 15
+     m_bUseAnimation 1
+    }
+   }
+  }
+ }
+ coords 1041.81 49.806 563.312
+}

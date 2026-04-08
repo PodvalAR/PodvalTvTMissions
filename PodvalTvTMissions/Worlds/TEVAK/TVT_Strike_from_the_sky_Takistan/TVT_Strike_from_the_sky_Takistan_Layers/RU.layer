@@ -38,6 +38,7 @@ SCR_AIGroup Komandir : "{3ED14D411CDC1639}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/
  m_aUnitPrefabSlots {
   "{552177162DF26397}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_PL.et"
   "{A65FD76193BDAC03}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_Medic.et"
+  "{DEB5E4FBD4E1F8A9}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_Rifle_opt.et"
  }
  m_sCustomNameSet "Команидр"
 }
@@ -64,17 +65,10 @@ $grp Vehicle : "{7BC76F92B882889D}Prefabs/Vehicles/Wheeled/TIGR/PKP/GAZ_TIGR_v2_
   angles 0 44.511 0
  }
 }
-$grp Vehicle : "{7BD282AF716ED639}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_armed.et" {
- Mi8MT_armed1 {
-  coords 5979.727 109.313 11582.013
-  angles 0 -44.227 0
-  m_sAttachmentGroupName "mi82"
- }
- Mi8MT_armed2 {
-  coords 5950.421 109.313 11553.486
-  angles 0 -44.227 0
-  m_sAttachmentGroupName "mi81"
- }
+Vehicle Mi8MT_armed1 : "{7BD282AF716ED639}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_armed.et" {
+ coords 5979.727 109.313 11582.013
+ angles 0 -44.227 0
+ m_sAttachmentGroupName "mi82"
 }
 $grp SCR_AIGroup : "{CD784C02581E2C8B}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Desert/Group_RHS_AFRF_ATAK_Desert_Motorized_9.et" {
  btr1 {
@@ -134,6 +128,7 @@ $grp SCR_AIGroup : "{CD784C02581E2C8B}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Dese
    "{D42BB8F51B68538D}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_AAT.et"
    "{A1B73F900291F014}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_AR.et"
    "{AC6241B1F526993E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_GL.et"
+   "{A65FD76193BDAC03}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_Medic.et"
   }
   m_sCustomNameSet "Первый отряд ПВО"
  }
@@ -153,59 +148,33 @@ $grp SCR_AIGroup : "{CD784C02581E2C8B}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Dese
    "{D42BB8F51B68538D}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_AAT.et"
    "{A1B73F900291F014}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_AR.et"
    "{AC6241B1F526993E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_GL.et"
+   "{A65FD76193BDAC03}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_Medic.et"
   }
   m_sCustomNameSet "Второй отряд ПВО"
  }
 }
-$grp SCR_AIGroup : "{D43A9753198C5D8F}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Heli.et" {
- mi82 {
-  components {
-   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
-    m_iCompanyCallsign 4
-   }
-  }
-  coords 6006.838 109.312 11551.752
-  angles 0 -44.698 0
-  m_aUnitPrefabSlots {
-   "{68AC15456E4FCEAB}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_HeliPilot.et"
-   "{C22461801322D9AF}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_HeliCoPilot.et"
-   "{C22461801322D9AF}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_HeliCoPilot.et"
+SCR_AIGroup mi82 : "{D43A9753198C5D8F}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Heli.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+   m_iCompanyCallsign 4
   }
  }
- mi81 {
-  components {
-   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
-    m_iCompanyCallsign 4
-    m_iPlatoonCallsign 1
-   }
-  }
-  coords 5978.354 109.312 11523.565
-  angles 0 -44.698 0
-  m_aUnitPrefabSlots {
-   "{68AC15456E4FCEAB}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_HeliPilot.et"
-   "{C22461801322D9AF}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_HeliCoPilot.et"
-   "{C22461801322D9AF}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_HeliCoPilot.et"
-  }
+ coords 6006.838 109.312 11551.752
+ angles 0 -44.698 0
+ m_aUnitPrefabSlots {
+  "{68AC15456E4FCEAB}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_HeliPilot.et"
+  "{C22461801322D9AF}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_HeliCoPilot.et"
+  "{C22461801322D9AF}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_HeliCoPilot.et"
  }
 }
 $grp Vehicle : "{FD109F3702AAB392}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_ZU23.et" {
- Ural4320_ZU2 {
-  coords 6016.02 109.312 11631.893
-  angles 0 44.96 0
-  m_sAttachmentGroupName "zu2"
- }
  Ural4320_ZU3 {
-  coords 6025.495 109.311 11641.247
+  coords 6019.351 109.311 11635.095
   angles 0 44.96 0
   m_sAttachmentGroupName "zu2"
- }
- Ural4320_ZU4 {
-  coords 6038.321 109.311 11654.092
-  angles 0 44.96 0
-  m_sAttachmentGroupName "ZU1"
  }
  Ural4320_ZU5 {
-  coords 6046.352 109.311 11662.133
+  coords 6040.208 109.311 11655.98
   angles 0 44.96 0
   m_sAttachmentGroupName "ZU1"
  }
