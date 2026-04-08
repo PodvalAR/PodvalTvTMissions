@@ -1,14 +1,31 @@
 $grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
- ABOUT {
-  m_sTitle "Лор"
-  m_sTextData ""
+ "_0_ABOUT" {
+  coords 7473.525 108.377 11256.811
+  m_sTitle "Описание Миссии"
+  m_sTextData "Ходе наступления ВС РФ закрепились в двух ключивых точек, Армии США нужно выбить их из точек."
   m_bEmptyFactionVisibility 1
   m_bShowForAnyFaction 1
  }
- RULES {
-  m_sTitle "Правила"
-  m_sTextData ""
+ "_1_RULES" {
+  coords 7432.216 24.612 11261.807
+  m_sTitle "Правила и Задачи"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "ОБЩИЕ ПРАВИЛА "\
+  "— На миссии действуют правила для игры на ивентах."\
+  ""\
+  "УСЛОВИЕ ЗАХВАТА"\
+  "— Для захвата точек нужно двукратное преимущество в триггере в течение 2 мин."\
+  ""\
+  "СПОСОБЫ ПОБЕДЫ ДЛЯ ВС РФ"\
+  "— Удержать Завод. (50 очк)"\
+  "— Удержать Ферму. (50 очк)"\
+  ""\
+  "СПОСОБЫ ПОБЕДЫ ДЛЯ США"\
+  "— Захватить Завод. (50 очк)"\
+  "— Захватить Ферму. (50 очк)"\
+  ""
   m_bEmptyFactionVisibility 1
   m_bShowForAnyFaction 1
+  m_iOrder 1
  }
 }
