@@ -1,0 +1,52 @@
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{690E74F43C654E12}" {
+     m_sSuccessObjectiveNames {
+      "RHS_USAF"
+     }
+     m_sFailedObjectiveNames {
+      "RHS_AFRF"
+     }
+     m_sMessage "Портовая зона захвачена"
+     m_Timer GUB_ZoneControlTimer "{690E74F436654B9E}" {
+      timeToComplete 180
+     }
+     m_ZoneController GUB_ZoneController "{690E74F431D89994}" {
+      m_sZoneEntityName "Zone_Port"
+     }
+     m_FlagController GUB_FlagController "{690E74F42A7B1AF0}" {
+      m_aFlagNames {
+       "Flag"
+       "Flag2"
+       "Flag3"
+       "Flag4"
+       "Flag5"
+       "Flag6"
+      }
+      m_fStartFactionKey "RHS_AFRF"
+      m_fEndFactionKey "RHS_USAF"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{690E74F75369A0C2}" {
+       m_sFirstFactionKey "RHS_USAF"
+       m_sSecondFactionKey "RHS_AFRF"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+}
+GenericEntity : "{6A3CDCFB475BF1B2}Prefabs/System/DRG_CriticalLossPrefab.et" {
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+}

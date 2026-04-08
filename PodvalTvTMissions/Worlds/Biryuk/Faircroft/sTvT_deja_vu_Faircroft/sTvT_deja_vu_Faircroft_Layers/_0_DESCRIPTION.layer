@@ -1,0 +1,27 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ ABOUT {
+  m_sTitle "Лор"
+  m_sTextData "Статус ВС США: Силы истощены, база заблокирована. Единственный путь к спасению — эвакуация по воздуху. Моральный дух держится только на надежде на вертолеты."\
+  ""\
+  "Статус ВС РФ: Доминирующее положение. Подготовлены штурмовые группы для окончательной зачистки объекта."\
+  ""\
+  ""
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+ RULES {
+  m_sTitle "Услонвности"
+  m_sTextData "ВС США - не могут пересекать красную линию."\
+  "Отделения Хаусовов не могут покидать черный триггер."
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+ Zada4i {
+  coords 0.764 0 -0.763
+  m_sTitle "Задачи"
+  m_sTextData "ВС США Удержать \"Казармы\".  Не допустить уничтожение всех вертолетов (5 шт)."\
+  "ВС РФ Захватить \"Казармы\". Уничтожить все вертолеты (5 шт). "
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+}

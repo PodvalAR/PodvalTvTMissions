@@ -1,0 +1,42 @@
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{690B3BDA53A583E5}" {
+     m_sZonePreviewName "Казармы"
+     m_sSuccessObjectiveNames {
+      "USSR_WIN"
+     }
+     m_sFailedObjectiveNames {
+      "US_WIN"
+     }
+     m_sMessage "Казармы захвачены"
+     m_Timer GUB_ZoneControlTimer "{690B3BDA51E4B77C}" {
+      timeToComplete 180
+     }
+     m_ZoneController GUB_ZoneController "{690B3BDA5ED568AF}" {
+      m_sZoneEntityName "ZONE_Kazarma"
+     }
+     m_FlagController GUB_FlagController "{690B3BDCF8BE6EE9}" {
+      m_aFlagNames {
+       "Kazarma"
+      }
+      m_fStartFactionKey "RHS_USAF"
+      m_fEndFactionKey "RHS_AFRF"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{690B3BDA699FA84C}" {
+       m_sFirstFactionKey "RHS_AFRF"
+       m_sSecondFactionKey "RHS_USAF"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 0.28 0 -0.011
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+}
