@@ -1,0 +1,173 @@
+$grp Vehicle : "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et" {
+ UAZ1 {
+  coords 1634.641 16.871 85.762
+  angles 0.895 0 0
+  m_sAttachmentGroupName "comm_USSR"
+ }
+ UAZ2 {
+  coords 1634.641 16.812 80.117
+  m_sAttachmentGroupName "comm_USSR"
+ }
+ UAZ3 {
+  coords 1635.131 16.795 72.719
+  angles 0.052 -3.36 0.894
+  m_sAttachmentGroupName "soldier_USSR1"
+ }
+ UAZ4 {
+  coords 1635.462 16.804 67.084
+  angles -0.841 -3.375 0.946
+  m_sAttachmentGroupName "soldier_USSR1"
+ }
+ UAZ5 {
+  coords 1635.784 16.812 61.544
+  angles 0 -3.346 0
+  m_sAttachmentGroupName "soldier_USSR2"
+ }
+ UAZ6 {
+  coords 1636.115 16.812 55.909
+  angles 0 -3.346 0
+  m_sAttachmentGroupName "soldier_USSR2"
+ }
+ UAZ7 {
+  coords 1636.445 16.812 50.241
+  angles 0 -3.346 0
+  m_sAttachmentGroupName "soldier_USSR3"
+ }
+ UAZ8 {
+  coords 1636.776 16.812 44.606
+  angles 0 -3.346 0
+  m_sAttachmentGroupName "soldier_USSR3"
+ }
+ UAZ9 {
+  coords 1637.095 16.812 39.118
+  angles 0 -3.346 0
+  m_sAttachmentGroupName "soldier_USSR4"
+ }
+ UAZ10 {
+  coords 1637.426 16.812 33.483
+  angles 0 -3.346 0
+  m_sAttachmentGroupName "soldier_USSR4"
+ }
+ UAZ11 {
+  coords 1637.782 16.812 27.361
+  angles 0 -3.346 0
+  m_sAttachmentGroupName "soldier_USSR5"
+ }
+ UAZ12 {
+  coords 1638.114 16.848 21.726
+  angles -0.894 -3.348 0.052
+  m_sAttachmentGroupName "soldier_USSR5"
+ }
+}
+$grp SCR_AIGroup : "{2E11F5063753932B}Prefabs/Groups/OPFOR/USSR/dim_Group_USSR_GRU.et" {
+ spn_USSR1 {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B351898A1AB}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 819.508 14.188 2366.604
+  angles 0 85.669 0
+  m_aUnitPrefabSlots {
+   "{F2CD51EBFE885435}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/dim_USSR_SPN_SL_Light.et"
+   "{498C13903BA8CB62}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/dim_USSR_SPN_GL_Light.et"
+   "{A9C4CAD9BCBA7288}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/dim_USSR_SPN_Sapper_Light.et"
+   "{BE5DC28EC176FEEB}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/dim_USSR_SPN_Rifleman_Light.et"
+   "{8B84A52BE53EC8CD}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/dim_USSR_SPN_MG_Light.et"
+   "{498C13903BA8CB62}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/dim_USSR_SPN_GL_Light.et"
+   "{DE246DF87905FE00}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/dim_USSR_SPN_Sniper_VSS_Backpack.et"
+   "{9C7EC9EDA4C0555B}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/dim_USSR_SPN_Sniper_SVD.et"
+  }
+ }
+ spn_USSR2 {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B351898A1AB}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 820.288 14.125 2356.308
+  angles 0 85.668 0
+  m_aUnitPrefabSlots {
+   "{F2CD51EBFE885435}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/dim_USSR_SPN_SL_Light.et"
+   "{498C13903BA8CB62}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/dim_USSR_SPN_GL_Light.et"
+   "{A9C4CAD9BCBA7288}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/dim_USSR_SPN_Sapper_Light.et"
+   "{BE5DC28EC176FEEB}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/dim_USSR_SPN_Rifleman_Light.et"
+   "{8B84A52BE53EC8CD}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/dim_USSR_SPN_MG_Light.et"
+   "{498C13903BA8CB62}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/dim_USSR_SPN_GL_Light.et"
+   "{DE246DF87905FE00}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/dim_USSR_SPN_Sniper_VSS_Backpack.et"
+   "{9C7EC9EDA4C0555B}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/dim_USSR_SPN_Sniper_SVD.et"
+  }
+ }
+}
+SCR_AIGroup comm_USSR : "{706340F7481FF22F}Prefabs/Groups/OPFOR/USSR/Group_USSR_PL.et" {
+ coords 1629.58 16.882 85.389
+ angles -0.894 87.521 0.039
+ m_aUnitPrefabSlots {
+  "{75A43BDBDEE4B117}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_PL_RANDOM.et"
+  "{CDE7F53CAD55EAE4}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_SR_RANDOM.et"
+  "{635E00E006AD9962}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_MG_RANDOM.et"
+  "{D67D1D2E58DBC25B}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_AMG_RANDOM.et"
+  "{6C63188AE2BE1F52}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_AT_RANDOM.et"
+  "{D9400544BCC8446B}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_AAT_RANDOM.et"
+  "{A6A94055EB791019}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_LAT_RANDOM.et"
+  "{BA92838DA2F16499}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_Sharpshooter_RANDOM.et"
+ }
+ m_sCustomNameSet "Штаб взвода"
+}
+$grp SCR_AIGroup : "{84AF92E239A71FCE}Prefabs/Groups/OPFOR/USSR/Group_USSR_Rifle_SQ.et" {
+ soldier_USSR1 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 1630.071 16.812 73.455
+  angles 0 86.912 0
+  m_sCustomNameSet "Стрелковое отделение"
+ }
+ soldier_USSR2 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 1630.689 16.812 61.995
+  angles 0 86.912 0
+  m_sCustomNameSet "Стрелковое отделение"
+ }
+ soldier_USSR3 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 1631.326 16.812 50.981
+  angles 0 86.058 0
+  m_sCustomNameSet "Стрелковое отделение"
+ }
+ soldier_USSR4 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 3
+   }
+  }
+  coords 1632.313 16.781 39.598
+  angles 0 86.058 0
+  m_sCustomNameSet "Стрелковое отделение"
+ }
+ soldier_USSR5 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 4
+   }
+  }
+  coords 1633.119 16.767 28.223
+  angles 0.893 86.057 -0.062
+  m_sCustomNameSet "Стрелковое отделение"
+ }
+}

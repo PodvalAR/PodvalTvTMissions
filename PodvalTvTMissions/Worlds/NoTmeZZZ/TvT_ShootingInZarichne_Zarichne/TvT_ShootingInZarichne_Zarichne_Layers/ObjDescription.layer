@@ -1,0 +1,47 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ Lore {
+  coords 295.405 57.238 4449.547
+  m_sTitle "Обстановка"
+  m_sTextData "г. Заречный 20 июня 1989 г."\
+  ""\
+  "Ситуация в регионе обострилась до предела. Разведывательный батальон США продвинулся вглубь территории, пытаясь захватить ключевой транспортный узел в городе Заречный. Советское командование перебросило в город части 76-й ВДД для организации обороны."\
+  "Город имеет стратегическое значение, ведь тот, кто удержит центральную площадь, обеспечит проход основных сил к побережью."
+  m_aVisibleForFactions {
+   "US"
+   "USSR"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+ Rules {
+  coords 295.405 57.238 4465.873
+  m_sTitle "Правила и задачи"
+  m_sTextData "Задача:"\
+  ""\
+  "-Взять под контроль центр города, сменить флаг и удерживать его в течении 5 минут."\
+  ""\
+  "Условности:"\
+  ""\
+  "-Флаг является переходящим. Если одна сторона заняла его, то у второй есть 5 минут до сброса таймера в свою сторону."
+  m_aVisibleForFactions {
+   "US"
+   "USSR"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+}
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ US_Obj {
+  coords 195.664 63.822 4503.269
+  m_sTitle "Город захвачен"
+  m_sFactionKey "US"
+ }
+ USSR_Obj {
+  coords 195.664 63.822 4534.404
+  m_sTitle "Город захвачен"
+  m_sFactionKey "USSR"
+ }
+}
