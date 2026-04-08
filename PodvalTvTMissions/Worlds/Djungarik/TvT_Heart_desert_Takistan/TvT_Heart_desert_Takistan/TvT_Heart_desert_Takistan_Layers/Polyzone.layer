@@ -104,6 +104,7 @@ $grp PolylineShapeEntity {
     m_aVisibleForFactions {
      "RHS_AFRF"
      "Ses_TKR"
+     ""
     }
    }
   }
@@ -200,8 +201,7 @@ $grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescripti
   ""\
   "Для Боевиков:"\
   ""\
-  "Цель: удержать аэродром и город в своих руках любой ценой."\
-  "Регулярные части армии не могут выходить за границы «черного триггера» (обозначенного безопасного района или зоны боевых действий)."
+  "Цель: удержать аэродром и город в своих руках любой ценой."
   m_aVisibleForFactions {
    "Ses_TKR"
    "RHS_AFRF"
@@ -217,7 +217,7 @@ $grp GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFac
    GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
     m_aControlLogics {
      GUB_ZoneControlLogic "{6907224FC97AA860}" {
-      m_sZonePreviewName "Юг"
+      m_sZonePreviewName "Аэродром"
       m_sSuccessObjectiveNames {
        "Air_kapt_rus"
       }
@@ -257,7 +257,7 @@ $grp GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFac
    GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
     m_aControlLogics {
      GUB_ZoneControlLogic "{6907224FC97AA860}" {
-      m_sZonePreviewName "Восток"
+      m_sZonePreviewName "Город"
       m_sSuccessObjectiveNames {
        "Gorod_kapt_rus"
       }
