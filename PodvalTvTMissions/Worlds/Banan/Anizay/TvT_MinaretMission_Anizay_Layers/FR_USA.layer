@@ -49,10 +49,10 @@ $grp Vehicle : "{7BC9C79CD8FD8CE7}Prefabs/Vehicles/Wheeled/M998/M1025_armed_M2HB
  }
 }
 SCR_AIGroup cmd : "{8BE5C4D411C5E59C}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_PL.et" {
- coords 5161.622 160.157 5143.609
+ coords 5161.622 159.629 5143.609
  angles 0 -117.343 0
  m_aUnitPrefabSlots +{
-  "{8C844FA2A8030344}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/Char_RHS_USAF_Regular_Crew.et"
+  "{88E3D251FBF082FA}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/Char_RHS_USAF_Regular_Marksman_m110.et"
  }
 }
 $grp SCR_AIGroup : "{955623450C88D6F3}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_Squad.et" {
@@ -179,17 +179,6 @@ Vehicle UH1H_armed_gunship_empty_sharkNose1 : "{BDE43262FC05B4D7}Prefabs/Vehicle
  coords 3658.938 190.467 1487.623
  angles 0 167.55 0
  m_sAttachmentGroupName "pil"
-}
-Vehicle Ural4320_command_tan1 : "{F0383F4EEF087C59}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_command_tan.et" {
- coords 5156.54 158.969 5142.715
- angles -11.215 -32.882 -0.415
- m_sAttachmentGroupName "cmd"
- {
-  GameEnvironmentProbeEntity {
-   ID "654C8CD3B0316F22"
-   coords 0.499 1.955 -1.143
-  }
- }
 }
 $grp Vehicle : "{F649585ABB3706C4}Prefabs/Vehicles/Wheeled/M151A2/M151A2.et" {
  M151A1 {
