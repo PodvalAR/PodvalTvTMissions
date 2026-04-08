@@ -20,91 +20,91 @@ $grp PolylineShapeEntity {
     Position 7.299 -0.001 -13.703
    }
    ShapePoint "{690873C730AE83A5}" {
-    Position 11.082 0 -35.184
+    Position 11.082 -0.001 -35.184
    }
    ShapePoint "{690873C70C7CEFE8}" {
-    Position 15.688 0 -61.26
+    Position 15.688 -0.001 -61.26
    }
    ShapePoint "{690873C719CA3C4A}" {
-    Position 32.092 0 -149.844
+    Position 32.092 -0.001 -149.844
    }
    ShapePoint "{690873C7C6B20614}" {
-    Position 119.111 0 -233.652
+    Position 119.111 -0.001 -233.652
    }
    ShapePoint "{690873C7C5B3B350}" {
-    Position 109.519 0 -271.617
+    Position 109.519 0.155 -271.617
    }
    ShapePoint "{690873C7A4E66C50}" {
-    Position 74.624 0 -306.231
+    Position 74.624 -0.015 -306.231
    }
    ShapePoint "{690873C7A299F46A}" {
-    Position 63.306 0 -314.471
+    Position 63.306 -0.074 -314.471
    }
    ShapePoint "{690873C7A2343228}" {
-    Position 44.79 0 -295.101
+    Position 44.79 -0.001 -295.101
    }
    ShapePoint "{690873C7BE5C4134}" {
-    Position 30.578 0 -280.693
+    Position 30.578 -0.001 -280.693
    }
    ShapePoint "{690873C7BD3FB999}" {
-    Position 13.148 0 -262.323
+    Position 13.148 -0.001 -262.323
    }
    ShapePoint "{690873C7BB355E3B}" {
-    Position -25.804 0 -262.007
+    Position -25.804 0.03 -262.007
    }
    ShapePoint "{690873C7BA42E15A}" {
-    Position -44.448 1.061 -188.684
+    Position -44.448 -0.001 -188.684
    }
    ShapePoint "{690873C78B79CCF7}" {
-    Position -78.342 2.075 -197.643
+    Position -78.342 1.989 -197.643
    }
    ShapePoint "{690873C794045C96}" {
-    Position -94.794 2.21 -187.689
+    Position -94.794 2.124 -187.689
    }
    ShapePoint "{690873C79106C02E}" {
-    Position -98.048 1.781 -167.13
+    Position -98.048 1.401 -167.13
    }
    ShapePoint "{690873C72E0B3F24}" {
-    Position -79.466 0.001 -162.632
+    Position -79.466 0.111 -162.632
    }
    ShapePoint "{690873C72D6CF737}" {
-    Position -71.553 0.001 -160.678
+    Position -71.553 0.106 -160.678
    }
    ShapePoint "{690873C02361FD64}" {
-    Position -94.359 -0.003 -20.157
+    Position -94.359 0.007 -20.157
    }
    ShapePoint "{690873C032180272}" {
-    Position -95.004 0 -6.771
+    Position -95.004 0.017 -6.771
    }
    ShapePoint "{690873C00B43D134}" {
-    Position -92.486 0 3.605
+    Position -92.486 -0.001 3.605
    }
    ShapePoint "{690873C011A64E83}" {
-    Position -81.482 0 0.96
+    Position -81.482 0.03 0.96
    }
    ShapePoint "{690873C0EF3B4B26}" {
-    Position -79.186 0 10.285
+    Position -79.186 -0.001 10.285
    }
    ShapePoint "{690873C0E8D4AD3D}" {
-    Position -77.354 0 18.241
+    Position -77.354 -0.001 18.241
    }
    ShapePoint "{690873C0E47C13D4}" {
-    Position -60.128 0 14.317
+    Position -60.128 -0.001 14.317
    }
    ShapePoint "{690873C0E37167C4}" {
-    Position -61.324 0 11.993
+    Position -61.324 -0.001 11.993
    }
    ShapePoint "{690873C0FFA9A228}" {
-    Position -46.216 0 9.636
+    Position -46.216 -0.001 9.636
    }
    ShapePoint "{690873C0FCF32537}" {
-    Position -45.375 0 11.652
+    Position -45.375 -0.001 11.652
    }
    ShapePoint "{690873C0FAB6ABA8}" {
-    Position 4.763 0 1.013
+    Position 4.763 -0.001 1.013
    }
    ShapePoint "{690873C0F72FB372}" {
-    Position 7.092 0 -12.008
+    Position 7.092 -0.001 -12.008
    }
   }
   IsClosed 1
@@ -234,6 +234,15 @@ GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactions
   GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
    m_aControlLogics {
     GUB_ZoneControlLogic "{6908BCB53870EDDE}" {
+     m_bAdvanceGameStage 1
+     m_iAdvanceAfterSec 15
+     m_sSuccessObjectiveNames {
+      "rf1"
+     }
+     m_sFailedObjectiveNames {
+      "us1"
+     }
+     m_sMessage "Порт захвачен"
      m_Timer GUB_ZoneControlTimer "{6908BCB53304750A}" {
       timeToComplete 240
      }
