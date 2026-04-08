@@ -331,9 +331,14 @@ GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactions
   GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
    m_aControlLogics {
     GUB_ZoneControlLogic "{690EA96E94B422F1}" {
-     m_sPreviewMessageToDescription "Красная зона"
      m_bAdvanceGameStage 1
      m_iAdvanceAfterSec 15
+     m_sSuccessObjectiveNames {
+      "RU_Mosque"
+     }
+     m_sFailedObjectiveNames {
+      "TKR_Mosque"
+     }
      m_sMessage "Мечеть захвачена. Победа РФ"
      m_Timer GUB_ZoneControlTimer "{690EA96D57EA6A8F}" {
       timeToComplete 150
@@ -355,7 +360,12 @@ GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactions
      }
     }
     GUB_ZoneControlLogic "{690EA96C3600A86D}" {
-     m_sPreviewMessageToDescription "Желтая зона"
+     m_sSuccessObjectiveNames {
+      "RU_City"
+     }
+     m_sFailedObjectiveNames {
+      "TKR_City"
+     }
      m_sMessage "Город захвачен. Силы Такистана отступают к мечети."
      m_Timer GUB_ZoneControlTimer "{690EA96CE0CD8B57}" {
       timeToComplete 180

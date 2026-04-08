@@ -25,7 +25,8 @@ $grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescripti
   ""\
   "ДОПОЛНИТЕЛЬНО:"\
   "1. На карте отмечены зоны с боевыми вертолетами РФ (зеленый). Для каждой фракции есть опциональная задача. РФ - взять под контроль и использовать. ТКР - уничтожить вертолеты."\
-  "2. В желтой зоне имеются стационарные ZU-23"
+  "2. В желтой зоне имеются стационарные ZU-23"\
+  "3. У ТКР есть инженерный грузовик (мешки с песком)"
   m_aVisibleForFactions {
    "RHS_AFRF"
    "Ses_TKR"
@@ -36,7 +37,7 @@ $grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescripti
  }
 }
 $grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
- {
+ RU_City {
   coords 256.76 144.94 8888.023
   m_sTitle "Город захвачен"
   m_aVisibleForFactions {
@@ -47,7 +48,7 @@ $grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
   m_iScore 50
   m_sFactionKey "RHS_AFRF"
  }
- {
+ RU_Mosque {
   coords 256.76 144.94 8997.351
   m_sTitle "Мечеть захвачена"
   m_aVisibleForFactions {
@@ -58,7 +59,7 @@ $grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
   m_iScore 50
   m_sFactionKey "RHS_AFRF"
  }
- {
+ TKR_City {
   coords 256.76 144.94 9077.595
   m_sTitle "Город удержан"
   m_aVisibleForFactions {
@@ -69,7 +70,7 @@ $grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
   m_iScore 50
   m_sFactionKey "Ses_TKR"
  }
- {
+ TKR_Mosque {
   coords 256.76 144.94 9105.893
   m_sTitle "Мечеть удержана"
   m_aVisibleForFactions {
