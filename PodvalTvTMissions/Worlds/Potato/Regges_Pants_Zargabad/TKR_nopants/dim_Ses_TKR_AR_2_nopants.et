@@ -1,0 +1,40 @@
+SCR_ChimeraCharacter : "{B06E612693916259}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AR.et" {
+ ID "520EC961A090B1EE"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Icon "{AAA0518DE4F7B5DA}UI/Icons/dim/ter_mg.edds"
+   }
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{42515164D17D94C5}Prefabs/Characters/HeadGear/Hat_FlatCap_01/Shemag_4.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{98C02C48790C1F94}Prefabs/Characters/Uniforms/Jacket_ShirtLong_3.et"
+    }
+    LoadoutSlotInfo Pants {
+     Prefab ""
+    }
+    LoadoutSlotInfo Boots {
+     Prefab "{4C6029AB8BF5C044}Prefabs/Characters/Footwear/CombatBoots_Soviet_01_Dirty.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{68A8820B1B87DF9C}" {
+     TargetStorage "Pants/Pants_Taksuit_4.et"
+    }
+    ItemsInitConfigurationItem "{68A8820B008B5065}" {
+     TargetStorage "Jacket/Jacket_ShirtLong_3.et"
+    }
+    ItemsInitConfigurationItem "{68A8820B371119B4}" {
+     TargetStorage "Jacket/Jacket_ShirtLong_3.et"
+    }
+   }
+  }
+ }
+ coords 81.613 1 213.074
+}

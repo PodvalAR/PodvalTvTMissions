@@ -1,0 +1,133 @@
+$grp Vehicle : "{0B4DEA8078B78A9B}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_PKM.et" {
+ UAZ469_PKM1 {
+  coords 2722.416 142.096 7960.87
+  angles -0.427 83.614 0
+  m_sAttachmentGroupName "rer"
+ }
+ UAZ469_PKM2 {
+  coords 4897.587 149.282 8761.102
+  angles 0 176.201 0
+  m_sAttachmentGroupName "rer2"
+ }
+}
+SCR_AIGroup crew : "{1128EBD3DDFF1D07}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Motorized.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+   m_iCompanyCallsign 2
+  }
+ }
+ coords 3066.987 144.336 8490.254
+ angles 0 36.998 0
+}
+Vehicle Ural4320_transport1 : "{16C1F16C9B053801}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport.et" {
+ components {
+  SCR_UniversalInventoryStorageComponent "{5916C58171230A92}" {
+   MultiSlots {
+    MultiSlotConfiguration "{68E867F6B18BBF2D}" {
+     SlotTemplate InventoryStorageSlot sand {
+      Prefab "{1742632597955A55}Prefabs/Items/Misc/Sandbags/Part_Sandbag_Plastic.et"
+     }
+     NumSlots 130
+    }
+   }
+  }
+ }
+ coords 3973.559 137.406 7156.601
+ angles 0 174.973 0
+}
+$grp Vehicle : "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et" {
+ UAZ2 {
+  coords 4898.129 149.005 8753.169
+  angles 0 178.311 0
+  m_sAttachmentGroupName "rer2"
+ }
+ UAZ1 {
+  coords 2730.472 142.013 7962.124
+  angles 0 82.886 0
+  m_sAttachmentGroupName "rer"
+ }
+}
+Vehicle BTR70_AFRF_camo1 : "{447CFE8D73F95C3F}Prefabs/Vehicles/Wheeled/BTR70/BTR70_AFRF_camo.et" {
+ coords 3073.319 144.375 8493.247
+ angles 0 -49.778 0
+ m_sAttachmentGroupName "crew"
+}
+$grp Vehicle : "{5C38170BFBE9F966}Prefabs/Vehicles/Wheeled/TIGR/KORD/GAZ_TIGR_v2_KORD_SSP_ARMOR_CAMO.et" {
+ GAZ_TIGR_v2_KORD_SSP_ARMOR_CAMO2 {
+  coords 3101.67 144.219 8488.343
+  angles 0 -95.91 0
+  m_sAttachmentGroupName "TET"
+ }
+ GAZ_TIGR_v2_KORD_SSP_ARMOR_CAMO3 {
+  coords 3092.241 144.219 8487.654
+  angles 0 -96.283 0
+  m_sAttachmentGroupName "TET"
+ }
+}
+$grp SCR_AIGroup : "{D266A249A174B7C7}Prefabs/Groups/OPFOR/RHS_AFRF/Recon/Group_RHS_AFRF_Recon_Squad_7.et" {
+ rer {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 2728.664 142.081 7965.567
+  angles 0 172.237 0
+ }
+ rer2 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 1
+   }
+  }
+  coords 4892.242 148.951 8760.335
+  angles 0 85.276 0
+ }
+}
+SCR_AIGroup : "{E625399A1E96672A}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_PL_2.et" {
+ coords 3979.49 139.406 7172.33
+ angles 0 172.614 0
+}
+$grp SCR_AIGroup : "{EB131DDF464F90FD}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Squad.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 3990.994 137.442 7146.014
+  angles 0 -96.939 0
+ }
+ group1 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 3971.784 137.442 7150.728
+  angles 0 83.061 0
+ }
+ TET {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 3093.77 144.219 8482.988
+  angles 0 -4.456 0
+  m_aUnitPrefabSlots {
+   "{998515E06ED7A4C9}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_SL.et"
+   "{E49DF9180B449850}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_SR.et"
+   "{2CA58D3E25DA1886}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_AT.et"
+   "{D90B2AEF04BBE301}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_AAT.et"
+   "{F40DE4FF5C5306DA}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_AR.et"
+   "{F9D89ADEABE46FF0}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_GL.et"
+   "{78410A549262E06D}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Rifle.et"
+   "{1D25ADA8774D4BD2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Medic.et"
+   "{53B49D34137DE9BE}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_AMG.et"
+  }
+ }
+}

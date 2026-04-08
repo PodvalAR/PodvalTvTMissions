@@ -1,9 +1,39 @@
-GenericEntity : "{0DA9CD88C30EA2B2}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_02_V1_ION.et" {
- coords 5231.804 35.184 2686.793
+SCR_ChimeraCharacter : "{2457C5A201121FDC}Prefabs/Characters/Factions/BLUFOR/UK/Regular/Char_UK_Regular_Sniper.et" {
+ coords 5550.321 26.882 2320.94
 }
-GenericEntity : "{4DF9D94805926F00}PrefabsEditable/Auto/Structures/Military/Flags/Flag_NoCapture.et" {
- coords 5541.09 42.147 2354.254
+$grp GenericEntity : "{4DF9D94805926F00}PrefabsEditable/Auto/Structures/Military/Flags/Flag_NoCapture.et" {
+ FLAG_1 {
+  coords 5542.516 42.351 2354.669
+ }
+ FLAG_2 {
+  coords 5581.835 42.092 2403.049
+ }
 }
-GenericEntity : "{F5EF4223ACA6169C}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_02_V1_AFRF.et" {
- coords 5235.538 35.342 2688.435
+SCR_ChimeraCharacter : "{4EDE2A021B8C2355}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/UK2_SPN_Rifleman.et" {
+ coords 5550.968 26.869 2320.457
+}
+SCR_ChimeraCharacter : "{B352E45394EF0C7B}Prefabs/Characters/Factions/BLUFOR/UK/UK2/UK2_SL.et" {
+ coords 5548.428 26.931 2320.671
+}
+SCR_AIGroup : "{BBA36FB95553E79C}Prefabs/Groups/BLUFOR/British Forces/Regular/Group_UK_PL.et" {
+ coords 5545.646 27.006 2307.926
+}
+SCR_ChimeraCharacter : "{ED1E2EB1E51F7BBE}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/UK2_SPN_BaseLoadout.et" {
+ coords 5552.205 26.844 2319.603
+}
+GenericEntity FLAG_AFRF : "{F5EF4223ACA6169C}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_02_V1_AFRF.et" {
+ components {
+  SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+   m_aObjectiveNames {
+    "UK"
+   }
+   m_aFlagData {
+    PS_FlagData "{68FF2B37BA24EA3C}" {
+     m_sFactionKey "RHS_AFRF"
+    }
+   }
+  }
+ }
+ coords 5218.466 42.821 2689.968
+ angles 30.6 -90.847 0
 }

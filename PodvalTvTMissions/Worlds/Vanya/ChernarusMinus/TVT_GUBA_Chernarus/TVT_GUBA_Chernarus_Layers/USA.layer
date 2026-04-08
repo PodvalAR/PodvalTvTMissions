@@ -1,0 +1,229 @@
+SCR_AIGroup us1 : "{15062749E6AB45DE}Prefabs/Groups/BLUFOR/US/Regular/Group_US_Regular_PL.et" {
+ coords 7269.369 373.139 9903.246
+ angles 0 -147.345 0
+}
+$grp Vehicle : "{2401DC427B9B8CFB}Prefabs/Vehicles/Wheeled/M998/M1151_armed_M2HB_MBO.et" {
+ M1151_armed_M2HB_MBO1 {
+  coords 10290.129 343.794 12032.925
+  angles 0.812 -50.508 1.829
+  m_sAttachmentGroupName "us55"
+ }
+ M1151_armed_M2HB_MBO2 {
+  coords 12866.99 5.749 10019.94
+  angles 0 28.49 0
+  m_sAttachmentGroupName "us6"
+ }
+ M1151_armed_M2HB_MBO3 {
+  coords 12854.758 5.75 9997.518
+  angles 0 28.49 0
+  m_sAttachmentGroupName "us8"
+ }
+ M1151_armed_M2HB_MBO4 {
+  coords 12843.557 5.749 9976.285
+  angles 0 28.49 0
+  m_sAttachmentGroupName "us9"
+ }
+}
+$grp Vehicle : "{3312ADBF53A16DD9}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS.et" {
+ LAV25_RHS1 {
+  coords 12832.557 5.75 9954.826
+  angles 0 26.438 0
+  m_sAttachmentGroupName "us10"
+ }
+ LAV25_RHS2 {
+  coords 12827.483 5.75 9945.417
+  angles 0 26.438 0
+  m_sAttachmentGroupName "us11"
+ }
+ LAV25_RHS3 {
+  coords 7278.55 374.311 9891.211
+  angles -5.687 -45.27 -1.862
+  m_sAttachmentGroupName "us2"
+ }
+}
+Vehicle M923A1_command1 : "{36BDCC88B17B3BFA}Prefabs/Vehicles/Wheeled/M923A1/M923A1_command.et" {
+ coords 7265.965 372.63 9902.876
+ angles -5.698 -47.167 -0.415
+}
+Vehicle M151A2_transport1 : "{47D94E1193A88497}Prefabs/Vehicles/Wheeled/M151A2/M151A2_transport.et" {
+ coords 7616.242 351.906 14140.337
+ angles 0 -0.901 0
+ m_sAttachmentGroupName "us4"
+}
+$grp Vehicle : "{4A71F755A4513227}Prefabs/Vehicles/Wheeled/M998/M1025.et" {
+ M1 {
+  coords 12863.313 5.749 10012.968
+  angles 0 28.912 0
+  m_sAttachmentGroupName "us6"
+ }
+ M2 {
+  coords 12850.551 5.75 9989.743
+  angles 0 28.912 0
+  m_sAttachmentGroupName "us8"
+ }
+ M3 {
+  coords 12840.547 5.751 9970.403
+  angles 0 28.912 0
+  m_sAttachmentGroupName "us9"
+ }
+}
+$grp SCR_AIGroup : "{6E2296FB529E9097}Prefabs/Groups/BLUFOR/US/dim_US_SPN_Force_Recon.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B0F0D80A730}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 6326.361 294.031 7778.918
+  angles 0 -147.525 0
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B0F0D80A730}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 3
+   }
+  }
+  coords 6289.724 294.031 7804.25
+  angles 0 -147.525 0
+ }
+ us55 {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B0F0D80A730}" {
+    m_iCompanyCallsign 4
+   }
+  }
+  coords 10285.979 343.866 12030.585
+  angles 0 37.695 0
+  m_aUnitPrefabSlots {
+   "{ED4E0ACF6FD3C80A}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_SL.et"
+   "{8D1385F1AAE00333}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_GL.et"
+   "{61F3754A8D172C22}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_Rifleman.et"
+   "{F7FE66E14E368DF9}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_RTO.et"
+   "{07DB2A2C2FD68F06}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_Sniper.et"
+  }
+ }
+ us4 {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B0F0D80A730}" {
+    m_iSquadCallsign 4
+   }
+  }
+  coords 7618.548 351.875 14139.706
+  angles 0 -91.549 0
+  m_aUnitPrefabSlots {
+   "{ED4E0ACF6FD3C80A}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_SL.et"
+   "{07DB2A2C2FD68F06}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_Sniper.et"
+  }
+  m_sCustomNameSet "Снайперская пара "
+ }
+}
+$grp Vehicle : "{999FC99369291EA4}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed_AP.et" {
+ UH1H_armed_AP1 {
+  coords 6287.996 294.032 7781.639
+  angles 0 35.568 0
+  m_sAttachmentGroupName "us44"
+ }
+ UH1H_armed_AP2 {
+  coords 6307.469 294.031 7768.76
+  angles 0 35.568 0
+  m_sAttachmentGroupName "us5"
+ }
+}
+$grp SCR_AIGroup : "{9B25E2FE686422AD}Prefabs/Groups/BLUFOR/US/Regular/Group_US_Regular_Mechanized.et" {
+ us10 {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 12835.544 5.75 9952.074
+  angles 0 -61.134 0
+ }
+ us11 {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 1
+   }
+  }
+  coords 12831.104 5.75 9943.743
+  angles 0 -61.134 0
+ }
+}
+$grp SCR_AIGroup : "{AC37A0539DB4CA1C}Prefabs/Groups/BLUFOR/US/Regular/Group_US_Regular_Heli.et" {
+ us5 {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 6318.797 294.031 7784.052
+  angles 0 -152.34 0
+ }
+ us44 {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 6296.881 294.032 7799.668
+  angles 0 -146.025 0
+ }
+}
+SCR_AIGroup us2 : "{E71CAFF0C1F1CB6C}Prefabs/Groups/BLUFOR/US/Regular/Group_US_Regular_Motorized.et" {
+ components {
+  PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+   m_iSquadCallsign 1
+  }
+ }
+ coords 7283.759 374.282 9891.762
+ angles 0 -138.153 0
+}
+$grp SCR_AIGroup : "{EE2BCF5671083A76}Prefabs/Groups/BLUFOR/US/Regular/Group_US_Regular_Squad.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 12867.609 5.751 10010.579
+  angles 0 -60.516 0
+ }
+ us8 {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 12853.891 5.75 9985.426
+  angles 0 -60.516 0
+ }
+ us9 {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 2
+   }
+  }
+  coords 12844.539 5.75 9967.953
+  angles 0 -60.516 0
+ }
+ us3 {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iSquadCallsign 3
+   }
+  }
+  coords 7293.937 376.137 9878.244
+  angles 0 -130.809 0
+ }
+}
+Vehicle M923A1_transport1 : "{F1FBD0972FA5FE09}Prefabs/Vehicles/Wheeled/M923A1/M923A1_transport.et" {
+ coords 7288.606 375.861 9878.631
+ angles -5.025 -43.862 -1.361
+ m_sAttachmentGroupName "us3"
+}

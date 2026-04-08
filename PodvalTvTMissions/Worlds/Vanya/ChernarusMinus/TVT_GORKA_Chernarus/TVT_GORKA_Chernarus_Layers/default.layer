@@ -1,0 +1,52 @@
+SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
+ coords 7481.615 305.075 7601.712
+}
+PerceptionManager PerceptionManager1 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 7525.933 314.835 7679.985
+}
+PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
+ components {
+  SCR_TimeAndWeatherHandlerComponent "{5EE3229927D4D2F5}" {
+   m_bUsePredefineStartingTimeAndWeather 1
+   m_aStartingWeatherAndTime {
+    SCR_TimeAndWeatherState "{68FD08DD909F3F76}" {
+     m_sWeatherPresetName "Cloudy"
+     m_iStartingHour 18
+     m_iStartingMinutes 33
+    }
+   }
+  }
+ }
+ coords 7578.602 318.219 7648.572
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 12106.504 28.838 3680.141
+}
+GenericEntity : "{F9EBA10CC445ED63}PrefabsEditable/Auto/Structures/Military/Flags/FlagPole_02_V1_CDF_Editable.et" {
+ components {
+  SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+   m_sDefaultMaterial "{1D4A447A3E34C70D}Assets/Props/Fabric/Flags/Data/Flag_1_2_Chernarus.emat"
+   m_aFlagData {
+    PS_FlagData "{6902F8EF6B7820BE}" {
+     m_sFactionKey "Ses_CDF"
+    }
+   }
+   m_sFactionKey "Ses_CDF"
+  }
+  BaseActionsManagerComponent "{6202D4E6F133BF4A}" {
+   additionalActions {
+    PS_FlagChangeAction "{6202D4E6A53D4B3C}" {
+     Duration 15
+     m_bUseAnimation 1
+    }
+   }
+  }
+ }
+ coords 9442.737 298.211 8803.404
+ angles 21.294 -135.729 -20.431
+}

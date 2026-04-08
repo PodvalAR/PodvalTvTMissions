@@ -1,0 +1,52 @@
+$grp SCR_EditorRestrictionZoneEntity : "{6144B0BE2EAC6897}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneMedium.et" {
+ {
+  coords 7035.614 102.995 7111.325
+ }
+ {
+  coords 5353.951 110.135 7148.66
+ }
+}
+$grp SCR_EditorRestrictionZoneEntity : "{7846A93EA395CFBA}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneBase.et" {
+ {
+  coords 6274.152 97.896 6938.375
+ }
+ {
+  coords 6123.609 104.707 7060.862
+ }
+}
+$grp SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+ {
+  coords 8519.437 111.536 6801.648
+ }
+ {
+  coords 3641.47 143.145 6908.921
+ }
+}
+PolylineShapeEntity : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
+ components {
+  PS_PolyZone "{60E90266F25533F6}" {
+   m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
+   m_cPolygonColor 0 0 0 0
+   m_fPolygonUVScale 0.54
+   m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+   m_cPolygonBorderColor 0 0 0 1
+   m_aVisibleForFactions {
+    ""
+    "RHS_AFRF"
+    "RHS_USAF"
+   }
+  }
+ }
+ coords 6269.141 97.209 6924.159
+ Points {
+  ShapePoint "{68FD2A55DB1D60A6}" {
+   Position 9.094 0 141.392
+  }
+  ShapePoint "{68FD2A55D9320881}" {
+   Position -161.829 0 156.417
+  }
+  ShapePoint "{68FD2A55C4384B0C}" {
+   Position -169.978 0 22.021
+  }
+ }
+}

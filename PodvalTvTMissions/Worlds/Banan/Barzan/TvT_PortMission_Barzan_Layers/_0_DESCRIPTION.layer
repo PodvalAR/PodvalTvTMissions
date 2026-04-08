@@ -1,0 +1,33 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ ABOUT {
+  m_sTitle "Лор"
+  m_sTextData "Давно забытый остров Барзан в портовой зоне стал очередным ключевым стратегическим пунктом. После того как в регионе усилились конфликты, российские войска укрепили контроль над этой территорией, превратив его в важный узел поставок и наблюдения."
+  m_aVisibleForFactions {
+   "RHS_USAF"
+   "RHS_AFRF"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+ RULES {
+  m_sTitle "Задачи"
+  m_sTextData "Задачи:"\
+  ""\
+  "США:"\
+  ""\
+  "1. Захватить портовую зону (красный тригер)."\
+  ""\
+  "РФ:"\
+  ""\
+  "1. Удержать портовую зону (красный тригер)."\
+  ""
+  m_aVisibleForFactions {
+   "RHS_USAF"
+   "RHS_AFRF"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+}

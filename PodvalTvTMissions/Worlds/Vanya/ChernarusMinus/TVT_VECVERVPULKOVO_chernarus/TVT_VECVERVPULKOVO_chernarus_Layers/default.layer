@@ -1,0 +1,59 @@
+SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
+ coords 7481.615 305.075 7601.712
+}
+PerceptionManager PerceptionManager1 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 7525.933 314.835 7679.985
+}
+PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
+ components {
+  SCR_TimeAndWeatherHandlerComponent "{5EE3229927D4D2F5}" {
+   m_bUsePredefineStartingTimeAndWeather 1
+   m_aStartingWeatherAndTime {
+    SCR_TimeAndWeatherState "{68FD08DD909F3F76}" {
+     m_sWeatherPresetName "Cloudy"
+     m_iStartingHour 18
+     m_iStartingMinutes 33
+    }
+   }
+  }
+ }
+ coords 7578.602 318.219 7648.572
+}
+PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+ coords 1704.325 138.53 3856.223
+ m_sImageSet "{87A3330CFC4BDDAD}UI/Textures/Icons/icon_pickup.edds"
+ m_sImageSetGlow "{67B3A6DC2D712B52}UI/Textures/Icons/icons_mapMarkersUI-glow.imageset"
+ m_MarkerColor 0 0.502 0.125 1
+ m_sQuadName "circle-2"
+ m_fWorldSize 40
+ m_sDescription "Грузовик с песком, без бензина"
+ m_bUseWorldScale 1
+ m_aVisibleForFactions {
+  "RHS_AFRF"
+  "RHS_USAF"
+  "RHS_ION"
+  "Ses_CDF"
+  "Ses_ChDKZ"
+  "Ses_TKR"
+  "Ses_TKA"
+  "Drg_IGF"
+  "Drg_PIR"
+  "UK"
+  "USSR"
+  "US"
+  "FIA"
+  "Drg_VCA"
+ }
+ m_bVisibleForEmptyFaction 1
+ m_aHideOnGameModeStates {
+ }
+ m_iZOrder 0
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 12106.504 28.838 3680.141
+}

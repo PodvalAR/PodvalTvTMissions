@@ -1,0 +1,83 @@
+SCR_ChimeraCharacter : "{82583650C8E9B5B4}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman.et" {
+ ID "520EC961A090B1EE"
+ components {
+  SCR_CharacterInventoryStorageComponent "{520EA1D2DB118DAC}" {
+   components {
+    SCR_EquipmentStorageComponent "{56B49DA9722B635D}" {
+     InitialStorageSlots {
+      SCR_EquipmentStorageSlot BinocularSlot {
+       Prefab "{243948B23D90BECB}Prefabs/Items/Equipment/Binoculars/Binoculars_B8/Binoculars_B8.et"
+      }
+     }
+    }
+   }
+  }
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "#AR-Role_SquadLeader"
+    Icon "{9BEC8B891B893C04}UI/Icons/terrorist_leader.edds"
+   }
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{F007CDD9EB641380}Prefabs/Characters/HeadGear/Hat_FlatCap_01/TurbanM03.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{A5F409700C6096A3}Prefabs/Characters/Uniforms/Jacket_ShirtLong_4.et"
+    }
+    LoadoutSlotInfo Pants {
+     Prefab ""
+    }
+    LoadoutSlotInfo Boots {
+     Prefab "{4C6029AB8BF5C044}Prefabs/Characters/Footwear/CombatBoots_Soviet_01_Dirty.et"
+    }
+    LoadoutSlotInfo Back {
+     Prefab "{8F84AECFEE1CB93F}Prefabs/Items/Equipment/Radios/Radio_RF10_TKR.et"
+    }
+    LoadoutSlotInfo Vest {
+     Prefab "{9713FE6DDCC9510D}Prefabs/Characters/Vests/Vest_Lifchik/Vest_Lifchik.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{68A8820B1B87DF9C}" {
+     TargetStorage "Pants/Pants_Taksuit_7.et"
+    }
+    ItemsInitConfigurationItem "{68A8820B008B5065}" {
+     TargetStorage "Jacket/Jacket_ShirtLong_4.et"
+    }
+    ItemsInitConfigurationItem "{68A8820B371119B4}" {
+     TargetStorage "Jacket/Jacket_ShirtLong_4.et"
+     PrefabsToSpawn {
+      "{B9DBFC3B93680DB7}Prefabs/Items/Equipment/Radios/Radio_R148_TKR_Multi.et" "{062E2F1D7F6739D6}Prefabs/Items/Equipment/Accessories/ETool_MPL50/ETool_MPL50_FreeRoamBuilding_Gadget.et"
+     }
+    }
+    ItemsInitConfigurationItem "{68EA046792400867}" {
+     TargetStorage "Vest/Vest_Lifchik.et"
+    }
+    ItemsInitConfigurationItem "{68EA78464042A823}" {
+     Enabled 0
+    }
+    ItemsInitConfigurationItem "{68EA7846405BCA01}" {
+     Enabled 0
+    }
+    ItemsInitConfigurationItem "{68FC6C828697DFCF}" {
+     TargetStorage "Pants/Pants_Taksuit_7.et"
+     PrefabsToSpawn {
+      "{633583A042F34007}Prefabs/Weapons/Magazines/AKM/Magazine_762x39_AK_30rnd_Last_5Tracer.et" "{633583A042F34007}Prefabs/Weapons/Magazines/AKM/Magazine_762x39_AK_30rnd_Last_5Tracer.et"
+     }
+    }
+    ItemsInitConfigurationItem "{68FC6C828697DFDB}" {
+     TargetStorage "Jacket/Jacket_ShirtLong_4.et"
+     PrefabsToSpawn {
+      "{633583A042F34007}Prefabs/Weapons/Magazines/AKM/Magazine_762x39_AK_30rnd_Last_5Tracer.et"
+     }
+    }
+   }
+  }
+ }
+ coords 42.796 1 130.571
+ angles 0 0 0
+}

@@ -1,0 +1,44 @@
+SCR_ChimeraCharacter : "{3EAB31BD43ECDF10}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_SL_1.et" {
+ ID "520EC961A090B1EE"
+ components {
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{23D7F46B57FE5B4C}Prefabs/Characters/HeadGear/Hat_FlatCap_01/dim_TakHat03_Shemagh_2.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{AC1A0384598C48E6}Prefabs/Characters/Uniforms/TakShirts/TakShirt03.et"
+    }
+    LoadoutSlotInfo Pants {
+     Prefab ""
+    }
+    LoadoutSlotInfo Vest {
+     Prefab "{1E9DC6DD146293C8}Prefabs/Characters/Vests/AmmoCase/AmmoCase_base.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{68A8820B1B87DF9C}" {
+     TargetStorage "Pants/Pants_Taksuit_1.et"
+    }
+    ItemsInitConfigurationItem "{68A8820B008B5065}" {
+     TargetStorage "Jacket/TakShirt03.et"
+    }
+    ItemsInitConfigurationItem "{68A8820B371119B4}" {
+     TargetStorage "Jacket/TakShirt03.et"
+    }
+    ItemsInitConfigurationItem "{68EA046792400867}" {
+     TargetStorage "Vest/AmmoCase_base.et"
+    }
+    ItemsInitConfigurationItem "{68EA784A2AF1D06C}" {
+     TargetStorage "Pants/Pants_Taksuit_1.et"
+    }
+    ItemsInitConfigurationItem "{68EA784A2AC739DE}" {
+     TargetStorage "Jacket/TakShirt03.et"
+    }
+   }
+  }
+ }
+ coords 57.329 1 104.323
+}

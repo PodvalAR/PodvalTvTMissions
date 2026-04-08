@@ -1,0 +1,29 @@
+GenericEntity : "{7A333AFB11EA847A}Prefabs/System/DRG_VehicleDestroyPrefab.et" {
+ components {
+  DRG_VehicleDestroyComponent "{65733BD6110AE8FC}" {
+   m_aVehicleLossLogics {
+    VehicleLossLogic "{690B41C87C962670}" {
+     m_sSuccessObjectiveNames {
+      "AFRF_TANKERS"
+     }
+     m_sFailedObjectiveNames {
+      "CDF_TANKERS"
+     }
+     m_sVehicleEntityNames {
+      "M923A1_tanker_MERDC1"
+     }
+     m_sMessage "Бензовоз уничтожен"
+    }
+   }
+  }
+ }
+ coords 770.023 376.545 2539.702
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 653.167 349.987 2555.719
+}

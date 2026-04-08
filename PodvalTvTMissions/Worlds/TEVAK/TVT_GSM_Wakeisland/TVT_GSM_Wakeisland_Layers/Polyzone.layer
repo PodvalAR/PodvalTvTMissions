@@ -1,0 +1,67 @@
+GenericEntity flag1 : "{3D78D7D606FF9818}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_NoCapture.et" {
+ coords 5612.191 57.088 3983.656
+ angles 0.225 0 0
+ scale 6.481
+}
+GenericEntity zonecontrol : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogicCapture "{69071C6288A1D755}" {
+     m_sZonePreviewName "Склад ГСМ"
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "USA_WIN"
+      "USA_FEIL"
+     }
+     m_sFailedObjectiveNames {
+      "RU_WIN"
+      "RU_FEIL"
+     }
+     m_sMessage "Склад ГСМ захвачен!"
+     m_Timer GUB_ZoneControlTimer "{69071C61A332C178}" {
+      timeToComplete 300
+     }
+     m_ZoneController GUB_ZoneController "{69071C6115E0C523}" {
+      m_sZoneEntityName "trigger"
+     }
+     m_FlagControllerCapture GUB_FlagControllerCapture "{69071C62FEE1691E}" {
+      m_aFlagNames {
+       "flag1"
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 47.301 166.983 10209.597
+}
+PolylineShapeEntity trigger : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
+ components {
+  PS_PolyZone "{60E90266F25533F6}" {
+   m_mPolygonTexture "{59B8ECDD64F0F9EA}UI/layouts/Textures/Grid2.edds"
+   m_cPolygonColor 0.106 0.38 0.007 1
+   m_fPolygonUVScale 0.44
+   m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+   m_cPolygonBorderColor 0.01 0.132 0.015 1
+   m_fPolygonBorderWidth 5
+   m_aVisibleForFactions {
+    "RHS_AFRF"
+    "RHS_USAF"
+    ""
+   }
+  }
+ }
+ coords 5477.964 5.406 4089.493
+ Points {
+  ShapePoint "{69071C66D98A3FBE}" {
+   Position 178.715 0 -280.662
+  }
+  ShapePoint "{69071C66D71B3D86}" {
+   Position 301.36 0 -200.439
+  }
+  ShapePoint "{69071C66EDE62313}" {
+   Position 114.342 0 80.564
+  }
+ }
+}

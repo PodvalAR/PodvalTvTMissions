@@ -1,0 +1,132 @@
+SCR_DestructibleBuildingEntity : "{034A45B0D41025B9}Prefabs/Structures/Cultural/Castles/Castle_01_OuterWall_01_Corner.et" {
+ coords 959.531 0.453 843.22
+ angles 0 170.336 0
+}
+$grp SCR_DestructibleBuildingEntity : "{1321E90FE0CF8C3C}Prefabs/Structures/Cultural/Castles/Castle_01_OuterWall_03_d.et" {
+ {
+  coords 1046.134 -0.214 847.899
+  angles 0 -23.361 0
+ }
+ {
+  coords 1019.839 -6.526 858.306
+  angles -1.522 -23.386 -21.764
+ }
+}
+SCR_DestructibleBuildingEntity : "{2C97FDC04C9E39C0}Prefabs/Structures/Cultural/Castles/Castle_01_InnerWall_Small_01.et" {
+ coords 1034.793 3.857 867.904
+ angles 0 157.302 0
+}
+$grp SCR_DestructibleBuildingEntity : "{31CAD6AEE7E7E4CF}Prefabs/Structures/Cultural/Castles/Castle_01_Stairs_01.et" {
+ {
+  coords 1048.311 -0.103 848.633
+  angles 0 64.382 0
+ }
+ {
+  coords 851.599 -0.634 771.778
+  angles 0 90.073 0
+ }
+}
+SCR_DestructibleBuildingEntity : "{6BE382F85F1A7491}Prefabs/Structures/Cultural/Castles/Castle_01_InnerWall_01.et" {
+ coords 1064.36 -0.218 858.504
+ angles 0 158.631 0
+}
+$grp SCR_DestructibleBuildingEntity : "{6CDAFB08D5F88533}Prefabs/Structures/Infrastructure/Naval/Piers/Pier_Stairs01.et" {
+ {
+  coords 958.462 9.746 637.092
+  angles 0 -153.109 0
+ }
+ {
+  coords 957.578 8.151 635.344
+  angles 0 -152.98 0
+ }
+}
+SCR_DestructibleBuildingEntity : "{8D5BD6AF6FBD7A62}Prefabs/Structures/Cultural/Castles/Castle_01_OuterWall_01_Hole.et" {
+ coords 1053.526 5.13 875.978
+ angles 0 157.08 0
+}
+SCR_DestructibleBuildingEntity : "{92F8DAE5E56CA22E}Prefabs/Structures/Cultural/Castles/Castle_01_OuterWall_01.et" {
+ coords 980.442 0.384 845.431
+ angles 0 173.89 0
+}
+SCR_DestructibleBuildingEntity : "{ADDA5472F867C249}Prefabs/Structures/Cultural/Castles/Castle_01_Bridge.et" {
+ coords 1044.552 5.536 859.509
+ angles 0 -23.529 0
+}
+SCR_DestructibleBuildingEntity : "{BD66CD1F3562CBE6}Prefabs/Structures/Cultural/Castles/Castle_01_OuterWall_01_Skewed_01.et" {
+ coords 957.175 -5.88 840.164
+ angles 0 82.469 0
+}
+SCR_DestructibleBuildingEntity : "{D0D53143B41A886E}Prefabs/Compositions/CastleRuin/CastleRuin.et" {
+ coords 971.353 12.027 663.507
+ angles 0 26.247 0
+}
+$grp SCR_DestructibleBuildingEntity : "{DECF116069DCCC2B}Prefabs/Structures/Cultural/Castles/Castle_01_Tower.et" {
+ {
+  coords 985.006 -16.712 844.463
+  angles 0 -95.572 0
+ }
+ {
+  coords 1158.183 -12.136 819.565
+  angles 0 122.149 0
+ }
+ {
+  coords 853.163 -17.076 776.119
+  angles 0 -0.046 0
+ }
+}
+GenericEntity : "{F410E65512A3B79C}Prefabs/Compositions/MontfortCastle/MontfortCastle.et" {
+ components {
+  SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+   m_sDefaultMaterial "{4A4C10958E6E1882}Assets/Props/Fabric/Flags/Data/Flag_1_2_NAPA.emat"
+   m_aFlagData {
+    PS_FlagData "{68F48349784A474A}" {
+     m_sFactionKey "Ses_NAPA"
+    }
+    PS_FlagData "{68F48349432C23F6}" {
+     m_sFactionKey "RHS_AFRF"
+     m_iCaptureCounter 1
+    }
+   }
+   m_sFactionKey "Ses_NAPA"
+  }
+  SlotManagerComponent "{55DAE04E55ECE7FA}" {
+   Slots {
+    EntitySlotInfo Flag {
+    }
+   }
+  }
+  BaseActionsManagerComponent "{6202D4E6F133BF4A}" {
+   Enabled 0
+  }
+ }
+ coords 889.425 64.689 673.147
+ angles 0 115.534 0
+ {
+  GenericEntity {
+   ID "65CE9C6599F20157"
+   components {
+    MeshObject "{52AE82368499B365}" {
+     Materials {
+      MaterialAssignClass "{599EE14E68DDF539}" {
+       SourceMaterial "Flag_1_2"
+       AssignedMaterial "{4A4C10958E6E1882}Assets/Props/Fabric/Flags/Data/Flag_1_2_NAPA.emat"
+      }
+     }
+    }
+   }
+  }
+  GenericEntity {
+   ID "65CE9C6599F3BE5B"
+   components {
+    MeshObject "{52AE82368499B365}" {
+     Materials {
+      MaterialAssignClass "{599EE14E68DDF539}" {
+       SourceMaterial "Flag_1_2"
+       AssignedMaterial "{4A4C10958E6E1882}Assets/Props/Fabric/Flags/Data/Flag_1_2_NAPA.emat"
+      }
+     }
+    }
+   }
+  }
+ }
+}

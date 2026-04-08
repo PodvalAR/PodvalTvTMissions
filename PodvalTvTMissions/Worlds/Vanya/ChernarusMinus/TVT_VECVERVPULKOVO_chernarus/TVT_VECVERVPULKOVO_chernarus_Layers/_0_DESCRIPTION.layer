@@ -1,0 +1,40 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ ABOUT {
+  coords 0 0 0
+  m_sTitle "Лор"
+  m_sTextData "В распоряжении разведки США попали данные о расположении сил ЧДКЗ в деревне «Пулково». Также эта деревня является важным транспортным узлом для переброски вооружений в центр Черноруссии. "\
+  ""\
+  "ВС США готовят наступательную операцию с целью захвата деревни «Пулково», а также уничтожения находящегося там вооружения. "\
+  ""
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+ USL {
+  coords 0.01 0 -0.001
+  m_sTitle "Задачи"
+  m_sTextData "Задача для США:"\
+  ""\
+  "- Захватить штаб в церкви (сменить флаг)."\
+  "- Уничтожить контейнера с вооружением. "\
+  ""\
+  "Задача для ЧДКЗ:"\
+  ""\
+  "- Удержать штаб в церкви."\
+  "- Не дать уничтожить контейнера. "
+  m_aVisibleForFactions {
+   ""
+   "rhs_afrf"
+   "ses_cdf"
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+ RULES {
+  m_sTitle "Условности"
+  m_sTextData "Дополнительно:"\
+  "- В триггере есть грузовик с песком."\
+  "- Установки КОРД и АГС с боекомплектами."
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+}
