@@ -5,13 +5,13 @@ GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactions
     GUB_ZoneControlLogic "{68FF2B3457B19155}" {
      m_sZonePreviewName "Завод"
      m_sSuccessObjectiveNames {
-      "UK_WIN_1"
+      "USAF_WIN_1"
      }
      m_sFailedObjectiveNames {
       "AFRF_WIN_1"
      }
      m_Timer GUB_ZoneControlTimer "{68FF2B345CD496DA}" {
-      timeToComplete 180
+      timeToComplete 120
      }
      m_ZoneController GUB_ZoneController "{68FF2B344178B672}" {
       m_sZoneEntityName "TRIG_ZAVOD"
@@ -35,7 +35,7 @@ GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactions
     GUB_ZoneControlLogic "{690CFCE6F757478E}" {
      m_sZonePreviewName "Ферма"
      m_sSuccessObjectiveNames {
-      "UK_WIN_2"
+      "USAF_WIN_2"
      }
      m_sFailedObjectiveNames {
       "AFRF_WIN_2"
