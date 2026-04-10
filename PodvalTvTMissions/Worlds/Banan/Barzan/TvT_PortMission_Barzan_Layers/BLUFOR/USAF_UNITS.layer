@@ -29,9 +29,21 @@ $grp SCR_AIGroup : "{17491F97A5C9BBDF}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Gro
   angles 0 108.111 0
  }
 }
+SCR_AIGroup USAF_500_Recon : "{18CF53AE14B14060}Prefabs/Groups/BLUFOR/RHS_USAF/Recon/Group_RHS_USAF_Recon_Squad_7.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+   m_iCompanyCallsign 5
+  }
+ }
+ coords 1652.427 3.719 2828.583
+ angles 0 173.435 0
+}
 SCR_AIGroup USAF_000_KS : "{8BE5C4D411C5E59C}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_PL.et" {
  coords 2539.306 15.431 2252.857
  angles 0 98.218 0
+ m_aUnitPrefabSlots +{
+  "{0D659E49AD2F5FF6}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/Char_RHS_USAF_Regular_Medic.et"
+ }
 }
 $grp SCR_AIGroup : "{955623450C88D6F3}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_Squad.et" {
  USAF_100_AR {
@@ -69,8 +81,8 @@ $grp SCR_AIGroup : "{955623450C88D6F3}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Gro
     m_iCompanyCallsign 2
    }
   }
-  coords 2129.844 5.041 2763.438
-  angles 0 -163.316 0
+  coords 2167.082 5.041 2756.948
+  angles 0 -167.895 0
   m_aUnitPrefabSlots {
    "{4055C74F1AF2931D}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/Char_RHS_USAF_Regular_SL.et"
    "{47923D1E7C7429DE}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/Char_RHS_USAF_Regular_TL.et"
@@ -87,26 +99,6 @@ $grp SCR_AIGroup : "{955623450C88D6F3}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Gro
    PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
     m_iCompanyCallsign 2
     m_iSquadCallsign 1
-   }
-  }
-  coords 2167.082 5.041 2756.948
-  angles 0 -167.895 0
-  m_aUnitPrefabSlots {
-   "{4055C74F1AF2931D}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/Char_RHS_USAF_Regular_SL.et"
-   "{47923D1E7C7429DE}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/Char_RHS_USAF_Regular_TL.et"
-   "{2DDD36502876310E}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/Char_RHS_USAF_Regular_AR.et"
-   "{20084871DFC15824}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/Char_RHS_USAF_Regular_GL.et"
-   "{5ED534ADC95D6EFA}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/Char_RHS_USAF_Regular_LAT.et"
-   "{47923D1E7C7429DE}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/Char_RHS_USAF_Regular_TL.et"
-   "{2DDD36502876310E}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/Char_RHS_USAF_Regular_AR.et"
-   "{5ED534ADC95D6EFA}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/Char_RHS_USAF_Regular_LAT.et"
-  }
- }
- USAF_202_AR {
-  components {
-   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
-    m_iCompanyCallsign 2
-    m_iSquadCallsign 2
    }
   }
   coords 2200.592 5.041 2747.854
