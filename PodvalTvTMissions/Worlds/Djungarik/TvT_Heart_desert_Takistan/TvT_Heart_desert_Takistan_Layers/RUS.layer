@@ -123,16 +123,6 @@ $grp SCR_AIGroup : "{07CF13D51001EF00}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Dese
   m_sCustomNameSet "Десант Адмирала"
  }
 }
-$grp Vehicle : "{25DF9FF7A0D9B32A}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_armed_gunship_HEDP_Podval.et" {
- Mi8MT_armed_gunship_HEDP_Podval2 {
-  coords 5897.831 109.312 11474.281
-  m_sAttachmentGroupName "Crew_Skat4"
- }
- Mi8MT_armed_gunship_HEDP_Podval1 {
-  coords 5987.986 109.313 11562.383
-  m_sAttachmentGroupName "Crew_Skat"
- }
-}
 $grp Vehicle : "{31E004EC353C42B2}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_armed_Podval.et" {
  Mi8MT_armed_Podval2 {
   coords 5928.085 109.313 11503.005
@@ -147,9 +137,14 @@ $grp SCR_AIGroup : "{3ED14D411CDC1639}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Dese
  {
   coords 5919.675 109.312 11537.605
   angles 0.001 142.537 -0.008
+  m_aUnitPrefabSlots +{
+   "{AFCEFAA652A661E7}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_GL_opt.et"
+   "{09D586FF655F697C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_AR_opt.et"
+   "{EA09A14A3C0DE997}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_Sharpshooter_SVDM.et"
+  }
   m_sCustomNameSet "Десант Адмирала"
  }
- {
+ BTR2 {
   components {
    PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
     m_iPlatoonCallsign 1
@@ -163,7 +158,7 @@ $grp SCR_AIGroup : "{3ED14D411CDC1639}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Dese
   }
   m_sCustomNameSet "Экипаж Адмирал-2"
  }
- {
+ BTR1 {
   components {
    PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
     m_iPlatoonCallsign 1
@@ -183,6 +178,7 @@ $grp Vehicle : "{447CFE8D73F95C40}Prefabs/Vehicles/Wheeled/BTR70/BTR70_AFRF.et" 
  BTR70_AFRF4 {
   coords 9321.151 238.779 6752.717
   angles 0 -146.709 -0.004
+  m_sAttachmentGroupName "BTR2"
   {
    GameEnvironmentProbeEntity {
     ID "654E652E0CEAC5BD"
@@ -193,6 +189,7 @@ $grp Vehicle : "{447CFE8D73F95C40}Prefabs/Vehicles/Wheeled/BTR70/BTR70_AFRF.et" 
  BTR70_AFRF5 {
   coords 9311.121 238.219 6760.384
   angles 0 -147.982 0
+  m_sAttachmentGroupName "BTR1"
   {
    GameEnvironmentProbeEntity {
     ID "654E652E0CEAC5BD"
@@ -201,15 +198,26 @@ $grp Vehicle : "{447CFE8D73F95C40}Prefabs/Vehicles/Wheeled/BTR70/BTR70_AFRF.et" 
   }
  }
 }
-SCR_AIGroup : "{CD784C02581E2C8B}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Desert/Group_RHS_AFRF_ATAK_Desert_Motorized_9.et" {
+SCR_AIGroup : "{CD784C02581E2C8B}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Desert/Group_RHS_AFRF_Desert_Motorized.et" {
  components {
   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
    m_iPlatoonCallsign 2
-   m_iSquadCallsign 1
+   m_iSquadCallsign 2
   }
  }
  coords 9282.97 237.23 6745.194
  angles 0 29.455 0
+ m_aUnitPrefabSlots {
+  "{E745C9C74AC2205F}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_SL_Opt.et"
+  "{B127227755866E9E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_SR.et"
+  "{791F56517B18EE48}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_AT.et"
+  "{D42BB8F51B68538D}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_AAT.et"
+  "{A1B73F900291F014}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_AR.et"
+  "{AC6241B1F526993E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_GL.et"
+  "{C33B709D769207BC}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_Rifle.et"
+  "{A1B73F900291F014}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_AR.et"
+  "{AFCEFAA652A661E7}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_GL_opt.et"
+ }
  m_sCustomNameSet "Десант Адмирала"
 }
 SCR_AIGroup : "{D266A249A174B7C7}Prefabs/Groups/OPFOR/RHS_AFRF/Recon/Group_RHS_AFRF_Recon_Squad_7.et" {
