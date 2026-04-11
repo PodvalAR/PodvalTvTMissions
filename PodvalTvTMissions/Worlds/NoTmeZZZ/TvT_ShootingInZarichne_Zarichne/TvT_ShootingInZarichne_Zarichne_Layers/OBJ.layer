@@ -1,0 +1,982 @@
+$grp GenericEntity {
+ {
+  components {
+   MeshObject "{60D47B1241BFA1E0}" {
+    Object "{9364B0DB0E8914B6}Assets/Props/Infrastructure/ConeTraffic_01/ConeTraffic_01.xob"
+   }
+  }
+  coords 1368.933 20.625 2400.664
+  angles 0 -126.059 0
+ }
+ {
+  components {
+   MeshObject "{60D47B1241BFA1E0}" {
+    Object "{9364B0DB0E8914B6}Assets/Props/Infrastructure/ConeTraffic_01/ConeTraffic_01.xob"
+   }
+  }
+  coords 1372.051 20.69 2399.182
+  angles 0 -126.059 0
+ }
+ {
+  components {
+   MeshObject "{60D47B1241BFA1E0}" {
+    Object "{9364B0DB0E8914B6}Assets/Props/Infrastructure/ConeTraffic_01/ConeTraffic_01.xob"
+   }
+  }
+  coords 1410.592 20.563 2310.613
+  angles 0 53.982 0
+ }
+ {
+  components {
+   MeshObject "{60D47B1241BFA1E0}" {
+    Object "{9364B0DB0E8914B6}Assets/Props/Infrastructure/ConeTraffic_01/ConeTraffic_01.xob"
+   }
+  }
+  coords 1407.476 20.628 2312.097
+  angles 0 53.982 0
+ }
+ {
+  components {
+   MeshObject "{60D47B1241BFA1E0}" {
+    Object "{9364B0DB0E8914B6}Assets/Props/Infrastructure/ConeTraffic_01/ConeTraffic_01.xob"
+   }
+  }
+  coords 1453.939 20.628 2337.104
+  angles 0 53.982 0
+ }
+ {
+  components {
+   MeshObject "{60D47B1241BFA1E0}" {
+    Object "{9364B0DB0E8914B6}Assets/Props/Infrastructure/ConeTraffic_01/ConeTraffic_01.xob"
+   }
+  }
+  coords 1457.055 20.563 2335.62
+  angles 0 53.982 0
+ }
+ {
+  components {
+   MeshObject "{60D47B1241BFA1E0}" {
+    Object "{9364B0DB0E8914B6}Assets/Props/Infrastructure/ConeTraffic_01/ConeTraffic_01.xob"
+   }
+  }
+  coords 1413.458 20.656 2424.089
+  angles 0 -122.187 0
+ }
+ {
+  components {
+   MeshObject "{60D47B1241BFA1E0}" {
+    Object "{9364B0DB0E8914B6}Assets/Props/Infrastructure/ConeTraffic_01/ConeTraffic_01.xob"
+   }
+  }
+  coords 1416.468 20.721 2422.401
+  angles 0 -122.187 0
+ }
+}
+$grp SplineShapeEntity {
+ {
+  coords 1374.263 20.629 2401.98
+  Points {
+   ShapePoint "{690B2555322063ED}" {
+    Position 0.423 0 0
+   }
+   ShapePoint "{690B25553220252F}" {
+    Position 2.659 0.146 -4.773
+    Data {
+     SplinePointData SplinePointData {
+      InTangent 2.745 0 -4.845
+      OutTangent 2.457 0 -4.874
+     }
+    }
+   }
+   ShapePoint "{690B25550D0BE4D4}" {
+    Position 5.463 0 -9.516
+   }
+   ShapePoint "{690B25550C9C3D25}" {
+    Position 7.337 0 -13.005
+   }
+  }
+  LineColor 0 0 0 0
+  {
+   WallGeneratorEntity : "{4CA251EBE9778336}PrefabLibrary/DefaultLibrary/Generators/Walls/Concrete/WG_ConcreteWall_01.et" {
+    Flags 0x100003 0
+    m_iSeed 22147
+    MiddleObject "{8777F96EBE817623}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_solid_base.et"
+    FirstObject "{8777F96EBE817623}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_solid_base.et"
+    LastObject "{8777F96EBE817623}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_solid_base.et"
+    PrePadding -2
+    PostPadding -0.23
+    m_aWallGroups {
+     WallLengthGroup "{50A296D592D8520F}" {
+      m_aWallPrefabs {
+       WallWeightPair "{50A296D58C2392DF}" {
+        m_sWallAsset "{8777F96EBE817623}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_solid_base.et"
+       }
+       WallWeightPair "{50A296D58C7B3192}" {
+        m_sWallAsset "{8777F96EBE817623}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_solid_base.et"
+       }
+       WallWeightPair "{50A296D52F9A22E0}" {
+        m_sWallAsset "{8777F96EBE817623}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_solid_base.et"
+       }
+       WallWeightPair "{50A296D52FCB815B}" {
+        m_sWallAsset "{8777F96EBE817623}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_solid_base.et"
+       }
+       WallWeightPair "{50A296D521E6C029}" {
+        m_sWallAsset "{8777F96EBE817623}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_solid_base.et"
+       }
+       WallWeightPair "{50A296D505AAD35F}" {
+        m_sWallAsset "{8777F96EBE817623}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_solid_base.et"
+       }
+      }
+     }
+     WallLengthGroup "{50A296D5E6CC6685}" {
+      m_aWallPrefabs {
+       WallWeightPair "{50A296D5E01B757C}" {
+        m_sWallAsset "{8777F96EBE817623}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_solid_base.et"
+       }
+      }
+     }
+    }
+    {
+     $grp GenericEntity : "{8777F96EBE817623}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_solid_base.et" {
+      {
+       coords 0.423 0.007 0
+       angles 0 66.014 0
+      }
+      {
+       coords 0.786 -0.008 -0.897
+       angles 0 65.05 0
+      }
+      {
+       coords 1.05 -0.01 -1.587
+       angles 0 63.59 0
+      }
+      {
+       coords 1.327 0.014 -2.272
+       angles 0 61.968 0
+      }
+      {
+       coords 2.613 -0.001 -4.688
+       angles 0 60.165 0
+      }
+      {
+       coords 3.035 -0.005 -5.562
+       angles 0 58.181 0
+      }
+      {
+       coords 3.427 0.004 -6.185
+       angles 0 58.317 0
+      }
+      {
+       coords 3.839 0.016 -6.796
+       angles 0 59.155 0
+      }
+      {
+       coords 5.242 0.001 -9.146
+       angles 0 61.105 0
+      }
+      {
+       coords 5.746 -0.004 -9.972
+       angles 0 62.311 0
+      }
+      {
+       coords 6.972 -0.004 -12.307
+       angles 0 62.336 0
+      }
+     }
+    }
+   }
+  }
+ }
+ {
+  coords 1387.768 20.603 2376.819
+  Points {
+   ShapePoint "{690B2554F5EA1F74}" {
+    Position 0 0 0
+   }
+   ShapePoint "{690B2554F5EAEF8B}" {
+    Position 5 0.182 -9.839
+   }
+   ShapePoint "{690B2554CFC47F4E}" {
+    Position 7.052 0 -13.787
+    Data {
+     SplinePointData SplinePointData {
+      InTangent -0.312 -0.022 -1.533
+      OutTangent 2.888 -0.091 -1.102
+     }
+    }
+   }
+   ShapePoint "{690B2554CE726602}" {
+    Position 10.775 0 -12.043
+   }
+  }
+  {
+   WallGeneratorEntity : "{4CA251EBE9778336}PrefabLibrary/DefaultLibrary/Generators/Walls/Concrete/WG_ConcreteWall_01.et" {
+    Flags 0x100003 0
+    m_iSeed 24325
+    MiddleObject "{8777F96EBE817623}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_solid_base.et"
+    FirstObject "{8777F96EBE817623}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_solid_base.et"
+    LastObject "{8777F96EBE817623}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_solid_base.et"
+    PrePadding -2
+    PostPadding -0.23
+    m_aWallGroups {
+     WallLengthGroup "{50A296D592D8520F}" {
+      m_aWallPrefabs {
+       WallWeightPair "{50A296D58C2392DF}" {
+        m_sWallAsset "{8777F96EBE817623}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_solid_base.et"
+       }
+       WallWeightPair "{50A296D58C7B3192}" {
+        m_sWallAsset "{8777F96EBE817623}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_solid_base.et"
+       }
+       WallWeightPair "{50A296D52F9A22E0}" {
+        m_sWallAsset "{8777F96EBE817623}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_solid_base.et"
+       }
+       WallWeightPair "{50A296D52FCB815B}" {
+        m_sWallAsset "{8777F96EBE817623}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_solid_base.et"
+       }
+       WallWeightPair "{50A296D521E6C029}" {
+        m_sWallAsset "{8777F96EBE817623}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_solid_base.et"
+       }
+       WallWeightPair "{50A296D505AAD35F}" {
+        m_sWallAsset "{8777F96EBE817623}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_solid_base.et"
+       }
+      }
+     }
+     WallLengthGroup "{50A296D5E6CC6685}" {
+      m_aWallPrefabs {
+       WallWeightPair "{50A296D5E01B757C}" {
+        m_sWallAsset "{8777F96EBE817623}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_solid_base.et"
+       }
+      }
+     }
+    }
+    {
+     $grp GenericEntity : "{8777F96EBE817623}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_solid_base.et" {
+      {
+       coords 0 0 0
+       angles 0 63.093 0
+      }
+      {
+       coords 0.437 0.008 -0.862
+       angles 0 63.093 0
+      }
+      {
+       coords 1.676 0.006 -3.302
+       angles 0 63.073 0
+      }
+      {
+       coords 2.113 0 -4.164
+       angles 0 63.065 0
+      }
+      {
+       coords 3.353 0.008 -6.604
+       angles 0 63.019 0
+      }
+      {
+       coords 4.477 0.004 -8.844
+       angles 0 61.235 0
+      }
+      {
+       coords 6.579 0.015 -12.606
+       angles 0 59.162 0
+      }
+      {
+       coords 5.531 0.012 -10.732
+       angles 0 60.908 0
+      }
+      {
+       coords 8.151 -0.055 -13.847
+       angles 0 325.747 0
+      }
+      {
+       coords 10.33 0.11 -12.367
+       angles 0 324.01 0
+      }
+     }
+    }
+   }
+  }
+ }
+ {
+  coords 1404.394 20.573 2345.735
+  Points {
+   ShapePoint "{690B25536F2016EF}" {
+    Position 0 0 0
+   }
+   ShapePoint "{690B25536F20E088}" {
+    Position 1.618 0.084 0
+   }
+   ShapePoint "{690B25536BB1AB51}" {
+    Position 6.901 0 3.131
+   }
+   ShapePoint "{690B25536A27EBAD}" {
+    Position 10.143 0 2.005
+   }
+   ShapePoint "{690B255367D9E1E3}" {
+    Position 15.7 0 4.29
+   }
+   ShapePoint "{690B25536679A3A0}" {
+    Position 19.374 0 5.491
+   }
+   ShapePoint "{690B25536193ADC8}" {
+    Position 24.267 0 -4.39
+   }
+  }
+  {
+   WallGeneratorEntity : "{4CA251EBE9778336}PrefabLibrary/DefaultLibrary/Generators/Walls/Concrete/WG_ConcreteWall_01.et" {
+    Flags 0x100003 0
+    m_iSeed 5977
+    MiddleObject "{8777F96EBE817623}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_solid_base.et"
+    FirstObject "{8777F96EBE817623}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_solid_base.et"
+    LastObject "{8777F96EBE817623}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_solid_base.et"
+    PrePadding -2
+    PostPadding -0.23
+    m_aWallGroups {
+     WallLengthGroup "{50A296D592D8520F}" {
+      m_aWallPrefabs {
+       WallWeightPair "{50A296D58C2392DF}" {
+        m_sWallAsset "{8777F96EBE817623}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_solid_base.et"
+       }
+       WallWeightPair "{50A296D58C7B3192}" {
+        m_sWallAsset "{8777F96EBE817623}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_solid_base.et"
+       }
+       WallWeightPair "{50A296D52F9A22E0}" {
+        m_sWallAsset "{8777F96EBE817623}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_solid_base.et"
+       }
+       WallWeightPair "{50A296D52FCB815B}" {
+        m_sWallAsset "{8777F96EBE817623}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_solid_base.et"
+       }
+       WallWeightPair "{50A296D521E6C029}" {
+        m_sWallAsset "{8777F96EBE817623}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_solid_base.et"
+       }
+       WallWeightPair "{50A296D505AAD35F}" {
+        m_sWallAsset "{8777F96EBE817623}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_solid_base.et"
+       }
+      }
+     }
+     WallLengthGroup "{50A296D5E6CC6685}" {
+      m_aWallPrefabs {
+       WallWeightPair "{50A296D5E01B757C}" {
+        m_sWallAsset "{8777F96EBE817623}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_solid_base.et"
+       }
+      }
+     }
+    }
+    {
+     $grp GenericEntity : "{8777F96EBE817623}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_solid_base.et" {
+      {
+       coords -0.662 -0.078 -0.825
+       angles 0 348.066 0
+      }
+      {
+       coords 1.422 0.064 -0.074
+       angles 0 328.201 0
+      }
+      {
+       coords 2.279 0.084 0.379
+       angles 0 326.278 0
+      }
+      {
+       coords 2.869 0.084 0.823
+       angles 0 327.492 0
+      }
+      {
+       coords 3.448 0.084 1.288
+       angles 0 329.799 0
+      }
+      {
+       coords 5.181 0.084 1.87
+       angles 0 333.968 0
+      }
+      {
+       coords 7.645 0.084 1.842
+       angles 0 8.721 0
+      }
+      {
+       coords 10.036 0.084 1.999
+       angles 0 340.762 0
+      }
+      {
+       coords 11.031 -0.061 2.118
+       angles 0 334.589 0
+      }
+      {
+       coords 11.697 -0.049 2.431
+       angles 0 334.495 0
+      }
+      {
+       coords 12.357 -0.165 2.767
+       angles 0 335.025 0
+      }
+      {
+       coords 13.003 -0.139 3.131
+       angles 0 336.686 0
+      }
+      {
+       coords 15.511 0.075 4.212
+       angles 0 325.68 0
+      }
+      {
+       coords 17.292 -0.238 6.852
+       angles 0 32.884 0
+      }
+      {
+       coords 19.313 -0.06 5.545
+       angles 0 57.821 0
+      }
+      {
+       coords 19.995 0.024 4.821
+       angles 0 63.303 0
+      }
+      {
+       coords 21.224 -0.019 2.376
+       angles 0 64.626 0
+      }
+      {
+       coords 21.679 -0.111 1.522
+       angles 0 65.909 0
+      }
+      {
+       coords 22.796 -0.058 -0.976
+       angles 0 66.567 0
+      }
+      {
+       coords 23.719 0.007 -3.088
+       angles 0 67.197 0
+      }
+     }
+    }
+   }
+  }
+ }
+ {
+  coords 1431.619 20.637 2343.074
+  Points {
+   ShapePoint "{690B25531DAFE898}" {
+    Position 0 0 0
+   }
+   ShapePoint "{690B25531DAFAB41}" {
+    Position -1.413 0.019 2.714
+   }
+   ShapePoint "{690B255316A7BCED}" {
+    Position -4.559 0 9.866
+   }
+   ShapePoint "{690B2553EE9754DE}" {
+    Position -1.436 0 12.161
+   }
+   ShapePoint "{690B2553EB19DAF9}" {
+    Position 2.813 0 14.664
+   }
+   ShapePoint "{690B2553E8F3307D}" {
+    Position 5.403 0 16.694
+   }
+   ShapePoint "{690B2553E2480E9D}" {
+    Position 3.906 0 19.3
+   }
+   ShapePoint "{690B2553E1F5DBF5}" {
+    Position 0.896 0 16.686
+   }
+   ShapePoint "{690B2553E0590DD3}" {
+    Position -2.315 0 15.032
+   }
+   ShapePoint "{690B2553FF00F60E}" {
+    Position -5.002 0 13.108
+   }
+   ShapePoint "{690B2553FEC11D7B}" {
+    Position -6.021 0 16.051
+   }
+   ShapePoint "{690B2553FC9EE36E}" {
+    Position -9.288 0 21.86
+   }
+   ShapePoint "{690B2553FC42138F}" {
+    Position -12.914 0 28.934
+   }
+   ShapePoint "{690B2553FB6D6463}" {
+    Position -14.795 0 33.45
+   }
+   ShapePoint "{690B2553F97A344E}" {
+    Position -12.119 0 35.355
+   }
+   ShapePoint "{690B2553F65795BD}" {
+    Position -13.695 0 37.818
+   }
+   ShapePoint "{690B2553F5097C55}" {
+    Position -16.649 0 36.671
+   }
+   ShapePoint "{690B2553F44C549E}" {
+    Position -18.246 0 39.863
+   }
+   ShapePoint "{690B2553F3D5C723}" {
+    Position -19.286 0 42.293
+   }
+   ShapePoint "{690B2553CF8A91F5}" {
+    Position -18.51 0 44.198
+   }
+   ShapePoint "{690B2553CFEB5AD1}" {
+    Position -18.771 0 45.48
+   }
+   ShapePoint "{690B2553CD0FA410}" {
+    Position -20.358 0 46.404
+   }
+   ShapePoint "{690B2553CB0B8569}" {
+    Position -22.231 0 46.724
+   }
+   ShapePoint "{690B2553CA407A4C}" {
+    Position -24.236 0 50.88
+   }
+   ShapePoint "{690B2553C9C2ED5C}" {
+    Position -25.931 0 54.932
+   }
+   ShapePoint "{690B2553C95C3EC3}" {
+    Position -27.734 0 58.221
+   }
+   ShapePoint "{690B2553C559B90B}" {
+    Position -20.143 0 62.382
+   }
+  }
+  {
+   WallGeneratorEntity : "{4CA251EBE9778336}PrefabLibrary/DefaultLibrary/Generators/Walls/Concrete/WG_ConcreteWall_01.et" {
+    Flags 0x100003 0
+    m_iSeed 19598
+    MiddleObject "{8777F96EBE817623}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_solid_base.et"
+    FirstObject "{8777F96EBE817623}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_solid_base.et"
+    LastObject "{8777F96EBE817623}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_solid_base.et"
+    PrePadding -2
+    PostPadding -0.23
+    m_aWallGroups {
+     WallLengthGroup "{50A296D592D8520F}" {
+      m_aWallPrefabs {
+       WallWeightPair "{50A296D58C2392DF}" {
+        m_sWallAsset "{8777F96EBE817623}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_solid_base.et"
+       }
+       WallWeightPair "{50A296D58C7B3192}" {
+        m_sWallAsset "{8777F96EBE817623}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_solid_base.et"
+       }
+       WallWeightPair "{50A296D52F9A22E0}" {
+        m_sWallAsset "{8777F96EBE817623}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_solid_base.et"
+       }
+       WallWeightPair "{50A296D52FCB815B}" {
+        m_sWallAsset "{8777F96EBE817623}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_solid_base.et"
+       }
+       WallWeightPair "{50A296D521E6C029}" {
+        m_sWallAsset "{8777F96EBE817623}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_solid_base.et"
+       }
+       WallWeightPair "{50A296D505AAD35F}" {
+        m_sWallAsset "{8777F96EBE817623}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_solid_base.et"
+       }
+      }
+     }
+     WallLengthGroup "{50A296D5E6CC6685}" {
+      m_aWallPrefabs {
+       WallWeightPair "{50A296D5E01B757C}" {
+        m_sWallAsset "{8777F96EBE817623}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_solid_base.et"
+       }
+      }
+     }
+    }
+    {
+     $grp GenericEntity : "{8777F96EBE817623}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_solid_base.et" {
+      {
+       coords -0.583 0 1.118
+       angles 0 242.442 0
+      }
+      {
+       coords -1.805 -0.085 3.495
+       angles 0 242.563 0
+      }
+      {
+       coords -3.065 -0.039 5.923
+       angles 0 245.747 0
+      }
+      {
+       coords -4.162 -0.085 6.548
+       angles -0.333 -106.022 -3.062
+      }
+      {
+       coords -4.338 0.006 8.967
+       angles 0 -82.856 0
+      }
+      {
+       coords -1.919 -0.068 11.899
+       angles 0 329.903 0
+      }
+      {
+       coords -1.089 0.042 12.397
+       angles 0 330.334 0
+      }
+      {
+       coords -0.445 0.028 12.754
+       angles 0 330.069 0
+      }
+      {
+       coords 0.223 -0.004 13.072
+       angles 0 328.425 0
+      }
+      {
+       coords 2.553 -0.08 14.504
+       angles 0 326.987 0
+      }
+      {
+       coords 4.602 -0.012 15.798
+       angles 0 -36.275 0
+      }
+      {
+       coords 3.568 -0.012 18.531
+       angles 0 150.643 0
+      }
+      {
+       coords 1.243 -0.108 17.259
+       angles 0 150.334 0
+      }
+      {
+       coords -0.905 0.049 15.869
+       angles 0 148.674 0
+      }
+      {
+       coords -4.507 -0.161 14.42
+       angles 0 -164.259 0
+      }
+      {
+       coords -5.944 0.02 15.864
+       angles 0 241.464 0
+      }
+      {
+       coords -6.36 0.069 16.739
+       angles 0 239.957 0
+      }
+      {
+       coords -7.729 0.011 19.108
+       angles 0 240.459 0
+      }
+      {
+       coords -9.192 -0.056 21.688
+       angles 0 242.204 0
+      }
+      {
+       coords -9.646 -0.048 22.542
+       angles 0 242.296 0
+      }
+      {
+       coords -10.918 -0.038 24.965
+       angles 0 242.999 0
+      }
+      {
+       coords -11.387 0.052 25.815
+       angles 0 243.914 0
+      }
+      {
+       coords -11.711 0.007 26.477
+       angles 0 243.914 0
+      }
+      {
+       coords -12.912 -0.171 28.931
+       angles 0 242.713 0
+      }
+      {
+       coords -13.474 0.01 29.738
+       angles 0 246.415 0
+      }
+      {
+       coords -14.42 -0.113 31.735
+       angles 0 253.829 0
+      }
+      {
+       coords -13.954 -0.195 33.678
+       angles 0 318.291 0
+      }
+      {
+       coords -11.724 -0.027 34.259
+       angles 0 -8.036 0
+      }
+      {
+       coords -16.262 -0.007 36.647
+       angles 0 235.436 0
+      }
+      {
+       coords -17.316 -0.082 37.998
+       angles 0 243.296 0
+      }
+      {
+       coords -17.628 0.026 38.663
+       angles 0 242.71 0
+      }
+      {
+       coords -18.08 0.356 39.259
+       angles 0 246.396 0
+      }
+      {
+       coords -18.539 0.231 41.752
+       angles 0 283.948 0
+      }
+      {
+       coords -18.357 0.389 44.3
+       angles 0 -107.243 0
+      }
+      {
+       coords -19.992 0.212 46.221
+       angles 0 187.258 0
+      }
+      {
+       coords -21.923 0.019 46.467
+       angles 0 239.309 0
+      }
+      {
+       coords -24.018 0.068 50.372
+       angles 0 247.418 0
+      }
+      {
+       coords -24.407 0.133 51.258
+       angles 0 247.959 0
+      }
+      {
+       coords -24.639 0.07 51.958
+       angles 0 246.592 0
+      }
+      {
+       coords -26.694 0.019 56.331
+       angles 0 -103.932 0
+      }
+      {
+       coords -26.468 -0.02 58.594
+       angles 0 -52.746 0
+      }
+      {
+       coords -24.71 0.158 60.185
+       angles 0 333.746 0
+      }
+      {
+       coords -23.854 0.13 60.635
+       angles 0 334.45 0
+      }
+      {
+       coords -23.201 0.181 60.98
+       angles 0 335.299 0
+      }
+      {
+       coords -20.806 0.049 62.082
+       angles 0 335.643 0
+      }
+     }
+    }
+   }
+  }
+ }
+}
+GenericEntity : "{0BCC0898D5A64D48}Prefabs/Props/Furniture/Chair_03/Chair_03_grey.et" {
+ coords 1406.284 20.656 2372.17
+ angles 0 -123.803 0
+}
+GenericEntity : "{0CFF151E124D337F}Prefabs/Structures/Military/CamoNets/FIA/CamoNet_Small_FIA_01_V2.et" {
+ coords 1397.818 20.656 2399.792
+ angles 0 -127.532 0
+}
+GenericEntity : "{0F9CB5A703CFA346}Prefabs/Props/Decorations/Paintings/PaintingBig_02_V2.et" {
+ coords 1406.031 21.867 2371.394
+ angles 27.53 60.727 0
+}
+GenericEntity : "{167AE5590B8A2601}Prefabs/Compositions/Misc/SubCompositions/EquipmentBoxStacked_Cluttered_US_02.et" {
+ coords 1405.978 20.607 2373.28
+ angles 0 -91.231 0
+ {
+  GenericEntity {
+   ID "5704A24F5E8939C5"
+   coords -0.002 0.582 0.19
+   angles 0 -95.584 0
+  }
+ }
+}
+GenericEntity : "{2ABF235305BB37AE}Prefabs/Compositions/Misc/SubCompositions/Furniture/Table_Desk_US_03.et" {
+ coords 1406.16 20.615 2371.728
+ angles 0 55.129 0
+ {
+  GameEntity {
+   ID "5CB0F585D17B3D86"
+   coords -0.188 0.908 -0.262
+   angles 0 -71.688 0
+  }
+ }
+}
+$grp GenericEntity : "{31DEE33F05F7C9D0}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_base.et" {
+ {
+  coords 1401.638 20.656 2378.366
+  angles 0 -72.867 0
+ }
+ {
+  coords 1395.513 20.798 2388.286
+  angles 0 59.332 0
+ }
+ {
+  coords 1408.365 20.725 2391.702
+  angles 0 62.376 0
+ }
+ {
+  coords 1405.802 20.725 2397.113
+  angles 0 62.376 0
+ }
+}
+GenericEntity : "{5019513019F0885A}Prefabs/Props/Military/Furniture/TableMilitary_US_02.et" {
+ components {
+  Hierarchy "{5CCCBEF353034A78}" {
+   Enabled 1
+  }
+ }
+ coords 1407.785 20.597 2371.253
+ angles 0 0 0
+}
+$grp GenericEntity : "{53EB8BF116A99F3B}Prefabs/Props/Military/Sandbags/Sandbag_01_short_high_base.et" {
+ {
+  coords 1407.299 20.656 2370.337
+ }
+ {
+  coords 1405.785 20.656 2370.555
+  angles 0 59.363 0
+ }
+ {
+  coords 1405.741 21.938 2370.546
+  angles 0 58.275 0
+ }
+ {
+  coords 1405.679 20.656 2374.466
+ }
+ {
+  coords 1407.421 20.656 2374.466
+ }
+ {
+  coords 1412.671 20.656 2377.146
+  angles 0 -114.641 0
+ }
+ {
+  coords 1411.135 20.656 2380.234
+  angles 0 -119.648 0
+ }
+ {
+  coords 1411.927 20.656 2378.768
+  angles 0 -114.641 0
+ }
+}
+GenericEntity : "{68885712AD843B29}Prefabs/Props/Civilian/FileOffice_01_Double.et" {
+ components {
+  Hierarchy "{5CCCBEF35309FCC0}" {
+   Enabled 1
+  }
+ }
+ coords 1407.316 21.503 2371.107
+ angles 0 77.131 0
+}
+GenericEntity : "{7762F50A860DD074}Prefabs/Props/Military/Furniture/TableMilitary_US_01.et" {
+ components {
+  Hierarchy "{5CCCBEF3530CD6C5}" {
+   Enabled 1
+  }
+ }
+ coords 1407.166 20.597 2373.563
+ angles 0 -177.001 0
+}
+GenericEntity : "{795552B887CD50E7}Prefabs/Props/Industrial/ConcretePanel_01_stack.et" {
+ coords 1447.943 20.613 2336.185
+ angles 0 -29.103 0
+}
+$grp GenericEntity : "{8777F96EBE817623}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_solid_base.et" {
+ {
+  coords 1404.929 20.656 2372.637
+  angles 0 77.928 0
+ }
+ {
+  coords 1403.952 20.656 2374.873
+  angles 0 55.334 0
+ }
+ {
+  coords 1402.565 20.656 2376.879
+  angles 0 55.334 0
+ }
+ {
+  coords 1402.538 20.656 2380.335
+  angles 0 67.541 0
+ }
+ {
+  coords 1401.365 20.656 2382.64
+  angles 0 58.497 0
+ }
+ {
+  coords 1400.01 20.656 2384.851
+  angles 0 58.497 0
+ }
+ {
+  coords 1398.234 20.656 2384.956
+  angles 0 -3.054 0
+ }
+ {
+  coords 1395.969 20.996 2390.483
+  angles 0 128.346 0
+ }
+ {
+  coords 1396.521 20.996 2392.467
+  angles 0 66.463 0
+ }
+ {
+  coords 1395.015 20.733 2393.879
+  angles 0 28.367 0
+ }
+ {
+  coords 1392.65 20.887 2394.769
+  angles -10.62 0 0
+ }
+ {
+  coords 1411.127 20.656 2355.18
+  angles 0 -119.376 0
+ }
+ {
+  coords 1408.596 20.656 2359.677
+  angles 0 -119.376 0
+ }
+ {
+  coords 1407.3 20.656 2361.98
+  angles 0 -119.376 0
+ }
+ {
+  coords 1406.048 20.656 2364.204
+  angles 0 -119.376 0
+ }
+ {
+  coords 1409.861 20.656 2357.43
+  angles 0 -119.376 0
+ }
+ {
+  coords 1412.369 20.656 2352.973
+  angles 0 -119.376 0
+ }
+}
+$grp GenericEntity : "{9BEF8533BCBEBFC1}PrefabLibrary/DefaultLibrary/Props/Military/S105_wreck.et" {
+ {
+  coords 1400.277 20.656 2363.996
+ }
+ {
+  coords 1392.72 20.542 2384.777
+  angles 0 -178.189 0
+ }
+}
+GenericEntity : "{B90E5414AB7C325B}Prefabs/Props/Wrecks/BTR70_Wreck/BTR70_wreck_static.et" {
+ coords 1396.598 20.656 2451.574
+ angles 0 -89.626 0
+}
+SCR_DestructibleBuildingEntity : "{DEB2A4785E65C6F4}PrefabLibrary/DefaultLibrary/Structures/Commercial/NewspaperBooth_E_01/NewspaperBooth_E_01.et" {
+ coords 1435.114 0.253 2342.871
+ angles 0 -117.652 0
+}
+$grp GenericEntity : "{E08F31F0EC81F2AD}Prefabs/Compositions/Misc/SubCompositions/Sandbag_Barricade_US_05.et" {
+ {
+  coords 1367.876 20.61 2397.446
+  angles 0 -29.041 0
+ }
+ {
+  coords 1411.651 20.548 2313.83
+  angles 0 151 0
+ }
+ {
+  coords 1458.114 20.548 2338.837
+  angles 0 151 0
+ }
+ {
+  coords 1412.187 20.641 2420.95
+  angles 0 -25.169 0
+ }
+}

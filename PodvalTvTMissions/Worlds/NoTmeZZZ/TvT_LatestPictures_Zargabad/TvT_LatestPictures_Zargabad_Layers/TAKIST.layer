@@ -1,0 +1,121 @@
+Vehicle UAZ1 : "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et" {
+ coords 3539.451 22.344 4038.179
+ m_sAttachmentGroupName "Commander"
+}
+SCR_AIGroup Commander : "{371433587517EBAC}Prefabs/Groups/OPFOR/Ses_TKA/Group_A2F_TKA_PL.et" {
+ components {
+  PS_GroupCallsignAssigner "{690535BAAA97DB0C}" {
+  }
+ }
+ coords 3538.107 22.344 4049.118
+ angles 0 91.017 0
+}
+$grp Vehicle : "{6F963B40DE04868B}Prefabs/Vehicles/Wheeled/BTR70/BTR70_Ses_TKA.et" {
+ BTR70_Ses_TKA1 {
+  coords 3544.487 22.378 4125.13
+  angles 0 -90.424 0
+  m_sAttachmentGroupName "crew2"
+ }
+ BTR70_Ses_TKA2 {
+  coords 3544.538 22.378 4118.281
+  angles 0 -90.424 0
+  m_sAttachmentGroupName "crew1"
+ }
+}
+$grp SCR_AIGroup : "{B2829E998DF41555}Prefabs/Groups/OPFOR/Ses_TKA/Group_A2F_TKA_Squad.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{690535BD440C3783}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 4828.822 38.037 4595.197
+  angles 0.895 0.014 0.895
+  m_sCustomNameSet "Охрана виллы"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{690535BABFBE8010}" {
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 3539.899 22.344 4045.172
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{690535BA9C39A6D1}" {
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 3547.381 22.344 4053.077
+  angles 0 179.576 0
+ }
+ Patrol1 {
+  components {
+   PS_GroupCallsignAssigner "{690535BD5590642D}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 4490.43 17.219 4359.802
+  angles 1.956 14.409 -0.421
+  m_aUnitPrefabSlots {
+   "{AFFB63AA07D712D2}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_SL.et"
+   "{D2E38F5262442E4B}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_SR.et"
+   "{1ADBFB744CDAAE9D}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_AT.et"
+  }
+  m_sCustomNameSet "Городской патруль"
+ }
+ Patrol2 {
+  components {
+   PS_GroupCallsignAssigner "{690535BD2C6775C3}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 1
+   }
+  }
+  coords 4558.973 18.875 4008.556
+  angles 0 -46.18 0
+  m_aUnitPrefabSlots {
+   "{AFFB63AA07D712D2}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_SL.et"
+   "{D2E38F5262442E4B}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_SR.et"
+   "{1ADBFB744CDAAE9D}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_AT.et"
+  }
+  m_sCustomNameSet "Городской патруль"
+ }
+ Patrol3 {
+  components {
+   PS_GroupCallsignAssigner "{690535BD3EDFC77C}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 2
+   }
+  }
+  coords 4162.483 16.904 3814.209
+  angles 2.726 -61.683 2.482
+  m_aUnitPrefabSlots {
+   "{AFFB63AA07D712D2}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_SL.et"
+   "{D2E38F5262442E4B}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_SR.et"
+   "{1ADBFB744CDAAE9D}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_AT.et"
+  }
+  m_sCustomNameSet "Городской патруль"
+ }
+}
+$grp SCR_AIGroup : "{D98C1540C5C05A6C}Prefabs/Groups/OPFOR/Ses_TKA/Group_A2F_TKA_Motorized.et" {
+ crew1 {
+  components {
+   PS_GroupCallsignAssigner "{690535BD67BDCD3B}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 3524.602 22.344 4111.297
+ }
+ crew2 {
+  components {
+   PS_GroupCallsignAssigner "{690535BD7DD5560F}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 3533.788 22.344 4121.538
+  angles 0 -86.57 0
+ }
+}

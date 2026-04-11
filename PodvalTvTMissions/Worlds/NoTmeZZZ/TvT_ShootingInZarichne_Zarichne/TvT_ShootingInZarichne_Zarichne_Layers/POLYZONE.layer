@@ -1,0 +1,140 @@
+PolylineShapeEntity Capture {
+ components {
+  PS_PolyZone "{690AA46FA506ED9A}" {
+   m_mPolygonTexture "{62F4404928D33DB5}UI/layouts/Textures/Grid1b.edds"
+   m_cPolygonColor 0.157 0.624 0.275 1
+   m_fPolygonUVScale 0.44
+   m_mPolygonTextureBorder ""
+   m_cPolygonBorderColor 0 0.502 0.125 1
+   m_fPolygonBorderWidth 3
+   m_aVisibleForFactions {
+    "US"
+    "USSR"
+    ""
+   }
+  }
+ }
+ coords 1410.859 20.562 2331.083
+ Points {
+  ShapePoint "{690AA46FCDA7F5A6}" {
+   Position 0 0 0
+  }
+  ShapePoint "{690AA46FC3FDD48D}" {
+   Position -51.415 0 97.866
+  }
+  ShapePoint "{690AA46FDC87BB9B}" {
+   Position -20.899 0 113.577
+  }
+  ShapePoint "{690AA46FD8B80962}" {
+   Position 33.65 0 18.232
+  }
+  ShapePoint "{690AA46FCDA7BB4D}" {
+   Position 0.165 0.106 -0.402
+  }
+ }
+ IsClosed 1
+}
+GenericEntity FLAG : "{3D78D7D606FF9818}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_NoCapture.et" {
+ components {
+  BaseActionsManagerComponent "{6884B4EB6BB6DC1C}" {
+   ActionContexts {
+    UserActionContext "{6884B4EB6BB6DC23}" {
+     Radius 3
+    }
+   }
+   additionalActions {
+    PS_FlagChangeAction "{690B0868A47FB51C}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo SCR_ActionUIInfo "{690B086883FDB903}" {
+      Name "Захватить флаг"
+     }
+     Duration 5
+    }
+   }
+  }
+ }
+ coords 1408.773 20.656 2372.679
+}
+GenericEntity : "{CA1FF8EE196359C6}Prefabs/System/DRG_FlagControlPrefab.et" {
+ components {
+  DRG_FlagControlComponent "{66294262AC006581}" {
+   m_aFlagLogics {
+    FlagLogic "{690AA46CBFE466A1}" {
+     m_sSuccessObjectiveNames {
+      "US"
+     }
+     m_sFailedObjectiveNames {
+      "USSR"
+     }
+     m_sNotificationMessage "Город захвачен и удержан. Победа США"
+     m_aFlagControls {
+      FlagControl "{690AA46C87DEED61}" {
+       m_sFactionKey "US"
+       m_sFlagEntityName "FLAG"
+       m_sFlagPreviewName "США: Флаг захвачен и удержан в течении 5 минут"
+      }
+     }
+     m_iCompleteAfterSeconds 300
+    }
+    FlagLogic "{690B0869B104085A}" {
+     m_sSuccessObjectiveNames {
+      "USSR"
+     }
+     m_sFailedObjectiveNames {
+      "US"
+     }
+     m_sNotificationMessage "Город захвачен и удержан. Победа СССР"
+     m_aFlagControls {
+      FlagControl "{690B086980488BB0}" {
+       m_sFactionKey "USSR"
+       m_sFlagEntityName "FLAG"
+       m_sFlagPreviewName "СССР: Флаг захвачен и удержан в течении 5 минут"
+      }
+     }
+     m_iCompleteAfterSeconds 300
+    }
+   }
+  }
+ }
+ coords 295.005 58.233 4329.88
+}
+PS_ManualMarker marker_flag : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+ coords 1408.773 20.656 2372.679
+ m_sImageSet "{E23427CAC80DA8B7}UI/Textures/Icons/icons_mapMarkersUI.imageset"
+ m_sImageSetGlow ""
+ m_MarkerColor 0.002 0.002 0.002 1
+ m_sQuadName "flag-2"
+ m_fWorldSize 35
+ m_sDescription "Флаг контроля города"
+ m_bUseWorldScale 1
+ m_aVisibleForFactions {
+  "RHS_AFRF"
+  "RHS_USAF"
+  "RHS_ION"
+  "Ses_CDF"
+  "Ses_ChDKZ"
+  "Ses_TKR"
+  "Ses_TKA"
+  "Drg_IGF"
+  "Drg_PIR"
+  "UK"
+  "USSR"
+  "US"
+  "FIA"
+  "Drg_VCA"
+ }
+ m_bVisibleForEmptyFaction 1
+ m_aHideOnGameModeStates {
+ }
+ m_iZOrder 0
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 301.255 57.108 4454.099
+}
