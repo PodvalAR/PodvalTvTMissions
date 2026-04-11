@@ -1,0 +1,58 @@
+$grp Vehicle : "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et" {
+ UAZ1 {
+  coords 4586.553 23.907 11123.335
+  angles -2.681 177.279 0.127
+  m_sAttachmentGroupName "RHS_AFRF_400"
+ }
+ UAZ2 {
+  coords 4586.116 24.177 11131.315
+  angles -0.89 174.038 0.093
+  m_sAttachmentGroupName "RHS_AFRF_400"
+ }
+ UAZ4 {
+  coords 4585.015 24.345 11145.935
+  angles 0.895 178.216 -0.028
+  m_sAttachmentGroupName "RHS_AFRF_401"
+ }
+ UAZ3 {
+  coords 4585.347 24.327 11138.955
+  angles -0.893 176.124 0.06
+  m_sAttachmentGroupName "RHS_AFRF_401"
+ }
+}
+$grp Vehicle : "{4C81D7ED8F8C0D87}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_tanker.et" {
+ Ural4320_tanker2 {
+  coords 4448.407 1.319 11088.272
+  angles -0.778 -60.302 -0.444
+  m_sAttachmentGroupName "RHS_AFRF_000"
+ }
+ Ural4320_tanker1 {
+  coords 4445.891 1.371 11082.41
+  angles 0.356 -61.335 1.215
+  m_sAttachmentGroupName "RHS_AFRF_000"
+ }
+ Ural4320_tanker3 {
+  coords 4442.726 1.454 11077.461
+  angles -0.877 -60.675 1.561
+  m_sAttachmentGroupName "RHS_AFRF_000"
+ }
+}
+SCR_AIGroup RHS_AFRF_300 : "{5AC79B71E9E08397}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Mechanized.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+   m_iCompanyCallsign 3
+  }
+ }
+ coords 4400.096 1.625 11063.771
+ angles 0 128.231 0
+}
+Vehicle BTR1 : "{C012BB3488BEA0C2}Prefabs/Vehicles/Wheeled/BTR70/BTR70.et" {
+ coords 4419.043 1.594 11078.934
+ angles 0 108.883 0
+ m_sAttachmentGroupName "RHS_AFRF_100"
+}
+Vehicle Ural4320_ZU1 : "{FD109F3702AAB392}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_ZU23.et" {
+ coords 4403.428 1.625 11060.313
+ angles 0 28.43 0
+ m_sAttachmentGroupName "RHS_AFRF_300"
+}
