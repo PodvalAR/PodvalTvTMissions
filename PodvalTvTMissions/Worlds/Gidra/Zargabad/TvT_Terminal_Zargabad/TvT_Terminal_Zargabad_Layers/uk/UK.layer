@@ -7,7 +7,7 @@ $grp Vehicle : "{3312ADBF53A16DD9}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS.et" {
   }
   coords 4033.542 25.062 3559.665
   angles 0 24.429 0
-  m_sAttachmentGroupName "MH_101"
+  m_sAttachmentGroupName "MH_110"
  }
  LAV25_RHS2 {
   components {
@@ -68,7 +68,7 @@ $grp SCR_AIGroup : "{654E3A922B11EC94}Prefabs/Groups/BLUFOR/British Forces/Regul
     m_iCompanyCallsign 2
    }
   }
-  coords 2825.86 6.67 2702.065
+  coords 2825.716 4.877 2702.284
   angles -5.582 98.472 6.189
  }
  PM_201 {
@@ -146,6 +146,9 @@ Vehicle _Series_SWB_Transport_Covered_Camo1 : "{D7F4C63BA427454E}Prefabs/Vehicle
 }
 Vehicle M1240A1_MATV_Turret_Green1 : "{D9AC0E3578809137}Prefabs/Vehicles/Wheeled/M1240A1_MATV/M1240A1_MATV_Turret_Green.et" {
  components {
+  SCR_VehicleFactionAffiliationComponent "{5882CBD9AC741CEC}" {
+   "faction affiliation" "UK"
+  }
   SlotManagerComponent "{55BCE45E438E4CFF}" {
    Slots {
     RegisteringComponentSlotInfo Turret {
@@ -156,6 +159,7 @@ Vehicle M1240A1_MATV_Turret_Green1 : "{D9AC0E3578809137}Prefabs/Vehicles/Wheeled
  }
  coords 2830.404 4.533 2703.366
  angles -1.069 11.541 0.754
+ m_sAttachmentGroupName "PM_200"
 }
 $grp Vehicle : "{F9FD7E24B28538EE}Prefabs/Vehicles/Wheeled/M923A1/M923A1_transport_covered_UK.et" {
  M923A1_transport_covered_UK1 {
