@@ -7,20 +7,26 @@ SCR_AIGroup : "{1CF5EFE6FE5047FB}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_Elite_For
  coords 6254.651 48.875 5083.481
  angles 0 -168.969 0
  m_aUnitPrefabSlots {
-  "{7190C1CBD3007C3E}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_SL.et"
-  "{76573B9AB586C6FD}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_TL.et"
-  "{1C1830D4E184DE2D}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_AR.et"
-  "{1F19F6D64338C82F}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Rifleman.et"
-  "{5ADE3ACC5A6EB107}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Rifleman_2.et"
-  "{6A8AAB9EF4CA4EAE}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_SMAW.et"
-  "{B73805E442B03186}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Marksman.et"
+  "{63751BA2F50C1170}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Drg_Character_RHS_ION_PMC_SL_v2.et"
+  "{187215ED540EBC8E}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Drg_Character_RHS_ION_PMC_Rifleman_v5.et"
+  "{C0DA7C2C2D87A2D2}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Drg_Character_RHS_ION_PMC_Rifleman_v3.et"
+  "{36CCC836D7335AAE}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Drg_Character_RHS_ION_PMC_Rifleman_AK_v5.et"
+  "{810FD268AB795603}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Drg_Character_RHS_ION_PMC_LAT_v3.et"
+  "{810FD268AB795603}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Drg_Character_RHS_ION_PMC_LAT_v3.et"
+  "{3F4104FD0D5E884F}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Drg_Character_RHS_ION_PMC_Sniper_v2.et"
  }
  m_sCustomNameSet "ДРГ \"Мотылек\""
 }
 Vehicle UH1H_armed_gunship_HE1 : "{21E9A875C0A3C409}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed_gunship_HE.et" {
- coords 5505.631 123.706 6757.696
+ coords 10054.131 3.678 10759.905
  angles 0 -162.313 0
  m_sAttachmentGroupName "heli"
+ {
+  GameEnvironmentProbeEntity {
+   ID "654C8CC81C957F97"
+   coords 0 1.812 1.074
+  }
+ }
 }
 $grp Vehicle : "{2BA718A10554665C}Prefabs/Vehicles/Wheeled/M998/M1025_armed_ION_base.et" {
  M1025_armed_ION_base1 {
@@ -49,12 +55,12 @@ SCR_AIGroup : "{4482F48156932D3E}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_STK_3.et"
  angles 0 65.609 0
  m_aUnitPrefabSlots {
   "{AEC9840EA78E11E7}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_SL_3.et"
-  "{07C9CD08A7D257B8}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Rifleman_3.et"
-  "{8E01B51117F34FFD}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Rifleman_1.et"
-  "{3AFDE830D2BEDE8F}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Rifleman_4.et"
-  "{E9893D293318AC54}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_SMAW.et"
-  "{A536AFA035B4146D}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Medic.et"
-  "{B5A4124F110F3F38}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Marksman_2.et"
+  "{78D53375E47371B1}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_SR_Random.et"
+  "{D57611E14B802669}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_Rifl_Random.et"
+  "{D57611E14B802669}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_Rifl_Random.et"
+  "{DEAD835A91DF11DE}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_AR_Random.et"
+  "{E318D6B7BA66E41F}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_Rifl_AK_Random.et"
+  "{AB7DE8ABBC51FFEA}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_Sniper_Random.et"
  }
  m_sCustomNameSet "Наемники"
 }
@@ -90,6 +96,16 @@ $grp SCR_AIGroup : "{A11EB8785A76BA55}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_STK_
   }
   coords 5825.298 39.444 5839.797
   angles 0 64.272 0
+  m_aUnitPrefabSlots {
+   "{4B55C8F7AB6B868C}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_SL_2.et"
+   "{78D53375E47371B1}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_SR_Random.et"
+   "{E318D6B7BA66E41F}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_Rifl_AK_Random.et"
+   "{D57611E14B802669}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_Rifl_Random.et"
+   "{E318D6B7BA66E41F}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_Rifl_AK_Random.et"
+   "{DEAD835A91DF11DE}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_AR_Random.et"
+   "{20365AF7F500EF30}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_AK_LAT_Random.et"
+   "{E318D6B7BA66E41F}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_Rifl_AK_Random.et"
+  }
   m_sCustomNameSet "Наемники"
  }
  ion3 {
@@ -101,6 +117,16 @@ $grp SCR_AIGroup : "{A11EB8785A76BA55}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_STK_
   }
   coords 4516.994 11.156 8836.671
   angles 0 -174.101 0
+  m_aUnitPrefabSlots {
+   "{4B55C8F7AB6B868C}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_SL_2.et"
+   "{78D53375E47371B1}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_SR_Random.et"
+   "{D57611E14B802669}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_Rifl_Random.et"
+   "{C311E272A65A65A9}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_LAT_Random.et"
+   "{DEAD835A91DF11DE}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_AR_Random.et"
+   "{E318D6B7BA66E41F}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_Rifl_AK_Random.et"
+   "{E318D6B7BA66E41F}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_Rifl_AK_Random.et"
+   "{E318D6B7BA66E41F}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_Rifl_AK_Random.et"
+  }
   m_sCustomNameSet "Наемники"
  }
  {
@@ -114,12 +140,12 @@ $grp SCR_AIGroup : "{A11EB8785A76BA55}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_STK_
   angles 0 -21.134 0
   m_aUnitPrefabSlots {
    "{4B55C8F7AB6B868C}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_SL_2.et"
-   "{A8288D670C2B80B3}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_TL.et"
-   "{C267862958299863}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_AR.et"
-   "{8E01B51117F34FFD}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Rifleman_1.et"
-   "{07C9CD08A7D257B8}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Rifleman_3.et"
-   "{CF7D22658BFE1B22}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_M72_2.et"
-   "{A536AFA035B4146D}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Medic.et"
+   "{78D53375E47371B1}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_SR_Random.et"
+   "{E318D6B7BA66E41F}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_Rifl_AK_Random.et"
+   "{3F4CA0C61736BA04}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_SL_Random.et"
+   "{20365AF7F500EF30}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_AK_LAT_Random.et"
+   "{E318D6B7BA66E41F}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_Rifl_AK_Random.et"
+   "{DEAD835A91DF11DE}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_AR_Random.et"
   }
   m_sCustomNameSet "Наемники"
  }
@@ -133,6 +159,16 @@ $grp SCR_AIGroup : "{CD4A8C98E6B2357B}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_STK_
   }
   coords 4554.635 11.156 8802.012
   angles 0 -112.179 0
+  m_aUnitPrefabSlots {
+   "{93FDA136D2E298D0}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_SL_4.et"
+   "{78D53375E47371B1}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_SR_Random.et"
+   "{E318D6B7BA66E41F}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_Rifl_AK_Random.et"
+   "{C311E272A65A65A9}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_LAT_Random.et"
+   "{DEAD835A91DF11DE}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_AR_Random.et"
+   "{D57611E14B802669}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_Rifl_Random.et"
+   "{D57611E14B802669}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_Rifl_Random.et"
+   "{AB7DE8ABBC51FFEA}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_Sniper_Random.et"
+  }
   m_sCustomNameSet "Наемники"
  }
  ion2 {
@@ -144,6 +180,16 @@ $grp SCR_AIGroup : "{CD4A8C98E6B2357B}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_STK_
   }
   coords 4540.628 11.156 8828.647
   angles 0 -159.062 0
+  m_aUnitPrefabSlots {
+   "{93FDA136D2E298D0}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_SL_4.et"
+   "{78D53375E47371B1}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_SR_Random.et"
+   "{E318D6B7BA66E41F}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_Rifl_AK_Random.et"
+   "{E318D6B7BA66E41F}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_Rifl_AK_Random.et"
+   "{C311E272A65A65A9}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_LAT_Random.et"
+   "{D57611E14B802669}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_Rifl_Random.et"
+   "{D57611E14B802669}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_Rifl_Random.et"
+   "{AB7DE8ABBC51FFEA}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_Sniper_Random.et"
+  }
   m_sCustomNameSet "Наемники"
  }
 }
@@ -153,7 +199,7 @@ SCR_AIGroup heli : "{E1F03F7213D8B57D}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_Heli
    m_iCompanyCallsign 4
   }
  }
- coords 5496.116 123.375 6768.262
- angles 0 111.059 0
+ coords 9525.242 13.045 10834.183
+ angles 0 -140.686 0
  m_sCustomNameSet "Экипаж вертолета"
 }

@@ -17,7 +17,7 @@ $grp SCR_AIGroup : "{706340F7481FF22F}Prefabs/Groups/OPFOR/USSR/Group_USSR_PL.et
    "{BF643BE4ADBDFDD4}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_LAT.et"
    "{F34FC121F4B43694}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_Sharpshooter.et"
   }
-  m_sCustomNameSet "Отряд "
+  m_sCustomNameSet "Стрелокове отделение"
  }
  gr2 {
   components {
@@ -38,7 +38,7 @@ $grp SCR_AIGroup : "{706340F7481FF22F}Prefabs/Groups/OPFOR/USSR/Group_USSR_PL.et
    "{BF643BE4ADBDFDD4}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_LAT.et"
    "{F34FC121F4B43694}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_Sharpshooter.et"
   }
-  m_sCustomNameSet "Отряд "
+  m_sCustomNameSet "Стрелокове отделение"
  }
  gr3 {
   components {
@@ -58,6 +58,7 @@ $grp SCR_AIGroup : "{706340F7481FF22F}Prefabs/Groups/OPFOR/USSR/Group_USSR_PL.et
    "{BF643BE4ADBDFDD4}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_LAT.et"
    "{F34FC121F4B43694}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_Sharpshooter.et"
   }
+  m_sCustomNameSet "Стрелокове отделение"
  }
  gr4 {
   components {
@@ -78,6 +79,7 @@ $grp SCR_AIGroup : "{706340F7481FF22F}Prefabs/Groups/OPFOR/USSR/Group_USSR_PL.et
    "{BF643BE4ADBDFDD4}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_LAT.et"
    "{F34FC121F4B43694}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_Sharpshooter.et"
   }
+  m_sCustomNameSet "Стрелокове отделение"
  }
  gr5 {
   components {
@@ -98,6 +100,7 @@ $grp SCR_AIGroup : "{706340F7481FF22F}Prefabs/Groups/OPFOR/USSR/Group_USSR_PL.et
    "{F34FC121F4B43694}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_Sharpshooter.et"
   }
   m_bSnapToTerrain 0
+  m_sCustomNameSet "Стрелокове отделение"
  }
  gr6 {
   components {
@@ -119,6 +122,7 @@ $grp SCR_AIGroup : "{706340F7481FF22F}Prefabs/Groups/OPFOR/USSR/Group_USSR_PL.et
    "{F34FC121F4B43694}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_Sharpshooter.et"
   }
   m_bSnapToTerrain 0
+  m_sCustomNameSet "Стрелокове отделение"
  }
  Komandir {
   coords 469.521 2.78 674.389
@@ -131,5 +135,64 @@ $grp SCR_AIGroup : "{706340F7481FF22F}Prefabs/Groups/OPFOR/USSR/Group_USSR_PL.et
   }
   m_bSnapToTerrain 0
   m_sCustomNameSet "Отделение начальника лесопилки"
+ }
+}
+$grp GenericEntity : "{843D9B182BCD2765}Prefabs/Weapons/Magazines/NSV/Box_127x108_NSV_50rnd_4AP_1APIT.et" {
+ {
+  coords 369.093 1.781 573.646
+ }
+ {
+  coords 342.171 1.781 566.991
+ }
+ {
+  coords 369.242 1.781 573.222
+ }
+ {
+  coords 342.444 1.781 566.082
+ }
+ {
+  coords 369.251 1.781 572.283
+ }
+ {
+  coords 342.183 1.781 566.577
+ }
+ {
+  coords 341.69 1.781 566.049
+ }
+ {
+  coords 368.879 1.781 574.757
+ }
+ {
+  coords 341.358 1.781 566.594
+ }
+ {
+  coords 369.292 1.781 572.929
+ }
+ {
+  coords 368.983 1.781 574.249
+ }
+ {
+  coords 341.418 1.781 566.872
+ }
+}
+$grp Turret : "{F12983FA2F0A61A0}Prefabs/Weapons/Tripods/6T7/Deployable_Tripod_6T7_NSV.et" {
+ {
+  coords 367.306 1.781 573.127
+  angles 0 -14.45 0
+  {
+   GenericEntity {
+    ID "655484C6D56E5B72"
+    {
+     DecalEntity {
+      ID "56DEFDB4A2C87F38"
+      coords 0 0 0
+     }
+    }
+   }
+  }
+ }
+ {
+  coords 343.92 1.781 567.1
+  angles 0 -14.45 0
  }
 }
