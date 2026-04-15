@@ -1,0 +1,115 @@
+PolylineShapeEntity : "{7019844BAD5C4DD8}Prefabs/PolyZone/PolyZone_Border.et" {
+ components {
+  PS_PolyZone "{60E90266F25533F6}" {
+   m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
+   m_cPolygonColor 0.502 0 0 0.156
+   m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+   m_cPolygonBorderColor 0.502 0 0 1
+   m_fPolygonBorderWidth 8
+   m_bReversed 0
+   m_aVisibleForFactions {
+    "RHS_AFRF"
+    "Ses_TKR"
+    ""
+   }
+   m_aHideOnGameModeStates {
+   }
+  }
+ }
+ coords 6932.129 335.975 6233.238
+ Points {
+  ShapePoint "{69187A2A553547D7}" {
+   Position -1.204 -1.948 -120.286
+  }
+  ShapePoint "{69187A2A55D28CA6}" {
+   Position -9.844 -2.663 -103.506
+  }
+  ShapePoint "{69187A22AE0C107D}" {
+   Position -5.587 -0.442 -54.163
+  }
+  ShapePoint "{69187A22AFB2F3F3}" {
+   Position 3.604 1.191 -26.169
+  }
+  ShapePoint "{69187A22AC1539EE}" {
+   Position 7.223 1.675 -6.183
+  }
+  ShapePoint "{69187A22B0514A53}" {
+   Position 7.462 1.303 13.847
+  }
+  ShapePoint "{69187A22B1686E9E}" {
+   Position -31.245 -8.489 70.436
+  }
+  ShapePoint "{69187A22B1D83962}" {
+   Position -61.28 -16.254 90.466
+  }
+  ShapePoint "{69187A22B62D36F7}" {
+   Position -72.179 -19.777 94.296
+  }
+  ShapePoint "{69187A22B7619B2C}" {
+   Position -139.725 -32.117 117.084
+  }
+  ShapePoint "{69187A22B4D0F0DB}" {
+   Position -152.81 -8.614 -124.021
+  }
+  ShapePoint "{69187A22BB8206D9}" {
+   Position -113.747 -8.301 -174.783
+  }
+  ShapePoint "{69187A22B877187C}" {
+   Position -54.551 -3.738 -231.59
+  }
+  ShapePoint "{69187A22B8E274A8}" {
+   Position -29.246 -4.25 -249.562
+  }
+  ShapePoint "{69187A22BCC476B3}" {
+   Position 28.951 -0.087 -242.441
+  }
+  ShapePoint "{69187A22802134CA}" {
+   Position 64.708 2.933 -219.704
+  }
+  ShapePoint "{69187A228441870D}" {
+   Position 34.244 2.195 -170.157
+  }
+  ShapePoint "{69187A228B4D7E0D}" {
+   Position 22.737 0.581 -159.78
+  }
+  ShapePoint "{69187A228BB5BFD0}" {
+   Position 19.761 -0.64 -162.226
+  }
+  ShapePoint "{69187A22886906F0}" {
+   Position 9.083 -2.014 -150.677
+  }
+  ShapePoint "{69187A22898EE7B8}" {
+   Position 5.024 -2.484 -145.672
+  }
+ }
+ {
+  PS_PolyZoneTrigger {
+   ID "60FD050E1E83544C"
+   m_polyZoneEffect PS_PolyZoneEffectRestricted "{60FD050E0DC2A2AB}" {
+    m_fKillTime 15
+   }
+   m_sFactionKey "RHS_AFRF"
+   m_sGroupKey "VDV"
+  }
+ }
+}
+PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+ components {
+  PS_EditableMarkerComponent "{5EDF4803CD048668}" {
+   m_vIconPos 0 240 0
+  }
+ }
+ coords 6889.85 338.181 6216.76
+ angles 0 66.679 0
+ m_MarkerColor 0.502 0 0 1
+ m_sQuadName "mark-exclamation-2"
+ m_fWorldSize 50
+ m_sDescription "Сбитый Ми-8"
+ m_aVisibleForFactions {
+  "RHS_AFRF"
+  "Ses_TKR"
+  ""
+ }
+ m_aHideOnGameModeStates {
+ }
+}
