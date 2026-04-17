@@ -1,0 +1,44 @@
+GenericEntity : "{574B8B93E7DDD76D}Prefabs/System/MissionRandomizer/GUB_RandomizeMissionPrefab.et" {
+ components {
+  GUB_RandomizeLossesComponent "{68DEB995D025C63E}" {
+   m_bIsAdvanceGameStage 0
+   m_sMessageDefendWin "Атака понесла критические потери! Победа обороны!"
+   m_sMessageAttackWin "Оборона понесла критические потери, Победа Атаки!"
+   m_aObjectiveNames {
+    "ObjectiveAttackWin"
+    "ObjectiveDefendWin"
+   }
+  }
+  GUB_RandomizeMissionComponent "{68A6D25C69D035C5}" {
+   m_aFactionPrefabs {
+    GUB_FactionPrefab "{68B2D70FC305EA79}" : "{014F664A80BDA81F}Configs/RandomPrefabConfig_USMCD.conf" {
+    }
+    GUB_FactionPrefab "{690D65324077720C}" : "{775645AEF87BC628}Configs/RandomPrefabConfig_TKR.conf" {
+    }
+    GUB_FactionPrefab "{690D6532426253E8}" : "{757E9D9E72D9A1B3}Configs/RandomPrefabConfig_TKA.conf" {
+    }
+    GUB_FactionPrefab "{690F20DECDF0FA24}" : "{1FAD3FE99D97D09F}Configs/RandomPrefabConfig_AFRF_D.conf" {
+    }
+    GUB_FactionPrefab "{691B515D6AA0ADA3}" : "{2162A515C1EDE618}Configs/RandomPrefabConfig_USSR.conf" {
+     m_aEnemyFactionKeys {
+      "TKR"
+     }
+    }
+    GUB_FactionPrefab "{690F20DEB4561AFB}" : "{31104B51D0C52C75}Configs/RandomPrefabConfig_PMC.conf" {
+    }
+   }
+   m_fMinDistanceBetweenLocations 500
+   m_fMaxDistanceBetweenLocations 2500
+   m_bMarkersOnlyOnBriefing 1
+   m_MarkerMakerConfigPath "{F4A0B8B3CF446139}Configs/MarkerMakerConfig_Random.conf"
+  }
+ }
+ coords 0 0 0
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 1800
+  }
+ }
+}
