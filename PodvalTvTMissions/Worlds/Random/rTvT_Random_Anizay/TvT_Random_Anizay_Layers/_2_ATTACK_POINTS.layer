@@ -36,7 +36,6 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
     Recon_Attack_17 {
      coords 13.121 -12.505 47.729
      angles 0 32.521 0
-     m_eGroupType Recon
      m_iCompanyCallsign 3
     }
     HeliAttack_Attack_5 {
@@ -54,7 +53,7 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
     Commander_Attack_5 {
      coords 4.275 -5.295 53.179
      angles 0 -70.285 0
-     m_eGroupType Command_5
+     m_eGroupType Command_9
      m_iCompanyCallsign 1
     }
     Recon_Attack_18 {
@@ -67,7 +66,6 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
     Recon_Attack_19 {
      coords 4.338 -1.115 -60.393
      angles 0 79.34 0
-     m_eGroupType Recon
      m_iCompanyCallsign 3
      m_iSquadCallsign 2
     }
@@ -662,7 +660,6 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
     Recon_Attack_24 {
      coords -27.768 -1.467 29.519
      angles 0 -89.61 0
-     m_eGroupType Recon
      m_iCompanyCallsign 3
     }
     HeliAttack_Attack_9 {
@@ -680,7 +677,7 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
     Commander_Attack_9 {
      coords 1.976 -5.295 53.77
      angles 0 -70.285 0
-     m_eGroupType Command_5
+     m_eGroupType Command_9
      m_iCompanyCallsign 1
     }
     Recon_Attack_25 {
@@ -693,7 +690,6 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
     Recon_Attack_26 {
      coords -26.424 -2.437 9.558
      angles 0 -93.133 0
-     m_eGroupType Recon
      m_iCompanyCallsign 3
      m_iSquadCallsign 2
     }
@@ -885,6 +881,95 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
     Motorized_Attack_20 {
      coords 6.945 0.371 4.067
      angles 0 115.406 0
+     m_eGroupType Motorized
+     m_iCompanyCallsign 2
+     m_iSquadCallsign 1
+    }
+   }
+   SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+    coords -0.198 0.012 0.398
+   }
+  }
+ }
+ ATTACK_IDAK {
+  coords 5181.917 166.825 5094.693
+  angles 0 117.648 0
+  {
+   $grp GUB_SpawnPointEntity : "{0DCCBC83322A0A0D}Prefabs/System/MissionRandomizer/SpawnPointEntity.et" {
+    Squad_Attack_32 {
+     coords -6.415 -0.202 2.339
+     angles 0 122.871 0
+     m_iCompanyCallsign 1
+     m_iPlatoonCallsign 1
+    }
+    Squad_Attack_33 {
+     coords -15.206 -2.127 -12.439
+     angles 0 122.951 0
+     m_iCompanyCallsign 1
+     m_iPlatoonCallsign 1
+     m_iSquadCallsign 1
+    }
+    Squad_Attack_34 {
+     coords -24.039 -3.409 -26.156
+     angles 0 119.445 0
+     m_iCompanyCallsign 1
+     m_iPlatoonCallsign 1
+     m_iSquadCallsign 2
+    }
+    Motorized_Attack_21 {
+     coords 0.814 -2.595 -8.151
+     angles 0 32.864 0
+     m_eGroupType Motorized
+     m_iCompanyCallsign 2
+    }
+    Recon_Attack_33 {
+     coords 24.867 2.873 61.802
+     angles 0 113.34 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+    }
+    HeliAttack_Attack_12 {
+     coords 36.749 0.891 -18.507
+     angles 0 70.442 0
+     m_eGroupType Helicopter_Attack
+     m_iCompanyCallsign 5
+    }
+    HeliRecon_Attack_12 {
+     coords 32.685 2.927 -20.13
+     angles 0 70.715 0
+     m_eGroupType Helicopter_Recon
+     m_iCompanyCallsign 4
+    }
+    Commander_Attack_12 {
+     coords -36.582 -7.586 -47.371
+     angles 0 119.133 0
+     m_eGroupType Command_5
+     m_iCompanyCallsign 1
+    }
+    Recon_Attack_34 {
+     coords 15.403 -1.037 44.12
+     angles 0 120.147 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+     m_iSquadCallsign 1
+    }
+    Recon_Attack_35 {
+     coords 6.647 -0.302 26.223
+     angles 0 116.229 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+     m_iSquadCallsign 2
+    }
+    Sniper_Attack_12 {
+     coords -31.075 -4.103 -36.57
+     angles 0 116.816 0
+     m_eGroupType Sniper
+     m_iCompanyCallsign 4
+     m_iSquadCallsign 1
+    }
+    Motorized_Attack_22 {
+     coords 12.226 -0.954 -16.275
+     angles 0 48.769 0
      m_eGroupType Motorized
      m_iCompanyCallsign 2
      m_iSquadCallsign 1
