@@ -23,7 +23,7 @@ PolylineShapeEntity Triger {
    Position -97.459 0 36.423
   }
   ShapePoint "{68F3490B71CB54FA}" {
-   Position -21.082 -0 179.689
+   Position -21.082 0 179.689
   }
   ShapePoint "{68F3490B723B4ABB}" {
    Position 27.816 -0.002 174.347
@@ -32,7 +32,7 @@ PolylineShapeEntity Triger {
    Position 23.164 0.001 122.706
   }
   ShapePoint "{68F3490B7BD0328A}" {
-   Position 18.113 -0 101.915
+   Position 18.113 0 101.915
   }
  }
 }
@@ -63,6 +63,13 @@ GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactions
   GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
    m_aControlLogics {
     GUB_ZoneControlLogic "{68EA81A91B1FF9B1}" {
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "RF_Win"
+     }
+     m_sFailedObjectiveNames {
+      "USAF_Win"
+     }
      m_sMessage "Промзона захвачена"
      m_Timer GUB_ZoneControlTimer "{68EA81A9155CB9C9}" {
       timeToComplete 150
