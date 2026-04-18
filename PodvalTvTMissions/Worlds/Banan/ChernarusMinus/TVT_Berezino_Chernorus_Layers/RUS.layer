@@ -1,10 +1,12 @@
 Vehicle UAZ469_PKM1 : "{0B4DEA8078B78A9B}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_PKM.et" {
  coords 9555.736 194.756 6663.703
  angles 2.152 -53.025 -0.125
+ m_sAttachmentGroupName "drg"
 }
 Vehicle UAZ1 : "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et" {
  coords 9549.952 194.882 6668.21
  angles 0.924 -52.799 0
+ m_sAttachmentGroupName "drg"
 }
 Vehicle Ural4320_command_camo1 : "{2C95509CA3E61DE1}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_command_camo1.et" {
  coords 7120.544 285.469 7695.638
@@ -26,11 +28,6 @@ $grp Vehicle : "{2C9B4D8196812513}Prefabs/Vehicles/Wheeled/TIGR/Unarmed/GAZ_TIGR
 SCR_AIGroup KS : "{496070641528229D}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_PL.et" {
  coords 7119.924 285.529 7701.34
  angles 0.467 167.947 0.145
-}
-Vehicle Ural4320_transport_covered_CIV_base3 : "{4BFB3CA9E83385D2}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_covered_CIV_base.et" {
- coords 8427.063 338.727 6778.879
- angles 0 111.444 0
- m_sAttachmentGroupName "rf2"
 }
 SCR_AIGroup crewRus : "{5AC79B71E9E08397}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Mechanized.et" {
  components {
@@ -63,42 +60,50 @@ $grp Vehicle : "{7BC76F92B882889D}Prefabs/Vehicles/Wheeled/TIGR/PKP/GAZ_TIGR_v2_
   angles 0 146.414 0
   m_sAttachmentGroupName "rf1"
  }
+ GAZ_TIGR_v2_PKM5 {
+  coords 7072.422 285.594 7682.939
+  angles 0 75 0
+  m_sAttachmentGroupName "rus"
+ }
+ GAZ_TIGR_v2_PKM4 {
+  coords 7109.025 285.5 7693.244
+  angles 0 75 0
+  m_sAttachmentGroupName "rus1"
+ }
 }
 Vehicle Mi8MT_armed1 : "{7BD282AF716ED639}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_armed.et" {
  coords 4811.529 327.406 10134.238
  angles 0 63.275 0
 }
-$grp SCR_AIGroup : "{81C6F22168CB1184}Prefabs/Groups/OPFOR/RHS_AFRF/VDV/Recon/dim_VDV_Recon_1.et" {
- {
+$grp SCR_AIGroup : "{B851352F042E4F0B}Prefabs/Groups/OPFOR/RHS_AFRF/Recon/Group_RHS_AFRF_Recon_Squad.et" {
+ drg {
   components {
-   PS_GroupCallsignAssigner "{68B17A4378FC6401}" {
-    m_iCompanyCallsign 6
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 5
    }
   }
-  coords 4829.054 327.406 10146.571
-  angles 0 -117.177 0
-  m_sCustomNameSet "ВДВ"
+  coords 9557.681 196.391 6668.008
+  angles 0 -138.157 0
  }
  {
   components {
-   PS_GroupCallsignAssigner "{68B17A4378FC6401}" {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 6
+   }
+  }
+  coords 4829.037 327.406 10148.49
+  angles 0 -124.003 0
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
     m_iCompanyCallsign 6
     m_iSquadCallsign 1
    }
   }
-  coords 4832.453 327.406 10139.952
-  angles 0 -117.177 0
-  m_sCustomNameSet "ВДВ"
+  coords 4834.309 327.406 10140.813
+  angles 0 -123.207 0
  }
-}
-SCR_AIGroup : "{B851352F042E4F0B}Prefabs/Groups/OPFOR/RHS_AFRF/Recon/Group_RHS_AFRF_Recon_Squad.et" {
- components {
-  PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
-   m_iCompanyCallsign 5
-  }
- }
- coords 9557.681 196.391 6668.008
- angles 0 -138.157 0
 }
 SCR_AIGroup : "{D43A9753198C5D8F}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Heli.et" {
  components {
@@ -109,6 +114,18 @@ SCR_AIGroup : "{D43A9753198C5D8F}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS
  coords 4814.732 327.406 10122.994
  angles 0 -29.407 0
  m_sCustomNameSet "Экипаж Mi8"
+}
+$grp Vehicle : "{D9B91FAB817A6033}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_covered.et" {
+ Ural4320_transport_covered2 {
+  coords 8427.837 339.18 6778.893
+  angles 0 112.985 0
+  m_sAttachmentGroupName "rf2"
+ }
+ Ural4320_transport_covered1 {
+  coords 8415.811 339.18 6782.909
+  angles 0 105 0
+  m_sAttachmentGroupName "rf3"
+ }
 }
 $grp SCR_AIGroup : "{EB131DDF464F90FD}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Squad.et" {
  rus1 {
@@ -171,15 +188,15 @@ $grp SCR_AIGroup : "{EB131DDF464F90FD}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Grou
    "{1D25ADA8774D4BD2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Medic.et"
   }
  }
- {
+ rf3 {
   components {
    PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
     m_iCompanyCallsign 4
     m_iSquadCallsign 2
    }
   }
-  coords 8432.211 338.782 6783.053
-  angles 0 -159.561 0
+  coords 8420.459 338.782 6786.792
+  angles 0 -165.455 0
   m_aUnitPrefabSlots {
    "{998515E06ED7A4C9}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_SL.et"
    "{E49DF9180B449850}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_SR.et"
@@ -222,18 +239,6 @@ $grp SCR_AIGroup : "{EB131DDF464F90FD}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Grou
   }
   coords 8537.34 166.354 12013.244
   angles 0 53.723 0
- }
-}
-$grp Vehicle : "{ED23D3FD79C7DECF}Prefabs/Vehicles/Wheeled/TIGR/GAZ_TIGR_v2_Base.et" {
- GAZ_TIGR_v2_Base1 {
-  coords 7072.412 285.62 7683.084
-  angles 0 73.969 0
-  m_sAttachmentGroupName "rus"
- }
- GAZ_TIGR_v2_Base2 {
-  coords 7109.6 285.62 7693.63
-  angles 0 78.221 0
-  m_sAttachmentGroupName "rus1"
  }
 }
 Vehicle APC_K17_Epoch1 : "{F86AB1BD36B33407}Prefabs/Vehicles/Wheeled/K17/APC_K17_Epoch.et" {
