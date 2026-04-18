@@ -1,0 +1,88 @@
+$grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+ spawn_cia_1 {
+  coords 4152.376 16.607 4187.407
+  m_MarkerColor 0 0.125 0.502 1
+  m_sQuadName "mark-question"
+  m_fWorldSize 45
+  m_sDescription "Возможный спавн ЦРУ"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "Ses_TKA"
+   "CIV"
+   ""
+  }
+  m_bVisibleForEmptyFaction 1
+ }
+ spawn_cia_2 {
+  coords 4317.248 16.563 4239.349
+  m_MarkerColor 0 0.125 0.502 1
+  m_sQuadName "mark-question"
+  m_fWorldSize 45
+  m_sDescription "Возможный спавн ЦРУ"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "Ses_TKA"
+   "CIV"
+   ""
+  }
+  m_bVisibleForEmptyFaction 1
+ }
+ spawn_cia_3 {
+  coords 4321.218 17.317 4118.912
+  m_MarkerColor 0 0.125 0.502 1
+  m_sQuadName "mark-question"
+  m_fWorldSize 45
+  m_sDescription "Возможный спавн ЦРУ"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "Ses_TKA"
+   "CIV"
+   ""
+  }
+  m_bVisibleForEmptyFaction 1
+ }
+}
+SCR_AIGroup CIA_0_10_0 : "{FB9FC7E199257FEC}Prefabs/Groups/BLUFOR/RHS_USAF/USMC/Desert/dim_USMC_D_ForceRecon.et" {
+ components {
+  PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+   m_iPlatoonCallsign 1
+  }
+ }
+ coords 4159.76 16.634 4193.419
+ angles -0.895 0 0
+ m_aUnitPrefabSlots {
+  "{97DF6B8543BD4184}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Force Recon/Modern_2020/dim_USMC_FR_TL_D.et"
+  "{4EBC70331E237A75}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Force Recon/Modern_2020/dim_USMC_FR_Assist_TL_D.et"
+  "{5A4DDB19B271DC8A}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Force Recon/Modern_2020/dim_USMC_FR_Rifleman_2_D.et"
+  "{D250402DBDBC3B63}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Force Recon/Modern_2020/dim_USMC_FR_Sapper_D.et"
+  "{D250402DBDBC3B63}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Force Recon/Modern_2020/dim_USMC_FR_Sapper_D.et"
+  "{45221E0019F7FA2A}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Force Recon/Modern_2020/dim_USMC_FR_Marksman_D.et"
+  "{C7CDE1D7E0EEC5D8}Prefabs/Items/Stuff/SecretDocuments_Community.et"
+  "{59B5FF71DBDFB29D}Prefabs/Items/Equipment/Radios/Radio_R107M_TKA.et"
+  "{B112DD31A5B9A6C1}Prefabs/Items/Equipment/Radios/Radio_ANPRC77_USA.et"
+ }
+ m_sCustomNameSet "Агенты ЦРУ"
+ m_bSetPlayable 1
+ {
+  PS_ManualMarker RHS_USAF_G_010_M : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+   coords 0 0 0
+   angles 0 90 0.895
+   m_sImageSet "{1228936E5DB30403}UI/Textures/GroupManagement/FlagIcons/GroupFlagsBlufor.imageset"
+   m_sImageSetGlow ""
+   m_MarkerColor 1 1 1 1
+   m_sQuadName "undefined"
+   m_fWorldSize 50
+   m_sDescription "Агенты ЦРУ"
+   m_bUseWorldScale 0
+   m_aVisibleForFactions {
+    "RHS_USAF"
+   }
+   m_aHideOnGameModeStates {
+    GAME
+    PREGAME
+    SLOTSELECTION
+   }
+   m_iZOrder 10
+  }
+ }
+}

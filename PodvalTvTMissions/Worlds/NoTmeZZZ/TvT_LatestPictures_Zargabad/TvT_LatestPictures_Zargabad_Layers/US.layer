@@ -1,0 +1,186 @@
+$grp SCR_AIGroup : "{00BDD00EE2FD900E}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_SpeZNaZ.et" {
+ spec3 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 2
+   }
+  }
+  coords 3189.736 4.56 1861.561
+  angles 1.024 -81.01 -0.744
+  m_sCustomNameSet "Штурмовой отряд"
+ }
+ spec1 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 3192.317 4.818 1877.328
+  angles 1.254 -77.758 -1.559
+  m_sCustomNameSet "Штурмовой отряд"
+ }
+ spec2 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 3191.032 4.663 1869.741
+  angles 1.163 -81.03 -1.628
+  m_sCustomNameSet "Штурмовой отряд"
+ }
+}
+SCR_AIGroup escort : "{60209F2DD8E4026B}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/MTVT/Group_RHS_USAF_ATAK_Regular_MG.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+   m_iSquadCallsign 1
+  }
+ }
+ coords 3193.405 4.985 1885.021
+ angles 0.159 -79.801 -0.881
+ m_sCustomNameSet "Сопровождение командира"
+}
+SCR_AIGroup heli : "{6981CA4A67B1A730}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_Heli.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+   m_iCompanyCallsign 3
+  }
+ }
+ coords 3020.369 4.036 173.962
+}
+$grp Vehicle : "{7D9A9AD859069D0A}Prefabs/Vehicles/Wheeled/M998/M998_covered_long_USAF_D.et" {
+ M998_covered_long_USAF_D1 {
+  coords 3187.889 5.097 1888.243
+  angles 0.884 9.235 0.144
+  m_sAttachmentGroupName "comm"
+ }
+ M998_covered_long_USAF_D2 {
+  coords 3180.211 4.469 1843.961
+  angles 0 11.848 0
+  m_sAttachmentGroupName "us1"
+ }
+ M998_covered_long_USAF_D3 {
+  coords 3176.468 4.363 1828.703
+  angles 1.09 14.479 -0.643
+  m_sAttachmentGroupName "us2"
+ }
+ M998_covered_long_USAF_D4 {
+  coords 3170.845 4.25 1813.952
+  angles 0 23.729 0
+  m_sAttachmentGroupName "us3"
+ }
+ M998_covered_long_USAF_D5 {
+  coords 3164.36 4.317 1801.331
+  angles -1.226 30.473 0.317
+  m_sAttachmentGroupName "us4"
+ }
+ M998_covered_long_USAF_D6 {
+  coords 3156.575 4.657 1789.404
+  angles -1.244 34.303 0.235
+  m_sAttachmentGroupName "us5"
+ }
+}
+SCR_AIGroup comm : "{8BE5C4D411C5E59C}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_PL.et" {
+ coords 3194.233 5.083 1888.82
+ angles -1.558 -77.689 -1.256
+}
+$grp SCR_AIGroup : "{955623450C88D6F3}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_Squad.et" {
+ us1 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 3174.885 4.354 1851.134
+  angles 2.635 100.92 0.508
+ }
+ us2 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 3172.15 4.3 1836.926
+  angles 1.048 100.883 -0.71
+ }
+ us3 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 3169.507 4.266 1823.197
+  angles 1.564 119.121 0.871
+ }
+ us4 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 3
+   }
+  }
+  coords 3162.29 4.127 1810.228
+  angles 2.433 119.068 -0.694
+ }
+ us5 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 4
+   }
+  }
+  coords 3155.476 4.399 1797.984
+  angles 2.085 119.027 -1.912
+ }
+}
+Vehicle UH1H_armed_AP1 : "{999FC99369291EA4}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed_AP.et" {
+ coords 3026.12 4.099 174.196
+ angles 0.895 -0.014 -0.895
+ m_sAttachmentGroupName "heli"
+}
+$grp Vehicle : "{9C07B4B8CF07B8A1}Prefabs/Vehicles/Wheeled/M998/M1151_armed_M2HB_Tan_AP.et" {
+ M1151_armed_M2HB_Tan_AP1 {
+  coords 3186.514 4.942 1880.287
+  angles 0 9.326 0
+  m_sAttachmentGroupName "spec1"
+ }
+ M1151_armed_M2HB_Tan_AP4 {
+  coords 3181.548 4.531 1850.427
+  angles 0 11.597 0
+  m_sAttachmentGroupName "us1"
+ }
+ M1151_armed_M2HB_Tan_AP6 {
+  coords 3173.597 4.29 1820.135
+  angles 0 22.072 0
+  m_sAttachmentGroupName "us3"
+ }
+ M1151_armed_M2HB_Tan_AP3 {
+  coords 3183.972 4.7 1864.806
+  angles 0 9.326 0
+  m_sAttachmentGroupName "spec3"
+ }
+ M1151_armed_M2HB_Tan_AP2 {
+  coords 3185.292 4.794 1872.847
+  angles 0 9.326 0
+  m_sAttachmentGroupName "spec2"
+ }
+ M1151_armed_M2HB_Tan_AP5 {
+  coords 3178.041 4.389 1834.776
+  angles 0.06 14.24 0.091
+  m_sAttachmentGroupName "us2"
+ }
+ M1151_armed_M2HB_Tan_AP7 {
+  coords 3167.187 4.219 1806.494
+  angles -0.05 28.822 -0.14
+  m_sAttachmentGroupName "us4"
+ }
+ M1151_armed_M2HB_Tan_AP8 {
+  coords 3160.174 4.51 1794.62
+  angles -0.071 32.651 -0.222
+  m_sAttachmentGroupName "us5"
+ }
+}

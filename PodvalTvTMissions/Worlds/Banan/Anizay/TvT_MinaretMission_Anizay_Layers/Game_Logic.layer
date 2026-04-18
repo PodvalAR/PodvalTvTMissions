@@ -95,6 +95,14 @@ GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactions
   GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
    m_aControlLogics {
     GUB_ZoneControlLogic "{68E867F17E021A61}" {
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "USAF_Win"
+     }
+     m_sFailedObjectiveNames {
+      "RF_Win"
+     }
+     m_sMessage "Минарет захвачен"
      m_Timer GUB_ZoneControlTimer "{68E867F10506E388}" {
       timeToComplete 120
      }

@@ -151,7 +151,7 @@ $grp PolylineShapeEntity {
     {
      $grp SCR_DestructibleEntity : "{350B1D05E8446B1C}PrefabLibrary/DefaultLibrary/Walls/Concrete/ConcreteWall_01_6m_A.et" {
       {
-       coords -0.312 -0 1.574
+       coords -0.312 0 1.574
        angles 0 8.639 0
       }
       {
@@ -405,7 +405,7 @@ $grp PolylineShapeEntity {
   coords 529.071 1.813 654.959
   Points {
    ShapePoint "{690B3E2B274EED00}" {
-    Position -0.165 -0 -0.653
+    Position -0.165 0 -0.653
    }
    ShapePoint "{690B3E2B274E2260}" {
     Position 12.881 0.125 -140.529
@@ -423,7 +423,7 @@ $grp PolylineShapeEntity {
      }
      $grp SCR_DestructibleEntity : "{350B1D05E8446B1C}PrefabLibrary/DefaultLibrary/Walls/Concrete/ConcreteWall_01_6m_A.et" {
       {
-       coords -0.175 -0 -0.546
+       coords -0.175 0 -0.546
        angles 0 84.671 0
       }
       {
@@ -865,35 +865,16 @@ $grp PolylineShapeEntity {
   }
  }
 }
-$grp GenericEntity : "{195946E5B8F56100}Prefabs/Compositions/TreeHideout/TreeHideout_0.et" {
- {
-  coords 337.735 1.96 512.553
-  angles 0 18.992 0
- }
- {
-  coords 315.927 1.75 644.746
-  angles 0 25.767 0
- }
- {
-  coords 426.802 2.073 511.343
-  angles 0 16.922 0
- }
-}
 SCR_DestructibleBuildingEntity : "{9B576CEAEDDCB4EA}Prefabs/Compositions/SignalHillMilitaryBase/SignalHillMilitaryBase.et" {
  coords 463.904 2.578 651.504
  angles 0 85.729 0
-}
-$grp GenericEntity : "{9C9C4BED9E19C374}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_solid_burlap.et" {
  {
-  coords 446.056 1.313 758.663
+  SCR_DestructibleBuildingEntity {
+   ID "65CEE0208B01D5C8"
+   coords 19.901 0.03 11.697
+   angles -0.001 83.104 0
+  }
  }
- {
-  coords 444.179 1.319 755.566
-  angles 0 -27.588 0
- }
-}
-GenericEntity : "{CD67070EFAFC28C7}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_burlap.et" {
- coords 442.775 1.31 758.14
 }
 $grp SCR_DestructibleBuildingEntity : "{DEEFF646D21970CF}Prefabs/Compositions/ColdWarBunkers/Bunker_v1.et" {
  {
@@ -915,5 +896,19 @@ $grp SCR_DestructibleBuildingEntity : "{DEEFF646D21970CF}Prefabs/Compositions/Co
  {
   coords 450.576 0.715 479.549
   angles 0 53.306 0
+ }
+}
+$grp GameEntity : "{FA87B0B43085A3C6}Prefabs/Structures/BuildingParts/Ladders/Ladder_GantryCrane_03/Ladder_GantryCrane_03_380.et" {
+ {
+  coords 475.749 4.201 653.148
+  angles 9.682 86.962 0
+ }
+ {
+  coords 457.3 4.432 712.275
+  angles 11.991 -3.55 0.876
+ }
+ {
+  coords 467.173 4.282 629.137
+  angles 10.35 -177.57 -0.435
  }
 }

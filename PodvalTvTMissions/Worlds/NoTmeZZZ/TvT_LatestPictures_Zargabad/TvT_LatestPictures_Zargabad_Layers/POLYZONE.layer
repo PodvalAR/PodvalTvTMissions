@@ -1,0 +1,122 @@
+$grp PolylineShapeEntity {
+ {
+  components {
+   PS_PolyZone "{690535BEB8CD302A}" {
+    m_mPolygonTexture "{62F4404928D33DB5}UI/layouts/Textures/Grid1b.edds"
+    m_cPolygonColor 0.625 0.156 0.156 1
+    m_fPolygonUVScale 0.44
+    m_mPolygonTextureBorder ""
+    m_cPolygonBorderColor 0.502 0 0 1
+    m_fPolygonBorderWidth 5
+    m_aVisibleForFactions {
+     "Ses_TKA"
+     "RHS_USAF"
+     "CIV"
+     ""
+    }
+   }
+  }
+  coords 4773.63 26.307 4593.978
+  angles 5.309 -0.499 -5.379
+  Points {
+   ShapePoint "{690535BE0E26DFF9}" {
+    Position 5 0.002 -20.451
+   }
+   ShapePoint "{690535BE0389C9FC}" {
+    Position 17.899 8.034 -47.146
+   }
+   ShapePoint "{690535BE023D4965}" {
+    Position 32.595 5.495 -98.856
+   }
+   ShapePoint "{690535BE1E8DC682}" {
+    Position 108.76 -3.841 -87.679
+   }
+   ShapePoint "{690535BE1C4261AC}" {
+    Position 168.094 -8.085 -64.704
+   }
+   ShapePoint "{690535BE19EDA5A7}" {
+    Position 185.499 -4.987 2.59
+   }
+   ShapePoint "{690535BE17A9DD09}" {
+    Position 157.67 -2.287 76.199
+   }
+   ShapePoint "{690535BE15C62D22}" {
+    Position 124.928 -6.904 123.474
+   }
+   ShapePoint "{690535BE14042026}" {
+    Position 70.279 -18.045 136.362
+   }
+   ShapePoint "{690535BE13217624}" {
+    Position 15.243 -5.766 76.46
+   }
+   ShapePoint "{690535BE1029A270}" {
+    Position 0.994 -2.646 43.672
+   }
+   ShapePoint "{690535BEEFF355BF}" {
+    Position -8.37 -1.714 24.089
+   }
+   ShapePoint "{690535BEEEA6FA76}" {
+    Position -4.36 -0.093 5.381
+   }
+  }
+  IsClosed 1
+ }
+ {
+  components {
+   PS_PolyZone "{690535AD9F3BBFC2}" {
+    m_mPolygonTexture "{62F4404928D33DB5}UI/layouts/Textures/Grid1b.edds"
+    m_cPolygonColor 0.157 0.275 0.624 1
+    m_fPolygonUVScale 0.44
+    m_mPolygonTextureBorder ""
+    m_cPolygonBorderColor 0 0.125 0.502 1
+    m_fPolygonBorderWidth 5
+    m_aVisibleForFactions {
+     "Ses_TKA"
+     "RHS_USAF"
+     "CIV"
+     ""
+    }
+   }
+  }
+  coords 2.976 61.543 1437.27
+  Points {
+   ShapePoint "{690535ADD456B4AE}" {
+    Position 0 0 0
+   }
+   ShapePoint "{690535ADBAF9CD02}" {
+    Position 8186.693 217.728 -101.705
+   }
+   ShapePoint "{690535ADB61186DF}" {
+    Position 8178.523 223.259 -1427.619
+   }
+   ShapePoint "{690535ADB1DFCBE5}" {
+    Position -0.793 49.944 -1431.336
+   }
+  }
+  IsClosed 1
+ }
+}
+GenericEntity : "{91991AEB147C0F3B}Prefabs/System/DRG_RandomSpawnPrefab.et" {
+ components {
+  DRG_RandomSpawnComponent "{66295E1A338BA9CE}" {
+   m_TargetEntity "CIA_0_10_0"
+   m_MarkerEntities {
+    "spawn_cia_1"
+    "spawn_cia_2"
+    "spawn_cia_3"
+   }
+   m_PrefabResources {
+    "{EF72FA7CD87618D5}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneSmall.et"
+   }
+  }
+ }
+ coords 3477.362 28.806 6075.36
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 3392.147 16.184 155.821
+}

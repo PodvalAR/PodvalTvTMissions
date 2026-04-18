@@ -1,24 +1,65 @@
+Vehicle AFRF_000_V : "{2C95509CA3E61DE1}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_command_camo1.et" {
+ coords 5545.581 27.032 2299.04
+ angles 0 17.631 0
+ m_sAttachmentGroupName "AFRF_000"
+}
 $grp Vehicle : "{2C9B4D8196812513}Prefabs/Vehicles/Wheeled/TIGR/Unarmed/GAZ_TIGR_v2_Unarmed.et" {
  AFRF_300_V {
-  coords 5236.563 34.625 2602.489
-  angles 0 -128.923 0
+  coords 5598.371 22.756 1975.438
+  angles 0 38.44 0
   m_sAttachmentGroupName "AFRF_300"
  }
  AFRF_200_V {
-  coords 5570.998 26.828 2391.735
+  coords 5572.419 26.827 2392.934
   angles 0 106.403 0
   m_sAttachmentGroupName "AFRF_200"
  }
 }
 $grp Vehicle : "{447CFE8D73F95C3F}Prefabs/Vehicles/Wheeled/BTR70/BTR70_AFRF_camo.et" {
  AFRF_110_V {
-  coords 5260.479 34.5 2626.729
-  angles 0 -134.026 0
+  coords 5517.191 21.904 1889.526
+  angles 0 116.082 0
   m_sAttachmentGroupName "AFRF_110"
  }
  AFRF_011_V {
   coords 5568.32 26.479 2323.76
   angles 0 18.512 0
   m_sAttachmentGroupName "AFRF_011"
+ }
+}
+$grp Vehicle : "{7009ED8FBA7A1E7E}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_engineer_sand.et" {
+ AFRF_000_V_SAND {
+  components {
+   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+    FuelNodes {
+     SCR_FuelNode "{5622A70CD4036C5A}" {
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{5628CA84B129D4CE}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+    }
+   }
+  }
+  coords 5533.657 27.032 2307.158
+  angles 0 106.122 0
+ }
+ AFRF_000_V_SAND2 {
+  components {
+   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+    FuelNodes {
+     SCR_FuelNode "{5622A70CD4036C5A}" {
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{5628CA84B129D4CE}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+    }
+   }
+  }
+  coords 5590.126 23.094 1942.609
+  angles 0 28.778 0
  }
 }

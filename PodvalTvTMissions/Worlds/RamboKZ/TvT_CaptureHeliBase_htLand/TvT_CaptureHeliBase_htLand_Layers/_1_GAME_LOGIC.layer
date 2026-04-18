@@ -1,0 +1,52 @@
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{691778664856657C}" {
+     m_sZonePreviewName "Верталётная база"
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "USAF_WIN"
+     }
+     m_sFailedObjectiveNames {
+      "AFRF_WIN"
+     }
+     m_sMessage "Победа Атаки! Верталётная база захвачена!"
+     m_Timer GUB_ZoneControlTimer "{69177866A0E85B48}" {
+      timeToComplete 180
+     }
+     m_ZoneController GUB_ZoneController "{69177866AE77EE16}" {
+      m_sZoneEntityName "HELLIBASE_TRIG"
+     }
+     m_FlagController GUB_FlagController "{691778669D80E811}" {
+      m_aFlagNames {
+       "FLAG_1"
+       "FLAG_2"
+       "FLAG_3"
+       "FLAG_4"
+       "FLAG_5"
+      }
+      m_fStartFactionKey "RHS_AFRF"
+      m_fEndFactionKey "RHS_USAF"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{69189343B45D47BF}" {
+       m_sFirstFactionKey "RHS_USAF"
+       m_sSecondFactionKey "RHS_AFRF"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 127.17 5.546 2479.609
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2100
+  }
+ }
+}
