@@ -87,6 +87,20 @@ SCR_DestructibleBuildingEntity : "{6AD4788522334B53}Prefabs/Structures/Infrastru
 GenericEntity : "{6E3320C3C37CAFE5}Prefabs/Props/Garbage/Cardboard/Cardboard_Pile_04.et" {
  coords 5813.275 8.93 9788.862
 }
+Vehicle Ural4320_engineer_sand1 : "{7009ED8FBA7A1E7E}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_engineer_sand.et" {
+ components {
+  SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+   FuelNodes {
+    SCR_FuelNode "{5628CA84B129D4CE}" {
+     MaxFuel 0
+     m_fInitialFuelTankState 0
+    }
+   }
+  }
+ }
+ coords 5853.491 4.562 9782.838
+ angles 0 90.12 0
+}
 GenericEntity : "{70837F44CD03FD05}Prefabs/Props/Military/AmmoBoxes/USSR/EquipmentBoxWooden_Medical_01_USSR.et" {
  coords 5806.782 9.815 9784.319
  angles 0 -20.19 0

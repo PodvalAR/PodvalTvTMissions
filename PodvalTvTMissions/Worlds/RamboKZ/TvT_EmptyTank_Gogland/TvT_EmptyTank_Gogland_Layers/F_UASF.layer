@@ -54,6 +54,36 @@ $grp SCR_AIGroup : "{3EECAF1E0650D775}Prefabs/Groups/BLUFOR/RHS_USAF/Recon/Group
   m_sCustomNameSet "Развед отряд"
  }
 }
+$grp Vehicle : "{7009ED8FBA7A1E7E}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_engineer_sand.et" {
+ Ural4320_engineer_sand1 {
+  components {
+   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+    FuelNodes {
+     SCR_FuelNode "{5628CA84B129D4CE}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+    }
+   }
+  }
+  coords 6682.928 96.69 2098.154
+  angles -2.428 -130.654 -1.453
+ }
+ Ural4320_engineer_sand2 {
+  components {
+   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+    FuelNodes {
+     SCR_FuelNode "{5628CA84B129D4CE}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+    }
+   }
+  }
+  coords 6846.042 138.547 2459.756
+  angles 0 93.254 0
+ }
+}
 SCR_AIGroup USAF_000 : "{8BE5C4D411C5E59C}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_PL.et" {
  coords 6655.674 98.079 2072.028
  angles 0 51.169 0
@@ -109,11 +139,6 @@ $grp Vehicle : "{CC55611936C21F25}Prefabs/Vehicles/Wheeled/M998/M1025_USAF.et" {
   angles 2.002 155.091 -0.034
   m_sAttachmentGroupName "USAF_201"
  }
- USAF_010_V2 {
-  coords 6679.3 96.737 2100.501
-  angles -2.063 -138.029 -3.056
-  m_sAttachmentGroupName "USAF_010"
- }
  USAF_300_V {
   coords 6724.855 121.897 2473.406
   angles -3.589 152.69 0.846
@@ -125,11 +150,6 @@ $grp Vehicle : "{D574C943C9F8C9DF}Prefabs/Vehicles/Wheeled/M998/M1151_armed_M2HB
   coords 6664.508 97.766 2085.018
   angles 0.032 -134.222 -0.01
   m_sAttachmentGroupName "USAF_200"
- }
- USAF_010_V {
-  coords 6675.06 96.73 2095.96
-  angles 2.923 -139.183 -3.379
-  m_sAttachmentGroupName "USAF_010"
  }
  USAF_201_V2 {
   coords 6736.156 122.97 2448.543
