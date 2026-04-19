@@ -15,6 +15,11 @@ $grp SCR_AIGroup : "{07CF13D51001EF00}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Dese
   }
  }
  AFRF_002_SQ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iSquadCallsign 2
+   }
+  }
   coords 2045.746 309.097 7662.539
   angles 0 115.835 0
   m_aUnitPrefabSlots {
@@ -59,6 +64,7 @@ $grp SCR_AIGroup : "{3C0DE120ACFEABF5}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Dese
   components {
    PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
     m_iCompanyCallsign 2
+    m_iSquadCallsign 0
    }
   }
   coords 1456.263 547.313 7290.799
