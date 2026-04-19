@@ -1,5 +1,10 @@
 GenericEntity FLAG_ELECTRO : "{0DA9CD88C30EA2B2}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_02_V1_ION.et" {
  components {
+  SCR_EditableEntityComponent "{5EF0BDF2D0A30F85}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    m_sFaction "RHS_ION"
+   }
+  }
   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
    m_aFlagData {
     PS_FlagData "{68B726B72B364E90}" {
@@ -17,16 +22,50 @@ GenericEntity FLAG_ELECTRO : "{0DA9CD88C30EA2B2}PrefabsEditable/Auto/Structures/
  }
  coords 5821.912 20.415 9786.703
 }
-PS_ManualMarker FLAG_MARKER : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
- coords 5822.788 20.442 9788.319
- angles 0 90 0
- m_sImageSet "{FDD5423E69D007F8}UI/Textures/Icons/icons_wrapperUI-128.imageset"
- m_sImageSetGlow "{6980E83C053C9B5D}UI/Textures/Icons/icons_wrapperUI-128-glow.imageset"
- m_MarkerColor 0.502 0 0 1
- m_sQuadName "report"
- m_fWorldSize 70
- m_sDescription "Электростанция"
- m_bUseWorldScale 0
- m_bVisibleForEmptyFaction 1
- m_bShowForAnyFaction 1
+$grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+ FLAG_MARKER {
+  coords 5822.788 20.442 9788.319
+  angles 0 90 0
+  m_sImageSet "{FDD5423E69D007F8}UI/Textures/Icons/icons_wrapperUI-128.imageset"
+  m_sImageSetGlow "{6980E83C053C9B5D}UI/Textures/Icons/icons_wrapperUI-128-glow.imageset"
+  m_MarkerColor 0.502 0 0 1
+  m_sQuadName "report"
+  m_fWorldSize 70
+  m_sDescription "Электростанция"
+  m_bUseWorldScale 0
+  m_bVisibleForEmptyFaction 1
+  m_bShowForAnyFaction 1
+ }
+ {
+  coords 5853.491 4.562 9782.838
+  angles 0 180.12 0
+  m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 0.392 0.157 0.624 1
+  m_sQuadName "Truck"
+  m_fWorldSize 3.722
+  m_sDescription "Грузовик с песком"
+  m_bUseWorldScale 1
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+   "Drg_IGF"
+   "Drg_PIR"
+   "UK"
+   "USSR"
+   "US"
+   "FIA"
+   "Drg_VCA"
+   ""
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+   GAME
+  }
+  m_iZOrder 0
+ }
 }
