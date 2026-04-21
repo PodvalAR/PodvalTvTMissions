@@ -1,0 +1,153 @@
+$grp SCR_AIGroup : "{5A6D0239E30D205D}Prefabs/Groups/BLUFOR/British Forces/Regular/Group_UK_Motorized.et" {
+ UK_100_MOTOR {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 4543.902 4.383 5782.507
+  angles 0 -114.277 0
+ }
+ UK_010_MOTOR {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 7584.303 4.442 6344.727
+  angles 0 10.206 0
+ }
+}
+$grp SCR_AIGroup : "{654E3A922B11EC94}Prefabs/Groups/BLUFOR/British Forces/Regular/Group_UK_Squad.et" {
+ UK_110_RS {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 4534.606 4.383 5798.203
+  angles 0 -116.233 0
+ }
+ UK_111_RS {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 4527.689 4.383 5812.239
+  angles 0 -116.233 0
+  m_aUnitPrefabSlots {
+   "{B352E45394EF0C7B}Prefabs/Characters/Factions/BLUFOR/UK/UK2/UK2_SL.et"
+   "{5B94852A063A146C}Prefabs/Characters/Factions/BLUFOR/UK/Regular/Char_UK_Regular_TL.et"
+   "{31DB8E6452380CBC}Prefabs/Characters/Factions/BLUFOR/UK/Regular/Char_UK_Regular_AR.et"
+   "{9F1558B8A8DE9FBC}Prefabs/Characters/Factions/BLUFOR/UK/Regular/Char_UK_Regular_Rifle.et"
+   "{E505D2E705466C74}Prefabs/Characters/Factions/BLUFOR/UK/Regular/Char_UK_Regular_LAT.et"
+   "{5B94852A063A146C}Prefabs/Characters/Factions/BLUFOR/UK/Regular/Char_UK_Regular_TL.et"
+   "{31DB8E6452380CBC}Prefabs/Characters/Factions/BLUFOR/UK/Regular/Char_UK_Regular_AR.et"
+   "{9F1558B8A8DE9FBC}Prefabs/Characters/Factions/BLUFOR/UK/Regular/Char_UK_Regular_Rifle.et"
+  }
+ }
+}
+Vehicle M998_covered_long5 : "{9B1BF9644E0378D6}Prefabs/Vehicles/Wheeled/M998/M998_covered_long.et" {
+ coords 7557.392 4.853 6339.429
+ angles 0 -118.773 0
+ m_sAttachmentGroupName "UK_000_PL"
+}
+SCR_AIGroup UK_000_PL : "{BBA36FB95553E79C}Prefabs/Groups/BLUFOR/British Forces/Regular/Group_UK_PL.et" {
+ coords 7556.979 4.645 6336.007
+ angles 0 -38.889 0
+ m_aUnitPrefabSlots +{
+  "{CE4A08ABF17C30E2}Prefabs/Characters/Factions/BLUFOR/UK/UK2/UK2_SR.et"
+ }
+}
+$grp SCR_AIGroup : "{DD836A3E445304BB}Prefabs/Groups/BLUFOR/British Forces/Regular/Group_UK_SniperGroup.et" {
+ UK_120_SN {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 2
+    m_iSquadCallsign 0
+   }
+  }
+  coords 4519.789 2.563 5829.029
+  angles 0 -116.892 0
+  m_aUnitPrefabSlots {
+   "{5A1BD3B104B0AC6F}Prefabs/Characters/Factions/BLUFOR/UK/Regular/Char_UK_Regular_Sniper_SD.et"
+   "{6B0B103373DF995C}Prefabs/Characters/Factions/BLUFOR/UK/Regular/Char_UK_Regular_Observer.et"
+  }
+ }
+ UK_012_SN {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 0
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 7625.762 5.5 6331.507
+  angles 0 27.057 0
+  m_aUnitPrefabSlots {
+   "{5A1BD3B104B0AC6F}Prefabs/Characters/Factions/BLUFOR/UK/Regular/Char_UK_Regular_Sniper_SD.et"
+   "{6B0B103373DF995C}Prefabs/Characters/Factions/BLUFOR/UK/Regular/Char_UK_Regular_Observer.et"
+  }
+ }
+}
+$grp SCR_AIGroup : "{F95993F1D0ECB936}Prefabs/Groups/BLUFOR/British Forces/Regular/Group_UK_Squad_2.et" {
+ UK_210_RS {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 5000.971 5.754 4483.743
+  angles 0 -61.997 0
+ }
+ UK_200_RS {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 5008.092 5.406 4498.935
+  angles 0 -64.667 0
+ }
+ UK_300_RS {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 7184.599 71.421 4962.194
+  m_aUnitPrefabSlots {
+   "{B352E45394EF0C7B}Prefabs/Characters/Factions/BLUFOR/UK/UK2/UK2_SL.et"
+   "{CE4A08ABF17C30E2}Prefabs/Characters/Factions/BLUFOR/UK/UK2/UK2_SR.et"
+   "{CDEBA85E54BA39B3}Prefabs/Characters/Factions/BLUFOR/UK/Regular/Char_UK_Regular_LAT_SD.et"
+   "{50CEE00B9ACA0197}Prefabs/Characters/Factions/BLUFOR/UK/Regular/Char_UK_Regular_Rifle_SD.et"
+   "{50CEE00B9ACA0197}Prefabs/Characters/Factions/BLUFOR/UK/Regular/Char_UK_Regular_Rifle_SD.et"
+   "{5A1BD3B104B0AC6F}Prefabs/Characters/Factions/BLUFOR/UK/Regular/Char_UK_Regular_Sniper_SD.et"
+  }
+ }
+ UK_011_RS {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 7613.929 5.123 6338.179
+  angles 0 27.901 0
+  m_aUnitPrefabSlots {
+   "{B352E45394EF0C7B}Prefabs/Characters/Factions/BLUFOR/UK/UK2/UK2_SL.et"
+   "{CE4A08ABF17C30E2}Prefabs/Characters/Factions/BLUFOR/UK/UK2/UK2_SR.et"
+   "{E973E7A52BB112E0}Prefabs/Characters/Factions/BLUFOR/UK/Regular/Char_UK_Regular_AT.et"
+   "{33A7A2AD1492217E}Prefabs/Characters/Factions/BLUFOR/UK/Regular/Char_UK_Regular_MG.et"
+   "{A2E2664148810010}Prefabs/Characters/Factions/BLUFOR/UK/Regular/Char_UK_Regular_AMG.et"
+   "{9F1558B8A8DE9FBC}Prefabs/Characters/Factions/BLUFOR/UK/Regular/Char_UK_Regular_Rifle.et"
+   "{BBF99633B60997D6}Prefabs/Characters/Factions/BLUFOR/UK/Regular/Char_UK_Regular_Medic.et"
+   "{CFCDC4BFE1534992}Prefabs/Characters/Factions/BLUFOR/UK/Regular/Char_UK_Regular_Marksman.et"
+  }
+ }
+}
