@@ -1,0 +1,37 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ ABOUT {
+  m_sTitle "Лор"
+  m_sTextData "В самом сердце скалистой местности, стоит заброшенный аэропорт \"Скала 42\". Ранее этот стратегически важный объект использовался для гражданских авиаперевозок, но после экономического кризиса и сокращения внутренних ресурсов был заброшен. Однако после начала конфликта между Россией и США, аэропорт вновь обрел значение."
+  m_aVisibleForFactions {
+   "RHS_USAF"
+   "RHS_AFRF"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+ RULES {
+  m_sTitle "Правила и задачи"
+  m_sTextData "Задачи:"\
+  ""\
+  "США:"\
+  ""\
+  "1. Захватить аэропорт (красный тригер)."\
+  ""\
+  "РФ:"\
+  ""\
+  "1. Удержать аэропорт (красный тригер)."\
+  ""\
+  "ДОПОЛНИТЕЛЬНО:"\
+  ""\
+  "1. У РФ присутствует птур."\
+  ""
+  m_aVisibleForFactions {
+   "RHS_USAF"
+   "RHS_AFRF"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+}
