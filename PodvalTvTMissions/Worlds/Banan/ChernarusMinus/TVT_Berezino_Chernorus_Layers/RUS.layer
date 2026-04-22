@@ -74,6 +74,7 @@ $grp Vehicle : "{7BC76F92B882889D}Prefabs/Vehicles/Wheeled/TIGR/PKP/GAZ_TIGR_v2_
 Vehicle Mi8MT_armed1 : "{7BD282AF716ED639}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_armed.et" {
  coords 4811.529 327.406 10134.238
  angles 0 63.275 0
+ m_sAttachmentGroupName "Heli"
 }
 $grp SCR_AIGroup : "{B851352F042E4F0B}Prefabs/Groups/OPFOR/RHS_AFRF/Recon/Group_RHS_AFRF_Recon_Squad.et" {
  drg {
@@ -105,7 +106,7 @@ $grp SCR_AIGroup : "{B851352F042E4F0B}Prefabs/Groups/OPFOR/RHS_AFRF/Recon/Group_
   angles 0 -123.207 0
  }
 }
-SCR_AIGroup : "{D43A9753198C5D8F}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Heli.et" {
+SCR_AIGroup Heli : "{D43A9753198C5D8F}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Heli.et" {
  components {
   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
    m_iCompanyCallsign 7
