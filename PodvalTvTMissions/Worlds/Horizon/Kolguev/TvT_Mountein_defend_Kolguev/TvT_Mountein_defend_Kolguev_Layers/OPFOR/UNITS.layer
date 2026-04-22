@@ -1,30 +1,82 @@
-SCR_AIGroup : "{496070641528229D}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_PL.et" {
- coords 5060.586 698.898 6321.324
- angles 0 -50.996 0
+SCR_AIGroup : "{C93CC37180C2D8A0}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_KS.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+   m_iSquadCallsign 1
+  }
+ }
+ coords 5071.449 694.953 6331.417
+ angles 0 48.225 0
+ m_aUnitPrefabSlots +{
+  "{FF94BA9A0A4BF4A1}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_MG_opt.et"
+ }
 }
-SCR_AIGroup : "{8418108290CF1C16}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Sniper.et" {
- coords 5118.173 688.641 6360.349
- angles 0 -47.498 0
+$grp SCR_AIGroup : "{D266A249A174B7C7}Prefabs/Groups/OPFOR/RHS_AFRF/Recon/Group_RHS_AFRF_Recon_Squad_7.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 3
+    m_iPlatoonCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 5089.156 688.785 6355.313
+  angles 0 127.697 0
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 3
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 5082.082 688.785 6346.16
+  angles 0 127.697 0
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 3
+    m_iPlatoonCallsign 2
+    m_iSquadCallsign 2
+   }
+  }
+  coords 5102.502 688.785 6356.043
+  angles 0 -138.992 0
+ }
 }
 $grp SCR_AIGroup : "{EB131DDF464F90FD}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Squad.et" {
  {
-  coords 5079.102 689.654 6341.057
-  angles 0 43.683 0
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 3
+    m_iSquadCallsign 3
+   }
+  }
+  coords 5080.692 688.571 6338.621
+  angles 0 52.269 0
  }
  {
-  coords 5089.86 689.654 6331.832
-  angles 0 -54.202 0
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 2
+    m_iSquadCallsign 2
+   }
+  }
+  coords 5087.264 688.571 6327.908
+  angles 0 -46.912 0
  }
  {
-  coords 5091.14 689.654 6342.928
-  angles 0 -141.162 0
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 5094.983 688.571 6336.161
+  angles 0 -46.912 0
  }
- {
-  coords 5080.886 689.654 6350.155
-  angles 0 126.964 0
- }
-}
-SCR_AIGroup : "{ED92C6C1D40F9EAA}Prefabs/Groups/OPFOR/RHS_AFRF/VDV/Recon/dim_VDV_Recon_2.et" {
- coords 5712.774 420.365 6928.314
- angles 0 -179.635 0
 }

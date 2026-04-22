@@ -1,17 +1,61 @@
-$grp Vehicle : "{0FBF8F010F81A4E5}Prefabs/Vehicles/Wheeled/LAV25/LAV25_DEL_LAT.et" {
- LAV25_DEL_LAT1 {
-  coords 8632.863 95.792 9355.737
-  angles 0 -48.931 0
-  m_sAttachmentGroupName "recon3"
+Vehicle M923A1_command_Decoration1 : "{3B5F3FAC4E500F02}Prefabs/Vehicles/Wheeled/M923A1/M923A1_command_Decoration.et" {
+ coords 8590.479 96.096 9390.55
+ angles 0 -46.872 0
+ m_sAttachmentGroupName "KSUS"
+}
+$grp Vehicle : "{4855E8A2C75F03D5}Prefabs/Vehicles/Wheeled/M998/M1151_armed_M2HB_PAS13G.et" {
+ M1151_armed_M2HB_PAS13G1 {
+  coords 8612.646 95.525 9373.581
+  angles 0 -50.469 0
+  m_sAttachmentGroupName "otr1"
  }
- LAV25_DEL_LAT2 {
-  coords 8619.854 95.664 9367.074
-  angles 0 -48.931 0
-  m_sAttachmentGroupName "recon2"
+ M1151_armed_M2HB_PAS13G2 {
+  coords 8627.88 95.525 9360.629
+  angles 0 -51.284 0
+  m_sAttachmentGroupName "otr2w"
+ }
+ M1151_armed_M2HB_PAS13G3 {
+  coords 8642.042 95.525 9347.119
+  angles 0 -51.284 0
+  m_sAttachmentGroupName "otr3"
  }
 }
 Vehicle UH1H_armed_gunship_HE_sharkNose1 : "{601CE970D8C88268}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed_gunship_HE_sharkNose.et" {
  coords 5192.119 2.333 10061.614
  angles 0 60.01 0
- m_sAttachmentGroupName "Pilots"
+ m_sAttachmentGroupName "pilots"
+}
+$grp Vehicle : "{670D61A58F552457}Prefabs/Vehicles/Wheeled/M1240A1_MATV/M1240A1_MATV_Turret_optic_mdo_black.et" {
+ M1240A1_MATV_Turret_optic_mdo_black1 {
+  coords 8606.326 95.69 9379.609
+  angles 0 -49.053 0
+  m_sAttachmentGroupName "otr1"
+ }
+ M1240A1_MATV_Turret_optic_mdo_black2 {
+  coords 8622.881 95.69 9365.837
+  angles 0 -47.475 0
+  m_sAttachmentGroupName "otr2"
+ }
+ M1240A1_MATV_Turret_optic_mdo_black3 {
+  coords 8636.858 95.69 9352.228
+  angles 0 -47.475 0
+  m_sAttachmentGroupName "otr3"
+ }
+}
+$grp Vehicle : "{C9CDC54E051CF8DB}Prefabs/Vehicles/Wheeled/LAV25/LAV25_CDF.et" {
+ LAV25_CDF1 {
+  coords 8653.563 96.299 9337.004
+  angles 0 -47.684 0
+  m_sAttachmentGroupName "otr4"
+ }
+ LAV25_CDF2 {
+  coords 8669.322 96.969 9322.657
+  angles 0 -47.684 0
+  m_sAttachmentGroupName "otr5"
+ }
+}
+Vehicle M998_covered_long_TOW1 : "{E6D1FFE6DD3873CB}Prefabs/Vehicles/Wheeled/M998/M998_covered_long_TOW.et" {
+ coords 8483.886 98.805 9373.924
+ angles 2.84 -112.718 0
+ m_sAttachmentGroupName "Sniper"
 }
