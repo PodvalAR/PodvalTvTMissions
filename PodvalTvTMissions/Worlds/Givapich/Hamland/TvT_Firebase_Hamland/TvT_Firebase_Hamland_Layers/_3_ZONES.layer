@@ -1,0 +1,159 @@
+$grp SCR_DestructibleBuildingEntity : "{00F6345B133B6F1A}Prefabs/Structures/Infrastructure/Naval/Piers/FloatingDock_01/FloatingDock_01_Base.et" {
+ {
+  coords 2396.735 1.227 2164.073
+  angles 0 -65.316 0
+ }
+ {
+  coords 2442.012 1.208 2143.304
+  angles 0 -65.316 0
+ }
+ {
+  coords 2487.645 1.227 2122.29
+  angles 0 -65.316 0
+ }
+ {
+  coords 2532.922 1.208 2101.521
+  angles 0 -65.316 0
+ }
+ {
+  coords 2578.489 1.227 2080.537
+  angles 0 -65.316 0
+ }
+ {
+  coords 2623.766 1.208 2059.768
+  angles 0 -65.316 0
+ }
+ {
+  coords 2668.96 1.227 2038.956
+  angles 0 -65.316 0
+ }
+ {
+  coords 2714.237 1.208 2018.187
+  angles 0 -65.316 0
+ }
+ {
+  coords 2759.702 1.227 1997.25
+  angles 0 -65.316 0
+ }
+ {
+  coords 2804.979 1.208 1976.481
+  angles 0 -65.316 0
+ }
+ {
+  coords 2850.299 1.208 1955.651
+  angles 0 -65.316 0
+ }
+}
+SCR_DestructibleBuildingEntity : "{8A234544A3CDB5E0}Prefabs/Structures/Infrastructure/Naval/Piers/FloatingDock_01/FloatingDock_01_bridge_Base.et" {
+ coords 2884.619 1.18 1940.031
+ angles 0.371 -65.467 0
+}
+SCR_DestructibleBuildingEntity : "{B5446A7F0A91CDCB}Prefabs/Structures/Infrastructure/Naval/Piers/FloatingDock_01/FloatingDock_01_bridge.et" {
+ coords 2365.662 4.192 2178.472
+ angles 10.784 -64.961 -0.878
+}
+$grp PolylineShapeEntity : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
+ {
+  components {
+   PS_PolyZone "{60E90266F25533F6}" {
+    m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
+    m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+    m_cPolygonBorderColor 0.853 0 0.075 1
+    m_aVisibleForFactions {
+     ""
+     "RHS_ION"
+     "RHS_AFRF"
+    }
+   }
+  }
+  coords 2794.002 49.248 1624.12
+  Points {
+   ShapePoint "{60E90266E922A02A}" {
+    Position 1.397 -0.092 -4.833
+   }
+   ShapePoint "{692B1D05402A598A}" {
+    Position -7.527 -0.449 12.55
+   }
+   ShapePoint "{692B1D055B3F466A}" {
+    Position 23.534 -0.309 28.581
+   }
+   ShapePoint "{692B1D055EE2E737}" {
+    Position 31.852 -0.029 11.369
+   }
+  }
+ }
+ {
+  components {
+   PS_PolyZone "{60E90266F25533F6}" {
+    m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
+    m_cPolygonColor 0 0.342 0.089 1
+    m_fPolygonUVScale 0.44
+    m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+    m_cPolygonBorderColor 0 0.342 0.089 1
+    m_fPolygonBorderWidth 5
+    m_aVisibleForFactions {
+     ""
+     "RHS_AFRF"
+     "RHS_ION"
+    }
+   }
+  }
+  coords 3026.709 34.688 3751.411
+  Points {
+   ShapePoint "{60E90266E922A02A}" {
+    Position -0.367 0 -0.252
+   }
+   ShapePoint "{692B2DE1B668B3E9}" {
+    Position -20.042 -1.329 29.194
+   }
+   ShapePoint "{692B2DE1B5B5281F}" {
+    Position -1.392 0.449 62.806
+   }
+   ShapePoint "{692B2DE18BA066EA}" {
+    Position 11.518 0.25 64.525
+   }
+   ShapePoint "{692B2DE188780D63}" {
+    Position 22.597 0.25 62.195
+   }
+   ShapePoint "{692B2DE188F4EAA0}" {
+    Position 32.226 0.249 56.747
+   }
+   ShapePoint "{692B2DE189683295}" {
+    Position 42.8 0.251 51.087
+   }
+   ShapePoint "{692B2DE18EF6B52C}" {
+    Position 68.927 0.391 24.249
+   }
+   ShapePoint "{692B2DE18C030754}" {
+    Position 81.341 0.25 3.605
+   }
+   ShapePoint "{692B2DE18D36BF99}" {
+    Position 86.398 0.25 -6.543
+   }
+   ShapePoint "{692B2DE18D98D30C}" {
+    Position 87.956 0.25 -18.186
+   }
+   ShapePoint "{692B2DE18215D6A1}" {
+    Position 85.652 0.559 -25.615
+   }
+   ShapePoint "{692B2DE182C2D54F}" {
+    Position 64.398 1.672 -37.955
+   }
+   ShapePoint "{692B2DE19A14C647}" {
+    Position 39.703 1.313 -52.738
+   }
+   ShapePoint "{692B2DE19C6649BE}" {
+    Position 24.684 0.893 -55.544
+   }
+   ShapePoint "{692B2DE19D8822C8}" {
+    Position 15.99 0.789 -55.213
+   }
+   ShapePoint "{692B2DE193C70CFA}" {
+    Position 16.864 0.75 -39.511
+   }
+   ShapePoint "{692B2DE194E58ED8}" {
+    Position 14.22 0.793 -28.172
+   }
+  }
+ }
+}

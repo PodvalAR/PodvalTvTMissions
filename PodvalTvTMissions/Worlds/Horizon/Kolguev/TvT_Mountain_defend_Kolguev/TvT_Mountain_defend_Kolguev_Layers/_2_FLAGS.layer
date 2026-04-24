@@ -1,0 +1,37 @@
+PS_ManualMarker FLAG : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+ coords 5063.19 699.014 6327.667
+ m_MarkerColor 0 0 0 1
+ m_sQuadName "flag-2"
+ m_fWorldSize 50
+ m_sDescription "Флаг"
+ m_bUseWorldScale 0
+ m_aVisibleForFactions {
+  "RHS_AFRF"
+  "RHS_USAF"
+ }
+ m_bVisibleForEmptyFaction 1
+ m_aHideOnGameModeStates {
+ }
+ m_iZOrder 10
+ m_bShowForAnyFaction 1
+}
+GenericEntity : "{F5EF4223ACA6169C}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_02_V1_AFRF.et" {
+ components {
+  SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+   m_aObjectiveNames {
+    "AFRF_WIN"
+    "USAF_WIN"
+   }
+   m_bUseAdvanceGameState 1
+   m_sUseNotification 1
+  }
+  BaseActionsManagerComponent "{6202D4E6F133BF4A}" {
+   additionalActions {
+    PS_FlagChangeAction "{6202D4E6A53D4B3C}" {
+     Duration 10.2
+    }
+   }
+  }
+ }
+ coords 5063.176 699.006 6327.731
+}
