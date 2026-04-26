@@ -1,0 +1,32 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ ABOUT {
+  m_sTitle "Лор"
+  m_sTextData "ЧДКЗ получает команду провести внезапное атакующее действие, чтобы захватить военную базу Марнивки до того, как ЧСО успеет укрепить свою оборону. Разведка ЧДКЗ сообщает, что у ЧСО имеется внутреннее напряжение, и это идеальный момент для нападения."
+  m_aVisibleForFactions {
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+ RULES {
+  m_sTitle "Задачи"
+  m_sTextData "ЗАДАЧИ:"\
+  ""\
+  "ЧСО:"\
+  ""\
+  "1. Удержать военную базу (зеленый тригер)."\
+  ""\
+  "ЧДКЗ:"\
+  ""\
+  "1. Захватить военную базу (зеленый тригер)."
+  m_aVisibleForFactions {
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+}
