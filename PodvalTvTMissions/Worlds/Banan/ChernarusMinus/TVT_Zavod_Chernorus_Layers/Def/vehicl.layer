@@ -1,8 +1,3 @@
-Vehicle LAV25_DEL_LAT1 : "{0FBF8F010F81A4E5}Prefabs/Vehicles/Wheeled/LAV25/LAV25_DEL_LAT.et" {
- coords 12117.323 152.594 12661.134
- angles 0 -72.99 0
- m_sAttachmentGroupName "usaf4"
-}
 $grp Vehicle : "{2D74C39A650A3031}Prefabs/Vehicles/Wheeled/M923A1/M923A1_engineer.et" {
  M923A1_engineer1 {
   coords 12819.858 5.75 9903.74
@@ -13,10 +8,17 @@ $grp Vehicle : "{2D74C39A650A3031}Prefabs/Vehicles/Wheeled/M923A1/M923A1_enginee
   angles 0 120 0
  }
 }
-Vehicle LAV25_RHS1 : "{3312ADBF53A16DD8}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS.et" {
- coords 12977.597 5.75 10048.251
- angles 0 -79.16 0
- m_sAttachmentGroupName "uscrew"
+$grp Vehicle : "{3312ADBF53A16DD9}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS.et" {
+ LAV25_RHS1 {
+  coords 12977.617 5.771 10048.421
+  angles 0 -82.028 0
+  m_sAttachmentGroupName "uscrew"
+ }
+ LAV25_RHS2 {
+  coords 12117.254 152.54 12661.966
+  angles 0.407 -70.821 0
+  m_sAttachmentGroupName "usaf4"
+ }
 }
 $grp Vehicle : "{3EA6F47D95867114}Prefabs/Vehicles/Wheeled/M998/M1025_armed_M2HB.et" {
  M1025_armed_M2HB1 {
