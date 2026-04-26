@@ -1,0 +1,105 @@
+$grp GenericEntity : "{1085CCC052C7F50D}Prefabs/Weapons/Magazines/AGS-17/Magazine_30mm_AGS17_29rnd_VOG17M.et" {
+ {
+  coords 1332.242 40.907 6053.878
+  angles 0 -45 0
+ }
+ {
+  coords 1332.467 40.939 6053.659
+  angles 0 -45 0
+ }
+ {
+  coords 1332.575 40.941 6053.543
+  angles -0.48 -45 0
+ }
+ {
+  coords 1332.133 40.907 6053.988
+  angles 0 -45 0
+ }
+ {
+  coords 1332.347 40.917 6053.771
+  angles 0 -45 0
+ }
+}
+$grp GenericEntity : "{16C7AD0508F53A9B}Prefabs/Items/Equipment/Backpacks/backpack_Wartech_BB102/Backpack_Wartech_BB102_OD.et" {
+ {
+  coords 1332.246 40.853 6053.118
+  angles 0 -45 0
+ }
+ {
+  coords 1331.857 40.878 6053.527
+  angles 0 -45 0
+ }
+}
+Turret : "{61556EC6CC70DDFA}Prefabs/Weapons/Tripods/6G10/Deployable_Tripod_6G10_AGS17_PAG17.et" {
+ coords 1332.553 40.958 6054.339
+ angles 0 -53.126 0
+}
+Turret : "{66B35D82EB9B4E28}Prefabs/Weapons/Tripods/6T7/Deployable_Tripod_6T7_NSV_SPP.et" {
+ components {
+  SoundComponent "{58E0961DB6C453D6}" {
+   Filenames +{
+   }
+  }
+  SCR_MultiPartDeployableItemComponent "{6554E1F5D97C79F4}" {
+   m_bRemoveAllItemsWhenDeleted 1
+   m_aVariants {
+    SCR_DeployableVariantContainer "{6554E1F5DC0F953E}" {
+     m_sReplacementPrefab "{184DFCEFE574E776}Prefabs/Items/Equipment/Tripods/6T7/Part_NSV_Tripod.et"
+     m_aAdditionalPrefabs {
+      SCR_AdditionalDeployablePart "{656479546F865E64}" {
+       m_sPrefab "{DE6458E8239A3A4A}Prefabs/Items/Equipment/Tripods/6T7/Part_NSV_Gun_Optic.et"
+      }
+     }
+     m_bUsePartRotationAndPosition 1
+    }
+   }
+   m_eSurfaceObservationBehaviour DISMANTLE
+  }
+  SCR_UniversalInventoryStorageComponent "{570EACF4F2F94F1B}" {
+   InitialStorageSlots {
+    InventoryStorageSlot Magazine_1 {
+     Prefab ""
+    }
+    InventoryStorageSlot Magazine_2 {
+     Prefab ""
+    }
+    InventoryStorageSlot Magazine_3 {
+     Prefab ""
+    }
+   }
+  }
+  WeaponSlotComponent "{51ACD09C6BFEEE6A}" {
+   WeaponTemplate "{DC722F3E51BDA181}Prefabs/Weapons/HeavyWeapons/NSV/Deployable_HMG_NSV_SPP.et"
+  }
+  ActionsManagerComponent "{51ACD09C7181BA0B}" {
+   additionalActions {
+    SCR_DeployMultiPartInventoryItemAction "{6554E1F5BF736F70}" {
+     m_eRequiredGadget NONE
+    }
+   }
+  }
+ }
+ coords 1440.573 63.286 6157.74
+ angles 0 120 0
+ {
+  GenericEntity {
+   ID "6554E1F2A56526F1"
+   {
+    DecalEntity {
+     ID "56DEFDB4A2C87F38"
+     coords 0 0 0
+    }
+   }
+  }
+ }
+}
+$grp GenericEntity : "{843D9B182BCD2765}Prefabs/Weapons/Magazines/NSV/Box_127x108_NSV_50rnd_4AP_1APIT.et" {
+ {
+  coords 1440.359 63.283 6157.853
+  angles 0 -62.499 0
+ }
+ {
+  coords 1440.188 63.294 6157.94
+  angles 0 -60 0
+ }
+}
