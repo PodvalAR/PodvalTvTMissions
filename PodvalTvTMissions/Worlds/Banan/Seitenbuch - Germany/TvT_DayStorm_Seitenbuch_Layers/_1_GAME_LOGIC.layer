@@ -1,0 +1,51 @@
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{69356080839F7452}" {
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "ChDKZ_WIN"
+     }
+     m_sFailedObjectiveNames {
+      "CDF_WIN"
+     }
+     m_sMessage "Город захвачен!"
+     m_Timer GUB_ZoneControlTimer "{69356080BC32E5B8}" {
+      timeToComplete 150
+     }
+     m_ZoneController GUB_ZoneController "{69356080B98B26D2}" {
+      m_sZoneEntityName "Zone"
+     }
+     m_FlagController GUB_FlagController "{69356080A76EB05F}" {
+      m_aFlagNames {
+       "Flag"
+       "Flag2"
+       "Flag3"
+       "Flag4"
+       "Flag5"
+      }
+      m_fStartFactionKey "Ses_CDF"
+      m_fEndFactionKey "Ses_ChDKZ"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{69356080B2EFF4CC}" {
+       m_sFirstFactionKey "Ses_ChDKZ"
+       m_sSecondFactionKey "Ses_CDF"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 1958.146 415.173 -944.441
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+}
