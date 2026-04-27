@@ -1,35 +1,61 @@
-$grp SCR_AIGroup : "{68FC03D21BDA0859}Prefabs/Groups/OPFOR/Ses_ChDKZ/Group_ChDKZ_RifleSquad.et" {
- CHDKZ002 {
+SCR_AIGroup SSSR200 : "{1041E60A9AB94408}Prefabs/Groups/OPFOR/USSR/Group_USSR_Rifle_BTR_SQ.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+   m_iCompanyCallsign 2
+  }
+ }
+ coords 3754.827 253.291 709.924
+ angles 0 94.892 0
+ m_aUnitPrefabSlots {
+  "{963A4B934971EBDF}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_CC_RANDOM.et"
+  "{7DE3DB256DCC5CB6}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_CREW_RANDOM.et"
+ }
+}
+SCR_AIGroup SSSR000 : "{706340F7481FF22F}Prefabs/Groups/OPFOR/USSR/Group_USSR_PL.et" {
+ coords 2848.223 380.839 725.103
+ angles 0 46.465 0
+ m_aUnitPrefabSlots {
+  "{8A7E668F5E102151}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_SL_RANDOM.et"
+  "{CDE7F53CAD55EAE4}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_SR_RANDOM.et"
+ }
+ m_sCustomNameSet "Командирский штаб"
+}
+$grp SCR_AIGroup : "{84AF92E239A71FCE}Prefabs/Groups/OPFOR/USSR/Group_USSR_Rifle_SQ.et" {
+ SSSR002 {
   components {
-   PS_GroupCallsignAssigner "{68A3601C92B4A58B}" {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
     m_iSquadCallsign 2
    }
   }
-  coords 2849.979 379.339 706.198
-  angles 0 -47.9 0
+  coords 2851.029 381.58 708.413
+  angles -0.752 24.49 0.223
  }
- CHDKZ001 {
-  coords 2839.089 384.387 731.75
-  angles 0 139.65 0
+ SSSR001 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iSquadCallsign 1
+   }
+  }
+  coords 2850.443 384.617 742.962
+  angles 0 141.108 0
  }
- {
-  coords 3705.104 229.016 894.814
-  angles 0 82.221 0
+ SSSR100 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 3757.069 252.656 661.293
+  angles 0 93.491 0
  }
- {
-  coords 3726.231 230.049 873.387
-  angles 0 -9.393 0
+ SSSR101 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 3753.797 252.632 689.74
+  angles 0 84.753 0
  }
- {
-  coords 3726.611 229.125 916.999
-  angles 0 -177.299 0
- }
-}
-SCR_AIGroup : "{BBD03C84805699CA}Prefabs/Groups/OPFOR/Ses_ChDKZ/Group_ChDKZ_CREW.et" {
- coords 3765.854 229.81 939.477
- angles 0 138.968 0
-}
-SCR_AIGroup CHDKZ000 : "{BF97ECB4D954314C}Prefabs/Groups/OPFOR/Ses_ChDKZ/Group_ChDKZ_HQ_PL.et" {
- coords 2838.163 381.02 714.895
- angles 0 42.715 0
 }
