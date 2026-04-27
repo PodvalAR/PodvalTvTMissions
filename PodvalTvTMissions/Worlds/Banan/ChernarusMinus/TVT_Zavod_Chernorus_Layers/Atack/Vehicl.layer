@@ -1,0 +1,93 @@
+Vehicle UAZ469_PKM1 : "{0B4DEA8078B78A9B}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_PKM.et" {
+ coords 9555.736 194.756 6663.703
+ angles 2.152 -53.025 -0.125
+ m_sAttachmentGroupName "drg"
+}
+Vehicle UAZ1 : "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et" {
+ coords 9549.952 194.882 6668.21
+ angles 0.924 -52.799 0
+ m_sAttachmentGroupName "drg"
+}
+Vehicle Ural4320_command_camo1 : "{2C95509CA3E61DE1}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_command_camo1.et" {
+ coords 8750.123 361.713 8979.625
+ angles -2.835 53.54 0
+ m_sAttachmentGroupName "KS"
+ {
+  GameEnvironmentProbeEntity {
+   ID "654C8CD3B0316F22"
+   coords 0.001 7.629 1.356
+  }
+ }
+}
+$grp Vehicle : "{2C9B4D8196812513}Prefabs/Vehicles/Wheeled/TIGR/Unarmed/GAZ_TIGR_v2_Unarmed.et" {
+ GAZ_TIGR_v2_Unarmed1 {
+  coords 8440.189 338.415 6773.416
+  angles -1.385 116.786 -0.279
+  m_sAttachmentGroupName "rf"
+ }
+ GAZ_TIGR_v2_Unarmed2 {
+  coords 8450.111 338.624 6767.277
+  angles 0 127.007 0
+  m_sAttachmentGroupName "rf"
+ }
+}
+Vehicle GAZ_TIGR_v2_PKM_1P1 : "{7ACFD8FA081996F6}Prefabs/Vehicles/Wheeled/TIGR/PKP/GAZ_TIGR_v2_PKM_1P29.et" {
+ coords 8540.453 166.208 12016.587
+ angles 0 145.663 0
+ m_sAttachmentGroupName "rf1"
+}
+$grp Vehicle : "{7BC76F92B882889D}Prefabs/Vehicles/Wheeled/TIGR/PKP/GAZ_TIGR_v2_PKM.et" {
+ GAZ_TIGR_v2_PKM1 {
+  coords 8485.133 159.86 12055.371
+  angles 4.579 111.302 -2.821
+  m_sAttachmentGroupName "rus"
+ }
+ GAZ_TIGR_v2_PKM2 {
+  coords 8733.948 362.677 8966.018
+  angles -2.822 48.395 0
+  m_sAttachmentGroupName "rus1"
+ }
+ GAZ_TIGR_v2_PKM3 {
+  coords 8546.408 166.655 12008.284
+  angles 0 146.414 0
+  m_sAttachmentGroupName "rf1"
+ }
+ GAZ_TIGR_v2_PKM5 {
+  coords 8494.126 160.677 12051.235
+  angles 4.202 116.919 -3.078
+  m_sAttachmentGroupName "rus"
+ }
+ GAZ_TIGR_v2_PKM4 {
+  coords 8740.979 362.243 8972.236
+  angles -3.193 47.801 0
+  m_sAttachmentGroupName "rus1"
+ }
+}
+Vehicle Mi8MT_armed1 : "{7BD282AF716ED639}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_armed.et" {
+ coords 4811.529 327.406 10134.238
+ angles 0 63.275 0
+ m_sAttachmentGroupName "Heli"
+}
+$grp Vehicle : "{D9B91FAB817A6033}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_covered.et" {
+ Ural4320_transport_covered2 {
+  coords 8427.837 339.18 6778.893
+  angles 0 112.985 0
+  m_sAttachmentGroupName "rf2"
+ }
+ Ural4320_transport_covered1 {
+  coords 8415.811 339.18 6782.909
+  angles 0 105 0
+  m_sAttachmentGroupName "rf3"
+ }
+}
+Vehicle APC_K17_Epoch1 : "{F86AB1BD36B33407}Prefabs/Vehicles/Wheeled/K17/APC_K17_Epoch.et" {
+ coords 8723.522 363.48 8956.24
+ angles -1.412 47.695 0
+ m_sAttachmentGroupName "crewRus"
+ {
+  GameEnvironmentProbeEntity {
+   ID "64A8C5B805478DB9"
+   coords 0.002 10.178 -2.833
+  }
+ }
+}
