@@ -1,0 +1,50 @@
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{693A69E32902409F}" {
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "US_WIN"
+     }
+     m_sFailedObjectiveNames {
+      "VCA_WIN"
+     }
+     m_sMessage "Высота захвачена!"
+     m_Timer GUB_ZoneControlTimer "{693A69E2D839F4BE}" {
+      timeToComplete 150
+     }
+     m_ZoneController GUB_ZoneController "{693A69E2D9A43CF3}" {
+      m_sZoneEntityName "Hill"
+     }
+     m_FlagController GUB_FlagController "{693A69E2D6C808AF}" {
+      m_aFlagNames {
+       "Flag"
+       "Flag2"
+       "Flag3"
+       "Flag4"
+      }
+      m_fStartFactionKey "Drg_VCA"
+      m_fEndFactionKey "US"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{693A69E2FFF7EEEF}" {
+       m_sFirstFactionKey "US"
+       m_sSecondFactionKey "Drg_VCA"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 1193.401 89.316 -272.648
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+}
