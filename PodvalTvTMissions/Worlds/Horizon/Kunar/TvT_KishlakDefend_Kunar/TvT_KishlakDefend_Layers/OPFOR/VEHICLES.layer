@@ -1,5 +1,9 @@
-Vehicle Ural4320_ZU1 : "{FD109F3702AAB392}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_ZU23.et" {
- coords 3758.279 252.696 707.451
- angles 0 -173.846 0
- m_sAttachmentGroupName "SSSR200"
+Turret : "{E2E3D404C065544F}Prefabs/Vehicles/Static/BaconZU23/BaconZU23_Turret.et" {
+ components {
+  SCR_DamageManagerComponent "{51ACD09C524A7924}" {
+   EnableDamage 0
+  }
+ }
+ coords 2834.987 389.501 706.35
+ angles 0 39.888 0
 }
