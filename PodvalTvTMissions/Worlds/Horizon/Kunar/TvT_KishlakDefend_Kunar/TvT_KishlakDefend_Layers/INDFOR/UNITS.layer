@@ -1,0 +1,56 @@
+SCR_AIGroup TKR100 : "{3D1CD4754C0AF059}Prefabs/Groups/INDFOR/TKR/Group_Ses_TKR_Recon.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
+   m_iCompanyCallsign 1
+  }
+ }
+ coords 3231.764 358.236 1204.959
+ angles 0 -75.569 0
+ m_aUnitPrefabSlots +{
+  "{6E9511C7C88E1E10}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_AT_Random.et"
+  "{3ADD5E802552D24E}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_AR_Random.et"
+ }
+}
+$grp SCR_AIGroup : "{A33B404F66AC1ED8}Prefabs/Groups/INDFOR/TKR/Group_Ses_TKR_Rifle.et" {
+ TKR003 {
+  components {
+   PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
+    m_iSquadCallsign 3
+   }
+  }
+  coords 3314.544 321.32 1686.644
+  angles 0 -133.971 0
+ }
+ TKR002 {
+  components {
+   PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
+    m_iSquadCallsign 2
+   }
+  }
+  coords 3298.49 314.013 1686.255
+  angles -3.755 145.021 -0.729
+ }
+ TKR001 {
+  components {
+   PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
+    m_iSquadCallsign 1
+   }
+  }
+  coords 3300.073 319.642 1658.302
+  angles 0 73.936 0
+ }
+ TKR004 {
+  components {
+   PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
+    m_iSquadCallsign 4
+   }
+  }
+  coords 3329.103 321.691 1674.253
+  angles 0 -109.738 0
+ }
+}
+SCR_AIGroup TKR000 : "{B6EBA64A7B8D6693}Prefabs/Groups/INDFOR/TKR/Group_Ses_TKR_PL_4.et" {
+ coords 3319.114 321.359 1659.17
+ angles 0 -22.085 0
+ m_sCustomNameSet "Штаб"
+}

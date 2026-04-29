@@ -1,0 +1,67 @@
+$grp SCR_AIGroup : "{AC84C444A4FCFFB8}Prefabs/Groups/INDFOR/Vietnam/DRG_Group_VCA_RifleSquad_v2.et" {
+ VCA_100_AR {
+  components {
+   PS_GroupCallsignAssigner "{693958D34FD08F97}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 1200.809 86.73 1867.714
+  angles 0 -163.881 0
+ }
+ VCA_101_AR {
+  components {
+   PS_GroupCallsignAssigner "{693958D34FD08F97}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 1183.497 90.009 1871.39
+  angles 0 175.979 0
+ }
+}
+SCR_AIGroup VCA_300_AR : "{AF56A6C524782FB4}Prefabs/Groups/INDFOR/Vietnam/Recon/DRG_Group_VCA_Recon_6_v2.et" {
+ components {
+  PS_GroupCallsignAssigner "{693960FA86A8E2EC}" {
+   m_iCompanyCallsign 3
+  }
+ }
+ coords 1307.397 4.187 2144.702
+ angles 0 166.821 0
+}
+SCR_AIGroup VCA_000_KS : "{C7245E74B1B17057}Prefabs/Groups/INDFOR/Vietnam/DRG_Group_VCA_HQ.et" {
+ coords 1178.825 89.929 1844.561
+ angles 0 90 0
+ m_aUnitPrefabSlots +{
+  "{F0FAB7ECC3A7F6C2}Prefabs/Characters/Factions/INDFOR/Drg_VCA/drg_Character_VCA_Sniper_v2.et"
+ }
+}
+$grp SCR_AIGroup : "{E2DF6D2642C24545}Prefabs/Groups/INDFOR/Vietnam/DRG_Group_VCA_RifleSquad_1.et" {
+ VCA_200_AR {
+  components {
+   PS_GroupCallsignAssigner "{693958D35F0274E2}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 1210.676 90.645 1806.713
+  angles 0 -30.168 0
+ }
+ VCA_201_AR {
+  components {
+   PS_GroupCallsignAssigner "{693958D35F0274E2}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 1173.904 90.557 1820.739
+ }
+ VCA_202_AR {
+  components {
+   PS_GroupCallsignAssigner "{693958D35F0274E2}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 2
+   }
+  }
+  coords 1133.538 88.681 1860.482
+  angles 0 103.027 0
+ }
+}
