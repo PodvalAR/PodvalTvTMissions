@@ -1,12 +1,49 @@
-SCR_AIGroup : "{07371A53F31EB727}Prefabs/Groups/INDFOR/Drg_VCA/DRG_Group_VCA_CompanyHQ.et" {
- coords 1790.233 12.818 3096.148
- angles 0 106.929 0
- m_aUnitPrefabSlots {
-  "{392B8339AF352C76}Prefabs/Characters/Factions/INDFOR/Drg_VCA/Recon/drg_Character_VCA_Recon_PL.et"
+$grp SCR_AIGroup : "{07371A53F31EB727}Prefabs/Groups/INDFOR/Drg_VCA/DRG_Group_VCA_CompanyHQ.et" {
+ VCA_KS000 {
+  coords 467.242 4.131 2143.669
+  angles 0 -159.072 0
+ }
+ VCA_KS200 {
+  components {
+   PS_GroupCallsignAssigner "{65D6C12443680301}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 1791.059 13.059 3098.625
+  angles 0 106.929 0
+  m_aUnitPrefabSlots {
+   "{392B8339AF352C76}Prefabs/Characters/Factions/INDFOR/Drg_VCA/Recon/drg_Character_VCA_Recon_PL.et"
+  }
+  m_sCustomNameSet "Командир партизан"
  }
 }
 $grp SCR_AIGroup : "{CECD816AD4792CD9}Prefabs/Groups/INDFOR/Drg_VCA/DRG_Group_VCA_RifleSquad.et" {
- {
+ VCA_PEH001 {
+  components {
+   PS_GroupCallsignAssigner "{65D6C1245A7374D4}" {
+    m_iSquadCallsign 1
+   }
+  }
+  coords 478.59 4.59 2140.589
+  angles 0 -163.566 0
+  m_aUnitPrefabSlots {
+   "{FD9D3E2649554017}Prefabs/Characters/Factions/INDFOR/Drg_VCA/drg_Character_VCA_SL.et"
+   "{9015CF397BD1E204}Prefabs/Characters/Factions/INDFOR/Drg_VCA/drg_Character_VCA_AR.et"
+   "{9015CF397BD1E204}Prefabs/Characters/Factions/INDFOR/Drg_VCA/drg_Character_VCA_AR.et"
+   "{9015CF397BD1E204}Prefabs/Characters/Factions/INDFOR/Drg_VCA/drg_Character_VCA_AR.et"
+   "{AFD656F1D9ACD98F}Prefabs/Characters/Factions/INDFOR/Drg_VCA/drg_Character_VCA_Rifleman.et"
+   "{8085D2DE2CC67C8E}Prefabs/Characters/Factions/INDFOR/Drg_VCA/drg_Character_VCA_SR.et"
+   "{C2021123159EF6E7}Prefabs/Characters/Factions/INDFOR/Drg_VCA/drg_Character_VCA_MG.et"
+   "{48BDA6F80258FC58}Prefabs/Characters/Factions/INDFOR/Drg_VCA/drg_Character_VCA_AT.et"
+   "{20159113C5B70BF4}Prefabs/Characters/Factions/INDFOR/Drg_VCA/drg_Character_VCA_Sniper.et"
+  }
+ }
+ VCA_PEH002 {
+  components {
+   PS_GroupCallsignAssigner "{65D6C1245A7374D4}" {
+    m_iSquadCallsign 2
+   }
+  }
   coords 490.57 4.218 2127.692
   angles 0 -81.007 0
   m_aUnitPrefabSlots {
@@ -21,7 +58,12 @@ $grp SCR_AIGroup : "{CECD816AD4792CD9}Prefabs/Groups/INDFOR/Drg_VCA/DRG_Group_VC
    "{20159113C5B70BF4}Prefabs/Characters/Factions/INDFOR/Drg_VCA/drg_Character_VCA_Sniper.et"
   }
  }
- {
+ VCA_PEH003 {
+  components {
+   PS_GroupCallsignAssigner "{65D6C1245A7374D4}" {
+    m_iSquadCallsign 3
+   }
+  }
   coords 487.728 4.457 2112.78
   angles 0 -79.846 0
   m_aUnitPrefabSlots {
@@ -36,9 +78,15 @@ $grp SCR_AIGroup : "{CECD816AD4792CD9}Prefabs/Groups/INDFOR/Drg_VCA/DRG_Group_VC
    "{20159113C5B70BF4}Prefabs/Characters/Factions/INDFOR/Drg_VCA/drg_Character_VCA_Sniper.et"
   }
  }
- {
-  coords 452.881 4.12 2127.904
-  angles 0 99.767 0
+ VCA_PEH101 {
+  components {
+   PS_GroupCallsignAssigner "{65D6C1245A7374D4}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 790.713 4.54 1795.68
+  angles 0 -80.971 0
   m_aUnitPrefabSlots {
    "{FD9D3E2649554017}Prefabs/Characters/Factions/INDFOR/Drg_VCA/drg_Character_VCA_SL.et"
    "{9015CF397BD1E204}Prefabs/Characters/Factions/INDFOR/Drg_VCA/drg_Character_VCA_AR.et"
@@ -51,13 +99,24 @@ $grp SCR_AIGroup : "{CECD816AD4792CD9}Prefabs/Groups/INDFOR/Drg_VCA/DRG_Group_VC
    "{20159113C5B70BF4}Prefabs/Characters/Factions/INDFOR/Drg_VCA/drg_Character_VCA_Sniper.et"
   }
  }
- {
-  coords 429.874 5.472 2187.49
-  angles 0 165.87 0
+ VCA_PEH100 {
+  components {
+   PS_GroupCallsignAssigner "{65D6C1245A7374D4}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 794.789 4.146 1842.632
+  angles 0 -175.205 0
  }
- {
-  coords 1809.042 12.088 3099.479
-  angles 0 -162.205 0
+ VCA_PEH202 {
+  components {
+   PS_GroupCallsignAssigner "{65D6C1245A7374D4}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 2
+   }
+  }
+  coords 1804.982 12.612 3101.014
+  angles 0 -164.094 0
   m_aUnitPrefabSlots {
    "{A0353AA0B2D21DE6}Prefabs/Characters/Factions/INDFOR/Drg_VCA/Recon/drg_Character_VCA_Recon_SL.et"
    "{CDBDCBBF8056BFF5}Prefabs/Characters/Factions/INDFOR/Drg_VCA/Recon/drg_Character_VCA_Recon_AR.et"
@@ -66,12 +125,18 @@ $grp SCR_AIGroup : "{CECD816AD4792CD9}Prefabs/Groups/INDFOR/Drg_VCA/DRG_Group_VC
    "{DD2DD658D741217F}Prefabs/Characters/Factions/INDFOR/Drg_VCA/Recon/drg_Character_VCA_Recon_SR.et"
    "{DAA2F4F17B4F66D6}Prefabs/Characters/Factions/INDFOR/Drg_VCA/Recon/drg_Character_VCA_Recon_Rifleman_v2.et"
    "{D53F05C17E3E8FFF}Prefabs/Characters/Factions/INDFOR/Drg_VCA/Recon/drg_Character_VCA_Recon_MG_v3.et"
-   "{30A3493872DB1894}Prefabs/Characters/Factions/INDFOR/Drg_VCA/Recon/drg_Character_VCA_Recon_MG_v2.et"
-   ""
+   "{CA7D9EBD3FD06399}Prefabs/Characters/Factions/INDFOR/Drg_VCA/Recon/drg_Character_VCA_Recon_Sniper_v2.et"
   }
+  m_sCustomNameSet "Отряд партизан"
  }
- {
-  coords 1785.287 12.089 3087.366
+ VCA_PEH201 {
+  components {
+   PS_GroupCallsignAssigner "{65D6C1245A7374D4}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 1793.849 11.928 3090.112
   angles 0 15.057 0
   m_aUnitPrefabSlots {
    "{A0353AA0B2D21DE6}Prefabs/Characters/Factions/INDFOR/Drg_VCA/Recon/drg_Character_VCA_Recon_SL.et"
@@ -81,13 +146,18 @@ $grp SCR_AIGroup : "{CECD816AD4792CD9}Prefabs/Groups/INDFOR/Drg_VCA/DRG_Group_VC
    "{DD2DD658D741217F}Prefabs/Characters/Factions/INDFOR/Drg_VCA/Recon/drg_Character_VCA_Recon_SR.et"
    "{DAA2F4F17B4F66D6}Prefabs/Characters/Factions/INDFOR/Drg_VCA/Recon/drg_Character_VCA_Recon_Rifleman_v2.et"
    "{5CF77DD8CE1F97BA}Prefabs/Characters/Factions/INDFOR/Drg_VCA/Recon/drg_Character_VCA_Recon_MG_v1.et"
-   "{30A3493872DB1894}Prefabs/Characters/Factions/INDFOR/Drg_VCA/Recon/drg_Character_VCA_Recon_MG_v2.et"
-   ""
+   "{CA7D9EBD3FD06399}Prefabs/Characters/Factions/INDFOR/Drg_VCA/Recon/drg_Character_VCA_Recon_Sniper_v2.et"
   }
+  m_sCustomNameSet "Отряд партизан"
  }
- {
-  coords 1800.745 10.653 3083.097
-  angles 0 17.809 0
+ VCA_PEH300 {
+  components {
+   PS_GroupCallsignAssigner "{65D6C1245A7374D4}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 1681.322 3.061 2685.417
+  angles 0 150.997 0
   m_aUnitPrefabSlots {
    "{A0353AA0B2D21DE6}Prefabs/Characters/Factions/INDFOR/Drg_VCA/Recon/drg_Character_VCA_Recon_SL.et"
    "{C66CD284C215AAFA}Prefabs/Characters/Factions/INDFOR/Drg_VCA/Recon/drg_Character_VCA_Recon_AR_v2.et"
@@ -97,9 +167,16 @@ $grp SCR_AIGroup : "{CECD816AD4792CD9}Prefabs/Groups/INDFOR/Drg_VCA/DRG_Group_VC
    "{30A3493872DB1894}Prefabs/Characters/Factions/INDFOR/Drg_VCA/Recon/drg_Character_VCA_Recon_MG_v2.et"
    "{5CF77DD8CE1F97BA}Prefabs/Characters/Factions/INDFOR/Drg_VCA/Recon/drg_Character_VCA_Recon_MG_v1.et"
   }
+  m_sCustomNameSet "Разведывательный отряд партизан"
  }
- {
-  coords 1812.985 10.538 3089.548
+ VCA_PEH203 {
+  components {
+   PS_GroupCallsignAssigner "{65D6C1245A7374D4}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 3
+   }
+  }
+  coords 1808.443 10.741 3088.704
   angles 0 -73.884 0
   m_aUnitPrefabSlots {
    "{A0353AA0B2D21DE6}Prefabs/Characters/Factions/INDFOR/Drg_VCA/Recon/drg_Character_VCA_Recon_SL.et"
@@ -109,8 +186,8 @@ $grp SCR_AIGroup : "{CECD816AD4792CD9}Prefabs/Groups/INDFOR/Drg_VCA/DRG_Group_VC
    "{DD2DD658D741217F}Prefabs/Characters/Factions/INDFOR/Drg_VCA/Recon/drg_Character_VCA_Recon_SR.et"
    "{DAA2F4F17B4F66D6}Prefabs/Characters/Factions/INDFOR/Drg_VCA/Recon/drg_Character_VCA_Recon_Rifleman_v2.et"
    "{30A3493872DB1894}Prefabs/Characters/Factions/INDFOR/Drg_VCA/Recon/drg_Character_VCA_Recon_MG_v2.et"
-   "{D53F05C17E3E8FFF}Prefabs/Characters/Factions/INDFOR/Drg_VCA/Recon/drg_Character_VCA_Recon_MG_v3.et"
-   ""
+   "{CA7D9EBD3FD06399}Prefabs/Characters/Factions/INDFOR/Drg_VCA/Recon/drg_Character_VCA_Recon_Sniper_v2.et"
   }
+  m_sCustomNameSet "Отряд партизан"
  }
 }
