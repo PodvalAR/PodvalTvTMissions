@@ -1,0 +1,48 @@
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{692D41AE08503AFE}" {
+     m_sZonePreviewName "Штаб США"
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "AFRF_WIN"
+     }
+     m_sFailedObjectiveNames {
+      "USAF_WIN"
+     }
+     m_sMessage "Штаб США захвачен"
+     m_Timer GUB_ZoneControlTimer "{692D41AE4B7FE64A}" {
+      timeToComplete 150
+     }
+     m_ZoneController GUB_ZoneController "{692D41AE72A94B47}" {
+      m_sZoneEntityName "TRIGGER_ZONE"
+     }
+     m_FlagController GUB_FlagController "{692D41AE6C5AD7F0}" {
+      m_aFlagNames {
+       "FLAG1"
+       "FLAG2"
+      }
+      m_fStartFactionKey "RHS_USAF"
+      m_fEndFactionKey "RHS_AFRF"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{692D41AEA0F0D34A}" {
+       m_sFirstFactionKey "RHS_AFRF"
+       m_sSecondFactionKey "RHS_USAF"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+}

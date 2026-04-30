@@ -1,0 +1,88 @@
+PolylineShapeEntity VIP_ZONE {
+ components {
+  PS_PolyZone "{65E8CAFA011B13F9}" {
+   m_mPolygonTexture ""
+   m_cPolygonColor 1 1 1 0
+   m_mPolygonTextureBorder ""
+   m_cPolygonBorderColor 0.502 0 0 1
+   m_fPolygonBorderWidth 5
+   m_aVisibleForFactions {
+    "RHS_AFRF" "RHS_USAF" ""
+   }
+  }
+ }
+ coords 1140.996 228.694 909.271
+ Points {
+  ShapePoint "{65E8CAFA264B91A1}" {
+   Position -49.799 18.824 50.689
+  }
+  ShapePoint "{65E8CAFB916F4758}" {
+   Position -60.801 15.728 34.305
+  }
+  ShapePoint "{65E8CAFB96348159}" {
+   Position -63.58 17.536 19.901
+  }
+  ShapePoint "{65E8CAFB96F0BF89}" {
+   Position -56.404 15.408 10.276
+  }
+  ShapePoint "{65E8CAFB9757A95E}" {
+   Position -62.202 15.414 -15.261
+  }
+  ShapePoint "{65E8CAFB94545CAE}" {
+   Position -56.442 16.615 -24.117
+  }
+  ShapePoint "{65E8CAFB94F3216A}" {
+   Position -36.853 11.849 -29.87
+  }
+  ShapePoint "{65E8CAFB956BA0FE}" {
+   Position -38.055 14.607 -57.339
+  }
+  ShapePoint "{65E8CAFB9BDA06C6}" {
+   Position -4.502 2.505 -63.643
+  }
+  ShapePoint "{65E8CAFB99F55A8A}" {
+   Position 4.092 0.183 -42.505
+  }
+  ShapePoint "{65E8CAFB9E443D14}" {
+   Position 7.35 -2.612 -9.187
+  }
+  ShapePoint "{65E8CAFB9F5AC997}" {
+   Position 7.738 -1.848 1.879
+  }
+  ShapePoint "{65E8CAFB9FEFD171}" {
+   Position 32.039 0.825 44.048
+  }
+  ShapePoint "{65E8CAFB9D3342F2}" {
+   Position 19.496 4.722 51.958
+  }
+  ShapePoint "{65E8CAFBEAC8B1C8}" {
+   Position -22.164 12.388 74.409
+  }
+  ShapePoint "{65E8CAFA2437A58E}" {
+   Position -42.909 20.554 66.04
+  }
+ }
+ {
+  PS_PolyZoneTrigger {
+   components {
+    Hierarchy "{614548BDF998E12B}" {
+    }
+   }
+   TriggerShapeType Polyline
+   SphereRadius 5000000
+   "Polyline Height" 100000
+   ShapeColor 0.251 0 0.502 1
+   TriggerActivationType "All changes"
+   PeriodicQueries 1
+   UpdatePeriod 1
+   ClassesFilter {
+    "SCR_ChimeraCharacter"
+   }
+   m_polyZoneEffect PS_PolyZoneEffectRestricted "{6146D719824FE119}" {
+    m_fKillTime 40
+   }
+   m_bReversed 1
+   m_sGroupKey "_VIP"
+  }
+ }
+}

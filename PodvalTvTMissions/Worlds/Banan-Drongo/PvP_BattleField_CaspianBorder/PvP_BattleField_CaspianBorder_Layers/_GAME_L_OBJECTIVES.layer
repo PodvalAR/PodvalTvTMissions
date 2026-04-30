@@ -1,0 +1,49 @@
+GenericEntity : "{6A3CDCFB475BF1B2}Prefabs/System/DRG_CriticalLossPrefab.et" {
+ components {
+  DRG_CriticalLossComponent "{65213D368F1BD792}" {
+   m_aLossLogics {
+    LossLogic "{65220A997D9BC9C3}" {
+     m_aLosses {
+      FactionLoss "{65220A9943CE341A}" {
+       m_sFactionKey "RHS_AFRF"
+      }
+     }
+     m_sObjectiveNames {
+      "DESTROY_ENEMY_USAF"
+     }
+     m_bAdvanceGameStage 1
+     m_bUseMessage 1
+     m_bEventMessage "Победа USAF: AFRF понесли серьёзные потери."
+    }
+    LossLogic "{65220A997DF2C23B}" {
+     m_aLosses {
+      FactionLoss "{65220A99414FC3CE}" {
+       m_sFactionKey "RHS_USAF"
+      }
+     }
+     m_sObjectiveNames {
+      "DESTROY_ENEMY_AFRF"
+     }
+     m_bAdvanceGameStage 1
+     m_bUseMessage 1
+     m_bEventMessage "Победа AFRF:: USAF понесли серьёзные потери."
+    }
+   }
+  }
+ }
+ coords 2025.657 8.634 1568.151
+}
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ DESTROY_ENEMY_USAF {
+  coords 0 0 0
+  m_sTitle "Разгромить противника"
+  m_iOrder 10
+  m_sFactionKey "RHS_USAF"
+ }
+ DESTROY_ENEMY_AFRF {
+  coords 0 0 0
+  m_sTitle "Разгромить противника"
+  m_iOrder 10
+  m_sFactionKey "RHS_AFRF"
+ }
+}

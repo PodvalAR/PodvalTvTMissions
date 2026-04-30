@@ -1,0 +1,162 @@
+SCR_AIGroup US_3_0_0 : "{119A3C5BF9D14C80}Prefabs/Groups/BLUFOR/Campaign/F_US_drg_MG_Squad.et" {
+ components {
+  PS_GroupCallsignAssigner "{64607D040E149AD9}" {
+   m_iCompanyCallsign 3
+  }
+ }
+ coords 5021.736 345.112 4177.334
+ angleX -6.439
+ angleY 178.146
+ angleZ -6.001
+}
+$grp GenericEntity : "{2BD8F0769429AC4A}Prefabs/Props/Military/AmmoBoxes/drg_AmmoBox_81mm_MortarCluster_100rnd_HE.et" {
+ {
+  coords 5075.294 342.77 4138.292
+  angleX -3.135
+  angleY -42.763
+  angleZ -0.755
+ }
+ {
+  coords 5076.156 342.788 4139.021
+  angleX -3.135
+  angleY -42.763
+  angleZ -0.755
+ }
+}
+Vehicle M923A1_engineer1 : "{2D74C39A650A3030}Prefabs/Vehicles/Wheeled/M923A1/M923A1_engineer.et" {
+ coords 5052.093 340.751 4163.742
+ angleX -0.587
+ angleY -40.981
+ angleZ -0.676
+ m_sAttachmentGroupName "US_5_0_0"
+ m_bEnableMoveOnFreeze 1
+}
+$grp SCR_AIGroup : "{35CEA72A9217DC57}Prefabs/Groups/BLUFOR/Campaign/F_US_drg_PlatoonHQ.et" {
+ US_1_0_0 {
+  components {
+   PS_GroupCallsignAssigner "{6460980864CED466}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 5006.503 345.53 4166.059
+  angleY -141.164
+ }
+ US_2_0_0 {
+  components {
+   PS_GroupCallsignAssigner "{6460980864CED466}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 5016.172 345.246 4156.063
+  angleY -141.164
+ }
+}
+SCR_AIGroup US_0_0_0 : "{68D5E3B6F7C86BD0}Prefabs/Groups/BLUFOR/Campaign/F_US_drg_CompanyHQ.et" {
+ coords 5009.225 349.149 4195.757
+ angleX 2.526
+ angleY -131.659
+ angleZ 0.147
+ m_aUnitPrefabSlots {
+  "{F81AEF796B932D96}Prefabs/Characters/Factions/BLUFOR/US_Army/Dev/drg_Character_US_CL.et"
+ }
+}
+$grp Turret : "{8094D99689ABE241}Prefabs/Weapons/Mortars/M252/Mortar_M252.et" {
+ {
+  components {
+   PS_GroupAttachmentComponent "{65B6C39EF7F9106E}" {
+    m_sAttachmentGroupName "US_4_0_0"
+   }
+  }
+  coords 5074.142 342.619 4140.878
+  angleX -3.203
+  angleY -40.321
+  angleZ 0.372
+ }
+ {
+  components {
+   PS_GroupAttachmentComponent "{65B6C39EF7F9106E}" {
+    m_sAttachmentGroupName "US_4_0_0"
+   }
+  }
+  coords 5075.069 342.609 4141.703
+  angleX -3.203
+  angleY -40.321
+  angleZ 0.372
+ }
+}
+$grp SCR_AIGroup : "{8D21AAF73F41E8F6}Prefabs/Groups/BLUFOR/Campaign/F_US_drg_RifleSquad.et" {
+ US_1_0_1 {
+  components {
+   PS_GroupCallsignAssigner "{646098080991B56F}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 5008.292 345.588 4167.755
+  angleX -0.038
+  angleY -136.708
+  angleZ -1.265
+ }
+ US_1_0_2 {
+  components {
+   PS_GroupCallsignAssigner "{646098080991B56F}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 5010.553 345.58 4169.514
+  angleX 0.007
+  angleY -134.69
+  angleZ -1.265
+ }
+ US_2_0_2 {
+  components {
+   PS_GroupCallsignAssigner "{646098080991B56F}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 2
+   }
+  }
+  coords 5021.37 344.999 4161.647
+  angleX 0.007
+  angleY -134.69
+  angleZ -1.265
+ }
+ US_2_0_1 {
+  components {
+   PS_GroupCallsignAssigner "{646098080991B56F}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 5019.127 345.131 4158.677
+  angleX -0.038
+  angleY -136.708
+  angleZ -1.265
+ }
+}
+SCR_AIGroup US_4_0_0 : "{983EB2C5F6E84CD7}Prefabs/Groups/BLUFOR/Campaign/F_US_drg_MortarCrew.et" {
+ components {
+  PS_GroupCallsignAssigner "{64607D07A7096E4D}" {
+   m_iCompanyCallsign 4
+  }
+ }
+ coords 5072.833 342.492 4139.146
+ angleY -134.872
+ m_aUnitPrefabSlots + {
+  "{AC39405FAA8502FF}Prefabs/Characters/Factions/BLUFOR/US_Army/Dev/drg_Character_US_MortarGunner.et" "{68DAF177BB0B6C23}Prefabs/Characters/Factions/BLUFOR/US_Army/Dev/drg_Character_US_MortarLoader.et"
+ }
+}
+SCR_AIGroup US_5_0_0 : "{F7B1E883643FF4A3}Prefabs/Groups/BLUFOR/Campaign/F_US_drg_DemolitionTeam.et" {
+ components {
+  PS_GroupCallsignAssigner "{64607D0CB31C3FB0}" {
+   m_iCompanyCallsign 5
+  }
+ }
+ coords 5048.866 340.719 4162.791
+ angleX 0.021
+ angleY -148.806
+ angleZ -5.206
+ m_aUnitPrefabSlots {
+  "{4F4A16468D0D3CAA}Prefabs/Characters/Factions/BLUFOR/US_Army/Dev/drg_Character_US_SeniorSapper.et" "{52B3CB912522A38F}Prefabs/Characters/Factions/BLUFOR/US_Army/Dev/drg_Character_US_Sapper.et"
+ }
+}

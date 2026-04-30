@@ -1,0 +1,331 @@
+$grp GenericEntity : "{039F825B8B83B86D}Prefabs/Props/Military/AmmoBoxes/drg_AmmoBox_81mm_mortar_10rnd_HE.et" {
+ {
+  coords 1415.357 242.216 3558.955
+  angleY -9.734
+ }
+ {
+  coords 1415.323 242.216 3559.153
+  angleY -9.734
+ }
+ {
+  coords 1415.288 242.216 3559.357
+  angleY -9.734
+ }
+ {
+  coords 1415.253 242.216 3559.558
+  angleY -9.734
+ }
+ {
+  coords 1415.218 242.216 3559.763
+  angleY -9.734
+ }
+ {
+  coords 1415.183 242.216 3559.968
+  angleY -9.734
+ }
+ {
+  coords 1415.149 242.216 3560.166
+  angleY -9.734
+ }
+ {
+  coords 1415.114 242.216 3560.37
+  angleY -9.734
+ }
+ {
+  coords 1415.079 242.216 3560.571
+  angleY -9.734
+ }
+ {
+  coords 1415.044 242.216 3560.776
+  angleY -9.734
+ }
+ {
+  coords 1414.505 242.216 3560.684
+  angleY -9.734
+ }
+ {
+  coords 1414.609 242.216 3560.074
+  angleY -9.734
+ }
+ {
+  coords 1414.574 242.216 3560.278
+  angleY -9.734
+ }
+ {
+  coords 1414.678 242.216 3559.67
+  angleY -9.734
+ }
+ {
+  coords 1414.643 242.216 3559.875
+  angleY -9.734
+ }
+ {
+  coords 1414.539 242.216 3560.479
+  angleY -9.734
+ }
+ {
+  coords 1414.714 242.216 3559.466
+  angleY -9.734
+ }
+ {
+  coords 1414.748 242.216 3559.265
+  angleY -9.734
+ }
+ {
+  coords 1414.784 242.216 3559.061
+  angleY -9.734
+ }
+ {
+  coords 1414.817 242.216 3558.863
+  angleY -9.734
+ }
+ {
+  coords 1414.011 242.216 3560.599
+  angleY -9.734
+ }
+ {
+  coords 1414.115 242.216 3559.989
+  angleY -9.734
+ }
+ {
+  coords 1414.08 242.216 3560.193
+  angleY -9.734
+ }
+ {
+  coords 1414.184 242.216 3559.585
+  angleY -9.734
+ }
+ {
+  coords 1414.149 242.216 3559.79
+  angleY -9.734
+ }
+ {
+  coords 1414.045 242.216 3560.394
+  angleY -9.734
+ }
+ {
+  coords 1414.22 242.216 3559.381
+  angleY -9.734
+ }
+ {
+  coords 1414.254 242.216 3559.18
+  angleY -9.734
+ }
+ {
+  coords 1414.29 242.216 3558.976
+  angleY -9.734
+ }
+ {
+  coords 1414.323 242.216 3558.778
+  angleY -9.734
+ }
+}
+SCR_AIGroup PIR_0_0_0 : "{56472722CA13F870}Prefabs/Groups/INDFOR/PIR/drg_PIR_HQ.et" {
+ coords 1456.565 241.689 3545.578
+ angleY -27.298
+}
+$grp Vehicle : "{5C1D77700F472327}Prefabs/Vehicles/Wheeled/BRDM2/BRDM2_TKA.et" {
+ BRDM2_TKA1 {
+  coords 1374.779 244.255 3508.34
+  angleX -2.047
+  angleY 53.919
+  angleZ 0.085
+  m_sAttachmentGroupName "PIR_3_0_0"
+ }
+ BRDM2_TKA2 {
+  coords 1367.257 244.661 3501.628
+  angleX -2.607
+  angleY 45.854
+  angleZ -0.24
+  m_sAttachmentGroupName "PIR_3_0_1"
+ }
+}
+$grp Turret : "{8094D99689ABE241}Prefabs/Weapons/Mortars/M252/Mortar_M252.et" {
+ {
+  components {
+   PS_GroupAttachmentComponent "{6584F9BF6287F8DA}" {
+    m_sAttachmentGroupName "PIR_5_0_0"
+   }
+  }
+  coords 1420.329 242.008 3559.409
+  angleY -8.328
+ }
+ {
+  components {
+   PS_GroupAttachmentComponent "{6584F9BF6287F8DA}" {
+    m_sAttachmentGroupName "PIR_5_0_0"
+   }
+  }
+  coords 1418.987 242.043 3559.04
+  angleX 1.09
+  angleY -8.298
+  angleZ 1.564
+ }
+}
+Vehicle Ural4320_Ses_TKA_transport_covered1 : "{AC3FA513706226DD}Prefabs/Vehicles/Wheeled/Ural4320/Ses_TKA/Ural4320_Ses_TKA_transport_covered.et" {
+ coords 1425.383 241.927 3560.542
+ angleX 0.26
+ angleY 76.762
+ angleZ 1.107
+ m_sAttachmentGroupName "PIR_5_0_0"
+}
+SCR_AIGroup PIR_5_0_0 : "{C576D91EC60FE9AD}Prefabs/Groups/INDFOR/PIR/drg_PIR_MortarCrew.et" {
+ components {
+  PS_GroupCallsignAssigner "{6454F7D129837B5A}" {
+   m_iCompanyCallsign 5
+  }
+ }
+ coords 1410.245 242.331 3551.813
+ angleY -19.763
+ m_aUnitPrefabSlots {
+  "{0C558232B70722F4}Prefabs/Characters/Factions/INDFOR/PIR/Character_PIR_MortarLeader.et" "{417F4F865845E443}Prefabs/Characters/Factions/INDFOR/PIR/Character_PIR_MortarMan.et" "{417F4F865845E443}Prefabs/Characters/Factions/INDFOR/PIR/Character_PIR_MortarMan.et" "{417F4F865845E443}Prefabs/Characters/Factions/INDFOR/PIR/Character_PIR_MortarMan.et" "{417F4F865845E443}Prefabs/Characters/Factions/INDFOR/PIR/Character_PIR_MortarMan.et"
+ }
+}
+$grp SCR_AIGroup : "{D069C12C0FA64D8C}Prefabs/Groups/INDFOR/PIR/drg_PIR_RifleSquad.et" {
+ PIR_1_0_0 {
+  components {
+   PS_GroupCallsignAssigner "{6454F7D129837B5A}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 1444.238 241.697 3540.181
+  angleY -22.544
+ }
+ PIR_1_0_1 {
+  components {
+   PS_GroupCallsignAssigner "{6454F7D129837B5A}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 1433.743 242.141 3535.204
+  angleX 0.065
+  angleY -24.919
+  angleZ 2.162
+ }
+ PIR_1_0_2 {
+  components {
+   PS_GroupCallsignAssigner "{6454F7D129837B5A}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 1423.173 242.581 3530.292
+  angleX 0.065
+  angleY -24.919
+  angleZ 2.162
+ }
+ PIR_2_0_1 {
+  components {
+   PS_GroupCallsignAssigner "{6454F7D129837B5A}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 1400.444 243.535 3519.16
+  angleX 0.155
+  angleY -27.311
+  angleZ 2.158
+ }
+ PIR_2_0_0 {
+  components {
+   PS_GroupCallsignAssigner "{6454F7D129837B5A}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 1410.722 243.093 3524.572
+  angleX 0.09
+  angleY -24.936
+  angleZ -0.001
+ }
+ PIR_2_0_2 {
+  components {
+   PS_GroupCallsignAssigner "{6454F7D129837B5A}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 2
+   }
+  }
+  coords 1390.089 243.975 3513.81
+  angleX 0.155
+  angleY -27.311
+  angleZ 2.158
+ }
+ PIR_3_0_0 {
+  components {
+   PS_GroupCallsignAssigner "{6454F7D129837B5A}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 1376.821 244.262 3504.933
+  angleX 0.595
+  angleY -39.16
+  angleZ 2.08
+  m_aUnitPrefabSlots {
+   "{60F5526F423F51B2}Prefabs/Characters/Factions/INDFOR/PIR/Character_TKR_SL_random.et" "{EC0FA9C8693899D5}Prefabs/Characters/Factions/INDFOR/PIR/Character_TKR_Rifleman_Random.et"
+  }
+  m_sCustomNameSet "#DRG-Sq-ReconPatrolTeam"
+ }
+ PIR_3_0_1 {
+  components {
+   PS_GroupCallsignAssigner "{6454F7D129837B5A}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 1
+   }
+  }
+  coords 1369.239 244.691 3498.753
+  angleX -0.284
+  angleY -39.203
+  angleZ 2.797
+  m_aUnitPrefabSlots {
+   "{60F5526F423F51B2}Prefabs/Characters/Factions/INDFOR/PIR/Character_TKR_SL_random.et" "{EC0FA9C8693899D5}Prefabs/Characters/Factions/INDFOR/PIR/Character_TKR_Rifleman_Random.et"
+  }
+  m_sCustomNameSet "#DRG-Sq-ReconPatrolTeam"
+ }
+ PIR_4_0_0 {
+  components {
+   PS_GroupCallsignAssigner "{6454F7D129837B5A}" {
+    m_iCompanyCallsign 4
+   }
+  }
+  coords 1359.896 245.152 3487.962
+  angleX 0.265
+  angleY -50.413
+  angleZ 2.799
+  m_aUnitPrefabSlots {
+   "{60F5526F423F51B2}Prefabs/Characters/Factions/INDFOR/PIR/Character_TKR_SL_random.et" "{EC0FA9C8693899D5}Prefabs/Characters/Factions/INDFOR/PIR/Character_TKR_Rifleman_Random.et"
+  }
+  m_sCustomNameSet "#DRG-Sq-AA_Team"
+ }
+ PIR_4_0_1 {
+  components {
+   PS_GroupCallsignAssigner "{6454F7D129837B5A}" {
+    m_iCompanyCallsign 4
+    m_iSquadCallsign 1
+   }
+  }
+  coords 1348.456 245.27 3473.616
+  angleX 0.265
+  angleY -50.413
+  angleZ 2.799
+  m_aUnitPrefabSlots {
+   "{60F5526F423F51B2}Prefabs/Characters/Factions/INDFOR/PIR/Character_TKR_SL_random.et" "{EC0FA9C8693899D5}Prefabs/Characters/Factions/INDFOR/PIR/Character_TKR_Rifleman_Random.et"
+  }
+  m_sCustomNameSet "#DRG-Sq-AA_Team"
+ }
+}
+$grp Vehicle : "{FD109F3702AAB392}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_ZU23.et" {
+ Ural4320_ZU1 {
+  coords 1357.787 245.125 3490.86
+  angleX -1.416
+  angleY 41.46
+  angleZ -0.114
+  m_sAttachmentGroupName "PIR_4_0_0"
+ }
+ Ural4320_ZU2 {
+  coords 1346.701 245.261 3476.869
+  angleX -0.401
+  angleY 41.461
+  angleZ 0.025
+  m_sAttachmentGroupName "PIR_4_0_1"
+ }
+}

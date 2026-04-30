@@ -1,0 +1,50 @@
+GenericEntity : "{6A3CDCFB475BF1B2}Prefabs/System/DRG_CriticalLossPrefab.et" {
+ components {
+  DRG_CriticalLossComponent "{65213D368F1BD792}" {
+   m_iTestingPlayerCounts 8
+   m_aLossLogics {
+    LossLogic "{65B672EF4F3F42D9}" {
+     m_aLosses {
+      FactionLoss "{65B672EF4D1B9B24}" {
+       m_sFactionKey "FIA"
+      }
+     }
+     m_sObjectiveNames {
+      "KILL_FIA" "FLAG_1_US" "FLAG_2_US"
+     }
+     m_sFailedObjectiveNames {
+      "FLAG_1_FIA" "FLAG_2_FIA" "KILL_US"
+     }
+     m_bAdvanceGameStage 1
+     m_bUseMessage 1
+     m_bEventMessage "Победа атаки! FIA понесли большие потери!"
+    }
+    LossLogic "{65B672EF4F6460E5}" {
+     m_aLosses {
+      FactionLoss "{65B672EF8870E61C}" {
+       m_sFactionKey "US"
+      }
+     }
+     m_sObjectiveNames {
+      "FLAG_1_FIA" "FLAG_2_FIA" "KILL_US"
+     }
+     m_sFailedObjectiveNames {
+      "KILL_FIA" "FLAG_1_US" "FLAG_2_US"
+     }
+     m_bAdvanceGameStage 1
+     m_bUseMessage 1
+     m_bEventMessage "Победа обороны! США понесли большие потери!"
+    }
+   }
+  }
+ }
+ coords 10865.793 21.439 11661.193
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 3000
+  }
+ }
+ coords 10873.799 22 11653.879
+}

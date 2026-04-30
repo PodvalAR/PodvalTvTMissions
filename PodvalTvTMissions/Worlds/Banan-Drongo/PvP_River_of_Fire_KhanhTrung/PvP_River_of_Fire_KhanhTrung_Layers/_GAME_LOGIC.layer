@@ -1,0 +1,73 @@
+GenericEntity : "{6A3CDCFB475BF1B2}Prefabs/System/DRG_CriticalLossPrefab.et" {
+ components {
+  DRG_CriticalLossComponent "{65213D368F1BD792}" {
+   m_iAdvanceAfterSec 5
+   m_iTestingPlayerCounts 8
+   m_aLossLogics {
+    LossLogic "{65220A997D9BC9C3}" {
+     m_aLosses {
+      FactionLoss "{65220A9943CE341A}" {
+       m_iCriticalLossCount 4
+       m_sFactionKey "Drg_VCA"
+      }
+     }
+     m_sObjectiveNames {
+      "KILL_VCA" "TARGET_DEST" "PZRK_US"
+     }
+     m_sFailedObjectiveNames {
+      "KILL_US" "TARGET_SAVE" "PZRK_VCA"
+     }
+     m_bAdvanceGameStage 1
+     m_bUseMessage 1
+     m_bEventMessage "Победа атаки! Оборона понесла серьёзные потери."
+    }
+    LossLogic "{65220A997DF2C23B}" {
+     m_aLosses {
+      FactionLoss "{65220A99414FC3CE}" {
+       m_sFactionKey "US"
+      }
+     }
+     m_sObjectiveNames {
+      "KILL_US" "PZRK_VCA"
+     }
+     m_sFailedObjectiveNames {
+      "KILL_VCA" "PZRK_US"
+     }
+     m_bAdvanceGameStage 1
+     m_bUseMessage 1
+     m_bEventMessage "Победа атаки! Оборона понесла серьёзные потери."
+    }
+   }
+  }
+ }
+ coords 2025.657 8.634 1568.151
+}
+GenericEntity : "{7A333AFB11EA847A}Prefabs/System/DRG_VehicleDestroyPrefab.et" {
+ components {
+  DRG_VehicleDestroyComponent "{65733BD6110AE8FC}" {
+   m_bUseCompactDescriptionGenerator 1
+   m_aVehicleLossLogics {
+    VehicleLossLogic "{65DEC3B5F1552F71}" {
+     m_sSuccessObjectiveNames {
+      "TARGET_DEST"
+     }
+     m_sFailedObjectiveNames {
+      "TARGET_SAVE"
+     }
+     m_sVehicleEntityNames {
+      "TARGET_1" "TARGET_2" "TARGET_3"
+     }
+    }
+   }
+  }
+ }
+ coords 1659.463 1.344 1738.016
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 1131.34 86.965 1865.46
+}

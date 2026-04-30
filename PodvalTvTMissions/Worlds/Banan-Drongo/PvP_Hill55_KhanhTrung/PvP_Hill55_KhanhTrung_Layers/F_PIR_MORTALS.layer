@@ -1,0 +1,199 @@
+$grp GenericEntity : "{21D83950DF36F250}Prefabs/Props/Military/Sandbags/Sandbag_01_long_burlap.et" {
+ {
+  coords 2600.927 3.124 1309.404
+  angleY -160.507
+ }
+ {
+  coords 2599.08 3.125 1313.486
+  angleY -62.517
+ }
+ {
+  coords 2603.451 3.125 1314.893
+  angleY 15.847
+ }
+ {
+  coords 2600.846 3.124 1307.569
+  angleY 15.846
+ }
+ {
+  coords 2596.478 3.125 1306.164
+  angleY -62.517
+ }
+ {
+  coords 2598.322 3.125 1302.084
+  angleY -160.512
+ }
+ {
+  coords 2595.71 3.125 1294.625
+  angleY -160.507
+ }
+ {
+  coords 2593.863 3.124 1298.707
+  angleY -62.517
+ }
+ {
+  coords 2598.234 3.124 1300.115
+  angleY 15.847
+ }
+}
+$grp GenericEntity : "{5A5A35F2937802B8}Prefabs/Props/Military/AmmoBoxes/drg_ammobox_82mm_100rnd_Smoke.et" {
+ {
+  coords 2598.77 3.125 1306.709
+  angleX 0
+  angleY -165.811
+  angleZ 0
+ }
+ {
+  coords 2599.406 3.125 1306.547
+  angleX 0
+  angleY -165.811
+  angleZ 0
+ }
+ {
+  coords 2601.96 3.125 1313.89
+  angleX 0
+  angleY -165.814
+  angleZ 0
+ }
+ {
+  coords 2601.372 3.125 1314.032
+  angleX 0
+  angleY -165.807
+  angleZ 0
+ }
+ {
+  coords 2596.155 3.124 1299.253
+  angleX 0
+  angleY -165.807
+  angleZ 0
+ }
+ {
+  coords 2596.743 3.124 1299.111
+  angleX 0
+  angleY -165.814
+  angleZ 0
+ }
+}
+$grp GenericEntity : "{645F518F95682567}Prefabs/Props/Military/AmmoBoxes/drg_ammobox_82mm_100rnd_HE.et" {
+ {
+  coords 2597.831 3.125 1303.646
+  angleX 0
+  angleY -162.665
+  angleZ 0
+ }
+ {
+  coords 2600.458 3.124 1311.019
+  angleX 0
+  angleY -162.665
+  angleZ 0
+ }
+ {
+  coords 2595.241 3.125 1296.24
+  angleX 0
+  angleY -162.665
+  angleZ 0
+ }
+}
+$grp GenericEntity : "{7AF4B627D5C90235}Prefabs/Props/Military/Sandbags/Sandbag_01_round_high_burlap.et" {
+ {
+  coords 2605.585 3.124 1313.373
+  angleY 66.238
+ }
+ {
+  coords 2600.699 3.125 1314.891
+  angleY -26.56
+ }
+ {
+  coords 2603.672 3.124 1309.234
+  angleY 157.094
+ }
+ {
+  coords 2598.901 3.124 1310.986
+  angleY -112.484
+ }
+ {
+  coords 2596.298 3.125 1303.665
+  angleY -112.485
+ }
+ {
+  coords 2601.07 3.125 1301.912
+  angleY 157.094
+ }
+ {
+  coords 2602.981 3.125 1306.049
+  angleY 68.078
+ }
+ {
+  coords 2598.096 3.125 1307.567
+  angleY -26.559
+ }
+ {
+  coords 2600.368 3.125 1298.594
+  angleY 66.238
+ }
+ {
+  coords 2595.483 3.124 1300.112
+  angleY -26.56
+ }
+ {
+  coords 2593.684 3.125 1296.207
+  angleY -112.484
+ }
+ {
+  coords 2598.455 3.125 1294.455
+  angleY 157.094
+ }
+}
+$grp Turret : "{D1FFE458E8AC4BDB}Prefabs/Weapons/Mortars/2B14/Mortar_2B14.et" {
+ {
+  components {
+   PS_GroupAttachmentComponent "{651318460654415F}" {
+    m_sAttachmentGroupName "PIR_5_0_0"
+   }
+  }
+  coords 2602.344 3.124 1312.176
+  angleY -73.21
+ }
+ {
+  components {
+   PS_GroupAttachmentComponent "{651318460654415F}" {
+    m_sAttachmentGroupName "PIR_5_0_0"
+   }
+  }
+  coords 2599.741 3.125 1304.853
+  angleY -73.211
+ }
+ {
+  components {
+   PS_GroupAttachmentComponent "{651318460654415F}" {
+    m_sAttachmentGroupName "PIR_5_0_0"
+   }
+  }
+  coords 2597.127 3.125 1297.397
+  angleY -73.21
+ }
+}
+SCR_EditorRestrictionZoneEntity : "{EF72FA7CD87618D5}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneSmall.et" {
+ components {
+  SCR_ZoneRestrictionAreaMeshComponent "{56D8A3C5A31496A1}" {
+   m_fHeight 1
+   m_bFollowTerrain 1
+  }
+ }
+ coords 2602.895 3.125 1301.67
+ m_fWarnRadius 100
+ m_fZoneRadius 150
+ m_fZoneTeleportedRadius 160
+ {
+  GenericEntity {
+   ID "59D673B36B893D84"
+   components {
+    SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+     m_fHeight 1
+     m_bFollowTerrain 1
+     m_fRadius 100
+    }
+   }
+  }
+ }
+}

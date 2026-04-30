@@ -1,0 +1,69 @@
+GenericEntity : "{6A3CDCFB475BF1B2}Prefabs/System/DRG_CriticalLossPrefab.et" {
+ components {
+  DRG_CriticalLossComponent "{65213D368F1BD792}" {
+   m_iAdvanceAfterSec 5
+   m_iTestingPlayerCounts 8
+   m_aLossLogics {
+    LossLogic "{6532E5DED29C4A89}" {
+     m_aLosses {
+      FactionLoss "{6532E5DEDE2C5E01}" {
+       m_iCriticalLossCount 4
+       m_sFactionKey "Ses_CDF"
+      }
+     }
+     m_sObjectiveNames {
+      "KILL_CDF"
+     }
+     m_bAdvanceGameStage 1
+     m_bUseMessage 1
+     m_bEventMessage "#drg_ModuleCriticalLoss_ConditionMet_DefendWin"
+    }
+    LossLogic "{6532E5DED2A74EF8}" {
+     m_aLosses {
+      FactionLoss "{6532E5DF33E6A383}" {
+       m_iCriticalLossCount 4
+       m_sFactionKey "RHS_AFRF"
+      }
+     }
+     m_sObjectiveNames {
+      "KILL_AFRF"
+     }
+     m_bAdvanceGameStage 1
+     m_bUseMessage 1
+     m_bEventMessage "#drg_ModuleCriticalLoss_ConditionMet_AttackWin"
+    }
+   }
+  }
+ }
+ coords 4919.252 171.517 13004.141
+}
+GenericEntity : "{7A333AFB11EA847A}Prefabs/System/DRG_VehicleDestroyPrefab.et" {
+ components {
+  DRG_VehicleDestroyComponent "{65733BD6110AE8FC}" {
+   m_aVehicleLossLogics {
+    VehicleLossLogic "{657746DBC2E8927F}" {
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "TARGET_DESTROY"
+     }
+     m_sFailedObjectiveNames {
+      "TARGET_SAVE"
+     }
+     m_sVehicleEntityNames {
+      "TARGET_1" "TARGET_2" "TARGET_3"
+     }
+     m_sMessage "Победа атаки! Все цели уничтожены."
+    }
+   }
+  }
+ }
+ coords 3276.077 233.363 3382.461
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 4921.707 170.847 12983.772
+}

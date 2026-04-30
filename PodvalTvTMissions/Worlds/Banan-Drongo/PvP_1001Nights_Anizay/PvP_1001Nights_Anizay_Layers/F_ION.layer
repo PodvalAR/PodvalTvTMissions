@@ -1,0 +1,72 @@
+SCR_AIGroup ION_0_0_0 : "{2D2EFB4EEFFA07C4}Prefabs/Groups/INDFOR/RHS_ION/DRG_Group_RHS_Riflesquad.et" {
+ coords 7391.023 115.48 5250.631
+ angleY -91.668
+ m_aUnitPrefabSlots {
+  "{E8E9AB1239963DC2}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Drg_Character_RHS_ION_PMC_SL.et" "{95F147EA5C05015B}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Drg_Character_RHS_ION_PMC_SR.et" "{C0DA7C2C2D87A2D2}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Drg_Character_RHS_ION_PMC_Rifleman_v3.et" "{BC3BF750DE15DF34}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Drg_Character_RHS_ION_PMC_LAT_v4.et" "{A807C057A88855BD}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Drg_Character_RHS_ION_PMC_Sniper.et"
+ }
+ {
+  $grp Vehicle : "{053040D358C1DC44}Prefabs/Vehicles/Wheeled/M998/M1025_ION_armed_m2hb.et" {
+   M1025_ION_armed_m2hb1 {
+    coords -6.275 0.2 4.113
+    angleX -1.784
+    angleY 96.167
+    angleZ -0.14
+    m_sAttachmentGroupName "ION_0_0_1"
+   }
+   M1025_ION_armed_m2hb2 {
+    coords 1.796 -0.053 3.828
+    angleX -1.786
+    angleY 87.994
+    angleZ 0.115
+    m_sAttachmentGroupName "ION_0_0_0"
+   }
+  }
+  SCR_AIGroup ION_0_0_1 : "{2D2EFB4EEFFA07C4}Prefabs/Groups/INDFOR/RHS_ION/DRG_Group_RHS_Riflesquad.et" {
+   coords -8.891 0.278 0.681
+   angleY 9.492
+   m_aUnitPrefabSlots {
+    "{E8E9AB1239963DC2}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Drg_Character_RHS_ION_PMC_SL.et" "{95F147EA5C05015B}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Drg_Character_RHS_ION_PMC_SR.et" "{E8E9AB1239963DC2}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Drg_Character_RHS_ION_PMC_SL.et" "{08C7AA711B584E46}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Drg_Character_RHS_ION_PMC_LAT_v1.et" "{A807C057A88855BD}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Drg_Character_RHS_ION_PMC_Sniper.et"
+   }
+  }
+  $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+   RHS_ION_G_000_M {
+    coords 0 0 -0.002
+    angleY -178.332
+    m_sImageSet "{301FC1A2A46D3E0D}UI/Textures/GroupManagement/FlagIcons/GroupFlagsIndfor.imageset"
+    m_sImageSetGlow ""
+    m_MarkerColor 1 1 1 1
+    m_sQuadName "undefined"
+    m_fWorldSize 50
+    m_sDescription "Атлас Ред 1"
+    m_bUseWorldScale 0
+    m_aVisibleForFactions {
+     "RHS_ION"
+    }
+    m_bVisibleForEmptyFaction 1
+    m_aHideOnGameModeStates {
+     0 3
+    }
+    m_iZOrder 10
+   }
+   RHS_ION_G_000_M2 {
+    coords -8.891 0.278 0.681
+    angleY -178.332
+    m_sImageSet "{301FC1A2A46D3E0D}UI/Textures/GroupManagement/FlagIcons/GroupFlagsIndfor.imageset"
+    m_sImageSetGlow ""
+    m_MarkerColor 1 1 1 1
+    m_sQuadName "undefined"
+    m_fWorldSize 50
+    m_sDescription "Атлас Ред 1"
+    m_bUseWorldScale 0
+    m_aVisibleForFactions {
+     "RHS_ION"
+    }
+    m_bVisibleForEmptyFaction 1
+    m_aHideOnGameModeStates {
+     0 3
+    }
+    m_iZOrder 10
+   }
+  }
+ }
+}
