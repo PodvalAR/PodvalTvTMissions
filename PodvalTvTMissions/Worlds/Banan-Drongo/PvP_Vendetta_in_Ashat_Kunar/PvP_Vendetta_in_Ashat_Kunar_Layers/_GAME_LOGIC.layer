@@ -1,0 +1,53 @@
+GenericEntity : "{6A3CDCFB475BF1B2}Prefabs/System/DRG_CriticalLossPrefab.et" {
+ components {
+  DRG_CriticalLossComponent "{65213D368F1BD792}" {
+   m_iAdvanceAfterSec 5
+   m_iTestingPlayerCounts 8
+   m_aLossLogics {
+    LossLogic "{6532E5DED29C4A89}" {
+     m_aLosses {
+      FactionLoss "{6532E5DEDE2C5E01}" {
+       m_iCriticalLossCount 0
+       m_sFactionKey "RHS_USAF"
+      }
+     }
+     m_sObjectiveNames {
+      "KILL_USAF" "FLAG_AFRF"
+     }
+     m_sFailedObjectiveNames {
+      "KILL_AFRF" "FLAG_USAF"
+     }
+     m_bAdvanceGameStage 1
+     m_bUseMessage 1
+     m_bEventMessage "Победа атаки! Оборона понесла критические потери."
+    }
+    LossLogic "{6532E5DED2A74EF8}" {
+     m_aLosses {
+      FactionLoss "{6532E5DF33E6A383}" {
+       m_iCriticalLossCount 4
+       m_sFactionKey "RHS_AFRF"
+      }
+     }
+     m_sObjectiveNames {
+      "KILL_AFRF" "FLAG_USAF"
+     }
+     m_sFailedObjectiveNames {
+      "KILL_USAF" "FLAG_AFRF"
+     }
+     m_bAdvanceGameStage 1
+     m_bUseMessage 1
+     m_bEventMessage "Победа обороны! Атака понесла критические потери."
+    }
+   }
+  }
+ }
+ coords 4919.252 171.517 13004.141
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2400
+  }
+ }
+ coords 4921.707 170.847 12983.772
+}

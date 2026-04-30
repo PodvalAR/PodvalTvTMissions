@@ -1,0 +1,185 @@
+$grp SCR_AIGroup : "{096E2AA151C3580D}Prefabs/Groups/OPFOR/Campaign/F_USSR_drg_RifleSquad.et" {
+ USSR_2_0_0 {
+  components {
+   PS_GroupCallsignAssigner "{645CD4F530E5119A}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 7548.673 336.813 2540.798
+  angleX 0.128
+  angleY 107.534
+  angleZ 2.423
+ }
+ USSR_2_0_1 {
+  components {
+   PS_GroupCallsignAssigner "{645CD4F530E5119A}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 7538.148 335.556 2510.708
+  angleX -0.008
+  angleY 110.754
+  angleZ 2.427
+ }
+ USSR_2_0_2 {
+  components {
+   PS_GroupCallsignAssigner "{645CD4F530E5119A}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 2
+   }
+  }
+  coords 7527.967 334.143 2476.563
+  angleX 0.004
+  angleY 110.456
+  angleZ 2.427
+ }
+}
+$grp Vehicle : "{16C1F16C9B053801}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport.et" {
+ Ural4320_transport1 {
+  coords 7530.585 334.029 2472.541
+  angleX 2.067
+  angleY 17.739
+  angleZ 0.065
+  m_sAttachmentGroupName "USSR_2_0_0"
+ }
+ Ural4320_transport2 {
+  coords 7542.335 335.431 2505.968
+  angleX 2.068
+  angleY 16.369
+  angleZ 0.015
+  m_sAttachmentGroupName "USSR_2_0_1"
+ }
+ Ural4320_transport3 {
+  coords 7552.694 336.691 2535.829
+  angleX 2.157
+  angleY 18.845
+  angleZ -0.164
+  m_sAttachmentGroupName "USSR_2_0_2"
+ }
+ Ural4320_transport4 {
+  coords 8409.775 322.187 1895.787
+  angleY -37.31
+ }
+}
+Vehicle Ural4320_command1 : "{1BABF6B33DA0AEB6}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_command.et" {
+ coords 7566.533 338.266 2573.084
+ angleX 2.427
+ angleY 20.541
+ angleZ -0.001
+ m_sAttachmentGroupName "USSR_0_0_0"
+}
+SCR_AIGroup USSR_0_0_0 : "{2797EDBC47A47C2F}Prefabs/Groups/OPFOR/Campaign/F_USSR_drg_CompanyHQ.et" {
+ coords 7561.489 338.302 2575.666
+ angleY 111.561
+}
+SCR_AIGroup USSR_4_0_0 : "{2B2FE71BC66E6041}Prefabs/Groups/OPFOR/Campaign/S_USSR_drg_RocketHelicopter.et" {
+ components {
+  PS_GroupCallsignAssigner "{645CD4F6A6B4891B}" {
+   m_iCompanyCallsign 4
+  }
+ }
+ coords 8430.143 322.188 1936.205
+ angleY -31.751
+}
+Vehicle Ural4320_ammo1 : "{3336BE330C4F355B}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_ammo.et" {
+ coords 8398.344 322.187 1887.428
+ angleY -34.648
+}
+Vehicle Mi8MT_armed_gunship_HE1 : "{3C6B3ED0C3AC30D5}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_armed_gunship_HE.et" {
+ coords 8450.404 322.187 2014.82
+ angleY -120.542
+ m_sAttachmentGroupName "USSR_4_0_0"
+}
+Vehicle Ural4320_tanker1 : "{4C81D7ED8F8C0D87}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_tanker.et" {
+ coords 8406.142 322.187 1892.091
+ angleY -34.834
+}
+SCR_AIGroup USSR_1_0_0 : "{7A8CA920227BCBA8}Prefabs/Groups/OPFOR/Campaign/F_USSR_drg_PlatoonHQ.et" {
+ components {
+  PS_GroupCallsignAssigner "{645CD4FE39870BD1}" {
+   m_iCompanyCallsign 1
+  }
+ }
+ coords 7603.648 344.692 2703.322
+ angleX 0.356
+ angleY 108.737
+ angleZ 0.721
+}
+SCR_AIGroup USSR_3_0_0 : "{88C5372DBC94D00A}Prefabs/Groups/OPFOR/Campaign/S_USSR_drg_ReconPlatoonHQ.et" {
+ components {
+  PS_GroupCallsignAssigner "{645CD4F5122CA354}" {
+   m_iCompanyCallsign 3
+  }
+ }
+ coords 8450.255 322.187 1948.933
+ angleY -31.081
+ m_aUnitPrefabSlots {
+  "{C6960782BEAA6B07}Prefabs/Characters/Factions/OPFOR/USSR_Army/Recon/drg_Character_USSR_Recon_SL.et" "{072F75BB5AA0200E}Prefabs/Characters/Factions/OPFOR/USSR_Army/Recon/drg_Character_USSR_Recon_SeniorScout.et" "{B6FE3479F0ED092C}Prefabs/Characters/Factions/OPFOR/USSR_Army/Recon/drg_Character_USSR_Recon_RTO.et" "{ACD9575EDC2C034D}Prefabs/Characters/Factions/OPFOR/USSR_Army/Recon/drg_Character_USSR_Recon_Medic.et" "{82040C2F7734F9B3}Prefabs/Characters/Factions/OPFOR/USSR_Army/Recon/drg_Character_USSR_Recon_Sapper.et" "{EC89944E401BB659}Prefabs/Characters/Factions/OPFOR/USSR_Army/Recon/drg_Character_USSR_Recon_Sniper.et"
+ }
+}
+$grp SCR_AIGroup : "{A092B100ABD2BFD5}Prefabs/Groups/OPFOR/Campaign/F_USSR_drg_RifleSquad_BTR.et" {
+ USSR_1_0_1 {
+  components {
+   PS_GroupCallsignAssigner "{645CD4FA3E492D2E}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 7599.609 344.187 2690.806
+  angleX 0.76
+  angleY 106.773
+  angleZ 1.416
+ }
+ USSR_1_0_2 {
+  components {
+   PS_GroupCallsignAssigner "{645CD4FA3E492D2E}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 7594.287 343.177 2671.965
+  angleX 0.675
+  angleY 107.35
+  angleZ 1.479
+ }
+ USSR_1_0_3 {
+  components {
+   PS_GroupCallsignAssigner "{645CD4FA3E492D2E}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 3
+   }
+  }
+  coords 7588.489 342.178 2653.955
+  angleX 2.129
+  angleY 105.277
+  angleZ 2.945
+ }
+}
+Vehicle Ural4320_repair1 : "{A5647958579A4149}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_repair.et" {
+ coords 8401.94 322.187 1889.487
+ angleY -35.952
+}
+$grp Vehicle : "{C012BB3488BEA0C2}Prefabs/Vehicles/Wheeled/BTR70/BTR70.et" {
+ BTR1 {
+  coords 7603.998 344.007 2685.859
+  angleX 2.964
+  angleY 17.195
+  angleZ 0.026
+  m_sAttachmentGroupName "USSR_1_0_1"
+ }
+ BTR2 {
+  coords 7598.208 342.98 2666.91
+  angleX 2.964
+  angleY 15.436
+  angleZ -0.065
+  m_sAttachmentGroupName "USSR_1_0_2"
+ }
+ BTR3 {
+  coords 7592.257 341.996 2648.85
+  angleX 2.964
+  angleY 17.195
+  angleZ 0.026
+  m_sAttachmentGroupName "USSR_1_0_3"
+ }
+}

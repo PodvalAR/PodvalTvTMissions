@@ -1,0 +1,82 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ "_1_RULES" {
+  m_sTitle "#PS-Description_HeaderRules"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "ОБЩИЕ ПРАВИЛА"\
+  "— Всем запрещено надевать форму, головные уборы, разгрузки, бронежилеты противника (рюкзаки можно) "\
+  ""\
+  "ПРАВИЛА ДЛЯ АРМИИ ТАКИСТАНА"\
+  "— Запрещено покидать территорию н.п. Кунар Абад"\
+  "— Можно сдаться и воевать на стороне боевиков."\
+  ""\
+  "ПРАВИЛА ДЛЯ БОЕВИКОВ"\
+  "— Можно взять солдат гарнизона Кунар Абад в плен и принудить воевать на своей стороне."\
+  ""\
+  "СПОСОБЫ ПОБЕДЫ ДЛЯ ВС СССР"\
+  "— Удержать Кунар Абад под контролем"\
+  "— Разгромить противника"\
+  ""\
+  "СПОСОБЫ ПОБЕДЫ ДЛЯ БОЕВИКОВ"\
+  "— Захватить Кунар Абад и удержать"\
+  "— Разгромить противника"\
+  ""\
+  "О МИССИИ"\
+  "— Флаг перезахватываемый "\
+  "— Миссия завершается или по времени или по потерям сторон."\
+  ""\
+  "ПРО СДАЧУ В ПЛЕН"\
+  "— Стороны могут не соблюдать договорённости, всё зависит от игроков, решайте самостоятельно."\
+  ""\
+  ""\
+  "."\
+  ""
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+  m_iOrder 1
+ }
+ "_2_TKR" {
+  m_sTitle "Задачи боевиков"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "Братья! Настал день для нашего правосудия во имя Аллаха!"\
+  ""\
+  "Отныне мы расправимся со всеми предателями в кишлаках и городах этой провинции. "\
+  "Нам нужно захватить город Кунар Абад - это город-крепость отстояв который мы сможем отстоять регион перед шурави так как они не смогут подвозить ресурсы на аэродром."\
+  ""\
+  "Нам нужно захватить населённый пункт и поднять на нём свой флаг."
+  m_aVisibleForFactions {
+   "Ses_TKR"
+  }
+  m_iOrder 2
+ }
+ "_0_ABOUT" {
+  m_sTitle "#PS-Description_HeaderAboutMission"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "Моджахеды стермяться захватить Кунар Абад, этот город позволит отрезать аэродром от логистики, тем самым Советам придётся покинуть аэродром."
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+ "_2_USSR" {
+  m_sTitle "#DRG-Description_HeaderUSSR"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "Наш осведомитель предупредил нас о том что Моджахеды двигаются в сторону Кунар Абад, позже мы получили доклад от гарнизона Кунар Абад о том что они слышали стрельбу в районе кишлака осведомителя."\
+  ""\
+  "Наша задача выдвинуться в сторону Кунар Абад и не дать противнику занять этот населённый пункт. Со стороны аэродрома была поднята одна корова для помощи, там же мы можем использовать её для переброски пехоты."\
+  ""\
+  "Будьте осторожны! Шоссе может простреливаться в том числе ПТ средствами если передовой отряд сможет выполнить манёвр перехвата."
+  m_aVisibleForFactions {
+   "USSR"
+  }
+  m_iOrder 2
+ }
+ "_2_TKA" {
+  coords 0 0 0
+  m_sTitle "Задачи для Армии Такистана"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "Мы простые Такистнские срочники которые охраняют Кунар Абад."\
+  "Прочитайте правила миссии!"
+  m_aVisibleForFactions {
+   "Ses_TKA"
+  }
+  m_iOrder 2
+ }
+}

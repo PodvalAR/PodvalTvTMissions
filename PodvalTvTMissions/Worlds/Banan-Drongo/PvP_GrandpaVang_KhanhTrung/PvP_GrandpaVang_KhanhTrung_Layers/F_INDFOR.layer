@@ -1,0 +1,131 @@
+$grp SCR_AIGroup : "{00E67A69F69B4897}Prefabs/Groups/INDFOR/TGK/DRG_Group_TGK_RaidGroup.et" {
+ INDFOR_1_0_0 {
+  components {
+   PS_GroupCallsignAssigner "{65154C1E6C2E8928}" {
+    m_iSquadCallsign 0
+   }
+  }
+  coords 1962.724 3.863 2943.751
+  angleY -39.011
+ }
+ INDFOR_1_0_1 {
+  coords 1955.501 3.863 2937.9
+  angleY -39.011
+ }
+ INDFOR_1_0_2 {
+  components {
+   PS_GroupCallsignAssigner "{65154C1E6C2E8928}" {
+    m_iSquadCallsign 2
+   }
+  }
+  coords 1968.865 3.863 2950.804
+  angleY -70.211
+ }
+}
+Vehicle UAZ1 : "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et" {
+ coords 1936.621 2.573 2971.752
+ angleX 7.027
+ angleY 177.109
+ angleZ -2.132
+ m_sAttachmentGroupName "INDFOR_5_0_0"
+}
+Turret : "{8094D99689ABE241}Prefabs/Weapons/Mortars/M252/Mortar_M252.et" {
+ components {
+  PS_GroupAttachmentComponent "{651C7E6A9A66090C}" {
+   m_sAttachmentGroupName "INDFOR_5_0_0"
+  }
+ }
+ coords 1933.247 2.799 2970.127
+ angleX 0.662
+ angleY 135.529
+ angleZ -3.156
+}
+$grp SCR_AIGroup : "{811D063FD0D09047}Prefabs/Groups/INDFOR/TGK/DRG_Group_TGK_HigthRifleSquad.et" {
+ INDFOR_2_0_0 {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation " "
+   }
+   PS_GroupCallsignAssigner "{65155113282304D1}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 2471.52 10.028 3411.363
+  angleY -69.622
+ }
+ INDFOR_2_0_1 {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation " "
+   }
+   PS_GroupCallsignAssigner "{65155113282304D1}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 2476.678 10.237 3410.595
+  angleY -67.286
+ }
+ INDFOR_2_0_2 {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation " "
+   }
+   PS_GroupCallsignAssigner "{65155113282304D1}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 2
+   }
+  }
+  coords 2466.073 10.149 3412.813
+  angleY -64.295
+ }
+ INDFOR_2_0_3 {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation " "
+   }
+   PS_GroupCallsignAssigner "{65155113282304D1}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 3
+   }
+  }
+  coords 2479.938 9.19 3409.133
+  angleX -8.462
+  angleY -65.572
+  angleZ 8.28
+ }
+}
+SCR_AIGroup INDFOR_5_0_0 : "{9D00296B5080BB29}Prefabs/Groups/INDFOR/TGK/DRG_Group_PIR_MortarTeam.et" {
+ components {
+  PS_GroupCallsignAssigner "{651C7E696D04B20F}" {
+   m_iCompanyCallsign 5
+   m_iSquadCallsign 0
+  }
+ }
+ coords 1931.187 2.813 2971.748
+ angleX -3.928
+ angleY 81.614
+ angleZ -2.129
+ m_aUnitPrefabSlots {
+  "{0C558232B70722F4}Prefabs/Characters/Factions/INDFOR/PIR/Character_PIR_MortarLeader.et" "{417F4F865845E443}Prefabs/Characters/Factions/INDFOR/PIR/Character_PIR_MortarMan.et" "{417F4F865845E443}Prefabs/Characters/Factions/INDFOR/PIR/Character_PIR_MortarMan.et"
+ }
+ m_sCustomNameSet "Миномётный расчёт"
+}
+GenericEntity : "{CD62F06653C03448}Prefabs/Props/Military/AmmoBoxes/drg_ammobox_81mm_100rnd_HE.et" {
+ coords 1934.578 2.549 2973.022
+ angleX 4.443
+ angleY 179.491
+ angleZ -2.715
+}
+GenericEntity : "{D6D8F271391B1A6E}Prefabs/Props/Military/AmmoBoxes/drg_ammobox_81mm_100rnd_Smoke.et" {
+ coords 1934.599 2.673 2971.589
+ angleX 6.327
+ angleY -178.082
+ angleZ -2.458
+}
+SCR_AIGroup INDFOR_0_0_0_VIP : "{E15D86495A388780}Prefabs/Groups/INDFOR/TGK/DRG_Group_TGK_CompanyHQ.et" {
+ coords 1927.001 3.078 2962.002
+ m_aUnitPrefabSlots + {
+  "{018C90DE9F341FD7}Prefabs/Characters/Factions/INDFOR/PIR/Character_TKR_Sapper.et"
+ }
+}

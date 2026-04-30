@@ -1,0 +1,158 @@
+PolylineShapeEntity zone {
+ components {
+  PS_PolyZone "{667A83C88DF6E861}" {
+   m_mPolygonTexture "{B072704FB1A499B7}UI/layouts/Textures/Grid6b.edds"
+   m_cPolygonColor 0.502 0 0 1
+   m_mPolygonTextureBorder ""
+   m_cPolygonBorderColor 0.502 0 0 1
+   m_fPolygonBorderWidth 5
+   m_aVisibleForFactions {
+    "RHS_AFRF" "RHS_USAF" ""
+   }
+  }
+ }
+ coords 3915.171 10.638 2709.209
+ Points {
+  ShapePoint "{667A83C8779D5297}" {
+   Position -5.951 0.155 20.206
+  }
+  ShapePoint "{667A83C8A648F26B}" {
+   Position 0.478 -0.008 0.857
+  }
+  ShapePoint "{667A83C8AA131A58}" {
+   Position 31.044 -0.099 11.312
+  }
+  ShapePoint "{667A83C8AB47B426}" {
+   Position 47.813 -0.076 17.411
+  }
+  ShapePoint "{667A83C8A87812ED}" {
+   Position 68.513 -0.013 27.071
+  }
+  ShapePoint "{667A83C8A9840476}" {
+   Position 82.905 -0.051 34.296
+  }
+  ShapePoint "{667A83C8AED774AD}" {
+   Position 88.879 0.018 37.324
+  }
+  ShapePoint "{667A83C8ACDD6A89}" {
+   Position 79.033 0.521 94.43
+  }
+  ShapePoint "{667A83C8B23007F4}" {
+   Position 73.643 0.648 97.646
+  }
+  ShapePoint "{667A83C8B64E289F}" {
+   Position 84.096 0.71 113.085
+  }
+  ShapePoint "{667A83C8B7688360}" {
+   Position 96.317 0.976 132.11
+  }
+  ShapePoint "{667A83C8B5891AAB}" {
+   Position 55.455 1.32 154.116
+  }
+  ShapePoint "{667A83C8BAA42F08}" {
+   Position 50.365 1.422 156.179
+  }
+  ShapePoint "{667A83C8B93CAD5B}" {
+   Position 35.883 1.004 118.335
+  }
+  ShapePoint "{667A83C8BF2EAD8D}" {
+   Position -6.2 0.965 91.085
+  }
+  ShapePoint "{667A83C8BCF41560}" {
+   Position -26.128 1 86.091
+  }
+  ShapePoint "{667A83C8839A4A58}" {
+   Position -17.947 0.489 58.683
+  }
+  ShapePoint "{667A83C8813992D2}" {
+   Position -12.781 0.393 42.01
+  }
+  ShapePoint "{667A83C8871AB761}" {
+   Position -6.692 0.191 22.66
+  }
+ }
+}
+GenericEntity : "{630742372D9304E8}Prefabs/System/DRG_ZoneControlPrefab.et" {
+ components {
+  DRG_ZoneControlComponent "{662B2CCC5DFEB26C}" {
+   m_aControlLogics {
+    DRG_ZoneControlLogic "{667A83C8FEAA58BA}" {
+     m_sZoneEntityName "zone"
+     m_sZonePreviewName "Нефте база"
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "ZONE_USAF"
+     }
+     m_sFailedObjectiveNames {
+      "ZONE_AFRF"
+     }
+     m_sMessage "Победа атаки! Нефтебаза захвачена"
+     m_aConditions {
+      DRG_ZoneControlCondition "{667A83CB6F758DD6}" {
+       m_sFactionKey "RHS_AFRF"
+       m_iOperator LESS_OR_EQUALS
+       m_iCount 1
+      }
+      DRG_ZoneControlCondition "{667A83CB6FDA2DED}" {
+       m_sFactionKey "RHS_USAF"
+       m_iOperator GREATER_OR_EQUALS
+       m_iCount 3
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 3906.293 10.885 2698.904
+}
+GenericEntity : "{6A3CDCFB475BF1B2}Prefabs/System/DRG_CriticalLossPrefab.et" {
+ components {
+  DRG_CriticalLossComponent "{65213D368F1BD792}" {
+   m_iAdvanceAfterSec 5
+   m_iTestingPlayerCounts 8
+   m_aLossLogics {
+    LossLogic "{654C7E247C7951AD}" {
+     m_aLosses {
+      FactionLoss "{654C7E244634033D}" {
+       m_sFactionKey "RHS_USAF"
+      }
+     }
+     m_sObjectiveNames {
+      "KILL_USAF" "FLAG_AFRF"
+     }
+     m_sFailedObjectiveNames {
+      "KILL_AFRF" "FLAG_USFA"
+     }
+     m_bAdvanceGameStage 1
+     m_bUseMessage 1
+     m_bEventMessage "ВС США понесли критические потери! Победа ВС РФ."
+    }
+    LossLogic "{654C7E247CCB525F}" {
+     m_aLosses {
+      FactionLoss "{654C7E24443173C6}" {
+       m_sFactionKey "RHS_AFRF"
+      }
+     }
+     m_sObjectiveNames {
+      "KILL_AFRF" "FLAG_USFA"
+     }
+     m_sFailedObjectiveNames {
+      "KILL_USAF" "FLAG_AFRF"
+     }
+     m_bAdvanceGameStage 1
+     m_bUseMessage 1
+     m_bEventMessage "ВС РФ понесли критические потери! Победа ВС США."
+    }
+   }
+  }
+ }
+ coords 4729.839 290.153 6998.263
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2400
+  }
+ }
+ coords 4762.458 287.818 7005.816
+}

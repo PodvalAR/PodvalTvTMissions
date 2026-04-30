@@ -1,0 +1,86 @@
+GenericEntity : "{6A3CDCFB475BF1B2}Prefabs/System/DRG_CriticalLossPrefab.et" {
+ components {
+  DRG_CriticalLossComponent "{65213D368F1BD792}" {
+   m_aLossLogics {
+    LossLogic "{6682C5E327A24CBA}" {
+     m_aLosses {
+      FactionLoss "{6682C5E31F7FE20D}" {
+       m_iCriticalLossCount 3
+       m_sFactionKey "FIA"
+      }
+     }
+     m_sObjectiveNames {
+      "FLAG_USSR_1"
+      "FLAG_USSR_2"
+      "FLAG_USSR_3"
+     }
+     m_sFailedObjectiveNames {
+      "FLAG_FIA_1"
+      "FLAG_FIA_2"
+      "FLAG_FIA_3"
+     }
+     m_bAdvanceGameStage 1
+     m_bUseMessage 1
+     m_bEventMessage "Победа атаки! Обороны понесла большие потери и сдалась."
+    }
+    LossLogic "{6682C5E3252AC68C}" {
+     m_aLosses {
+      FactionLoss "{6682C5E32808B1EC}" {
+       m_iCriticalLossCount 4
+      }
+     }
+     m_sObjectiveNames {
+      "FLAG_FIA_1"
+      "FLAG_FIA_2"
+      "FLAG_FIA_3"
+     }
+     m_sFailedObjectiveNames {
+      "FLAG_USSR_1"
+      "FLAG_USSR_2"
+      "FLAG_USSR_3"
+     }
+     m_bAdvanceGameStage 1
+     m_bUseMessage 1
+     m_bEventMessage "Победа обороны! Атака понесла критические потери и отступила."
+    }
+   }
+  }
+ }
+}
+GenericEntity : "{CA1FF8EE196359C6}Prefabs/System/DRG_FlagControlPrefab.et" {
+ components {
+  DRG_FlagControlComponent "{66294262AC006581}" {
+   m_aFlagLogics {
+    FlagLogic "{66968CEAED89F380}" {
+     m_bAdvanceGameStage 1
+     m_sNotificationMessage "Победа атаки! Все дома захвачены."
+     m_aFlagControls {
+      FlagControl "{66968CEAF3A779A8}" {
+       m_sFactionKey "USSR"
+       m_sFlagEntityName "FLAG_1"
+       m_sFlagPreviewName "Казармы"
+      }
+      FlagControl "{66968CEAF3F82334}" {
+       m_sFactionKey "USSR"
+       m_sFlagEntityName "FLAG_2"
+       m_sFlagPreviewName "Жилой дом"
+      }
+      FlagControl "{66968CEAF032DE1E}" {
+       m_sFactionKey "USSR"
+       m_sFlagEntityName "FLAG_3"
+       m_sFlagPreviewName "Дом политического воспитания"
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 6166.059 13.016 8184.636
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+}

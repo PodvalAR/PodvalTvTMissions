@@ -1,0 +1,314 @@
+$grp GenericEntity : "{0B0C600941B2A6A8}Prefabs/Props/Military/Sandbags/Sandbag_01_short_high_plastic.et" {
+ {
+  coords 488.591 6.836 949.584
+  angleX -7.325
+  angleY 162.001
+  angleZ 0.506
+ }
+ {
+  coords 487.584 7.252 954.356
+  angleX 0.933
+  angleY -12.027
+  angleZ 4.369
+ }
+ {
+  coords 486.041 7.363 953.864
+  angleX 5.121
+  angleY -24.95
+  angleZ 2.536
+ }
+ {
+  coords 487.381 6.862 949.261
+  angleX -7.697
+  angleY 171.518
+  angleZ -3.337
+ }
+ {
+  coords 489.968 6.861 950.168
+  angleX -5.387
+  angleY 144.17
+  angleZ 1.685
+ }
+ {
+  coords 484.2 7 961.649
+  angleX -6.631
+  angleY -12.847
+  angleZ 6.947
+ }
+ {
+  coords 486.584 7.26 957.461
+  angleX -0.193
+  angleY 144.6
+  angleZ -6.426
+ }
+ {
+  coords 483.997 7.505 956.554
+  angleX 1.944
+  angleY 170.907
+  angleZ -4.83
+ }
+ {
+  coords 485.207 7.397 956.878
+  angleX 1.168
+  angleY 161.962
+  angleZ -5.074
+ }
+ {
+  coords 482.657 7.21 961.158
+  angleX -4.499
+  angleY -25.735
+  angleZ 7.084
+ }
+}
+$grp GenericEntity : "{31E55F3EDA8463C1}Prefabs/Props/Military/AmmoBoxes/drg_AmmoBox_82mm_mortar_100rnd_HE.et" {
+ {
+  coords 486.975 7.238 953.015
+  angleX 3.555
+  angleY 0.278
+  angleZ 4.476
+ }
+ {
+  coords 483.592 7.243 960.308
+  angleX -7.082
+  angleY -0.556
+  angleZ 4.502
+ }
+}
+$grp Vehicle : "{52441D784D145D52}Prefabs/Vehicles/Wheeled/BTR70/BTR70_Ses_CDF.et" {
+ BTR70_Ses_CDF1 {
+  coords 565.029 6.562 997.358
+  angleY 92.164
+  m_sAttachmentGroupName "CDF_1_0"
+ }
+ BTR70_Ses_CDF2 {
+  coords 574.997 6.5 996.985
+  angleY 88.108
+  m_sAttachmentGroupName "CDF_1_1"
+ }
+ BTR70_Ses_CDF3 {
+  coords 586.425 6.344 997.674
+  angleY 85.51
+  m_sAttachmentGroupName "CDF_1_2"
+ }
+}
+$grp SCR_AIGroup : "{8E561C342F17E360}Prefabs/Groups/OPFOR/DRG_Group_RHS_RF_MSV_RifleSquad_P.et" {
+ CDF_0_0 {
+  coords 559.547 6.67 988.396
+  angleY 94.429
+  m_bDeleteWhenEmpty 0
+  m_bDeleteIfNoPlayer 0
+  m_sCustomNameSet "#DRG_Sqd_Hq"
+ }
+ CDF_1_0 {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation ""
+   }
+   PS_GroupCallsignAssigner "{62387672B7C7F14A}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 568.391 6.562 1000.08
+  angleY -179.816
+  m_aUnitPrefabSlots {
+   "{8DA9CAFC7CEFC056}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_PL.et" "{69AF9F9D049BCD5F}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_SR.et" "{793F827A538C53D5}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_AR.et" "{A197EBBB2A054D89}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_AT.et" "{843201041DF19B3E}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_AAT.et" "{74EAFC5BA43B3AFF}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_GL.et" "{0D8F69CA2B51D040}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_CrewGunner.et" "{EAA4CE2A03A6D9ED}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_CrewDriver.et"
+  }
+  m_bDeleteWhenEmpty 0
+  m_bDeleteIfNoPlayer 0
+  m_sCustomNameSet "#DRG_Sqd_Rifle"
+ }
+ CDF_1_1 {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation ""
+   }
+   PS_GroupCallsignAssigner "{62387672B7C7F14A}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 578.043 6.468 1000.73
+  angleY 177.812
+  m_aUnitPrefabSlots {
+   "{8DA9CAFC7CEFC056}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_PL.et" "{69AF9F9D049BCD5F}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_SR.et" "{793F827A538C53D5}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_AR.et" "{A197EBBB2A054D89}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_AT.et" "{843201041DF19B3E}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_AAT.et" "{74EAFC5BA43B3AFF}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_GL.et" "{0D8F69CA2B51D040}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_CrewGunner.et" "{EAA4CE2A03A6D9ED}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_CrewDriver.et"
+  }
+  m_bDeleteWhenEmpty 0
+  m_bDeleteIfNoPlayer 0
+  m_sCustomNameSet "#DRG_Sqd_Rifle"
+ }
+ CDF_1_2 {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation ""
+   }
+   PS_GroupCallsignAssigner "{62387672B7C7F14A}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 588.556 6.335 1001.026
+  angleX -0.877
+  angleY 178.796
+  angleZ 0.914
+  m_aUnitPrefabSlots {
+   "{8DA9CAFC7CEFC056}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_PL.et" "{69AF9F9D049BCD5F}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_SR.et" "{793F827A538C53D5}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_AR.et" "{A197EBBB2A054D89}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_AT.et" "{843201041DF19B3E}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_AAT.et" "{74EAFC5BA43B3AFF}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_GL.et" "{0D8F69CA2B51D040}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_CrewGunner.et" "{EAA4CE2A03A6D9ED}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_CrewDriver.et"
+  }
+  m_bDeleteWhenEmpty 0
+  m_bDeleteIfNoPlayer 0
+  m_sCustomNameSet "#DRG_Sqd_Rifle"
+ }
+ CDF_2_0 {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation ""
+   }
+   PS_GroupCallsignAssigner "{62387672B7C7F14A}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 513.844 4.594 969.416
+  angleY -145.846
+  m_aUnitPrefabSlots {
+   "{8DA9CAFC7CEFC056}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_PL.et" "{69AF9F9D049BCD5F}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_SR.et" "{793F827A538C53D5}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_AR.et" "{A197EBBB2A054D89}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_AT.et" "{843201041DF19B3E}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_AAT.et" "{74EAFC5BA43B3AFF}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_GL.et" "{DC6EA865F186B3D1}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_Rifleman.et" "{DC6EA865F186B3D1}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_Rifleman.et"
+  }
+  m_bDeleteWhenEmpty 0
+  m_bDeleteIfNoPlayer 0
+  m_sCustomNameSet "#DRG_Sqd_Rifle"
+ }
+ CDF_2_1 {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation ""
+   }
+   PS_GroupCallsignAssigner "{62387672B7C7F14A}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 511.011 4.811 959.077
+  angleX 3.13
+  angleY -70.22
+  angleZ -0.774
+  m_aUnitPrefabSlots {
+   "{8DA9CAFC7CEFC056}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_PL.et" "{69AF9F9D049BCD5F}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_SR.et" "{793F827A538C53D5}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_AR.et" "{A197EBBB2A054D89}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_AT.et" "{843201041DF19B3E}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_AAT.et" "{74EAFC5BA43B3AFF}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_GL.et" "{DC6EA865F186B3D1}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_Rifleman.et" "{DC6EA865F186B3D1}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_Rifleman.et"
+  }
+  m_bDeleteWhenEmpty 0
+  m_bDeleteIfNoPlayer 0
+  m_sCustomNameSet "#DRG_Sqd_Rifle"
+ }
+ CDF_2_2 {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation ""
+   }
+   PS_GroupCallsignAssigner "{62387672B7C7F14A}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 2
+   }
+  }
+  coords 498.355 6.827 952.654
+  angleX 0.775
+  angleY -30.011
+  angleZ -0.447
+  m_aUnitPrefabSlots {
+   "{8DA9CAFC7CEFC056}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_PL.et" "{69AF9F9D049BCD5F}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_SR.et" "{793F827A538C53D5}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_AR.et" "{A197EBBB2A054D89}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_AT.et" "{843201041DF19B3E}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_AAT.et" "{74EAFC5BA43B3AFF}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_GL.et" "{DC6EA865F186B3D1}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_Rifleman.et" "{DC6EA865F186B3D1}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_Rifleman.et"
+  }
+  m_bDeleteWhenEmpty 0
+  m_bDeleteIfNoPlayer 0
+  m_sCustomNameSet "#DRG_Sqd_Rifle"
+ }
+ CDF_3_0 {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation ""
+   }
+   PS_GroupCallsignAssigner "{62387672B7C7F14A}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 479.754 7.785 955.876
+  angleX -1.034
+  angleY 69.096
+  angleZ 2.31
+  m_aUnitPrefabSlots {
+   "{6A6DFB016A8DB6F7}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_MortarTL.et" "{68F8B81E26982C8B}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_MortarGunner.et" "{AC1B093637164257}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_MortarLoader.et" "{68F8B81E26982C8B}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_MortarGunner.et" "{AC1B093637164257}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_MortarLoader.et" "{1AC7F6317B1DF1B1}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_Spotter.et"
+  }
+  m_bDeleteWhenEmpty 0
+  m_bDeleteIfNoPlayer 0
+  m_sCustomNameSet "Миномётый расчёт"
+ }
+}
+$grp GenericEntity : "{B6307C189CCCA0B9}Prefabs/Props/Military/Sandbags/Sandbag_01_round_high_plastic.et" {
+ {
+  coords 485.564 7.082 949.939
+  angleX -3.276
+  angleY -140.746
+  angleZ -7.254
+ }
+ {
+  coords 484.853 7.346 952.38
+  angleX 4.32
+  angleY -76.282
+  angleZ -2.62
+ }
+ {
+  coords 490.823 7.012 951.916
+  angleX -0.957
+  angleY 90.799
+  angleZ 4.454
+ }
+ {
+  coords 489.571 7.145 954.129
+  angleX -1.159
+  angleY 25.569
+  angleZ 2.421
+ }
+ {
+  coords 487.439 7.004 959.209
+  angleX -6.079
+  angleY 91.307
+  angleZ -7.223
+ }
+ {
+  coords 486.187 6.842 961.422
+  angleX -9.861
+  angleY 25.215
+  angleZ 2.203
+ }
+ {
+  coords 482.18 7.606 957.232
+  angleX 3.632
+  angleY -141.268
+  angleZ -1.669
+ }
+ {
+  coords 481.469 7.478 959.674
+  angleX 2.986
+  angleY -75.5
+  angleZ 6.287
+ }
+}
+Vehicle Ural4320_Ses_CDF_command1 : "{B8C6D4393223FDC2}Prefabs/Vehicles/Wheeled/Ural4320/Ses_CDF/Ural4320_Ses_CDF_command.et" {
+ coords 557.629 6.663 991.025
+ angleY 89.146
+}
+$grp Turret : "{D1FFE458E8AC4BDB}Prefabs/Weapons/Mortars/2B14/Mortar_2B14.et" {
+ {
+  components {
+   PS_GroupAttachmentComponent "{667283A1D5938B21}" {
+    m_sAttachmentGroupName "CDF_3_0"
+   }
+  }
+  coords 487.183 7.137 951.78
+  angleY 77.336
+ }
+ {
+  components {
+   PS_GroupAttachmentComponent "{667283A1D5938B21}" {
+    m_sAttachmentGroupName "CDF_3_0"
+   }
+  }
+  coords 483.799 7.353 959.073
+  angleY 77.295
+ }
+}

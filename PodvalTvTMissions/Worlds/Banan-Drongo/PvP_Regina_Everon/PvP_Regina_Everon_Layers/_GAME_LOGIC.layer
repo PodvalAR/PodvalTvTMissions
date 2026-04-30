@@ -1,0 +1,47 @@
+GenericEntity : "{6A3CDCFB475BF1B2}Prefabs/System/DRG_CriticalLossPrefab.et" {
+ components {
+  DRG_CriticalLossComponent "{65213D368F1BD792}" {
+   m_iTestingPlayerCounts 8
+   m_aLossLogics {
+    LossLogic "{65E8F88BF4968F8B}" {
+     m_aLosses {
+      FactionLoss "{65E8F88BC5E4DDEF}" {
+      }
+     }
+     m_sObjectiveNames {
+      "KILL_USSR" "FLAG_US"
+     }
+     m_sFailedObjectiveNames {
+      "KILL_US" "FLAG_USSR"
+     }
+     m_bAdvanceGameStage 1
+     m_bUseMessage 1
+     m_bEventMessage "Победа атаки! Оборона понесла критические потери."
+    }
+    LossLogic "{65E8F88BF4CBDB85}" {
+     m_aLosses {
+      FactionLoss "{65E8F88BD68240D6}" {
+       m_sFactionKey "US"
+      }
+     }
+     m_sObjectiveNames {
+      "KILL_US" "FLAG_USSR"
+     }
+     m_sFailedObjectiveNames {
+      "KILL_USSR" "FLAG_US"
+     }
+     m_bAdvanceGameStage 1
+     m_bUseMessage 1
+    }
+   }
+  }
+ }
+ coords 7563.073 166.171 4253.532
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+}

@@ -1,0 +1,85 @@
+GenericEntity : "{630742372D9304E8}Prefabs/System/DRG_ZoneControlPrefab.et" {
+ components {
+  DRG_ZoneControlComponent "{662B2CCC5DFEB26C}" {
+   m_aControlLogics {
+    DRG_ZoneControlLogic "{664471CE3A8411F6}" {
+     m_sZoneEntityName "zone"
+     m_sZonePreviewName "База огневой поддержки"
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "ZONE_AFRF"
+     }
+     m_sFailedObjectiveNames {
+      "ZONE_USAF"
+     }
+     m_sMessage "Победа ВС РФ! База огневой поддержки захвачена."
+     m_sPreviewMessageToDescription "Для победы ВС РФ"
+     m_aConditions {
+      DRG_ZoneControlCondition "{664471CE6602F6C0}" {
+       m_sFactionKey "RHS_AFRF"
+       m_iOperator GREATER_OR_EQUALS
+       m_iCount 2
+      }
+      DRG_ZoneControlCondition "{664471CE66542C87}" {
+       m_sFactionKey "RHS_USAF"
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 2296.58 59.898 827.501
+}
+GenericEntity : "{6A3CDCFB475BF1B2}Prefabs/System/DRG_CriticalLossPrefab.et" {
+ components {
+  DRG_CriticalLossComponent "{65213D368F1BD792}" {
+   m_iAdvanceAfterSec 5
+   m_iTestingPlayerCounts 8
+   m_aLossLogics {
+    LossLogic "{654AD376CC9E8EA4}" {
+     m_aLosses {
+      FactionLoss "{654AD376D370C185}" {
+       m_iCriticalLossCount 3
+       m_sFactionKey "RHS_USAF"
+      }
+     }
+     m_sObjectiveNames {
+      "KILL_USAF" "ZONE_AFRF"
+     }
+     m_sFailedObjectiveNames {
+      "KILL_AFRF" "ZONE_USAF"
+     }
+     m_bAdvanceGameStage 1
+     m_bUseMessage 1
+     m_bEventMessage "Победа атаки! Оборона понесла критические потери."
+    }
+    LossLogic "{654AD376CCE049A9}" {
+     m_aLosses {
+      FactionLoss "{654AD3752394FC75}" {
+       m_iCriticalLossCount 3
+       m_sFactionKey "RHS_AFRF"
+      }
+     }
+     m_sObjectiveNames {
+      "KILL_AFRF" "ZONE_USAF"
+     }
+     m_sFailedObjectiveNames {
+      "KILL_USAF" "ZONE_AFRF"
+     }
+     m_bAdvanceGameStage 1
+     m_bUseMessage 1
+     m_bEventMessage "Победа обороны! Атака понесла критические потери."
+    }
+   }
+  }
+ }
+ coords 4439.347 233.47 12368.625
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 3000
+  }
+ }
+ coords 4241.452 234.502 12416.651
+}

@@ -1,0 +1,151 @@
+Vehicle Ural4320_repair_tan1 : "{22817160AC1DC779}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_repair_tan.et" {
+ coords 8515.705 111.531 6824.934
+ angleY -178.745
+}
+Vehicle Ural4320_ammo_tan1 : "{29CBE6F602148A03}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_ammo_tan.et" {
+ coords 8510.816 111.531 6825.132
+ angleY 179.609
+}
+$grp Vehicle : "{3C6B3ED0C3AC30D5}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_armed_gunship_HE.et" {
+ Mi8MT_armed_gunship_HE1 {
+  coords 8496.701 111.551 6571.617
+  angleY 90.032
+  m_sAttachmentGroupName "AFRF_4_0_0"
+ }
+ Mi8MT_armed_gunship_HE2 {
+  coords 8497.641 111.551 6608.769
+  angleY 91.099
+  m_sAttachmentGroupName "AFRF_4_0_1"
+ }
+}
+$grp SCR_AIGroup : "{3EDA372443FD105F}Prefabs/Groups/OPFOR/drg_AFRF_RifleSquad.et" {
+ AFRF_1_0_1 {
+  components {
+   PS_GroupCallsignAssigner "{6454F7D129837B5A}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 5581.23 123.219 5548.834
+  angleY -27.437
+  m_aUnitPrefabSlots {
+   "{8140810E352ECDDA}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_SL.et" "{FC586DF650BDF143}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_SR.et" "{346019D07E237195}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_AT.et" "{E8C470C171B6AC50}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_AAT.et" "{BEDFAE0B69E57B2A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_MG.et" "{95A788D3A0886E96}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_MGAB.et" "{E11D0E30F01D06E3}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_GL.et" "{36D1E050A6BF40F1}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_Sniper.et"
+  }
+ }
+ AFRF_1_0_2 {
+  components {
+   PS_GroupCallsignAssigner "{6454F7D129837B5A}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 5571.67 123.219 5543.604
+  angleY -27.437
+  m_aUnitPrefabSlots {
+   "{8140810E352ECDDA}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_SL.et" "{FC586DF650BDF143}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_SR.et" "{346019D07E237195}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_AT.et" "{E8C470C171B6AC50}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_AAT.et" "{BEDFAE0B69E57B2A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_MG.et" "{95A788D3A0886E96}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_MGAB.et" "{E11D0E30F01D06E3}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_GL.et" "{36D1E050A6BF40F1}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_Sniper.et"
+  }
+ }
+ AFRF_1_0_3 {
+  components {
+   PS_GroupCallsignAssigner "{6454F7D129837B5A}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 3
+   }
+  }
+  coords 5561.793 123.219 5538.477
+  angleY -27.437
+  m_aUnitPrefabSlots {
+   "{8140810E352ECDDA}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_SL.et" "{FC586DF650BDF143}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_SR.et" "{346019D07E237195}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_AT.et" "{E8C470C171B6AC50}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_AAT.et" "{BEDFAE0B69E57B2A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_MG.et" "{95A788D3A0886E96}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_MGAB.et" "{E11D0E30F01D06E3}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_GL.et" "{36D1E050A6BF40F1}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_Sniper.et"
+  }
+ }
+ AFRF_1_0_4 {
+  components {
+   PS_GroupCallsignAssigner "{6454F7D129837B5A}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 4
+   }
+  }
+  coords 5548.5 123.219 5551.745
+  angleY 63.716
+  m_aUnitPrefabSlots {
+   "{8140810E352ECDDA}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_SL.et" "{FC586DF650BDF143}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_SR.et" "{346019D07E237195}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_AT.et" "{E8C470C171B6AC50}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_AAT.et" "{BEDFAE0B69E57B2A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_MG.et" "{95A788D3A0886E96}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_MGAB.et" "{E11D0E30F01D06E3}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_GL.et" "{36D1E050A6BF40F1}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_Sniper.et"
+  }
+ }
+ AFRF_4_0_0 {
+  components {
+   PS_GroupCallsignAssigner "{6454F7D129837B5A}" {
+    m_iCompanyCallsign 4
+   }
+  }
+  coords 8517.05 111.531 6561.153
+  angleY 1.521
+  m_aUnitPrefabSlots {
+   "{E1BF48430B3259D4}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_HeliPilot.et" "{526EAB9BCF4C6DD2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_HeliCoPilot.et"
+  }
+ }
+ AFRF_4_0_1 {
+  components {
+   PS_GroupCallsignAssigner "{6454F7D129837B5A}" {
+    m_iCompanyCallsign 4
+    m_iSquadCallsign 1
+   }
+  }
+  coords 8519.031 111.531 6591.672
+  angleY 1.521
+  m_aUnitPrefabSlots {
+   "{E1BF48430B3259D4}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_HeliPilot.et" "{526EAB9BCF4C6DD2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_HeliCoPilot.et"
+  }
+ }
+ AFRF_2_0_0 {
+  coords 8451.041 111.574 6821.236
+  angleX 0.012
+  angleY 90.786
+  angleZ -0.895
+  m_aUnitPrefabSlots {
+   "{BC56CF0102B189DB}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Sabotage/drg_Role_RHS_AFRF_Sabotage_SL.et" "{83C9E0045E7A3F2B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Sabotage/drg_Role_RHS_AFRF_Sabotage_MG.et" "{DC0B403FC78242E2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Sabotage/drg_Role_RHS_AFRF_Sabotage_GL.et" "{7F6DBCE3E5DB83AA}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Sabotage/drg_Role_RHS_AFRF_Sabotage_Sniper.et"
+  }
+ }
+ AFRF_2_0_1 {
+  components {
+   PS_GroupCallsignAssigner "{6454F7D129837B5A}" {
+    m_iSquadCallsign 1
+   }
+  }
+  coords 8450.475 111.736 6806.896
+  angleX 0.012
+  angleY 90.786
+  angleZ -0.895
+  m_aUnitPrefabSlots {
+   "{BC56CF0102B189DB}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Sabotage/drg_Role_RHS_AFRF_Sabotage_SL.et" "{83C9E0045E7A3F2B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Sabotage/drg_Role_RHS_AFRF_Sabotage_MG.et" "{DC0B403FC78242E2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Sabotage/drg_Role_RHS_AFRF_Sabotage_GL.et" "{7F6DBCE3E5DB83AA}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Sabotage/drg_Role_RHS_AFRF_Sabotage_Sniper.et"
+  }
+ }
+}
+SCR_AIGroup AFRF_0_0_0 : "{52DBD8AD794AA412}Prefabs/Groups/OPFOR/drg_AFRF_CompanyHQ.et" {
+ coords 5591.491 123.219 5554.423
+ angleY -29.74
+ m_aUnitPrefabSlots {
+  "{7FC44DF88B7C8DB0}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_CL.et"
+ }
+}
+$grp Vehicle : "{7B73B9445F145E6E}Prefabs/Vehicles/Wheeled/TIGR/KORD/GAZ_TIGR_v2_KORD_Tan.et" {
+ GAZ_TIGR_v2_KORD_Tan1 {
+  coords 8447.936 111.594 6819.225
+  angleY -175.807
+  m_sAttachmentGroupName "AFRF_2_0_0"
+ }
+ GAZ_TIGR_v2_KORD_Tan2 {
+  coords 8446.94 111.754 6805.688
+  angleX 0.893
+  angleY -175.806
+  angleZ 0.065
+  m_sAttachmentGroupName "AFRF_2_0_1"
+ }
+}
+Vehicle Ural4320_transport_covered_closed_tan11 : "{A3741E4872E3D2EC}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_covered_closed_tan.et" {
+ coords 8525.296 111.531 6824.875
+ angleY -175.283
+}
+Vehicle Ural4320_tanker_tan1 : "{CA8ADC0AF10CF541}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_tanker_tan.et" {
+ coords 8520.36 111.531 6825.073
+ angleY -175.413
+}

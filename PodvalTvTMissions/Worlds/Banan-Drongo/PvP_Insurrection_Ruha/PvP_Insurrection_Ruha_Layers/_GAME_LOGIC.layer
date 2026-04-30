@@ -1,0 +1,52 @@
+GenericEntity : "{6A3CDCFB475BF1B2}Prefabs/System/DRG_CriticalLossPrefab.et" {
+ components {
+  DRG_CriticalLossComponent "{65213D368F1BD792}" {
+   m_iAdvanceAfterSec 5
+   m_iTestingPlayerCounts 8
+   m_aLossLogics {
+    LossLogic "{65C53CDA35E5F48F}" {
+     m_aLosses {
+      FactionLoss "{65C53CDA3BEBF2B4}" {
+       m_sFactionKey "RHS_AFRF"
+      }
+     }
+     m_sObjectiveNames {
+      "KILL_AFRF" "FLAG_FIA"
+     }
+     m_sFailedObjectiveNames {
+      "KILL_FIA" "FLAG_AFRF"
+     }
+     m_bAdvanceGameStage 1
+     m_bUseMessage 1
+     m_bEventMessage "Победа FIA! ВС РФ понесли большие потери."
+    }
+    LossLogic "{65C53CDA6D529DB0}" {
+     m_aLosses {
+      FactionLoss "{65C53CDA72A05DE2}" {
+       m_sFactionKey "FIA"
+      }
+     }
+     m_sObjectiveNames {
+      "KILL_FIA" "FLAG_AFRF"
+     }
+     m_sFailedObjectiveNames {
+      "KILL_AFRF" "FLAG_FIA"
+     }
+     m_bAdvanceGameStage 1
+     m_bUseMessage 1
+     m_bEventMessage "Победа ВС РФ! FIA понесли большие потери."
+    }
+   }
+  }
+ }
+ coords 4528.902 58.274 2878.675
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+   m_sMessage "Время на миссию вышло"
+  }
+ }
+ coords 4524.586 58.268 2871.445
+}

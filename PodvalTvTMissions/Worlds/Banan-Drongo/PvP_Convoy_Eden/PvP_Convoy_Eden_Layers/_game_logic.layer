@@ -1,0 +1,34 @@
+GenericEntity : "{6A3CDCFB475BF1B2}Prefabs/System/DRG_CriticalLossPrefab.et" {
+ components {
+  DRG_CriticalLossComponent "{65213D368F1BD792}" {
+   m_iTestingPlayerCounts 8
+   m_aLossLogics {
+    LossLogic "{656AA61DB2A2C792}" {
+     m_aLosses {
+      FactionLoss "{656AA61DB1FC0FC0}" {
+       m_iCriticalLossCount 4
+      }
+     }
+     m_bAdvanceGameStage 1
+     m_bUseMessage 1
+     m_bEventMessage "Победа FIA! Гарнизон СССР понес большие потери!"
+    }
+    LossLogic "{656AA61DB2CE6BF0}" {
+     m_aLosses {
+      FactionLoss "{656AA61DB1388232}" {
+       m_iCriticalLossCount 4
+       m_sFactionKey "FIA"
+      }
+     }
+     m_bAdvanceGameStage 1
+     m_bUseMessage 1
+     m_bEventMessage "Победа СССР! Партизаны FIA понесли большие потери!"
+    }
+   }
+  }
+ }
+ coords 5861.815 4.563 9753.395
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ coords 5855.646 4.562 9744.678
+}

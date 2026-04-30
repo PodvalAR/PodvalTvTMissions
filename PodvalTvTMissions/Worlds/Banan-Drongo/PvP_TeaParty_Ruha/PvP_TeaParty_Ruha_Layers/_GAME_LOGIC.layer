@@ -1,0 +1,75 @@
+GenericEntity : "{6A3CDCFB475BF1B2}Prefabs/System/DRG_CriticalLossPrefab.et" {
+ components {
+  DRG_CriticalLossComponent "{65213D368F1BD792}" {
+   m_iAdvanceAfterSec 5
+   m_iTestingPlayerCounts 8
+   m_aLossLogics {
+    LossLogic "{6532E5DED29C4A89}" {
+     m_aLosses {
+      FactionLoss "{6532E5DEDE2C5E01}" {
+       m_iCriticalLossCount 4
+       m_sFactionKey "UK"
+      }
+     }
+     m_sObjectiveNames {
+      "KILL_UK" "TARGETS_SAVE"
+     }
+     m_sFailedObjectiveNames {
+      "KILL_AFRF" "TARGETS_KILL"
+     }
+     m_bAdvanceGameStage 1
+     m_bUseMessage 1
+     m_bEventMessage "Победа обороны! Атака понесла критические потери."
+    }
+    LossLogic "{6532E5DED2A74EF8}" {
+     m_aLosses {
+      FactionLoss "{6532E5DF33E6A383}" {
+       m_iCriticalLossCount 4
+       m_sFactionKey "RHS_AFRF"
+      }
+     }
+     m_sObjectiveNames {
+      "KILL_AFRF" "TARGETS_KILL"
+     }
+     m_sFailedObjectiveNames {
+      "KILL_UK" "TARGETS_SAVE"
+     }
+     m_bAdvanceGameStage 1
+     m_bUseMessage 1
+     m_bEventMessage "Победа атаки! Оборона понесла критические потери."
+    }
+   }
+  }
+ }
+ coords 4919.252 171.517 13004.141
+}
+GenericEntity : "{7A333AFB11EA847A}Prefabs/System/DRG_VehicleDestroyPrefab.et" {
+ components {
+  DRG_VehicleDestroyComponent "{65733BD6110AE8FC}" {
+   m_aVehicleLossLogics {
+    VehicleLossLogic "{65DCAD3C71308A3B}" {
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "TARGETS_KILL"
+     }
+     m_sFailedObjectiveNames {
+      "TARGETS_SAVE"
+     }
+     m_sVehicleEntityNames {
+      "TARGET_1" "TARGET_2" "TARGET_3"
+     }
+     m_sMessage "Победа атаки! Все цели уничтожены."
+    }
+   }
+  }
+ }
+ coords 3441.534 60.088 1920.886
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 3000
+  }
+ }
+ coords 4921.707 170.847 12983.772
+}

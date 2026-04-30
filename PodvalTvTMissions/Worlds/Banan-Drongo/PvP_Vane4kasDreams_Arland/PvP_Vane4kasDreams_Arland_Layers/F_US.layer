@@ -1,0 +1,270 @@
+$grp SCR_AIGroup : "{579B10B7CDDDD171}Prefabs/Groups/BLUFOR/Campaign/S_US_drg_HeliGunTransport.et" {
+ US_0_0_0 {
+  coords 5539.211 4 6834.302
+  angleY -50.265
+  m_bSnapToTerrain 0
+ }
+ US_0_0_1 {
+  components {
+   PS_GroupCallsignAssigner "{6460980E91DD5B1B}" {
+    m_iSquadCallsign 1
+   }
+  }
+  coords 5555.363 4 6853.681
+  angleY -50.265
+  m_bSnapToTerrain 0
+ }
+ US_0_0_2 {
+  components {
+   PS_GroupCallsignAssigner "{6460980E91DD5B1B}" {
+    m_iSquadCallsign 2
+   }
+  }
+  coords 5570.526 3.996 6871.938
+  angleY -50.265
+  m_bSnapToTerrain 0
+ }
+ US_0_0_3 {
+  components {
+   PS_GroupCallsignAssigner "{6460980E91DD5B1B}" {
+    m_iSquadCallsign 3
+   }
+  }
+  coords 5586.474 4 6891.893
+  angleY -50.265
+  m_bSnapToTerrain 0
+ }
+ US_1_0_0 {
+  components {
+   PS_GroupCallsignAssigner "{6460980E91DD5B1B}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 5530.273 3.996 6841.252
+  angleY -50.265
+  m_bSnapToTerrain 0
+ }
+ US_1_0_1 {
+  components {
+   PS_GroupCallsignAssigner "{6460980E91DD5B1B}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 5546.76 3.996 6860.305
+  angleY -50.265
+  m_bSnapToTerrain 0
+ }
+ US_1_0_2 {
+  components {
+   PS_GroupCallsignAssigner "{6460980E91DD5B1B}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 5561.777 3.987 6878.543
+  angleY -50.265
+  m_bSnapToTerrain 0
+ }
+ US_1_0_3 {
+  components {
+   PS_GroupCallsignAssigner "{6460980E91DD5B1B}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 3
+   }
+  }
+  coords 5578.126 3.996 6898.485
+  angleY -50.265
+  m_bSnapToTerrain 0
+ }
+ US_2_0_0 {
+  components {
+   PS_GroupCallsignAssigner "{6460980E91DD5B1B}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 5618.312 4 6930.016
+  angleY -50.265
+  m_bSnapToTerrain 0
+ }
+ US_2_0_1 {
+  components {
+   PS_GroupCallsignAssigner "{6460980E91DD5B1B}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 5632.11 3.988 6948.852
+  angleY -50.265
+  m_bSnapToTerrain 0
+ }
+ US_2_0_2 {
+  components {
+   PS_GroupCallsignAssigner "{6460980E91DD5B1B}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 2
+   }
+  }
+  coords 5646.846 3.983 6967.494
+  angleY -50.265
+  m_bSnapToTerrain 0
+ }
+ US_2_0_3 {
+  components {
+   PS_GroupCallsignAssigner "{6460980E91DD5B1B}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 3
+   }
+  }
+  coords 5663.011 3.98 6986.794
+  angleY -50.265
+  m_bSnapToTerrain 0
+ }
+ US_3_0_0 {
+  components {
+   PS_GroupCallsignAssigner "{6460980E91DD5B1B}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 5609.199 3.988 6937.764
+  angleY -50.265
+  m_bSnapToTerrain 0
+ }
+ US_3_0_1 {
+  components {
+   PS_GroupCallsignAssigner "{6460980E91DD5B1B}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 1
+   }
+  }
+  coords 5623.621 4 6955.627
+  angleY -50.265
+  m_bSnapToTerrain 0
+ }
+ US_3_0_2 {
+  components {
+   PS_GroupCallsignAssigner "{6460980E91DD5B1B}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 2
+   }
+  }
+  coords 5639.586 4 6974.023
+  angleY -50.265
+  m_bSnapToTerrain 0
+ }
+ US_3_0_3 {
+  components {
+   PS_GroupCallsignAssigner "{6460980E91DD5B1B}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 3
+   }
+  }
+  coords 5655.639 4 6993.23
+  angleY -50.265
+  m_bSnapToTerrain 0
+ }
+}
+$grp Vehicle : "{6BB88679B1B31B5A}Prefabs/Vehicles/Helicopters/UH1H/drg_UH1H_armed_gunship_M60_BLUE.et" {
+ drg_UH1H_armed_gunship_M60_BLUE_1 {
+  coords 5529.067 4 6846.284
+  angleY -140.76
+  m_sAttachmentGroupName "US_1_0_0"
+ }
+ drg_UH1H_armed_gunship_M60_BLUE_2 {
+  coords 5545.05 3.999 6865.852
+  angleX 0.015
+  angleY -140.76
+  angleZ 1.118
+  m_sAttachmentGroupName "US_1_0_1"
+ }
+ drg_UH1H_armed_gunship_M60_BLUE_3 {
+  coords 5559.908 4 6884.045
+  angleY -140.76
+  m_sAttachmentGroupName "US_1_0_2"
+ }
+ drg_UH1H_armed_gunship_M60_BLUE_4 {
+  coords 5576.146 3.986 6903.924
+  angleX 0.015
+  angleY -140.76
+  angleZ 1.118
+  m_sAttachmentGroupName "US_1_0_3"
+ }
+ drg_UH1H_armed_gunship_M60_BLUE_5 {
+  coords 5607.526 3.977 6941.955
+  angleX 0.009
+  angleY -140.45
+  angleZ 1.118
+  m_sAttachmentGroupName "US_3_0_0"
+ }
+ drg_UH1H_armed_gunship_M60_BLUE_6 {
+  coords 5622.573 4.001 6960.175
+  angleY -140.432
+  m_sAttachmentGroupName "US_3_0_1"
+ }
+ drg_UH1H_armed_gunship_M60_BLUE_7 {
+  coords 5637.713 3.994 6978.507
+  angleX 0.904
+  angleY -140.432
+  angleZ 1.111
+  m_sAttachmentGroupName "US_3_0_2"
+ }
+ drg_UH1H_armed_gunship_M60_BLUE_8 {
+  coords 5653.54 4 6997.674
+  angleY -140.45
+  m_sAttachmentGroupName "US_3_0_3"
+ }
+ drg_UH1H_armed_gunship_M60_BLUE_9 {
+  coords 5543.687 3.973 6833.489
+  angleX 0.637
+  angleY -140.751
+  angleZ 0.774
+  m_sAttachmentGroupName "US_0_0_0"
+ }
+ drg_UH1H_armed_gunship_M60_BLUE_10 {
+  coords 5559.67 3.976 6853.056
+  angleX -0.895
+  angleY -140.742
+  angleZ -1.089
+  m_sAttachmentGroupName "US_0_0_1"
+ }
+ drg_UH1H_armed_gunship_M60_BLUE_11 {
+  coords 5574.528 3.981 6871.25
+  angleX -0.011
+  angleY -140.76
+  angleZ -0.783
+  m_sAttachmentGroupName "US_0_0_2"
+ }
+ drg_UH1H_armed_gunship_M60_BLUE_12 {
+  coords 5590.766 3.984 6891.129
+  angleX -0.895
+  angleY -140.742
+  angleZ -1.089
+  m_sAttachmentGroupName "US_0_0_3"
+ }
+ drg_UH1H_armed_gunship_M60_BLUE_13 {
+  coords 5622.077 3.99 6929.08
+  angleX -0.009
+  angleY -140.453
+  angleZ -1.101
+  m_sAttachmentGroupName "US_2_0_0"
+ }
+ drg_UH1H_armed_gunship_M60_BLUE_14 {
+  coords 5637.123 3.995 6947.3
+  angleX -0.006
+  angleY -140.415
+  angleZ -0.783
+  m_sAttachmentGroupName "US_2_0_1"
+ }
+ drg_UH1H_armed_gunship_M60_BLUE_15 {
+  coords 5652.263 3.997 6965.633
+  angleX -0.009
+  angleY -140.45
+  angleZ -1.101
+  m_sAttachmentGroupName "US_2_0_2"
+ }
+ drg_UH1H_armed_gunship_M60_BLUE_16 {
+  coords 5668.089 4.008 6984.8
+  angleY -140.45
+  m_sAttachmentGroupName "US_2_0_3"
+ }
+}
