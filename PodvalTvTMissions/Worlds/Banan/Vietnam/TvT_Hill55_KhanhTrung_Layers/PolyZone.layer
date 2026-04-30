@@ -1,9 +1,22 @@
-$grp PolylineShapeEntity {
+$grp PolylineShapeEntity : "{7019844BAD5C4DD8}Prefabs/PolyZone/PolyZone_Border.et" {
  {
   components {
+   PS_PolyZone "{60E90266F25533F6}" {
+    m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
+    m_cPolygonColor 0 0 0 0.631
+    m_fPolygonUVScale 0.44
+    m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+    m_cPolygonBorderColor 0.251 0 0.502 1
+    m_fPolygonBorderWidth 10
+    m_aVisibleForFactions {
+     "Drg_VCA"
+     "US"
+     ""
+    }
+   }
    PS_PolyZone "{61DF0D2B83C52347}" {
     m_mPolygonTexture "{0750C59EDB7D77E5}UI/layouts/Textures/Grid1.edds"
-    m_cPolygonColor 0.251 0 0.502 1
+    m_cPolygonColor 0 0 0 0.519
     m_mPolygonTextureBorder ""
     m_cPolygonBorderColor 0.251 0 0.502 1
     m_fPolygonBorderWidth 8
@@ -150,139 +163,140 @@ $grp PolylineShapeEntity {
   LineColor 0.259 0.686 0.686 1
   {
    PS_PolyZoneTrigger {
-    components {
-     Hierarchy "{614548BDF998E12B}" {
-     }
-    }
+    ID "60FD050E1E83544C"
     TriggerShapeType Polyline
     "Polyline Height" 500
-    TriggerActivationType "All changes"
-    PeriodicQueries 1
-    UpdatePeriod 1
-    ClassesFilter {
-     "SCR_ChimeraCharacter"
-    }
-    m_polyZoneEffect PS_PolyZoneEffectRestricted "{614548BC046ADB65}" {
+    m_polyZoneEffect PS_PolyZoneEffectRestricted "{60FD050E0DC2A2AB}" {
      m_fKillTime 40
     }
-    m_bReversed 1
    }
   }
  }
  {
   components {
-   PS_PolyZone "{61DF0D280A6178CE}" {
-    m_mPolygonTexture ""
+   PS_PolyZone "{60E90266F25533F6}" {
+    m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
     m_cPolygonColor 1 1 1 0
-    m_mPolygonTextureBorder ""
-    m_cPolygonBorderColor 0 0.125 0.502 1
-    m_fPolygonBorderWidth 8
-    m_bLineMode 1
+    m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+    m_cPolygonBorderColor 0.071 0.192 0.561 1
+    m_fPolygonBorderWidth 11
+    m_bReversed 0
     m_aVisibleForFactions {
-     "Drg_VCA"
-     "US"
      ""
+     "US"
+     "Drg_VCA"
     }
    }
   }
-  coords 1305.975 56.124 1693.063
+  coords 1333.728 49.576 1706.703
   Points {
-   ShapePoint "{61DF0D282DDED396}" {
-    Position 20.528 -1.452 20.062
+   ShapePoint "{60E90266E922A02A}" {
+    Position -5.97 4.784 6.176
    }
-   ShapePoint "{61DF0D282C2BC536}" {
-    Position 37.299 -1.157 50.93
+   ShapePoint "{693CE50A0FBE0AF6}" {
+    Position 13.173 2.391 20.053
    }
-   ShapePoint "{61DF0D282F9A2F13}" {
-    Position 47.183 1.653 87.63
+   ShapePoint "{693CE50A0CE081D5}" {
+    Position 25.119 3.03 46.532
    }
-   ShapePoint "{61DF0D282E5A994E}" {
-    Position 40.882 3.075 147.642
+   ShapePoint "{693CE50A0DEFB560}" {
+    Position 33.141 6.777 74.94
    }
-   ShapePoint "{61DF0D282E315BD5}" {
-    Position 29.516 1.694 180.834
+   ShapePoint "{693CE50A0B4B2EAE}" {
+    Position 41.209 9.927 117.153
    }
-   ShapePoint "{61DF0D28206C90F1}" {
-    Position 6.504 -0.404 223.214
+   ShapePoint "{693CE50A09D20919}" {
+    Position 40.622 2.652 154.193
+   }
+   ShapePoint "{693CE50A09712F1C}" {
+    Position 29.157 -1.531 184.252
+   }
+   ShapePoint "{693CE50A07657CF5}" {
+    Position -52.291 10.172 224.635
+   }
+   ShapePoint "{693CE50A02954CAF}" {
+    Position -89.915 12.177 266.813
+   }
+   ShapePoint "{693CE50A036927CF}" {
+    Position -142.324 8.824 289.476
+   }
+   ShapePoint "{693CE50A014B46C8}" {
+    Position -168.904 10.95 294.281
+   }
+   ShapePoint "{693CE50A3E823AA8}" {
+    Position -187.739 10.245 295.163
+   }
+   ShapePoint "{693CE50A3FC94DDB}" {
+    Position -206.846 10.186 287.495
+   }
+   ShapePoint "{693CE50A3F17A8FA}" {
+    Position -225.014 9.94 276.075
+   }
+   ShapePoint "{693CE50A3DD1B89E}" {
+    Position -237.92 5.981 258.077
+   }
+   ShapePoint "{693CE50A3D48E5CC}" {
+    Position -247.592 8.133 238.141
+   }
+   ShapePoint "{693CE50A3AB23669}" {
+    Position -267.956 11.463 199.788
+   }
+   ShapePoint "{693CE50A3B1AFDA3}" {
+    Position -271.851 15.317 177.596
+   }
+   ShapePoint "{693CE50A38421360}" {
+    Position -278.395 14.312 153.784
+   }
+   ShapePoint "{693CE50A39F27724}" {
+    Position -282.903 13.546 122.868
+   }
+   ShapePoint "{693CE50A36569ACF}" {
+    Position -285.778 11.77 110.91
+   }
+   ShapePoint "{693CE50A37963535}" {
+    Position -285.218 9.619 91.057
+   }
+   ShapePoint "{693CE50A3723D901}" {
+    Position -280.893 11.488 70.457
+   }
+   ShapePoint "{693CE50A35FBE619}" {
+    Position -269.911 14.303 52.244
+   }
+   ShapePoint "{693CE50A351DF3A0}" {
+    Position -257.816 18.597 34.251
+   }
+   ShapePoint "{693CE50A32433073}" {
+    Position -249.665 21.44 18.38
+   }
+   ShapePoint "{693CE50A2E711977}" {
+    Position -240.371 22.34 7.134
+   }
+   ShapePoint "{693CE50A2CC7B959}" {
+    Position -221.286 23.461 10.065
+   }
+   ShapePoint "{693CE50A2B41FFFD}" {
+    Position -151.915 22.23 -13.715
+   }
+   ShapePoint "{693CE50A2888598C}" {
+    Position -128.658 26.559 -7.557
+   }
+   ShapePoint "{693CE50A2936AAEC}" {
+    Position -111.098 28.715 8.417
+   }
+   ShapePoint "{693CE50A262947ED}" {
+    Position -87.426 28.065 21.128
+   }
+   ShapePoint "{693CE50A2709821F}" {
+    Position -72.123 29.018 30.752
    }
   }
-  LineColor 0.624 0.506 0.157 1
- }
- {
-  components {
-   PS_PolyZone "{61DF0D280A6178CE}" {
-    m_mPolygonTexture ""
-    m_cPolygonColor 1 1 1 0
-    m_mPolygonTextureBorder ""
-    m_cPolygonBorderColor 0 0.125 0.502 0
-    m_fPolygonBorderWidth 8
-    m_aVisibleForFactions {
-     "Drg_VCA"
-     "US"
-     ""
-    }
-   }
-  }
-  coords 1306.037 56.118 1693.112
-  Points {
-   ShapePoint "{61DF0D282DDEAC6B}" {
-    Position 0 0 0
-   }
-   ShapePoint "{61DF0D282DDED396}" {
-    Position 20.528 -1.452 20.062
-   }
-   ShapePoint "{61DF0D282C2BC536}" {
-    Position 37.299 -1.157 50.93
-   }
-   ShapePoint "{61DF0D282F9A2F13}" {
-    Position 47.183 1.653 87.63
-   }
-   ShapePoint "{61DF0D282E5A994E}" {
-    Position 40.882 3.075 147.642
-   }
-   ShapePoint "{61DF0D282E315BD5}" {
-    Position 29.516 1.694 180.834
-   }
-   ShapePoint "{61DF0D28206C90F1}" {
-    Position 6.504 -0.404 223.214
-   }
-   ShapePoint "{61DF0D2814A84657}" {
-    Position -97.77 -32.283 390.662
-   }
-   ShapePoint "{61DF0D281426735C}" {
-    Position -378.455 -49.869 272.883
-   }
-   ShapePoint "{61DF0D28173FD31A}" {
-    Position -340.341 -14.815 0.578
-   }
-   ShapePoint "{61DF0D2816E9F6C8}" {
-    Position -130.298 5.031 -64.776
-   }
-   ShapePoint "{61DF0D28161FCA6B}" {
-    Position -12.891 0.83 -14.61
-   }
-  }
-  IsClosed 1
-  LineColor 0.624 0.506 0.157 1
   {
    PS_PolyZoneTrigger {
-    components {
-     Hierarchy "{614548BDF998E12B}" {
-     }
-    }
-    TriggerShapeType Polyline
-    "Polyline Height" 500
-    TriggerActivationType "All changes"
-    PeriodicQueries 1
-    UpdatePeriod 1
-    ClassesFilter {
-     "SCR_ChimeraCharacter"
-    }
-    m_polyZoneEffect PS_PolyZoneEffectRestricted "{614548BC046ADB65}" {
+    ID "60FD050E1E83544C"
+    m_polyZoneEffect PS_PolyZoneEffectRestricted "{60FD050E0DC2A2AB}" {
      m_fKillTime 40
     }
-    m_bReversed 1
-    m_sFactionKey "Drg_VCA"
+    m_sFactionKey "US"
    }
   }
  }
