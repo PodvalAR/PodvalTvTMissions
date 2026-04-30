@@ -1,0 +1,79 @@
+GenericEntity : "{630742372D9304E8}Prefabs/System/DRG_ZoneControlPrefab.et" {
+ components {
+  DRG_ZoneControlComponent "{662B2CCC5DFEB26C}" {
+   m_aControlLogics {
+    DRG_ZoneControlLogic "{6682C5E24E8AED6F}" {
+     m_sZoneEntityName "base_zone"
+     m_sZonePreviewName "Военная база"
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "BASE_US"
+     }
+     m_sFailedObjectiveNames {
+      "BASE_USSR"
+     }
+     m_sMessage "Победа атаки, база захвачена"
+     m_aConditions {
+      DRG_ZoneControlCondition "{6682C5E2A93240DE}" {
+       m_iOperator LESS_OR_EQUALS
+       m_iCount 3
+      }
+      DRG_ZoneControlCondition "{6682C5E2A92ABBAF}" {
+       m_sFactionKey "US"
+       m_iOperator GREATER_OR_EQUALS
+       m_iCount 6
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 6897.946 438.656 6757.757
+}
+GenericEntity : "{6A3CDCFB475BF1B2}Prefabs/System/DRG_CriticalLossPrefab.et" {
+ components {
+  DRG_CriticalLossComponent "{65213D368F1BD792}" {
+   m_aLossLogics {
+    LossLogic "{6682C5E327A24CBA}" {
+     m_aLosses {
+      FactionLoss "{6682C5E31F7FE20D}" {
+       m_sFactionKey "US"
+      }
+     }
+     m_sObjectiveNames {
+      "BASE_USSR"
+     }
+     m_sFailedObjectiveNames {
+      "BASE_US"
+     }
+     m_bAdvanceGameStage 1
+     m_bUseMessage 1
+     m_bEventMessage "Победа обороны! Атака понесла большие потери и отступила."
+    }
+    LossLogic "{6682C5E3252AC68C}" {
+     m_aLosses {
+      FactionLoss "{6682C5E32808B1EC}" {
+       m_iCriticalLossCount 3
+      }
+     }
+     m_sObjectiveNames {
+      "BASE_US"
+     }
+     m_sFailedObjectiveNames {
+      "BASE_USSR"
+     }
+     m_bAdvanceGameStage 1
+     m_bUseMessage 1
+     m_bEventMessage "Победа атаки! Оборона понесла критические потери."
+    }
+   }
+  }
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2400
+  }
+ }
+}

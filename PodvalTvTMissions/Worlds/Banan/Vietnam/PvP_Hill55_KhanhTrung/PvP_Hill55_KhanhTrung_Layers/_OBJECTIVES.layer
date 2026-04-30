@@ -1,0 +1,24 @@
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ FLAG_US_CONTROL {
+  coords 1151.676 91.535 1825.71
+  m_sTitle "Высота 55 под контролем"
+  m_sFactionKey "US"
+ }
+ FLAG_PIR_CONTROL {
+  coords 1151.676 91.535 1825.71
+  m_sTitle "Высота 55 захвачена"
+  m_sFactionKey "Drg_VCA"
+ }
+ KILL_VCA {
+  coords 0 0 0
+  m_sTitle "Разгромить противника"
+  m_iOrder 10
+  m_sFactionKey "US"
+ }
+ KILL_US {
+  coords 0 0 0
+  m_sTitle "Разгромить противника"
+  m_iOrder 10
+  m_sFactionKey "Drg_VCA"
+ }
+}

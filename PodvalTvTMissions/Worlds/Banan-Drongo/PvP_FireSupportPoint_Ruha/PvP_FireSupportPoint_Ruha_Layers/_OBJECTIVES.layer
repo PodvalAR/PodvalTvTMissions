@@ -1,0 +1,50 @@
+$grp PS_Objective {
+ ZONE_USAF {
+  components {
+   RplComponent "{6238766729F75615}" {
+   }
+   Hierarchy "{623876676AE494C1}" {
+   }
+  }
+  coords 2951.533 279.693 11464.642
+  m_sTitle "Опорный пункт удержан"
+  m_iScore 100
+  m_sFactionKey "RHS_USAF"
+ }
+ ZONE_AFRF {
+  components {
+   RplComponent "{623876672489E83A}" {
+   }
+   Hierarchy "{623876676FF82BEB}" {
+   }
+  }
+  coords 3205.411 355.615 10891.354
+  m_sTitle "Опорный пункт захвачен"
+  m_iScore 100
+  m_sFactionKey "RHS_AFRF"
+ }
+ KILL_AFRF {
+  components {
+   RplComponent "{623876672489E83A}" {
+   }
+   Hierarchy "{623876676FF82BEB}" {
+   }
+  }
+  coords 3205.411 355.615 10891.354
+  m_sTitle "Разромить противника"
+  m_iScore 100
+  m_sFactionKey "RHS_USAF"
+ }
+ KILL_USAF {
+  components {
+   RplComponent "{6238766729F75615}" {
+   }
+   Hierarchy "{623876676AE494C1}" {
+   }
+  }
+  coords 2951.533 279.693 11464.642
+  m_sTitle "Разромить противника"
+  m_iScore 100
+  m_sFactionKey "RHS_AFRF"
+ }
+}

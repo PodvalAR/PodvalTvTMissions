@@ -1,0 +1,106 @@
+PolylineShapeEntity {
+ components {
+  PS_PolyZone "{64CE75335620F98E}" {
+   m_mPolygonTexture "{B072704FB1A499B7}UI/layouts/Textures/Grid6b.edds"
+   m_cPolygonColor 0 0.125 0.502 1
+   m_mPolygonTextureBorder ""
+   m_cPolygonBorderColor 0 0.125 0.502 1
+   m_fPolygonBorderWidth 5
+   m_aVisibleForFactions {
+    "US"
+   }
+   m_aHideOnGameModeStates {
+    0 1 3
+   }
+  }
+ }
+ coords 1804.083 -1.419 1318.787
+ Points {
+  ShapePoint "{64CE75336AA51273}" {
+   Position 54.93 0.001 -6.91
+  }
+  ShapePoint "{64DCE9F355B8BF8E}" {
+   Position 182.272 0 70.133
+  }
+  ShapePoint "{64DCE9F35D5A1BE9}" {
+   Position 302.205 38.783 265.728
+  }
+  ShapePoint "{64DCE9F35F7D4AEA}" {
+   Position 261.585 -1.081 360.938
+  }
+  ShapePoint "{64CE75336AA56DB4}" {
+   Position -13.514 13.257 81.288
+  }
+  ShapePoint "{64CE753364C79CFE}" {
+   Position -148.764 13.617 62.844
+  }
+  ShapePoint "{64CE7533645BA5AC}" {
+   Position -232.573 14.613 105.114
+  }
+  ShapePoint "{64CE753367C8F730}" {
+   Position -329.151 15.479 184.341
+  }
+  ShapePoint "{64CE7533676A9E46}" {
+   Position -376.92 12.243 305.318
+  }
+  ShapePoint "{64CE7533665DA95C}" {
+   Position -410.691 16.88 400.756
+  }
+  ShapePoint "{64DCE9F35234117D}" {
+   Position -347.091 0.009 641.941
+  }
+  ShapePoint "{64DCE9F34CF78509}" {
+   Position -233.445 0 746.08
+  }
+  ShapePoint "{64DCE9F34EC23785}" {
+   Position -345.209 0 836.578
+  }
+  ShapePoint "{64DCE9F34E3F4642}" {
+   Position -477.063 0 698.673
+  }
+  ShapePoint "{64DCE9F3497F007E}" {
+   Position -532.824 -0.607 562.95
+  }
+  ShapePoint "{64CE753362E4E468}" {
+   Position -546.534 1.545 415.274
+  }
+  ShapePoint "{64CE7533626E2EDD}" {
+   Position -532.479 -4.304 332.264
+  }
+  ShapePoint "{64CE75335DBE0B5D}" {
+   Position -458.998 -4.268 157.096
+  }
+  ShapePoint "{64CE75335F483EA7}" {
+   Position -337.511 -5.084 9.664
+  }
+  ShapePoint "{64CE75335EF50656}" {
+   Position -238.91 -6.048 -33.269
+  }
+  ShapePoint "{64CE75335E2FBD74}" {
+   Position -32.63 -2.123 -22.279
+  }
+ }
+ IsClosed 1
+ {
+  PS_PolyZoneTrigger {
+   components {
+    Hierarchy "{614548BDF998E12B}" {
+    }
+   }
+   TriggerShapeType Polyline
+   SphereRadius 5000000
+   "Polyline Height" 600
+   TriggerActivationType "All changes"
+   PeriodicQueries 1
+   UpdatePeriod 1
+   ClassesFilter {
+    "SCR_ChimeraCharacter"
+   }
+   m_polyZoneEffect PS_PolyZoneEffectFreezeZone "{6145683F186F7170}" {
+    m_fKillTime 20
+   }
+   m_bReversed 1
+   m_sFactionKey "US"
+  }
+ }
+}

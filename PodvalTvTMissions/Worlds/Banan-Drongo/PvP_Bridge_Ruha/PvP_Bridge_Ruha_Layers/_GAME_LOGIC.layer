@@ -1,0 +1,91 @@
+GenericEntity : "{6A3CDCFB475BF1B2}Prefabs/System/DRG_CriticalLossPrefab.et" {
+ components {
+  DRG_CriticalLossComponent "{65213D368F1BD792}" {
+   m_iAdvanceAfterSec 5
+   m_iTestingPlayerCounts 8
+   m_aLossLogics {
+    LossLogic "{6532E5DED29C4A89}" {
+     m_aLosses {
+      FactionLoss "{6532E5DEDE2C5E01}" {
+       m_iCriticalLossCount 4
+       m_sFactionKey "Ses_CDF"
+      }
+     }
+     m_sObjectiveNames {
+      "KILL_CDF" "BRIDGE_KILL"
+     }
+     m_sFailedObjectiveNames {
+      "KILL_AFRF" "BRIDGE_SAVE"
+     }
+     m_bAdvanceGameStage 1
+     m_bUseMessage 1
+     m_bEventMessage "Победа атаки! Оборона понесла критические потери."
+    }
+    LossLogic "{6532E5DED2A74EF8}" {
+     m_aLosses {
+      FactionLoss "{6532E5DF33E6A383}" {
+       m_iCriticalLossCount 4
+       m_sFactionKey "RHS_AFRF"
+      }
+     }
+     m_sObjectiveNames {
+      "KILL_AFRF" "BRIDGE_SAVE"
+     }
+     m_sFailedObjectiveNames {
+      "KILL_CDF" "BRIDGE_KILL"
+     }
+     m_bAdvanceGameStage 1
+     m_bUseMessage 1
+     m_bEventMessage "Победа обороны! Атака понесла критические потери."
+    }
+   }
+  }
+ }
+ coords 4919.252 171.517 13004.141
+}
+GenericEntity : "{93F9FBDB589D2C9A}Prefabs/System/DRG_BuildingDestroyPrefab.et" {
+ components {
+  DRG_BuildingDestroyComponent "{657476373CF666F8}" {
+   m_bUseDescriptionGenerator 0
+   m_aBuildingDestroyLogics {
+    BuildingDestroyLogic "{657510959C35C184}" {
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "BRIDGE_KILL"
+     }
+     m_sFailedObjectiveNames {
+      "BRIDGE_SAVE"
+     }
+     m_aDestroableBuildings {
+      DestroableBuilding "{65751095CC64FB94}" {
+       m_sBuildingEntityName "OPORA_1"
+       m_sBuildingPreviewNameForDescription "Опора #1"
+      }
+      DestroableBuilding "{657510940A4D061B}" {
+       m_sBuildingEntityName "OPORA_2"
+       m_sBuildingPreviewNameForDescription "Опора #2"
+      }
+      DestroableBuilding "{657510940A85851D}" {
+       m_sBuildingEntityName "OPORA_3"
+       m_sBuildingPreviewNameForDescription "Опора #3"
+      }
+      DestroableBuilding "{657510940AD51650}" {
+       m_sBuildingEntityName "OPORA_4"
+       m_sBuildingPreviewNameForDescription "Опора #4"
+      }
+     }
+     m_sMessage "Мост повреждён!"
+    }
+   }
+  }
+ }
+ coords 661.4 189.919 8702.136
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2400
+  }
+ }
+ coords 4921.707 170.847 12983.772
+}

@@ -1,0 +1,72 @@
+GenericEntity : "{6A3CDCFB475BF1B2}Prefabs/System/DRG_CriticalLossPrefab.et" {
+ components {
+  DRG_CriticalLossComponent "{65213D368F1BD792}" {
+   m_iAdvanceAfterSec 5
+   m_iTestingPlayerCounts 8
+   m_aLossLogics {
+    LossLogic "{654AD376CC9E8EA4}" {
+     m_aLosses {
+      FactionLoss "{654AD376D370C185}" {
+       m_sFactionKey "Ses_CDF"
+      }
+     }
+     m_sObjectiveNames {
+      "CDF_KILLED" "TARGET_DESTROY"
+     }
+     m_sFailedObjectiveNames {
+      "AFRF_KILLED" "TARGET_DEFEND"
+     }
+     m_bAdvanceGameStage 1
+     m_bUseMessage 1
+     m_bEventMessage "Победа атаки! Оборона понесла большие потери."
+    }
+    LossLogic "{654AD376CCE049A9}" {
+     m_aLosses {
+      FactionLoss "{654AD3752394FC75}" {
+       m_sFactionKey "RHS_AFRF"
+      }
+     }
+     m_sObjectiveNames {
+      "AFRF_KILLED" "TARGET_DEFEND"
+     }
+     m_sFailedObjectiveNames {
+      "CDF_KILLED" "TARGET_DESTROY"
+     }
+     m_bAdvanceGameStage 1
+     m_bUseMessage 1
+     m_bEventMessage "Победа обороны! Аика  понесла большие потери."
+    }
+   }
+  }
+ }
+ coords 4439.347 233.47 12368.625
+}
+GenericEntity : "{7A333AFB11EA847A}Prefabs/System/DRG_VehicleDestroyPrefab.et" {
+ components {
+  DRG_VehicleDestroyComponent "{65733BD6110AE8FC}" {
+   m_aVehicleLossLogics {
+    VehicleLossLogic "{65B536719435000A}" {
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "TARGET_DESTROY"
+     }
+     m_sFailedObjectiveNames {
+      "TARGET_DEFEND"
+     }
+     m_sVehicleEntityNames {
+      "TARGET_1" "TARGET_2" "TARGET_3"
+     }
+     m_sMessage "Целевая техника уничтожена"
+    }
+   }
+  }
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 4241.452 234.502 12416.651
+}

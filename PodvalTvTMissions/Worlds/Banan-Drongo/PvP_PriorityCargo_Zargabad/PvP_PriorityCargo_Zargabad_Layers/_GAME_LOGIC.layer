@@ -1,0 +1,76 @@
+GenericEntity : "{04B5CC36F933A2D4}Prefabs/System/DRG_DateTimeInjectorPrefab.et" {
+ components {
+  DRG_DateTimeInjectorComponent "{658E74C94A2C74AE}" {
+   m_iYear 1989
+   m_iDay 15
+   m_iHours 23
+   m_iMinutes 45
+  }
+ }
+}
+GenericEntity : "{3914BACD81F2F105}Prefabs/Items/sat_1.et" {
+ coords 4846.467 41.527 4611.853
+ {
+  PS_ManualMarker {
+   ID "65C6A75114B06FB9"
+   m_aVisibleForFactions {
+   }
+   m_bVisibleForEmptyFaction 1
+   m_aHideOnGameModeStates {
+   }
+  }
+ }
+}
+GenericEntity : "{6A3CDCFB475BF1B2}Prefabs/System/DRG_CriticalLossPrefab.et" {
+ components {
+  DRG_CriticalLossComponent "{65213D368F1BD792}" {
+   m_iAdvanceAfterSec 5
+   m_iTestingPlayerCounts 8
+   m_aLossLogics {
+    LossLogic "{654C7E247C7951AD}" {
+     m_aLosses {
+      FactionLoss "{6622E211763D5877}" {
+       m_iCriticalLossCount 4
+       m_sFactionKey "RHS_USAF"
+      }
+     }
+     m_sObjectiveNames {
+      "KILL_USAF" "ZONE_TKR"
+     }
+     m_sFailedObjectiveNames {
+      "KILL_TKR" "ZONE_USAF"
+     }
+     m_bAdvanceGameStage 1
+     m_bUseMessage 1
+     m_bEventMessage "Победа боевиков! ВС США понесли большие потери."
+    }
+    LossLogic "{654C7E247CCB525F}" {
+     m_aLosses {
+      FactionLoss "{654C7E24443173C6}" {
+       m_iCriticalLossCount 4
+       m_sFactionKey "Ses_TKR"
+      }
+     }
+     m_sObjectiveNames {
+      "KILL_TKR" "ZONE_USAF"
+     }
+     m_sFailedObjectiveNames {
+      "KILL_USAF" "ZONE_TKR"
+     }
+     m_bAdvanceGameStage 1
+     m_bUseMessage 1
+     m_bEventMessage "Победа ВС США! Боевики понесли большие потери."
+    }
+   }
+  }
+ }
+ coords 4729.839 290.153 6998.263
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2400
+  }
+ }
+ coords 4762.458 287.818 7005.816
+}

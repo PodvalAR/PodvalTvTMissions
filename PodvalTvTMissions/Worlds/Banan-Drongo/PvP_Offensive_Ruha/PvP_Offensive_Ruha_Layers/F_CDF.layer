@@ -1,0 +1,597 @@
+Vehicle Ural4320_Ses_CDF_transport_covered1 : "{0EFFC9A8E672EF33}Prefabs/Vehicles/Wheeled/Ural4320/Ses_CDF/Ural4320_Ses_CDF_transport_covered.et" {
+ coords 2275.031 63.519 1273.131
+ angleX 1.43
+ angleY 17.826
+ angleZ 1.4
+ m_sAttachmentGroupName "CDF_3_0_DEF"
+}
+$grp Vehicle : "{52441D784D145D52}Prefabs/Vehicles/Wheeled/BTR70/BTR70_Ses_CDF.et" {
+ BTR70_Ses_CDF1 {
+  coords 2348.782 61.024 1293.865
+  angleX 0.437
+  angleY 9.56
+  angleZ 2.795
+  m_sAttachmentGroupName "CDF_1_0_DEF"
+ }
+ BTR70_Ses_CDF2 {
+  coords 2350.443 61.488 1305.979
+  angleX 2.615
+  angleY 9.775
+  angleZ 5.875
+  m_sAttachmentGroupName "CDF_1_1_DEF"
+ }
+ BTR70_Ses_CDF3 {
+  coords 2352.007 62.177 1316.771
+  angleX 5.242
+  angleY 8.617
+  angleZ 7.069
+  m_sAttachmentGroupName "CDF_1_2_DEF"
+ }
+ BTR70_Ses_CDF4 {
+  coords 2353.25 62.957 1327.446
+  angleX 4.051
+  angleY 3.293
+  angleZ 7.348
+  m_sAttachmentGroupName "CDF_2_0_DEF"
+ }
+ BTR70_Ses_CDF5 {
+  coords 2260.31 64.688 1340.425
+  angleY 16.701
+  m_sAttachmentGroupName "CDF_2_1_DEF"
+ }
+ BTR70_Ses_CDF6 {
+  coords 2257.657 64.775 1326.654
+  angleX 0.281
+  angleY 18.321
+  angleZ -0.85
+  m_sAttachmentGroupName "CDF_2_2_DEF"
+ }
+ BTR70_Ses_CDF7 {
+  coords 2254.286 64.67 1312.893
+  angleX 0.852
+  angleY 17.944
+  angleZ 0.276
+  m_sAttachmentGroupName "CDF_2_3_DEF"
+ }
+}
+$grp SCR_AIGroup : "{8E561C342F17E360}Prefabs/Groups/OPFOR/DRG_Group_RHS_RF_MSV_RifleSquad_P.et" {
+ CDF_0_0_DEF {
+  coords 2298.078 63.124 1274.036
+  angleX 1.867
+  angleY -2.527
+  angleZ 1.708
+  m_bDeleteWhenEmpty 0
+  m_bDeleteIfNoPlayer 0
+  m_sCustomNameSet "#DRG_Sqd_Hq"
+ }
+ CDF_1_0_DEF {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation ""
+   }
+   PS_GroupCallsignAssigner "{62387672B7C7F14A}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 2352.706 60.895 1289.581
+  angleX 0.883
+  angleY -80.643
+  angleZ 0.146
+  m_aUnitPrefabSlots {
+   "{14B773656108F1C6}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_SL.et" "{69AF9F9D049BCD5F}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_SR.et" "{793F827A538C53D5}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_AR.et" "{A197EBBB2A054D89}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_AT.et" "{843201041DF19B3E}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_AAT.et" "{DC6EA865F186B3D1}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_Rifleman.et" "{74EAFC5BA43B3AFF}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_GL.et" "{EAA4CE2A03A6D9ED}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_CrewDriver.et" "{0D8F69CA2B51D040}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_CrewGunner.et"
+  }
+  m_bDeleteWhenEmpty 0
+  m_bDeleteIfNoPlayer 0
+  m_sCustomNameSet "#DRG_Sqd_Rifle"
+ }
+ CDF_1_1_DEF {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation ""
+   }
+   PS_GroupCallsignAssigner "{62387672B7C7F14A}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 2354.551 60.983 1301.27
+  angleX 2.907
+  angleY -81.986
+  angleZ -1.396
+  m_aUnitPrefabSlots {
+   "{14B773656108F1C6}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_SL.et" "{69AF9F9D049BCD5F}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_SR.et" "{793F827A538C53D5}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_AR.et" "{A197EBBB2A054D89}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_AT.et" "{843201041DF19B3E}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_AAT.et" "{DC6EA865F186B3D1}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_Rifleman.et" "{74EAFC5BA43B3AFF}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_GL.et" "{EAA4CE2A03A6D9ED}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_CrewDriver.et" "{0D8F69CA2B51D040}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_CrewGunner.et"
+  }
+  m_bDeleteWhenEmpty 0
+  m_bDeleteIfNoPlayer 0
+  m_sCustomNameSet "#DRG_Sqd_Rifle"
+ }
+ CDF_1_2_DEF {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation ""
+   }
+   PS_GroupCallsignAssigner "{62387672B7C7F14A}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 2356.41 61.388 1312.114
+  angleX 3.833
+  angleY -85.716
+  angleZ -3.293
+  m_aUnitPrefabSlots {
+   "{14B773656108F1C6}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_SL.et" "{69AF9F9D049BCD5F}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_SR.et" "{793F827A538C53D5}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_AR.et" "{A197EBBB2A054D89}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_AT.et" "{843201041DF19B3E}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_AAT.et" "{DC6EA865F186B3D1}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_Rifleman.et" "{74EAFC5BA43B3AFF}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_GL.et" "{EAA4CE2A03A6D9ED}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_CrewDriver.et" "{0D8F69CA2B51D040}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_CrewGunner.et"
+  }
+  m_bDeleteWhenEmpty 0
+  m_bDeleteIfNoPlayer 0
+  m_sCustomNameSet "#DRG_Sqd_Rifle"
+ }
+ CDF_2_0_DEF {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation ""
+   }
+   PS_GroupCallsignAssigner "{62387672B7C7F14A}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 2255.432 64.687 1338.415
+  angleY -79.574
+  m_aUnitPrefabSlots {
+   "{14B773656108F1C6}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_SL.et" "{69AF9F9D049BCD5F}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_SR.et" "{793F827A538C53D5}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_AR.et" "{A197EBBB2A054D89}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_AT.et" "{843201041DF19B3E}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_AAT.et" "{DC6EA865F186B3D1}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_Rifleman.et" "{74EAFC5BA43B3AFF}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_GL.et" "{EAA4CE2A03A6D9ED}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_CrewDriver.et" "{0D8F69CA2B51D040}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_CrewGunner.et"
+  }
+  m_bDeleteWhenEmpty 0
+  m_bDeleteIfNoPlayer 0
+  m_sCustomNameSet "#DRG_Sqd_Rifle"
+ }
+ CDF_2_1_DEF {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation ""
+   }
+   PS_GroupCallsignAssigner "{62387672B7C7F14A}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 2252.171 64.753 1323.883
+  angleX -0.874
+  angleY -77.615
+  angleZ -0.192
+  m_aUnitPrefabSlots {
+   "{14B773656108F1C6}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_SL.et" "{69AF9F9D049BCD5F}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_SR.et" "{793F827A538C53D5}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_AR.et" "{A197EBBB2A054D89}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_AT.et" "{843201041DF19B3E}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_AAT.et" "{DC6EA865F186B3D1}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_Rifleman.et" "{74EAFC5BA43B3AFF}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_GL.et" "{EAA4CE2A03A6D9ED}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_CrewDriver.et" "{0D8F69CA2B51D040}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_CrewGunner.et"
+  }
+  m_bDeleteWhenEmpty 0
+  m_bDeleteIfNoPlayer 0
+  m_sCustomNameSet "#DRG_Sqd_Rifle"
+ }
+ CDF_2_2_DEF {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation ""
+   }
+   PS_GroupCallsignAssigner "{62387672B7C7F14A}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 2
+   }
+  }
+  coords 2249.237 64.643 1311.149
+  angleX 0.263
+  angleY -72.914
+  angleZ -0.856
+  m_aUnitPrefabSlots {
+   "{14B773656108F1C6}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_SL.et" "{69AF9F9D049BCD5F}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_SR.et" "{793F827A538C53D5}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_AR.et" "{A197EBBB2A054D89}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_AT.et" "{843201041DF19B3E}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_AAT.et" "{DC6EA865F186B3D1}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_Rifleman.et" "{74EAFC5BA43B3AFF}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_GL.et" "{EAA4CE2A03A6D9ED}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_CrewDriver.et" "{0D8F69CA2B51D040}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_CrewGunner.et"
+  }
+  m_bDeleteWhenEmpty 0
+  m_bDeleteIfNoPlayer 0
+  m_sCustomNameSet "#DRG_Sqd_Rifle"
+ }
+ CDF_3_0_DEF {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation ""
+   }
+   PS_GroupCallsignAssigner "{62387672B7C7F14A}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 3
+   }
+  }
+  coords 2270.101 63.528 1270.934
+  angleX 1.404
+  angleY -72.035
+  angleZ -1.426
+  m_aUnitPrefabSlots {
+   "{6A6DFB016A8DB6F7}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_MortarTL.et" "{68F8B81E26982C8B}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_MortarGunner.et" "{AC1B093637164257}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_MortarLoader.et" "{68F8B81E26982C8B}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_MortarGunner.et" "{AC1B093637164257}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_MortarLoader.et" "{68F8B81E26982C8B}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_MortarGunner.et" "{AC1B093637164257}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_MortarLoader.et"
+  }
+  m_bDeleteWhenEmpty 0
+  m_bDeleteIfNoPlayer 0
+  m_sCustomNameSet "#DRG-Sq-MortarCrew"
+ }
+ CDF_1_3_DEF {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation ""
+   }
+   PS_GroupCallsignAssigner "{62387672B7C7F14A}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 3
+   }
+  }
+  coords 2357.163 62.221 1323.42
+  angleX 5.582
+  angleY -86.986
+  angleZ -4.16
+  m_aUnitPrefabSlots {
+   "{14B773656108F1C6}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_SL.et" "{69AF9F9D049BCD5F}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_SR.et" "{793F827A538C53D5}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_AR.et" "{A197EBBB2A054D89}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_AT.et" "{843201041DF19B3E}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_AAT.et" "{DC6EA865F186B3D1}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_Rifleman.et" "{74EAFC5BA43B3AFF}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_GL.et" "{EAA4CE2A03A6D9ED}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_CrewDriver.et" "{0D8F69CA2B51D040}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_CrewGunner.et"
+  }
+  m_bDeleteWhenEmpty 0
+  m_bDeleteIfNoPlayer 0
+  m_sCustomNameSet "#DRG_Sqd_Rifle"
+ }
+}
+$grp GenericEntity : "{8F17290FBF410605}Prefabs/Props/Military/AmmoBoxes/drg_AmmoBox_82mm_mortar_10rnd_HE.et" {
+ {
+  coords 2274.062 63.313 1266.072
+  angleX 1.463
+  angleY -69.58
+  angleZ -1.365
+  {
+   $grp GenericEntity : "{8F17290FBF410605}Prefabs/Props/Military/AmmoBoxes/drg_AmmoBox_82mm_mortar_10rnd_HE.et" {
+    {
+     coords 0.016 0.194 -0.007
+     angleX -0.005
+     angleY -0
+     angleZ -0.007
+    }
+    {
+     coords 0.026 0.291 -0.012
+     angleX -0.008
+     angleZ -0.01
+    }
+    {
+     coords 0.034 0.388 -0.016
+     angleX -0.01
+     angleZ -0.014
+    }
+    {
+     coords 0.041 0.486 -0.019
+     angleX -0.013
+     angleY 0
+     angleZ -0.018
+    }
+    {
+     coords 0.053 0.582 -0.024
+     angleX -0.016
+     angleZ -0.021
+    }
+    {
+     coords 0.064 0.678 -0.029
+     angleX -0.018
+     angleZ -0.024
+    }
+    {
+     coords 0.071 0.775 -0.031
+     angleX -0.021
+     angleY -0
+     angleZ -0.028
+    }
+    {
+     coords 0.007 0.097 -0.004
+     angleX -0.003
+     angleZ -0.004
+    }
+   }
+  }
+ }
+ {
+  coords 2274.896 63.292 1265.762
+  angleX 1.463
+  angleY -69.58
+  angleZ -1.365
+  {
+   $grp GenericEntity : "{8F17290FBF410605}Prefabs/Props/Military/AmmoBoxes/drg_AmmoBox_82mm_mortar_10rnd_HE.et" {
+    {
+     coords 0.016 0.194 -0.007
+     angleX -0.005
+     angleY -0
+     angleZ -0.007
+    }
+    {
+     coords 0.026 0.291 -0.012
+     angleX -0.008
+     angleZ -0.01
+    }
+    {
+     coords 0.034 0.388 -0.016
+     angleX -0.01
+     angleZ -0.014
+    }
+    {
+     coords 0.041 0.486 -0.019
+     angleX -0.013
+     angleY 0
+     angleZ -0.018
+    }
+    {
+     coords 0.053 0.582 -0.024
+     angleX -0.016
+     angleZ -0.021
+    }
+    {
+     coords 0.064 0.678 -0.029
+     angleX -0.018
+     angleZ -0.024
+    }
+    {
+     coords 0.071 0.775 -0.031
+     angleX -0.021
+     angleY -0
+     angleZ -0.028
+    }
+    {
+     coords 0.007 0.097 -0.004
+     angleX -0.003
+     angleZ -0.004
+    }
+   }
+  }
+ }
+ {
+  coords 2275.364 63.338 1267.509
+  angleX 1.463
+  angleY -69.58
+  angleZ -1.365
+  {
+   $grp GenericEntity : "{8F17290FBF410605}Prefabs/Props/Military/AmmoBoxes/drg_AmmoBox_82mm_mortar_10rnd_HE.et" {
+    {
+     coords 0.016 0.194 -0.007
+     angleX -0.005
+     angleY -0
+     angleZ -0.007
+    }
+    {
+     coords 0.026 0.291 -0.012
+     angleX -0.008
+     angleZ -0.01
+    }
+    {
+     coords 0.034 0.388 -0.016
+     angleX -0.01
+     angleZ -0.014
+    }
+    {
+     coords 0.041 0.486 -0.019
+     angleX -0.013
+     angleY 0
+     angleZ -0.018
+    }
+    {
+     coords 0.053 0.582 -0.024
+     angleX -0.016
+     angleZ -0.021
+    }
+    {
+     coords 0.064 0.678 -0.029
+     angleX -0.018
+     angleZ -0.024
+    }
+    {
+     coords 0.071 0.775 -0.031
+     angleX -0.021
+     angleY -0
+     angleZ -0.028
+    }
+    {
+     coords 0.007 0.097 -0.004
+     angleX -0.003
+     angleZ -0.004
+    }
+   }
+  }
+ }
+ {
+  coords 2274.723 63.356 1267.751
+  angleX 1.463
+  angleY -69.58
+  angleZ -1.365
+  {
+   $grp GenericEntity : "{8F17290FBF410605}Prefabs/Props/Military/AmmoBoxes/drg_AmmoBox_82mm_mortar_10rnd_HE.et" {
+    {
+     coords 0.016 0.194 -0.007
+     angleX -0.005
+     angleY -0
+     angleZ -0.007
+    }
+    {
+     coords 0.026 0.291 -0.012
+     angleX -0.008
+     angleZ -0.01
+    }
+    {
+     coords 0.034 0.388 -0.016
+     angleX -0.01
+     angleZ -0.014
+    }
+    {
+     coords 0.041 0.486 -0.019
+     angleX -0.013
+     angleY 0
+     angleZ -0.018
+    }
+    {
+     coords 0.053 0.582 -0.024
+     angleX -0.016
+     angleZ -0.021
+    }
+    {
+     coords 0.064 0.678 -0.029
+     angleX -0.018
+     angleZ -0.024
+    }
+    {
+     coords 0.071 0.775 -0.031
+     angleX -0.021
+     angleY -0
+     angleZ -0.028
+    }
+    {
+     coords 0.007 0.097 -0.004
+     angleX -0.003
+     angleZ -0.004
+    }
+   }
+  }
+ }
+ {
+  coords 2273.609 63.265 1264.272
+  angleX 1.463
+  angleY -69.58
+  angleZ -1.365
+  {
+   $grp GenericEntity : "{8F17290FBF410605}Prefabs/Props/Military/AmmoBoxes/drg_AmmoBox_82mm_mortar_10rnd_HE.et" {
+    {
+     coords 0.016 0.194 -0.007
+     angleX -0.005
+     angleY -0
+     angleZ -0.007
+    }
+    {
+     coords 0.026 0.291 -0.012
+     angleX -0.008
+     angleZ -0.01
+    }
+    {
+     coords 0.034 0.388 -0.016
+     angleX -0.01
+     angleZ -0.014
+    }
+    {
+     coords 0.041 0.486 -0.019
+     angleX -0.013
+     angleY 0
+     angleZ -0.018
+    }
+    {
+     coords 0.053 0.582 -0.024
+     angleX -0.016
+     angleZ -0.021
+    }
+    {
+     coords 0.064 0.678 -0.029
+     angleX -0.018
+     angleZ -0.024
+    }
+    {
+     coords 0.071 0.775 -0.031
+     angleX -0.021
+     angleY -0
+     angleZ -0.028
+    }
+    {
+     coords 0.007 0.097 -0.004
+     angleX -0.003
+     angleZ -0.004
+    }
+   }
+  }
+ }
+ {
+  coords 2274.277 63.246 1264.003
+  angleX 1.463
+  angleY -69.58
+  angleZ -1.365
+  {
+   $grp GenericEntity : "{8F17290FBF410605}Prefabs/Props/Military/AmmoBoxes/drg_AmmoBox_82mm_mortar_10rnd_HE.et" {
+    {
+     coords 0.016 0.194 -0.007
+     angleX -0.005
+     angleY -0
+     angleZ -0.007
+    }
+    {
+     coords 0.026 0.291 -0.012
+     angleX -0.008
+     angleZ -0.01
+    }
+    {
+     coords 0.034 0.388 -0.016
+     angleX -0.01
+     angleZ -0.014
+    }
+    {
+     coords 0.041 0.486 -0.019
+     angleX -0.013
+     angleY 0
+     angleZ -0.018
+    }
+    {
+     coords 0.053 0.582 -0.024
+     angleX -0.016
+     angleZ -0.021
+    }
+    {
+     coords 0.064 0.678 -0.029
+     angleX -0.018
+     angleZ -0.024
+    }
+    {
+     coords 0.071 0.775 -0.031
+     angleX -0.021
+     angleY -0
+     angleZ -0.028
+    }
+    {
+     coords 0.007 0.097 -0.004
+     angleX -0.003
+     angleZ -0.004
+    }
+   }
+  }
+ }
+}
+SCR_DestructibleBuildingEntity : "{B514DD5B90A27E78}Prefabs/Structures/Services/Government/MunicipalOffice_E_01/MunicipalOffice_E_01_school.et" {
+ coords 4392.212 1.589 4427.566
+ angleY -37.272
+}
+Vehicle Ural4320_Ses_CDF_command1 : "{B8C6D4393223FDC2}Prefabs/Vehicles/Wheeled/Ural4320/Ses_CDF/Ural4320_Ses_CDF_command.et" {
+ coords 2294.036 63.042 1269.386
+ angleX 1.789
+ angleY 0.028
+ angleZ 0.896
+ m_sAttachmentGroupName "CDF_0_0_DEF"
+}
+$grp Turret : "{D1FFE458E8AC4BDB}Prefabs/Weapons/Mortars/2B14/Mortar_2B14.et" {
+ {
+  components {
+   PS_GroupAttachmentComponent "{65D09C91987C345B}" {
+    m_sAttachmentGroupName "CDF_3_0_DEF"
+   }
+  }
+  coords 2273.153 63.398 1268.309
+  angleX 1.459
+  angleY -69.742
+  angleZ -1.369
+ }
+ {
+  components {
+   PS_GroupAttachmentComponent "{65D09C91987C345B}" {
+    m_sAttachmentGroupName "CDF_3_0_DEF"
+   }
+  }
+  coords 2272.527 63.354 1266.616
+  angleX 1.46
+  angleY -69.734
+  angleZ -1.369
+ }
+ {
+  components {
+   PS_GroupAttachmentComponent "{65D09C91987C345B}" {
+    m_sAttachmentGroupName "CDF_3_0_DEF"
+   }
+  }
+  coords 2271.923 63.313 1264.984
+  angleX 1.459
+  angleY -69.742
+  angleZ -1.369
+ }
+}

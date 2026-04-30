@@ -1,0 +1,65 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ "_1_RULES" {
+  m_sTitle "#PS-Description_HeaderRules"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "ОБЩИЕ ПРАВИЛА "\
+  "— Всем запрещено надевать форму, головные уборы, разгрузки, бронежилеты противника (рюкзаки можно) "\
+  "— Количество радиостанций ограничено до 2-3 шт. в отделении. "\
+  "— Наземная техника может перемещаться на фризтайме свободно."\
+  ""\
+  "СПОСОБЫ ПОБЕДЫ ДЛЯ FIA"\
+  "— Для победы необходимо удержать хотя бы один флаг."\
+  ""\
+  "СПОСОБЫ ПОБЕДЫ ДЛЯ США"\
+  "— Для победы необходимо захватить два флага."\
+  ""\
+  "."
+  m_aVisibleForFactions {
+   "US" "USSR" "FIA"
+  }
+  m_bEmptyFactionVisibility 1
+  m_iOrder 1
+ }
+ "_2_FIA" {
+  m_sTitle "#PS-Description_HeaderFIA"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "Нам необходимо недопустить американцев на остров."\
+  ""\
+  "Основные моменты:"\
+  "– У нас имеются мобильные группы на УАЗах и БРДМ которые могут пытаться нанести огонь в момент высадки транспортными вертолётами."\
+  "– У противника два вооруженных вертолёта, не стоит пренебрегать маскировкой."\
+  ""\
+  "."
+  m_aVisibleForFactions {
+   "FIA"
+  }
+  m_iOrder 2
+ }
+ "_2_USA" {
+  m_sTitle "#PS-Description_HeaderUS"
+  m_sTextData "Авиамобильная операция по захвату острова."\
+  ""\
+  "Ключевые моменты:"\
+  "– У вас имеется миномёт, подумайте как его можно применить в этой задаче."\
+  "– Противник может плавать на БРДМ. "\
+  "– Мы можем ремонтировать и перевооружать вертолёты."\
+  "– В каждый вертолёт должно поместиться по стрелковому отряду, включая боевые."
+  m_aVisibleForFactions {
+   "US"
+  }
+  m_iOrder 2
+ }
+ "_1_ABOUT" {
+  m_sTitle "#PS-Description_HeaderAboutMission"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "Операция Армии США по овладению островом Айл-д'Эрки"
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+}
+Vehicle M923A1_transport_covered_closed1 : "{48A6D4372444B85A}Prefabs/Vehicles/Wheeled/M923A1/M923A1_transport_covered_closed.et" {
+ coords 5345.633 43.513 10533.236
+ angleY -16.87
+ m_sAttachmentGroupName "US_3_0_0"
+ m_bEnableMoveOnFreeze 1
+}
