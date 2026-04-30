@@ -1,0 +1,15 @@
+GenericEntity switchDateScript {
+ coords 9229.109 400.879 4976.961
+ EOnInit ""\
+ "		GenericEntity ent = GenericEntity.Cast(owner);"\
+ "        ChimeraWorld world = ent.GetWorld();"\
+ "        TimeAndWeatherManagerEntity timeManager = world.GetTimeAndWeatherManager();"\
+ "		"\
+ "       "\
+ "        if (timeManager) "\
+ "        {"\
+ "        	timeManager.SetDate(1981, 7, 17);"\
+ "			timeManager.SetHoursMinutesSeconds(0, 0, 0, true);"\
+ "        }"\
+ "	"
+}

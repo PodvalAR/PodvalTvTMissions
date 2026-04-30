@@ -1,0 +1,85 @@
+GenericEntity : "{630742372D9304E8}Prefabs/System/DRG_ZoneControlPrefab.et" {
+ components {
+  DRG_ZoneControlComponent "{662B2CCC5DFEB26C}" {
+   m_aControlLogics {
+    DRG_ZoneControlLogic "{668D6C0F2860CDE9}" {
+     m_sZoneEntityName "zone"
+     m_sZonePreviewName "Naw"
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "ZONE_USAF"
+     }
+     m_sFailedObjectiveNames {
+      "ZONE_AFRF"
+     }
+     m_sMessage "Победа атаки! Город захвачен."
+     m_aConditions {
+      DRG_ZoneControlCondition "{668D6C0C203C9D59}" {
+       m_sFactionKey "RHS_AFRF"
+       m_iOperator LESS
+       m_iCount 5
+      }
+      DRG_ZoneControlCondition "{668D6C0C334CFB4B}" {
+       m_sFactionKey "RHS_USAF"
+       m_iOperator GREATER
+       m_iCount 5
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 7383.815 115.767 5229.066
+}
+GenericEntity : "{6A3CDCFB475BF1B2}Prefabs/System/DRG_CriticalLossPrefab.et" {
+ components {
+  DRG_CriticalLossComponent "{65213D368F1BD792}" {
+   m_iAdvanceAfterSec 5
+   m_iTestingPlayerCounts 8
+   m_aLossLogics {
+    LossLogic "{654C7E247C7951AD}" {
+     m_aLosses {
+      FactionLoss "{6622E211763D5877}" {
+       m_iCriticalLossCount 4
+       m_sFactionKey "RHS_AFRF"
+      }
+     }
+     m_sObjectiveNames {
+      "ZONE_USAF"
+     }
+     m_sFailedObjectiveNames {
+      "ZONE_AFRF"
+     }
+     m_bAdvanceGameStage 1
+     m_bUseMessage 1
+     m_bEventMessage "Победа США! ВС РФ Понесли большие потери!"
+    }
+    LossLogic "{654C7E247CCB525F}" {
+     m_aLosses {
+      FactionLoss "{654C7E24443173C6}" {
+       m_sFactionKey "RHS_USAF"
+      }
+     }
+     m_sObjectiveNames {
+      "ZONE_AFRF"
+     }
+     m_sFailedObjectiveNames {
+      "ZONE_USAF"
+     }
+     m_bAdvanceGameStage 1
+     m_bUseMessage 1
+     m_bEventMessage "Победа ВС РФ! ВС США понесли большие потери."
+    }
+   }
+  }
+ }
+ coords 4729.839 290.153 6998.263
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 3000
+  }
+ }
+ coords 4762.458 287.818 7005.816
+}

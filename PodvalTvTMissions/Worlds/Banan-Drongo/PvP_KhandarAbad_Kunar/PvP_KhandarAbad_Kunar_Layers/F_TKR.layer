@@ -1,0 +1,165 @@
+$grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+ Ses_TKR_G_300_M {
+  coords 1850.958 179.043 2486.628
+  angleX 0.123
+  angleY 82.103
+  angleZ -0.009
+  m_sImageSet "{301FC1A2A46D3E0D}UI/Textures/GroupManagement/FlagIcons/GroupFlagsIndfor.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 1 1 1 1
+  m_sQuadName "undefined"
+  m_fWorldSize 50
+  m_sDescription "(#DRG_Sqd_RaidGroup) Kasrah Ahmr 1"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "RHS_AFRF" "RHS_USAF" "Ses_CDF" "Ses_ChDKZ" "Ses_TKR" "Ses_TKA" "Drg_IGF"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+  }
+  m_iZOrder 10
+ }
+ Ses_TKR_G_301_M {
+  coords 1852.974 179.121 2477.664
+  angleX 0.123
+  angleY 82.103
+  angleZ -0.009
+  m_sImageSet "{301FC1A2A46D3E0D}UI/Textures/GroupManagement/FlagIcons/GroupFlagsIndfor.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 1 1 1 1
+  m_sQuadName "undefined"
+  m_fWorldSize 50
+  m_sDescription "(#DRG_Sqd_RaidGroup) Kasrah Ahmr 2"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "RHS_AFRF" "RHS_USAF" "Ses_CDF" "Ses_ChDKZ" "Ses_TKR" "Ses_TKA" "Drg_IGF"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+  }
+  m_iZOrder 10
+ }
+ Ses_TKR_G_302_M {
+  coords 1853.891 179.089 2468.144
+  angleX 0.123
+  angleY 82.103
+  angleZ -0.009
+  m_sImageSet "{301FC1A2A46D3E0D}UI/Textures/GroupManagement/FlagIcons/GroupFlagsIndfor.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 1 1 1 1
+  m_sQuadName "undefined"
+  m_fWorldSize 50
+  m_sDescription "(#DRG_Sqd_RaidGroup) Kasrah Ahmr 3"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "RHS_AFRF" "RHS_USAF" "Ses_CDF" "Ses_ChDKZ" "Ses_TKR" "Ses_TKA" "Drg_IGF"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+  }
+  m_iZOrder 10
+ }
+}
+$grp SCR_AIGroup : "{FD47A0A8CE51D3BE}Prefabs/Groups/INDFOR/TGK/drg_TKR_RifleSquad.et" {
+ TKR_1_0_0 {
+  components {
+   PS_GroupCallsignAssigner "{65154C1E6C2E8928}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 1636.091 228.865 2410.198
+  angleY 99.447
+ }
+ TKR_0_0_0 {
+  coords 1635.277 227.262 2413.834
+  angleY 171.365
+  m_aUnitPrefabSlots {
+   "{D18907EB472956F5}Prefabs/Characters/Factions/INDFOR/TKR/drg_Character_Ses_TKR_CL.et"
+  }
+  m_sCustomNameSet ""
+ }
+ TKR_1_0_1 {
+  components {
+   PS_GroupCallsignAssigner "{65154C1E6C2E8928}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 1637.721 228.988 2409.501
+  angleY 98.706
+ }
+ TKR_1_0_2 {
+  components {
+   PS_GroupCallsignAssigner "{65154C1E6C2E8928}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 1639.356 229.207 2408.684
+  angleY 100.712
+ }
+ TKR_2_0_0 {
+  components {
+   PS_GroupCallsignAssigner "{65154C1E6C2E8928}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 1396.348 316.705 2351.159
+  angleY 179.004
+ }
+ TKR_2_0_1 {
+  components {
+   PS_GroupCallsignAssigner "{65154C1E6C2E8928}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 1396.763 316.966 2349.191
+  angleY 179.004
+ }
+ TKR_2_0_2 {
+  components {
+   PS_GroupCallsignAssigner "{65154C1E6C2E8928}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 2
+   }
+  }
+  coords 1397.098 317.187 2347.712
+  angleY 179.004
+ }
+ TKR_3_0_1 {
+  components {
+   PS_GroupCallsignAssigner "{65154C1E6C2E8928}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 1
+   }
+  }
+  coords 1852.974 179.121 2477.664
+  angleX -0.148
+  angleY -99.492
+  angleZ -0.883
+ }
+ TKR_3_0_0 {
+  components {
+   PS_GroupCallsignAssigner "{65154C1E6C2E8928}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 1850.958 179.043 2486.628
+  angleX 0.166
+  angleY -104.036
+  angleZ 2.69
+ }
+ TKR_3_0_2 {
+  components {
+   PS_GroupCallsignAssigner "{65154C1E6C2E8928}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 2
+   }
+  }
+  coords 1853.891 179.089 2468.144
+  angleX -0.2
+  angleY -92.958
+  angleZ 0.89
+ }
+}

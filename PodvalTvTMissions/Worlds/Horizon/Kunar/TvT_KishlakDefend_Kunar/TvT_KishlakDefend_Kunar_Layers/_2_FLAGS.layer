@@ -1,0 +1,40 @@
+GenericEntity : "{1AAC905FBE6CF779}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_02_V2_USSR.et" {
+ components {
+  SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+   m_aObjectiveNames {
+    "US_WIN"
+    "TKR_WIN"
+    "USSR_WIN"
+   }
+   m_sFactionKey "USSR"
+   m_bUseAdvanceGameState 1
+   m_sUseNotification 1
+  }
+  BaseActionsManagerComponent "{6202D4E6F133BF4A}" {
+   additionalActions {
+    PS_FlagChangeAction "{6202D4E6A53D4B3C}" {
+     Duration 15.2
+    }
+   }
+  }
+ }
+ coords 2832.72 387.083 710.07
+}
+PS_ManualMarker USSR_G_000_M2 : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+ coords 2832.728 387.232 710.108
+ m_MarkerColor 0 0 0 1
+ m_sQuadName "flag-2"
+ m_fWorldSize 50
+ m_sDescription "Флаг"
+ m_bUseWorldScale 0
+ m_aVisibleForFactions {
+  "Ses_TKR"
+  "USSR"
+  "US"
+ }
+ m_bVisibleForEmptyFaction 1
+ m_aHideOnGameModeStates {
+ }
+ m_iZOrder 10
+ m_bShowForAnyFaction 1
+}

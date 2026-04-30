@@ -1,0 +1,40 @@
+$grp PS_Objective {
+ FLAG_AFRF {
+  components {
+   RplComponent "{61D770792CB54432}" {
+    Streamable Disabled
+   }
+   Hierarchy "{61D7707839C3C349}" {
+   }
+  }
+  coords 2834.407 12.151 2650.952
+  m_sTitle "Деревня захвачена"
+  m_iScore 100
+  m_sFactionKey "RHS_AFRF"
+ }
+ FLAG_USAF {
+  components {
+   RplComponent "{61D770792CB54432}" {
+    Streamable Disabled
+   }
+   Hierarchy "{61D7707839C3C349}" {
+   }
+  }
+  coords 2012.798 10.388 2938.295
+  m_sTitle "Деревня удержена"
+  m_iScore 100
+  m_sFactionKey "RHS_USAF"
+ }
+}
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ KILL_USAF {
+  coords 3330.782 48.825 1756.456
+  m_sTitle "Противник разгромлен"
+  m_sFactionKey "RHS_AFRF"
+ }
+ KILL_AFRF {
+  coords 3330.637 48.408 1754.462
+  m_sTitle "Противник разгромлен"
+  m_sFactionKey "RHS_USAF"
+ }
+}

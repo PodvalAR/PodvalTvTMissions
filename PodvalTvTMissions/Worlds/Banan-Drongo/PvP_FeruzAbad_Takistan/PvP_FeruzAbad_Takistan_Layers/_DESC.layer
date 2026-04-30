@@ -1,0 +1,55 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ "_1_RULES" {
+  m_sTitle "#PS-Description_HeaderRules"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "ОБЩИЕ ПРАВИЛА"\
+  "— Всем запрещено надевать форму, головные уборы, разгрузки, бронежилеты противника (рюкзаки можно) "\
+  "— Битва завершается либо по потерям, либо по времени"\
+  ""\
+  "ПРАВИЛА ДЛЯ ВС РФ"\
+  "— Запрещено находиться в синей зоне"\
+  ""\
+  "ПРАВИЛА ДЛЯ ВС США"\
+  "— Всем кроме экипажа вертолётов запрещено находиться в красной зоне"\
+  ""\
+  "СПОСОБЫ ПОБЕДЫ ДЛЯ ВС РФ"\
+  "— Основная задача, удержать штаб гарнизона Ферузабад (поменять флаг)"\
+  ""\
+  "СПОСОБЫ ПОБЕДЫ ДЛЯ ВС США"\
+  "— Основная задача, занять штаб гарнизона Ферузабад (поменять флаг)"\
+  ""\
+  "— Победа достигается контроем флага, флаг НЕ перезахватываемый."
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+  m_iOrder 1
+ }
+ "_2_USAF" {
+  m_sTitle "#PS-Description_HeaderUS"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "Наша задача захватить гарнизон Ферузабад, обратите внимание у противника имеется два града РЗСО, будьте осторожны."
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+  }
+  m_iOrder 2
+ }
+ "_0_ABOUT" {
+  m_sTitle "#PS-Description_HeaderAboutMission"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "Битва за Ферузабад"
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+ "_2_AFRF" {
+  m_sTitle "#DRG-Description_HeaderRUS"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "Нам необходимо удержать гарнизон Ферузабада."\
+  ""\
+  "Обратите внимание у штаба и взвода РЗСО имеется КШМ, они усиливают сигнал радиостанций на частоте 42.0, благодаря этим машинам вы можете поддерживать связь на больших дистанциях."\
+  ""\
+  "Будьте осторожны, вертолёты противника скорее всего будут искать взвод РЗСО."
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+  }
+  m_iOrder 2
+ }
+}

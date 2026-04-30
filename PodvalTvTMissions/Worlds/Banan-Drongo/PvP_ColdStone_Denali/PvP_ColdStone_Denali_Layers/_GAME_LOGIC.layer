@@ -1,0 +1,74 @@
+GenericEntity : "{0DBE058F13F0C7E8}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_02_V1_US.et" {
+ components {
+  SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+   m_aObjectiveNames {
+    "FLAG_US" "FLAG_USSR"
+   }
+   m_aFlagData {
+    PS_FlagData "{65B6BECBE65C07C4}" {
+     m_sFactionKey "US"
+    }
+    PS_FlagData "{65B6BECBE588C4E5}" {
+     m_sFactionKey "USSR"
+     m_iCaptureCounter 1
+    }
+   }
+   m_sFactionKey "US"
+   m_bUseAdvanceGameState 1
+   m_sUseNotification 1
+  }
+ }
+ coords 5004.097 373.733 4198.845
+ angleY -49.341
+ angleZ -24.685
+}
+GenericEntity : "{6A3CDCFB475BF1B2}Prefabs/System/DRG_CriticalLossPrefab.et" {
+ components {
+  DRG_CriticalLossComponent "{65213D368F1BD792}" {
+   m_iAdvanceAfterSec 5
+   m_iTestingPlayerCounts 8
+   m_aLossLogics {
+    LossLogic "{652AF37E6EFB5B46}" {
+     m_aLosses {
+      FactionLoss "{652AF37E6CC8FCEC}" {
+       m_sFactionKey "US"
+      }
+     }
+     m_sObjectiveNames {
+      "KILL_US" "FLAG_USSR"
+     }
+     m_sFailedObjectiveNames {
+      "KILL_USSR" "FLAG_US"
+     }
+     m_bAdvanceGameStage 1
+     m_bUseMessage 1
+     m_bEventMessage "Победа атаки! Оборона понесла серьёзные потери"
+    }
+    LossLogic "{652AF37EA888F663}" {
+     m_aLosses {
+      FactionLoss "{652AF37EAC417D1C}" {
+      }
+     }
+     m_sObjectiveNames {
+      "KILL_USSR" "FLAG_US"
+     }
+     m_sFailedObjectiveNames {
+      "KILL_US" "FLAG_USSR"
+     }
+     m_bAdvanceGameStage 1
+     m_bUseMessage 1
+     m_bEventMessage "Победа обороны! Атака понесла серьёзные потери"
+    }
+   }
+  }
+ }
+ coords 3292.892 0 2936.443
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 3418.207 0 2983.398
+}

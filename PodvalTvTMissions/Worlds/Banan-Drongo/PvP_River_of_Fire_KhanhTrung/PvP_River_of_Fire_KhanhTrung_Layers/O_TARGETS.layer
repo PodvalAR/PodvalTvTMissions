@@ -1,0 +1,264 @@
+$grp Vehicle : "{3336BE330C4F355B}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_ammo.et" {
+ TARGET_1 {
+  components {
+   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+    FuelNodes {
+     SCR_FuelNode "{5622A70CD4036C5A}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{5628CA84B129D4CE}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+    }
+   }
+  }
+  coords 1642.415 1.343 1741.361
+  angleY 70.629
+ }
+ TARGET_2 {
+  components {
+   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+    FuelNodes {
+     SCR_FuelNode "{5622A70CD4036C5A}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{5628CA84B129D4CE}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+    }
+   }
+  }
+  coords 1644.174 1.344 1730.939
+  angleY 88.255
+ }
+ TARGET_3 {
+  components {
+   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+    FuelNodes {
+     SCR_FuelNode "{5622A70CD4036C5A}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{5628CA84B129D4CE}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+    }
+   }
+  }
+  coords 1661.836 1.344 1744.76
+  angleY -103.105
+ }
+}
+$grp GenericEntity : "{3F38EE51E904AE5B}Prefabs/Weapons/Launchers/RPOA/Launcher_RPOA.et" {
+ {
+  components {
+   WeaponComponent "{CFBAA4B706BA66E8}" {
+    components {
+     SCR_MuzzleInMagComponent "{50F65D04F21F7633}" {
+      MaxAmmo 0
+      InitialAmmo 0
+     }
+    }
+   }
+  }
+  coords 1631.627 2.333 1747.977
+  angleY -20.076
+  {
+   $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+    marker_all {
+     coords 0.004 0.047 -0.328
+     angleX 0.812
+     angleY -1.036
+     angleZ 91.166
+     scale 0.11
+     m_sImageSet "{C3F217CA9CF060B4}UI/Imagesets/Conflict/ConflictIconsSet.imageset"
+     m_sImageSetGlow ""
+     m_sQuadName "Task_Evac"
+     m_fWorldSize 35
+     m_sDescription "ПЗРК"
+     m_bUseWorldScale 0
+     m_aHideOnGameModeStates {
+      1 0 3
+     }
+     m_bShowForAnyFaction 1
+    }
+    marker_specators {
+     coords 0.004 0.047 -0.328
+     angleX 0.812
+     angleY -1.036
+     angleZ 91.166
+     scale 0.11
+     m_sImageSet "{C3F217CA9CF060B4}UI/Imagesets/Conflict/ConflictIconsSet.imageset"
+     m_sImageSetGlow ""
+     m_sQuadName "Task_Evac"
+     m_fWorldSize 35
+     m_sDescription "ПЗРК"
+     m_bUseWorldScale 0
+     m_bVisibleForEmptyFaction 1
+     m_aHideOnGameModeStates {
+      0 3 5
+     }
+    }
+   }
+  }
+ }
+ {
+  components {
+   WeaponComponent "{CFBAA4B706BA66E8}" {
+    components {
+     SCR_MuzzleInMagComponent "{50F65D04F21F7633}" {
+      MaxAmmo 0
+      InitialAmmo 0
+     }
+    }
+   }
+  }
+  coords 1662.772 3.531 1754.406
+  angleY -7.059
+  {
+   $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+    marker_all2 {
+     coords 0.004 0.047 -0.328
+     angleX 0.812
+     angleY -1.036
+     angleZ 91.166
+     scale 0.11
+     m_sImageSet "{C3F217CA9CF060B4}UI/Imagesets/Conflict/ConflictIconsSet.imageset"
+     m_sImageSetGlow ""
+     m_sQuadName "Task_Evac"
+     m_fWorldSize 35
+     m_sDescription "ПЗРК"
+     m_bUseWorldScale 0
+     m_aHideOnGameModeStates {
+      1 0 3
+     }
+     m_bShowForAnyFaction 1
+    }
+    marker_specators2 {
+     coords 0.004 0.047 -0.328
+     angleX 0.812
+     angleY -1.036
+     angleZ 91.166
+     scale 0.11
+     m_sImageSet "{C3F217CA9CF060B4}UI/Imagesets/Conflict/ConflictIconsSet.imageset"
+     m_sImageSetGlow ""
+     m_sQuadName "Task_Evac"
+     m_fWorldSize 35
+     m_sDescription "ПЗРК"
+     m_bUseWorldScale 0
+     m_bVisibleForEmptyFaction 1
+     m_aHideOnGameModeStates {
+      0 3 5
+     }
+    }
+   }
+  }
+ }
+ {
+  components {
+   WeaponComponent "{CFBAA4B706BA66E8}" {
+    components {
+     SCR_MuzzleInMagComponent "{50F65D04F21F7633}" {
+      MaxAmmo 0
+      InitialAmmo 0
+     }
+    }
+   }
+  }
+  coords 1666.19 2.802 1753.874
+  angleY -7.799
+  {
+   $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+    marker_all3 {
+     coords 0.004 0.047 -0.328
+     angleX 0.812
+     angleY -1.036
+     angleZ 91.166
+     scale 0.11
+     m_sImageSet "{C3F217CA9CF060B4}UI/Imagesets/Conflict/ConflictIconsSet.imageset"
+     m_sImageSetGlow ""
+     m_sQuadName "Task_Evac"
+     m_fWorldSize 35
+     m_sDescription "ПЗРК"
+     m_bUseWorldScale 0
+     m_aHideOnGameModeStates {
+      1 0 3
+     }
+     m_bShowForAnyFaction 1
+    }
+    marker_specators3 {
+     coords 0.004 0.047 -0.328
+     angleX 0.812
+     angleY -1.036
+     angleZ 91.166
+     scale 0.11
+     m_sImageSet "{C3F217CA9CF060B4}UI/Imagesets/Conflict/ConflictIconsSet.imageset"
+     m_sImageSetGlow ""
+     m_sQuadName "Task_Evac"
+     m_fWorldSize 35
+     m_sDescription "ПЗРК"
+     m_bUseWorldScale 0
+     m_bVisibleForEmptyFaction 1
+     m_aHideOnGameModeStates {
+      0 3 5
+     }
+    }
+   }
+  }
+ }
+}
+$grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+ target_marker {
+  coords 1641.18 1.226 1740.799
+  angleX -1.667
+  angleY -110.507
+  angleZ -179.948
+  m_sImageSet "{C3F217CA9CF060B4}UI/Imagesets/Conflict/ConflictIconsSet.imageset"
+  m_sImageSetGlow ""
+  m_sQuadName "SupplyDepot"
+  m_fWorldSize 35
+  m_sDescription "Грузовики с ПЗРК"
+  m_bUseWorldScale 0
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+  }
+  m_bShowForAnyFaction 1
+ }
+ target_marker2 {
+  coords 1659.134 1.344 1743.97
+  angleX -1.667
+  angleY -110.507
+  angleZ -179.948
+  m_sImageSet "{C3F217CA9CF060B4}UI/Imagesets/Conflict/ConflictIconsSet.imageset"
+  m_sImageSetGlow ""
+  m_sQuadName "SupplyDepot"
+  m_fWorldSize 35
+  m_sDescription "Грузовики с ПЗРК"
+  m_bUseWorldScale 0
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+  }
+  m_bShowForAnyFaction 1
+ }
+ target_marker3 {
+  coords 1647.329 1.344 1730.958
+  angleX -1.667
+  angleY -110.507
+  angleZ -179.948
+  m_sImageSet "{C3F217CA9CF060B4}UI/Imagesets/Conflict/ConflictIconsSet.imageset"
+  m_sImageSetGlow ""
+  m_sQuadName "SupplyDepot"
+  m_fWorldSize 35
+  m_sDescription "Грузовики с ПЗРК"
+  m_bUseWorldScale 0
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+  }
+  m_bShowForAnyFaction 1
+ }
+}

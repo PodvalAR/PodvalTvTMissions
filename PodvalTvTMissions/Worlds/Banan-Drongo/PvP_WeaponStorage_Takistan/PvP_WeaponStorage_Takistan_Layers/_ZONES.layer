@@ -1,0 +1,51 @@
+PolylineShapeEntity DEF {
+ components {
+  PS_PolyZone "{65876A009A613B7B}" {
+   m_mPolygonTexture ""
+   m_cPolygonColor 1 1 1 0
+   m_mPolygonTextureBorder ""
+   m_cPolygonBorderColor 0.502 0 0 1
+   m_fPolygonBorderWidth 5
+   m_aVisibleForFactions {
+    "USSR" "Ses_TKR" "Ses_TKA" ""
+   }
+  }
+ }
+ coords 2680.908 222.439 5180.179
+ Points {
+  ShapePoint "{65876A00852ECDA2}" {
+   Position 0 0 0
+  }
+  ShapePoint "{65876A00852E14AA}" {
+   Position 25.728 1.13 -47.423
+  }
+  ShapePoint "{65876A008FC0205B}" {
+   Position -47.049 3.712 -88.119
+  }
+  ShapePoint "{65876A00925FD22E}" {
+   Position -71.537 2.147 -40.004
+  }
+ }
+ IsClosed 1
+ {
+  PS_PolyZoneTrigger {
+   components {
+    Hierarchy "{614548BDF998E12B}" {
+    }
+   }
+   TriggerShapeType Polyline
+   "Polyline Height" 2000
+   TriggerActivationType "All changes"
+   PeriodicQueries 1
+   UpdatePeriod 1
+   ClassesFilter {
+    "SCR_ChimeraCharacter"
+   }
+   m_polyZoneEffect PS_PolyZoneEffectRestricted "{614548BC046ADB65}" {
+    m_fKillTime 14
+   }
+   m_bReversed 1
+   m_sFactionKey "Ses_TKA"
+  }
+ }
+}

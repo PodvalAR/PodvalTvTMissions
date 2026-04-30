@@ -1,0 +1,438 @@
+$grp Vehicle : "{0FBF8F010F81A4E5}Prefabs/Vehicles/Wheeled/LAV25/LAV25.et" {
+ LAV1 {
+  coords 12570.79 224.127 10060.474
+  angleX -6.616
+  angleY -118.608
+  angleZ 6.149
+  m_sAttachmentGroupName "US_1_0_0"
+  m_bEnableMoveOnFreeze 1
+ }
+ LAV2 {
+  coords 12573.034 224.796 10055.306
+  angleX 0.728
+  angleY -118.935
+  angleZ 8.306
+  m_sAttachmentGroupName "US_1_0_1"
+  m_bEnableMoveOnFreeze 1
+ }
+ LAV3 {
+  coords 12576.403 225.719 10050.036
+  angleX -0.381
+  angleY -126.266
+  angleZ 9.015
+  m_sAttachmentGroupName "US_1_0_2"
+  m_bEnableMoveOnFreeze 1
+ }
+ LAV4 {
+  coords 12587.837 230.627 10009.314
+  angleX -0.241
+  angleY 46.353
+  angleZ -6.808
+  m_sAttachmentGroupName "US_2_0_0"
+  m_bEnableMoveOnFreeze 1
+ }
+ LAV5 {
+  coords 12590.814 231.164 10005.945
+  angleX -0.022
+  angleY 48.185
+  angleZ -6.812
+  m_sAttachmentGroupName "US_2_0_1"
+  m_bEnableMoveOnFreeze 1
+ }
+ LAV6 {
+  coords 12594.336 231.838 10002.145
+  angleX -1.937
+  angleY 48.718
+  angleZ -7.332
+  m_sAttachmentGroupName "US_2_0_2"
+  m_bEnableMoveOnFreeze 1
+ }
+ LAV7 {
+  coords 12645.001 238.007 9979.646
+  angleX -0.421
+  angleY -132.975
+  angleZ 6.195
+  m_sAttachmentGroupName "US_3_0_0"
+  m_bEnableMoveOnFreeze 1
+ }
+ LAV8 {
+  coords 12649.578 238.758 9975.227
+  angleX 0.416
+  angleY -135.114
+  angleZ 6.8
+  m_sAttachmentGroupName "US_3_0_1"
+  m_bEnableMoveOnFreeze 1
+ }
+ LAV9 {
+  coords 12653.468 239.318 9970.726
+  angleX 0.496
+  angleY -136.223
+  angleZ 4.403
+  m_sAttachmentGroupName "US_3_0_2"
+  m_bEnableMoveOnFreeze 1
+ }
+ LAV12 {
+  coords 12590.697 228.893 10030.896
+  angleX -0.18
+  angleY -127.651
+  angleZ 7.631
+  m_sAttachmentGroupName "US_1_1_2"
+  m_bEnableMoveOnFreeze 1
+ }
+ LAV10 {
+  coords 12584.939 227.654 10038.386
+  angleX -6.827
+  angleY -128.055
+  angleZ 6.381
+  m_sAttachmentGroupName "US_1_1_0"
+  m_bEnableMoveOnFreeze 1
+ }
+ LAV11 {
+  coords 12588.155 228.32 10034.338
+  angleX -0.357
+  angleY -126.328
+  angleZ 7.625
+  m_sAttachmentGroupName "US_1_1_1"
+  m_bEnableMoveOnFreeze 1
+ }
+ LAV13 {
+  coords 12616.213 235.584 9981.15
+  angleX -6.28
+  angleY 49.269
+  angleZ -7.24
+  m_sAttachmentGroupName "US_2_1_2"
+  m_bEnableMoveOnFreeze 1
+ }
+ LAV14 {
+  coords 12612.69 234.937 9984.95
+  angleX -6.106
+  angleY 48.973
+  angleZ -7.393
+  m_sAttachmentGroupName "US_2_1_1"
+  m_bEnableMoveOnFreeze 1
+ }
+ LAV15 {
+  coords 12609.714 234.354 9988.32
+  angleX -6.34
+  angleY 47.121
+  angleZ -7.191
+  m_sAttachmentGroupName "US_2_1_0"
+  m_bEnableMoveOnFreeze 1
+ }
+ LAV16 {
+  coords 12660.128 240.005 9963.318
+  angleX -1.944
+  angleY -132.686
+  angleZ 3.335
+  m_sAttachmentGroupName "US_3_1_0"
+  m_bEnableMoveOnFreeze 1
+ }
+ LAV17 {
+  coords 12663.858 240.321 9959.756
+  angleX -3.017
+  angleY -134.897
+  angleZ 3.402
+  m_sAttachmentGroupName "US_3_1_1"
+  m_bEnableMoveOnFreeze 1
+ }
+ LAV18 {
+  coords 12667.406 240.636 9955.562
+  angleX 0.252
+  angleY -135.851
+  angleZ 3.408
+  m_sAttachmentGroupName "US_3_1_2"
+  m_bEnableMoveOnFreeze 1
+ }
+ LAV19 {
+  coords 12673.273 241.367 9915.41
+  angleX -2.475
+  angleY 43.123
+  angleZ -1.927
+  m_sAttachmentGroupName "US_3_2_0"
+  m_bEnableMoveOnFreeze 1
+ }
+ LAV20 {
+  coords 12669.443 241.288 9918.987
+  angleX -1.024
+  angleY 43.109
+  angleZ -0.569
+  m_sAttachmentGroupName "US_3_2_1"
+  m_bEnableMoveOnFreeze 1
+ }
+ LAV21 {
+  coords 12664.981 241.446 9923.152
+  angleX -4.19
+  angleY 43.101
+  angleZ 0.74
+  m_sAttachmentGroupName "US_3_2_2"
+  m_bEnableMoveOnFreeze 1
+ }
+}
+$grp SCR_AIGroup : "{1FE5E74E0E2B6255}Prefabs/Groups/BLUFOR/Campaign/S_US_drg_CrewLav25.et" {
+ US_1_0_0 {
+  components {
+   PS_GroupCallsignAssigner "{64609808C672C48B}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 12567.217 224.295 10057.159
+  angleX -1.84
+  angleY -117.012
+  angleZ 6.287
+ }
+ US_1_0_1 {
+  components {
+   PS_GroupCallsignAssigner "{64609808C672C48B}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 12569.817 225.108 10052.511
+  angleX -1.629
+  angleY -118.907
+  angleZ 6.344
+ }
+ US_1_0_2 {
+  components {
+   PS_GroupCallsignAssigner "{64609808C672C48B}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 12573.468 225.817 10046.596
+  angleX 0.119
+  angleY -126.198
+  angleZ 5.434
+ }
+ US_2_0_0 {
+  components {
+   PS_GroupCallsignAssigner "{64609808C672C48B}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 12590.248 230.535 10013.938
+  angleX -0.233
+  angleY 44.709
+  angleZ -6.546
+ }
+ US_2_0_1 {
+  components {
+   PS_GroupCallsignAssigner "{64609808C672C48B}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 12594.132 231.056 10010.477
+  angleX -0.225
+  angleY 44.803
+  angleZ -6.998
+ }
+ US_2_0_2 {
+  components {
+   PS_GroupCallsignAssigner "{64609808C672C48B}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 2
+   }
+  }
+  coords 12597.396 231.648 10006.928
+  angleX 0.191
+  angleY 49.964
+  angleZ -6.809
+ }
+ US_3_0_0 {
+  components {
+   PS_GroupCallsignAssigner "{64609808C672C48B}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 12641.827 238.134 9975.332
+  angleX 0.193
+  angleY -133.252
+  angleZ 6.81
+ }
+ US_3_0_1 {
+  components {
+   PS_GroupCallsignAssigner "{64609808C672C48B}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 1
+   }
+  }
+  coords 12646.593 238.864 9970.815
+  angleX -0.669
+  angleY -134.347
+  angleZ 5.801
+ }
+ US_3_0_2 {
+  components {
+   PS_GroupCallsignAssigner "{64609808C672C48B}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 2
+   }
+  }
+  coords 12650.978 239.472 9966.383
+  angleX 0.112
+  angleY -140.234
+  angleZ 3.417
+ }
+ US_1_1_0 {
+  components {
+   PS_GroupCallsignAssigner "{64609808C672C48B}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 12581.602 227.763 10034.308
+  angleX -0.144
+  angleY -132.009
+  angleZ 6.548
+ }
+ US_1_1_1 {
+  components {
+   PS_GroupCallsignAssigner "{64609808C672C48B}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 12585.187 228.484 10030.322
+  angleX -0.187
+  angleY -132.014
+  angleZ 7.395
+ }
+ US_1_1_2 {
+  components {
+   PS_GroupCallsignAssigner "{64609808C672C48B}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 12588.244 229.064 10026.926
+  angleX -0.374
+  angleY -132.038
+  angleZ 7.187
+ }
+ US_2_1_2 {
+  components {
+   PS_GroupCallsignAssigner "{64609808C672C48B}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 12619.478 235.421 9985.521
+  angleX 0.191
+  angleY 49.964
+  angleZ -6.809
+ }
+ US_2_1_0 {
+  components {
+   PS_GroupCallsignAssigner "{64609808C672C48B}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 12612.328 234.308 9992.53
+  angleX -0.233
+  angleY 44.709
+  angleZ -6.546
+ }
+ US_2_1_1 {
+  components {
+   PS_GroupCallsignAssigner "{64609808C672C48B}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 12616.212 234.829 9989.068
+  angleX -0.225
+  angleY 44.803
+  angleZ -6.998
+ }
+ US_3_1_0 {
+  components {
+   PS_GroupCallsignAssigner "{64609808C672C48B}" {
+    m_iCompanyCallsign 3
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 12656.999 240.805 9958.9
+  angleX 0.193
+  angleY -133.252
+  angleZ 6.81
+ }
+ US_3_1_1 {
+  components {
+   PS_GroupCallsignAssigner "{64609808C672C48B}" {
+    m_iCompanyCallsign 3
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 12660.88 240.44 9954.959
+  angleX 0.193
+  angleY -133.252
+  angleZ 6.81
+ }
+ US_3_1_2 {
+  components {
+   PS_GroupCallsignAssigner "{64609808C672C48B}" {
+    m_iCompanyCallsign 3
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 12664.813 241.125 9950.78
+  angleX 0.193
+  angleY -133.252
+  angleZ 6.81
+ }
+ US_3_2_0 {
+  components {
+   PS_GroupCallsignAssigner "{64609808C672C48B}" {
+    m_iCompanyCallsign 3
+    m_iPlatoonCallsign 2
+   }
+  }
+  coords 12679.326 242.139 9922.622
+  angleX -0.183
+  angleY 40.636
+  angleZ -2.403
+ }
+ US_3_2_1 {
+  components {
+   PS_GroupCallsignAssigner "{64609808C672C48B}" {
+    m_iCompanyCallsign 3
+    m_iPlatoonCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 12675.306 241.916 9926.071
+  angleX -0.173
+  angleY 40.88
+  angleZ -2.404
+ }
+ US_3_2_2 {
+  components {
+   PS_GroupCallsignAssigner "{64609808C672C48B}" {
+    m_iCompanyCallsign 3
+    m_iPlatoonCallsign 2
+    m_iSquadCallsign 2
+   }
+  }
+  coords 12671.153 241.693 9929.438
+  angleX -0.294
+  angleY 37.986
+  angleZ -2.392
+ }
+}
+SCR_AIGroup US_0_0_0 : "{68D5E3B6F7C86BD0}Prefabs/Groups/BLUFOR/Campaign/F_US_drg_CompanyHQ.et" {
+ coords 12582.85 226.635 10054.119
+ angleX -1.33
+ angleY -128.176
+ angleZ -0.236
+ m_aUnitPrefabSlots {
+  "{F81AEF796B932D96}Prefabs/Characters/Factions/BLUFOR/US_Army/Dev/drg_Character_US_CL.et"
+ }
+}

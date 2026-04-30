@@ -1,0 +1,52 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ "_1_RULES" {
+  m_sTitle "#PS-Description_HeaderRules"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "ОБЩИЕ ПРАВИЛА "\
+  "— Всем запрещено надевать форму, головные уборы, разгрузки, бронежилеты противника (рюкзаки можно) "\
+  "— Количество радиостанций ограничено до 2-3 шт. в отделении. "\
+  "— Запрещено любым способом дюпать ресурсы доступные изначально."\
+  ""\
+  "СПОСОБЫ ПОБЕДЫ ДЛЯ СССР"\
+  "— 1. Захватить населёный пункт Тимуркалай путём смены флага."\
+  "— 2. Нанести противнику серьёзный урон"\
+  ""\
+  "СПОСОБЫ ПОБЕДЫ ДЛЯ ПИРАТОВ"\
+  "— 1. Удержать населённый пункт Тимуркалай"\
+  "— 2. Нанести противнику серьёзный урон"\
+  ""\
+  "ДЕТАЛИ"\
+  "— Флаг НЕ перезахватываемый"\
+  "— В случае захвата флага миссия автоматически завершиться! (скриптом)"\
+  ""\
+  "* Дюп — игровой эксплойт, позволяющий нечестным способом дублировать предметы или ресурсы за счёт багов и недоработок в механике игры (от англ. duplication)."
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+  m_iOrder 1
+ }
+ "_2_PIR" {
+  m_sTitle "Задачи для Пиратов"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "Всё просто, мы должны удержить н.п Тимуркалай! "
+  m_aVisibleForFactions {
+   "Drg_PIR"
+  }
+  m_iOrder 2
+ }
+ "_2_USSR" {
+  m_sTitle "#PS-Description_HeaderUS"
+  m_sTextData "Всё просто, мы должны захватить н.п Тимуркалай! "
+  m_aVisibleForFactions {
+   "USSR"
+  }
+  m_iOrder 2
+ }
+ "_0_ABOUT" {
+  m_sTitle "#PS-Description_HeaderAboutMission"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "Битва в регионе Тимуркалай ранним утром."\
+  ""
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+}

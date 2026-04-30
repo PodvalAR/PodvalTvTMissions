@@ -1,0 +1,77 @@
+$grp Vehicle : "{5C1D77700F472327}Prefabs/Vehicles/Wheeled/BRDM2/BRDM2_TKA.et" {
+ BRDM2_TKA1 {
+  coords 8954.054 291.553 5361.577
+  angleX -2.441
+  angleY -146.862
+  angleZ 0.102
+ }
+ BRDM2_TKA2 {
+  coords 8961.94 291.979 5368.428
+  angleX -5.918
+  angleY -127.157
+  angleZ -5.438
+ }
+}
+$grp SCR_AIGroup : "{811D063FD0D09047}Prefabs/Groups/INDFOR/TGK/DRG_Group_TGK_HigthRifleSquad.et" {
+ PIR_1_0_0 {
+  coords 8970.491 292.178 5358.402
+  angleY -40.412
+ }
+ PIR_1_0_1 {
+  components {
+   PS_GroupCallsignAssigner "{65155113282304D1}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 8957.04 291.493 5347.495
+  angleY -35.955
+ }
+ PIR_1_0_2 {
+  components {
+   PS_GroupCallsignAssigner "{65155113282304D1}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 8938.488 291.727 5331.821
+  angleY -40.716
+ }
+ PIR_2_0_1 {
+  components {
+   PS_GroupCallsignAssigner "{65155113282304D1}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 8891.043 294.131 5294.904
+  angleY -37.492
+ }
+ PIR_2_0_0 {
+  components {
+   PS_GroupCallsignAssigner "{65155113282304D1}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 8902.824 293.39 5304.18
+  angleX 2.01
+  angleY -39.041
+  angleZ 2.026
+ }
+ PIR_2_0_2 {
+  components {
+   PS_GroupCallsignAssigner "{65155113282304D1}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 2
+   }
+  }
+  coords 8879.497 295.228 5286.445
+  angleY -34.527
+ }
+}
+SCR_AIGroup PIR_0_0_0 : "{E15D86495A388780}Prefabs/Groups/INDFOR/TGK/DRG_Group_TGK_CompanyHQ.et" {
+ coords 8987.22 292.541 5372.892
+ angleX -0.123
+ angleY -39.423
+ angleZ 1.26
+}
