@@ -1,0 +1,91 @@
+PolylineShapeEntity zone {
+ components {
+  PS_PolyZone "{65F137C3CDECE797}" {
+   m_mPolygonTexture "{B072704FB1A499B7}UI/layouts/Textures/Grid6b.edds"
+   m_cPolygonColor 0.502 0 0 0.5
+   m_mPolygonTextureBorder ""
+   m_cPolygonBorderColor 0.502 0 0 1
+   m_fPolygonBorderWidth 5
+   m_aVisibleForFactions {
+    "US" "FIA" ""
+   }
+  }
+ }
+ coords 7098.269 -19.56 9669.854
+ Points {
+  ShapePoint "{65F137C3EC67B7F6}" {
+   Position -329.391 17.537 -359.379
+  }
+  ShapePoint "{65F137C3EC6513E9}" {
+   Position -1175.238 52.959 -829.832
+  }
+  ShapePoint "{65F137C3F624C9E1}" {
+   Position -1516.619 0 -883.183
+  }
+  ShapePoint "{65F137C3F4D2A5A7}" {
+   Position -1906.984 0 -1013.262
+  }
+  ShapePoint "{65F137C3F535B9D8}" {
+   Position -2603.395 0 -983.169
+  }
+  ShapePoint "{65F137C3F565E557}" {
+   Position -3539.615 0 -461.238
+  }
+  ShapePoint "{65F137C3FAD29A96}" {
+   Position -3717.454 0 683.919
+  }
+  ShapePoint "{65F137C3FF010544}" {
+   Position -3176.42 0 1926.198
+  }
+  ShapePoint "{65F137C3C24CBCA6}" {
+   Position -3057.966 0 2844.71
+  }
+  ShapePoint "{65F137C3C2982878}" {
+   Position -2687.67 0 3127.325
+  }
+  ShapePoint "{65F137C3C06748A9}" {
+   Position -1898.043 0 3151.286
+  }
+  ShapePoint "{65F137C3C138AB9F}" {
+   Position -1336.709 0 2733.996
+  }
+  ShapePoint "{65F137C3C7F4C104}" {
+   Position -1104.017 0 2089.035
+  }
+  ShapePoint "{65F137C3C46516BA}" {
+   Position -734.828 0 1339.101
+  }
+  ShapePoint "{65F137C3C5BEAC28}" {
+   Position -597.237 0 637.222
+  }
+  ShapePoint "{65F137C3CAE71390}" {
+   Position -206.492 0 104.707
+  }
+  ShapePoint "{65F137C3CEA46C4E}" {
+   Position -134.522 0 -204.629
+  }
+ }
+ IsClosed 1
+ {
+  PS_PolyZoneTrigger {
+   components {
+    Hierarchy "{614548BDF998E12B}" {
+    }
+   }
+   TriggerShapeType Polyline
+   SphereRadius 5000000
+   "Polyline Height" 1000
+   ShapeColor 0.251 0 0.502 1
+   TriggerActivationType "All changes"
+   PeriodicQueries 1
+   UpdatePeriod 1
+   ClassesFilter {
+    "SCR_ChimeraCharacter"
+   }
+   m_polyZoneEffect PS_PolyZoneEffectRestricted "{6146D719824FE119}" {
+    m_fKillTime 40
+   }
+   m_sFactionKey "FIA"
+  }
+ }
+}

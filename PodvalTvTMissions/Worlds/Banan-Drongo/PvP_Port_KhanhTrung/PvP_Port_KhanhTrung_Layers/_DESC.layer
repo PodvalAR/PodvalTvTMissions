@@ -1,0 +1,46 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ "_1_RULES" {
+  coords 5534.73 61.71 10496.381
+  m_sTitle "#PS-Description_HeaderRules"
+  m_sTextData "ОБЩИЕ ПРАВИЛА"\
+  "— Всем запрещено надевать форму, головные уборы, разгрузки, бронежилеты противника (рюкзаки можно) "\
+  "  "\
+  "СПОСОБЫ ПОБЕДЫ ВС США"\
+  "— Удержать оба здания"\
+  ""\
+  "СПОСОБЫ ПОБЕДЫ БОЕВИКОВ"\
+  "— Захватить одно из зданий (любое)"\
+  ""\
+  "— ВНИМАНИЕ! Для захвата здания необходимо сменить флаг на крыше здания через взаимодействие."\
+  "  "
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+  m_iOrder 1
+ }
+ "_2_USAF" {
+  coords 5159.505 56.132 10322.095
+  m_sTitle "#PS-Description_HeaderUS"
+  m_sTextData "Нам необходимо удержать контроль над портом"
+  m_aVisibleForFactions {
+   "RHS_USAF"
+  }
+ }
+ "_0_ABOUT" {
+  coords 5568.057 56.802 10524.196
+  m_sTitle "#PS-Description_HeaderAboutMission"
+  m_sTextData "Пехотный стрелковый бой близ порта \"Чу Лан\""
+  m_aVisibleForFactions {
+   "Ses_CDF" "RHS_AFRF" "RHS_USAF"
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+ "_2_PIR" {
+  coords 707.511 14.762 338.773
+  m_sTitle "Задачи для боевиков"
+  m_sTextData "Нам нужно захватить одно из зданий в порту для победы."
+  m_aVisibleForFactions {
+   "Drg_PIR"
+  }
+ }
+}

@@ -1,0 +1,124 @@
+PolylineShapeEntity zone {
+ components {
+  PS_PolyZone "{663AB5ED1F71B90E}" {
+   m_mPolygonTexture "{1060F9C216368D80}UI/layouts/Textures/Grid5.edds"
+   m_cPolygonColor 0 0.314 0.005 1
+   m_mPolygonTextureBorder ""
+   m_cPolygonBorderColor 0 0.314 0.005 1
+   m_fPolygonBorderWidth 5
+   m_aVisibleForFactions {
+    "Ses_TKR" "RHS_AFRF" ""
+   }
+  }
+ }
+ coords 4204.265 17 4192.306
+ Points {
+  ShapePoint "{663AB5ED0D2DA5BC}" {
+   Position 0 0 0
+  }
+  ShapePoint "{663AB5ED0D2C6E41}" {
+   Position 75.187 0 0.681
+  }
+  ShapePoint "{663AB5ED1723DEF2}" {
+   Position 74.975 0 -68.278
+  }
+  ShapePoint "{663AB5ED14A436AD}" {
+   Position -2.073 0 -68.823
+  }
+  ShapePoint "{663AB5ED1A934BBD}" {
+   Position -0.631 0 -2.233
+  }
+ }
+}
+Vehicle M923A1_command1 : "{36BDCC88B17B3BFA}Prefabs/Vehicles/Wheeled/M923A1/M923A1_command.et" {
+ coords 3297.026 34.891 7792.777
+ angleY 166.309
+ m_sAttachmentGroupName "USAF_0_0_0"
+}
+GenericEntity : "{630742372D9304E8}Prefabs/System/DRG_ZoneControlPrefab.et" {
+ components {
+  DRG_ZoneControlComponent "{662B2CCC5DFEB26C}" {
+   m_aControlLogics {
+    DRG_ZoneControlLogic "{663AB5ED4A0D2C60}" {
+     m_sZoneEntityName "zone"
+     m_sZonePreviewName "Мечеть"
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "ZONE_USAF"
+     }
+     m_sFailedObjectiveNames {
+      "ZONE_TKR"
+     }
+     m_sMessage "Мечеть захвачена, победа США!"
+     m_sPreviewMessageToDescription "Захватить мечеть"
+     m_aConditions {
+      DRG_ZoneControlCondition "{663AB5EA25D305E0}" {
+       m_sFactionKey "RHS_USAF"
+       m_iOperator GREATER_OR_EQUALS
+       m_iCount 3
+      }
+      DRG_ZoneControlCondition "{663AB5EA2EC624B9}" {
+       m_sFactionKey "Ses_TKR"
+       m_iOperator LESS_OR_EQUALS
+       m_iCount 1
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 4222.16 16.999 4176.701
+}
+GenericEntity : "{6A3CDCFB475BF1B2}Prefabs/System/DRG_CriticalLossPrefab.et" {
+ components {
+  DRG_CriticalLossComponent "{65213D368F1BD792}" {
+   m_iAdvanceAfterSec 5
+   m_iTestingPlayerCounts 8
+   m_aLossLogics {
+    LossLogic "{654C7E247C7951AD}" {
+     m_aLosses {
+      FactionLoss "{6622E211763D5877}" {
+       m_iCriticalLossCount 4
+       m_sFactionKey "RHS_USAF"
+      }
+     }
+     m_sObjectiveNames {
+      "KILL_USAF" "ZONE_TKR"
+     }
+     m_sFailedObjectiveNames {
+      "KILL_TKR" "ZONE_USAF"
+     }
+     m_bAdvanceGameStage 1
+     m_bUseMessage 1
+     m_bEventMessage "Победа боевиков! ВС США понесли большие потери."
+    }
+    LossLogic "{654C7E247CCB525F}" {
+     m_aLosses {
+      FactionLoss "{654C7E24443173C6}" {
+       m_iCriticalLossCount 4
+       m_sFactionKey "Ses_TKR"
+      }
+     }
+     m_sObjectiveNames {
+      "KILL_TKR" "ZONE_USAF"
+     }
+     m_sFailedObjectiveNames {
+      "KILL_USAF" "ZONE_TKR"
+     }
+     m_bAdvanceGameStage 1
+     m_bUseMessage 1
+     m_bEventMessage "Победа ВС США! Боевики понесли большие потери."
+    }
+   }
+  }
+ }
+ coords 4729.839 290.153 6998.263
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2400
+  }
+ }
+ coords 4762.458 287.818 7005.816
+}

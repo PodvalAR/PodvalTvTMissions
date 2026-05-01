@@ -1,0 +1,123 @@
+$grp SCR_DestructibleBuildingEntity : "{12A8F2ECF2C00B1F}Prefabs/Structures/Infrastructure/Naval/Houses/CottagePier_01/CottagePier_01.et" {
+ {
+  coords 2677.272 0.578 531.267
+  angleY -107.953
+ }
+ {
+  coords 1304.818 -1.308 317.385
+  angleY -42.251
+ }
+}
+SCR_DestructibleBuildingEntity : "{1A774A9DF37FE9CA}Prefabs/Structures/Services/Government/MunicipalOffice_E_01/MunicipalOffice_E_01_beige.et" {
+ coords 2651.394 1.091 537.186
+ angleY 67.48
+}
+$grp SCR_DestructibleBuildingEntity : "{2B165B5BF9FE270D}Prefabs/Structures/Infrastructure/Naval/Sheds/BoatShed_01/BoatShed_01.et" {
+ {
+  coords 2666.822 -0.473 505.963
+  angleY 130.972
+ }
+ {
+  coords 2671.258 -0.489 511.071
+  angleY 130.972
+ }
+ {
+  coords 2662.456 -0.421 500.936
+  angleY 130.972
+ }
+}
+$grp SCR_DestructibleBuildingEntity : "{38A5F3E4578087AB}Prefabs/Structures/Houses/Town/House_Town_E_2I01/House_Town_E_2I01.et" {
+ {
+  coords 2615.962 1.045 520.847
+  angleY -52.979
+ }
+ {
+  coords 1285.032 0.458 325.576
+  angleY -31.273
+ }
+}
+StaticModelEntity : "{7E2380494811A5FB}Prefabs/Structures/Infrastructure/Towers/TransmitterTower_01/TransmitterTower_01_medium.et" {
+ components {
+  ScriptedRadioComponent "{5CB8819ABF076BA3}" {
+   Enabled 0
+  }
+  ActionsManagerComponent "{591AD559E46E5F5F}" {
+   Enabled 0
+  }
+ }
+ coords 2630.447 6.393 514.75
+ angleY 36.214
+}
+SCR_DestructibleBuildingEntity : "{92E8F78BCF17D93D}Prefabs/Structures/Commercial/Shops/ShopHouse_E_2l01/ShopHouse_E_2I01t_clothesstore.et" {
+ coords 2586.977 1.621 479.842
+ angleY 14.739
+}
+SCR_DestructibleBuildingEntity : "{A43A9D7D878F6EC0}Prefabs/Structures/Houses/Prefabricated/House_Prefab_2I01/House_Prefab_2I01_v1.et" {
+ coords 2605.521 0.922 508.175
+ angleY -141.173
+}
+$grp SCR_DestructibleBuildingEntity : "{E7EC0E80F0645DFE}Prefabs/Structures/Houses/Town/House_Town_E_2I03/House_Town_E_2I03.et" {
+ {
+  coords 2622.917 0.832 537.763
+  angleY -54.83
+ }
+ {
+  coords 2607.716 -0.05 479.514
+  angleY 1.237
+ }
+ {
+  coords 1266.787 1.343 292.022
+  angleY 125.365
+ }
+}
+SCR_DestructibleBuildingEntity : "{F5A2DC0597B53E19}Prefabs/Structures/Agriculture/Barn/Barn_E_02/Barn_E_02.et" {
+ coords 2655.188 0.006 495.719
+ angleY 129.129
+ {
+  EnvironmentProbeEntity {
+   ID "5E68CCF20835422E"
+   coords -0.546 1.883 -1.577
+  }
+  GenericEntity {
+   ID "554AC490212A6E7B"
+   coords 0 0 -0.001
+  }
+  GenericEntity {
+   ID "554AC490212A6E38"
+   coords 0 0 -0.001
+  }
+  GenericEntity {
+   ID "554AC490212A6E5D"
+   coords 0 0 0
+  }
+  GenericEntity {
+   ID "554AC490212A6D92"
+   coords 0 0 0.001
+  }
+  GenericEntity : "{47F8D83F71EB2B74}Prefabs/Structures/Infrastructure/Lamps/LampStreet_E_02/LampStreet_E_02_addon.et" {
+   coords -0.016 3.494 -4.078
+   angleY 177.921
+   {
+    GameEntity {
+     ID "5A42D80F564F3E8B"
+     coords 0 0 0
+     {
+      LightEntity {
+       ID "5990CE56D1255F77"
+       coords 0 -0.137 0.064
+       angleX -65
+      }
+     }
+    }
+   }
+  }
+ }
+}
+SCR_DestructibleBuildingEntity : "{FC4BFDB06DC30F3F}Prefabs/Structures/Services/Hotels/MountainHotel_01/MountainHotel_01_red.et" {
+ coords 2637.317 1.759 469.283
+ angleY -84.388
+}
+SCR_DestructibleBuildingEntity : "{FF6F5211131F41C8}Prefabs/Structures/Infrastructure/Naval/Houses/CottagePier_01_green.et" {
+ coords 2680.272 -0.229 518.062
+ angleY -104.385
+}

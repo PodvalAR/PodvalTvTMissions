@@ -1,0 +1,37 @@
+GenericEntity : "{52327EA0926E4EC7}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_02_V1_USAF.et" {
+ components {
+  SCR_EditableEntityComponent "{5EF0BDF2D0AE76F6}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    m_sFaction "US"
+    m_aAuthoredLabels {
+     FACTION_US
+    }
+   }
+  }
+  SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+   m_aObjectiveNames {
+    "Drg_VCA_WIN"
+    "US_WIN"
+   }
+   m_aFlagData {
+    PS_FlagData "{6578E944D5ED2B05}" {
+     m_sFactionKey "Drg_VCA"
+    }
+    PS_FlagData "{6578E944DA2FC5F3}" {
+     m_sFactionKey "US"
+    }
+   }
+   m_sFactionKey "US"
+   m_sNotificationText "Военный лагерь США захвачен"
+  }
+  BaseActionsManagerComponent "{6202D4E6F133BF4A}" {
+   additionalActions {
+    PS_FlagChangeAction "{6202D4E6A53D4B3C}" {
+     Duration 10
+     m_bUseAnimation 1
+    }
+   }
+  }
+ }
+ coords 1239.253 95.089 2697.248
+}

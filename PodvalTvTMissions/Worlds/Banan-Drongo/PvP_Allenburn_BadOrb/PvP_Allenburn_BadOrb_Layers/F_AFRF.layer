@@ -1,0 +1,665 @@
+Vehicle TARGET_3 : "{2C95509CA3E61DE1}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_command_camo1.et" {
+ components {
+  SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+   FuelNodes {
+    SCR_FuelNode "{5622A70CD4036C5A}" {
+     MaxFuel 0
+     m_fInitialFuelTankState 0
+    }
+    SCR_FuelNode "{5628CA84B129D4CE}" {
+     MaxFuel 0
+     m_fInitialFuelTankState 0
+    }
+   }
+  }
+ }
+ coords 3263.275 233.649 3364.005
+ angleY 159.859
+}
+$grp SCR_AIGroup : "{8E561C342F17E360}Prefabs/Groups/OPFOR/DRG_Group_RHS_RF_MSV_RifleSquad_P.et" {
+ RF_0_0_0 {
+  coords 3222.109 233.462 3309.666
+  angleX -0.705
+  angleY 168.792
+  angleZ 1.052
+  m_faction "RHS_AFRF"
+  m_aUnitPrefabSlots {
+   "{AD235FD968EF9F09}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_CL.et"
+  }
+  m_bDeleteWhenEmpty 0
+  m_bDeleteIfNoPlayer 0
+  m_sCustomNameSet "#DRG_Sqd_Hq"
+ }
+ RF_1_0_0 {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation ""
+   }
+   PS_GroupCallsignAssigner "{62387672B7C7F14A}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 3226.234 233.438 3322.49
+  angleY 80.793
+  m_faction "RHS_AFRF"
+  m_aUnitPrefabSlots {
+   "{53A7932FD6BDDF63}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_SL.et" "{2EBF7FD7B32EE3FA}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_SR.et" "{E6870BF19DB0632C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_AT.et" "{C0F50DDFB6CFA87B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_AAT.et" "{9CBAF5396A6DDC9C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_MG_opt.et" "{FAC6AB61E4CA97F5}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_MGAB.et" "{33FA1C11138E145A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_GL.et" "{6D10A06D248FCD0B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_Sniper.et"
+  }
+  m_bDeleteWhenEmpty 0
+  m_bDeleteIfNoPlayer 0
+  m_sCustomNameSet "#DRG-Sq-PlatoonHQ"
+ }
+ RF_1_0_1 {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation ""
+   }
+   PS_GroupCallsignAssigner "{62387672B7C7F14A}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 3224.069 233.438 3335.846
+  angleY 80.793
+  m_faction "RHS_AFRF"
+  m_aUnitPrefabSlots {
+   "{53A7932FD6BDDF63}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_SL.et" "{2EBF7FD7B32EE3FA}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_SR.et" "{E6870BF19DB0632C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_AT.et" "{C0F50DDFB6CFA87B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_AAT.et" "{9CBAF5396A6DDC9C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_MG_opt.et" "{FAC6AB61E4CA97F5}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_MGAB.et" "{33FA1C11138E145A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_GL.et" "{6D10A06D248FCD0B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_Sniper.et"
+  }
+  m_bDeleteWhenEmpty 0
+  m_bDeleteIfNoPlayer 0
+  m_sCustomNameSet "#DRG-Sq-RifleSquad"
+ }
+ RF_1_0_2 {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation ""
+   }
+   PS_GroupCallsignAssigner "{62387672B7C7F14A}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 3222.282 233.438 3346.872
+  angleY 80.793
+  m_faction "RHS_AFRF"
+  m_aUnitPrefabSlots {
+   "{53A7932FD6BDDF63}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_SL.et" "{2EBF7FD7B32EE3FA}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_SR.et" "{E6870BF19DB0632C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_AT.et" "{C0F50DDFB6CFA87B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_AAT.et" "{9CBAF5396A6DDC9C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_MG_opt.et" "{FAC6AB61E4CA97F5}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_MGAB.et" "{33FA1C11138E145A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_GL.et" "{6D10A06D248FCD0B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_Sniper.et"
+  }
+  m_bDeleteWhenEmpty 0
+  m_bDeleteIfNoPlayer 0
+  m_sCustomNameSet "#DRG-Sq-RifleSquad"
+ }
+ RF_2_0_0 {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation ""
+   }
+   PS_GroupCallsignAssigner "{62387672B7C7F14A}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 3255.093 233.437 3349.419
+  angleY 162.94
+  m_faction "RHS_AFRF"
+  m_aUnitPrefabSlots {
+   "{53A7932FD6BDDF63}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_SL.et" "{2EBF7FD7B32EE3FA}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_SR.et" "{E6870BF19DB0632C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_AT.et" "{C0F50DDFB6CFA87B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_AAT.et" "{9CBAF5396A6DDC9C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_MG_opt.et" "{FAC6AB61E4CA97F5}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_MGAB.et" "{33FA1C11138E145A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_GL.et" "{6D10A06D248FCD0B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_Sniper.et"
+  }
+  m_bDeleteWhenEmpty 0
+  m_bDeleteIfNoPlayer 0
+  m_sCustomNameSet "#DRG-Sq-PlatoonHQ"
+ }
+ RF_2_0_1 {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation ""
+   }
+   PS_GroupCallsignAssigner "{62387672B7C7F14A}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 3264.945 233.437 3352.442
+  angleY 162.94
+  m_faction "RHS_AFRF"
+  m_aUnitPrefabSlots {
+   "{53A7932FD6BDDF63}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_SL.et" "{2EBF7FD7B32EE3FA}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_SR.et" "{E6870BF19DB0632C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_AT.et" "{C0F50DDFB6CFA87B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_AAT.et" "{9CBAF5396A6DDC9C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_MG_opt.et" "{FAC6AB61E4CA97F5}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_MGAB.et" "{33FA1C11138E145A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_GL.et" "{6D10A06D248FCD0B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_Sniper.et"
+  }
+  m_bDeleteWhenEmpty 0
+  m_bDeleteIfNoPlayer 0
+  m_sCustomNameSet "#DRG-Sq-RifleSquad"
+ }
+ RF_2_0_2 {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation ""
+   }
+   PS_GroupCallsignAssigner "{62387672B7C7F14A}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 2
+   }
+  }
+  coords 3274.469 233.437 3355.365
+  angleY 162.94
+  m_faction "RHS_AFRF"
+  m_aUnitPrefabSlots {
+   "{53A7932FD6BDDF63}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_SL.et" "{2EBF7FD7B32EE3FA}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_SR.et" "{E6870BF19DB0632C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_AT.et" "{C0F50DDFB6CFA87B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_AAT.et" "{9CBAF5396A6DDC9C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_MG_opt.et" "{FAC6AB61E4CA97F5}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_MGAB.et" "{33FA1C11138E145A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_GL.et" "{6D10A06D248FCD0B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_Sniper.et"
+  }
+  m_bDeleteWhenEmpty 0
+  m_bDeleteIfNoPlayer 0
+  m_sCustomNameSet "#DRG-Sq-RifleSquad"
+ }
+ RF_3_0_0 {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation ""
+   }
+   PS_GroupCallsignAssigner "{62387672B7C7F14A}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 3257.354 233.438 3374.334
+  angleY -22.05
+  m_faction "RHS_AFRF"
+  m_aUnitPrefabSlots {
+   "{BE367C222679FCED}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_CrewCommander.et" "{111838A91B409A08}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_CrewGunner.et" "{F6339F4933B793A5}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_CrewDriver.et"
+  }
+  m_bDeleteWhenEmpty 0
+  m_bDeleteIfNoPlayer 0
+  m_sCustomNameSet "#DRG_Sqd_BrdmCrew"
+ }
+}
+Vehicle BRDM2_AFRF1 : "{9AEDF323A812F9ED}Prefabs/Vehicles/Wheeled/BRDM2/BRDM2_AFRF.et" {
+ coords 3256.149 233.437 3378.85
+ angleY -105.705
+ m_sAttachmentGroupName "RF_3_0_0"
+}
+$grp RHS_Tank : "{D8136D90BE12445F}Prefabs/Vehicles/Tracked/2S1/Tank_2S1.et" {
+ TARGET_1 {
+  coords 3275.436 233.746 3333.741
+  angleX 0.048
+  angleY -110.398
+  angleZ -0.467
+ }
+ TARGET_2 {
+  components {
+   SCR_VehicleSoundComponent "{55C2E66AD4EF2CA6}" {
+    SoundPoints {
+     SoundPointInfo Engine {
+     }
+    }
+    Wheels {
+     VehicleWheelSound Track_l {
+      SoundPoint PointInfo "{6092BDC330A58A28}" {
+      }
+     }
+     VehicleWheelSound Track_R {
+      SoundPoint PointInfo "{6092BDC330A58A20}" {
+      }
+     }
+    }
+   }
+   BaseLightManagerComponent "{51E210F17D2534F7}" {
+    LightSlots {
+     SCR_LightSlot "{5CB83A06593DD151}" : "{89853FD0B72E39A1}Prefabs/Vehicles/Core/Lights/Light_Head.conf" {
+      LightPositionInfo EntitySlotInfo "{51DAAC8FC2824EEC}" {
+      }
+     }
+     SCR_LightSlot "{5CB83A065A40032F}" : "{89853FD0B72E39A1}Prefabs/Vehicles/Core/Lights/Light_Head.conf" {
+      LightPositionInfo EntitySlotInfo "{51DAAC8FC2824EEC}" {
+      }
+     }
+     SCR_LightSlot "{5CB83A065B17CA1B}" : "{FCCBB28A48232EE4}Prefabs/Vehicles/Core/Lights/Light_HiBeam.conf" {
+      LightPositionInfo EntitySlotInfo "{51E17746999D1D6E}" {
+      }
+     }
+     SCR_LightSlot "{5CB83A065BBBFEF8}" : "{FCCBB28A48232EE4}Prefabs/Vehicles/Core/Lights/Light_HiBeam.conf" {
+      LightPositionInfo EntitySlotInfo "{51E17746999D1D6E}" {
+      }
+     }
+     SCR_LightSlot "{5CB83A05B43F18F1}" : "{3F796555FD10152A}Prefabs/Vehicles/Core/Lights/Light_Brake.conf" {
+      LightPositionInfo EntitySlotInfo "{51E177468DA2D7F8}" {
+      }
+     }
+     SCR_LightSlot "{5CB83A05B50A44E3}" : "{3F796555FD10152A}Prefabs/Vehicles/Core/Lights/Light_Brake.conf" {
+      LightPositionInfo EntitySlotInfo "{51E177468DA2D7F8}" {
+      }
+     }
+     SCR_LightSlot "{5CB83A05B155516C}" : "{88DADCB91DCE5E4A}Prefabs/Vehicles/Core/Lights/Light_Rear.conf" {
+      LightPositionInfo EntitySlotInfo "{51E1774683E31D16}" {
+      }
+     }
+     SCR_LightSlot "{5CB83A05B20233E2}" : "{88DADCB91DCE5E4A}Prefabs/Vehicles/Core/Lights/Light_Rear.conf" {
+      LightPositionInfo EntitySlotInfo "{51E1774683E31D16}" {
+      }
+     }
+    }
+    LightAction {
+     SCR_LightsPresenceUserAction "{5CB83A0502363A4E}" : "{543FB4FCD60B1B36}Prefabs/Vehicles/Core/Lights/UA_Lights.conf" {
+     }
+     SCR_LightsHiBeamsUserAction "{5CB83A05034774CB}" : "{0B4038621E89171C}Prefabs/Vehicles/Core/Lights/UA_HiBeam.conf" {
+     }
+    }
+   }
+   RHS_GroupMaterialController "{6092BDC330A47350}" {
+    m_aGroups {
+     RHS_MaterialGroupProperties "{6092BDC330A47356}" {
+     }
+     RHS_MaterialGroupProperties "{6092BDC330A47357}" {
+     }
+     RHS_MaterialGroupProperties "{6092BDC330A47354}" {
+     }
+    }
+   }
+   SCR_BaseCompartmentManagerComponent "{20FB66C5DCB8DF72}" {
+    DoorInfoList {
+     CompartmentDoorInfo "{50B8D5DDA17EB35D}" {
+      EntryPositionInfo PointInfo "{6092BDC330A47367}" {
+      }
+      ExitPositionInfo PointInfo "{6092BDC330A47364}" {
+      }
+     }
+    }
+    CompartmentSlots {
+     PilotCompartmentSlot PilotCompartment {
+      CompartmentAction SCR_GetInUserAction "{5086DB209BDE8253}" {
+      }
+      SwitchSeatAction SCR_SwitchSeatAction "{509D56667885A8DC}" {
+      }
+      AdditionalActions {
+       SCR_RemoveCasualtyUserAction "{5D528254D8CE5491}" {
+       }
+      }
+      PassengerPositionInfo EntitySlotInfo "{A1CB25848A3D93A8}" {
+      }
+     }
+    }
+   }
+   SCR_EditableVehicleComponent "{50DEB7C26B5EB312}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{5298E609432D192D}" {
+     m_aCrewEntityBudgetCost {
+      SCR_EntityBudgetValue "{6092BDC330A47372}" {
+      }
+     }
+    }
+   }
+   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+    FuelNodes {
+     SCR_FuelNode "{5622A70CD4036C5A}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{6092BDC330A47375}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{6092BDC330A4737A}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{6092BDC330A4737B}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+    }
+   }
+   SCR_MotorExhaustEffectGeneralComponent "{6092BDC330A4737E}" {
+    EffectPosition EntitySlotInfo s {
+    }
+   }
+   SCR_UniversalInventoryStorageComponent "{6092BDC330A47382}" {
+    Attributes SCR_ItemAttributeCollection "{6092BDC330A47380}" {
+     ItemDisplayName UIInfo "{6092BDC330A47381}" {
+     }
+     CustomAttributes {
+      PreviewRenderAttributes "{6092BDC330A47384}" {
+      }
+      SCR_InventoryVehicleVisibilityAttribute "{6092BDC330A4738A}" {
+      }
+     }
+    }
+   }
+   SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+    "Additional hit zones" {
+     SCR_FlammableHitZone Hull {
+      m_pDestructionHandler SCR_DestructionBaseHandler "{5584C42C773FDFBF}" {
+      }
+     }
+     SCR_EngineHitZone Engine_01 : "{6B37047F22EFB1B8}Prefabs/Vehicles/Core/Configs/HitZones/Engine_APC.conf" {
+     }
+     SCR_GearboxHitZone Gearbox_01 : "{743AF1385C5293C5}Prefabs/Vehicles/Core/Configs/HitZones/Gearbox_APC.conf" {
+     }
+     SCR_VehicleHitZone AmmoRack {
+      m_SecondaryExplosionPoint PointInfo "{6092BDC330A4739F}" {
+      }
+     }
+    }
+   }
+   VehicleWheeledSimulation "{731B26FCA2F19855}" {
+    Simulation Wheeled "{6092BDC330A473A9}" {
+     Engine Engine Engine {
+     }
+     Clutch Clutch Clutch {
+     }
+     Gearbox Gearbox Gearbox {
+     }
+     Differentials {
+      Differential Diff_A {
+      }
+      Differential Diff_B {
+      }
+      Differential Diff_C {
+      }
+      Differential Diff_01_03 {
+      }
+      Differential Diff_02_04 {
+      }
+      Differential Diff_05_07 {
+      }
+      Differential Diff_06_08 {
+      }
+     }
+     Axles {
+      Axle "{6092BDC330A473BE}" {
+       Differential Differential Diff_01 {
+       }
+       Suspension Suspension "{4D8B26DFF8859A7B}" : "{36BB82B042C4D6BC}Prefabs/Vehicles/Tracked/2S1/Configs/2S1_LockedSuspension.conf" {
+       }
+       Wheel Wheel "{5CB63E75C05DD829}" : "{BED5D7EDEA07F8FC}Prefabs/Vehicles/Tracked/2S1/Configs/2S1_Wheels.conf" {
+       }
+       Tyre Tyre "{5CB63E75C1D1AE9F}" : "{D66F9FAEC70D0894}Prefabs/Vehicles/Tracked/T14/T14Tyre.conf" {
+       }
+       WheelPositions {
+        WheelPosition Wheel_L01 {
+        }
+        WheelPosition Wheel_R01 {
+        }
+       }
+      }
+      Axle "{6092BDC330A473C6}" {
+       Differential Differential Diff_02 {
+       }
+       Suspension Suspension "{4D8B26DF2B10AE05}" : "{04F9437846BD239B}Prefabs/Vehicles/Tracked/2S1/Configs/2S1_Suspension.conf" {
+       }
+       Wheel Wheel "{5CB63E75C3728451}" : "{BED5D7EDEA07F8FC}Prefabs/Vehicles/Tracked/2S1/Configs/2S1_Wheels.conf" {
+       }
+       Tyre Tyre "{5CB63E75CCA2638C}" : "{D66F9FAEC70D0894}Prefabs/Vehicles/Tracked/T14/T14Tyre.conf" {
+       }
+       WheelPositions {
+        WheelPosition Wheel_L02 {
+        }
+        WheelPosition Wheel_R02 {
+        }
+       }
+      }
+      Axle "{6092BDC330A473C5}" {
+       Differential Differential Diff_03 {
+       }
+       Suspension Suspension "{5B3A8D44B1452858}" : "{04F9437846BD239B}Prefabs/Vehicles/Tracked/2S1/Configs/2S1_Suspension.conf" {
+       }
+       Wheel Wheel "{5CB63E75CEABD61F}" : "{BED5D7EDEA07F8FC}Prefabs/Vehicles/Tracked/2S1/Configs/2S1_Wheels.conf" {
+       }
+       Tyre Tyre "{5CB63E75C97DC023}" : "{D66F9FAEC70D0894}Prefabs/Vehicles/Tracked/T14/T14Tyre.conf" {
+       }
+       WheelPositions {
+        WheelPosition Wheel_L03 {
+        }
+        WheelPosition Wheel_R03 {
+        }
+       }
+      }
+      Axle "{6092BDC330A473C8}" {
+       Differential Differential Diff_04 {
+       }
+       Suspension Suspension "{5B3A8D44BDC38472}" : "{04F9437846BD239B}Prefabs/Vehicles/Tracked/2S1/Configs/2S1_Suspension.conf" {
+       }
+       Wheel Wheel "{5CB63E75CB21F1B9}" : "{BED5D7EDEA07F8FC}Prefabs/Vehicles/Tracked/2S1/Configs/2S1_Wheels.conf" {
+       }
+       Tyre Tyre "{5CB63E75CBE6B18C}" : "{D66F9FAEC70D0894}Prefabs/Vehicles/Tracked/T14/T14Tyre.conf" {
+       }
+       WheelPositions {
+        WheelPosition Wheel_L04 {
+        }
+        WheelPosition Wheel_R04 {
+        }
+       }
+      }
+      Axle "{6092BDC330A473C9}" {
+       Differential Differential Diff_05 {
+       }
+       Suspension Suspension "{5B3A8D44B986A4EB}" : "{04F9437846BD239B}Prefabs/Vehicles/Tracked/2S1/Configs/2S1_Suspension.conf" {
+       }
+       Wheel Wheel "{5CB63E75D5F89198}" : "{BED5D7EDEA07F8FC}Prefabs/Vehicles/Tracked/2S1/Configs/2S1_Wheels.conf" {
+       }
+       Tyre Tyre "{5CB63E75D69ADDFC}" : "{D66F9FAEC70D0894}Prefabs/Vehicles/Tracked/T14/T14Tyre.conf" {
+       }
+       WheelPositions {
+        WheelPosition Wheel_L05 {
+        }
+        WheelPosition Wheel_R05 {
+        }
+       }
+      }
+      Axle "{6092BDC330A473CF}" {
+       Differential Differential Diff_06 {
+       }
+       Suspension Suspension "{5B3A8D448659D92F}" : "{04F9437846BD239B}Prefabs/Vehicles/Tracked/2S1/Configs/2S1_Suspension.conf" {
+       }
+       Wheel Wheel "{5CB63E75D071A4F0}" : "{BED5D7EDEA07F8FC}Prefabs/Vehicles/Tracked/2S1/Configs/2S1_Wheels.conf" {
+       }
+       Tyre Tyre "{5CB63E75D12E4D3B}" : "{D66F9FAEC70D0894}Prefabs/Vehicles/Tracked/T14/T14Tyre.conf" {
+       }
+       WheelPositions {
+        WheelPosition Wheel_L06 {
+        }
+        WheelPosition Wheel_R06 {
+        }
+       }
+      }
+      Axle "{6092BDC330A473CD}" {
+       Differential Differential Diff_07 {
+       }
+       Suspension Suspension "{5B3A8D44825ECF19}" : "{04F9437846BD239B}Prefabs/Vehicles/Tracked/2S1/Configs/2S1_Suspension.conf" {
+       }
+       Wheel Wheel "{5CB63E75D2E13AEA}" : "{BED5D7EDEA07F8FC}Prefabs/Vehicles/Tracked/2S1/Configs/2S1_Wheels.conf" {
+       }
+       Tyre Tyre "{5CB63E75D3856777}" : "{D66F9FAEC70D0894}Prefabs/Vehicles/Tracked/T14/T14Tyre.conf" {
+       }
+       WheelPositions {
+        WheelPosition Wheel_L07 {
+        }
+        WheelPosition Wheel_R07 {
+        }
+       }
+      }
+      Axle "{6092BDC330A473D3}" {
+       Differential Differential Diff_08 {
+       }
+       Suspension Suspension "{5B3A8D448D7BA280}" : "{04F9437846BD239B}Prefabs/Vehicles/Tracked/2S1/Configs/2S1_Suspension.conf" {
+       }
+       Wheel Wheel "{5CB63E75DCEE0AF8}" : "{BED5D7EDEA07F8FC}Prefabs/Vehicles/Tracked/2S1/Configs/2S1_Wheels.conf" {
+       }
+       Tyre Tyre "{5CB63E75DD9EE3FC}" : "{D66F9FAEC70D0894}Prefabs/Vehicles/Tracked/T14/T14Tyre.conf" {
+       }
+       WheelPositions {
+        WheelPosition Wheel_L08 {
+        }
+        WheelPosition Wheel_R08 {
+        }
+       }
+      }
+      Axle "{6092BDC330A473D1}" {
+       Differential Differential Diff_09 {
+       }
+       Suspension Suspension "{5CDE6E4F272E28F7}" : "{04F9437846BD239B}Prefabs/Vehicles/Tracked/2S1/Configs/2S1_Suspension.conf" {
+       }
+       Wheel Wheel "{5CDE6E4F26FD835E}" : "{BED5D7EDEA07F8FC}Prefabs/Vehicles/Tracked/2S1/Configs/2S1_Wheels.conf" {
+       }
+       Tyre Tyre "{5CDE6E4F269B71DC}" : "{D66F9FAEC70D0894}Prefabs/Vehicles/Tracked/T14/T14Tyre.conf" {
+       }
+       WheelPositions {
+        WheelPosition Wheel_L09 {
+        }
+        WheelPosition Wheel_R09 {
+        }
+       }
+      }
+     }
+     Aerodynamics Aerodynamics "{6092BDC330A473D4}" {
+     }
+     Pacejka Pacejka "{5CE2614C1B09B2DA}" : "{2E1044D5BFA6FB16}Prefabs/Vehicles/Core/Configs/PacejkaTire_Truck_Offroad.conf" {
+     }
+    }
+   }
+   BaseFlattenGrassComponent "{55FCDD8048D3AE17}" {
+    ParametersCollection {
+     FlattenGrassParametersObject "{55FCDD804A371EA5}" {
+     }
+    }
+   }
+   BaseVehicleNodeComponent "{20FB66C5B2237133}" {
+    components {
+     BaseHUDComponent "{37C2676694790BC7}" {
+      InfoDisplays {
+       SCR_InfoDisplay "{50E6E6F81354B90F}" {
+        InfoDisplays {
+         SCR_AnalogGaugeMultiSignal "{50E6F12BB4D36587}" {
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+   VehiclePerceivableComponent "{566CD04B8A6107DD}" {
+    "Additional aim points" {
+     AimPoint "{5A448CE484C5A9D6}" : "{9E76A1CE4C88117E}Prefabs/Vehicles/Core/Configs/AimPoints/AimPoint_Hull_APC.conf" {
+      AimPointPosition PointInfo "{5A44DB148C16BF03}" {
+      }
+     }
+     AimPoint "{5E9EBC0257BF8D0F}" : "{9E76A1CE4C88117E}Prefabs/Vehicles/Core/Configs/AimPoints/AimPoint_Hull_APC.conf" {
+      AimPointPosition PointInfo "{5A44DB148C16BF03}" {
+      }
+     }
+     AimPoint "{5E9EBC0256583D0E}" : "{5D12ACF04A43E73A}Prefabs/Vehicles/Core/Configs/AimPoints/AimPoint_Crew_APC.conf" {
+      AimPointPosition PointInfo "{5A44DB1CE905843B}" {
+      }
+     }
+     AimPoint "{5E9EBC025611DE8E}" : "{495CEB8368A8EAA4}Prefabs/Vehicles/Core/Configs/AimPoints/AimPoint_Powertrain_APC.conf" {
+      AimPointPosition PointInfo "{5A44DB1CB55BE678}" {
+      }
+     }
+    }
+   }
+   CarProcAnimComponent "{A201E6A6F82F2CDA}" {
+    Parameters {
+     ProcAnimParams "{6092BDC330A473DD}" {
+     }
+     ProcAnimParams "{6092BDC330A473E2}" {
+     }
+     ProcAnimParams "{6092BDC330A473E3}" {
+     }
+     ProcAnimParams "{6092BDC330A4D6F4}" {
+     }
+     ProcAnimParams "{6092BDC330A4D6F7}" {
+     }
+     ProcAnimParams "{6092BDC330A4D6F6}" {
+     }
+     ProcAnimParams "{6092BDC330A4D6F1}" {
+     }
+     ProcAnimParams "{6092BDC330A4EF99}" {
+     }
+     ProcAnimParams "{6092BDC330A4EF98}" {
+     }
+     ProcAnimParams "{6092BDC330A4EF9B}" {
+     }
+     ProcAnimParams "{6092BDC330A4EF9A}" {
+     }
+     ProcAnimParams "{6092BDC330AB53B9}" {
+     }
+     ProcAnimParams "{6092BDC330AB53B6}" {
+     }
+     ProcAnimParams "{6092BDC330AB53B7}" {
+     }
+     ProcAnimParams "{6092BDC330AB53B4}" {
+     }
+     ProcAnimParams "{6092BDC330AB6D30}" {
+     }
+    }
+   }
+   SlotManagerComponent "{55BCE45E438E4CFF}" {
+    Slots {
+     RegisteringComponentSlotInfo Turret {
+     }
+     RegisteringComponentSlotInfo Skirt_R {
+     }
+     RegisteringComponentSlotInfo Skirt_L {
+     }
+     EntitySlotInfo Tag_Left_01 {
+     }
+     EntitySlotInfo Tag_Left_02 {
+     }
+     EntitySlotInfo Tag_Left_03 {
+     }
+     EntitySlotInfo Tag_Right_01 {
+     }
+     EntitySlotInfo Tag_Right_02 {
+     }
+     EntitySlotInfo Tag_Right_03 {
+     }
+     EntitySlotInfo Tag_Rear_01 {
+     }
+     EntitySlotInfo Tag_Rear_02 {
+     }
+     EntitySlotInfo Tag_Rear_03 {
+     }
+    }
+   }
+   ActionsManagerComponent "{C97BE5489221AE18}" {
+    ActionContexts {
+     UserActionContext "{60D889C6E33B775B}" {
+      Position PointInfo "{60D88999DF1EB09C}" {
+      }
+     }
+     UserActionContext "{5E9EBB38F7651EF4}" {
+      Position PointInfo "{5E9EBB38F7651EF3}" {
+      }
+     }
+     UserActionContext "{5E9EBB38F7651EF2}" {
+      Position PointInfo "{5E9EBB38F7651EFC}" {
+      }
+     }
+     UserActionContext "{6092BDC330AB6D22}" {
+      Position PointInfo "{6092BDC330AB6D23}" {
+      }
+     }
+     UserActionContext "{6092BDC330AB6D20}" {
+      Position PointInfo "{6092BDC330AB6D21}" {
+      }
+     }
+     UserActionContext "{6092BDC330ABD5D8}" {
+      Position PointInfo "{6092BDC330ABD5DF}" {
+      }
+     }
+     UserActionContext "{6092BDC330ABD5DE}" {
+      Position PointInfo "{6092BDC330ABD5DD}" {
+      }
+     }
+    }
+    additionalActions {
+     SCR_EngineAction "{5CC24B97EB96B5F6}" : "{FEEF05EC7DFE19F2}Prefabs/Vehicles/Core/Configs/Actions/EngineOnAction.conf" {
+     }
+     SCR_EngineAction "{5CC24B97F43FBDEB}" : "{B67160046438840C}Prefabs/Vehicles/Core/Configs/Actions/EngineOffAction.conf" {
+     }
+     SCR_VehicleAction "{6092BDC330ABD621}" {
+     }
+    }
+   }
+   VehicleAnimationComponent "{50B803EAA459B0AF}" {
+    AnimInjection AnimationAttachmentInfo "{50B803EA8AD25BC8}" {
+    }
+   }
+  }
+  coords 3224.682 233.176 3352.53
+  angleY 173.14
+ }
+}

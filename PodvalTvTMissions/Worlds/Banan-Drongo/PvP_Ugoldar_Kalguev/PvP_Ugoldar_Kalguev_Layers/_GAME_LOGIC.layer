@@ -1,0 +1,145 @@
+GenericEntity : "{6A3CDCFB475BF1B2}Prefabs/System/DRG_CriticalLossPrefab.et" {
+ components {
+  DRG_CriticalLossComponent "{65213D368F1BD792}" {
+   m_aLossLogics {
+    LossLogic "{6682C5E327A24CBA}" {
+     m_aLosses {
+      FactionLoss "{6682C5E31F7FE20D}" {
+       m_iCriticalLossCount 3
+      }
+     }
+     m_sObjectiveNames {
+      "FLAG_US_1"
+      "FLAG_US_2"
+      "FLAG_US_3"
+      "FLAG_US_4"
+      "FLAG_US_5"
+     }
+     m_sFailedObjectiveNames {
+      "FLAG_USSR_1"
+      "FLAG_USSR_2"
+      "FLAG_USSR_3"
+      "FLAG_USSR_4"
+      "FLAG_USSR_5"
+     }
+     m_bAdvanceGameStage 1
+     m_bUseMessage 1
+     m_bEventMessage "Победа США! СССР понесли критические потери."
+    }
+    LossLogic "{6682C5E3252AC68C}" {
+     m_aLosses {
+      FactionLoss "{6682C5E32808B1EC}" {
+       m_iCriticalLossCount 3
+       m_sFactionKey "US"
+      }
+     }
+     m_sObjectiveNames {
+      "FLAG_USSR_1"
+      "FLAG_USSR_2"
+      "FLAG_USSR_3"
+      "FLAG_USSR_4"
+      "FLAG_USSR_5"
+     }
+     m_sFailedObjectiveNames {
+      "FLAG_US_1"
+      "FLAG_US_2"
+      "FLAG_US_3"
+      "FLAG_US_4"
+      "FLAG_US_5"
+     }
+     m_bAdvanceGameStage 1
+     m_bUseMessage 1
+     m_bEventMessage "Победа СССР! США понесли критические потери."
+    }
+   }
+  }
+ }
+}
+GenericEntity : "{CA1FF8EE196359C6}Prefabs/System/DRG_FlagControlPrefab.et" {
+ components {
+  DRG_FlagControlComponent "{66294262AC006581}" {
+   m_aFlagLogics {
+    FlagLogic "{66AE7D36772D3F3E}" {
+     m_bAdvanceGameStage 1
+     m_sNotificationMessage "Победа СССР! Все флаги под контролем."
+     m_aFlagControls {
+      FlagControl "{66AE7D367E41EEFC}" {
+       m_bIgnoreCounter 1
+       m_sFactionKey "USSR"
+       m_sFlagEntityName "FLAG_1"
+       m_sFlagPreviewName "Флаг 1"
+      }
+      FlagControl "{66AE7D367E85B2D0}" {
+       m_bIgnoreCounter 1
+       m_sFactionKey "USSR"
+       m_sFlagEntityName "FLAG_2"
+       m_sFlagPreviewName "Флаг 2"
+      }
+      FlagControl "{66AE7D367EA70B75}" {
+       m_bIgnoreCounter 1
+       m_sFactionKey "USSR"
+       m_sFlagEntityName "FLAG_3"
+       m_sFlagPreviewName "Флаг 3"
+      }
+      FlagControl "{66AE7D367F0927A0}" {
+       m_bIgnoreCounter 1
+       m_sFactionKey "USSR"
+       m_sFlagEntityName "FLAG_4"
+       m_sFlagPreviewName "Флаг 4"
+      }
+      FlagControl "{66AE7D367FC6BAB2}" {
+       m_bIgnoreCounter 1
+       m_sFactionKey "USSR"
+       m_sFlagEntityName "FLAG_5"
+       m_sFlagPreviewName "Флаг 5"
+      }
+     }
+    }
+    FlagLogic "{66AE7D368F6A5BA7}" {
+     m_bAdvanceGameStage 1
+     m_sNotificationMessage "Победа США! Все флаги под контролем."
+     m_aFlagControls {
+      FlagControl "{66AE7D36E58799E1}" {
+       m_bIgnoreCounter 1
+       m_sFactionKey "US"
+       m_sFlagEntityName "FLAG_1"
+       m_sFlagPreviewName "Флаг 1"
+      }
+      FlagControl "{66AE7D36F2019831}" {
+       m_bIgnoreCounter 1
+       m_sFactionKey "US"
+       m_sFlagEntityName "FLAG_2"
+       m_sFlagPreviewName "Флаг 2"
+      }
+      FlagControl "{66AE7D36F3C9DA9C}" {
+       m_bIgnoreCounter 1
+       m_sFactionKey "US"
+       m_sFlagEntityName "FLAG_3"
+       m_sFlagPreviewName "Флаг 3"
+      }
+      FlagControl "{66AE7D36F0ED049D}" {
+       m_bIgnoreCounter 1
+       m_sFactionKey "US"
+       m_sFlagEntityName "FLAG_4"
+       m_sFlagPreviewName "Флаг 4"
+      }
+      FlagControl "{66AE7D36F1EAAD10}" {
+       m_bIgnoreCounter 1
+       m_sFactionKey "US"
+       m_sFlagEntityName "FLAG_5"
+       m_sFlagPreviewName "Флаг 5"
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 6722.856 27.718 3972.701
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 1800
+  }
+ }
+}
