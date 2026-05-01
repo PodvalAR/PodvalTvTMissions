@@ -117,107 +117,11 @@ modded class SCR_CampaignBuildingManagerComponent : SCR_BaseGameModeComponent
 	}
 }
 
-modded class GUB_LocationPointEntity : GenericEntity
-{
-	/*override void DeleteFreezeZones()
-	{
-		ref array<IEntity> entitiesToDelete = new array<IEntity>();
-		for (IEntity child = GetChildren(); child; child = child.GetSibling())
-		{
-			Print("---child" + child);
-			SCR_EditorRestrictionZoneEntity freezeZone = SCR_EditorRestrictionZoneEntity.Cast(child);
-			if (freezeZone)
-				entitiesToDelete.Insert(child);
-			
-			PolylineShapeEntity polyzone = PolylineShapeEntity.Cast(child);
-			if (polyzone)
-				Print("---polyzone" + polyzone);
-				entitiesToDelete.Insert(child);
-		}
-		foreach (IEntity entity : entitiesToDelete)
-		{
-			RemoveChild(entity);
-			delete entity;
-		}
-	}*/
-	
-	/*void Assignpolyzoneaction(SCR_Faction FlagFaction)
-	{
-		Print("---GetChildren()" + GetChildren());
-		for (IEntity child = GetChildren(); child; child = child.GetSibling())
-		{
-			
-			PolylineShapeEntity polyzone = PolylineShapeEntity.Cast(child);
-			if (polyzone)
-			{
-				Print("---polyzone" + polyzone);
-				for (IEntity child2 = GetChildren(); child2; child2 = child2.GetSibling())
-				{
-					
-					PS_PolyZoneTrigger polytrigger = PS_PolyZoneTrigger.Cast(child2);
-					if (polytrigger)
-					{	
-						Print("---polytrigger" + polytrigger);
-						polytrigger.m_sFactionKey = FlagFaction.GetFactionKey();
-					}
-				}
-			}
-		}
-	}*/
-}
-/*modded class PS_PolyZoneTrigger : SCR_BaseTriggerEntity
-{
-	void SetFactionkey(FactionKey newfactionkey)
-	{
-		m_sFactionKey = newfactionkey;
-	}
-}*/
+
 
 modded class GUB_RandomizeMissionLogic
 {
 	
-	/*override void UpdateDefendEntities()
-	{
-		//if (!GetGame().InPlayMode())
-		//	return;
-		
-		array<GUB_DefendPointEntity> defendPoints = GetRandomizeSpawnManager().GetDefendPoints();
-		SCR_FactionManager factionManager = SCR_FactionManager.Cast(GetGame().GetFactionManager());
-		if (factionManager)
-		{
-			FactionKey flagFactionKey = GetRandomizeSpawnManager().GetDefendFaction().m_sFactionKey;
-			SCR_Faction flagFaction = SCR_Faction.Cast(factionManager.GetFactionByKey(flagFactionKey));
-			foreach (GUB_DefendPointEntity defendPoint : defendPoints)
-			{
-				defendPoint.SetFlagFaction(flagFaction);
-				Print("---watafa");
-				
-				bool isDefendLocation = defendPoint == m_eDefendLocation;
-				defendPoint.SetFlagActivate(isDefendLocation);
-				if (isDefendLocation)
-				{
-					defendPoint.AddObjective("ObjectiveDefendWin");
-					defendPoint.AddObjective("ObjectiveAttackWin");
-					
-					
-				}
-			}
-		}
-	}*/
-	/*
-	override bool GenerateLocations()
-	{
-        m_eDefendLocation = GetRandomizeSpawnManager().GetDefendPoints().GetRandomElement();
-		Updatestupidzones();
-		ref array<GUB_AttackPointEntity> validAttackPoints = GetValidAttackPoints(m_eDefendLocation);
-		if (validAttackPoints.Count() == 0)
-		{
-			Print(string.Format("GUB_RandomizeMissionLogic Error: Can't generate attack point to {%1}", m_eDefendLocation.GetName()), LogLevel.ERROR);
-			return false;
-		}
-		m_eAttackLocation = validAttackPoints.GetRandomElement();
-		return true;
-	}*/
 	
 	void Updatestupidzones()
 	{
@@ -280,95 +184,11 @@ modded class GUB_RandomizeMissionLogic
 	}
 	
 	
-	
-	
-	/*void UpdatePolyzones()
-	{
-		//if (!GetGame().InPlayMode())
-		//	return;
-		
-		array<GUB_DefendPointEntity> defendPoints = GetRandomizeSpawnManager().GetDefendPoints();
-		SCR_FactionManager factionManager = SCR_FactionManager.Cast(GetGame().GetFactionManager());
-		if (factionManager)
-		{
-			FactionKey flagFactionKey = GetRandomizeSpawnManager().GetDefendFaction().m_sFactionKey;
-			SCR_Faction flagFaction = SCR_Faction.Cast(factionManager.GetFactionByKey(flagFactionKey));
-			foreach (GUB_DefendPointEntity defendPoint : defendPoints)
-			{
-				
-				bool isDefendLocation = defendPoint == m_eDefendLocation;
-				if (isDefendLocation)
-				{
-					Print("---polyFaction" + flagFaction);
-					defendPoint.Assignpolyzoneaction(flagFaction);
-				}
-			}
-		}
-	}*/
 }
-/*
-modded class PS_PolyZone
-{
-	void SetVisibleForFaction(FactionKey factionKey, bool visible)
-	{
-		if (!Replication.IsServer())
-			return;
-		Rpc(RPC_SetVisibleForFaction, factionKey, visible);
-		RPC_SetVisibleForFaction(factionKey, visible);
-	}
-
-	[RplRpc(RplChannel.Reliable, RplRcver.Broadcast)]
-	void RPC_SetVisibleForFaction(FactionKey factionKey, bool visible)
-	{
-		//if (visible)
-		//{
-		//	if (!m_aVisibleForFactions.Contains(factionKey))
-				m_aVisibleForFactions.Insert(factionKey);
-		Print("000m_aVisibleForFactions" + m_aVisibleForFactions);
-		//}
-		//else
-		//{
-		//	m_aVisibleForFactions.RemoveItem(factionKey);
-		//}
-
-		if (m_MapEntity && m_MapEntity.IsOpen())
-		{
-			if (IsCurrentVisibility())
-			{
-				if (!m_wCanvasWidget)
-					CreateMapWidget(m_MapEntity.GetMapConfig());
-			}
-			else
-			{
-				if (m_wCanvasWidget)
-					DeleteMapWidget(m_MapEntity.GetMapConfig());
-			}
-		}
-	}
-}
-*/
-
-
 
 modded class GUB_RandomizeMissionComponent : ScriptComponent
 {
 	
-	/*override protected void EOnInit(IEntity owner)
-    {
-		if (!Replication.IsServer())
-			return;
-		
-		m_rLogic.RandomizeMission();
-		
-		PS_GameModeCoop gameModeCoop = PS_GameModeCoop.Cast(GetGame().GetGameMode());
-		if (gameModeCoop)
-			gameModeCoop.GetOnGameStateChange().Insert(OnGameStateChanged);
-		
-		GetGame().GetCallqueue().CallLater(m_rLogic.SpawnObjectives, 100);
-		
-		if (!m_bMarkersOnlyOnBriefing)
-			GetGame().GetCallqueue().CallLater(m_rLogic.GenerateMarkers, 100);
-    }*/
 	
 	override void OnGameStateChanged(int NewState)
 	{
@@ -400,3 +220,110 @@ modded class GUB_DefendPointEntity : GUB_LocationPointEntity
 }
 
 
+modded class PS_PolyZone
+{
+	void SetVisibleForFaction(FactionKey factionKey, bool visible)
+	{
+		Print("-1-SetVisibleForFaction called, factionKey=" + factionKey + ", visible=" + visible);
+		Print("-1-SetVisibleForFaction m_ePolylineShapeEntity=" + m_ePolylineShapeEntity + ", name=" + m_ePolylineShapeEntity);
+		if (Replication.IsServer())
+		{
+			PS_GameModeQuickTvT gameMode = PS_GameModeQuickTvT.Cast(GetGame().GetGameMode());
+			if (gameMode)
+				gameMode.BroadcastPolyZoneFactionChange(m_ePolylineShapeEntity, factionKey, visible);
+			else
+				Print("-1-ERROR: gameMode is null!");
+		}
+		else
+		{
+			Print("-1-SetVisibleForFaction called on CLIENT, skipping");
+		}
+	}
+
+	void ApplyFactionVisiblity(FactionKey factionKey, bool visible)
+	{
+		Print("-1-ApplyFactionVisiblity called, factionKey=" + factionKey + ", visible=" + visible);
+		Print("-1-ApplyFactionVisiblity m_aVisibleForFactions before: " + m_aVisibleForFactions);
+
+		if (visible)
+		{
+			if (!m_aVisibleForFactions.Contains(factionKey))
+				m_aVisibleForFactions.Insert(factionKey);
+		}
+		else
+		{
+			m_aVisibleForFactions.RemoveItem(factionKey);
+		}
+
+		Print("-1-ApplyFactionVisiblity m_aVisibleForFactions after: " + m_aVisibleForFactions);
+
+		if (m_MapEntity && m_MapEntity.IsOpen())
+		{
+			if (IsCurrentVisibility())
+			{
+				if (!m_wCanvasWidget)
+				{
+					Print("-1-ApplyFactionVisiblity creating map widget");
+					CreateMapWidget(m_MapEntity.GetMapConfig());
+				}
+			}
+			else
+			{
+				if (m_wCanvasWidget)
+				{
+					Print("-1-ApplyFactionVisiblity deleting map widget");
+					DeleteMapWidget(m_MapEntity.GetMapConfig());
+				}
+			}
+		}
+		else
+		{
+			Print("-1-ApplyFactionVisiblity map not open or m_MapEntity null, skipping widget refresh");
+		}
+	}
+}
+
+
+modded class PS_GameModeQuickTvT : PS_GameModeCoop
+{
+	void BroadcastPolyZoneFactionChange(IEntity targetEntity, FactionKey factionKey, bool visible)
+	{
+		Print("-2-BroadcastPolyZoneFactionChange called, entity=" + targetEntity + ", name=" + targetEntity.GetName() + ", factionKey=" + factionKey + ", visible=" + visible);
+		if (!Replication.IsServer())
+		{
+			Print("-2-ERROR: BroadcastPolyZoneFactionChange called on client!");
+			return;
+		}
+
+		PS_PolyZone polyZone = PS_PolyZone.Cast(targetEntity.FindComponent(PS_PolyZone));
+		if (polyZone)
+			polyZone.ApplyFactionVisiblity(factionKey, visible);
+		else
+			Print("-2-ERROR: polyZone is null on entity=" + targetEntity);
+
+		string entityName = targetEntity.GetName();
+		Print("-2-entityName=" + entityName);
+		Rpc(RPC_BroadcastPolyZoneFactionChange, entityName, factionKey, visible);
+	}
+
+	[RplRpc(RplChannel.Reliable, RplRcver.Broadcast)]
+	protected void RPC_BroadcastPolyZoneFactionChange(string entityName, FactionKey factionKey, bool visible)
+	{
+		Print("-3-RPC_BroadcastPolyZoneFactionChange received, entityName=" + entityName + ", factionKey=" + factionKey + ", visible=" + visible);
+		IEntity targetEntity = GetGame().GetWorld().FindEntityByName(entityName);
+		Print("-3-Found entity by name: " + targetEntity);
+		if (!targetEntity)
+		{
+			Print("-3-ERROR: targetEntity is null for name=" + entityName);
+			return;
+		}
+
+		PS_PolyZone polyZone = PS_PolyZone.Cast(targetEntity.FindComponent(PS_PolyZone));
+		Print("-3-polyZone component: " + polyZone);
+		if (polyZone)
+			polyZone.ApplyFactionVisiblity(factionKey, visible);
+		else
+			Print("-3-ERROR: polyZone is null on found entity");
+	}
+
+}
