@@ -118,7 +118,7 @@ modded class SCR_CampaignBuildingManagerComponent : SCR_BaseGameModeComponent
 }
 
 
-
+/*
 modded class GUB_RandomizeMissionLogic
 {
 	
@@ -327,3 +327,4 @@ modded class PS_GameModeQuickTvT : PS_GameModeCoop
 	}
 
 }
+*/
