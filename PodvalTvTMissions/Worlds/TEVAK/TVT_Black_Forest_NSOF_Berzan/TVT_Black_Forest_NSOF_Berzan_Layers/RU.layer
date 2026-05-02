@@ -1,5 +1,5 @@
 $grp SCR_AIGroup : "{706340F7481FF22F}Prefabs/Groups/OPFOR/USSR/Group_USSR_PL.et" {
- {
+ gr1 {
   components {
    PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
     m_iPlatoonCallsign 2
@@ -17,9 +17,9 @@ $grp SCR_AIGroup : "{706340F7481FF22F}Prefabs/Groups/OPFOR/USSR/Group_USSR_PL.et
    "{BF643BE4ADBDFDD4}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_LAT.et"
    "{F34FC121F4B43694}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_Sharpshooter.et"
   }
-  m_sCustomNameSet "Отряд с СПГ-9"
+  m_sCustomNameSet "Стрелокове отделение"
  }
- {
+ gr2 {
   components {
    PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
     m_iPlatoonCallsign 2
@@ -38,9 +38,9 @@ $grp SCR_AIGroup : "{706340F7481FF22F}Prefabs/Groups/OPFOR/USSR/Group_USSR_PL.et
    "{BF643BE4ADBDFDD4}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_LAT.et"
    "{F34FC121F4B43694}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_Sharpshooter.et"
   }
-  m_sCustomNameSet "Отряд с СПГ-9"
+  m_sCustomNameSet "Стрелокове отделение"
  }
- {
+ gr3 {
   components {
    PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
     m_iPlatoonCallsign 3
@@ -58,8 +58,9 @@ $grp SCR_AIGroup : "{706340F7481FF22F}Prefabs/Groups/OPFOR/USSR/Group_USSR_PL.et
    "{BF643BE4ADBDFDD4}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_LAT.et"
    "{F34FC121F4B43694}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_Sharpshooter.et"
   }
+  m_sCustomNameSet "Стрелокове отделение"
  }
- {
+ gr4 {
   components {
    PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
     m_iPlatoonCallsign 3
@@ -78,8 +79,9 @@ $grp SCR_AIGroup : "{706340F7481FF22F}Prefabs/Groups/OPFOR/USSR/Group_USSR_PL.et
    "{BF643BE4ADBDFDD4}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_LAT.et"
    "{F34FC121F4B43694}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_Sharpshooter.et"
   }
+  m_sCustomNameSet "Стрелокове отделение"
  }
- {
+ gr5 {
   components {
    PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
     m_iPlatoonCallsign 1
@@ -98,8 +100,9 @@ $grp SCR_AIGroup : "{706340F7481FF22F}Prefabs/Groups/OPFOR/USSR/Group_USSR_PL.et
    "{F34FC121F4B43694}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_Sharpshooter.et"
   }
   m_bSnapToTerrain 0
+  m_sCustomNameSet "Стрелокове отделение"
  }
- {
+ gr6 {
   components {
    PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
     m_iPlatoonCallsign 1
@@ -119,139 +122,77 @@ $grp SCR_AIGroup : "{706340F7481FF22F}Prefabs/Groups/OPFOR/USSR/Group_USSR_PL.et
    "{F34FC121F4B43694}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_Sharpshooter.et"
   }
   m_bSnapToTerrain 0
+  m_sCustomNameSet "Стрелокове отделение"
  }
- {
+ Komandir {
   coords 469.521 2.78 674.389
   angles 0 -57.689 0
   m_aUnitPrefabSlots {
    "{426F7FAAC77A2A6E}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_PL.et"
+   "{29786A5DBA2EC48A}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_Rifleman.et"
+   "{29786A5DBA2EC48A}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_Rifleman.et"
    "{F34FC121F4B43694}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_Sharpshooter.et"
   }
   m_bSnapToTerrain 0
-  m_sCustomNameSet "Начальник лесопилки"
- }
- mi8 {
-  components {
-   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
-    m_iPlatoonCallsign 4
-   }
-  }
-  coords 452.452 6.68 700.763
-  angles 0 80.311 0
-  m_aUnitPrefabSlots {
-   "{A62FA97C4EC64F15}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_HeliPilot.et"
-   "{47A05F499D165378}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_HeliCoPilot.et"
-  }
-  m_bSnapToTerrain 0
-  m_sCustomNameSet "Пилоты МИ-8"
+  m_sCustomNameSet "Отделение начальника лесопилки"
  }
 }
-Vehicle Mi8MT_armed1 : "{7BD282AF716ED639}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_armed.et" {
- coords 457.597 6.314 703.43
- angles 3.052 -7.7 0
- m_sAttachmentGroupName "mi8"
-}
-$grp GenericEntity : "{7C93700E1AC4C388}Prefabs/Props/Military/Arsenal/AmmoBoxes/USSR/AmmoBoxArsenal_Launcher_USSR.et" {
+$grp GenericEntity : "{843D9B182BCD2765}Prefabs/Weapons/Magazines/NSV/Box_127x108_NSV_50rnd_4AP_1APIT.et" {
  {
-  components {
-   SCR_UniversalInventoryStorageComponent "{5476A2F100DF4EFF}" {
-    Enabled 1
-    Attributes SCR_ItemAttributeCollection "{5476CDB2EAD8225E}" {
-     ItemDisplayName SCR_InventoryUIInfo "{54F48AF1F3C103C1}" {
-      Name "Снаряды для СПГ-9"
-      Description ""
-     }
-    }
-    MultiSlots {
-     MultiSlotConfiguration "{690D35A99EB2B844}" {
-      SlotTemplate InventoryStorageSlot "Ammo_Rocket_OG9V.et" {
-       Prefab "{CF7952C33601849F}Prefabs/Weapons/Ammo/Ammo_Rocket_OG9V.et"
-      }
-      NumSlots 4
-     }
-     MultiSlotConfiguration "{690D35A9F09B8CA8}" {
-      SlotTemplate InventoryStorageSlot "Ammo_Rocket_PG9V.et" {
-       Prefab "{3292457A2A911038}Prefabs/Weapons/Ammo/Ammo_Rocket_PG9V.et"
-      }
-      NumSlots 2
-     }
-    }
-   }
-   UniversalInventoryStorageComponent "{58A17A341AB8F069}" {
-    Enabled 0
-   }
-   SCR_ArsenalInventoryStorageManagerComponent "{58A0B19B1E191CC1}" {
-    Enabled 0
-   }
-  }
-  coords 368.574 1.781 573.149
-  angles 0 76.359 0
+  coords 369.093 1.781 573.646
  }
  {
-  components {
-   SCR_UniversalInventoryStorageComponent "{5476A2F100DF4EFF}" {
-    Enabled 1
-    Attributes SCR_ItemAttributeCollection "{5476CDB2EAD8225E}" {
-     ItemDisplayName SCR_InventoryUIInfo "{54F48AF1F3C103C1}" {
-      Name "Снаряды для СПГ-9"
-      Description ""
-     }
-    }
-    MultiSlots {
-     MultiSlotConfiguration "{690D35A99EB2B844}" {
-      SlotTemplate InventoryStorageSlot "Ammo_Rocket_OG9V.et" {
-       Prefab "{CF7952C33601849F}Prefabs/Weapons/Ammo/Ammo_Rocket_OG9V.et"
-      }
-      NumSlots 4
-     }
-     MultiSlotConfiguration "{690D35A9F09B8CA8}" {
-      SlotTemplate InventoryStorageSlot "Ammo_Rocket_PG9V.et" {
-       Prefab "{3292457A2A911038}Prefabs/Weapons/Ammo/Ammo_Rocket_PG9V.et"
-      }
-      NumSlots 2
-     }
-    }
-   }
-   UniversalInventoryStorageComponent "{58A17A341AB8F069}" {
-    Enabled 0
-   }
-   SCR_ArsenalInventoryStorageManagerComponent "{58A0B19B1E191CC1}" {
-    Enabled 0
-   }
-  }
-  coords 344.662 1.781 567.261
-  angles 0 76.359 0
+  coords 342.171 1.781 566.991
+ }
+ {
+  coords 369.242 1.781 573.222
+ }
+ {
+  coords 342.444 1.781 566.082
+ }
+ {
+  coords 369.251 1.781 572.283
+ }
+ {
+  coords 342.183 1.781 566.577
+ }
+ {
+  coords 341.69 1.781 566.049
+ }
+ {
+  coords 368.879 1.781 574.757
+ }
+ {
+  coords 341.358 1.781 566.594
+ }
+ {
+  coords 369.292 1.781 572.929
+ }
+ {
+  coords 368.983 1.781 574.249
+ }
+ {
+  coords 341.418 1.781 566.872
  }
 }
-$grp GenericEntity : "{B11252121E0D31C4}Prefabs/Items/Equipment/Tripods/6T2/Part_SPG9_Gun_Optic.et" {
+$grp Turret : "{F12983FA2F0A61A0}Prefabs/Weapons/Tripods/6T7/Deployable_Tripod_6T7_NSV.et" {
  {
-  coords 366.91 1.781 572.675
-  angles 0 -12.324 0
+  coords 367.306 1.781 573.127
+  angles 0 -14.45 0
   {
    GenericEntity {
-    ID "68F6A543138F868C"
-    coords -0.105 0.179 0.297
+    ID "655484C6D56E5B72"
+    {
+     DecalEntity {
+      ID "56DEFDB4A2C87F38"
+      coords 0 0 0
+     }
+    }
    }
   }
  }
  {
-  coords 342.998 1.781 566.787
-  angles 0 -12.324 0
-  {
-   GenericEntity {
-    ID "68F6A543138F868C"
-    coords -0.105 0.179 0.297
-   }
-  }
- }
-}
-$grp GenericEntity : "{B1EF7ED4BC4FE1D3}Prefabs/Items/Equipment/Tripods/6T2/Part_SPG9_Tripod.et" {
- {
-  coords 367.547 1.781 573.26
-  angles 0 -11.929 0
- }
- {
-  coords 343.635 1.781 567.373
-  angles 0 -11.929 0
+  coords 343.92 1.781 567.1
+  angles 0 -14.45 0
  }
 }

@@ -300,7 +300,8 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   m_iZOrder 10
  }
  RHS_USAF_G_300_M {
-  coords 3194.378 138.742 7558.474
+  coords 4403.943 110.251 7666.817
+  angles 0 90 0
   m_sImageSet "{1228936E5DB30403}UI/Textures/GroupManagement/FlagIcons/GroupFlagsBlufor.imageset"
   m_sImageSetGlow ""
   m_MarkerColor 1 1 1 1
@@ -360,7 +361,8 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   m_iZOrder 10
  }
  RHS_USAF_G_310_M {
-  coords 3812.826 310.263 5853.041
+  coords 3966.805 322.252 5733.486
+  angles 0 90 0
   m_sImageSet "{1228936E5DB30403}UI/Textures/GroupManagement/FlagIcons/GroupFlagsBlufor.imageset"
   m_sImageSetGlow ""
   m_MarkerColor 1 1 1 1
@@ -423,37 +425,6 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
  {
   coords 5342.243 402.61 5266.012
   angles 3.576 -0.974 -0.061
-  m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
-  m_sImageSetGlow ""
-  m_MarkerColor 0.016 0.552 0.905 1
-  m_sQuadName "Car"
-  m_fWorldSize 2.399
-  m_sDescription "#TF-Vehicle_M1151A1_M2_Name"
-  m_bUseWorldScale 1
-  m_aVisibleForFactions {
-   "RHS_AFRF"
-   "RHS_USAF"
-   "Ses_CDF"
-   "Ses_ChDKZ"
-   "Ses_TKR"
-   "Ses_TKA"
-   "Drg_IGF"
-   "Drg_PIR"
-   "UK"
-   "USSR"
-   "US"
-   "FIA"
-   "Drg_VCA"
-  }
-  m_bVisibleForEmptyFaction 1
-  m_aHideOnGameModeStates {
-   GAME
-  }
-  m_iZOrder 0
- }
- {
-  coords 5348.96 402.206 5268.782
-  angles 2.683 -0.973 -0.045
   m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
   m_sImageSetGlow ""
   m_MarkerColor 0.016 0.552 0.905 1
@@ -584,37 +555,6 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   m_sQuadName "Car"
   m_fWorldSize 2.399
   m_sDescription "#TF-Vehicle_M1151A1_M2_Name"
-  m_bUseWorldScale 1
-  m_aVisibleForFactions {
-   "RHS_AFRF"
-   "RHS_USAF"
-   "Ses_CDF"
-   "Ses_ChDKZ"
-   "Ses_TKR"
-   "Ses_TKA"
-   "Drg_IGF"
-   "Drg_PIR"
-   "UK"
-   "USSR"
-   "US"
-   "FIA"
-   "Drg_VCA"
-  }
-  m_bVisibleForEmptyFaction 1
-  m_aHideOnGameModeStates {
-   GAME
-  }
-  m_iZOrder 0
- }
- {
-  coords 7627.468 17.594 4755.192
-  angles 0 100.611 0
-  m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
-  m_sImageSetGlow ""
-  m_MarkerColor 0.016 0.552 0.905 1
-  m_sQuadName "Helicopter"
-  m_fWorldSize 6.487
-  m_sDescription "#AR-Vehicle_UH1H_Gunship_Name_HEDP"
   m_bUseWorldScale 1
   m_aVisibleForFactions {
    "RHS_AFRF"
@@ -793,14 +733,75 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   m_iZOrder 0
  }
  {
-  coords 5650.436 420.378 6920.205
-  angles 0 0.795 0
+  coords 5349.781 402.151 5268.311
+  angles 2.684 0.311 0.014
   m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
   m_sImageSetGlow ""
   m_MarkerColor 0.016 0.552 0.905 1
   m_sQuadName "Car"
   m_fWorldSize 2.399
-  m_sDescription "#TF-Vehicle_M1151A1_M2_Name"
+  m_sDescription "#AR-Vehicle_M998_Canopy_Name"
+  m_bUseWorldScale 1
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+   "Drg_IGF"
+   "Drg_PIR"
+   "UK"
+   "USSR"
+   "US"
+   "FIA"
+   "Drg_VCA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+   GAME
+  }
+  m_iZOrder 0
+ }
+ {
+  coords 5650.867 420.522 6918.548
+  angles 2.684 0.311 0.014
+  m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 0.016 0.552 0.905 1
+  m_sQuadName "Car"
+  m_fWorldSize 2.399
+  m_sDescription "#AR-Vehicle_M998_Canopy_Name"
+  m_bUseWorldScale 1
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+   "Drg_IGF"
+   "Drg_PIR"
+   "UK"
+   "USSR"
+   "US"
+   "FIA"
+   "Drg_VCA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+   GAME
+  }
+  m_iZOrder 0
+ }
+ {
+  coords 7628.796 17.594 4754.686
+  m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 0.016 0.552 0.905 1
+  m_sQuadName "Helicopter"
+  m_fWorldSize 6.487
+  m_sDescription "#AR-Vehicle_UH1H_Gunship_Name_HE"
   m_bUseWorldScale 1
   m_aVisibleForFactions {
    "RHS_AFRF"

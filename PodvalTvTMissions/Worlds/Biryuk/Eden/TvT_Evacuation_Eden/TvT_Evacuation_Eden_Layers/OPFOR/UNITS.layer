@@ -1,0 +1,112 @@
+SCR_AIGroup AFRF_003_BTR : "{1128EBD3DDFF1D07}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Motorized.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+   m_iSquadCallsign 3
+  }
+ }
+ coords 993.48 2.791 6012.166
+ angles 0 90 0
+ m_bSnapToTerrain 0
+}
+SCR_AIGroup AFRF_002_GRU : "{2F436E8AF9EBEAA2}Prefabs/Groups/OPFOR/RHS_AFRF/Recon/Group_RHS_AFRF_GRU.et" {
+ coords 1952.294 77.576 5115.652
+ angles 0 148.569 0
+ m_aUnitPrefabSlots {
+  "{493F72102D5E0F98}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/GRU/Ligth/Char_RHS_AFRF_GRU_SL.et"
+  "{34279EE848CD3301}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/GRU/Ligth/Char_RHS_AFRF_GRU_SR.et"
+  "{4BA5F1CD9FBA16DE}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/GRU/Ligth/Char_RHS_AFRF_GRU_MG_PKP.et"
+  "{FC1FEACE6653B3D7}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/GRU/Ligth/Char_RHS_AFRF_GRU_AT.et"
+  "{458F066DE1E8215E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/GRU/Ligth/Char_RHS_AFRF_GRU_Rifleman.et"
+  "{FCC6A27BCBDC1ABC}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/GRU/Ligth/Char_RHS_AFRF_GRU_Sniper_svdm.et"
+ }
+}
+SCR_AIGroup AFRF_001_BRDM : "{5AC79B71E9E08397}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Mechanized.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+   m_iSquadCallsign 1
+  }
+ }
+ coords 1011.108 2.791 6006.721
+ angles 0 -84.675 0
+ m_sCustomNameSet "Экипаж БРДМ"
+}
+$grp SCR_AIGroup : "{71BEA8483CBAC605}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Dozor.et" {
+ AFRF_301_KPP {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 1
+   }
+  }
+  coords 1678.544 60.378 5935.779
+  angles 0 84.25 0
+  m_aUnitPrefabSlots {
+   "{94F58255908E89A8}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_SL_Opt.et"
+   "{8D542483E201CA43}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_MG_PKP.et"
+   "{2CA58D3E25DA1886}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_AT.et"
+   "{F9D89ADEABE46FF0}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_GL.et"
+  }
+  m_sCustomNameSet "Северный КПП"
+ }
+ AFRF_302_KPP {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 2
+   }
+  }
+  coords 1734.516 79.012 5693.271
+  angles 0 138.703 0
+  m_aUnitPrefabSlots {
+   "{94F58255908E89A8}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_SL_Opt.et"
+   "{8D542483E201CA43}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_MG_PKP.et"
+   "{2CA58D3E25DA1886}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_AT.et"
+   "{F9D89ADEABE46FF0}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_GL.et"
+  }
+  m_sCustomNameSet "Южный КПП"
+ }
+}
+SCR_AIGroup AFRF_000_HQ : "{E625399A1E96672A}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_PL_2.et" {
+ coords 1276.651 37.122 5995.405
+ angles 0 -31.122 0
+ m_aUnitPrefabSlots +{
+  "{B884B787D4886422}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Sharpshooter_SVDM.et"
+ }
+}
+$grp SCR_AIGroup : "{EB131DDF464F90FD}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Squad.et" {
+ AFRF_200_SQ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 1245.53 36.137 5991.301
+  angles 0 67.665 0
+ }
+ AFRF_201_SQ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 1330.159 40.593 6047.507
+  angles 0 -52.017 0
+  m_sCustomNameSet "#PDVL_Squad_Rifle ( АГС )"
+ }
+}
+SCR_AIGroup AFRF_300_NSV : "{EE750DC326C71642}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_NSV.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+   m_iCompanyCallsign 3
+  }
+ }
+ coords 1436.279 62.607 6161.424
+ angles 0 115.38 0
+ m_aUnitPrefabSlots {
+  "{998515E06ED7A4C9}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_SL.et"
+  "{5119BF25C4252EF9}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_NSV_Number_1.et"
+  "{8BD149A66091DF44}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_NSV_Number_2.et"
+ }
+ m_sCustomNameSet "Расчет НСВ"
+}

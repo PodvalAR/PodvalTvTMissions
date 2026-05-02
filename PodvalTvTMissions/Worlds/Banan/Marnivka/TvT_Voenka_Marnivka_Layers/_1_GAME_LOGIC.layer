@@ -1,0 +1,51 @@
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{6934D3C26831FC09}" {
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "ChDKZ_WIN"
+     }
+     m_sFailedObjectiveNames {
+      "CDF_WIN"
+     }
+     m_sMessage "Военная база захвачена"
+     m_Timer GUB_ZoneControlTimer "{6934D3C21896A141}" {
+      timeToComplete 180
+     }
+     m_ZoneController GUB_ZoneController "{6934D3C217BA4418}" {
+      m_sZoneEntityName "Voenka"
+     }
+     m_FlagController GUB_FlagController "{6934D3C211625079}" {
+      m_aFlagNames {
+       "Flag"
+       "Flag2"
+       "Flag3"
+       "Flag4"
+       "Flag5"
+       "Flag6"
+      }
+      m_fStartFactionKey "Ses_CDF"
+      m_fEndFactionKey "Ses_ChDKZ"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{6934D3C3CF700DDB}" {
+       m_sFirstFactionKey "Ses_ChDKZ"
+       m_sSecondFactionKey "Ses_CDF"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+}

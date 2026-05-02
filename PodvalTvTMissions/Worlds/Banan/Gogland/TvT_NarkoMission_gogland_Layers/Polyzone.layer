@@ -25,7 +25,14 @@ GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactions
   GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
    m_aControlLogics {
     GUB_ZoneControlLogic "{68F3058381FE4AF0}" {
-     m_sMessage "Барон убит"
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "Usaf_win"
+     }
+     m_sFailedObjectiveNames {
+      "Ion_los"
+     }
+     m_sMessage "Ферма захвачена"
      m_Timer GUB_ZoneControlTimer "{68F3058492BBD9F3}" {
       timeToComplete 120
      }
@@ -67,7 +74,6 @@ PolylineShapeEntity Triger : "{7019844BAD5C4DD8}Prefabs/PolyZone/PolyZone_Border
    m_fPolygonBorderWidth 5
    m_aVisibleForFactions {
     "RHS_ION"
-    "CIV"
     "RHS_USAF"
     ""
    }

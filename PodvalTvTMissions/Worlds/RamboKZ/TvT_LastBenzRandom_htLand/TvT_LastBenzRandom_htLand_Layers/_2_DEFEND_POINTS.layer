@@ -1,0 +1,60 @@
+GUB_DefendPointEntity DEF_POINT : "{C7CE0DC3D5144B7D}Prefabs/System/MissionRandomizer/DefendPointEntity.et" {
+ coords 2035.819 6.153 561.481
+ angles 0 0 0
+ {
+  $grp GUB_SpawnPointEntity : "{0DCCBC83322A0A0D}Prefabs/System/MissionRandomizer/SpawnPointEntity.et" {
+   DEF_CMD_000 {
+    coords 11.659 2.438 -33.707
+    angles 0 53.438 0
+    m_eGroupType Command_8
+   }
+   DEF_SQ_010 {
+    coords 32.766 4.136 -45.339
+    angles 0 -125.846 0
+    m_iPlatoonCallsign 1
+   }
+   DEF_SQ_011 {
+    coords 181.594 -4.457 -71.259
+    angles 0 84.045 0
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+   DEF_SQ_012 {
+    coords 137.383 -3.609 111.939
+    angles 0.201 -167.05 -0.872
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 2
+   }
+   DEF_SPN_200 {
+    coords 79.405 4.191 -148.125
+    angles 0 90.017 0
+    m_eGroupType Recon
+    m_iCompanyCallsign 2
+   }
+   DEF_SQ_110 {
+    coords 117.562 4.19 -162.835
+    angles 0 76.918 0
+    m_eGroupType Motorized
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+   }
+  }
+  $grp SCR_EditorRestrictionZoneEntity : "{6144B0BE2EAC6897}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneMedium.et" {
+   {
+    coords 103.262 4.19 -149.216
+   }
+   {
+    coords 23.798 3.121 -36.381
+    angles -2.678 0.126 -2.687
+   }
+   {
+    coords 197.124 -4.718 -76.749
+    angles 0.895 0.014 0.895
+   }
+   {
+    coords 140.316 -3.656 111.279
+    angles 0 0 1.79
+   }
+  }
+ }
+}

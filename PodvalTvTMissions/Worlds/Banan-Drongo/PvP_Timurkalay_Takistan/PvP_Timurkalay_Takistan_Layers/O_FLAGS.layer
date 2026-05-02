@@ -1,0 +1,26 @@
+GenericEntity FLAG_1 : "{266D6129A61306FA}PrefabsEditable/Auto/Structures/Military/Flags/FlagPole_02_V1_Drg_PIR_Editable.et" {
+ components {
+  SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+   m_aObjectiveNames {
+    "FLAG_1_PIR" "FLAG_1_USSR"
+   }
+   m_aFlagData {
+    PS_FlagData "{6550DAAE8CC919BA}" {
+     m_sFactionKey "USSR"
+     m_iCaptureCounter 1
+    }
+    PS_FlagData "{6550DAAE8D02D02F}" {
+     m_sFactionKey "Drg_PIR"
+    }
+   }
+   m_bUseAdvanceGameState 1
+   m_sUseNotification 1
+  }
+ }
+ coords 8938.476 300.7 5362.714
+}
+GenericEntity : "{B3283803059E2750}Prefabs/Props/Crates/CrateWooden_01_plain.et" {
+ coords 8940.123 298.345 5360.958
+ angleY -36.722
+ scale 1.349
+}

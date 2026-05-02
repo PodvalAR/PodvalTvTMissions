@@ -1,0 +1,34 @@
+$grp GenericEntity : "{451BE00A37C69679}Prefabs/Structures/Military/Radar/ApproachRadar_TPN19_01/ApproachRadar_TPN19_01_generator.et" {
+ {
+  coords 5545.482 27.032 2276.715
+  angles 0 -77.966 0
+ }
+ {
+  coords 5547.022 21.129 1864.131
+  angles 0 -64.013 0
+ }
+}
+$grp StaticModelEntity : "{B9AEDBE988F20A1A}Prefabs/Structures/Infrastructure/Towers/AntennaR404_01/AntennaR404_01.et" {
+ {
+  coords 5539.699 27.027 2272.526
+  angles 0 0.907 0
+ }
+ {
+  components {
+   BaseActionsManagerComponent "{690CFCEB83F92098}" {
+    ActionContexts {
+     UserActionContext "{690CFCEB852A6E2C}" {
+      UIInfo UIInfo "{690CFCEB8684E930}" {
+      }
+     }
+    }
+    additionalActions {
+     PS_FlagChangeAction "{690CFCEBF6895AD9}" {
+     }
+    }
+   }
+  }
+  coords 5552.102 21.621 1865.321
+  angles 0 -155.832 0
+ }
+}

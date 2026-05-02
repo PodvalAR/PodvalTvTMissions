@@ -1,0 +1,86 @@
+PolylineShapeEntity {
+ components {
+  PS_PolyZone "{668CEDF86026D6A4}" {
+   m_mPolygonTexture "{4E88D081A9BB038F}UI/layouts/Textures/Grid6.edds"
+   m_cPolygonColor 0.502 0 0 1
+   m_mPolygonTextureBorder ""
+   m_cPolygonBorderColor 0.502 0 0 1
+   m_fPolygonBorderWidth 5
+   m_aVisibleForFactions {
+    "RHS_AFRF" "Ses_TKR" "RHS_ION" ""
+   }
+  }
+ }
+ coords 6858.791 179.905 10223.435
+ Points {
+  ShapePoint "{668CEDF811DC1EB4}" {
+   Position 0 -0.007 0
+  }
+  ShapePoint "{668CEDF811AA9E13}" {
+   Position 3406.917 -179.905 -1.484
+  }
+  ShapePoint "{668CEDF81896BDBB}" {
+   Position 3369.172 -116.973 -5272.453
+  }
+  ShapePoint "{668CEDF819125E5C}" {
+   Position 1444.744 -101.908 -5000.061
+  }
+  ShapePoint "{668CEDF85A361D64}" {
+   Position 808.107 -84.343 -4668.053
+  }
+  ShapePoint "{668CEDF819521969}" {
+   Position 483.542 -94.681 -4214.906
+  }
+  ShapePoint "{668CEDF81F0381C0}" {
+   Position 216.764 -74.192 -2876.181
+  }
+  ShapePoint "{668CEDF81C599FCF}" {
+   Position 30.521 -0.576 -496.653
+  }
+ }
+ {
+  $grp PS_PolyZoneTrigger {
+   {
+    components {
+     Hierarchy "{614548BDF998E12B}" {
+     }
+    }
+    TriggerShapeType Polyline
+    SphereRadius 5000000
+    "Polyline Height" 1000
+    ShapeColor 0.251 0 0.502 1
+    TriggerActivationType "All changes"
+    PeriodicQueries 1
+    UpdatePeriod 1
+    ClassesFilter {
+     "SCR_ChimeraCharacter"
+    }
+    m_polyZoneEffect PS_PolyZoneEffectRestricted "{6146D719824FE119}" {
+     m_fKillTime 40
+    }
+    m_sFactionKey "RHS_ION"
+   }
+   {
+    components {
+     Hierarchy "{614548BDF998E12B}" {
+     }
+    }
+    coords 0 0 0
+    TriggerShapeType Polyline
+    SphereRadius 5000000
+    "Polyline Height" 1000
+    ShapeColor 0.251 0 0.502 1
+    TriggerActivationType "All changes"
+    PeriodicQueries 1
+    UpdatePeriod 1
+    ClassesFilter {
+     "SCR_ChimeraCharacter"
+    }
+    m_polyZoneEffect PS_PolyZoneEffectRestricted "{6146D719824FE119}" {
+     m_fKillTime 40
+    }
+    m_sFactionKey "Ses_TKR"
+   }
+  }
+ }
+}

@@ -1,0 +1,112 @@
+PolylineShapeEntity Triger {
+ components {
+  PS_PolyZone "{68F3490B6670F657}" {
+   m_mPolygonTexture "{62F4404928D33DB5}UI/layouts/Textures/Grid1b.edds"
+   m_cPolygonColor 0.259 0.365 0.686 1
+   m_fPolygonUVScale 0.44
+   m_cPolygonBorderColor 0 0.125 0.502 1
+   m_fPolygonBorderWidth 5
+   m_aVisibleForFactions {
+    "RHS_ION"
+    "RHS_AFRF"
+    "RHS_USAF"
+    ""
+   }
+  }
+ }
+ coords 12893.491 5.75 9836.098
+ Points {
+  ShapePoint "{68F3490B7BD0148C}" {
+   Position 0 0 0
+  }
+  ShapePoint "{68F3490B6FF0D995}" {
+   Position -97.459 0 36.423
+  }
+  ShapePoint "{68F3490B71CB54FA}" {
+   Position -21.082 0 179.689
+  }
+  ShapePoint "{68F3490B723B4ABB}" {
+   Position 27.816 -0.002 174.347
+  }
+  ShapePoint "{68F3490B72D9FD35}" {
+   Position 23.164 0.001 122.706
+  }
+  ShapePoint "{68F3490B7BD0328A}" {
+   Position 18.113 0 101.915
+  }
+ }
+}
+$grp GenericEntity : "{3D78D7D606FF9818}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_NoCapture.et" {
+ Flag3 {
+  coords 12807.119 13.318 9883.388
+  angles 0 83.487 0
+ }
+ Flag4 {
+  coords 12840.42 17.346 9950.487
+  angles 0 122.149 0
+ }
+ Flag2 {
+  coords 12828.92 17.355 9930.326
+  angles 0 -5.275 0
+ }
+ Flag5 {
+  coords 12885.812 17.414 10003.351
+  angles 0 100.478 0
+ }
+ Flag {
+  coords 12902.647 17.414 9958.362
+  angles 0 -82.463 0
+ }
+}
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{68EA81A91B1FF9B1}" {
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "RF_Win"
+     }
+     m_sFailedObjectiveNames {
+      "USAF_Win"
+     }
+     m_sMessage "Промзона захвачена"
+     m_Timer GUB_ZoneControlTimer "{68EA81A9155CB9C9}" {
+      timeToComplete 150
+     }
+     m_ZoneController GUB_ZoneController "{68EA81A90E804A3B}" {
+      m_sZoneEntityName "Triger"
+     }
+     m_FlagController GUB_FlagController "{68EA81A902648331}" {
+      m_aFlagNames {
+       "Flag"
+       "Flag2"
+       "Flag3"
+       "Flag4"
+       "Flag5"
+      }
+      m_fStartFactionKey "RHS_USAF"
+      m_fEndFactionKey "RHS_AFRF"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{68EA81AB83328B47}" {
+       m_sFirstFactionKey "RHS_AFRF"
+       m_sSecondFactionKey "RHS_USAF"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 13944.74 0 9740.42
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 13912.071 0 9669.699
+}

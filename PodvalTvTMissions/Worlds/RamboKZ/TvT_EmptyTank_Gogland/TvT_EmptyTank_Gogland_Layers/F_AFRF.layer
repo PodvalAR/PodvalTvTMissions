@@ -16,11 +16,6 @@ SCR_AIGroup AFRF_200 : "{2F436E8AF9EBEAA2}Prefabs/Groups/OPFOR/RHS_AFRF/Recon/Gr
  }
  m_sCustomNameSet "СПН"
 }
-Vehicle AFRF_102_BUMER : "{31F0866273C46D76}Prefabs/Vehicles/Wheeled/K17/APC_K17_Berezok.et" {
- coords 7240.651 5.631 5208.931
- angles 1.196 -154.077 -0.414
- m_sAttachmentGroupName "AFRF_102"
-}
 SCR_AIGroup AFRF_000 : "{496070641528229D}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_PL.et" {
  coords 7183.376 6.654 5089.671
  angles 0 -34.779 0
@@ -28,6 +23,11 @@ SCR_AIGroup AFRF_000 : "{496070641528229D}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/
   "{E49DF9180B449850}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_SR.et"
   "{1D25ADA8774D4BD2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Medic.et"
  }
+}
+Vehicle AFRF_100_TYPHON : "{5F1FDC2EF2755773}Prefabs/Vehicles/Wheeled/K4386/K4386_Armed_teplak_of.et" {
+ coords 7223.578 4.157 5165.832
+ angles 0 -162.237 0
+ m_sAttachmentGroupName "AFRF_100"
 }
 $grp Vehicle : "{6B7CD408BDFB94F5}Prefabs/Vehicles/Wheeled/TIGR/PKP/GAZ_TIGR_v2_PKM_Green.et" {
  AFRF_010_TIGR_PKM {
@@ -80,11 +80,6 @@ $grp Vehicle : "{7A16FB788DAD3992}Prefabs/Vehicles/Wheeled/TIGR/KORD/GAZ_TIGR_v2
   m_sAttachmentGroupName "AFRF_012"
  }
 }
-Vehicle AFRF_100_TYPHON : "{AB5DE68E3E654FCA}Prefabs/Vehicles/Wheeled/K4386/K4386_Armed.et" {
- coords 7223.578 4.157 5165.832
- angles 0 -162.237 0
- m_sAttachmentGroupName "AFRF_100"
-}
 SCR_AIGroup AFRF_300 : "{B851352F042E4F0B}Prefabs/Groups/OPFOR/RHS_AFRF/Recon/Group_RHS_AFRF_Recon_Squad.et" {
  components {
   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
@@ -119,6 +114,11 @@ SCR_AIGroup AFRF_400 : "{D43A9753198C5D8F}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/
  }
  coords 1203.081 3 5052.782
  angles 0 -56.718 0
+}
+Vehicle AFRF_102_BUMER : "{E5FE9FFC9ED44048}Prefabs/Vehicles/Wheeled/K17/APC_K17_nopt.et" {
+ coords 7240.651 5.631 5208.931
+ angles 1.196 -154.077 -0.414
+ m_sAttachmentGroupName "AFRF_102"
 }
 $grp SCR_AIGroup : "{EB131DDF464F90FD}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Squad.et" {
  AFRF_010 {

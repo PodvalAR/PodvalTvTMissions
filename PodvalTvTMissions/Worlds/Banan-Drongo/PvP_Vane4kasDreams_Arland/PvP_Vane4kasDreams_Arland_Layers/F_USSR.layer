@@ -1,0 +1,275 @@
+$grp Vehicle : "{863BF8BC5954971E}Prefabs/Vehicles/Helicopters/UH1H/drg_UH1H_armed_gunship_M60_RED.et" {
+ drg_UH1H_armed_gunship_M60_RED1 {
+  coords -2003.03 3.986 -2212.916
+  angleX 0.611
+  angleY 41.988
+  angleZ 0.795
+  m_sAttachmentGroupName "USSR_0_0_0"
+ }
+ drg_UH1H_armed_gunship_M60_RED2 {
+  coords -2019.745 3.972 -2231.489
+  angleX 0.881
+  angleY 41.988
+  m_sAttachmentGroupName "USSR_0_0_1"
+ }
+ drg_UH1H_armed_gunship_M60_RED3 {
+  coords -2036.803 3.988 -2250.442
+  angleX -0.015
+  angleY 41.976
+  angleZ 0.783
+  m_sAttachmentGroupName "USSR_0_0_2"
+ }
+ drg_UH1H_armed_gunship_M60_RED4 {
+  coords -2053.104 3.964 -2268.56
+  angleX 0.881
+  angleY 41.976
+  angleZ -0.001
+  m_sAttachmentGroupName "USSR_0_0_3"
+ }
+ drg_UH1H_armed_gunship_M60_RED5 {
+  coords -2098.491 3.969 -2321.858
+  angleX -0.895
+  angleY 41.122
+  angleZ -0.022
+  m_sAttachmentGroupName "USSR_2_0_1"
+ }
+ drg_UH1H_armed_gunship_M60_RED6 {
+  coords -2115.268 3.989 -2341.061
+  angleX -0.004
+  angleY 41.127
+  angleZ 0.783
+  m_sAttachmentGroupName "USSR_2_0_2"
+ }
+ drg_UH1H_armed_gunship_M60_RED7 {
+  coords -2131.296 3.973 -2359.419
+  angleX -0.895
+  angleY 41.11
+  angleZ -0.021
+  m_sAttachmentGroupName "USSR_2_0_3"
+ }
+ drg_UH1H_armed_gunship_M60_RED8 {
+  coords -2082.052 3.986 -2303.039
+  angleX -0.004
+  angleY 41.139
+  angleZ 0.783
+  m_sAttachmentGroupName "USSR_2_0_0"
+ }
+ drg_UH1H_armed_gunship_M60_RED9 {
+  coords -1987.9 4 -2226.133
+  angleY 41.988
+  m_sAttachmentGroupName "USSR_1_0_0"
+ }
+ drg_UH1H_armed_gunship_M60_RED10 {
+  coords -2004.615 4 -2244.706
+  angleY 41.988
+  m_sAttachmentGroupName "USSR_1_0_1"
+ }
+ drg_UH1H_armed_gunship_M60_RED11 {
+  coords -2021.673 4 -2263.659
+  angleY 41.976
+  m_sAttachmentGroupName "USSR_1_0_2"
+ }
+ drg_UH1H_armed_gunship_M60_RED12 {
+  coords -2037.974 4 -2281.777
+  angleY 41.976
+  m_sAttachmentGroupName "USSR_1_0_3"
+ }
+ drg_UH1H_armed_gunship_M60_RED13 {
+  coords -2083.361 4 -2335.075
+  angleY 41.122
+  m_sAttachmentGroupName "USSR_3_0_1"
+ }
+ drg_UH1H_armed_gunship_M60_RED14 {
+  coords -2100.138 4 -2354.278
+  angleY 41.127
+  m_sAttachmentGroupName "USSR_3_0_2"
+ }
+ drg_UH1H_armed_gunship_M60_RED15 {
+  coords -2116.167 4 -2372.636
+  angleY 41.11
+  m_sAttachmentGroupName "USSR_3_0_3"
+ }
+ drg_UH1H_armed_gunship_M60_RED16 {
+  coords -2066.922 4 -2316.256
+  angleY 41.139
+  m_sAttachmentGroupName "USSR_3_0_0"
+ }
+}
+$grp SCR_AIGroup : "{A9166C1E1E6EB707}Prefabs/Groups/OPFOR/Campaign/S_USSR_drg_HeliGunTransport.et" {
+ USSR_0_0_0 {
+  coords -1998.931 4 -2214.339
+  angleY 132.214
+  m_bSnapToTerrain 0
+ }
+ USSR_0_0_1 {
+  components {
+   PS_GroupCallsignAssigner "{645CD4F6ECD5DE15}" {
+    m_iSquadCallsign 1
+   }
+  }
+  coords -2014.868 4 -2232.449
+  angleY 130.684
+  m_bSnapToTerrain 0
+ }
+ USSR_0_0_2 {
+  components {
+   PS_GroupCallsignAssigner "{645CD4F6ECD5DE15}" {
+    m_iSquadCallsign 2
+   }
+  }
+  coords -2031.139 4 -2251.376
+  angleY 130.684
+  m_bSnapToTerrain 0
+ }
+ USSR_0_0_3 {
+  components {
+   PS_GroupCallsignAssigner "{645CD4F6ECD5DE15}" {
+    m_iSquadCallsign 3
+   }
+  }
+  coords -2046.749 4 -2269.534
+  angleY 130.684
+  m_bSnapToTerrain 0
+ }
+ USSR_1_0_0 {
+  components {
+   PS_GroupCallsignAssigner "{645CD4F6ECD5DE15}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords -1989.608 3.99 -2221.732
+  angleX 0.021
+  angleY 132.214
+  angleZ -0.88
+  m_bSnapToTerrain 0
+ }
+ USSR_1_0_1 {
+  components {
+   PS_GroupCallsignAssigner "{645CD4F6ECD5DE15}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords -2006.085 3.99 -2239.896
+  angleX 0.015
+  angleY 132.214
+  angleZ -0.626
+  m_bSnapToTerrain 0
+ }
+ USSR_1_0_2 {
+  components {
+   PS_GroupCallsignAssigner "{645CD4F6ECD5DE15}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords -2022.806 3.99 -2258.352
+  angleX 0.021
+  angleY 132.214
+  angleZ -0.88
+  m_bSnapToTerrain 0
+ }
+ USSR_1_0_3 {
+  components {
+   PS_GroupCallsignAssigner "{645CD4F6ECD5DE15}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 3
+   }
+  }
+  coords -2039.282 3.993 -2277.008
+  angleX 0.015
+  angleY 132.214
+  angleZ -0.626
+  m_bSnapToTerrain 0
+ }
+ USSR_2_0_0 {
+  components {
+   PS_GroupCallsignAssigner "{645CD4F6ECD5DE15}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords -2077.001 4 -2304.201
+  angleY 132.214
+  m_bSnapToTerrain 0
+ }
+ USSR_2_0_1 {
+  components {
+   PS_GroupCallsignAssigner "{645CD4F6ECD5DE15}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords -2093.491 4 -2323.583
+  angleY 132.214
+  m_bSnapToTerrain 0
+ }
+ USSR_2_0_2 {
+  components {
+   PS_GroupCallsignAssigner "{645CD4F6ECD5DE15}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 2
+   }
+  }
+  coords -2110.673 4 -2343.261
+  angleY 132.214
+  m_bSnapToTerrain 0
+ }
+ USSR_2_0_3 {
+  components {
+   PS_GroupCallsignAssigner "{645CD4F6ECD5DE15}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 3
+   }
+  }
+  coords -2126.134 4 -2361.301
+  angleY 132.214
+  m_bSnapToTerrain 0
+ }
+ USSR_3_0_0 {
+  components {
+   PS_GroupCallsignAssigner "{645CD4F6ECD5DE15}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords -2068.001 4 -2312.041
+  angleY 132.214
+  m_bSnapToTerrain 0
+ }
+ USSR_3_0_1 {
+  components {
+   PS_GroupCallsignAssigner "{645CD4F6ECD5DE15}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 1
+   }
+  }
+  coords -2084.43 3.991 -2330.961
+  angleY 132.214
+  m_bSnapToTerrain 0
+ }
+ USSR_3_0_2 {
+  components {
+   PS_GroupCallsignAssigner "{645CD4F6ECD5DE15}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 2
+   }
+  }
+  coords -2102.11 3.987 -2350.577
+  angleX -0.797
+  angleY 132.206
+  angleZ 0.608
+  m_bSnapToTerrain 0
+ }
+ USSR_3_0_3 {
+  components {
+   PS_GroupCallsignAssigner "{645CD4F6ECD5DE15}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 3
+   }
+  }
+  coords -2117.238 3.985 -2368.432
+  angleX -0.003
+  angleY 132.214
+  angleZ 0.881
+  m_bSnapToTerrain 0
+ }
+}

@@ -1,0 +1,103 @@
+PolylineShapeEntity {
+ components {
+  PS_PolyZone "{6587449948C27B71}" {
+   m_mPolygonTexture ""
+   m_cPolygonColor 1 1 1 0
+   m_mPolygonTextureBorder ""
+   m_cPolygonBorderColor 0.502 0 0 1
+   m_fPolygonBorderWidth 5
+   m_aVisibleForFactions {
+    "USSR" "Ses_TKR" ""
+   }
+  }
+ }
+ coords 9094.883 398.323 4591.479
+ Points {
+  ShapePoint "{658744997429BA85}" {
+   Position 0 0 0
+  }
+  ShapePoint "{6587449974284F87}" {
+   Position -25.414 13.68 30.579
+  }
+  ShapePoint "{6587449975A09A3B}" {
+   Position -38.068 8.051 85.349
+  }
+  ShapePoint "{658744997B1C60C9}" {
+   Position 74.11 0.506 188.824
+  }
+  ShapePoint "{658744997B77B3AF}" {
+   Position 199.104 13.149 303.762
+  }
+  ShapePoint "{6587449979090CFC}" {
+   Position 230.392 27.458 338.102
+  }
+  ShapePoint "{65874499799D687B}" {
+   Position 262.483 42.998 339.843
+  }
+  ShapePoint "{6587449979DBEA51}" {
+   Position 302.283 62.207 316.799
+  }
+  ShapePoint "{658744997EF78141}" {
+   Position 325.755 70.12 321.002
+  }
+  ShapePoint "{658744997F6482DE}" {
+   Position 368.234 61.836 276.958
+  }
+  ShapePoint "{658744997CFDC35A}" {
+   Position 376.94 47.67 220.812
+  }
+  ShapePoint "{658744997D45E3D1}" {
+   Position 377.816 38.842 180.799
+  }
+  ShapePoint "{658744997DD08249}" {
+   Position 365.548 33.998 143.849
+  }
+  ShapePoint "{65874499420FC421}" {
+   Position 340.727 31.542 107.132
+  }
+  ShapePoint "{65874499437E87B6}" {
+   Position 301.608 31.61 89.36
+  }
+  ShapePoint "{6587449943FDB185}" {
+   Position 258.498 30.688 66.313
+  }
+  ShapePoint "{6587449941338807}" {
+   Position 219.44 27.576 60.67
+  }
+  ShapePoint "{6587449941E25E38}" {
+   Position 174.077 18.851 49.43
+  }
+  ShapePoint "{658744994642A700}" {
+   Position 124.089 13.567 38.456
+  }
+  ShapePoint "{6587449947AD5B87}" {
+   Position 84.592 7.737 26.221
+  }
+  ShapePoint "{65874499447D4C53}" {
+   Position 36.434 2.266 6.86
+  }
+ }
+ IsClosed 1
+ LineColor 0.8745 1 1 1
+ {
+  PS_PolyZoneTrigger {
+   components {
+    Hierarchy "{614548BDF998E12B}" {
+    }
+   }
+   TriggerShapeType Polyline
+   "Polyline Height" 2000
+   TriggerActivationType "All changes"
+   PeriodicQueries 1
+   UpdatePeriod 1
+   ClassesFilter {
+    "SCR_ChimeraCharacter"
+   }
+   m_polyZoneEffect PS_PolyZoneEffectRestricted "{614548BC046ADB65}" {
+    m_fKillTime 40
+   }
+   m_bReversed 1
+   m_sFactionKey "USSR"
+  }
+ }
+}

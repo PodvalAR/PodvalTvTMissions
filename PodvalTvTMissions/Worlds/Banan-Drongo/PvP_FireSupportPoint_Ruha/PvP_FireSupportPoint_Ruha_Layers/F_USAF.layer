@@ -1,0 +1,139 @@
+Vehicle M923A1_engineer_mines1 : "{08D6BDBA15947EB0}Prefabs/Vehicles/Wheeled/M923A1/M923A1_engineer_mines.et" {
+ coords 2298.732 60.267 851.118
+ angleX -0.582
+ angleY 130.555
+ angleZ 0.68
+ m_sAttachmentGroupName "USAF_4_0_0"
+ m_bEnableMoveOnFreeze 1
+}
+Vehicle LAV25_RHS1 : "{3312ADBF53A16DD8}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS.et" {
+ coords 2316.722 60.071 847.262
+ angleX 0.25
+ angleY 33.596
+ angleZ 1.241
+ m_sAttachmentGroupName "USAF_2_0_0"
+ m_bEnableMoveOnFreeze 1
+}
+SCR_AIGroup USAF_0_0_0 : "{4A02B745F553821E}Prefabs/Groups/BLUFOR/drg_USAF_CompanyHQ.et" {
+ coords 2264.667 61.007 912.431
+ angleX 1.161
+ angleY -54.735
+ angleZ 0.82
+ m_aUnitPrefabSlots + {
+  "{C784C4AC9B010A91}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/SOCOM/drg_Role_RHS_USAF_SOCOM_Scout_RER.et"
+ }
+}
+$grp SCR_AIGroup : "{CB79DA5FE5AC31AB}Prefabs/Groups/BLUFOR/drg_USAF_RifleSquad.et" {
+ USAF_1_0_0 {
+  components {
+   PS_GroupCallsignAssigner "{6564F0339CB2D893}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 2290.518 60.717 896.052
+  angleX -0.061
+  angleY -143.657
+  angleZ -0.397
+ }
+ USAF_1_0_1 {
+  components {
+   PS_GroupCallsignAssigner "{6564F0339CB2D893}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 2281.04 60.856 902.993
+  angleX 0.607
+  angleY -147.006
+  angleZ -1.978
+ }
+ USAF_1_0_2 {
+  components {
+   PS_GroupCallsignAssigner "{6564F0339CB2D893}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 2276.82 60.831 896.988
+  angleX 4.55
+  angleY 33.889
+  angleZ 3.391
+ }
+ USAF_3_0_0 {
+  components {
+   PS_GroupCallsignAssigner "{6564F0339CB2D893}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 2275.921 60.72 875.655
+  angleX 1.856
+  angleY 37.213
+  angleZ 3.189
+  m_aUnitPrefabSlots {
+   "{A25CCAC020E867E6}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_Mortar_TeamLeader.et" "{1CB207D10EB55F66}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_MortarGunner.et" "{D851B6F91F3B31BA}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_MortarLoader.et" "{1CB207D10EB55F66}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_MortarGunner.et" "{D851B6F91F3B31BA}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_MortarLoader.et" "{1CB207D10EB55F66}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_MortarGunner.et" "{D851B6F91F3B31BA}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_MortarLoader.et"
+  }
+  m_sCustomNameSet "#DRG-Sq-MortarCrew"
+ }
+ USAF_1_0_3 {
+  components {
+   PS_GroupCallsignAssigner "{6564F0339CB2D893}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 3
+   }
+  }
+  coords 2288.164 60.729 889.447
+  angleX 4.471
+  angleY 35.213
+  angleZ 3.495
+  m_aUnitPrefabSlots {
+   "{600E890491C62306}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_SL.et" "{36FE68EB81398B5C}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_MG_opt.et" "{D38A51C19D66AAC8}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_MGAB.et" "{FEA8A03109D0FC66}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_MGA.et" "{36FE68EB81398B5C}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_MG_opt.et" "{D38A51C19D66AAC8}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_MGAB.et" "{FEA8A03109D0FC66}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_MGA.et"
+  }
+  m_sCustomNameSet "#DRG-Sq-MachineGunnerSquad"
+ }
+ USAF_2_0_0 {
+  components {
+   PS_GroupCallsignAssigner "{6564F0339CB2D893}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 2319.908 60.026 845.64
+  angleX -3.003
+  angleY 121.841
+  angleZ 2.144
+  m_aUnitPrefabSlots {
+   "{E462BAA5D17E2736}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_CrewCommander.et" "{7F23D266011DAD4D}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_CrewGunner.et" "{9808758629EAA4E0}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_CrewDriver.et"
+  }
+  m_sCustomNameSet "#DRG_Sqd_LavCrew"
+ }
+ USAF_2_0_1 {
+  components {
+   PS_GroupCallsignAssigner "{6564F0339CB2D893}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 2323.78 60.299 851.849
+  angleX -3.003
+  angleY 121.841
+  angleZ 2.144
+  m_aUnitPrefabSlots {
+   "{9B04B586930EFE2D}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/SOCOM/drg_Role_RHS_USAF_SOCOM_SL.et" "{9FBBBCD632861C8A}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/SOCOM/drg_Role_RHS_USAF_SOCOM_Scout.et" "{9FBBBCD632861C8A}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/SOCOM/drg_Role_RHS_USAF_SOCOM_Scout.et" "{BEEA7D7CB773EF01}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/SOCOM/drg_Role_RHS_USAF_SOCOM_Scout_AT.et" "{D1FC452D48AB3333}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/SOCOM/drg_Role_RHS_USAF_SOCOM_ScoutSapper.et" "{57CDCD5C503ABF3E}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/SOCOM/drg_Role_RHS_USAF_SOCOM_Scout_Medic.et"
+  }
+  m_sCustomNameSet "#DRG-Sq-ReconSquad"
+ }
+ USAF_4_0_0 {
+  components {
+   PS_GroupCallsignAssigner "{6564F0339CB2D893}" {
+    m_iCompanyCallsign 4
+   }
+  }
+  coords 2291.184 60.25 846.024
+  angleX 0.843
+  angleY 19.701
+  angleZ 0.302
+  m_aUnitPrefabSlots {
+   "{FFC151C8293D6133}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_SeniorSapper.et" "{A9D9A5DEF8F4D521}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_Sapper.et" "{A9D9A5DEF8F4D521}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_Sapper.et" "{A9D9A5DEF8F4D521}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_Sapper.et"
+  }
+  m_sCustomNameSet "#DRG_Sqd_Engineer"
+ }
+}

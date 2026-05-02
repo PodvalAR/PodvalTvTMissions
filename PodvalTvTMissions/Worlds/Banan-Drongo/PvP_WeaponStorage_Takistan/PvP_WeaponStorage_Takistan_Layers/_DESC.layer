@@ -1,0 +1,76 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ "_1_RULES" {
+  m_sTitle "#PS-Description_HeaderRules"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "ОБЩИЕ ПРАВИЛА"\
+  "— Всем запрещено надевать форму, головные уборы, разгрузки, бронежилеты противника (рюкзаки можно) "\
+  ""\
+  "ПРАВИЛА ДЛЯ АРМИИ ТАКИСТАНА"\
+  "— Запрещено любым способом пытаться завладеть вооружением из склада до его разграбления."\
+  "— Запрещено покидать территорию военной части."\
+  "— Можно сдаться и воевать на стороне боевиков."\
+  ""\
+  "СПОСОБЫ ПОБЕДЫ ДЛЯ БОЕВИКОВ"\
+  "— Можно взять солдат охранения в плен и принудить воевать на своей стороне."\
+  ""\
+  "СПОСОБЫ ПОБЕДЫ ДЛЯ ВС СССР"\
+  "— Уничтожить пусковую установку в складе."\
+  "— Разромить противника"\
+  ""\
+  "СПОСОБЫ ПОБЕДЫ ДЛЯ БОЕВИКОВ"\
+  "— Не дать уничтожить пусковую установку в складе."\
+  "— Разромить противника"\
+  ""\
+  "ПРО СДАЧУ В ПЛЕН"\
+  "— Стороны могут не соблюдать договорённости, всё зависит от игроков, решайте самостоятельно."
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+  m_iOrder 1
+ }
+ "_2_TKR" {
+  m_sTitle "Задачи боевиков"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "Братья! Мы должны захватить склад предателей и вооружиться."\
+  ""\
+  "Наш шпион доложил что генералы предателей не доверяют своим солдатами  по этому замуровали главный вход, для этого у нас имеется сапёр. "\
+  ""\
+  "После захвата военной части, нам понадобиться его услуга."
+  m_aVisibleForFactions {
+   "Ses_TKR"
+  }
+  m_iOrder 2
+ }
+ "_0_ABOUT" {
+  m_sTitle "#PS-Description_HeaderAboutMission"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "Армия Такистана теряет контроль над складом с вооружением. Всё бы ничего, однако кроме стрелкового вооружения на складе хранились пусковой коплекс который пренадлежит Советам."\
+  ""\
+  "Советы стремятся любой ценой уничтожить пусковую установку. Боевики вооружаются и планируют встретиться неприятеля во все оружие."
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+ "_2_USSR" {
+  m_sTitle "#DRG-Description_HeaderUSSR"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "Рота боевая тревога!"\
+  ""\
+  "Нам поступил сигнал о нападении на склад с вооружением союзников, по нашей информации кроме стрелкового вооружение в складском помещении имеется пусковая установка, нам нужно добраться до неё и подорвать!"\
+  ""\
+  "Для этого командованеи предстоавило нам взрывчатку."
+  m_aVisibleForFactions {
+   "USSR"
+  }
+  m_iOrder 2
+ }
+ "_2_TKA" {
+  coords 0 0 0
+  m_sTitle "Задачи боевиков"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "Мы простые Такистнские срочники которые охраняют склад."\
+  " Прочитайте правила миссии!"
+  m_aVisibleForFactions {
+   "Ses_TKA"
+  }
+  m_iOrder 2
+ }
+}

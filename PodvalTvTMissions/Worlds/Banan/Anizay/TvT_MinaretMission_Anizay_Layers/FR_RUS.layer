@@ -5,8 +5,8 @@ $grp Vehicle : "{0B4DEA8078B78A9B}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_PKM.et"
   m_sAttachmentGroupName "rer"
  }
  UAZ469_PKM2 {
-  coords 4897.587 149.282 8761.102
-  angles 0 176.201 0
+  coords 4897.587 149.454 8761.1
+  angles -1.923 176.201 0
   m_sAttachmentGroupName "rer2"
  }
 }
@@ -19,26 +19,10 @@ SCR_AIGroup crew : "{1128EBD3DDFF1D07}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Grou
  coords 3066.987 144.336 8490.254
  angles 0 36.998 0
 }
-Vehicle Ural4320_transport1 : "{16C1F16C9B053801}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport.et" {
- components {
-  SCR_UniversalInventoryStorageComponent "{5916C58171230A92}" {
-   MultiSlots {
-    MultiSlotConfiguration "{68E867F6B18BBF2D}" {
-     SlotTemplate InventoryStorageSlot sand {
-      Prefab "{1742632597955A55}Prefabs/Items/Misc/Sandbags/Part_Sandbag_Plastic.et"
-     }
-     NumSlots 130
-    }
-   }
-  }
- }
- coords 3973.559 137.406 7156.601
- angles 0 174.973 0
-}
 $grp Vehicle : "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et" {
  UAZ2 {
-  coords 4898.129 149.005 8753.169
-  angles 0 178.311 0
+  coords 4898.129 149.239 8753.169
+  angles -2.036 178.311 0
   m_sAttachmentGroupName "rer2"
  }
  UAZ1 {
@@ -64,6 +48,10 @@ $grp Vehicle : "{5C38170BFBE9F966}Prefabs/Vehicles/Wheeled/TIGR/KORD/GAZ_TIGR_v2
   m_sAttachmentGroupName "TET"
  }
 }
+Vehicle Ural4320_engineer_sand1 : "{7009ED8FBA7A1E7E}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_engineer_sand.et" {
+ coords 3973.796 137.406 7156.67
+ angles 0 174.269 0
+}
 $grp SCR_AIGroup : "{D266A249A174B7C7}Prefabs/Groups/OPFOR/RHS_AFRF/Recon/Group_RHS_AFRF_Recon_Squad_7.et" {
  rer {
   components {
@@ -86,8 +74,9 @@ $grp SCR_AIGroup : "{D266A249A174B7C7}Prefabs/Groups/OPFOR/RHS_AFRF/Recon/Group_
  }
 }
 SCR_AIGroup : "{E625399A1E96672A}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_PL_2.et" {
- coords 3979.49 139.406 7172.33
+ coords 3979.49 137.435 7172.33
  angles 0 172.614 0
+ m_bSnapToTerrain 0
 }
 $grp SCR_AIGroup : "{EB131DDF464F90FD}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Squad.et" {
  {
@@ -98,6 +87,7 @@ $grp SCR_AIGroup : "{EB131DDF464F90FD}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Grou
   }
   coords 3990.994 137.442 7146.014
   angles 0 -96.939 0
+  m_bSnapToTerrain 0
  }
  group1 {
   components {
@@ -108,6 +98,7 @@ $grp SCR_AIGroup : "{EB131DDF464F90FD}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Grou
   }
   coords 3971.784 137.442 7150.728
   angles 0 83.061 0
+  m_bSnapToTerrain 0
  }
  TET {
   components {

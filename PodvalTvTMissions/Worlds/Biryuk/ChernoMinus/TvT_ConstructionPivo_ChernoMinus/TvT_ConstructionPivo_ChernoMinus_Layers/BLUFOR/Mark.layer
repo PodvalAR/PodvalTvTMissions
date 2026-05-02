@@ -1,4 +1,35 @@
 $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+ {
+  coords 12372.041 143.797 7591.766
+  angles 3.966 250.575 0.496
+  m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 0.023 0.553 0.403 1
+  m_sQuadName "APC"
+  m_fWorldSize 3.691
+  m_sDescription "#AR-Vehicle_BTR70_Name"
+  m_bUseWorldScale 1
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+   "Drg_IGF"
+   "Drg_PIR"
+   "UK"
+   "USSR"
+   "US"
+   "FIA"
+   "Drg_VCA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+   GAME
+  }
+  m_iZOrder 0
+ }
  Ses_CDF_G_000_M {
   coords 11470.878 212 7545.159
   m_sImageSet "{1228936E5DB30403}UI/Textures/GroupManagement/FlagIcons/GroupFlagsBlufor.imageset"
@@ -179,19 +210,19 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   }
   m_iZOrder 10
  }
- {
-  coords 12372.041 143.797 7591.766
-  angles 3.966 250.575 0.496
-  m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
+ Ses_CDF_G_201_M {
+  coords 12355.02 141.587 7609.593
+  m_sImageSet "{1228936E5DB30403}UI/Textures/GroupManagement/FlagIcons/GroupFlagsBlufor.imageset"
   m_sImageSetGlow ""
-  m_MarkerColor 0.023 0.553 0.403 1
-  m_sQuadName "APC"
-  m_fWorldSize 3.691
-  m_sDescription "#AR-Vehicle_BTR70_Name"
-  m_bUseWorldScale 1
+  m_MarkerColor 1 1 1 1
+  m_sQuadName "undefined"
+  m_fWorldSize 50
+  m_sDescription "(Пехотный отряд) Хаос Ред 2"
+  m_bUseWorldScale 0
   m_aVisibleForFactions {
    "RHS_AFRF"
    "RHS_USAF"
+   "RHS_ION"
    "Ses_CDF"
    "Ses_ChDKZ"
    "Ses_TKR"
@@ -206,12 +237,12 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   }
   m_bVisibleForEmptyFaction 1
   m_aHideOnGameModeStates {
-   GAME
   }
-  m_iZOrder 0
+  m_iZOrder 10
  }
  {
-  coords 11477.083 212 7520.278
+  coords 12362.338 141.345 7611.525
+  angles 9.507 242.577 -0.931
   m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
   m_sImageSetGlow ""
   m_MarkerColor 0.023 0.553 0.403 1
@@ -239,35 +270,5 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
    GAME
   }
   m_iZOrder 0
- }
- Ses_CDF_G_004_M {
-  coords 12355.02 141.587 7609.593
-  m_sImageSet "{1228936E5DB30403}UI/Textures/GroupManagement/FlagIcons/GroupFlagsBlufor.imageset"
-  m_sImageSetGlow ""
-  m_MarkerColor 1 1 1 1
-  m_sQuadName "undefined"
-  m_fWorldSize 50
-  m_sDescription "(Пехотный отряд) Атлас Ред 4"
-  m_bUseWorldScale 0
-  m_aVisibleForFactions {
-   "RHS_AFRF"
-   "RHS_USAF"
-   "RHS_ION"
-   "Ses_CDF"
-   "Ses_ChDKZ"
-   "Ses_TKR"
-   "Ses_TKA"
-   "Drg_IGF"
-   "Drg_PIR"
-   "UK"
-   "USSR"
-   "US"
-   "FIA"
-   "Drg_VCA"
-  }
-  m_bVisibleForEmptyFaction 1
-  m_aHideOnGameModeStates {
-  }
-  m_iZOrder 10
  }
 }

@@ -1,47 +1,19 @@
-$grp Vehicle : "{015DE314BA981908}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_camo1.et" {
- Ural4320_transport_camo4 {
-  coords 8304.733 322.001 2131.186
-  angles 0 157.774 0
-  m_sAttachmentGroupName "Pex2"
+$grp Vehicle : "{04B2A928ED8A2754}Prefabs/Vehicles/Wheeled/BTR70/BTR70_Ses_TKR.et" {
+ BTR70_Ses_TKR1 {
+  coords 8070.313 322.156 2039.233
+  angles 0 57.981 0
+  m_sAttachmentGroupName "BTR11"
  }
- Ural4320_transport_camo3 {
-  coords 8297.468 322.435 2149.205
-  angles 0 157.774 0
-  m_sAttachmentGroupName "Pex1"
+ BTR70_Ses_TKR2 {
+  coords 8061.315 322.155 2034.068
+  angles 0 57.981 0
+  m_sAttachmentGroupName "BTR"
  }
-}
-Vehicle BTR70_AFRF3 : "{447CFE8D73F95C40}Prefabs/Vehicles/Wheeled/BTR70/BTR70_AFRF.et" {
- coords 10209.482 372.924 2357.603
- angles 0 -94.152 0
- m_sAttachmentGroupName "BTR"
 }
 $grp SCR_AIGroup : "{A33B404F66AC1ED8}Prefabs/Groups/INDFOR/TKR/Group_Ses_TKR_Rifle.et" {
- Pex5 {
-  components {
-   PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
-    m_iCompanyCallsign 2
-    m_iSquadCallsign 1
-   }
-  }
-  coords 10348.724 380.927 2415.886
-  angles 0 162.512 0
-  m_sCustomNameSet "Отряд защиты города"
- }
- Pex6 {
-  components {
-   PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
-    m_iCompanyCallsign 2
-    m_iSquadCallsign 2
-   }
-  }
-  coords 10381.952 381.66 2427.103
-  angles 0 165.914 0
-  m_sCustomNameSet "Отряд защиты города"
- }
  Pex8 {
   components {
    PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
-    m_iCompanyCallsign 4
     m_iSquadCallsign 1
    }
   }
@@ -49,88 +21,86 @@ $grp SCR_AIGroup : "{A33B404F66AC1ED8}Prefabs/Groups/INDFOR/TKR/Group_Ses_TKR_Ri
   angles 0 68.652 0
   m_sCustomNameSet "Отряд защиты аэродрома"
  }
- Pex7 {
-  components {
-   PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
-    m_iCompanyCallsign 2
-   }
-  }
-  coords 10289.668 382.474 2472.21
-  angles 0 -151.432 0
-  m_sCustomNameSet "Отряд защиты города"
- }
  Pex4 {
   components {
    PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
-    m_iCompanyCallsign 4
+    m_iSquadCallsign 2
    }
   }
   coords 8289.051 322.164 2153.452
   angles 0 68.652 0
   m_sCustomNameSet "Отряд защиты аэродрома"
  }
- ZU1 {
-  components {
-   PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
-    m_iCompanyCallsign 1
-    m_iSquadCallsign 1
-   }
-  }
-  coords 10190.251 372.609 2360.009
-  angles 0 178.255 0
-  m_aUnitPrefabSlots {
-   "{88886FC274202013}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_SL_Random.et"
-   "{8E68A198939D2E8D}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Rifleman_Random.et"
-  }
-  m_sCustomNameSet "Экипаж ЗУ-23"
- }
  BTR {
   components {
    PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
     m_iCompanyCallsign 1
-    m_iSquadCallsign 2
+    m_iSquadCallsign 3
    }
   }
-  coords 10211.268 372.932 2361.308
-  angles 0 178.255 0
+  coords 8061.964 322.156 2031.376
+  angles 0 -27.085 0
   m_aUnitPrefabSlots {
    "{88886FC274202013}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_SL_Random.et"
    "{8E68A198939D2E8D}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Rifleman_Random.et"
   }
   m_sCustomNameSet "Экипаж БТР-70"
  }
- ZU2 {
+ BTR11 {
   components {
    PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
     m_iCompanyCallsign 1
+    m_iSquadCallsign 2
    }
   }
-  coords 10179.534 372.625 2359.972
-  angles 0 178.255 0
+  coords 8069.933 322.156 2034.883
+  angles 0 -28.998 0
   m_aUnitPrefabSlots {
    "{88886FC274202013}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_SL_Random.et"
    "{8E68A198939D2E8D}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Rifleman_Random.et"
   }
-  m_sCustomNameSet "Экипаж ЗУ-23"
+  m_sCustomNameSet "Экипаж БТР-70"
  }
- Pex3 {
-  coords 10167.133 372.604 2360.055
-  angles 0 175.616 0
+ Pex2 {
+  coords 8295.078 322.187 2136.126
+  angles 0 70.444 0
   m_aUnitPrefabSlots {
    "{88886FC274202013}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_SL_Random.et"
+   "{61A809AD2C9D9820}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_MG_Random.et"
+   "{73C9E814A210268E}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Marksman_Random.et"
   }
   m_sCustomNameSet "Командир"
  }
-}
-$grp Vehicle : "{FD109F3702AAB392}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_ZU23.et" {
- Ural4320_ZU2 {
-  coords 10179.941 372.626 2355.484
-  angles 0 -90.958 0
-  m_sAttachmentGroupName "ZU2"
+ Pex5 {
+  components {
+   PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 3
+   }
+  }
+  coords 8434.879 322.188 1946.385
+  angles 0 -27.563 0
+  m_sCustomNameSet "Отряд защиты аэродрома"
  }
- Ural4320_ZU1 {
-  coords 10189.646 372.625 2355.808
-  angles 0 -90.958 0
-  m_sAttachmentGroupName "ZU1"
+ Pex6 {
+  components {
+   PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 8120.779 322.187 1888.822
+  angles 0 53.062 0
+  m_sCustomNameSet "Отряд защиты аэродрома"
+ }
+ Pex3 {
+  components {
+   PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 8146.906 322.188 2077.574
+  angles 0 -27.563 0
+  m_sCustomNameSet "Отряд защиты аэродрома"
  }
 }

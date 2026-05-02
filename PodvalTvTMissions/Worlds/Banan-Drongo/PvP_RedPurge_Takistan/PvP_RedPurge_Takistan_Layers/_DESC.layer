@@ -1,0 +1,54 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ "_1_RULES" {
+  m_sTitle "#PS-Description_HeaderRules"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "ОБЩИЕ ПРАВИЛА"\
+  "— Всем запрещено надевать форму, головные уборы, разгрузки, бронежилеты противника (рюкзаки можно) "\
+  ""\
+  "СПОСОБЫ ПОБЕДЫ ДЛЯ ВС СССР"\
+  "— Захватить кишлак путём смены флага."\
+  "— Разромить противника"\
+  ""\
+  "СПОСОБЫ ПОБЕДЫ ДЛЯ БОЕВИКОВ"\
+  "— Удержать кишлак (не дать сменить флаг.)"\
+  "— Разромить противника"\
+  ""\
+  "— Флаг НЕ перезахватываемый."\
+  ""
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+  m_iOrder 1
+ }
+ "_2_TKR" {
+  m_sTitle "Задачи боевиков"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "Братья! "\
+  ""\
+  "Мы вернули под свой контроль кишлак Хушаб! Все предатели понесли потери, теперь нам нужно ждать атаки шурави."
+  m_aVisibleForFactions {
+   "Ses_TKR"
+  }
+  m_iOrder 2
+ }
+ "_0_ABOUT" {
+  m_sTitle "#PS-Description_HeaderAboutMission"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "Боевики Такистана захватили стратегически важный населённый пункт Хушаб, превратив его в укреплённый опорный пункт."\
+  "Рота ОКСВА разворачивает наступательную операцию с целью установления полного контроля над кишлаком. Предстоит тщательно спланированное наступление с зачисткой вражеских позиций, восстановлением порядка и обеспечением безопасности в регионе."
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+ "_2_USSR" {
+  m_sTitle "#DRG-Description_HeaderUSSR"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "Рота боевая тревога!"\
+  ""\
+  "Нам поступил сигнал о нападении на склад с вооружением союзников, по нашей информации кроме стрелкового вооружение в складском помещении имеются ящики с зенитными пусковыми комплексами, нам нужно добраться до них и подорвать!"\
+  ""\
+  "Для этого командованеи предстоавило нам взрывчатку."
+  m_aVisibleForFactions {
+   "USSR"
+  }
+  m_iOrder 2
+ }
+}

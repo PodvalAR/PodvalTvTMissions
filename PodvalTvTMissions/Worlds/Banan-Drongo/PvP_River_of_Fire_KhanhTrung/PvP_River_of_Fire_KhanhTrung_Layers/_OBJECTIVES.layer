@@ -1,0 +1,42 @@
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ KILL_VCA {
+  coords 0 0 0
+  m_sTitle "Разгромить противника"
+  m_iOrder 10
+  m_sFactionKey "US"
+ }
+ KILL_US {
+  coords 0 0 0
+  m_sTitle "Разгромить противника"
+  m_iOrder 10
+  m_sFactionKey "Drg_VCA"
+ }
+ TARGET_SAVE {
+  coords 0 0 0
+  m_sTitle "Грузовики с ПЗРК целы"
+  m_iOrder 7
+  m_iScore 50
+  m_sFactionKey "Drg_VCA"
+ }
+ TARGET_DEST {
+  coords 0 0 0
+  m_sTitle "Грузовики с ПЗРК уничтожены"
+  m_iOrder 7
+  m_iScore 50
+  m_sFactionKey "US"
+ }
+ PZRK_US {
+  coords 0 0 0
+  m_sTitle "ПЗРК Захвачены"
+  m_iOrder 8
+  m_iScore 50
+  m_sFactionKey "US"
+ }
+ PZRK_VCA {
+  coords 0 0 0
+  m_sTitle "ПЗРК не захвачены"
+  m_iOrder 108
+  m_iScore 50
+  m_sFactionKey "Drg_VCA"
+ }
+}

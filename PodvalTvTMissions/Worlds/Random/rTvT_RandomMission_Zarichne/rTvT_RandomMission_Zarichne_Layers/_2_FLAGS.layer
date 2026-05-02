@@ -1,58 +1,95 @@
-$grp GenericEntity : "{BB0333060975958E}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_02_V2_FIA_supplies.et" {
+$grp GenericEntity : "{F922096EA06089F5}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_02_V2_table_supplies.et" {
  FLAG_BUNKER {
   coords 3113.812 25.276 4289.523
-  {
-   GenericEntity {
-    ID "68C68E38B569DCF9"
-    coords 0.584 0 -0.592
-   }
-  }
  }
  FLAG_CHURCH {
   coords 2321.645 9.001 2294.31
   angles 0 60.721 0
-  {
-   GenericEntity {
-    ID "68C68E38B569DCF9"
-    components {
-     SCR_ResourceComponent "{5D247A59598D71AE}" {
-      m_aContainers {
-       SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-       }
-      }
-     }
-    }
-   }
-  }
+ }
+ FLAG_ELECTRO {
+  coords 1817.242 9.97 3678.088
+  angles 0 103.28 0
  }
  FLAG_KOROVNIK {
   coords 2484.298 19.325 2815.625
   angles 32.173 -4.658 -30.5
   {
    GenericEntity {
-    ID "68C68E38B569DCF9"
-    coords -0.619 -1.884 -2.098
-    angles -28.864 -16.788 34.088
+    ID "690D207172AC0ED0"
+    coords -1.882 -1.664 -1.213
+    angles 33.576 -89.826 31.976
+   }
+   GenericEntity {
+    ID "690D207415BCE83A"
+    coords -2.728 -1.027 -1.311
+    angles 33.576 -89.826 31.976
    }
   }
  }
- FLAG_ELECTRO {
-  coords 1781.797 21.658 3686.277
-  angles 0 103.28 0
- }
  FLAG_OKOP {
-  coords 2027.668 15.117 1442.64
+  coords 2027.668 13.266 1442.64
   angles 0 -14.957 0
   {
    GenericEntity {
-    ID "68C68E38B569DCF9"
-    coords 0.004 -1.763 -0.084
-    angles 0 1.856 0
+    ID "690D207172AC0ED0"
+    coords -4.677 -0.728 -0.884
+   }
+   GenericEntity {
+    ID "690D207415BCE83A"
+    coords -4.797 -0.728 0.171
+   }
+  }
+ }
+ FLAG_OKOP2 {
+  coords 2583.49 9.423 2635.148
+  angles 0 -14.957 0
+  {
+   GenericEntity {
+    ID "690D207172AC0ED0"
+    coords 5.784 -0.138 -5.086
+    angles 0 155.399 0
+   }
+   GenericEntity {
+    ID "690D207415BCE83A"
+    coords 6.333 -0.138 -5.995
+    angles 0 155.399 0
    }
   }
  }
  FLAG_ZAVOD {
-  coords 431.711 28.905 2560.863
+  coords 403.235 16.708 2550.4
   angles 0 178.965 0
+ }
+ FLAG_OKOP3 {
+  coords 2016.869 6.105 1997.054
+  angles 0 -14.957 0
+  {
+   GenericEntity {
+    ID "690D207172AC0ED0"
+    coords 0.746 -0.138 -0.905
+    angles 0 155.399 0
+   }
+   GenericEntity {
+    ID "690D207415BCE83A"
+    coords 1.295 -0.138 -1.814
+    angles 0 155.399 0
+   }
+  }
+ }
+ FLAG_OKOP4 {
+  coords 1988.257 8.421 3119.845
+  angles 0 -70.4 0
+  {
+   GenericEntity {
+    ID "690D207172AC0ED0"
+    coords 0.9 -0.138 0.264
+    angles 0 155.399 0
+   }
+   GenericEntity {
+    ID "690D207415BCE83A"
+    coords 1.45 -0.138 -0.645
+    angles 0 155.399 0
+   }
+  }
  }
 }

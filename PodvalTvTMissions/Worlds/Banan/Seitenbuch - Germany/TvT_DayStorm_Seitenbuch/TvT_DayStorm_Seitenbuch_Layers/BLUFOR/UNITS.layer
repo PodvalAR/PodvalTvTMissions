@@ -1,0 +1,73 @@
+$grp SCR_AIGroup : "{3F29EA2D79388D65}Prefabs/Groups/BLUFOR/Ses_CDF/Group_A2F_CDF_Motorized.et" {
+ CDF_300_MOTO {
+  components {
+   PS_GroupCallsignAssigner "{68A30C9A9E8D83F4}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 893.821 434.065 1211.294
+ }
+ CDF_301_MOTO {
+  components {
+   PS_GroupCallsignAssigner "{68A30C9A9E8D83F4}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 1
+   }
+  }
+  coords 917.081 431.873 1211.36
+ }
+}
+$grp SCR_AIGroup : "{6449AAD99869C0D5}Prefabs/Groups/BLUFOR/Ses_CDF/Group_A2F_CDF_Squad.et" {
+ CDF_100_AR {
+  components {
+   PS_GroupCallsignAssigner "{68A30C9A9E8D83F4}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 1656.467 414.782 1114.489
+  angles 0 40.666 0
+ }
+ CDF_101_AR {
+  components {
+   PS_GroupCallsignAssigner "{68A30C9A9E8D83F4}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 1713.826 420.943 1092.833
+  angles 0 -111.061 0
+ }
+ CDF_200_AR {
+  components {
+   PS_GroupCallsignAssigner "{68A30C9A9E8D83F4}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 1701.429 417.898 1119.442
+  angles 0 155.76 0
+ }
+ CDF_400_DRG {
+  components {
+   PS_GroupCallsignAssigner "{68A30C9A9E8D83F4}" {
+    m_iCompanyCallsign 4
+   }
+  }
+  coords 1966.681 433.183 1004.119
+  angles 0 -96.102 0
+  m_aUnitPrefabSlots {
+   "{9DD06B0388262773}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_SL_Opt_Random.et"
+   "{107B2619EBE9881E}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_LAT_SD_Random.et"
+   "{50C53F58D3742548}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_Rifle_SD_Random.et"
+   "{2C802DE0AEBE184A}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_Sniper_Random.et"
+   "{50C53F58D3742548}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_Rifle_SD_Random.et"
+  }
+  m_sCustomNameSet "Диверсионный отряд"
+ }
+}
+SCR_AIGroup CDF_000_KS : "{F2ABAC37E4537895}Prefabs/Groups/BLUFOR/Ses_CDF/Group_A2F_CDF_PL.et" {
+ coords 1678.561 414.95 1134.154
+ angles 0 150.671 0
+ m_aUnitPrefabSlots +{
+  "{2C802DE0AEBE184A}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_Sniper_Random.et"
+ }
+}

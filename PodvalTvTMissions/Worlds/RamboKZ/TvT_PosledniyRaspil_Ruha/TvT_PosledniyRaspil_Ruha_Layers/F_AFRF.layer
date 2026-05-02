@@ -1,17 +1,53 @@
-Vehicle AFRF_110_BTR : "{447CFE8D73F95C3F}Prefabs/Vehicles/Wheeled/BTR70/BTR70_AFRF_camo.et" {
- coords 3414.702 83.518 7161.455
- angles 0.342 -169.004 -1.757
- m_sAttachmentGroupName "AFRF_110"
+$grp Vehicle : "{447CFE8D73F95C3F}Prefabs/Vehicles/Wheeled/BTR70/BTR70_AFRF_camo.et" {
+ AFRF_110_BTR {
+  coords 3414.702 83.518 7161.455
+  angles 0.342 -169.004 -1.757
+  m_sAttachmentGroupName "AFRF_110"
+ }
+ AFRF_100_BTR {
+  coords 3408.807 83.315 7117.626
+  angles -0.052 178.331 -1.789
+  m_sAttachmentGroupName "AFRF_100"
+ }
 }
-Vehicle AFRF_100_BTR : "{447CFE8D73F95C3F}Prefabs/Vehicles/Wheeled/BTR70/BTR70_AFRF_camo.et" {
- coords 3408.807 83.315 7117.626
- angles -0.052 178.331 -1.789
- m_sAttachmentGroupName "AFRF_100"
+Vehicle VEH_SAND : "{7009ED8FBA7A1E7E}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_engineer_sand.et" {
+ coords 3461.735 82.782 7171.362
+ angles 0 -158.694 0
 }
 Vehicle AFRF_200_TIGR_K : "{CD4737303AA14C6D}Prefabs/Vehicles/Wheeled/TIGR/KORD/GAZ_TIGR_v2_KORD_SPP.et" {
  coords 4302.186 67.876 6477.204
  angles -0.085 -107.917 -0.004
  m_sAttachmentGroupName "AFRF_200"
+}
+PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+ coords 3461.735 82.782 7171.362
+ angles 0 -68.694 0
+ m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
+ m_sImageSetGlow ""
+ m_MarkerColor 0.855 0.031 0.028 1
+ m_sQuadName "Truck"
+ m_fWorldSize 9
+ m_sDescription "Урал с песком"
+ m_aVisibleForFactions {
+  "RHS_AFRF"
+  "RHS_USAF"
+  "Ses_CDF"
+  "Ses_ChDKZ"
+  "Ses_TKR"
+  "Ses_TKA"
+  "Drg_IGF"
+  "Drg_PIR"
+  "UK"
+  "USSR"
+  "US"
+  "FIA"
+  "Drg_VCA"
+ }
+ m_bVisibleForEmptyFaction 1
+ m_aHideOnGameModeStates {
+  GAME
+ }
+ m_iZOrder 0
 }
 SCR_AIGroup AFRF_000 : "{E625399A1E96672A}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_PL_2.et" {
  coords 3478.34 82.781 7170.858
