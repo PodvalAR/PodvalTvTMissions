@@ -19,23 +19,6 @@ $grp SCR_AIGroup : "{1128EBD3DDFF1D07}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Grou
   angles 0 -43.801 0
  }
 }
-$grp Vehicle : "{1DF4C30C130D8FAD}Prefabs/Vehicles/Wheeled/K4386/K4386_Armed_Camo.et" {
- K4386_Armed_Camo1 {
-  coords 8640.49 95.771 9347.151
-  angles -1.261 -49.801 0.106
-  m_sAttachmentGroupName "crew_1_RUS"
- }
- K4386_Armed_Camo2 {
-  coords 8633.589 95.587 9352.983
-  angles -0.684 -49.792 -0.578
-  m_sAttachmentGroupName "crew_2_RUS"
- }
- K4386_Armed_Camo3 {
-  coords 8626.511 95.531 9358.965
-  angles 0 -49.799 0
-  m_sAttachmentGroupName "crew_3_RUS"
- }
-}
 Vehicle UAZ1 : "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et" {
  coords 8623.051 95.407 9336.573
  angles 1.21 137.479 1.319
@@ -95,6 +78,23 @@ $grp SCR_AIGroup : "{B851352F042E4F0B}Prefabs/Groups/OPFOR/RHS_AFRF/Recon/Group_
   }
   coords 11172.55 14.182 10047.848
   angles -10.036 -164.919 -3.599
+ }
+}
+$grp Vehicle : "{C95038CAE8C8DB1B}Prefabs/Vehicles/Wheeled/BTR70/BTR72a_camo.et" {
+ BTR72a_camo1 {
+  coords 8627.131 95.531 9359.019
+  angles 0 -49.953 0
+  m_sAttachmentGroupName "crew_3_RUS"
+ }
+ BTR72a_camo2 {
+  coords 8634.583 95.603 9352.755
+  angles -0.685 -49.946 -0.576
+  m_sAttachmentGroupName "crew_2_RUS"
+ }
+ BTR72a_camo3 {
+  coords 8642.422 95.816 9346.167
+  angles -1.261 -49.955 0.109
+  m_sAttachmentGroupName "crew_1_RUS"
  }
 }
 $grp Vehicle : "{D9B91FAB817A6033}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_covered.et" {
