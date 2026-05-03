@@ -3,22 +3,28 @@ $grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescripti
   coords 5534.73 61.71 10496.381
   m_sTitle "#PS-Description_HeaderRules"
   m_sDescriptionLayout "{0DF2089A5BA70D01}UI/MissionDescription/DescriptionEditable_drg.layout"
-  m_sTextData "ОБЩИЕ ПРАВИЛА"\
-  "— Всем запрещено надевать форму, головные уборы, разгрузки, бронежилеты противника (рюкзаки можно) "\
+  m_sTextData "ОБЩИЕ ПРАВИЛА:"\
   ""\
-  "ПРАВИАЛ ДЛЯ США"\
-  "— Всем запрещено ВС США запрещено пересекать синюю линию."\
+  "— Всем запрещено надевать форму, головные уборы, разгрузки, бронежилеты противника (рюкзаки можно);"\
+  "— Вертолету запрещено использовать тактику \"КАМИКАДЗЕ\";"\
+  "— Вертолетам могут управлять только пилоты."\
   ""\
-  "ПРАВИАЛ ДЛЯ ВС РФ"\
+  "ПРАВИЛА ДЛЯ США:"\
+  ""\
+  "— Всем запрещено пересекать синюю линию."\
+  ""\
+  "ПРАВИАЛ ДЛЯ ВС РФ:"\
+  ""\
   "— Всем кроме ДРГ и экипажа вертолёта запрещено пересекать и находиться в области отмеченной синим."\
   "  "\
-  "СПОСОБЫ ПОБЕДЫ ВС РФ"\
+  "СПОСОБЫ ПОБЕДЫ ВС РФ:"\
+  ""\
   "— 1. Удержать маяк, путём смены флага."\
-  "— 2. Разгромить противника"\
+  ""\
   "  "\
-  "СПОСОБЫ ПОБЕДЫ ДЛЯ ВС США"\
+  "СПОСОБЫ ПОБЕДЫ ДЛЯ ВС США:"\
+  ""\
   "— 1. Захватить маяк, путём смены флага."\
-  "— 2. Разгромить противника"\
   ""\
   ""
   m_bEmptyFactionVisibility 1
@@ -27,7 +33,7 @@ $grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescripti
  RF {
   coords 5534.418 43.503 10540.239
   m_sTitle "#DRG-Description_HeaderRUS"
-  m_sTextData "Нам нужно удержать маяк."
+  m_sTextData "Вам нужно удержать маяк."
   m_aVisibleForFactions {
    "RHS_AFRF"
   }
@@ -35,7 +41,7 @@ $grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescripti
  USMC {
   coords 5626.204 38.464 10536.691
   m_sTitle "#PS-Description_HeaderUS"
-  m_sTextData "Необходимо удержать флаг"
+  m_sTextData "Необходимо захватить флаг на маяке"
   m_aVisibleForFactions {
    "RHS_USAF"
   }
@@ -45,8 +51,11 @@ $grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescripti
   m_sTitle "#PS-Description_HeaderAboutMission"
   m_sTextData "Битва за маяк."
   m_aVisibleForFactions {
-   "RHS_USAF" "RHS_AFRF" "FIA"
+   "RHS_USAF"
+   "RHS_AFRF"
+   "FIA"
   }
   m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
  }
 }
