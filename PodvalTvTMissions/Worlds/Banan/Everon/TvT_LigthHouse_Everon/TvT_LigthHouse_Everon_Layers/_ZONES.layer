@@ -1,4 +1,4 @@
-$grp PolylineShapeEntity {
+$grp PolylineShapeEntity : "{7019844BAD5C4DD8}Prefabs/PolyZone/PolyZone_Border.et" {
  {
   components {
    PS_PolyZone "{60D8FDC5692C09F4}" {
@@ -8,10 +8,15 @@ $grp PolylineShapeEntity {
     m_cPolygonBorderColor 0 0.067 0.25 1
     m_fPolygonBorderWidth 5
     m_aVisibleForFactions {
-     "RHS_AFRF" "RHS_USAF" ""
+     "RHS_AFRF"
+     "RHS_USAF"
+     ""
     }
     m_aHideOnGameModeStates {
     }
+   }
+   PS_PolyZone "{60E90266F25533F6}" {
+    Enabled 0
    }
   }
   coords 10021.775 296.931 2652.235
@@ -92,21 +97,11 @@ $grp PolylineShapeEntity {
   IsClosed 1
   {
    PS_PolyZoneTrigger {
-    components {
-     Hierarchy "{614548BDF998E12B}" {
-     }
+    ID "60FD050E1E83544C"
+    m_polyZoneEffect PS_PolyZoneEffectRestricted "{60FD050E0DC2A2AB}" {
+     m_fKillTime 10
     }
-    TriggerShapeType Polyline
-    "Polyline Height" 2000
-    TriggerActivationType "All changes"
-    PeriodicQueries 1
-    UpdatePeriod 1
-    ClassesFilter {
-     "SCR_ChimeraCharacter"
-    }
-    m_polyZoneEffect PS_PolyZoneEffectRestricted "{614548BC046ADB65}" {
-     m_fKillTime 40
-    }
+    m_bReversed 0
     m_sFactionKey "RHS_USAF"
    }
   }
@@ -120,10 +115,15 @@ $grp PolylineShapeEntity {
     m_cPolygonBorderColor 0 0.067 0.25 0
     m_fPolygonBorderWidth 5
     m_aVisibleForFactions {
-     "RHS_AFRF" "RHS_USAF" ""
+     "RHS_AFRF"
+     "RHS_USAF"
+     ""
     }
     m_aHideOnGameModeStates {
     }
+   }
+   PS_PolyZone "{60E90266F25533F6}" {
+    Enabled 0
    }
   }
   coords 10021.775 296.931 2652.235
@@ -205,23 +205,12 @@ $grp PolylineShapeEntity {
   LineColor 0.93 0.93 0.93 1
   {
    PS_PolyZoneTrigger {
-    components {
-     Hierarchy "{614548BDF998E12B}" {
-     }
+    ID "60FD050E1E83544C"
+    m_polyZoneEffect PS_PolyZoneEffectRestricted "{60FD050E0DC2A2AB}" {
+     m_fKillTime 10
     }
-    coords 0 0 0
-    TriggerShapeType Polyline
-    "Polyline Height" 2000
-    TriggerActivationType "All changes"
-    PeriodicQueries 1
-    UpdatePeriod 1
-    ClassesFilter {
-     "SCR_ChimeraCharacter"
-    }
-    m_polyZoneEffect PS_PolyZoneEffectRestricted "{614548BC046ADB65}" {
-     m_fKillTime 40
-    }
-    m_sGroupKey "DEF_"
+    m_bReversed 0
+    m_sGroupKey "_DEF"
    }
   }
  }
