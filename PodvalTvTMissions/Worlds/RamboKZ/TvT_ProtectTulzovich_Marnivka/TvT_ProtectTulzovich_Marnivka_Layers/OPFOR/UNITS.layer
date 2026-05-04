@@ -1,0 +1,82 @@
+$grp SCR_AIGroup : "{3A14655AA0638454}Prefabs/Groups/OPFOR/RHS_AFRF/Modern/EMR/Group_RHS_AFRF_Modern_EMR_Squad.et" {
+ RU_010 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 1370.463 61.259 2020.788
+  angles 0 -88.782 0
+ }
+ RU_110 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 1154.68 49.342 1861.203
+  angles 0 -178.948 0
+ }
+ RU_100 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 1184.494 49.61 1861.57
+  angles 0 -178.106 0
+ }
+ RU_011 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 1328.243 61.125 2011.709
+  angles 0 89.955 0
+ }
+}
+SCR_AIGroup RU_000 : "{6796DBDCA019EF3B}Prefabs/Groups/OPFOR/RHS_AFRF/Modern/EMR/Group_RHS_AFRF_Modern_EMR_PL.et" {
+ coords 1376.475 61.125 1989.295
+ angles 0 -90.639 0
+ m_aUnitPrefabSlots {
+  "{7A7124AEEE2854E0}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Modern/VIP/Char_AFRF_VIP_Tulzovich.et"
+  "{FA561681D7BAD427}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Modern/EMR/Char_RHS_RF_Modern_EMR_Sapper.et"
+  "{52790943BFEBE2E3}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Modern/EMR/Char_RHS_RF_Modern_EMR_Medic.et"
+  "{E59F13C9E9FDD769}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Modern/EMR/Char_RHS_RF_Modern_EMR_Sharpshooter.et"
+ }
+}
+SCR_AIGroup RU_111 : "{8B34B18AB7BC50D5}Prefabs/Groups/OPFOR/RHS_AFRF/Modern/EMR/Group_RHS_AFRF_Modern_EMR_Mechanized.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+   m_iCompanyCallsign 1
+   m_iPlatoonCallsign 1
+   m_iSquadCallsign 1
+  }
+ }
+ coords 1183.944 49.375 1886.388
+ angles 0 130.352 0
+}
+$grp SCR_AIGroup : "{EE7194A6598EAC83}Prefabs/Groups/OPFOR/RHS_AFRF/Modern/EMR/Group_RHS_AFRF_Modern_EMR_Recon.et" {
+ RU_210 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 1723.765 59.687 15.893
+  angles 0 -110.287 0
+ }
+ RU_200 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 1719.238 59.178 29.938
+  angles 0 -110.287 0
+ }
+}
