@@ -1,3 +1,4 @@
+#ifdef QTVT_COMMUNITY
 modded class SCR_CampaignBuildingProviderComponent : SCR_MilitaryBaseLogicComponent
 {
 	override bool IsEntityFactionSame(notnull IEntity ent1, notnull IEntity ent2)
@@ -118,7 +119,7 @@ modded class SCR_CampaignBuildingManagerComponent : SCR_BaseGameModeComponent
 }
 
 
-/*
+
 modded class GUB_RandomizeMissionLogic
 {
 	
@@ -327,4 +328,4 @@ modded class PS_GameModeQuickTvT : PS_GameModeCoop
 	}
 
 }
-*/
+#endif
