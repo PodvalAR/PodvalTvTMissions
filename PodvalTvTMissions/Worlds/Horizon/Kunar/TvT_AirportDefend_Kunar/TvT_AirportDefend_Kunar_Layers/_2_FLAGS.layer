@@ -1,4 +1,4 @@
-GenericEntity : "{1AAC905FBE6CF779}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_02_V2_USSR.et" {
+GenericEntity : "{52327EA0926E4EC7}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_02_V1_USAF.et" {
  components {
   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
    m_aObjectiveNames {
@@ -6,22 +6,20 @@ GenericEntity : "{1AAC905FBE6CF779}PrefabsEditable/Auto/Structures/Military/Flag
     "TKR_WIN"
     "USSR_WIN"
    }
-   m_sFactionKey "USSR"
-   m_bUseAdvanceGameState 1
-   m_sUseNotification 1
+   m_sFactionKey "US"
   }
   BaseActionsManagerComponent "{6202D4E6F133BF4A}" {
    additionalActions {
     PS_FlagChangeAction "{6202D4E6A53D4B3C}" {
-     Duration 15.2
+     Duration 12
     }
    }
   }
  }
- coords 2832.72 387.083 710.07
+ coords 2731.01 22.598 3118.799
 }
-PS_ManualMarker USSR_G_000_M2 : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
- coords 2832.728 387.232 710.108
+PS_ManualMarker US_G_000_M2 : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+ coords 2731.041 22.671 3118.816
  m_MarkerColor 0 0 0 1
  m_sQuadName "flag-2"
  m_fWorldSize 50

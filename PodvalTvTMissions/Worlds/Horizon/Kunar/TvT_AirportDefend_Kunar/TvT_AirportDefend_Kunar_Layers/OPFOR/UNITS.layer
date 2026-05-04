@@ -1,0 +1,50 @@
+SCR_AIGroup SSSR000 : "{706340F7481FF22F}Prefabs/Groups/OPFOR/USSR/Group_USSR_PL.et" {
+ coords 3339.461 10.706 2758.084
+ angles 1.021 -93.476 0.078
+ m_aUnitPrefabSlots {
+  "{8A7E668F5E102151}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_SL_RANDOM.et"
+  "{CDE7F53CAD55EAE4}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_SR_RANDOM.et"
+  "{29786A5DBA2EC48A}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_Rifleman.et"
+  "{29786A5DBA2EC48A}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_Rifleman.et"
+ }
+ m_sCustomNameSet "Командирский штаб"
+}
+$grp SCR_AIGroup : "{84AF92E239A71FCE}Prefabs/Groups/OPFOR/USSR/Group_USSR_Rifle_SQ.et" {
+ SSSR002 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iSquadCallsign 2
+   }
+  }
+  coords 3330.484 8.78 2716.937
+  angles 0.588 -97.538 0.519
+ }
+ SSSR001 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iSquadCallsign 1
+   }
+  }
+  coords 3327.673 9.804 2741.364
+  angles 0 -91.15 0
+ }
+ SSSR100 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 3341.346 9.744 2543.285
+  angles 0 4.893 0
+ }
+ SSSR101 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 3309.844 9.35 2550.234
+  angles 0 14.483 0
+ }
+}
