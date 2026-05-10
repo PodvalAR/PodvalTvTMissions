@@ -186,6 +186,9 @@ $grp SCR_AIGroup : "{23E53B28807859BC}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Mar
   }
   coords 4756.824 9.25 2567.638
   angles 0 -149.064 0
+  m_aUnitPrefabSlots {
+   "{338CA9AD8187BEA6}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/MARSOC/Char_RHS_TF_USAF_MarpatWD_HeliPilot.et"
+  }
  }
  USAF_HELARM_100 {
   components {
@@ -195,6 +198,9 @@ $grp SCR_AIGroup : "{23E53B28807859BC}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Mar
   }
   coords 4788.815 9.251 2548.009
   angles 0 -145.693 0
+  m_aUnitPrefabSlots {
+   "{338CA9AD8187BEA6}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/MARSOC/Char_RHS_TF_USAF_MarpatWD_HeliPilot.et"
+  }
  }
  USAF_HELI204 {
   components {
@@ -210,14 +216,28 @@ $grp SCR_AIGroup : "{23E53B28807859BC}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Mar
   }
  }
 }
-SCR_AIGroup USAF_Sniper600 : "{60372A48D4DD7BA6}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/MarpatWD/Group_RHS_USMC_Sniper_Attack.et" {
- components {
-  PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
-   m_iCompanyCallsign 6
+$grp SCR_AIGroup : "{60372A48D4DD7BA6}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/MarpatWD/Group_RHS_USMC_Sniper_Attack.et" {
+ USAF_Sniper600 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 6
+   }
   }
+  coords 11852.945 142.75 12411.768
+  angles 0 105.723 0
+  m_bSnapToTerrain 0
  }
- coords 12777.974 196.765 12726.5
- angles 0 143.094 0
+ USAF_Sniper601 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 6
+    m_iSquadCallsign 1
+   }
+  }
+  coords 11854.983 142.751 12425.424
+  angles 0 97.963 0
+  m_bSnapToTerrain 0
+ }
 }
 $grp SCR_AIGroup : "{77D6A29521A0A092}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/MarpatWD/Group_RHS_USAF_Marpat_Squad_crew.et" {
  USAF_MEH002 {
