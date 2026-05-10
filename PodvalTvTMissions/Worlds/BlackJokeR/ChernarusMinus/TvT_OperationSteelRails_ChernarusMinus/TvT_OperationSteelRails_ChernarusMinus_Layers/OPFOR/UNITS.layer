@@ -1,0 +1,77 @@
+$grp SCR_AIGroup : "{3A14655AA0638454}Prefabs/Groups/OPFOR/RHS_AFRF/Modern/EMR/Group_RHS_AFRF_Modern_EMR_Squad.et" {
+ AFRF_PEH300 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 13944.854 17.715 13190.263
+  angles 0 31.665 0
+ }
+ AFRF_PEHZU301 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 1
+   }
+  }
+  coords 13900.454 8.481 13403.235
+  angles 0 35.66 0
+ }
+}
+$grp SCR_AIGroup : "{643D556449A91F31}Prefabs/Groups/OPFOR/RHS_AFRF/Modern/EMR/Group_RHS_AFRF_Modern_EMR_Motorized.et" {
+ AFRF_MOTOR202 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 2
+   }
+  }
+  coords 13873.59 8.568 13421.806
+  angles 0 35.393 0
+ }
+ AFRF_MOTOR201 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 14025.205 6.186 13493.839
+  angles 0 -121.791 0
+ }
+ AFRF_MOTOR200 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 14000.376 7.361 13531.023
+  angles 0 -121.845 0
+ }
+}
+SCR_AIGroup AFRF_KS000 : "{6796DBDCA019EF3B}Prefabs/Groups/OPFOR/RHS_AFRF/Modern/EMR/Group_RHS_AFRF_Modern_EMR_PL.et" {
+ coords 13995.665 6.339 13478.694
+ angles 0 48.805 0
+ m_aUnitPrefabSlots {
+  "{8297A76A8EC4E973}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Modern/EMR/Char_RHS_RF_Modern_EMR_PL_Optic.et"
+ }
+}
+SCR_AIGroup AFRF_SNIPERS001 : "{8B52EBA5128E5388}Prefabs/Groups/OPFOR/RHS_AFRF/Modern/EMR/Group_RHS_AFRF_Modern_EMR_Sniper.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+   m_iSquadCallsign 1
+  }
+ }
+ coords 14118.57 41.621 13501.435
+ angles 0 -103.049 0
+}
+SCR_AIGroup AFRF_SPN100 : "{EE7194A6598EAC83}Prefabs/Groups/OPFOR/RHS_AFRF/Modern/EMR/Group_RHS_AFRF_Modern_EMR_Recon.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+   m_iCompanyCallsign 1
+  }
+ }
+ coords 12102.246 95.933 13753.104
+ angles 0 124.854 0
+}
