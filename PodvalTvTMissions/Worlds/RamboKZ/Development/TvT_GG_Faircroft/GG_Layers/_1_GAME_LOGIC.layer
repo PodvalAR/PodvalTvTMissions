@@ -1,0 +1,75 @@
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{68FF2B3457B19155}" {
+     m_sZonePreviewName "Завод"
+     m_sSuccessObjectiveNames {
+      "USAF_WIN_1"
+     }
+     m_sFailedObjectiveNames {
+      "AFRF_WIN_1"
+     }
+     m_Timer GUB_ZoneControlTimer "{68FF2B345CD496DA}" {
+      timeToComplete 120
+     }
+     m_ZoneController GUB_ZoneController "{68FF2B344178B672}" {
+      m_sZoneEntityName "TRIG_ZAVOD"
+     }
+     m_FlagController GUB_FlagController "{68FF2B344B0043DC}" {
+      m_aFlagNames {
+       "FLAG_ZAVOD"
+      }
+      m_fStartFactionKey "RHS_AFRF"
+      m_fEndFactionKey "RHS_USAF"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{68FF2B34B7830EA6}" {
+       m_sFirstFactionKey "RHS_USAF"
+       m_sSecondFactionKey "RHS_AFRF"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+    GUB_ZoneControlLogic "{690CFCE6F757478E}" {
+     m_sZonePreviewName "Ферма"
+     m_sSuccessObjectiveNames {
+      "USAF_WIN_2"
+     }
+     m_sFailedObjectiveNames {
+      "AFRF_WIN_2"
+     }
+     m_Timer GUB_ZoneControlTimer "{690CFCE6E5491772}" {
+      timeToComplete 120
+     }
+     m_ZoneController GUB_ZoneController "{690CFCE6EFBD33A9}" {
+      m_sZoneEntityName "TRIG_FARM"
+     }
+     m_FlagController GUB_FlagController "{690CFCE6DD76D4A0}" {
+      m_aFlagNames {
+       "FLAG_FARM"
+      }
+      m_fStartFactionKey "RHS_AFRF"
+      m_fEndFactionKey "RHS_USAF"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{690CFCE6CED3C6F7}" {
+       m_sFirstFactionKey "RHS_USAF"
+       m_sSecondFactionKey "RHS_AFRF"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+}
