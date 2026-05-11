@@ -1,0 +1,71 @@
+PolylineShapeEntity trigger {
+ components {
+  PS_PolyZone "{6952B80FF22CE893}" {
+   m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
+   m_cPolygonColor 0.655 0.875 0.875 1
+   m_mPolygonTextureBorder ""
+   m_cPolygonBorderColor 0 0.125 0.502 1
+   m_fPolygonBorderWidth 1.9
+   m_aVisibleForFactions {
+    "RHS_ION"
+    "Ses_TKA"
+    ""
+   }
+  }
+ }
+ coords 4203.415 17 4124.888
+ Points {
+  ShapePoint "{6952B80F2B963FC4}" {
+   Position 0 0 0
+  }
+  ShapePoint "{6952B80F2B96225D}" {
+   Position 5.383 0 0
+  }
+  ShapePoint "{6952B80F0C514FD7}" {
+   Position 76.161 0 -0.328
+  }
+  ShapePoint "{6952B80F070CAF4F}" {
+   Position 76.016 0 69.803
+  }
+  ShapePoint "{6952B80F03255D73}" {
+   Position -0.71 0 68.995
+  }
+  ShapePoint "{6952B80FFF518B54}" {
+   Position 0.003 0 1.446
+  }
+ }
+ IsClosed 1
+}
+GenericEntity flag : "{3D78D7D606FF9818}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_NoCapture.et" {
+ coords 4241.363 38.341 4159.158
+}
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogicCapture "{69549A3E137DFAAE}" {
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "Ses_TKA"
+     }
+     m_sFailedObjectiveNames {
+      "USAF_win"
+     }
+     m_sMessage "Мечеть захвачена"
+     m_Timer GUB_ZoneControlTimer "{69549A3E024B7A54}" {
+      timeToComplete 300
+     }
+     m_ZoneController GUB_ZoneController "{69549A3E00FA2555}" {
+      m_sZoneEntityName "trigger"
+     }
+     m_FlagControllerCapture GUB_FlagControllerCapture "{69549A3EFE3798A7}" {
+      m_aFlagNames {
+       "flag"
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 4214.53 17 4130.641
+}
