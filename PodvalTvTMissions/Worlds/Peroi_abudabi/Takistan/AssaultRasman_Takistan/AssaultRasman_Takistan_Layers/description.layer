@@ -1,0 +1,87 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ {
+  coords 6904.79 406.074 11408.41
+  m_sTitle "Цели миссии"
+  m_sTextData "ВС РФ:"\
+  ""\
+  "Нужно удержать Минарет и Жилой дом."\
+  ""\
+  "США:"\
+  ""\
+  "Нужно захватить Минарет и Жилой дом."\
+  ""\
+  ""
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+ }
+ {
+  coords 6888.991 406.052 11436.354
+  m_sTitle "Условности Миссии"
+  m_sTextData "ВС РФ:"\
+  ""\
+  "Запрещено выходить за черный маркер (кроме отделений разведки) Отделениям разведки запрещено вывозить Бтры, ЗУ и Тайфун за пределы черного маркера."\
+  ""\
+  ""\
+  "США:"\
+  ""\
+  "Запрещено входить в красный маркер(Кроме пилотов). "\
+  ""\
+  "M2 Bradley запрещено стрелять из TOW (ПТУР) по Минарету и Жилому дому."
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+ }
+ {
+  coords 6859.197 378.456 11469.983
+  angles -1.739 0.299 -9.757
+  m_sTitle "Описание миссии"
+  m_sTextData "США давно хотят занять город Расман, но ВС РФ там хорошо укрепились. США нужно захватить город и для этого им нужно захватить Минарет и Жилой дом. В городе есть стационарная ЗУ-23."
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+ }
+}
+$grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+ {
+  coords 6353.778 94.272 11344.922
+  angles 0 123.191 0
+  m_sImageSetGlow ""
+  m_MarkerColor 0 0 0 1
+  m_sQuadName "flag-2"
+  m_fWorldSize 50
+  m_sDescription "Жилой Дом"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   ""
+   "RHS_USAF"
+   "RHS_AFRF"
+  }
+  m_bVisibleForEmptyFaction 1
+ }
+ {
+  coords 6254.058 106.734 11268.82
+  angles 0 107.824 0
+  m_sImageSetGlow ""
+  m_MarkerColor 0 0 0 1
+  m_sQuadName "flag-2"
+  m_fWorldSize 50
+  m_sDescription "Минарет"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   ""
+   "RHS_USAF"
+   "RHS_AFRF"
+  }
+  m_bVisibleForEmptyFaction 1
+ }
+}

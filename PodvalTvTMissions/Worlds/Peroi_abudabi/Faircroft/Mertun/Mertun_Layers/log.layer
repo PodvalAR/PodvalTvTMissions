@@ -1,0 +1,71 @@
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ {
+  coords 2831.869 434.767 4239.76
+  m_sTitle "Удержали Замок"
+  m_iScore 50
+  m_sFactionKey "UK"
+ }
+ {
+  coords 2831.212 435.163 4239.13
+  m_sTitle "Захватили Замок"
+  m_iScore 50
+  m_sFactionKey "RHS_AFRF"
+ }
+ {
+  coords 1541.702 268.963 1331.719
+  m_sTitle "Захватили Город"
+  m_iScore 50
+  m_sFactionKey "RHS_AFRF"
+ }
+ {
+  coords 1560.183 256.297 1334.721
+  m_sTitle "Удержали Город"
+  m_iScore 50
+  m_sFactionKey "UK"
+ }
+}
+$grp GenericEntity : "{A80E80B60FEAE52D}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_02_V1_UK.et" {
+ {
+  components {
+   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+    m_aFlagData {
+     PS_FlagData "{68A8F019DE85A6BB}" {
+      m_sFactionKey "UK"
+     }
+     PS_FlagData "{68A8F019DEB0E5EA}" {
+      m_sFactionKey "RHS_AFRF"
+      m_iCaptureCounter 1
+     }
+    }
+    m_sFactionKey "UK"
+   }
+  }
+  coords 6675.422 68.964 5628.399
+ }
+ {
+  components {
+   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+    m_aFlagData {
+     PS_FlagData "{68A8F01933CCB275}" {
+      m_sFactionKey "UK"
+     }
+     PS_FlagData "{68A8F01933F3C68A}" {
+      m_sFactionKey "RHS_AFRF"
+      m_iCaptureCounter 1
+     }
+    }
+    m_sFactionKey "UK"
+   }
+  }
+  coords 6377.958 24.032 5463.376
+  angles 30 -125.078 0
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2400
+  }
+ }
+ coords 2772.594 276.388 4116.711
+}

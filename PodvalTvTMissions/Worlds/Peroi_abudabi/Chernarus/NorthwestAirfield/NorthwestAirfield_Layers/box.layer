@@ -1,0 +1,24 @@
+Turret : "{61556EC6CC70DDFA}Prefabs/Weapons/Tripods/6G10/Deployable_Tripod_6G10_AGS17_PAG17.et" {
+ coords 4738.659 327.406 10232.11
+ angles -0.505 55.599 -0.739
+}
+GenericEntity : "{C75A48694A1DE026}Prefabs/Props/Military/AmmoBoxes/drg_AmmoBox_127_M2.et" {
+ components {
+  SCR_FilteredInventoryStorageComponent "{5476A2F100DF4EFF}" {
+   MultiSlots {
+    MultiSlotConfiguration "{64F707D11FA7A94D}" {
+     SlotTemplate InventoryStorageSlot "{64DCC2F489C88F5C}" {
+      Prefab "{1085CCC052C7F50D}Prefabs/Weapons/Magazines/AGS-17/Magazine_30mm_AGS17_29rnd_VOG17M.et"
+     }
+    }
+    MultiSlotConfiguration "{6502C64ED28D7103}" {
+     SlotTemplate InventoryStorageSlot "{64DCC2F489C88F5C}" {
+      Prefab "{1085CCC052C7F50D}Prefabs/Weapons/Magazines/AGS-17/Magazine_30mm_AGS17_29rnd_VOG17M.et"
+     }
+    }
+   }
+  }
+ }
+ coords 4737.689 327.406 10233.105
+ angles 0 -122.464 0
+}

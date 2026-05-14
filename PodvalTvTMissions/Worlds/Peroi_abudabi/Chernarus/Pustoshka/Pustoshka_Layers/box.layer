@@ -1,0 +1,34 @@
+$grp Vehicle : "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et" {
+ UAZ3 {
+  coords 3159.121 287.595 8070.074
+  angles 0 -47.037 0
+ }
+ UAZ5 {
+  coords 2995.138 289.145 8030.797
+  angles -1.904 44.504 -0.616
+ }
+}
+Turret : "{61556EC6CC70DDFA}Prefabs/Weapons/Tripods/6G10/Deployable_Tripod_6G10_AGS17_PAG17.et" {
+ coords 3154.826 288.968 7933.334
+ angles -0.794 27.465 -0.413
+}
+GenericEntity : "{C75A48694A1DE026}Prefabs/Props/Military/AmmoBoxes/drg_AmmoBox_127_M2.et" {
+ components {
+  SCR_FilteredInventoryStorageComponent "{5476A2F100DF4EFF}" {
+   MultiSlots {
+    MultiSlotConfiguration "{64F707D11FA7A94D}" {
+     SlotTemplate InventoryStorageSlot "{64DCC2F489C88F5C}" {
+      Prefab "{1085CCC052C7F50D}Prefabs/Weapons/Magazines/AGS-17/Magazine_30mm_AGS17_29rnd_VOG17M.et"
+     }
+    }
+    MultiSlotConfiguration "{6502C64ED28D7103}" {
+     SlotTemplate InventoryStorageSlot "{64DCC2F489C88F5C}" {
+      Prefab "{1085CCC052C7F50D}Prefabs/Weapons/Magazines/AGS-17/Magazine_30mm_AGS17_29rnd_VOG17M.et"
+     }
+    }
+   }
+  }
+ }
+ coords 3154.073 288.972 7931.719
+ angles 0 -58.749 0
+}
