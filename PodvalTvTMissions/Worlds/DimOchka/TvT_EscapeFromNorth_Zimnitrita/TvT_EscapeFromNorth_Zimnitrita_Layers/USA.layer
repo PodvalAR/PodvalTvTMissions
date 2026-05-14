@@ -236,7 +236,7 @@ $grp SCR_AIGroup : "{39C6183A810AE059}Prefabs/Groups/BLUFOR/RHS_USAF/USMC/Summer
    "{47AC6CA0211A48A5}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/New/dim_USMC_W_SL.et"
    "{BFF29AC77BE9C57E}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/New/dim_USMC_W_Rifleman_4.et"
   }
-  m_sCustomNameSet "Экипаж ЗУ-23"
+  m_sCustomNameSet "Экипаж ЗУ FMTV"
  }
  amer10 {
   components {
@@ -251,7 +251,7 @@ $grp SCR_AIGroup : "{39C6183A810AE059}Prefabs/Groups/BLUFOR/RHS_USAF/USMC/Summer
    "{47AC6CA0211A48A5}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/New/dim_USMC_W_SL.et"
    "{BFF29AC77BE9C57E}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/New/dim_USMC_W_Rifleman_4.et"
   }
-  m_sCustomNameSet "Экипаж ЗУ-23"
+  m_sCustomNameSet "Экипаж ЗУ FMTV"
  }
  amer8 {
   components {
@@ -298,7 +298,7 @@ $grp SCR_AIGroup : "{39C6183A810AE059}Prefabs/Groups/BLUFOR/RHS_USAF/USMC/Summer
    "{47AC6CA0211A48A5}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/New/dim_USMC_W_SL.et"
    "{BFF29AC77BE9C57E}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/New/dim_USMC_W_Rifleman_4.et"
   }
-  m_sCustomNameSet "Экипаж ЗУ-23"
+  m_sCustomNameSet "Экипаж ЗУ FMTV"
  }
  amer12 {
   components {
@@ -330,6 +330,33 @@ $grp SCR_AIGroup : "{39C6183A810AE059}Prefabs/Groups/BLUFOR/RHS_USAF/USMC/Summer
   m_sCustomNameSet "Разведка с дроном"
  }
 }
+$grp Vehicle : "{7CEFF66651FD2073}Prefabs/Vehicles/Wheeled/M1083/Armed/M1083_Transport_Covered_Armed_Woodland_zu23.et" {
+ M1083_Transport_Covered_Armed_Woodland_zu1 {
+  coords 9149.745 69.079 8372.244
+  angles -0.611 60.002 -0.164
+  m_sAttachmentGroupName "amer10"
+ }
+ M1083_Transport_Covered_Armed_Woodland_zu2 {
+  coords 9135.636 68.783 8364.81
+  angles 2.998 65.34 0.1
+  m_sAttachmentGroupName "amer11"
+ }
+ M1083_Transport_Covered_Armed_Woodland_zu3 {
+  coords 11242.186 30.469 5652.696
+  angles 0 -105 0
+  m_sAttachmentGroupName "amer9"
+ }
+ M1083_Transport_Covered_Armed_Woodland_zu4 {
+  coords 13659.405 29.728 5842.721
+  angles 2.281 10.823 -0.019
+  m_sAttachmentGroupName "amer7"
+ }
+ M1083_Transport_Covered_Armed_Woodland_zu5 {
+  coords 13656.813 29.192 5829.166
+  angles 1.758 10.82 0.336
+  m_sAttachmentGroupName "amer8"
+ }
+}
 Vehicle M998_covered_USAF1 : "{923F0A979CE79ACD}Prefabs/Vehicles/Wheeled/M998/M998_covered_USAF.et" {
  coords 13665.117 31.573 5904.895
  angles 0 6.982 0
@@ -355,27 +382,5 @@ $grp Vehicle : "{D574C943C9F8C9DF}Prefabs/Vehicles/Wheeled/M998/M1151_armed_M2HB
   coords 15821.502 138.625 8748.583
   angles 0 -75 0
   m_sAttachmentGroupName "amer4"
- }
-}
-$grp Vehicle : "{FD109F3702AAB392}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_ZU23.et" {
- Ural4320_ZU4 {
-  coords 9148.993 69.085 8372.093
-  angles 0 60 0
- }
- Ural4320_ZU3 {
-  coords 11242.2 30.469 5652.76
-  angles 0 -105 0
- }
- Ural4320_ZU5 {
-  coords 9134.304 68.696 8363.751
-  angles 0 62.825 0
- }
- Ural4320_ZU2 {
-  coords 13656.702 29.134 5827.298
-  angles 2.281 11.346 0.001
- }
- Ural4320_ZU1 {
-  coords 13659.578 29.686 5841.633
-  angles 2.281 11.346 0.001
  }
 }
