@@ -83,6 +83,13 @@ GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactions
   GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
    m_aControlLogics {
     GUB_ZoneControlLogic "{695C5CDFB4282752}" {
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "USA_WIN"
+     }
+     m_sFailedObjectiveNames {
+      "ION_WIN"
+     }
      m_Timer GUB_ZoneControlTimer "{695C5CDFB71FAAD0}" {
       timeToComplete 150
      }
