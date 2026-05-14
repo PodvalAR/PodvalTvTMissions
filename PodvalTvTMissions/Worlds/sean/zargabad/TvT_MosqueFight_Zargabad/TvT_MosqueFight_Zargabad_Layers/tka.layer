@@ -9,8 +9,8 @@ $grp Vehicle : "{10BD77D4593B7366}Prefabs/Vehicles/Wheeled/Ural4320/Ses_TKA/Ural
   m_sAttachmentGroupName "squadtka1"
  }
  Ural4320_Ses_TKA_transport2 {
-  coords 3993.884 41.402 5640.264
-  angles 0 163.31 0
+  coords 3993.884 42.008 5640.264
+  angles -1.714 163.295 0.514
   m_sAttachmentGroupName "squadtka2"
  }
 }
@@ -100,6 +100,18 @@ SCR_AIGroup pl : "{371433587517EBAC}Prefabs/Groups/OPFOR/Ses_TKA/Group_A2F_TKA_P
   "{AD11AF5C866B83E8}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_Rifle.et"
  }
 }
+$grp Vehicle : "{6773D9209B13A292}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_uncovered_Ses_TKA.et" {
+ UAZ469_uncovered_Ses_TKA1 {
+  coords 3988.31 42.51 5656.169
+  angles -1.307 157.324 1.516
+  m_sAttachmentGroupName "squadtka3"
+ }
+ UAZ469_uncovered_Ses_TKA2 {
+  coords 3986.528 42.585 5660.442
+  angles -1.307 157.324 1.516
+  m_sAttachmentGroupName "squadtka3"
+ }
+}
 $grp Vehicle : "{6F963B40DE04868B}Prefabs/Vehicles/Wheeled/BTR70/BTR70_Ses_TKA.et" {
  BTR70_Ses_TKA1 {
   coords 3979.158 43.194 5684.386
@@ -112,10 +124,17 @@ $grp Vehicle : "{6F963B40DE04868B}Prefabs/Vehicles/Wheeled/BTR70/BTR70_Ses_TKA.e
   m_sAttachmentGroupName "crewtka1"
  }
 }
-Vehicle UAZ469_uncovered_Turret_USSR_AGS1 : "{A554AF67FEF900E6}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_uncovered_Turret_USSR_AGS.et" {
- coords 3972.464 43.572 5707.084
- angles -1.142 160.598 -0.547
- m_sAttachmentGroupName "pl"
+$grp Vehicle : "{7CFC0E3996D52063}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_uncovered_Turret_TKA_AGS.et" {
+ UAZ469_uncovered_Turret_TKA_AGS1 {
+  coords 3972.436 43.58 5707.905
+  angles -0.482 164.376 -1.724
+  m_sAttachmentGroupName "pl"
+ }
+ UAZ469_uncovered_Turret_TKA_AGS2 {
+  coords 3982.124 42.99 5675.361
+  angles -0.862 164.358 0.241
+  m_sAttachmentGroupName "squadtka4"
+ }
 }
 $grp Vehicle : "{A5D524D387AEFC4C}Prefabs/Vehicles/Wheeled/UAZ452/UAZ452_transport_TKA.et" {
  UAZ452_transport_TKA1 {
@@ -142,11 +161,6 @@ $grp GenericEntity : "{B0A890995104A02D}Prefabs/Weapons/Tripods/9K135/Part_9K135
   coords 3961.713 43.45 5661.878
   angles 0.173 9.373 -90
  }
-}
-Vehicle UAZ469_uncovered_Turret_USSR_AGS_PAG1 : "{C87CB5A604C952FD}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_uncovered_Turret_USSR_AGS_PAG.et" {
- coords 3982.576 42.991 5675.656
- angles 0 168.527 0
- m_sAttachmentGroupName "squadtka4"
 }
 SCR_AIGroup squadtka5 : "{D98C1540C5C05A6C}Prefabs/Groups/OPFOR/Ses_TKA/Group_A2F_TKA_Motorized.et" {
  components {
@@ -177,17 +191,5 @@ $grp SCR_AIGroup : "{DBD7346AC0AFA888}Prefabs/Groups/OPFOR/Ses_TKA/Group_A2F_TKA
   }
   coords 3567.937 22.376 3999.091
   angles 0 -0.272 0
- }
-}
-$grp Vehicle : "{EF3C004C1F1E24C7}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_Ses_ChDKZ.et" {
- UAZ469_Ses_ChDKZ1 {
-  coords 3988.669 42.442 5653.919
-  angles 0 160.875 0
-  m_sAttachmentGroupName "squadtka3"
- }
- UAZ469_Ses_ChDKZ3 {
-  coords 3986.77 42.442 5659.395
-  angles 0 160.875 0
-  m_sAttachmentGroupName "squadtka3"
  }
 }
