@@ -1,0 +1,89 @@
+GenericEntity : "{91991AEB147C0F3B}Prefabs/System/DRG_RandomSpawnPrefab.et" {
+ components {
+  DRG_RandomSpawnComponent "{66295E1A338BA9CE}" {
+   m_TargetEntity "SPN"
+   m_MarkerEntities {
+    "SPAWN1"
+    "SPAWN2"
+    "SPAWN3"
+   }
+  }
+ }
+ coords 6161.739 139.591 12890.676
+}
+$grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+ SPAWN1 {
+  coords 9794.45 78.73 13005.166
+  angles 0 90 0
+  m_MarkerColor 0.016 0.552 0.905 1
+  m_sQuadName "mark-question"
+  m_fWorldSize 50
+  m_sDescription "Возможное появление ДРГ"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "RHS_USAF"
+   "RHS_AFRF"
+   ""
+  }
+  m_bVisibleForEmptyFaction 1
+  m_bShowForAnyFaction 1
+ }
+ SPAWN2 {
+  coords 9486.609 8.958 14298.516
+  angles 0 90 0
+  m_MarkerColor 0.016 0.552 0.905 1
+  m_sQuadName "mark-question"
+  m_fWorldSize 50
+  m_sDescription "Возможное появление ДРГ"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "RHS_USAF"
+   "RHS_AFRF"
+   ""
+  }
+  m_bVisibleForEmptyFaction 1
+  m_bShowForAnyFaction 1
+ }
+ SPAWN3 {
+  coords 7795.264 17.128 12518.338
+  angles 0 90 0
+  m_MarkerColor 0.016 0.552 0.905 1
+  m_sQuadName "mark-question"
+  m_fWorldSize 50
+  m_sDescription "Возможное появление ДРГ"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "RHS_USAF"
+   "RHS_AFRF"
+   ""
+  }
+  m_bVisibleForEmptyFaction 1
+  m_bShowForAnyFaction 1
+ }
+}
+$grp StaticModelEntity : "{E95CB8F4C4B2C210}Prefabs/Decals/Markings/Runway/Decal_Helipad_01.et" {
+ {
+  coords 15531.064 52.125 4448.07
+  angles 0 -6.478 0
+ }
+ {
+  coords 15511.408 52.125 4445.838
+  angles 0 -6.478 0
+ }
+ {
+  coords 15492.603 52.125 4443.703
+  angles 0 -6.478 0
+ }
+ {
+  coords 15513.418 52.125 4428.139
+  angles 0 -6.478 0
+ }
+ {
+  coords 15494.612 52.125 4426.004
+  angles 0 -6.478 0
+ }
+ {
+  coords 15533.074 52.125 4430.372
+  angles 0 -6.478 0
+ }
+}
