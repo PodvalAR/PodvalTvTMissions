@@ -1,0 +1,86 @@
+SCR_AIGroup RUS0 : "{7F40D42C0CE8A499}Prefabs/Groups/OPFOR/RHS_AFRF/Group_RHS_AFRF_Base.et" {
+ coords 8709.128 91.938 13409.404
+ angles 0 178.729 0
+ m_aUnitPrefabSlots {
+  "{7551E181CE4C6845}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Officer.et"
+ }
+ m_sCustomNameSet "Командир ВС РФ"
+}
+$grp SCR_AIGroup : "{EB131DDF464F90FD}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Squad.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 8707.383 91.938 13392.821
+  angles 0 90 0
+  m_bSnapToTerrain 0
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 8725.018 91.938 13383.343
+  angles 0 -88.908 0
+  m_bSnapToTerrain 0
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 8718.645 72.688 13306.219
+  angles 0 -88.908 0
+  m_bSnapToTerrain 0
+  m_sCustomNameSet "Охрана периметра"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 8721.691 64.219 13193.463
+  angles 0 140.978 0
+  m_bSnapToTerrain 0
+  m_sCustomNameSet "Охрана периметра"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 2
+   }
+  }
+  coords 8788.35 51.813 13158.212
+  angles 0 140.978 0
+  m_bSnapToTerrain 0
+  m_sCustomNameSet "Охрана периметра"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 8918.294 43.844 13117.558
+  angles 0 -176.986 0
+  m_aUnitPrefabSlots {
+   "{998515E06ED7A4C9}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_SL.et"
+   "{E49DF9180B449850}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_SR.et"
+   "{2CA58D3E25DA1886}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_AT.et"
+   "{D90B2AEF04BBE301}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_AAT.et"
+   "{F40DE4FF5C5306DA}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_AR.et"
+   "{78410A549262E06D}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Rifle.et"
+   "{1D25ADA8774D4BD2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Medic.et"
+  }
+  m_bSnapToTerrain 0
+  m_sCustomNameSet "Охрана КПП"
+ }
+}
