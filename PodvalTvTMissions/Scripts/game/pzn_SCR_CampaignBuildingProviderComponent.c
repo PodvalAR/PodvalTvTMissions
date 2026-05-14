@@ -116,3 +116,4 @@ modded class SCR_CampaignBuildingManagerComponent : SCR_BaseGameModeComponent
 		}
 	}
 }
+

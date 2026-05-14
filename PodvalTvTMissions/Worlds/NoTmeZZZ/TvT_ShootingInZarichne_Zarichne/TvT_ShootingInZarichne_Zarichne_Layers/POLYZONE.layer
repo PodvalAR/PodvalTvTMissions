@@ -48,6 +48,7 @@ GenericEntity FLAG : "{3D78D7D606FF9818}PrefabsEditable/Auto/Structures/Military
       Name "Захватить флаг"
      }
      Duration 5
+     m_bUseAnimation 1
     }
    }
   }
@@ -73,7 +74,7 @@ GenericEntity : "{CA1FF8EE196359C6}Prefabs/System/DRG_FlagControlPrefab.et" {
        m_sFlagPreviewName "США: Флаг захвачен и удержан в течении 5 минут"
       }
      }
-     m_iCompleteAfterSeconds 300
+     m_iCompleteAfterSeconds 210
     }
     FlagLogic "{690B0869B104085A}" {
      m_sSuccessObjectiveNames {
@@ -90,7 +91,7 @@ GenericEntity : "{CA1FF8EE196359C6}Prefabs/System/DRG_FlagControlPrefab.et" {
        m_sFlagPreviewName "СССР: Флаг захвачен и удержан в течении 5 минут"
       }
      }
-     m_iCompleteAfterSeconds 300
+     m_iCompleteAfterSeconds 210
     }
    }
   }
