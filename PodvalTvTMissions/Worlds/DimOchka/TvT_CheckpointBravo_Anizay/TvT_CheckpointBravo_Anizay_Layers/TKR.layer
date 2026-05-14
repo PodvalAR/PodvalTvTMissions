@@ -1,0 +1,185 @@
+$grp SCR_AIGroup : "{13DBB5C9728E6DE1}Prefabs/Groups/INDFOR/TKR/Group_Ses_TKR_Random_motor.et" {
+ tkr1 {
+  components {
+   PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 6165.056 102.844 6988.134
+  angles 0 -153.967 0
+  m_aUnitPrefabSlots {
+   "{88886FC274202013}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_SL_Random.et"
+   "{C00096717E140FE4}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_GL_Random.et"
+   "{8E68A198939D2E8D}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Rifleman_Random.et"
+   "{3ADD5E802552D24E}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_AR_Random.et"
+   "{8E68A198939D2E8D}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Rifleman_Random.et"
+   "{C472228F83886D43}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Sapper_Random.et"
+  }
+  m_sCustomNameSet "Радикалы ТКР на Лэнд-Роверах"
+ }
+ tkr2 {
+  components {
+   PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 6145.059 104.028 6993.647
+  angles 0 176.033 0
+  m_aUnitPrefabSlots {
+   "{88886FC274202013}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_SL_Random.et"
+   "{C00096717E140FE4}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_GL_Random.et"
+   "{8E68A198939D2E8D}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Rifleman_Random.et"
+   "{3ADD5E802552D24E}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_AR_Random.et"
+   "{8E68A198939D2E8D}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Rifleman_Random.et"
+   "{C472228F83886D43}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Sapper_Random.et"
+  }
+  m_sCustomNameSet "Радикалы ТКР на Лэнд-Роверах"
+ }
+}
+$grp Vehicle : "{5F112AA90CCA5368}Prefabs/Vehicles/Wheeled/BRDM2/BRDM2_Ses_TKR.et" {
+ BRDM2_Ses_TKR1 {
+  coords 6175.575 102.306 6973.826
+  angles 0.119 7.658 -0.887
+  m_sAttachmentGroupName "crew1"
+ }
+ BRDM2_Ses_TKR2 {
+  coords 6168.09 102.31 6974.283
+  angles 5.944 7.799 2.609
+  m_sAttachmentGroupName "crew2"
+ }
+}
+$grp Vehicle : "{8ACB8116F334AE6C}Prefabs/Vehicles/Wheeled/LR_3Series/dim_LWB_M2.et" {
+ dim_LWB_M1 {
+  coords 6156.502 103.049 6982.855
+  angles 2.441 -8.639 4.146
+  m_sAttachmentGroupName "tkr1"
+ }
+ dim_LWB_M2 {
+  coords 6159.978 102.807 6981.386
+  angles 3.803 -8.61 1.231
+  m_sAttachmentGroupName "tkr1"
+ }
+ dim_LWB_M3 {
+  coords 6146.252 103.528 6984.587
+  angles 3.803 -8.61 1.231
+  m_sAttachmentGroupName "tkr2"
+ }
+ dim_LWB_M4 {
+  coords 6142.776 103.768 6986.056
+  angles 11.613 -8.636 0.022
+  m_sAttachmentGroupName "tkr2"
+ }
+}
+SCR_AIGroup : "{A0D7D8DA2D90FBD3}Prefabs/Groups/INDFOR/TKR/Group_Ses_TKR_PL_9.et" {
+ coords 4800.009 143.936 8332.126
+ m_aUnitPrefabSlots {
+  "{44F829A0BCF2F1DA}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_PL.et"
+  "{C00096717E140FE4}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_GL_Random.et"
+  "{6E9511C7C88E1E10}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_AT_Random.et"
+  "{AAA88BB9DF1D6B4D}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_AAT_Random.et"
+  "{61A809AD2C9D9820}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_MG_Random.et"
+  "{A59593D33B0EED7D}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_AMG_Random.et"
+  "{C472228F83886D43}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Sapper_Random.et"
+  "{8E68A198939D2E8D}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Rifleman_Random.et"
+  "{73C9E814A210268E}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Marksman_Random.et"
+ }
+ m_sCustomNameSet "Полевой командир ТКР Мураль"
+}
+$grp SCR_AIGroup : "{A33B404F66AC1ED8}Prefabs/Groups/INDFOR/TKR/Group_Ses_TKR_Rifle.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 2782.75 141.792 7938.812
+  angles 0 180 0
+  m_sCustomNameSet "Радикалы ТКР из Angama"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 3022.092 137.648 7125.544
+  angles -0.85 87.155 0.938
+  m_sCustomNameSet "Радикалы ТКР из Seyyedan"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 4813.637 143.969 8327.877
+  angles 0 45.487 0
+  m_sCustomNameSet "Радикалы ТКР из Deraz"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 3
+   }
+  }
+  coords 4715.489 137.344 6096.608
+  angles 0 165.488 0
+  m_sCustomNameSet "Радикалы ТКР из Kelinga"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 4
+   }
+  }
+  coords 4963.111 140.273 6994.622
+  angles 0 -152.772 0
+  m_aUnitPrefabSlots {
+   "{88886FC274202013}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_SL_Random.et"
+   "{C00096717E140FE4}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_GL_Random.et"
+   "{6E9511C7C88E1E10}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_AT_Random.et"
+   "{AAA88BB9DF1D6B4D}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_AAT_Random.et"
+   "{61A809AD2C9D9820}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_MG_Random.et"
+   "{A59593D33B0EED7D}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_AMG_Random.et"
+   "{8E68A198939D2E8D}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Rifleman_Random.et"
+   "{C472228F83886D43}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Sapper_Random.et"
+  }
+  m_sCustomNameSet "Радикалы ТКР из Muskhan"
+ }
+}
+$grp SCR_AIGroup : "{F29F1ED486C470C2}Prefabs/Groups/INDFOR/TKR/Group_Ses_TKR_Motor2.et" {
+ crew1 {
+  components {
+   PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 6177.349 102.662 6980.813
+  angles 0 -169.149 0
+  m_aUnitPrefabSlots {
+   "{88886FC274202013}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_SL_Random.et"
+   "{02DCF906B5727DC8}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Crew_Random.et"
+  }
+  m_sCustomNameSet "Экипаж БРДМ"
+ }
+ crew2 {
+  components {
+   PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 1
+   }
+  }
+  coords 6170.481 102.662 6982.214
+  angles 0 -168.362 0
+  m_aUnitPrefabSlots {
+   "{88886FC274202013}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_SL_Random.et"
+   "{02DCF906B5727DC8}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Crew_Random.et"
+  }
+  m_sCustomNameSet "Экипаж БРДМ"
+ }
+}
