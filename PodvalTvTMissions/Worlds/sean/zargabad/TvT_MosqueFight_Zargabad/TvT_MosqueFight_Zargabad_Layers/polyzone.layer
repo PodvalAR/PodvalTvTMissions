@@ -1,0 +1,67 @@
+PolylineShapeEntity trigger {
+ components {
+  PS_PolyZone "{6956D9B74F22072E}" {
+   m_cPolygonColor 0.259 0.686 0.686 1
+   m_cPolygonBorderColor 0 0.125 0.502 1
+   m_fPolygonBorderWidth 3.2
+   m_aVisibleForFactions {
+    "RHS_USAF"
+    "Ses_TKA"
+    ""
+   }
+   m_aHideOnGameModeStates {
+    NULL
+   }
+  }
+ }
+ coords 4279.259 17 4124.583
+ Points {
+  ShapePoint "{6956D9B75E8659D7}" {
+   Position 0 -0 0
+  }
+  ShapePoint "{6956D9B75E868200}" {
+   Position -75.914 -0 0
+  }
+  ShapePoint "{6956D9B757FABE43}" {
+   Position -75.786 0 70.298
+  }
+  ShapePoint "{6956D9B75506DB51}" {
+   Position 0.404 0 69.099
+  }
+ }
+ IsClosed 1
+}
+GenericEntity flag : "{3D78D7D606FF9818}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_NoCapture.et" {
+ coords 4241.363 38.341 4159.158
+}
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{6956D9B7F09AD32E}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogicCapture "{6956D9B7EE5EE1F1}" {
+     m_fCheckPeriod 0.2
+     m_sSuccessObjectiveNames {
+      "RHS_USAF"
+      "Ses_TKA"
+     }
+     m_sMessage "Мечеть захвачена"
+     m_Timer GUB_ZoneControlTimer "{6956D9B7E723C147}" {
+      timeToComplete 300
+     }
+     m_ZoneController GUB_ZoneController "{6956D9B7E5E5313E}" {
+      m_sZoneEntityName "trigger"
+     }
+     m_FlagControllerCapture GUB_FlagControllerCapture "{6956D9B7DE8654AA}" {
+      m_aFlagNames {
+       "flag"
+      }
+     }
+     neutralFaction "RHS_ION"
+    }
+   }
+  }
+  PS_PolyZone "{6956D9B7F5DED6F3}" {
+  }
+ }
+ coords 4214.537 17 4130.932
+}

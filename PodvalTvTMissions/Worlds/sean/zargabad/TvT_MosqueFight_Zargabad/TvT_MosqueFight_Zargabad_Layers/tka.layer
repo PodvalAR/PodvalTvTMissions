@@ -1,0 +1,195 @@
+Turret : "{07260C68FCC746A4}Prefabs/Weapons/Tripods/9K135/Deployable_Tripod_9K135.et" {
+ coords 3961.608 43.204 5664.24
+ angles 0.068 24.614 2
+}
+$grp Vehicle : "{10BD77D4593B7366}Prefabs/Vehicles/Wheeled/Ural4320/Ses_TKA/Ural4320_Ses_TKA_transport.et" {
+ Ural4320_Ses_TKA_transport1 {
+  coords 3998.536 41.402 5624.749
+  angles 0 163.31 0
+  m_sAttachmentGroupName "squadtka1"
+ }
+ Ural4320_Ses_TKA_transport2 {
+  coords 3993.884 42.008 5640.264
+  angles -1.714 163.295 0.514
+  m_sAttachmentGroupName "squadtka2"
+ }
+}
+$grp GenericEntity : "{144AA3DABB80974C}Prefabs/Weapons/Tripods/9K135/Part_9K135TB_Launcher.et" {
+ {
+  coords 3961.957 43.427 5661.167
+  angles 0.361 9.373 -90
+ }
+ {
+  coords 3961.402 43.459 5661.541
+  angles 0.229 9.373 -90
+ }
+}
+SCR_AIGroup squadtka7 : "{20EC48C9C605302E}Prefabs/Groups/OPFOR/Ses_TKA/Group_A2F_TKA_PL_4.et" {
+ components {
+  PS_GroupCallsignAssigner "{690E684CFA37FFC2}" {
+   m_iCompanyCallsign 3
+  }
+ }
+ coords 3960.049 43.268 5665.588
+ angles 0 -164.831 0
+ m_aUnitPrefabSlots {
+  "{343A09365A94CA51}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_PL2.et"
+  "{90644CAF5B1CA422}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_MG.et"
+  "{4B57FBCFFF7FFD76}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_AMG.et"
+ }
+ m_sCustomNameSet "Отряд поддержки (ПТРК)"
+}
+SCR_AIGroup crewtka1 : "{21A8555C9F948E7A}Prefabs/Groups/OPFOR/Ses_TKA/Group_A2F_TKA_meh.et" {
+ components {
+  PS_GroupCallsignAssigner "{690E684CFA37FFC2}" {
+   m_iCompanyCallsign 5
+   m_iSquadCallsign 1
+  }
+ }
+ coords 3971.351 43.363 5693.241
+ angles 0.238 74.57 0.863
+}
+$grp SCR_AIGroup : "{36D036599018AD6E}Prefabs/Groups/OPFOR/Ses_TKA/Group_A2F_TKA_PL_9.et" {
+ squadtka1 {
+  components {
+   PS_GroupCallsignAssigner "{690E684CFA37FFC2}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 3993.544 41.658 5628.069
+  angles 0.528 72.853 1.71
+ }
+ squadtka2 {
+  components {
+   PS_GroupCallsignAssigner "{690E684CFA37FFC2}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 4000.003 41.823 5638.666
+  angles 2.279 -107.919 -1.676
+ }
+ squadtka3 {
+  components {
+   PS_GroupCallsignAssigner "{690E684CFA37FFC2}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 3982.511 42.672 5660.508
+  angles 0.528 72.853 1.71
+ }
+ squadtka4 {
+  components {
+   PS_GroupCallsignAssigner "{690E684CFA37FFC2}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 3990.129 42.765 5669.32
+  angles 2.279 -107.919 -1.676
+ }
+}
+SCR_AIGroup pl : "{371433587517EBAC}Prefabs/Groups/OPFOR/Ses_TKA/Group_A2F_TKA_PL.et" {
+ components {
+  PS_GroupCallsignAssigner "{6952B803ADC43999}" {
+  }
+ }
+ coords 3975.275 43.491 5708.044
+ angles 1.675 -110.66 -0.631
+ m_aUnitPrefabSlots +{
+  "{AD11AF5C866B83E8}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_Rifle.et"
+ }
+}
+$grp Vehicle : "{6773D9209B13A292}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_uncovered_Ses_TKA.et" {
+ UAZ469_uncovered_Ses_TKA1 {
+  coords 3988.31 42.51 5656.169
+  angles -1.307 157.324 1.516
+  m_sAttachmentGroupName "squadtka3"
+ }
+ UAZ469_uncovered_Ses_TKA2 {
+  coords 3986.528 42.585 5660.442
+  angles -1.307 157.324 1.516
+  m_sAttachmentGroupName "squadtka3"
+ }
+}
+$grp Vehicle : "{6F963B40DE04868B}Prefabs/Vehicles/Wheeled/BTR70/BTR70_Ses_TKA.et" {
+ BTR70_Ses_TKA1 {
+  coords 3979.158 43.194 5684.386
+  angles -0.857 163.181 0.259
+  m_sAttachmentGroupName "squadtka5"
+ }
+ BTR70_Ses_TKA2 {
+  coords 3975.903 43.362 5695.155
+  angles -0.857 163.181 0.259
+  m_sAttachmentGroupName "crewtka1"
+ }
+}
+$grp Vehicle : "{7CFC0E3996D52063}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_uncovered_Turret_TKA_AGS.et" {
+ UAZ469_uncovered_Turret_TKA_AGS1 {
+  coords 3972.436 43.58 5707.905
+  angles -0.482 164.376 -1.724
+  m_sAttachmentGroupName "pl"
+ }
+ UAZ469_uncovered_Turret_TKA_AGS2 {
+  coords 3982.124 42.99 5675.361
+  angles -0.862 164.358 0.241
+  m_sAttachmentGroupName "squadtka4"
+ }
+}
+$grp Vehicle : "{A5D524D387AEFC4C}Prefabs/Vehicles/Wheeled/UAZ452/UAZ452_transport_TKA.et" {
+ UAZ452_transport_TKA1 {
+  coords 3957.538 43.327 5664.003
+  angles -1.748 102.457 -0.386
+  m_sAttachmentGroupName "squadtka7"
+ }
+ UAZ452_transport_TKA2 {
+  coords 3984.149 42.77 5668.837
+  angles 0 162.138 0
+  m_sAttachmentGroupName "squadtka4"
+ }
+}
+$grp GenericEntity : "{B0A890995104A02D}Prefabs/Weapons/Tripods/9K135/Part_9K135_Launcher.et" {
+ {
+  coords 3961.17 43.473 5661.754
+  angles -0.079 9.373 -90
+ }
+ {
+  coords 3962.311 43.411 5661.508
+  angles 0.3 9.373 -90
+ }
+ {
+  coords 3961.713 43.45 5661.878
+  angles 0.173 9.373 -90
+ }
+}
+SCR_AIGroup squadtka5 : "{D98C1540C5C05A6C}Prefabs/Groups/OPFOR/Ses_TKA/Group_A2F_TKA_Motorized.et" {
+ components {
+  PS_GroupCallsignAssigner "{690E684CFA37FFC2}" {
+   m_iCompanyCallsign 2
+   m_iSquadCallsign 2
+  }
+ }
+ coords 3974.194 43.186 5687.182
+ angles 0 73.38 0
+}
+$grp SCR_AIGroup : "{DBD7346AC0AFA888}Prefabs/Groups/OPFOR/Ses_TKA/Group_A2F_TKA_Recon6.et" {
+ ssotka2 {
+  components {
+   PS_GroupCallsignAssigner "{690E684CFA37FFC2}" {
+    m_iCompanyCallsign 4
+   }
+  }
+  coords 3581.666 22.376 3999.157
+  angles 0 -0.272 0
+ }
+ ssotka1 {
+  components {
+   PS_GroupCallsignAssigner "{690E684CFA37FFC2}" {
+    m_iCompanyCallsign 4
+    m_iSquadCallsign 1
+   }
+  }
+  coords 3567.937 22.376 3999.091
+  angles 0 -0.272 0
+ }
+}

@@ -1,0 +1,76 @@
+$grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+ ZAVOD_MARKER {
+  coords 3584.417 2.375 4317.812
+  m_sImageSet "{C3F217CA9CF060B4}UI/Imagesets/Conflict/ConflictIconsSet.imageset"
+  m_sImageSetGlow ""
+  m_sQuadName "Task_Defend"
+  m_fWorldSize 45
+  m_sDescription "Завод"
+  m_bUseWorldScale 0
+  m_bVisibleForEmptyFaction 1
+ }
+ ZAVOD_DEF {
+  coords 3585.24 2.307 4318.804
+  angles 0 90 0
+  m_sImageSet "{C3F217CA9CF060B4}UI/Imagesets/Conflict/ConflictIconsSet.imageset"
+  m_sImageSetGlow ""
+  m_sQuadName "Task_Defend"
+  m_fWorldSize 45
+  m_sDescription "Удержать"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+  }
+ }
+ ZAVOD_ATTACK {
+  coords 3585.352 2.366 4319.22
+  m_sImageSet "{C3F217CA9CF060B4}UI/Imagesets/Conflict/ConflictIconsSet.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 0.61 0 0 1
+  m_sQuadName "Task_Attack"
+  m_fWorldSize 45
+  m_sDescription "Захватить завод"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "RHS_USAF"
+  }
+ }
+ FARM_DEF {
+  coords 5563.771 27.417 1927.026
+  angles 0 90 0
+  m_sImageSet "{C3F217CA9CF060B4}UI/Imagesets/Conflict/ConflictIconsSet.imageset"
+  m_sImageSetGlow ""
+  m_sQuadName "Task_Defend"
+  m_fWorldSize 45
+  m_sDescription "Удержать"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+  }
+ }
+ FARM_MARKER {
+  coords 5563.612 27.444 1926.956
+  angles 0 90 0
+  m_sImageSet "{C3F217CA9CF060B4}UI/Imagesets/Conflict/ConflictIconsSet.imageset"
+  m_sImageSetGlow ""
+  m_sQuadName "Task_Defend"
+  m_fWorldSize 45
+  m_sDescription "Ферма"
+  m_bUseWorldScale 0
+  m_bVisibleForEmptyFaction 1
+ }
+ FARM_ATTACK {
+  coords 5563.771 27.418 1927.026
+  angles 0 90 0
+  m_sImageSet "{C3F217CA9CF060B4}UI/Imagesets/Conflict/ConflictIconsSet.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 0.61 0 0 1
+  m_sQuadName "Task_Attack"
+  m_fWorldSize 45
+  m_sDescription "Захватить ферму"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "RHS_USAF"
+  }
+ }
+}

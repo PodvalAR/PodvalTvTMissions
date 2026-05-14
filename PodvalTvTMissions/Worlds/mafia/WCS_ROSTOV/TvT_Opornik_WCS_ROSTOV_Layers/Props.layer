@@ -1,3 +1,7 @@
+GenericEntity : "{002B8C09F0E7E371}Prefabs/Props/Wrecks/S1203_wreck/S1203_wreck_static.et" {
+ coords 783.549 151.463 3892.685
+ angles 0 85.846 0
+}
 $grp Tree : "{00C9C289A467E096}PrefabLibrary/DefaultLibrary/Vegetation/Trees/t_carpinus_betulus_2f.et" {
  {
   coords 1032.218 0 3624.045
@@ -620,6 +624,28 @@ $grp Tree : "{0A56ED2CC73ABB23}PrefabLibrary/DefaultLibrary/Vegetation/Bushes/b_
   scale 0.906
  }
 }
+$grp GenericEntity : "{0A6B5B1CC60EC137}Prefabs/Props/Wrecks/LAV25_wreck/LAV25_wreck_static.et" {
+ {
+  coords 736.456 148.104 3794.312
+  angles 3.917 65.644 2.149
+ }
+ {
+  coords 739.292 145.846 3742.437
+  angles 0.841 91.729 1.816
+ }
+ {
+  coords 676.614 145.481 3749.568
+  angles 1.954 50.985 -0.431
+ }
+ {
+  coords 725.891 141.663 3640.129
+  angles -0.143 93.043 2.68
+ }
+ {
+  coords 641.976 141.366 3675.724
+  angles -1.206 -73.448 -2.225
+ }
+}
 $grp Tree : "{159BD386C0F6F3AD}PrefabLibrary/DefaultLibrary/Vegetation/Trees/t_pinus_sylvestris_3w.et" {
  {
   coords 1801.075 0 4412.938
@@ -1046,6 +1072,38 @@ $grp GenericEntity : "{25B265F3E7CBDFC8}Prefabs/Props/Wrecks/BMP1_wreck/BMP1_wre
     ID "662AB519E476772A"
     coords -31.151 -1.103 1.623
     angles -1.158 28.862 1.63
+   }
+  }
+ }
+ {
+  coords 638.675 146.049 3764.44
+  angles 1.264 48.417 0.075
+  {
+   GenericEntity {
+    ID "662AB519E476772A"
+    coords 0 0 0
+    angles 0 -107.253 0
+   }
+   GenericEntity {
+    ID "662AB519E70FF131"
+    coords -1.014 -0.485 -1.688
+    angles -78.731 31.187 145.318
+   }
+  }
+ }
+ {
+  coords 631.338 145.814 3756.762
+  angles 1.264 48.417 0.075
+  {
+   GenericEntity {
+    ID "662AB519E476772A"
+    coords -6.239 -1.646 -1.24
+    angles 0 154.383 0
+   }
+   GenericEntity {
+    ID "662AB519E70FF131"
+    coords -7.006 -139.537 -2.407
+    angles -1.744 39.677 1.696
    }
   }
  }
@@ -4998,6 +5056,10 @@ $grp GenericEntity : "{2B24356C351A2538}Prefabs/Props/Wrecks/M113_wreck/M113_wre
   angles 0.041 -88.704 -1.789
  }
 }
+StaticModelEntity : "{2CF6244D6C76F560}Prefabs/Terrain/Erosion/ErodedEmbankment_01/ErodedEmbankment_01_dirt_straight.et" {
+ coords 1427.441 163.307 4054.715
+ angles -16.13 -69.445 0
+}
 $grp Tree : "{2FE01B5E743D5205}PrefabLibrary/DefaultLibrary/Vegetation/Trees/t_pinus_sylvestris_1s.et" {
  {
   coords 1871.76 0 4465.37
@@ -5411,6 +5473,39 @@ $grp GenericEntity : "{388B774519BD6294}Prefabs/Props/Wrecks/T62_wreck/T62_wreck
     ID "662AB4309A5355EA"
     coords 1.873 -1.278 15.236
     angles 0 -85.508 0
+   }
+  }
+ }
+ {
+  coords 686.674 148.18 3812.83
+  angles 1.246 55.061 0.221
+  {
+   GenericEntity {
+    ID "662AB4309A5355EA"
+    coords 2.104 -0.609 -0.328
+    angles 1.654 -1.68 36.729
+   }
+  }
+ }
+ {
+  coords 668.969 147.402 3794.756
+  angles 1.265 42.56 -0.054
+  {
+   GenericEntity {
+    ID "662AB4309A5355EA"
+    coords -1.345 1.488 3.523
+    angles -68.043 -14.639 58.117
+   }
+  }
+ }
+ {
+  coords 883.834 153.689 3992.57
+  angles 3.603 34.437 8.896
+  {
+   GenericEntity {
+    ID "662AB4309A5355EA"
+    coords -39.413 -56.186 0.06
+    angles 1.654 -1.68 36.729
    }
   }
  }
@@ -6440,6 +6535,16 @@ $grp Tree : "{425761285F36BF16}PrefabLibrary/DefaultLibrary/Vegetation/Trees/t_b
   coords 1319.15 -0.043 4015.029
   angles 0 -154.423 0
   scale 0.898
+ }
+}
+$grp GenericEntity : "{4A0EB5570B2BB36C}Prefabs/Props/Wrecks/Ural4320_wreck/Ural4320_wreck.et" {
+ {
+  coords 731.409 149.587 3858.321
+  angles 2.475 32.961 -0.528
+ }
+ {
+  coords 337.234 136.363 3477.997
+  angles 0 49.201 0
  }
 }
 $grp Tree : "{4F87818365E5D8D9}PrefabLibrary/DefaultLibrary/Vegetation/Trees/t_sorbus_aucuparia_2f.et" {
@@ -11331,6 +11436,10 @@ $grp Tree : "{5D765B912A33A615}PrefabLibrary/DefaultLibrary/Vegetation/Trees/t_s
 SCR_PowerPole : "{64EDA881A2C6291C}Prefabs/Structures/Infrastructure/Power/Powerlines/PowerLine_01/PowerLine_01_pole_small_hook.et" {
  coords 1931.184 0.012 4497.873
  angles -0.002 45.113 -5.309
+}
+GenericEntity : "{654B33C808C4D93E}Prefabs/Props/Wrecks/M151A2_wreck/M151A2_wreck_static.et" {
+ coords 792.765 151.47 3906.249
+ angles 1.245 34.669 -0.227
 }
 $grp Tree : "{6602D9CC7BFE340D}PrefabLibrary/DefaultLibrary/Vegetation/Bushes/b_sambucus_nigra_1.et" {
  {
@@ -18023,6 +18132,34 @@ $grp GenericEntity : "{AE57C45CB32D6168}Prefabs/Props/Wrecks/M113_wreck/M113_wre
   coords 1244.789 163.385 4157.543
   angles 1.814 -47.491 -1.978
  }
+ {
+  coords 646.234 146.002 3754.82
+  angles 2.524 40.967 -0.178
+ }
+ {
+  coords 586.432 138.409 3613.075
+  angles 1.125 51.067 1.392
+ }
+ {
+  coords 605.462 136.54 3558.353
+  angles 2.382 51.1 1.526
+ }
+ {
+  coords 711.437 143.408 3681.061
+  angles 0.459 -75.14 -1.73
+ }
+ {
+  coords 624.972 140.768 3679.046
+  angles -3.691 -108.792 -2.518
+ }
+ {
+  coords 701.174 139.14 3589.518
+  angles -3.185 -137.388 -0.5
+ }
+ {
+  coords 632.323 136.122 3538.75
+  angles -1.923 -137.4 -0.553
+ }
 }
 $grp Tree : "{AFCFB75E18071FAC}PrefabLibrary/DefaultLibrary/Vegetation/Trees/t_picea_abies_2d.et" {
  {
@@ -20690,6 +20827,33 @@ GenericEntity : "{D4D2ADACAAAB2BB8}Prefabs/Structures/BuildingParts/Signs/Commer
  coords 1931.136 163.158 4498.016
  angles 7.2 141.745 0
 }
+$grp StaticModelEntity : "{D82CCDC85716DB32}Prefabs/Props/Wrecks/CannonWreck_02/CannonWreck_02.et" {
+ {
+  coords 730.036 150.434 3856.1
+  angles 0 -140.33 0
+  {
+   GenericEntity {
+    ID "65E289DBFA9CEDE9"
+    coords 0 -124.833 0
+   }
+  }
+ }
+ {
+  coords 883.978 154.619 3992.505
+  angles -4.836 86.352 8.294
+  {
+   GenericEntity {
+    ID "65E289DBFA9CEDE9"
+    coords 0 -15.868 0
+   }
+   GenericEntity {
+    ID "65EC7D0BB837CF94"
+    coords -0.003 -0.106 0
+    angles 9.042 0 0
+   }
+  }
+ }
+}
 GenericEntity : "{D8ABE2DE630F577E}Prefabs/Compositions/Misc/SubCompositions/CrateStacked_01.et" {
  coords 1378.303 160.42 4060.488
  angles 0.92 -53.925 1.777
@@ -22498,6 +22662,10 @@ $grp GenericEntity : "{E249C09D69AAE6C8}Prefabs/Compositions/Slotted/SlotFlatSma
   coords 1403.188 160.25 4073.261
   angles 0 61.668 0
  }
+}
+GenericEntity : "{E98385D7F126474C}Prefabs/Props/Wrecks/UH1H_wreck/UH1H_wreck_02_static.et" {
+ coords 652.939 139.938 3633.678
+ angles 2.683 -0.042 -0.896
 }
 $grp Tree : "{F1DB9A8115310093}PrefabLibrary/DefaultLibrary/Vegetation/Trees/t_betula_pendula_1f.et" {
  {

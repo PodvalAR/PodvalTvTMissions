@@ -1,0 +1,46 @@
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{695C9B4092206024}" {
+     m_fCheckPeriod 0.2
+     m_bAdvanceGameStage 1
+     m_sMessage "КПП Захвачен"
+     m_Timer GUB_ZoneControlTimer "{695C9B408685D0C3}" {
+      timeToComplete 300
+     }
+     m_ZoneController GUB_ZoneController "{695C9B408409F85E}" {
+      m_sZoneEntityName "trigger"
+     }
+     m_FlagController GUB_FlagController "{695C9B4081C5E07A}" {
+      m_aFlagNames {
+       "flag"
+       "flag2"
+       "flag3"
+      }
+      m_fStartFactionKey "RHS_AFRF"
+      m_fEndFactionKey "RHS_ION"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{695C9B4366810EF1}" {
+       m_sFirstFactionKey "RHS_ION"
+       m_sSecondFactionKey "RHS_AFRF"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+}
+GenericEntity : "{6A3CDCFB475BF1B2}Prefabs/System/DRG_CriticalLossPrefab.et" {
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 8190.053 322.178 2118.714
+}

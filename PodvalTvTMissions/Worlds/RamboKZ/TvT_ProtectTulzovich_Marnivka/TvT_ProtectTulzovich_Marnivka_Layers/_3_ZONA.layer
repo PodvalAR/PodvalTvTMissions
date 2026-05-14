@@ -1,11 +1,12 @@
-PolylineShapeEntity CAPTURE : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
+PolylineShapeEntity BASE_TRIG : "{7019844BAD5C4DD8}Prefabs/PolyZone/PolyZone_Border.et" {
  components {
   PS_PolyZone "{60E90266F25533F6}" {
    m_mPolygonTexture ""
    m_cPolygonColor 0.502 0 0 0.219
    m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
    m_cPolygonBorderColor 0.502 0 0 1
-   m_fPolygonBorderWidth 7
+   m_fPolygonBorderWidth 6
+   m_bReversed 0
    m_aVisibleForFactions {
     ""
     "RHS_USAF"
@@ -65,6 +66,12 @@ PolylineShapeEntity CAPTURE : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
   }
   ShapePoint "{6628AC4C34A39268}" {
    Position 1.772 -0.328 -129.195
+  }
+ }
+ {
+  PS_PolyZoneTrigger {
+   ID "60FD050E1E83544C"
+   m_sGroupKey "RU_000"
   }
  }
 }

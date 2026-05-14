@@ -1,0 +1,48 @@
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{6954914FA4700B60}" {
+     m_sZonePreviewName "ЖД Вокзал"
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "RHS_USAF_WIN"
+     }
+     m_sFailedObjectiveNames {
+      "RHS_AFRF_WIN"
+     }
+     m_sMessage "ЖД Вокзал захвачен"
+     m_Timer GUB_ZoneControlTimer "{6954914FF2623970}" {
+      timeToComplete 150
+     }
+     m_ZoneController GUB_ZoneController "{6954914FF7945BAA}" {
+      m_sZoneEntityName "JDVOKZAL"
+     }
+     m_FlagController GUB_FlagController "{6954914FE302FC9F}" {
+      m_aFlagNames {
+       "Flag1"
+       "Flag2"
+      }
+      m_fStartFactionKey "RHS_AFRF"
+      m_fEndFactionKey "RHS_USAF"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{6954914E0CF9F9A2}" {
+       m_sFirstFactionKey "RHS_USAF"
+       m_sSecondFactionKey "RHS_AFRF"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+}
