@@ -1,0 +1,68 @@
+$grp SCR_AIGroup : "{18CF53AE14B14060}Prefabs/Groups/BLUFOR/RHS_USAF/Recon/Group_RHS_USAF_Recon_Squad_7.et" {
+ USAF_300_SPN {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 7872.319 261.234 14599.528
+  angles 0 144.429 0
+ }
+ USAF_301_SPN {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 1
+   }
+  }
+  coords 7706.843 245.025 14471.584
+  angles 0 125.346 0
+ }
+}
+SCR_AIGroup USAF_000_HQ : "{8BE5C4D411C5E59C}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_PL.et" {
+ coords 8008.55 260.746 14625.882
+ angles 0 -88.378 0
+ m_aUnitPrefabSlots +{
+  "{0D659E49AD2F5FF6}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/Char_RHS_USAF_Regular_Medic.et"
+ }
+}
+$grp SCR_AIGroup : "{955623450C88D6F3}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_Squad.et" {
+ USAF_100_AR {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 8008.494 260.867 14633.568
+  angles 0 -89.128 0
+ }
+ USAF_101_AR {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 7976.956 261.153 14642.56
+  angles 0 -178.461 0
+ }
+ USAF_200_AR {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 7843.347 261.267 14718.904
+  angles 0 27.375 0
+ }
+ USAF_201_AR {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 7787.886 265.854 14782.558
+  angles 0 32.567 0
+ }
+}
