@@ -1,0 +1,56 @@
+PolylineShapeEntity Castle_TRIG : "{7019844BAD5C4DD8}Prefabs/PolyZone/PolyZone_Border.et" {
+ components {
+  PS_PolyZone "{60E90266F25533F6}" {
+   m_mPolygonTexture ""
+   m_cPolygonColor 0.502 0 0 0.25
+   m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+   m_cPolygonBorderColor 0.502 0 0 1
+   m_fPolygonBorderWidth 8
+   m_bReversed 0
+   m_aVisibleForFactions {
+    ""
+    "RHS_AFRF"
+    "RHS_USAF"
+   }
+  }
+ }
+ coords 832.1 105.984 7255.968
+ Points {
+  ShapePoint "{60E90266E922A02A}" {
+   Position 294.776 20.153 -260.781
+  }
+  ShapePoint "{668A921D37EB2F26}" {
+   Position 345.059 15.119 -220.902
+  }
+  ShapePoint "{6958F31593D72E07}" {
+   Position 427.082 0 -149.384
+  }
+  ShapePoint "{6958F3159088A5AA}" {
+   Position 527.62 0 -300.021
+  }
+  ShapePoint "{6958F3159F79378E}" {
+   Position 588.462 22.54 -376.036
+  }
+  ShapePoint "{6958F315986A7A65}" {
+   Position 430.327 11.707 -435.623
+  }
+  ShapePoint "{6958F31581A0D947}" {
+   Position 397.7 0 -393.313
+  }
+  ShapePoint "{6958F315811C1CAA}" {
+   Position 326.053 0 -304.824
+  }
+  ShapePoint "{6958F3158EA5F0DC}" {
+   Position 288.998 0 -260.118
+  }
+ }
+ {
+  PS_PolyZoneTrigger {
+   ID "60FD050E1E83544C"
+   m_polyZoneEffect PS_PolyZoneEffectRestricted "{60FD050E0DC2A2AB}" {
+    m_fKillTime 10
+   }
+   m_sGroupKey "DEF_"
+  }
+ }
+}

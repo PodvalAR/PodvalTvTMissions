@@ -1,0 +1,121 @@
+PolylineShapeEntity capture {
+ components {
+  PS_PolyZone "{695C5CDFA5EED4C7}" {
+   m_mPolygonTexture "{62F4404928D33DB5}UI/layouts/Textures/Grid1b.edds"
+   m_cPolygonColor 0.506 0.584 0.812 1
+   m_fPolygonUVScale 0.44
+   m_mPolygonTextureBorder ""
+   m_cPolygonBorderColor 0.071 0.192 0.561 1
+   m_fPolygonBorderWidth 4
+   m_aVisibleForFactions {
+    "RHS_ION"
+    "RHS_USAF"
+    ""
+   }
+  }
+ }
+ coords 1262.603 160.129 1102.129
+ Points {
+  ShapePoint "{695C5CDF81FD534C}" {
+   Position -1.254 0.004 0.463
+  }
+  ShapePoint "{695C5CDF81FD7440}" {
+   Position 2.932 0.025 0.796
+  }
+  ShapePoint "{695C5CDF8CC0DB9C}" {
+   Position 10 -0.011 -0.641
+  }
+  ShapePoint "{695C5CDF8FC84DD3}" {
+   Position 25.384 -0.06 -5.73
+  }
+  ShapePoint "{695C5CDF89720E21}" {
+   Position 71.979 -0.067 -47.461
+  }
+  ShapePoint "{695C5CDF8BD2FF5B}" {
+   Position 80.149 -0.067 -51.155
+  }
+  ShapePoint "{695C5CDF8AFD1D76}" {
+   Position 65.854 -0.067 -82.499
+  }
+  ShapePoint "{695C5CDF94E24293}" {
+   Position 21.006 -0.067 -69.379
+  }
+  ShapePoint "{695C5CDF96AD36F6}" {
+   Position -10.139 0.342 -58.607
+  }
+  ShapePoint "{695C5CDF9679FEBC}" {
+   Position -20.339 0.329 -48.995
+  }
+  ShapePoint "{695C5CDF9384B5D9}" {
+   Position -23.904 0.309 -44.186
+  }
+  ShapePoint "{695C5CDF93398E1B}" {
+   Position -24.476 -0.022 -36.683
+  }
+  ShapePoint "{695C5CDF92E20564}" {
+   Position -18.457 -0.067 -24.188
+  }
+  ShapePoint "{695C5CDF9DBA8F36}" {
+   Position -10.834 -0.101 -10.178
+  }
+  ShapePoint "{695C5CDF9D3B0288}" {
+   Position -7.474 -0.156 -3.97
+  }
+ }
+ IsClosed 1
+}
+$grp GenericEntity : "{3D78D7D606FF9818}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_NoCapture.et" {
+ flag {
+  coords 1282.613 175.311 1094.531
+  angles 0 30 -15
+ }
+ flag2 {
+  coords 1291.656 173.962 1056.119
+  angles 0 30 -30
+ }
+ flag3 {
+  coords 1257.1 175.8 1037.697
+  angles 0 30 -15
+ }
+}
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{695C5CDFB4282752}" {
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "USA_WIN"
+     }
+     m_sFailedObjectiveNames {
+      "ION_WIN"
+     }
+     m_Timer GUB_ZoneControlTimer "{695C5CDFB71FAAD0}" {
+      timeToComplete 150
+     }
+     m_ZoneController GUB_ZoneController "{695C5CDFB73AD0F9}" {
+      m_sZoneEntityName "capture"
+     }
+     m_FlagController GUB_FlagController "{695C5CDFB7CE4B43}" {
+      m_aFlagNames {
+       "flag"
+       "flag2"
+       "flag3"
+      }
+      m_fStartFactionKey "RHS_ION"
+      m_fEndFactionKey "RHS_USAF"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{695C5CDFC53F56D1}" {
+       m_sFirstFactionKey "RHS_USAF"
+       m_sSecondFactionKey "RHS_ION"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 1101.335 186.98 230.326
+}

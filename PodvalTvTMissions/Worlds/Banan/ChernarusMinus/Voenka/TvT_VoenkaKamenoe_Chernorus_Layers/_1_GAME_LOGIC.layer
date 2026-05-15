@@ -1,0 +1,49 @@
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{695D31BE2D6BEC77}" {
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "AFRF_WIN"
+     }
+     m_sFailedObjectiveNames {
+      "USAF_WIN"
+     }
+     m_sMessage "Каменое захвачена!"
+     m_Timer GUB_ZoneControlTimer "{695D31BE2F3614CB}" {
+      timeToComplete 150
+     }
+     m_ZoneController GUB_ZoneController "{695D31BE287C8E1D}" {
+      m_sZoneEntityName "Triger_Kamenoe"
+     }
+     m_FlagController GUB_FlagController "{695D31BE295A30DF}" {
+      m_aFlagNames {
+       "Flag"
+       "Flag2"
+       "Flag3"
+       "Flag4"
+      }
+      m_fStartFactionKey "RHS_USAF"
+      m_fEndFactionKey "RHS_AFRF"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{695D31BE203DD7E4}" {
+       m_sFirstFactionKey "RHS_AFRF"
+       m_sSecondFactionKey "RHS_USAF"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+}

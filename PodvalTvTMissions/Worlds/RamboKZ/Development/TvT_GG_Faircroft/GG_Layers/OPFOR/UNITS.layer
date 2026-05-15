@@ -1,0 +1,86 @@
+$grp SCR_AIGroup : "{1128EBD3DDFF1D07}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Motorized.et" {
+ AFRF_110 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 5522.972 21.892 1891.635
+  angles 0 -155.716 0
+ }
+ AFRF_011 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 5563.272 26.5 2329.431
+  angles 0 109.763 0
+ }
+}
+$grp SCR_AIGroup : "{B851352F042E4F0B}Prefabs/Groups/OPFOR/RHS_AFRF/Recon/Group_RHS_AFRF_Recon_Squad.et" {
+ AFRF_200 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 5567.554 26.857 2387.054
+  angles 0 15.287 0
+  m_aUnitPrefabSlots {
+   "{581C5812DD6A8A4F}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_SL.et"
+   "{2504B4EAB8F9B6D6}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_SR.et"
+   "{3841D72C18594176}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_GL.et"
+   "{7BAD8DF7468D7216}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_LAT.et"
+   "{B80041ECF565397A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_Sapper.et"
+   "{9B7078FF37FEA321}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_Sharpshooter.et"
+  }
+ }
+ AFRF_300 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 5596.632 22.736 1980.295
+  angles 0 128.678 0
+  m_aUnitPrefabSlots {
+   "{581C5812DD6A8A4F}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_SL.et"
+   "{2504B4EAB8F9B6D6}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_SR.et"
+   "{3841D72C18594176}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_GL.et"
+   "{7BAD8DF7468D7216}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_LAT.et"
+   "{B80041ECF565397A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_Sapper.et"
+   "{9B7078FF37FEA321}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_Sharpshooter.et"
+  }
+ }
+}
+SCR_AIGroup AFRF_000 : "{E625399A1E96672A}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_PL_2.et" {
+ coords 5538.208 27.031 2302.715
+ angles 0 113.801 0
+ m_aUnitPrefabSlots {
+  "{9AEBC61DAD798672}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_PL_opt.et"
+  "{1D25ADA8774D4BD2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Medic.et"
+ }
+}
+$grp SCR_AIGroup : "{EB131DDF464F90FD}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Squad.et" {
+ AFRF_100 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 5568.971 23.186 1964.251
+  angles 0 122.733 0
+ }
+ AFRF_010 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 5542.314 26.999 2327.422
+  angles 0 106.875 0
+ }
+}
