@@ -1,0 +1,194 @@
+$grp SCR_AIGroup : "{3298D6DA95D73EAD}Prefabs/Groups/BLUFOR/RHS_USAF/USMC/Desert/dim_USMC_D_Rifle_Squad.et" {
+ us1 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 2796.806 8.5 3011.217
+  angles 0 127.268 0
+  m_aUnitPrefabSlots {
+   "{97A29C60BAF66AA0}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_SL_D.et"
+   "{C1A4BA040B46DC13}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_TF_D.et"
+   "{322724ED6EB0DECA}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_AR_D.et"
+   "{A2D464E007388EE7}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_GL_2.et"
+   "{396D531D125A3EDD}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_Rifleman_v2_D.et"
+   "{C1A4BA040B46DC13}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_TF_D.et"
+   "{322724ED6EB0DECA}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_AR_D.et"
+   "{A0D97D555EAC6433}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_Grenadier_D.et"
+   "{396D531D125A3EDD}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_Rifleman_v2_D.et"
+  }
+ }
+ us2 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 2787.609 8.5 2999.131
+  angles 0 127.971 0
+  m_aUnitPrefabSlots {
+   "{97A29C60BAF66AA0}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_SL_D.et"
+   "{C1A4BA040B46DC13}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_TF_D.et"
+   "{322724ED6EB0DECA}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_AR_D.et"
+   "{A2D464E007388EE7}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_GL_2.et"
+   "{396D531D125A3EDD}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_Rifleman_v2_D.et"
+   "{C1A4BA040B46DC13}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_TF_D.et"
+   "{322724ED6EB0DECA}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_AR_D.et"
+   "{A0D97D555EAC6433}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_Grenadier_D.et"
+   "{396D531D125A3EDD}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_Rifleman_v2_D.et"
+  }
+ }
+}
+SCR_AIGroup of : "{4089AFD7DE24B7CF}Prefabs/Groups/BLUFOR/RHS_USAF/USMC/Desert/dim_USMC_HQ_Modern.et" {
+ coords 2780.301 8.5 2989.643
+ angles 0 131.084 0
+ m_aUnitPrefabSlots {
+  "{09A297C32E2DC287}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/75th Ranger/Ranger (2000s)/dim_US_Ranger2000_Officer.et"
+ }
+ m_sCustomNameSet "Полковник Драггер"
+}
+Vehicle AH1S_USA1 : "{640F031E313AB23A}Prefabs/Vehicles/Helicopters/AH1S/AH1S_USA.et" {
+ coords 2859.44 10.025 3023.963
+ angles 0 -147.47 0
+ m_sAttachmentGroupName "pip"
+}
+SCR_AIGroup pip : "{6981CA4A67B1A730}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_Heli.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+   m_iCompanyCallsign 4
+  }
+ }
+ coords 2868.418 11.667 3023.937
+ angles 0 -60 0
+ m_aUnitPrefabSlots {
+  "{E6ED31C1595C8E3A}Worlds/DimOchka/TvT_30Seconds_Kunar/dim_Pilot_30Second_USAF_M.et"
+  "{05C4DD6F05AE09FF}Worlds/DimOchka/TvT_30Seconds_Kunar/dim_CoPilot_30Seconds.et"
+ }
+ m_sCustomNameSet "Экипаж Кобры"
+}
+$grp Vehicle : "{9C07B4B8CF07B8A1}Prefabs/Vehicles/Wheeled/M998/M1151_armed_M2HB_Tan_AP.et" {
+ M1151_armed_M2HB_Tan_AP1 {
+  coords 2802.058 8.5 3003.277
+  angles 0 -52.402 0
+  m_sAttachmentGroupName "us1"
+ }
+ M1151_armed_M2HB_Tan_AP3 {
+  coords 2795.047 8.5 2994.171
+  angles 0 -52.402 0
+  m_sAttachmentGroupName "us2"
+ }
+ M1151_armed_M2HB_Tan_AP4 {
+  coords 2791.509 8.5 2989.579
+  angles 0 -52.402 0
+  m_sAttachmentGroupName "us2"
+ }
+ M1151_armed_M2HB_Tan_AP2 {
+  coords 2798.647 8.5 2998.848
+  angles 0 -52.402 0
+  m_sAttachmentGroupName "us1"
+ }
+ M1151_armed_M2HB_Tan_AP5 {
+  coords 2788.006 8.5 2985.029
+  angles 0 -52.402 0
+  m_sAttachmentGroupName "of"
+ }
+}
+$grp SCR_AIGroup : "{F77D5F8E4E2A70A7}Prefabs/Groups/BLUFOR/RHS_USAF/Group_RHS_USAF_Base.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 919.667 400.171 1388.303
+  angles 0 -23.171 2.295
+  m_aUnitPrefabSlots {
+   "{80C46F847BD12C33}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/75th Ranger/Ranger (2000s)/dim_US_Ranger2000_SL.et"
+   "{870395D51D5796F0}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/75th Ranger/Ranger (2000s)/dim_US_Ranger2000_TL.et"
+   "{B74C51ED9085B8EE}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/75th Ranger/Ranger (2000s)/dim_US_Ranger2000_Grenadier.et"
+   "{ED4C9E9B49558E20}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/75th Ranger/Ranger (2000s)/dim_US_Ranger2000_AR.et"
+   "{87C3C0F036803D0D}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/75th Ranger/Ranger (2000s)/dim_US_Ranger2000_Rifleman.et"
+   "{870395D51D5796F0}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/75th Ranger/Ranger (2000s)/dim_US_Ranger2000_TL.et"
+   "{B74C51ED9085B8EE}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/75th Ranger/Ranger (2000s)/dim_US_Ranger2000_Grenadier.et"
+   "{150DA925E25E24B4}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/75th Ranger/Ranger (2000s)/dim_US_Ranger2000_Rifleman_2.et"
+  }
+  m_bSnapToTerrain 0
+  m_sCustomNameSet "75 Полк Рейнджеров - \"Бритва 04\""
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 963.919 389.227 1426.388
+  angles 1.622 -158.194 -1.623
+  m_aUnitPrefabSlots {
+   "{80C46F847BD12C33}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/75th Ranger/Ranger (2000s)/dim_US_Ranger2000_SL.et"
+   "{870395D51D5796F0}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/75th Ranger/Ranger (2000s)/dim_US_Ranger2000_TL.et"
+   "{B74C51ED9085B8EE}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/75th Ranger/Ranger (2000s)/dim_US_Ranger2000_Grenadier.et"
+   "{ED4C9E9B49558E20}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/75th Ranger/Ranger (2000s)/dim_US_Ranger2000_AR.et"
+   "{150DA925E25E24B4}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/75th Ranger/Ranger (2000s)/dim_US_Ranger2000_Rifleman_2.et"
+   "{870395D51D5796F0}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/75th Ranger/Ranger (2000s)/dim_US_Ranger2000_TL.et"
+   "{B74C51ED9085B8EE}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/75th Ranger/Ranger (2000s)/dim_US_Ranger2000_Grenadier.et"
+   "{42FC3A9B5866DB5F}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/75th Ranger/Ranger (2000s)/dim_US_Ranger2000_Marksman_2.et"
+  }
+  m_bSnapToTerrain 0
+  m_sCustomNameSet "75 Полк Рейнджеров - \"Бритва 04\""
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 753.936 376.018 881.517
+  angles -2.195 49.868 0.669
+  m_aUnitPrefabSlots {
+   "{80C46F847BD12C33}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/75th Ranger/Ranger (2000s)/dim_US_Ranger2000_SL.et"
+   "{870395D51D5796F0}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/75th Ranger/Ranger (2000s)/dim_US_Ranger2000_TL.et"
+   "{B74C51ED9085B8EE}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/75th Ranger/Ranger (2000s)/dim_US_Ranger2000_Grenadier.et"
+   "{ED4C9E9B49558E20}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/75th Ranger/Ranger (2000s)/dim_US_Ranger2000_AR.et"
+   "{87C3C0F036803D0D}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/75th Ranger/Ranger (2000s)/dim_US_Ranger2000_Rifleman.et"
+   "{870395D51D5796F0}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/75th Ranger/Ranger (2000s)/dim_US_Ranger2000_TL.et"
+   "{B74C51ED9085B8EE}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/75th Ranger/Ranger (2000s)/dim_US_Ranger2000_Grenadier.et"
+   "{150DA925E25E24B4}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/75th Ranger/Ranger (2000s)/dim_US_Ranger2000_Rifleman_2.et"
+   "{B0114810A7D17BBE}Worlds/DimOchka/TvT_30Seconds_Kunar/dim_Pilot_30Seconds_USAF.et"
+   "{B0114810A7D17BBE}Worlds/DimOchka/TvT_30Seconds_Kunar/dim_Pilot_30Seconds_USAF.et"
+  }
+  m_bSnapToTerrain 0
+  m_sCustomNameSet "75 Полк Рейнджеров -  \"Бритва 03\""
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 1462.287 343.3 2142.719
+  m_aUnitPrefabSlots {
+   "{3749C8CD7818A2B2}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/Desert_Cover/Mountain/dim_AFO_Mountain_SL.et"
+   "{A05DDB8662CE05B4}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/Desert_Cover/Mountain/dim_AFO_Mountain_Rifleman_2.et"
+  }
+  m_sCustomNameSet "6-й отряд SEAL - Пара 1"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 1
+   }
+  }
+  coords 1775.826 276.924 1940.579
+  m_aUnitPrefabSlots {
+   "{308E329C1E9E1871}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/Desert_Cover/Mountain/dim_AFO_Mountain_TL.et"
+   "{CC09EF66DE0A8A9A}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/Desert_Cover/Mountain/dim_AFO_Mountain_Rifleman_1.et"
+  }
+  m_sCustomNameSet "6-й отряд SEAL - Пара 2"
+ }
+}
