@@ -36,22 +36,28 @@ GenericEntity flag : "{3D78D7D606FF9818}PrefabsEditable/Auto/Structures/Military
 }
 GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
  components {
-  GUB_ZoneControlComponent "{6956D9B7F09AD32E}" {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
    m_aControlLogics {
-    GUB_ZoneControlLogicCapture "{6956D9B7EE5EE1F1}" {
+    GUB_ZoneControlLogicCapture "{6960A7BAA13E9687}" {
+     m_sZonePreviewName "Мечеть"
      m_fCheckPeriod 0.2
+     m_bAdvanceGameStage 1
      m_sSuccessObjectiveNames {
-      "RHS_USAF"
-      "Ses_TKA"
+      "USAF_WIN"
+      "TKA_LOSE"
+     }
+     m_sFailedObjectiveNames {
+      "TKA_WIN"
+      "USAF_LOSE"
      }
      m_sMessage "Мечеть захвачена"
-     m_Timer GUB_ZoneControlTimer "{6956D9B7E723C147}" {
-      timeToComplete 300
+     m_Timer GUB_ZoneControlTimer "{6960A7BA97EB3630}" {
+      timeToComplete 1
      }
-     m_ZoneController GUB_ZoneController "{6956D9B7E5E5313E}" {
+     m_ZoneController GUB_ZoneController "{6960A7BA953EDF4D}" {
       m_sZoneEntityName "trigger"
      }
-     m_FlagControllerCapture GUB_FlagControllerCapture "{6956D9B7DE8654AA}" {
+     m_FlagControllerCapture GUB_FlagControllerCapture "{6960A7BA912F3C52}" {
       m_aFlagNames {
        "flag"
       }
@@ -60,8 +66,8 @@ GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactions
     }
    }
   }
-  PS_PolyZone "{6956D9B7F5DED6F3}" {
-  }
  }
- coords 4214.537 17 4130.932
+ editor EntityEditorProps "{6960A7BAA3A3B80C}" {
+ }
+ coords 4173.662 16.997 4153.856
 }
