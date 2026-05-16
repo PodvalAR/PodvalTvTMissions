@@ -1,32 +1,37 @@
 PolylineShapeEntity trigger {
  components {
-  PS_PolyZone "{6956D9B74F22072E}" {
-   m_cPolygonColor 0.259 0.686 0.686 1
+  PS_PolyZone "{6952B80FF22CE893}" {
+   m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
+   m_cPolygonColor 0.655 0.875 0.875 1
+   m_mPolygonTextureBorder ""
    m_cPolygonBorderColor 0 0.125 0.502 1
-   m_fPolygonBorderWidth 3.2
+   m_fPolygonBorderWidth 1.9
    m_aVisibleForFactions {
-    "RHS_USAF"
+    "RHS_ION"
     "Ses_TKA"
     ""
    }
-   m_aHideOnGameModeStates {
-    NULL
-   }
   }
  }
- coords 4279.259 17 4124.583
+ coords 4203.415 17 4124.888
  Points {
-  ShapePoint "{6956D9B75E8659D7}" {
+  ShapePoint "{6952B80F2B963FC4}" {
    Position 0 0 0
   }
-  ShapePoint "{6956D9B75E868200}" {
-   Position -75.914 0 0
+  ShapePoint "{6952B80F2B96225D}" {
+   Position 5.383 0 0
   }
-  ShapePoint "{6956D9B757FABE43}" {
-   Position -75.786 0 70.298
+  ShapePoint "{6952B80F0C514FD7}" {
+   Position 76.161 0 -0.328
   }
-  ShapePoint "{6956D9B75506DB51}" {
-   Position 0.404 0 69.099
+  ShapePoint "{6952B80F070CAF4F}" {
+   Position 76.016 0 69.803
+  }
+  ShapePoint "{6952B80F03255D73}" {
+   Position -0.71 0 68.995
+  }
+  ShapePoint "{6952B80FFF518B54}" {
+   Position 0.003 0 1.446
   }
  }
  IsClosed 1
@@ -38,29 +43,29 @@ GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactions
  components {
   GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
    m_aControlLogics {
-    GUB_ZoneControlLogicCapture "{695EFCF667EF3FFF}" {
-     m_sZonePreviewName "Мечеть"
-     m_fCheckPeriod 0.2
+    GUB_ZoneControlLogicCapture "{69549A3E137DFAAE}" {
      m_bAdvanceGameStage 1
      m_sSuccessObjectiveNames {
-      ""
+      "Ses_TKA"
+     }
+     m_sFailedObjectiveNames {
+      "USAF_win"
      }
      m_sMessage "Мечеть захвачена"
-     m_Timer GUB_ZoneControlTimer "{6956D9B7E723C147}" {
-      timeToComplete 100
+     m_Timer GUB_ZoneControlTimer "{69549A3E024B7A54}" {
+      timeToComplete 300
      }
-     m_ZoneController GUB_ZoneController "{6956D9B7E5E5313E}" {
+     m_ZoneController GUB_ZoneController "{69549A3E00FA2555}" {
       m_sZoneEntityName "trigger"
      }
-     m_FlagControllerCapture GUB_FlagControllerCapture "{6956D9B7DE8654AA}" {
+     m_FlagControllerCapture GUB_FlagControllerCapture "{69549A3EFE3798A7}" {
       m_aFlagNames {
        "flag"
       }
      }
-     neutralFaction "RHS_ION"
     }
    }
   }
  }
- coords 4213.866 17 4134.497
+ coords 4214.53 17 4130.641
 }

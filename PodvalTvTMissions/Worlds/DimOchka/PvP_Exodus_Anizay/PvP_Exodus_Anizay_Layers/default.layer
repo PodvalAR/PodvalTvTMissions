@@ -1,0 +1,258 @@
+SCR_AIWorld : "{3D0FE80570D5BFCC}Prefabs/AI/SCR_AIWorld_Anizay.et" {
+ coords 4437.33 203.939 3401.409
+}
+PerceptionManager PerceptionManager2 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 2638.406 174.488 3521.052
+}
+PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
+ coords 1069.526 178.081 3071.562
+}
+SCR_AIGroup : "{000CD338713F2B5A}Prefabs/AI/Groups/Group_Base.et" {
+ coords 5318.639 250.531 3381.197
+ angles 0 -45 0
+ m_faction "CIV"
+ m_aUnitPrefabSlots {
+  "{A4C819E52261F2D7}Prefabs/Characters/Factions/INDFOR/CIV/VIP/dim_Shepard.et"
+ }
+ m_sCustomNameSet "Генерал Харбор"
+}
+SCR_AIGroup : "{09F6CBFB9260D79C}Prefabs/Groups/BLUFOR/RHS_USAF/USMC/Desert/dim_USMC_D_HQ.et" {
+ coords 8390.121 113.412 7052.99
+ angles 0 90 0
+}
+$grp SCR_AIGroup : "{1CF5EFE6FE5047FB}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_Elite_Force.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 1
+   }
+  }
+  coords 5338.674 250.5 3413.994
+  angles 0 138.062 0
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 5326.308 250.5 3400.753
+  angles 0 135 0
+ }
+}
+$grp SCR_AIGroup : "{3298D6DA95D73EAD}Prefabs/Groups/BLUFOR/RHS_USAF/USMC/Desert/dim_USMC_D_Rifle_Squad.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 3860.375 139.36 7283.392
+  angles 0 90 0
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 3857.683 140.233 7305.85
+  angles -3.923 87.167 -5.403
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 3
+   }
+  }
+  coords 3855.594 139.666 7338.317
+  angles 0 90 0
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 2
+   }
+  }
+  coords 3856.724 140.682 7323.002
+  angles 0 81.938 0
+  m_aUnitPrefabSlots {
+   "{94D32EE566A604D4}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_SL.et"
+   "{77DDB3A4441099F7}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_TL_1.et"
+   "{AB4C01E03A6DB224}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_MG.et"
+   "{F48EA1DBA395CFED}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_GL.et"
+   "{1B898744F8D416D9}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_TL_2.et"
+   "{8C523C7DD3665A86}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_Medic.et"
+   "{67BE56BB4DF94C17}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_Rifleman.et"
+   "{20435137B9BEF67B}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_CrewGunner.et"
+   "{C768F6D79149FFD6}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_CrewDriver.et"
+  }
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 8390.311 113.409 7040.706
+  angles 0 90 0
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 8390.311 113.409 7075.773
+  angles 0 90 0
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 8389.635 111.531 7092.815
+  angles 0 90 0
+  m_aUnitPrefabSlots {
+   "{94D32EE566A604D4}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_SL.et"
+   "{8C523C7DD3665A86}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_Medic.et"
+   "{0F322EF158E4EA64}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_Rifleman_2.et"
+   "{20435137B9BEF67B}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_CrewGunner.et"
+   "{C768F6D79149FFD6}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_CrewDriver.et"
+  }
+ }
+}
+$grp SCR_AIGroup : "{3688E2E2E835E748}Prefabs/Groups/BLUFOR/RHS_USAF/USMC/Desert/dim_USMC_D_SniperTeam_M40.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iCompanyCallsign 4
+   }
+  }
+  coords 1687.901 140.875 3800.771
+  angles 0 0 0
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iCompanyCallsign 4
+    m_iSquadCallsign 1
+   }
+  }
+  coords 5816.345 270.256 919.458
+  angles 0 -60 0
+ }
+}
+SCR_AIGroup : "{4482F48156932D3E}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_STK_3.et" {
+ components {
+  PS_GroupCallsignAssigner "{68B17A4778D2B8BD}" {
+   m_iCompanyCallsign 1
+  }
+ }
+ coords 5301.05 250.531 3345.478
+ angles 0 -45 0
+}
+SCR_AIGroup : "{963AB6930837A26F}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_HQ.et" {
+ coords 5297.671 250.531 3342.099
+ angles 0 -15 0
+}
+$grp SCR_AIGroup : "{A11EB8785A76BA55}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_STK_2.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68B17A477EB020B5}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 5313.298 250.531 3357.725
+  angles 0 -45 0
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68B17A477EB020B5}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 5127.727 250.22 3659.157
+  angles 0 -113.12 0
+  m_aUnitPrefabSlots {
+   "{AFEF77366AAD3A70}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_SL.et"
+   "{A8288D670C2B80B3}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_TL.et"
+   "{8E01B51117F34FFD}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Rifleman_1.et"
+   "{E25581F1AB37C0D3}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Rifleman_2.et"
+   "{CF7D22658BFE1B22}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_M72_2.et"
+   "{BD6ADFA75A4C369E}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Sapper.et"
+   "{A536AFA035B4146D}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Medic.et"
+   "{1958A4565702D3D0}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Marksman.et"
+  }
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68B17A477EB020B5}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 5167.262 249.52 3672.427
+  angles 0 -17.586 0
+  m_aUnitPrefabSlots {
+   "{93FDA136D2E298D0}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_SL_4.et"
+   "{A8288D670C2B80B3}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_TL.et"
+   "{07C9CD08A7D257B8}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Rifleman_3.et"
+   "{3AFDE830D2BEDE8F}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Rifleman_4.et"
+  }
+ }
+}
+Turret : "{CB76594700021AD3}Prefabs/Weapons/Tripods/6T7/Deployable_Tripod_6T7_KORD_SPP.et" {
+ coords 5090.378 247.717 3658.594
+ angles 0 -21.074 0
+}
+SCR_AIGroup : "{CD4A8C98E6B2357B}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_STK_1.et" {
+ components {
+  PS_GroupCallsignAssigner "{68B17A477D63A783}" {
+   m_iCompanyCallsign 1
+   m_iSquadCallsign 2
+  }
+ }
+ coords 5321.951 250.531 3366.378
+ angles 0 -45 0
+}
+$grp SCR_AIGroup : "{E1F03F7213D8B57D}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_HeliCrew.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 5340.731 250.531 3396.576
+  angles 0 -52.522 0
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 5327.858 250.531 3382.828
+  angles 0 -46.546 0
+ }
+}
+SCR_AIGroup : "{FB9FC7E199257FEC}Prefabs/Groups/BLUFOR/RHS_USAF/USMC/Desert/dim_USMC_D_ForceRecon.et" {
+ components {
+  PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+   m_iCompanyCallsign 3
+  }
+ }
+ coords 6934.875 120.003 5618.966
+ angles 0 165 0
+}

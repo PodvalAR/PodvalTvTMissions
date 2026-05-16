@@ -4,7 +4,7 @@ SCR_ChimeraCharacter : "{33B313818C46457C}Prefabs/Characters/Factions/BLUFOR/RHS
   SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
    m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
     Name "#AR-Role_Sniper"
-    Icon "{480F9EE18B7CE141}UI/Icons/dim/ForceRecon.edds"
+    Icon "{0C058E04C5ACCE05}UI/Icons/sniper.edds"
    }
   }
   CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
@@ -19,7 +19,6 @@ SCR_ChimeraCharacter : "{33B313818C46457C}Prefabs/Characters/Factions/BLUFOR/RHS
   BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
    Slots {
     LoadoutSlotInfo Back {
-     Prefab ""
     }
     LoadoutSlotInfo Vest {
      Prefab "{CDDD74E066712E76}Prefabs/Characters/Vests/GEN3_Pouches/Light/GD_Gen3_Light_Sniper_1.et"
@@ -35,7 +34,8 @@ SCR_ChimeraCharacter : "{33B313818C46457C}Prefabs/Characters/Factions/BLUFOR/RHS
      TargetStorage "Vest/GD_Gen3_Light_Sniper_1.et/triple/Pouch_Blueforce_Tri.et"
     }
     ItemsInitConfigurationItem "{68934730FD287580}" {
-     PrefabsToSpawn +{
+     PrefabsToSpawn {
+      "{C632D04DD25D3ABF}Prefabs/Weapons/Magazines/Pmag/Magazine_556x45_PmagWindowed_30rnd_M855A1.et" "{C632D04DD25D3ABF}Prefabs/Weapons/Magazines/Pmag/Magazine_556x45_PmagWindowed_30rnd_M855A1.et"
      }
     }
     ItemsInitConfigurationItem "{68934730F8EB90F0}" {
