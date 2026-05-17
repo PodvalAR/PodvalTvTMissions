@@ -448,6 +448,12 @@ $grp GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFac
    GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
     m_aControlLogics {
      GUB_ZoneControlLogic "{69600094D9BE2A96}" {
+      m_sSuccessObjectiveNames {
+       "AFRF_WIN_3"
+      }
+      m_sFailedObjectiveNames {
+       "USAF_WIN_3"
+      }
       m_sMessage "Центр города захвачен"
       m_Timer GUB_ZoneControlTimer "{69600094DB4719FB}" {
        timeToComplete 150
@@ -481,12 +487,18 @@ $grp GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFac
    GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
     m_aControlLogics {
      GUB_ZoneControlLogic "{69600094D9BE2A96}" {
+      m_sSuccessObjectiveNames {
+       "AFRF_WIN_1"
+      }
+      m_sFailedObjectiveNames {
+       "USAF_WIN_1"
+      }
       m_sMessage "Жилой квартал захвачен"
       m_Timer GUB_ZoneControlTimer "{69600094DB4719FB}" {
        timeToComplete 150
       }
       m_ZoneController GUB_ZoneController "{69600094E53E1481}" {
-       m_sZoneEntityName "capture2"
+       m_sZoneEntityName "capture3"
       }
       m_FlagController GUB_FlagController "{69600094E0F801A0}" {
        m_aFlagNames {
@@ -515,12 +527,18 @@ $grp GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFac
    GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
     m_aControlLogics {
      GUB_ZoneControlLogic "{69600094D9BE2A96}" {
+      m_sSuccessObjectiveNames {
+       "AFRF_WIN_2"
+      }
+      m_sFailedObjectiveNames {
+       "USAF_WIN_2"
+      }
       m_sMessage "Пром. зона захвачена"
       m_Timer GUB_ZoneControlTimer "{69600094DB4719FB}" {
        timeToComplete 150
       }
       m_ZoneController GUB_ZoneController "{69600094E53E1481}" {
-       m_sZoneEntityName "capture3"
+       m_sZoneEntityName "capture2"
       }
       m_FlagController GUB_FlagController "{69600094E0F801A0}" {
        m_aFlagNames {
