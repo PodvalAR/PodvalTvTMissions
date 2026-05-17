@@ -1,0 +1,241 @@
+$grp Vehicle : "{1EA5A3FE1099C133}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_uncovered_Turret_Ses_TKA_KORD.et" {
+ UAZ469_uncovered_Turret_Ses_TKA_KORD2 {
+  coords 3299.345 309.879 350.295
+  angles 0.782 -29.124 -0.436
+  m_sAttachmentGroupName "ins2"
+ }
+ UAZ469_uncovered_Turret_Ses_TKA_KORD4 {
+  coords 3305.422 309.709 339.388
+  angles 0.782 -29.124 -0.436
+  m_sAttachmentGroupName "ins"
+ }
+ UAZ469_uncovered_Turret_Ses_TKA_KORD3 {
+  coords 1021.875 289.877 1768.738
+  angles -0.868 75.887 0.218
+  m_sAttachmentGroupName "dva"
+ }
+ UAZ469_uncovered_Turret_Ses_TKA_KORD1 {
+  coords 1042.912 289.957 1774.375
+  angles 1.086 75.895 0.65
+  m_sAttachmentGroupName "raz"
+ }
+}
+$grp Vehicle : "{3A87697F1B1415DB}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_PKM_Ses_TKA.et" {
+ UAZ469_PKM_Ses_TKA4 {
+  coords 1016.078 289.967 1767.325
+  angles -0.865 74.996 0.232
+  m_sAttachmentGroupName "dva"
+ }
+ UAZ469_PKM_Ses_TKA3 {
+  coords 1010.524 290 1765.837
+  angles 0 75 0
+  m_sAttachmentGroupName "dva"
+ }
+ UAZ469_PKM_Ses_TKA2 {
+  coords 1031.561 289.844 1771.474
+  angles 0 75 0
+  m_sAttachmentGroupName "raz"
+ }
+ UAZ469_PKM_Ses_TKA1 {
+  coords 1037.115 289.906 1772.962
+  angles 0 75 0
+  m_sAttachmentGroupName "raz"
+ }
+}
+$grp SCR_AIGroup : "{B2829E998DF41555}Prefabs/Groups/OPFOR/Ses_TKA/Group_A2F_TKA_Squad.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68E7468B5129FCA8}" {
+    m_iCompanyCallsign 4
+   }
+  }
+  coords 3215.937 155.007 2302.521
+  angles 0 -156.2 0
+  m_faction "Ses_TKR"
+  m_aUnitPrefabSlots {
+   "{833007A59429D956}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_SL_4.et"
+   "{4114F2E62B288D34}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL_1.et"
+   "{68C608E7EA187C05}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AT.et"
+   "{29B8977022F1ADF1}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AAT.et"
+   "{0E4342B1BA50DEE3}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_MG_1.et"
+   "{4860C7A306B8BD26}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AMG_1.et"
+   "{403DDD18AFFBC0D9}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Sapper_1.et"
+   "{E71CF76A95D6667D}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Marksman_2.et"
+  }
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68E7468B5129FCA8}" {
+    m_iCompanyCallsign 4
+    m_iSquadCallsign 1
+   }
+  }
+  coords 2568.82 155.619 2365.38
+  angles 0 -147.202 0
+  m_faction "Ses_TKR"
+  m_aUnitPrefabSlots {
+   "{3EAB31BD43ECDF10}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_SL_1.et"
+   "{C8DC8AFF9B099571}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL_3.et"
+   "{4AAAEF575475F84A}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AT_2.et"
+   "{E91526BCE4780CE4}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AAT_3.et"
+   "{F77ABDD02B6EE454}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AR_2.et"
+   "{403DDD18AFFBC0D9}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Sapper_1.et"
+   "{C9F5A5011FDAD89C}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Sapper_3.et"
+   "{D0E3CB03406978A3}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Marksman.et"
+  }
+ }
+ dva {
+  components {
+   PS_GroupCallsignAssigner "{68E7468B5129FCA8}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 1014.801 289.953 1764.029
+  angles 0 -17.689 0
+  m_faction "Ses_TKR"
+  m_aUnitPrefabSlots {
+   "{833007A59429D956}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_SL_4.et"
+   "{2D40C60697EC021A}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL_2.et"
+   "{68C608E7EA187C05}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AT.et"
+   "{29B8977022F1ADF1}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AAT.et"
+   "{F77ABDD02B6EE454}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AR_2.et"
+   "{878B3AA80A71C6A6}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_MG_3.et"
+   "{C1A8BFBAB699A563}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AMG_3.et"
+   "{08705F90B79D0BFA}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Sniper.et"
+  }
+ }
+ raz {
+  components {
+   PS_GroupCallsignAssigner "{68E7468B5129FCA8}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 1027.495 289.816 1767.946
+  angles 0 -14.095 0
+  m_faction "Ses_TKR"
+  m_aUnitPrefabSlots {
+   "{3EAB31BD43ECDF10}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_SL_1.et"
+   "{2D40C60697EC021A}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL_2.et"
+   "{AF36A3AE58906F21}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AT_3.et"
+   "{29B8977022F1ADF1}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AAT.et"
+   "{F77ABDD02B6EE454}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AR_2.et"
+   "{BDBB1F0764260B73}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL.et"
+   "{C9F5A5011FDAD89C}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Sapper_3.et"
+   "{0280BB939933F116}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Marksman_3.et"
+  }
+ }
+ ins2 {
+  components {
+   PS_GroupCallsignAssigner "{68E7468B5129FCA8}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 3305.632 309.819 345.068
+  angles 0 -116.159 0
+  m_faction "Ses_TKR"
+  m_aUnitPrefabSlots {
+   "{3EAB31BD43ECDF10}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_SL_1.et"
+   "{BDBB1F0764260B73}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL.et"
+   "{68C608E7EA187C05}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AT.et"
+   "{29B8977022F1ADF1}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AAT.et"
+   "{B06E612693916259}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AR.et"
+   "{B0ED64D42FEE9996}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman_2.et"
+   "{403DDD18AFFBC0D9}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Sapper_1.et"
+   "{D0E3CB03406978A3}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Marksman.et"
+  }
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68E7468B5129FCA8}" {
+   }
+  }
+  coords 2865.536 233.49 1334.172
+  angles 0 -30.852 0
+  m_faction "Ses_TKR"
+  m_aUnitPrefabSlots {
+   "{44F829A0BCF2F1DA}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_PL.et"
+   "{BDBB1F0764260B73}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL.et"
+   "{B06E612693916259}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AR.et"
+   "{0280BB939933F116}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Marksman_3.et"
+   "{58AE4C26D0517659}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Sniper_2.et"
+  }
+  m_sCustomNameSet "Местный командир Аль Вали"
+ }
+ ins {
+  components {
+   PS_GroupCallsignAssigner "{68E7468B5129FCA8}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 1
+   }
+  }
+  coords 3311.266 309.699 334.211
+  angles 0 -116.249 0
+  m_faction "Ses_TKR"
+  m_aUnitPrefabSlots {
+   "{52FF055DFF28503E}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_SL_2.et"
+   "{BDBB1F0764260B73}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL.et"
+   "{68C608E7EA187C05}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AT.et"
+   "{29B8977022F1ADF1}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AAT.et"
+   "{F77ABDD02B6EE454}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AR_2.et"
+   "{68450D15566787CA}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman_4.et"
+   "{2C69E9F8133F4FF7}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Sapper_2.et"
+   "{E71CF76A95D6667D}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Marksman_2.et"
+  }
+ }
+ LOL2 {
+  components {
+   PS_GroupCallsignAssigner "{68E7468B5129FCA8}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 1932.18 297.151 2294.486
+  angles 0 -86.983 0
+  m_faction "Ses_TKR"
+  m_aUnitPrefabSlots {
+   "{B76349A4F3CDC755}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_SL_3.et"
+   "{2D40C60697EC021A}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL_2.et"
+   "{26FEDBB7E8B17764}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AT_1.et"
+   "{60DD5EA5545914A1}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AAT_1.et"
+   "{E279BF3CFDDE76BA}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_MG.et"
+   "{A30720AB3537A74E}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AMG.et"
+   "{2C69E9F8133F4FF7}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Sapper_2.et"
+   "{58AE4C26D0517659}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Sniper_2.et"
+  }
+ }
+ MEM2 {
+  components {
+   PS_GroupCallsignAssigner "{68E7468B5129FCA8}" {
+    m_iCompanyCallsign 4
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 2356.313 134.944 1349.959
+  angles 0 64.796 0
+  m_faction "Ses_TKR"
+  m_aUnitPrefabSlots {
+   "{52FF055DFF28503E}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_SL_2.et"
+   "{C8DC8AFF9B099571}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL_3.et"
+   "{4AAAEF575475F84A}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AT_2.et"
+   "{878B3AA80A71C6A6}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_MG_3.et"
+   "{C1A8BFBAB699A563}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AMG_3.et"
+   "{0C896A45E89D9B8F}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AAT_2.et"
+   "{82583650C8E9B5B4}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman.et"
+   "{0280BB939933F116}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Marksman_3.et"
+  }
+ }
+}
+$grp Vehicle : "{F3C22A3CC0664AB7}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_Ses_TKA.et" {
+ UAZ469_Ses_TKA1 {
+  coords 3308.086 309.663 334.391
+  angles 0.794 -27.536 -0.414
+  m_sAttachmentGroupName "ins"
+ }
+ UAZ469_Ses_TKA2 {
+  coords 3302.145 309.829 345.072
+  angles 0.794 -27.536 -0.414
+  m_sAttachmentGroupName "ins2"
+ }
+}
