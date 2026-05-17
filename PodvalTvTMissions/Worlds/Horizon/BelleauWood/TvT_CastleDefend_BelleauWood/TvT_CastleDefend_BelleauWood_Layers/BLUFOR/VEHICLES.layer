@@ -1,8 +1,3 @@
-Vehicle M151A2_transport1 : "{0406BEC84D81A89E}Prefabs/Vehicles/Wheeled/M151A2/M151A2_transport.et" {
- coords 3998.401 110.849 7080.231
- angles -5.153 -89.663 0.61
- m_sAttachmentGroupName "US000"
-}
 $grp Vehicle : "{3312ADBF53A16DD9}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS.et" {
  LAV25_RHS1 {
   coords 1002.411 167.331 3876.4
@@ -15,10 +10,22 @@ $grp Vehicle : "{3312ADBF53A16DD9}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS.et" {
   m_sAttachmentGroupName "US101"
  }
 }
-Vehicle M151A2_M2HB1 : "{6F01946EE0B0A8B8}Prefabs/Vehicles/Wheeled/M151A2/M151A2_M2HB.et" {
- coords 4005.135 111.795 7080.045
- angles -7.195 -84.857 0.423
- m_sAttachmentGroupName "US000"
+Vehicle UH1H_armed_gunship_HE_sharkNose1 : "{601CE970D8C88268}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed_gunship_HE_sharkNose.et" {
+ coords 4760.118 187.661 3859.438
+ angles 0 11.361 0
+ m_sAttachmentGroupName "US400"
+}
+$grp Vehicle : "{6EADB67E99CA3D04}Prefabs/Vehicles/Wheeled/LR_3Series/dim_LWB_Mk19.et" {
+ dim_LWB_Mk1 {
+  coords 4006.217 111.861 7080.722
+  angles -8.956 -92.463 0.686
+  m_sAttachmentGroupName "US000"
+ }
+ dim_LWB_Mk2 {
+  coords 3997.618 110.689 7080.748
+  angles -3.106 -83.844 0.087
+  m_sAttachmentGroupName "US000"
+ }
 }
 $grp Vehicle : "{D574C943C9F8C9DF}Prefabs/Vehicles/Wheeled/M998/M1151_armed_M2HB_AP.et" {
  M1151_armed_M2HB_AP6 {
