@@ -2,12 +2,9 @@ $grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescripti
  RULES {
   coords 5534.73 61.71 10496.381
   m_sTitle "#PS-Description_HeaderRules"
-  m_sDescriptionLayout "{0DF2089A5BA70D01}UI/MissionDescription/DescriptionEditable_drg.layout"
   m_sTextData "ОБЩИЕ ПРАВИЛА:"\
   ""\
   "— Всем запрещено надевать форму, головные уборы, разгрузки, бронежилеты противника (рюкзаки можно);"\
-  "— Вертолету запрещено использовать тактику \"КАМИКАДЗЕ\";"\
-  "— Вертолетам могут управлять только пилоты."\
   ""\
   "ПРАВИЛА ДЛЯ США:"\
   ""\
@@ -15,7 +12,7 @@ $grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescripti
   ""\
   "ПРАВИАЛ ДЛЯ ВС РФ:"\
   ""\
-  "— Всем кроме ДРГ и экипажа вертолёта запрещено пересекать и находиться в области отмеченной синим."\
+  "— Всем кроме ДРГ запрещено пересекать и находиться в области отмеченной синим."\
   "  "\
   "СПОСОБЫ ПОБЕДЫ ВС РФ:"\
   ""\
@@ -27,6 +24,11 @@ $grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescripti
   "— 1. Захватить маяк, путём смены флага."\
   ""\
   ""
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   ""
+  }
   m_bEmptyFactionVisibility 1
   m_bShowForAnyFaction 1
  }
@@ -53,7 +55,7 @@ $grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescripti
   m_aVisibleForFactions {
    "RHS_USAF"
    "RHS_AFRF"
-   "FIA"
+   ""
   }
   m_bEmptyFactionVisibility 1
   m_bShowForAnyFaction 1
