@@ -1,0 +1,224 @@
+Vehicle UAZ1 : "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et" {
+ coords 2616.376 136.531 6757.844
+ angles 0 28.201 0
+ m_sAttachmentGroupName "HQ"
+}
+$grp Vehicle : "{2B15F98903994DA3}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_covered_camo1.et" {
+ Ural4320_transport_covered_camo1 {
+  coords 6603.565 218.495 2450.959
+  angles 2.823 68.093 -0.171
+  m_sAttachmentGroupName "RL3"
+ }
+ Ural4320_transport_covered_camo2 {
+  coords 6589.519 217.636 2445.31
+  angles 3.984 68.1 0.325
+  m_sAttachmentGroupName "RL4"
+ }
+ Ural4320_transport_covered_camo3 {
+  coords 2605.03 136.5 6735.205
+  angles 0 27.191 0
+  m_sAttachmentGroupName "RF2"
+ }
+ Ural4320_transport_covered_camo4 {
+  coords 2599.036 136.507 6723.537
+  angles -0.796 27.197 -0.409
+  m_sAttachmentGroupName "RF3"
+ }
+}
+$grp Vehicle : "{447CFE8D73F95C3E}Prefabs/Vehicles/Wheeled/BTR70/BTR70_AFRF.et" {
+ BTR70_AFRF1 {
+  coords 2611.861 136.531 6748.964
+  angles 0 26.859 0
+  m_sAttachmentGroupName "RF1"
+ }
+ BTR70_AFRF2 {
+  coords 6634.258 221.117 2463.104
+  angles 4.809 68.991 0.067
+  m_sAttachmentGroupName "RL1"
+ }
+ BTR70_AFRF3 {
+  coords 6619.693 219.804 2457.511
+  angles 4.809 68.991 0.067
+  m_sAttachmentGroupName "RL2"
+ }
+}
+$grp SCR_AIGroup : "{7F40D42C0CE8A499}Prefabs/Groups/OPFOR/RHS_AFRF/Group_RHS_AFRF_Base.et" {
+ HQ {
+  coords 2612.458 136.531 6760.938
+  angles 0 120 0
+  m_aUnitPrefabSlots {
+   "{35988B7ED5FBF637}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_Officer_2.et"
+  }
+  m_sCustomNameSet "Командующий операцией ВС РФ"
+ }
+ RF1 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 2609.283 136.531 6754.911
+  angles 0 118.367 0
+  m_aUnitPrefabSlots {
+   "{E70FC9BE29DD4945}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_SL.et"
+   "{F1851789A171B061}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_SR_2.et"
+   "{522F516062D0F50A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_AT.et"
+   "{7D2196A5140B9858}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_AAT.et"
+   "{15DF86FC533DE174}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_PKP.et"
+   "{EB45F62757C74DFB}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_MGAB.et"
+   "{820D405FE6ECA735}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_Rifleman.et"
+   "{AB0B61BFF057783E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_Crew_Gunner.et"
+   "{9E144517081D7C3F}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_Crew.et"
+  }
+  m_sCustomNameSet "Отделение ВДВ на БТР"
+ }
+ RF2 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 2602.324 136.531 6741.658
+  angles 0 116.455 0
+  m_aUnitPrefabSlots {
+   "{E70FC9BE29DD4945}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_SL.et"
+   "{F1851789A171B061}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_SR_2.et"
+   "{522F516062D0F50A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_AT.et"
+   "{7D2196A5140B9858}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_AAT.et"
+   "{15DF86FC533DE174}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_PKP.et"
+   "{EB45F62757C74DFB}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_MGAB.et"
+   "{820D405FE6ECA735}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_Rifleman.et"
+   "{7119B795E04AE71A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_Rifleman_2.et"
+   "{D0B6BD0C6E6C6A22}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_Marksman.et"
+  }
+  m_sCustomNameSet "Отделение ВДВ"
+ }
+ RF3 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 2596.067 136.531 6729.084
+  angles 0 116.455 0
+  m_aUnitPrefabSlots {
+   "{E70FC9BE29DD4945}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_SL.et"
+   "{F1851789A171B061}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_SR_2.et"
+   "{522F516062D0F50A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_AT.et"
+   "{7D2196A5140B9858}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_AAT.et"
+   "{15DF86FC533DE174}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_PKP.et"
+   "{EB45F62757C74DFB}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_MGAB.et"
+   "{820D405FE6ECA735}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_Rifleman.et"
+   "{7119B795E04AE71A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_Rifleman_2.et"
+   "{D0B6BD0C6E6C6A22}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_Marksman.et"
+  }
+  m_sCustomNameSet "Отделение ВДВ"
+ }
+ RL1 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 6631.757 220.729 2456.945
+  angles 0 -21.918 0
+  m_aUnitPrefabSlots {
+   "{E70FC9BE29DD4945}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_SL.et"
+   "{F1851789A171B061}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_SR_2.et"
+   "{522F516062D0F50A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_AT.et"
+   "{7D2196A5140B9858}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_AAT.et"
+   "{15DF86FC533DE174}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_PKP.et"
+   "{EB45F62757C74DFB}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_MGAB.et"
+   "{820D405FE6ECA735}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_Rifleman.et"
+   "{AB0B61BFF057783E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_Crew_Gunner.et"
+   "{9E144517081D7C3F}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_Crew.et"
+  }
+  m_sCustomNameSet "Отделение ВДВ на БТР"
+ }
+ RL2 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 6618.194 220.729 2451.488
+  angles 0 -21.918 0
+  m_aUnitPrefabSlots {
+   "{E70FC9BE29DD4945}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_SL.et"
+   "{F1851789A171B061}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_SR_2.et"
+   "{522F516062D0F50A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_AT.et"
+   "{7D2196A5140B9858}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_AAT.et"
+   "{15DF86FC533DE174}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_PKP.et"
+   "{EB45F62757C74DFB}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_MGAB.et"
+   "{820D405FE6ECA735}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_Rifleman.et"
+   "{AB0B61BFF057783E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_Crew_Gunner.et"
+   "{9E144517081D7C3F}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_Crew.et"
+  }
+  m_sCustomNameSet "Отделение ВДВ на БТР"
+ }
+ RL3 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 2
+   }
+  }
+  coords 6602.107 218.296 2445.155
+  angles 0 -22.055 0
+  m_aUnitPrefabSlots {
+   "{E70FC9BE29DD4945}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_SL.et"
+   "{F1851789A171B061}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_SR_2.et"
+   "{522F516062D0F50A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_AT.et"
+   "{7D2196A5140B9858}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_AAT.et"
+   "{15DF86FC533DE174}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_PKP.et"
+   "{EB45F62757C74DFB}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_MGAB.et"
+   "{820D405FE6ECA735}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_Rifleman.et"
+   "{7119B795E04AE71A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_Rifleman_2.et"
+   "{D0B6BD0C6E6C6A22}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_Marksman.et"
+  }
+  m_sCustomNameSet "Отделение ВДВ"
+ }
+ RL4 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 3
+   }
+  }
+  coords 6588.451 218.296 2439.622
+  angles 0 -22.055 0
+  m_aUnitPrefabSlots {
+   "{E70FC9BE29DD4945}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_SL.et"
+   "{F1851789A171B061}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_SR_2.et"
+   "{522F516062D0F50A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_AT.et"
+   "{7D2196A5140B9858}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_AAT.et"
+   "{15DF86FC533DE174}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_PKP.et"
+   "{EB45F62757C74DFB}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_MGAB.et"
+   "{820D405FE6ECA735}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_Rifleman.et"
+   "{7119B795E04AE71A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_Rifleman_2.et"
+   "{D0B6BD0C6E6C6A22}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/dim_VDV_D_Marksman.et"
+  }
+  m_sCustomNameSet "Отделение ВДВ"
+ }
+ REC {
+  coords 6077.666 192.875 3839.343
+  angles 0 70.654 0
+  m_aUnitPrefabSlots {
+   "{8D4817C874B909B1}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/Desert/dim_VDV_D_Scout_SL.et"
+   "{F050FB30112A3528}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/Desert/dim_VDV_D_Scout_SR.et"
+   "{53F90C16B3838B1D}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/Desert/dim_VDV_D_Scout_PKP.et"
+   "{1E250CFB9F1155E8}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/Desert/dim_VDV_D_Scout_Flame.et"
+   "{840B216AE0AE6C75}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/Desert/dim_VDV_D_Scout_Rifleman.et"
+   "{4003BF21118FE3EC}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/Desert/dim_VDV_D_Scout_VSSM.et"
+  }
+  m_sCustomNameSet "Разведка"
+ }
+}
+Vehicle GAZ_TIGR_v2_KORD_SPP1 : "{CD4737303AA14C6D}Prefabs/Vehicles/Wheeled/TIGR/KORD/GAZ_TIGR_v2_KORD_SPP.et" {
+ coords 6082.351 192.875 3838.194
+ angles 0 -20.084 0
+ m_sAttachmentGroupName "REC"
+}
