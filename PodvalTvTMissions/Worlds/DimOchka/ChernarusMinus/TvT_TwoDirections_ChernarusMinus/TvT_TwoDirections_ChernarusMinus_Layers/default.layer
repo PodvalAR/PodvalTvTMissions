@@ -6,6 +6,13 @@ PerceptionManager PerceptionManager1 : "{028DAEAD63E056BE}Prefabs/World/Game/Per
 }
 PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
  components {
+  PS_ObjectiveManager "{60846DEA6E152749}" {
+   m_aObjectiveLavels {
+    PS_ObjectiveLevel "{60BA84343AC819B2}" {
+     m_iScore 50
+    }
+   }
+  }
   SCR_TimeAndWeatherHandlerComponent "{5EE3229927D4D2F5}" {
    m_bUsePredefineStartingTimeAndWeather 1
    m_aStartingWeatherAndTime {
