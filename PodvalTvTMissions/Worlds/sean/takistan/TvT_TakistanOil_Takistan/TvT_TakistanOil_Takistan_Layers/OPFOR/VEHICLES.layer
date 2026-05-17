@@ -1,0 +1,27 @@
+Vehicle UAZ452_transport_CIV_base1 : "{1F514A6916B34568}Prefabs/Vehicles/Wheeled/UAZ452/UAZ452_transport_CIV_base.et" {
+ coords 8930.305 291.986 5348.925
+ angles 0 144.235 0
+ m_sAttachmentGroupName "ptrksqsuad"
+}
+Vehicle Ural4320_transport_covered_closed1 : "{9DD4FD3527CB46C8}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_covered_closed.et" {
+ components {
+  SCR_UniversalInventoryStorageComponent "{5916C58171230A92}" {
+   MultiSlots {
+    MultiSlotConfiguration "{695E926723A9113D}" {
+     SlotTemplate InventoryStorageSlot sandbag {
+      Prefab "{07BC23F8D9223863}Prefabs/Items/Misc/Sandbags/Part_Sandbag_Burlap.et"
+     }
+     NumSlots 500
+    }
+   }
+  }
+ }
+ coords 8917.404 292.311 5330.959
+ angles 1.819 -129.342 -0.022
+ m_sAttachmentGroupName "plsquad"
+}
+Vehicle K1 : "{A61E5C16E9A2161B}Prefabs/Vehicles/Wheeled/K4386/K4386.et" {
+ coords 8949.805 296.744 5395.25
+ angles 10.533 -43.662 0.047
+ m_sAttachmentGroupName "ssorf"
+}
