@@ -1,0 +1,220 @@
+$grp Vehicle : "{0ACA2ED6AD52D641}Prefabs/Vehicles/Wheeled/UAZ469/dim_UAZ469.et" {
+ dim_UAZ1 {
+  coords 8707.91 9.407 7351.792
+  angles 1.997 120.004 0.12
+  m_sAttachmentGroupName "hq"
+ }
+ dim_UAZ2 {
+  coords 7116.133 297.194 5896.242
+  angles 4.387 -60.595 -7.729
+  m_sAttachmentGroupName "gru"
+ }
+ dim_UAZ3 {
+  coords 7110.269 297.573 5898.666
+  angles 2.555 -77.31 -11.198
+  m_sAttachmentGroupName "gru"
+ }
+}
+$grp SCR_AIGroup : "{1041E60A9AB94408}Prefabs/Groups/OPFOR/USSR/Group_USSR_Rifle_BTR_SQ.et" {
+ btr1 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 2884.441 24.219 5165.832
+  angles 0 51.859 0
+  m_sCustomNameSet "Стрелковое отделение"
+ }
+ btr2 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 8686.612 9.344 7354.926
+  angles 0 24.145 0
+  m_sCustomNameSet "Стрелковое отделение"
+ }
+}
+$grp SCR_AIGroup : "{292AED2259143148}Prefabs/Groups/OPFOR/USSR/Group_USSR_base.et" {
+ pilot {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 5
+    m_iSquadCallsign 2
+   }
+  }
+  coords 11060.934 35.519 1640.088
+  angles 0 176.557 0
+  m_aUnitPrefabSlots {
+   "{A62FA97C4EC64F15}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_HeliPilot.et"
+   "{47A05F499D165378}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_HeliCoPilot.et"
+  }
+  m_sCustomNameSet "Экипаж МИ-8"
+ }
+ pilot2 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 5
+    m_iSquadCallsign 1
+   }
+  }
+  coords 11089.783 35.519 1650.795
+  angles 0 176.557 0
+  m_aUnitPrefabSlots {
+   "{A62FA97C4EC64F15}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_HeliPilot.et"
+   "{47A05F499D165378}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_HeliCoPilot.et"
+  }
+  m_sCustomNameSet "Экипаж МИ-8"
+ }
+ pilot3 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 5
+   }
+  }
+  coords 11115.765 35.519 1651.771
+  angles 0 177.261 0
+  m_aUnitPrefabSlots {
+   "{A62FA97C4EC64F15}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_HeliPilot.et"
+   "{47A05F499D165378}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_HeliCoPilot.et"
+  }
+  m_sCustomNameSet "Экипаж МИ-8"
+ }
+ hq {
+  coords 8706.404 9.406 7345.688
+  angles 0 22.495 0
+  m_aUnitPrefabSlots {
+   "{426F7FAAC77A2A6E}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_PL.et"
+  }
+  m_sCustomNameSet "Полковник Черепанов"
+ }
+}
+$grp SCR_AIGroup : "{2E11F5063753932B}Prefabs/Groups/OPFOR/USSR/dim_Group_USSR_GRU.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B351898A1AB}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 5531.872 162.085 4045.742
+  angles 0 -165 0
+ }
+ gru {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B351898A1AB}" {
+    m_iCompanyCallsign 3
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 7119.178 296.504 5888.122
+  angles 0 -105 0
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B351898A1AB}" {
+    m_iCompanyCallsign 4
+    m_iSquadCallsign 2
+   }
+  }
+  coords 11043.796 35.688 1628.213
+  angles 0 90 0
+  m_aUnitPrefabSlots {
+   "{4AA7886C9F8154F8}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/dim_USSR_SPN_SL.et"
+   "{2AFA07525AB29FC1}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/dim_USSR_SPN_GL.et"
+   "{7538A769C34AE208}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/dim_USSR_SPN_MG.et"
+   "{14B335BCE270B066}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/dim_USSR_SPN_Rifleman.et"
+   "{3059B83402167C51}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/dim_USSR_SPN_Sapper.et"
+   "{6C47F50D12CE7F9D}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/dim_USSR_SPN_Medic.et"
+   "{EF580BEA47F2999A}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/dim_USSR_SPN_Sniper_SVD_Armor.et"
+  }
+  m_sCustomNameSet "Спецназ ГРУ"
+ }
+}
+$grp Vehicle : "{447CFE8D73F95C3F}Prefabs/Vehicles/Wheeled/BTR70/BTR70_AFRF_camo.et" {
+ BTR70_AFRF_camo1 {
+  coords 8692.913 9.344 7363.79
+  angles 0 -156.853 0
+  m_sAttachmentGroupName "btr2"
+ }
+ BTR70_AFRF_camo2 {
+  coords 2892.503 24.299 5166.446
+  angles 0 140.499 0
+  m_sAttachmentGroupName "btr1"
+ }
+}
+$grp SCR_AIGroup : "{46EDA9AE5FBA3A4B}Prefabs/Groups/OPFOR/USSR/dim_Group_USSR_GRU_Shturm.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B351898A1AB}" {
+    m_iCompanyCallsign 4
+    m_iSquadCallsign 1
+   }
+  }
+  coords 11099.581 35.688 1651.027
+  angles 0 180 0
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B351898A1AB}" {
+    m_iCompanyCallsign 4
+   }
+  }
+  coords 11111.89 35.688 1651.678
+  angles 0 177.62 0
+ }
+}
+$grp SCR_AIGroup : "{84AF92E239A71FCE}Prefabs/Groups/OPFOR/USSR/Group_USSR_Rifle_SQ.et" {
+ ussr {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 8697.594 9.344 7349.834
+  angles 0 26.27 0
+  m_sCustomNameSet "Стрелковое отделение"
+ }
+ ussr2 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 2951.395 24.301 5141.662
+  angles 0 141.774 0
+  m_sCustomNameSet "Стрелковое отделение"
+ }
+}
+$grp Vehicle : "{B8F61AE66A7D7F8A}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_armed_Podval_Black.et" {
+ Mi8MT_armed_Podval_Black1 {
+  coords 11112.099 35.687 1639.8
+  angles 0 -2.033 0
+  m_sAttachmentGroupName "pilot3"
+ }
+ Mi8MT_armed_Podval_Black2 {
+  coords 11089.717 35.687 1639.005
+  angles 0 -2.033 0
+  m_sAttachmentGroupName "pilot2"
+ }
+ Mi8MT_armed_Podval_Black3 {
+  coords 11056.939 35.641 1629.19
+  m_sAttachmentGroupName "pilot"
+ }
+}
+$grp Vehicle : "{D9B91FAB817A6033}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_covered.et" {
+ Ural4320_transport_covered1 {
+  coords 8700.775 9.344 7359.809
+  angles 0 -154.429 0
+  m_sAttachmentGroupName "ussr"
+ }
+ Ural4320_transport_covered2 {
+  coords 2952.435 24.301 5135.533
+  angles 0 -129.076 0
+  m_sAttachmentGroupName "ussr2"
+ }
+}

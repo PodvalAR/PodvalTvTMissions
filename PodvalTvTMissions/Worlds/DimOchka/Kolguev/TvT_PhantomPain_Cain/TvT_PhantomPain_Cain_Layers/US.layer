@@ -1,0 +1,119 @@
+SCR_AIGroup : "{15062749E6AB45DE}Prefabs/Groups/BLUFOR/US/Regular/Group_US_Regular_PL.et" {
+ coords 6638.154 25.374 3895.87
+ angles 0 -37.079 0
+ m_sCustomNameSet "Командир гарнизона г. Угольдар ВС США "
+}
+SCR_AIGroup recon : "{6E2296FB529E9097}Prefabs/Groups/BLUFOR/US/dim_US_SPN_Force_Recon.et" {
+ components {
+  PS_GroupCallsignAssigner "{68CD6B0F0D80A730}" {
+   m_iCompanyCallsign 4
+  }
+ }
+ coords 6264.262 13.882 3348.369
+ angles 0 51.536 0
+}
+$grp Vehicle : "{D574C943C9F8C9DF}Prefabs/Vehicles/Wheeled/M998/M1151_armed_M2HB_AP.et" {
+ M1151_armed_M2HB_AP1 {
+  coords 6271.825 13.623 3349.192
+  angles -3.162 134.965 0.634
+  m_sAttachmentGroupName "recon"
+ }
+ M1151_armed_M2HB_AP2 {
+  coords 6266.863 13.996 3354.148
+  angles -3.162 134.965 -0.63
+  m_sAttachmentGroupName "recon"
+ }
+}
+$grp Vehicle : "{DC21E543DF39D2C0}Prefabs/Vehicles/Wheeled/M923A1/M923A1_transport_covered_closed_MERDC.et" {
+ M923A1_transport_covered_closed_MERDC2 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{5916C580F1DA28BB}" {
+    MultiSlots {
+     MultiSlotConfiguration "{5A60CECA66163838}" {
+      SlotTemplate InventoryStorageSlot Bandages {
+       Prefab "{1742632597955A55}Prefabs/Items/Misc/Sandbags/Part_Sandbag_Plastic.et"
+      }
+      NumSlots 400
+     }
+    }
+   }
+  }
+  coords 6650.057 26.273 3925.441
+  angles -0.895 -89.986 -0.895
+ }
+ M923A1_transport_covered_closed_MERDC1 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{5916C580F1DA28BB}" {
+    MultiSlots {
+     MultiSlotConfiguration "{5A60CECA66163838}" {
+      SlotTemplate InventoryStorageSlot Bandages {
+       Prefab "{1742632597955A55}Prefabs/Items/Misc/Sandbags/Part_Sandbag_Plastic.et"
+      }
+      NumSlots 400
+     }
+    }
+   }
+  }
+  coords 6617.521 25.054 3897.941
+  angles -0.895 -89.986 -0.895
+ }
+}
+$grp SCR_AIGroup : "{EE2BCF5671083A76}Prefabs/Groups/BLUFOR/US/Regular/Group_US_Regular_Squad.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 6630.879 26.375 3888.494
+  angles 0 -40.758 0
+  m_aUnitPrefabSlots {
+   "{BF6034039839323E}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_SL.et"
+   "{B8A7CE52FEBF88FD}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_TL.et"
+   "{D2E8C51CAABD902D}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_AR.et"
+   "{DF3DBB3D5D0AF907}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_GL.et"
+   "{F1DA9E09CC79F8FD}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_LAT.et"
+   "{B8A7CE52FEBF88FD}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_TL.et"
+   "{D2E8C51CAABD902D}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_AR.et"
+   "{F1DA9E09CC79F8FD}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_LAT.et"
+  }
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 6560.919 25.186 3864.813
+  angles 0 139.242 0
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 6613.084 26.247 3801.184
+  angles 0 -40.758 0
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 6693.037 27.352 3948.226
+  angles 0 -130.758 0
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 6797.708 29.367 4129.792
+  angles 0 134.52 0
+ }
+}

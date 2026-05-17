@@ -1,0 +1,188 @@
+$grp Vehicle : "{123595894023C474}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS_D.et" {
+ LAV25_RHS_D1 {
+  coords 3861.451 138.699 7320.592
+  angles 0 175.073 0
+  m_sAttachmentGroupName "SQ5"
+  {
+   GameEnvironmentProbeEntity {
+    ID "654E62C205528ACB"
+   }
+  }
+ }
+ LAV25_RHS_D2 {
+  coords 8407.492 111.531 7088.885
+  angles 0 179.337 0
+  m_sAttachmentGroupName "SQ10"
+  {
+   GameEnvironmentProbeEntity {
+    ID "654E62C205528ACB"
+   }
+  }
+ }
+}
+$grp Vehicle : "{533820E8979A44A9}Prefabs/Vehicles/Wheeled/M998/M1151_armed_M2HB_Tan.et" {
+ M1151_armed_M2HB_Tan2 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{5916C587FC993363}" {
+    MultiSlots {
+     MultiSlotConfiguration "{66F2D69AD3FC9116}" {
+      SlotTemplate InventoryStorageSlot M2Ammo {
+       Prefab "{C820846B0521423B}Prefabs/Weapons/Magazines/Box_127x99_M2_100rnd_4AP_1APIT.et"
+      }
+     }
+    }
+   }
+  }
+  coords 3862.988 138.427 7299.058
+  angles -1.773 175.63 0.244
+  m_sAttachmentGroupName "SQ4"
+ }
+ M1151_armed_M2HB_Tan3 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{5916C587FC993363}" {
+    MultiSlots {
+     MultiSlotConfiguration "{66F2D69AD3FC9116}" {
+      SlotTemplate InventoryStorageSlot M2Ammo {
+       Prefab "{C820846B0521423B}Prefabs/Weapons/Magazines/Box_127x99_M2_100rnd_4AP_1APIT.et"
+      }
+     }
+    }
+   }
+  }
+  coords 3864.778 137.249 7275.634
+  angles -1.773 175.63 0.244
+  m_sAttachmentGroupName "SQ3"
+ }
+ M1151_armed_M2HB_Tan4 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{5916C587FC993363}" {
+    MultiSlots {
+     MultiSlotConfiguration "{66F2D69AD3FC9116}" {
+      SlotTemplate InventoryStorageSlot M2Ammo {
+       Prefab "{C820846B0521423B}Prefabs/Weapons/Magazines/Box_127x99_M2_100rnd_4AP_1APIT.et"
+      }
+     }
+    }
+   }
+  }
+  coords 3863.993 137.641 7285.907
+  angles -1.773 175.63 0.244
+  m_sAttachmentGroupName "SQ3"
+ }
+ M1151_armed_M2HB_Tan5 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{5916C587FC993363}" {
+    MultiSlots {
+     MultiSlotConfiguration "{66F2D69AD3FC9116}" {
+      SlotTemplate InventoryStorageSlot M2Ammo {
+       Prefab "{C820846B0521423B}Prefabs/Weapons/Magazines/Box_127x99_M2_100rnd_4AP_1APIT.et"
+      }
+     }
+    }
+   }
+  }
+  coords 8406.844 111.531 7075.76
+  angles 0 -179.326 0
+  m_sAttachmentGroupName "SQ2"
+ }
+ M1151_armed_M2HB_Tan6 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{5916C587FC993363}" {
+    MultiSlots {
+     MultiSlotConfiguration "{66F2D69AD3FC9116}" {
+      SlotTemplate InventoryStorageSlot M2Ammo {
+       Prefab "{C820846B0521423B}Prefabs/Weapons/Magazines/Box_127x99_M2_100rnd_4AP_1APIT.et"
+      }
+     }
+    }
+   }
+  }
+  coords 8406.511 111.531 7032.358
+  angles 0 -179.813 0
+  m_sAttachmentGroupName "SQ1"
+ }
+}
+$grp Vehicle : "{7B38CEFED1D908A1}Prefabs/Vehicles/Wheeled/M998/M998_USAF_D.et" {
+ M998_USAF_D1 {
+  coords 8406.664 111.531 7067.758
+  angles 0 -180 0
+  m_sAttachmentGroupName "SQ2"
+ }
+ M998_USAF_D2 {
+  coords 8406.664 111.531 7040.44
+  angles 0 -180 0
+  m_sAttachmentGroupName "SQ1"
+ }
+ M998_USAF_D3 {
+  coords 3862.318 138.525 7307.38
+  angles 0 175.773 0
+  m_sAttachmentGroupName "SQ4"
+ }
+ M998_USAF_D4 {
+  coords 1683.96 140.875 3805.185
+  angles 0 37.315 0
+  m_sAttachmentGroupName "SQ8"
+ }
+ M998_USAF_D6 {
+  coords 3860.603 138.75 7330.582
+  angles -1.893 175.794 -0.648
+  m_sAttachmentGroupName "SQ6"
+ }
+ M998_USAF_D7 {
+  coords 6930.374 120.156 5613.762
+  angles 1.96 -104.986 0.402
+  m_sAttachmentGroupName "SQ7"
+ }
+ M998_USAF_D8 {
+  coords 6936.724 120.156 5615.462
+  angles 1.96 -104.986 0.402
+  m_sAttachmentGroupName "SQ7"
+ }
+ M998_USAF_D5 {
+  coords 5812.188 270.261 918.047
+  angles 0 -45.93 0
+  m_sAttachmentGroupName "SQ9"
+ }
+}
+Vehicle M998_covered_long_USAF_D1 : "{7D9A9AD859069D09}Prefabs/Vehicles/Wheeled/M998/M998_covered_long_USAF_D.et" {
+ coords 8406.565 111.531 7053.864
+ angles 0 180 0
+ m_sAttachmentGroupName "HQ"
+}
+$grp Turret : "{8FB601FB0E816582}Prefabs/Weapons/Tripods/BGM71TOW/Deployable_Tripod_BGM71_TOW.et" {
+ {
+  coords 5118.578 250.227 3663.626
+  angles 0 -67.344 0
+ }
+ {
+  coords 5167.983 253.088 3685.144
+  angles 0 -21.34 0
+ }
+}
+Vehicle M1025_armed_M2HB_USAF_D1 : "{B8C827A45C1347A4}Prefabs/Vehicles/Wheeled/M998/M1025_armed_M2HB_USAF_D.et" {
+ coords 3859.459 138.75 7339.693
+ angles 1.773 175.608 -0.244
+ m_sAttachmentGroupName "SQ6"
+}
+$grp GenericEntity : "{DE25A434026D99AC}Prefabs/Weapons/Tripods/BGM71TOW/Part_BGM-71D_Launcher.et" {
+ {
+  coords 5119.438 250.514 3665.05
+  angles -0.385 10.633 -90
+ }
+ {
+  coords 5119.047 250.495 3665.111
+  angles -0.385 10.633 -90
+ }
+ {
+  coords 5118.627 250.475 3665.147
+  angles -0.385 10.633 -90
+ }
+ {
+  coords 5167.296 253.319 3683.319
+  angles -2.579 10.638 -90.603
+ }
+ {
+  coords 5166.734 253.304 3683.306
+  angles -1.112 10.633 -90
+ }
+}

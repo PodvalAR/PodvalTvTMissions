@@ -1,0 +1,33 @@
+SCR_AIWorld : "{0CB65E4CC0AFBCC0}Prefabs/SCR_AIWorld_Kunar.et" {
+ coords 623.301 289.89 3709.008
+}
+PerceptionManager PerceptionManager1 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 701.514 262.686 3698.042
+}
+PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
+ coords 721.959 256.549 3735.942
+}
+GenericEntity : "{91991AEB147C0F3B}Prefabs/System/DRG_RandomSpawnPrefab.et" {
+ components {
+  DRG_RandomSpawnComponent "{66295E1A338BA9CE}" {
+   m_TargetEntity "LOL"
+   m_MarkerEntities {
+   }
+  }
+ }
+ coords 1081.319 241.906 1118.643
+}
+$grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+ RAZ {
+  coords 1111.912 237.39 927.846
+  angles 0 0 0
+ }
+ RAZ2 {
+  coords 882.189 121.469 2545.612
+  angles 0 0 0
+ }
+ RAZ3 {
+  coords 882.189 121.469 2545.612
+  angles 0 0 0
+ }
+}

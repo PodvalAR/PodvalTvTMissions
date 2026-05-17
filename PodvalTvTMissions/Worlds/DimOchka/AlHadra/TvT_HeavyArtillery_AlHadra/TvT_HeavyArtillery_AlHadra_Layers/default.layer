@@ -1,0 +1,70 @@
+SCR_AIWorld : "{0946C019EBADE117}Prefabs/AI/SCR_AIworld_AL_Hadra.et" {
+ coords 7901.235 159.286 8000.691
+}
+GenericWorldFogEntity : "{78D9BBF0F423FEB4}Prefabs/World/DefaultWorld/FogHaze_Default.et" {
+ coords 4110.787 49.487 5389.123
+ FogHeightStart entity
+}
+PerceptionManager PerceptionManager1 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 7859.049 157.413 8040.007
+}
+PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
+ components {
+  SCR_TimeAndWeatherHandlerComponent "{5EE3229927D4D2F5}" {
+   Enabled 0
+  }
+ }
+ coords 8072.545 60.872 8083.15
+ m_iFreezeTime 480000
+}
+GenericEntity : "{04B5CC36F933A2D4}Prefabs/System/DRG_DateTimeInjectorPrefab.et" {
+ components {
+  DRG_DateTimeInjectorComponent "{658E74C94A2C74AE}" {
+   m_iYear 1989
+   m_iDay 24
+   m_iHours 12
+   m_iMinutes 43
+  }
+ }
+ coords 475.757 136.083 2468.984
+}
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{68D01E4B760057B7}" {
+     m_Timer GUB_ZoneControlTimer "{68D01E4B709076FF}" {
+      timeToComplete 150
+     }
+     m_ZoneController GUB_ZoneController "{68D01E4B73144851}" {
+      m_sZoneEntityName "capture"
+     }
+     m_FlagController GUB_FlagController "{68D01E4B7D624DB0}" {
+      m_aFlagNames {
+       "flag"
+      }
+      m_fStartFactionKey "RHS_USAF"
+      m_fEndFactionKey "Ses_TKA"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{68D01E4B7943C26F}" {
+       m_sFirstFactionKey "Ses_TKA"
+       m_sSecondFactionKey "RHS_USAF"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 246.862 200.387 3674.481
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 474.691 48.269 1328.208
+}

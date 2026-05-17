@@ -1,0 +1,22 @@
+SCR_AIWorld : "{ADC549EB014219B9}Prefabs/AI/SCR_AIWorld_Ruha_winter.et" {
+ coords 224.12 81.755 7985.66
+}
+PerceptionManager PerceptionManager2 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 176.659 74.072 8062.87
+}
+PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
+ coords 118.79 80.491 8083.633
+ m_iFreezeTime 360000
+}
+GenericEntity : "{14C6F846207A0DC8}Prefabs/Props/Civilian/Notebook_01/Notebook_01_open_Huey.et" {
+ coords 1764.865 59.88 5892.174
+ angles 0 90 0
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 445.343 76.667 7648.775
+}

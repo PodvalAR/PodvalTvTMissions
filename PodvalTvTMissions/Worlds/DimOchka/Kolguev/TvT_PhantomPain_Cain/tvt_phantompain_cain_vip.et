@@ -1,0 +1,36 @@
+SCR_ChimeraCharacter : "{14DA791F201A3674}Prefabs/Characters/Factions/INDFOR/CIV/VIP/dim_Defector.et" {
+ ID "520EC961A090B1EE"
+ components {
+  PS_PlayableComponent "{5EFCC1946F475F15}" {
+   m_bIsPlayable 1
+  }
+  SCR_CharacterIdentityComponent "{5584CBC63E092DBC}" {
+   Identity Identity "{5584CBC6363C648B}" {
+    VisualIdentity VisualIdentity "{56E6D9456009D1C4}" {
+     Head "{EAF055495BA85CA1}Prefabs/Characters/Heads/Head_White_02.et"
+    }
+   }
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Jacket {
+     Prefab "{129D93F9A97CDBEB}Prefabs/Characters/Uniforms/ACU_t-shirt/ACU_t-shirt_grey.et"
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{0B1F0174869E0351}Prefabs/Characters/Uniforms/Pants_Fisherman_01/Pants_Fisherman_01_green.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{60DCBCECAC6C6E65}" {
+     TargetStorage "Jacket/ACU_t-shirt_grey.et"
+    }
+    ItemsInitConfigurationItem "{6454F7A57B363F47}" {
+     TargetStorage "Pants/Pants_Fisherman_01_green.et"
+    }
+   }
+  }
+ }
+ coords 6659.253 26.281 3918.321
+}

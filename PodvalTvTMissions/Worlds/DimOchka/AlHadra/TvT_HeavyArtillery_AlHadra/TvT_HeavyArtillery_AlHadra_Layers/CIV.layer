@@ -1,0 +1,44 @@
+SCR_AIGroup : "{000CD338713F2B5A}Prefabs/AI/Groups/Group_Base.et" {
+ components {
+  PS_GroupCallsignAssigner "{68D01E54BA84458F}" {
+  }
+ }
+ coords 2841.666 52.938 4930.14
+ angles 0 2.48 0
+ m_faction "CIV"
+ m_aUnitPrefabSlots {
+  "{C6653C5DB134189C}Prefabs/Characters/Factions/INDFOR/CIV/VIP/dim_CIV_VIP_4.et"
+ }
+ m_sCustomNameSet "Гостовини Аль-Подвали"
+}
+PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+ coords 2841.666 52.938 4930.14
+ m_sImageSet "{D7E06968B5F9FC92}UI/Textures/GroupManagement/FlagIcons/GroupFlagsCivilian.imageset"
+ m_sImageSetGlow "{D7E06968B5F9FC92}UI/Textures/GroupManagement/FlagIcons/GroupFlagsCivilian.imageset"
+ m_MarkerColor 1 1 1 1
+ m_sQuadName "land"
+ m_fWorldSize 50
+ m_sDescription "Гостовини Аль-Подвали"
+ m_bUseWorldScale 0
+ m_aVisibleForFactions {
+  "RHS_AFRF"
+  "RHS_USAF"
+  "RHS_ION"
+  "Ses_CDF"
+  "Ses_ChDKZ"
+  "Ses_TKR"
+  "Ses_TKA"
+  "Drg_IGF"
+  "Drg_PIR"
+  "UK"
+  "USSR"
+  "US"
+  "FIA"
+  "Drg_VCA"
+  "CIV"
+ }
+ m_bVisibleForEmptyFaction 1
+ m_aHideOnGameModeStates {
+ }
+ m_iZOrder 0
+}

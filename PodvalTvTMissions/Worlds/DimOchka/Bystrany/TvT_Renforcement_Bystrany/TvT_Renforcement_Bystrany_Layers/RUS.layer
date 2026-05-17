@@ -1,0 +1,133 @@
+Vehicle GAZ_TIGR_v2_Unarmed1 : "{2C9B4D8196812513}Prefabs/Vehicles/Wheeled/TIGR/Unarmed/GAZ_TIGR_v2_Unarmed.et" {
+ coords 5197.272 349.125 6500.253
+ angles 0 -46.097 0
+ m_sAttachmentGroupName "recon2"
+}
+$grp SCR_AIGroup : "{81C6F22168CB1184}Prefabs/Groups/OPFOR/RHS_AFRF/VDV/Recon/dim_VDV_Recon_1.et" {
+ vdv {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4378FC6401}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 6529.957 198.447 6632.828
+  angles -2.377 -0.149 3.579
+  m_aUnitPrefabSlots {
+   "{A467DC7A0F007B21}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_SL.et"
+   "{D97F30826A9347B8}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_SR.et"
+   "{114744A4440DC76E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_AT.et"
+   "{082072AAD96B86C2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_AAT.et"
+   "{DFA2A3CA1EA36572}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Rifleman.et"
+   "{DFA2A3CA1EA36572}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Rifleman.et"
+   "{F8F5DF9F36B961A6}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_CC.et"
+   "{C71B7D7DEAD5B6F3}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Crew.et"
+  }
+  m_sCustomNameSet "Отделение ВДВ"
+ }
+ vdv2 {
+  coords 6535.271 199.29 6604.638
+  angles -2.377 -0.149 3.579
+  m_aUnitPrefabSlots {
+   "{7551E181CE4C6845}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Officer.et"
+   "{DFA2A3CA1EA36572}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Rifleman.et"
+  }
+  m_sCustomNameSet "Командир роты"
+ }
+ vdv3 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4378FC6401}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 6533.818 198.661 6620.506
+  angles -4.763 89.975 1.191
+  m_aUnitPrefabSlots {
+   "{A467DC7A0F007B21}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_SL.et"
+   "{D97F30826A9347B8}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_SR.et"
+   "{114744A4440DC76E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_AT.et"
+   "{082072AAD96B86C2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_AAT.et"
+   "{DFA2A3CA1EA36572}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Rifleman.et"
+   "{EEC06B86B0C9154F}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Rifleman_2.et"
+   "{4A62BF3DB9E7E3A8}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_RPO.et"
+   "{7942754277E36531}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Scout_VSS.et"
+  }
+  m_sCustomNameSet "Отделение ВДВ"
+ }
+ recon {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4378FC6401}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 6526.445 200.156 6461.595
+  angles 0 -166.085 0
+  m_aUnitPrefabSlots {
+   "{1281F56909416DAA}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/dim_VDV_Scout_SL_NoTepl.et"
+   "{8FF29D9E23FC803E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/dim_VDV_Scout_SR.et"
+   "{CD755E631AA40A57}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/dim_VDV_Scout_MG.et"
+   "{B367CB24FE23575A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/dim_VDV_Scout_Rifleman_A545.et"
+   "{4A20208453A6C052}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/dim_VDV_Scout_Flame_NoOpt.et"
+   "{DE73858FC18DBB6A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/dim_VDV_Scout_VSSM.et"
+  }
+ }
+ recon2 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4378FC6401}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 1
+   }
+  }
+  coords 5193.704 349.125 6499.085
+  angles 0 43.915 0
+  m_aUnitPrefabSlots {
+   "{1281F56909416DAA}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/dim_VDV_Scout_SL_NoTepl.et"
+   "{8FF29D9E23FC803E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/dim_VDV_Scout_SR.et"
+   "{CD755E631AA40A57}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/dim_VDV_Scout_MG.et"
+   "{B367CB24FE23575A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/dim_VDV_Scout_Rifleman_A545.et"
+   "{4A20208453A6C052}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/dim_VDV_Scout_Flame_NoOpt.et"
+   "{DE73858FC18DBB6A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/dim_VDV_Scout_VSSM.et"
+  }
+ }
+}
+Vehicle GAZ_TIGR_v2_KORD_SPP1 : "{CD4737303AA14C6D}Prefabs/Vehicles/Wheeled/TIGR/KORD/GAZ_TIGR_v2_KORD_SPP.et" {
+ coords 6523.315 200.156 6459.398
+ angles 0 -77.968 0
+ m_sAttachmentGroupName "recon"
+}
+Vehicle APC_K17_Berezok_camo1 : "{CDB3773E9C0C89D2}Prefabs/Vehicles/Wheeled/K17/APC_K17_Berezok_camo.et" {
+ coords 6533.295 198.258 6637.787
+ angles -1.193 90.025 -1.194
+ m_sAttachmentGroupName "vdv"
+}
+$grp SCR_AIGroup : "{EB131DDF464F90FD}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Squad.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 6497.865 201.844 6488.896
+  angles 0 -78.405 0
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 6496.18 202.396 6510.04
+  angles 0 -168.405 0
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 2
+   }
+  }
+  coords 6522.814 199.891 6503.081
+  angles 0 -138.405 0
+ }
+}

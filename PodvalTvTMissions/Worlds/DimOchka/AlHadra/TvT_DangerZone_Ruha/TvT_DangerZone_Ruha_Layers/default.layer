@@ -1,0 +1,133 @@
+SCR_AIWorld : "{65DEC16960498027}Prefabs/AI/SCR_AIWorld_Ruha.et" {
+ coords 7265.028 88.001 4764.128
+}
+PerceptionManager PerceptionManager2 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 7458.858 80.99 4612.413
+}
+PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
+ coords 7476.459 80.942 4748.838
+}
+PolylineShapeEntity capture {
+ components {
+  PS_PolyZone "{68CEFD5879756400}" {
+   m_mPolygonTexture "{62F4404928D33DB5}UI/layouts/Textures/Grid1b.edds"
+   m_cPolygonColor 0 0.503 0.125 1
+   m_fPolygonUVScale 0.44
+   m_mPolygonTextureBorder ""
+   m_cPolygonBorderColor 0 0.502 0.125 1
+   m_fPolygonBorderWidth 5
+   m_aVisibleForFactions {
+    "RHS_AFRF"
+    "RHS_ION"
+    ""
+   }
+  }
+ }
+ coords 6150.747 56.822 5212.171
+ Points {
+  ShapePoint "{68CEFD584B2F41B0}" {
+   Position 1.495 -0.153 -2.158
+  }
+  ShapePoint "{68CEFD584B2F5F8D}" {
+   Position 2.922 0.02 2.716
+  }
+  ShapePoint "{68CEFD58576DC65E}" {
+   Position 4.616 1.129 16.698
+  }
+  ShapePoint "{68CEFD5856EFCABD}" {
+   Position 5.979 1.116 24.557
+  }
+  ShapePoint "{68CEFD5851A1BB21}" {
+   Position 7.516 1.116 32.774
+  }
+  ShapePoint "{68CEFD5850B23D6B}" {
+   Position 8.902 1.147 42.146
+  }
+  ShapePoint "{68CEFD5850FDC6DE}" {
+   Position 7.918 1.147 47.493
+  }
+  ShapePoint "{68CEFD5853E0BD37}" {
+   Position 6.777 1.086 54.925
+  }
+  ShapePoint "{68CEFD58536309FC}" {
+   Position 9.293 1.087 65.101
+  }
+  ShapePoint "{68CEFD5852CA2458}" {
+   Position 10.275 0.887 75.248
+  }
+  ShapePoint "{68CEFD585DEEC893}" {
+   Position 13.336 0.806 104.401
+  }
+  ShapePoint "{68CEFD585CB7FA81}" {
+   Position 13.282 -0.002 117.857
+  }
+  ShapePoint "{68CEFD585FDB41F0}" {
+   Position -56.692 -0.82 167.736
+  }
+  ShapePoint "{68CEFD585EED5AA8}" {
+   Position -62.198 -0.376 166.656
+  }
+  ShapePoint "{68CEFD585E0BC3BE}" {
+   Position -67.563 -0.256 162.448
+  }
+  ShapePoint "{68CEFD5859165238}" {
+   Position -92.24 0.182 126.472
+  }
+  ShapePoint "{68CEFD585BBB7DBE}" {
+   Position -107.221 -0.035 101.254
+  }
+  ShapePoint "{68CEFD585B2EC27E}" {
+   Position -115.776 -0.105 87.747
+  }
+  ShapePoint "{68CEFD585AF9DBCB}" {
+   Position -121.729 -0.744 76.021
+  }
+  ShapePoint "{68CEFD585A632096}" {
+   Position -120.38 -1.255 68.634
+  }
+  ShapePoint "{68CEFD586584A7FF}" {
+   Position -113.513 -1.378 62.254
+  }
+  ShapePoint "{68CEFD586486790C}" {
+   Position -86.592 -2.14 44.133
+  }
+  ShapePoint "{68CEFD5867A4D381}" {
+   Position -63.515 -1.284 26.683
+  }
+  ShapePoint "{68CEFD58673F575A}" {
+   Position -44.917 -0.985 13.7
+  }
+  ShapePoint "{68CEFD5866E8F13E}" {
+   Position -27.079 -0.499 1.714
+  }
+  ShapePoint "{68CEFD58661233FF}" {
+   Position -16.821 -0.015 -3.192
+  }
+  ShapePoint "{68CEFD5861AF390E}" {
+   Position -6.761 0.327 -4.645
+  }
+ }
+ IsClosed 1
+}
+$grp GenericEntity : "{3D78D7D606FF9818}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_NoCapture.et" {
+ flag {
+  coords 6090.851 67.125 5266.5
+ }
+ flag2 {
+  coords 6143.085 67.125 5313.471
+ }
+ flag3 {
+  coords 6086.073 67.29 5348.756
+ }
+ flag4 {
+  coords 6050.542 67.399 5291.367
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 7504.906 71.76 5957.107
+}

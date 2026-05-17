@@ -1,0 +1,249 @@
+SCR_AIGroup pilot : "{17DE9065B07EB761}Prefabs/Groups/BLUFOR/British Forces/Group_UK_Base.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+   m_iCompanyCallsign 3
+  }
+ }
+ coords 1661.834 62.979 765.587
+ angles 0 -75 0
+ m_aUnitPrefabSlots {
+  "{2E67F1B11B792FFC}Prefabs/Characters/Factions/BLUFOR/UK/UK2/UK2_Pilot.et"
+  "{2210470FB447DC50}Prefabs/Characters/Factions/BLUFOR/UK/UK2/UK2_CoPilot.et"
+ }
+ m_sCustomNameSet "Экипаж MH6M"
+}
+$grp Vehicle : "{27184280737CF09C}Prefabs/Vehicles/Wheeled/LR_3Series/3Series_SWB_GPMG_Variant_3.et" {
+ _Series_SWB_GPMG_Variant_1 {
+  coords 2463.436 62.056 2673.565
+  angles 0.868 14.022 0.217
+  m_sAttachmentGroupName "spn"
+ }
+ _Series_SWB_GPMG_Variant_2 {
+  coords 2461.342 62.031 2666.136
+  angles 0 14.016 0
+  m_sAttachmentGroupName "spn"
+ }
+}
+$grp Vehicle : "{3312ADBF53A16DD9}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS.et" {
+ LAV25_RHS1 {
+  coords 2218.23 62.501 1528.829
+  angles -2 24.708 0.065
+  m_sAttachmentGroupName "lav"
+ }
+ LAV25_RHS2 {
+  coords 2212.122 62.851 1517.573
+  angles -0.732 35.141 -0.515
+  m_sAttachmentGroupName "lav"
+ }
+}
+StaticModelEntity : "{4D7394C4BC5DFB55}Prefabs/Structures/Military/Camps/HelipadImprovised_01/HelipadImprovised_USSR_01_base.et" {
+ coords 1651.802 0 767.824
+ angles 0 15 0
+}
+$grp SCR_AIGroup : "{654E3A922B11EC94}Prefabs/Groups/BLUFOR/British Forces/Regular/Group_UK_Squad.et" {
+ uk2 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 2198.855 62.764 1550.527
+  angles 0 -160.414 0
+  m_aUnitPrefabSlots {
+   "{9DD6B1A1823A29EF}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_SL_RTO.et"
+   "{D9E8C57529CFD54D}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_Marksman.et"
+   "{4B8F4580003E7EAF}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_SR.et"
+   "{0908867D3966F4C6}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_MG.et"
+   "{8B533826A14F185A}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_Rifleman.et"
+   "{4B8F4580003E7EAF}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_SR.et"
+   "{0908867D3966F4C6}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_MG.et"
+   "{83B731A62EA0FE79}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_AT.et"
+   "{49A83237B1C3960A}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_ATA.et"
+  }
+  m_sCustomNameSet "Infantry Section"
+ }
+ uk {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 2185.308 63.115 1533.858
+  angles 0 14.162 0
+  m_aUnitPrefabSlots {
+   "{9DD6B1A1823A29EF}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_SL_RTO.et"
+   "{D9E8C57529CFD54D}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_Marksman.et"
+   "{4B8F4580003E7EAF}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_SR.et"
+   "{0908867D3966F4C6}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_MG.et"
+   "{8B533826A14F185A}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_Rifleman.et"
+   "{4B8F4580003E7EAF}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_SR.et"
+   "{0908867D3966F4C6}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_MG.et"
+   "{83B731A62EA0FE79}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_AT.et"
+   "{49A83237B1C3960A}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_ATA.et"
+  }
+  m_sCustomNameSet "Infantry Section"
+ }
+ uk4 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 3
+   }
+  }
+  coords 2146.994 63.438 1528.29
+  angles 0 -0.838 0
+  m_aUnitPrefabSlots {
+   "{9DD6B1A1823A29EF}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_SL_RTO.et"
+   "{D9E8C57529CFD54D}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_Marksman.et"
+   "{4B8F4580003E7EAF}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_SR.et"
+   "{0908867D3966F4C6}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_MG.et"
+   "{8B533826A14F185A}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_Rifleman.et"
+   "{4B8F4580003E7EAF}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_SR.et"
+   "{0908867D3966F4C6}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_MG.et"
+   "{83B731A62EA0FE79}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_AT.et"
+   "{49A83237B1C3960A}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_ATA.et"
+  }
+  m_sCustomNameSet "Infantry Section"
+ }
+ uk3 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 2
+   }
+  }
+  coords 2169.795 63.253 1539.314
+  angles 0 168.272 0
+  m_aUnitPrefabSlots {
+   "{9DD6B1A1823A29EF}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_SL_RTO.et"
+   "{D9E8C57529CFD54D}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_Marksman.et"
+   "{4B8F4580003E7EAF}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_SR.et"
+   "{0908867D3966F4C6}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_MG.et"
+   "{8B533826A14F185A}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_Rifleman.et"
+   "{4B8F4580003E7EAF}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_SR.et"
+   "{0908867D3966F4C6}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_MG.et"
+   "{83B731A62EA0FE79}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_AT.et"
+   "{49A83237B1C3960A}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_ATA.et"
+  }
+  m_sCustomNameSet "Infantry Section"
+ }
+ spn {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 4
+   }
+  }
+  coords 2459.539 62.031 2673.209
+  angles 0 105.184 0
+  m_aUnitPrefabSlots {
+   "{3336E2605579C064}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/Winter/UK2_SPN_W_SL.et"
+   "{34F1183133FF7AA7}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/Winter/UK2_SPN_W_TL.et"
+   "{046EF859ED438822}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/Winter/UK2_SPN_W_Rifleman.et"
+   "{07798B83253D6268}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/Winter/UK2_SPN_W_Rifleman_AT.et"
+   "{017BD7D8215EF8A4}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/Winter/UK2_SPN_W_Medic.et"
+   "{028BD66BCC001560}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/Winter/UK2_SPN_W_Sniper_SD.et"
+  }
+  m_sCustomNameSet "Special Forces"
+ }
+ lav {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 2217.057 62.492 1534.295
+  angles 0 115.851 0
+  m_aUnitPrefabSlots {
+   "{9DD6B1A1823A29EF}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_SL_RTO.et"
+   "{D9E8C57529CFD54D}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_Marksman.et"
+   "{4B8F4580003E7EAF}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_SR.et"
+   "{0908867D3966F4C6}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_MG.et"
+   "{8B533826A14F185A}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_Rifleman.et"
+   "{4B8F4580003E7EAF}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_SR.et"
+   "{0908867D3966F4C6}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_MG.et"
+   "{55A8871899AAF5B3}Prefabs/Characters/Factions/BLUFOR/UK/Regular/Char_UK_Regular_Crew.et"
+   "{478D0CEFF8E2A737}Prefabs/Characters/Factions/BLUFOR/UK/Regular/Char_UK_Regular_CrewGunner.et"
+  }
+  m_sCustomNameSet "Infantry Section"
+ }
+ lav2 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 2211.774 62.763 1523.393
+  angles 0 121.199 0
+  m_aUnitPrefabSlots {
+   "{9DD6B1A1823A29EF}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_SL_RTO.et"
+   "{D9E8C57529CFD54D}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_Marksman.et"
+   "{4B8F4580003E7EAF}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_SR.et"
+   "{0908867D3966F4C6}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_MG.et"
+   "{8B533826A14F185A}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_Rifleman.et"
+   "{4B8F4580003E7EAF}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_SR.et"
+   "{0908867D3966F4C6}Prefabs/Characters/Factions/BLUFOR/UK/UK2/Winter/UK2_W_MG.et"
+   "{55A8871899AAF5B3}Prefabs/Characters/Factions/BLUFOR/UK/Regular/Char_UK_Regular_Crew.et"
+   "{478D0CEFF8E2A737}Prefabs/Characters/Factions/BLUFOR/UK/Regular/Char_UK_Regular_CrewGunner.et"
+  }
+  m_sCustomNameSet "Infantry Section"
+ }
+}
+Vehicle _Series_SWB_Transport_Covered_Variant_1 : "{6D49A52E427A2C29}Prefabs/Vehicles/Wheeled/LR_3Series/3Series_SWB_Transport_Covered_Variant_3.et" {
+ coords 2222.286 62.317 1538.816
+ angles 0 24.766 0
+ m_sAttachmentGroupName "hq"
+}
+$grp Vehicle : "{701ADC27F9D842DF}Prefabs/Vehicles/Wheeled/LR_3Series/3Series_LWB_Transport.et" {
+ _Series_LWB_Transport1 {
+  coords 2155.616 63.495 1532.314
+  angles 0.888 82.819 -0.112
+  m_sAttachmentGroupName "uk4"
+ }
+ _Series_LWB_Transport2 {
+  coords 2147.745 63.438 1531.701
+  angles 0 89.554 0
+  m_sAttachmentGroupName "uk4"
+ }
+ _Series_LWB_Transport3 {
+  coords 2172.009 63.25 1536.645
+  angles 0 82.819 0
+  m_sAttachmentGroupName "uk3"
+ }
+ _Series_LWB_Transport4 {
+  coords 2164.223 63.372 1534.655
+  angles -0.845 70.732 0.295
+  m_sAttachmentGroupName "uk3"
+ }
+ _Series_LWB_Transport5 {
+  coords 2194.833 62.899 1534.781
+  angles -2.622 102.347 -0.574
+  m_sAttachmentGroupName "uk"
+ }
+ _Series_LWB_Transport6 {
+  coords 2187.488 63.079 1536.389
+  angles -1.749 102.341 -0.382
+  m_sAttachmentGroupName "uk"
+ }
+ _Series_LWB_Transport7 {
+  coords 2189.242 63.125 1547.767
+  angles 2.36 -156.153 -0.913
+  m_sAttachmentGroupName "uk2"
+ }
+ _Series_LWB_Transport8 {
+  coords 2195.135 62.946 1545.157
+  angles 2.36 -156.153 -0.913
+  m_sAttachmentGroupName "uk2"
+ }
+}
+Vehicle MH6M1 : "{AF950919C81D91B4}Prefabs/Vehicles/Helicopters/AH6M/MH6M.et" {
+ coords 1651.826 62.884 768.428
+ angles 0.232 14.998 -0.865
+ m_sAttachmentGroupName "pilot"
+}
+SCR_AIGroup hq : "{BBA36FB95553E79C}Prefabs/Groups/BLUFOR/British Forces/Regular/Group_UK_PL.et" {
+ coords 2219.566 62.312 1539.799
+ angles 0 115.574 0
+ m_sCustomNameSet "Командир ВС Британии"
+}

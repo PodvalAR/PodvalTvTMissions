@@ -1,0 +1,117 @@
+SCR_AIWorld : "{0946C019EBADE117}Prefabs/AI/SCR_AIworld_AL_Hadra.et" {
+ coords 7680.254 196.998 7638.075
+}
+PerceptionManager PerceptionManager1 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 7774.227 194.517 7677.356
+}
+PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
+ components {
+  SCR_TimeAndWeatherHandlerComponent "{5EE3229927D4D2F5}" {
+   Enabled 0
+  }
+ }
+ coords 7675.553 199.912 7647.874
+ m_iFreezeTime 480000
+}
+CinematicEntity Scene {
+ coords 0 0 0
+ Scene CinematicScene "{68D005CB892C8154}" {
+  Tracks {
+   CustomCinematicTrack "{68D005CB88430AA0}" {
+    TrackName "WeatherTrack"
+    ClassName "WeatherCinematicTrack"
+    ChildTracks {
+     FloatCinematicTrack "{68D005CB88430E89}" {
+      TrackName "m_fTimeOfDay"
+      Keyframes {
+       FloatCinematicKeyframe "{68D005CE81EB5F7F}" {
+        FrameNumber 0
+        Value 2.09
+        InterpMode 0
+       }
+      }
+     }
+     IntegerCinematicTrack "{68D005CB884301D4}" {
+      TrackName "m_iWeatherType"
+      Keyframes {
+       IntegerCinematicKeyframe "{68D005CB9121FA63}" {
+        FrameNumber 0
+        Value 0
+        InterpMode 2
+       }
+      }
+     }
+     BooleanCinematicTrack "{68D005CB88430062}" {
+      TrackName "setSpecifics"
+     }
+     FloatCinematicTrack "{68D005CB884300F3}" {
+      TrackName "m_fWindSpeed"
+     }
+     FloatCinematicTrack "{68D005CB88430083}" {
+      TrackName "m_fWindDirection"
+     }
+     FloatCinematicTrack "{68D005CB88430304}" {
+      TrackName "m_fWetness"
+     }
+     FloatCinematicTrack "{68D005CB88430399}" {
+      TrackName "m_fPuddles"
+     }
+     FloatCinematicTrack "{68D005CB8843022D}" {
+      TrackName "m_fFog"
+     }
+     FloatCinematicTrack "{68D005CB884302C3}" {
+      TrackName "m_fFogHeight"
+     }
+     BooleanCinematicTrack "{68D005CB8843055D}" {
+      TrackName "setDate"
+     }
+     IntegerCinematicTrack "{68D005CB884305E4}" {
+      TrackName "m_iYear"
+     }
+     IntegerCinematicTrack "{68D005CB88430582}" {
+      TrackName "m_iMonth"
+     }
+     IntegerCinematicTrack "{68D005CB8843041E}" {
+      TrackName "m_iDay"
+     }
+    }
+   }
+  }
+ }
+}
+GenericEntity flag : "{3D78D7D606FF9818}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_NoCapture.et" {
+ coords 6413.954 38.815 2950.529
+ angles 0 -49.058 0
+}
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{68D005CA8F6D8E0C}" {
+     m_Timer GUB_ZoneControlTimer "{68D005CA89222216}" {
+      timeToComplete 150
+     }
+     m_ZoneController GUB_ZoneController "{68D005CA885B8BDB}" {
+      m_sZoneEntityName "capture"
+     }
+     m_FlagController GUB_FlagController "{68D005CA8B46268F}" {
+      m_aFlagNames {
+       "flag"
+      }
+      m_fStartFactionKey "Ses_TKA"
+      m_fEndFactionKey "RHS_USAF"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{68D005CA9B2102CF}" {
+       m_sFirstFactionKey "RHS_USAF"
+       m_sSecondFactionKey "Ses_TKA"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 7526.36 31.679 1426.391
+}

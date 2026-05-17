@@ -1,0 +1,166 @@
+GenericEntity {
+ components {
+  MeshObject "{68D90573503D139A}" {
+   Object "{A6373BE246B5C482}Assets/Vehicles/Helicopters/Mi8/Mi8MT_base.xob"
+  }
+  RigidBody "{68D905738735334B}" {
+   Static 1
+  }
+ }
+ coords 2071.489 4.167 2920.848
+ angles 4.379 90 0
+ {
+  $grp GenericEntity {
+   {
+    components {
+     MeshObject "{68D90573733DBEC3}" {
+      Object "{1E09869F6045F8D8}Assets/Vehicles/Helicopters/Mi8/VehParts/Rotor/Mi8_mainRotor.xob"
+     }
+    }
+   }
+   {
+    components {
+     MeshObject "{68D905737280074B}" {
+      Object "{1F8ADF7BB67C4D30}Assets/Vehicles/Helicopters/Mi8/VehParts/Rotor/Mi8_tailRotor.xob"
+     }
+    }
+   }
+  }
+ }
+}
+PolylineShapeEntity capture {
+ components {
+  PS_PolyZone "{68E2974113046151}" {
+   m_mPolygonTexture "{62F4404928D33DB5}UI/layouts/Textures/Grid1b.edds"
+   m_cPolygonColor 0 0.125 0.502 1
+   m_fPolygonUVScale 0.44
+   m_mPolygonTextureBorder ""
+   m_cPolygonBorderColor 0 0.125 0.502 1
+   m_fPolygonBorderWidth 5
+   m_aVisibleForFactions {
+    "USSR"
+    "UK"
+    ""
+   }
+  }
+ }
+ coords 11087.355 49.928 7136.263
+ Points {
+  ShapePoint "{68E29740F8FA9A77}" {
+   Position 0 0 0
+  }
+  ShapePoint "{68E29740F8FAB6F5}" {
+   Position 54.858 -2.885 0.745
+  }
+  ShapePoint "{68E2974105201350}" {
+   Position 68.981 -2.944 -1.106
+  }
+  ShapePoint "{68E2974104D7F439}" {
+   Position 95.122 -0.647 -12.609
+  }
+  ShapePoint "{68E2974107CBBC44}" {
+   Position 130.492 -7.545 -22.365
+  }
+  ShapePoint "{68E2974106F41868}" {
+   Position 135.669 -6.511 -57.939
+  }
+  ShapePoint "{68E29741065A43D2}" {
+   Position 158.288 -6.864 -84.545
+  }
+  ShapePoint "{68E29741019B13B2}" {
+   Position 160.437 -10.084 -113.369
+  }
+  ShapePoint "{68E2974101386CAF}" {
+   Position 139.983 -8.428 -135.646
+  }
+  ShapePoint "{68E29741014D64A1}" {
+   Position 124.338 -10.651 -170.701
+  }
+  ShapePoint "{68E297410006A2E2}" {
+   Position 124.327 -10.348 -207.843
+  }
+  ShapePoint "{68E29741004B9E3D}" {
+   Position 133.085 -12.5 -225.458
+  }
+  ShapePoint "{68E297410344C69C}" {
+   Position 86.158 -15.185 -227.221
+  }
+  ShapePoint "{68E2974102CD944D}" {
+   Position 53.118 -23.19 -239.128
+  }
+  ShapePoint "{68E297410DC80EE6}" {
+   Position -24.536 -30.721 -186.294
+  }
+ }
+ IsClosed 1
+}
+StaticModelEntity : "{55A3DA68E58453A1}Prefabs/Structures/Military/Fortifications/DirtCover_01/DirtCover_01_long_v2.et" {
+ coords 11195.126 0.687 6993.343
+ angles -13.574 -81.09 -8.132
+}
+$grp StaticModelEntity : "{B03F9691E961C4CA}Prefabs/Structures/Military/Fortifications/DirtCover_01/DirtCover_01_long_v3.et" {
+ {
+  coords 11190.054 0.895 6973.101
+  angles -6.244 -75 0
+ }
+ {
+  coords 11193.781 0.82 6986.31
+  angles 0 -75 -7.463
+ }
+}
+StaticModelEntity : "{C1576E5555582214}Prefabs/Structures/Military/Fortifications/DirtCover_01/DirtCover_01_short.et" {
+ coords 11191.351 0.592 6994.512
+ angles 0 -75 0
+}
+$grp Turret : "{D062475B3C6426A3}Prefabs/Weapons/Tripods/BGM71TOW/Deployable_Tripod_BGM71_TOW.et" {
+ {
+  coords 3570.279 9.344 4791.813
+  angles 0 54.664 0
+ }
+ {
+  coords 3580.161 9.344 4777.875
+  angles 0 54.664 0
+ }
+ {
+  coords 3561.877 9.344 4803.663
+  angles 0 54.664 0
+ }
+}
+$grp GenericEntity : "{DE25A434026D99AC}Prefabs/Weapons/Tripods/BGM71TOW/Part_BGM-71D_Launcher.et" {
+ {
+  coords 3570.776 9.62 4790.313
+  angles 0 10.659 -90
+ }
+ {
+  coords 3571.141 9.62 4790.246
+  angles 0 10.659 -90
+ }
+ {
+  coords 3571.527 9.62 4790.173
+  angles 0 10.659 -90
+ }
+ {
+  coords 3580.363 9.62 4775.68
+  angles 0 10.659 -90
+ }
+ {
+  coords 3580.667 9.62 4775.622
+  angles 0 10.659 -90
+ }
+ {
+  coords 3581.007 9.62 4775.559
+  angles 0 10.659 -90
+ }
+ {
+  coords 3563.559 9.62 4802.827
+  angles 0 10.659 -90
+ }
+ {
+  coords 3563.914 9.62 4802.416
+  angles 0 10.659 -90
+ }
+ {
+  coords 3564.247 9.62 4801.854
+  angles 0 10.659 -90
+ }
+}

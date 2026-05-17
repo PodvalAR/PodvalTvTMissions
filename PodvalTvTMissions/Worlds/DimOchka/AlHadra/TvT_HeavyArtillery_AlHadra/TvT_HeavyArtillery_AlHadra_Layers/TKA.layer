@@ -1,0 +1,394 @@
+$grp Vehicle : "{3336BE330C4F355B}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_ammo.et" {
+ Ural4320_ammo1 {
+  coords 7404.111 24.627 2975.032
+  angles -0.815 -65.523 -0.371
+  m_sAttachmentGroupName "tka7"
+ }
+ Ural4320_ammo2 {
+  coords 7414.851 24.562 2970.143
+  angles 0 -65.523 0
+  m_sAttachmentGroupName "tka7"
+ }
+}
+SCR_AIGroup glav : "{371433587517EBAC}Prefabs/Groups/OPFOR/Ses_TKA/Group_A2F_TKA_PL.et" {
+ components {
+  PS_GroupCallsignAssigner "{68D01154CCC0D9C9}" {
+  }
+ }
+ coords 7350.076 23.538 2991.479
+ angles 0 8.519 0
+ m_sCustomNameSet "Командир ТКА"
+}
+$grp Vehicle : "{3ADAB98297CE0203}Prefabs/Vehicles/Wheeled/Ural_4320_Grad/BM 21-1_Base.et" {
+ BM_21_1_Base1 {
+  coords 7371.377 24.116 2987.946
+  angles -1.147 -70.011 0.535
+  m_sAttachmentGroupName "tka7"
+ }
+ BM_21_1_Base2 {
+  coords 7381.543 24.274 2984.32
+  angles -0.841 -69.995 -0.306
+  m_sAttachmentGroupName "tka7"
+ }
+ BM_21_1_Base3 {
+  coords 7392.093 24.408 2980.56
+  angles -0.841 -69.995 -0.306
+  m_sAttachmentGroupName "tka7"
+ }
+}
+$grp Vehicle : "{6C98ACF4A2DA1970}Prefabs/Vehicles/Wheeled/Ural4320/Ses_TKA/Ural4320_Ses_TKA_transport.et" {
+ Ural4320_Ses_TKA_transport1 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{5916C58171230A92}" {
+    MultiSlots {
+     MultiSlotConfiguration "{5A60D38EDB3709A9}" {
+      SlotTemplate InventoryStorageSlot Bandages {
+       Prefab "{DD96BA1FF0C2E5CD}Prefabs/Items/Equipment/BallisticTable/TF_BallisticTable_USSR_2B9.et"
+      }
+     }
+     MultiSlotConfiguration "{68D01E700D79C0D9}" {
+      SlotTemplate InventoryStorageSlot HE {
+       Prefab "{95544A428439B73E}Prefabs/Weapons/Magazines/2B9/Magazine__82mm_2B9_HE.et"
+      }
+      NumSlots 50
+     }
+     MultiSlotConfiguration "{68D01E7021EC37DE}" {
+      SlotTemplate InventoryStorageSlot Smoke {
+       Prefab "{AE998243157183A5}Prefabs/Weapons/Magazines/2B9/Magazine__82mm_2B9_Smoke.et"
+      }
+      NumSlots 50
+     }
+    }
+   }
+  }
+  coords 7432.511 23.034 2935.385
+  angles 2.325 29.978 1.341
+  m_sAttachmentGroupName "tka9"
+  m_bEnableMoveOnFreeze 1
+ }
+ Ural4320_Ses_TKA_transport2 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{5916C58171230A92}" {
+    MultiSlots {
+     MultiSlotConfiguration "{5A60D38EDB3709A9}" {
+      SlotTemplate InventoryStorageSlot Bandages {
+       Prefab "{DD96BA1FF0C2E5CD}Prefabs/Items/Equipment/BallisticTable/TF_BallisticTable_USSR_2B9.et"
+      }
+     }
+     MultiSlotConfiguration "{68D01E70287E8740}" {
+      SlotTemplate InventoryStorageSlot HE {
+       Prefab "{95544A428439B73E}Prefabs/Weapons/Magazines/2B9/Magazine__82mm_2B9_HE.et"
+      }
+      NumSlots 50
+     }
+     MultiSlotConfiguration "{68D01E7033CB6358}" {
+      SlotTemplate InventoryStorageSlot Smoke {
+       Prefab "{AE998243157183A5}Prefabs/Weapons/Magazines/2B9/Magazine__82mm_2B9_Smoke.et"
+      }
+      NumSlots 50
+     }
+    }
+   }
+  }
+  coords 7436.904 22.958 2932.806
+  angles 2.771 30.005 0.567
+  m_sAttachmentGroupName "tka9"
+  m_bEnableMoveOnFreeze 1
+ }
+ Ural4320_Ses_TKA_transport3 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{5916C58171230A92}" {
+    MultiSlots {
+     MultiSlotConfiguration "{5A60D38EDB3709A9}" {
+      SlotTemplate InventoryStorageSlot Bandages {
+       Prefab "{DD96BA1FF0C2E5CD}Prefabs/Items/Equipment/BallisticTable/TF_BallisticTable_USSR_2B9.et"
+      }
+     }
+     MultiSlotConfiguration "{68D01E70287E8740}" {
+      SlotTemplate InventoryStorageSlot HE {
+       Prefab "{95544A428439B73E}Prefabs/Weapons/Magazines/2B9/Magazine__82mm_2B9_HE.et"
+      }
+      NumSlots 50
+     }
+     MultiSlotConfiguration "{68D01E7033CB6358}" {
+      SlotTemplate InventoryStorageSlot Smoke {
+       Prefab "{AE998243157183A5}Prefabs/Weapons/Magazines/2B9/Magazine__82mm_2B9_Smoke.et"
+      }
+      NumSlots 50
+     }
+    }
+   }
+  }
+  coords 7441.221 22.892 2930.357
+  angles 2.325 29.978 1.341
+  m_sAttachmentGroupName "tka9"
+  m_bEnableMoveOnFreeze 1
+ }
+ Ural4320_Ses_TKA_transport4 {
+  coords 7426.584 24.49 2963.729
+  angles 0.784 -61.103 0.433
+  m_sAttachmentGroupName "tka7"
+ }
+ Ural4320_Ses_TKA_transport5 {
+  coords 7439.41 24.252 2955.573
+  angles 1.239 -56.861 -0.26
+  m_sAttachmentGroupName "tka7"
+ }
+}
+$grp Vehicle : "{6F963B40DE04868A}Prefabs/Vehicles/Wheeled/BTR70/BTR70_Ses_TKA.et" {
+ BTR70_Ses_TKA2 {
+  coords 6495.388 17.844 6760.892
+  angles 0 -75 0
+  m_sAttachmentGroupName "tka2"
+ }
+ BTR70_Ses_TKA4 {
+  coords 3275.161 17.844 1462.938
+  angles 0 -175.708 0
+  m_sAttachmentGroupName "tka5"
+ }
+ BTR70_Ses_TKA3 {
+  coords 3265.022 17.844 1463.698
+  angles 0 -175.708 0
+  m_sAttachmentGroupName "tka4"
+ }
+ BTR70_Ses_TKA1 {
+  coords 6482.187 17.844 6764.43
+  angles 0 -75 0
+  m_sAttachmentGroupName "tka"
+ }
+}
+$grp Vehicle : "{AC3FA513706226DD}Prefabs/Vehicles/Wheeled/Ural4320/Ses_TKA/Ural4320_Ses_TKA_transport_covered.et" {
+ Ural4320_Ses_TKA_transport_covered3 {
+  coords 6509.888 17.844 6757.089
+  angles 0 -75 0
+  m_sAttachmentGroupName "tka3"
+ }
+ Ural4320_Ses_TKA_transport_covered2 {
+  coords 3284.866 17.844 1462.182
+  angles 0 -175.708 0
+  m_sAttachmentGroupName "tka6"
+ }
+}
+$grp SCR_AIGroup : "{B2829E998DF41555}Prefabs/Groups/OPFOR/Ses_TKA/Group_A2F_TKA_Squad.et" {
+ tka {
+  components {
+   PS_GroupCallsignAssigner "{68D01154D2B47B9A}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 6487.022 17.843 6769.344
+  angles 0 -165 0
+  m_aUnitPrefabSlots {
+   "{AFFB63AA07D712D2}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_SL.et"
+   "{D2E38F5262442E4B}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_SR.et"
+   "{1ADBFB744CDAAE9D}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_AT.et"
+   "{C1E84C14E8B9F7C9}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_AAT.et"
+   "{C27392B53553B0C1}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_AR.et"
+   "{CFA6EC94C2E4D9EB}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_GL.et"
+   "{2FEEAC2DF6EE5B19}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_Sharpshooter.et"
+   "{D02632E464A522A2}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_Crew.et"
+   "{D02632E464A522A2}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_Crew.et"
+  }
+ }
+ tka2 {
+  components {
+   PS_GroupCallsignAssigner "{68D01154D7AC34FC}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 6500.48 17.844 6766.179
+  angles 0 -165 0
+  m_aUnitPrefabSlots {
+   "{AFFB63AA07D712D2}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_SL.et"
+   "{D2E38F5262442E4B}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_SR.et"
+   "{1ADBFB744CDAAE9D}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_AT.et"
+   "{C1E84C14E8B9F7C9}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_AAT.et"
+   "{C27392B53553B0C1}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_AR.et"
+   "{CFA6EC94C2E4D9EB}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_GL.et"
+   "{2FEEAC2DF6EE5B19}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_Sharpshooter.et"
+   "{D02632E464A522A2}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_Crew.et"
+   "{D02632E464A522A2}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_Crew.et"
+  }
+ }
+ tka3 {
+  components {
+   PS_GroupCallsignAssigner "{68D01154E1AD2059}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 6515.537 17.844 6761.79
+  angles 0 -165 0
+ }
+ tka6 {
+  components {
+   PS_GroupCallsignAssigner "{68D01154E1AD2059}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 2
+   }
+  }
+  coords 3295.895 17.844 1468.037
+  angles 0 -175.708 0
+ }
+ tka4 {
+  components {
+   PS_GroupCallsignAssigner "{68D01154D2B47B9A}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 3261.203 17.844 1470.42
+  angles 0 -175.708 0
+  m_aUnitPrefabSlots {
+   "{AFFB63AA07D712D2}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_SL.et"
+   "{D2E38F5262442E4B}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_SR.et"
+   "{1ADBFB744CDAAE9D}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_AT.et"
+   "{C1E84C14E8B9F7C9}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_AAT.et"
+   "{C27392B53553B0C1}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_AR.et"
+   "{CFA6EC94C2E4D9EB}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_GL.et"
+   "{2FEEAC2DF6EE5B19}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_Sharpshooter.et"
+   "{D02632E464A522A2}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_Crew.et"
+   "{D02632E464A522A2}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_Crew.et"
+  }
+ }
+ tka5 {
+  components {
+   PS_GroupCallsignAssigner "{68D01154D2B47B9A}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 3280.489 17.844 1468.972
+  angles 0 -175.708 0
+  m_aUnitPrefabSlots {
+   "{AFFB63AA07D712D2}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_SL.et"
+   "{D2E38F5262442E4B}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_SR.et"
+   "{1ADBFB744CDAAE9D}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_AT.et"
+   "{C1E84C14E8B9F7C9}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_AAT.et"
+   "{C27392B53553B0C1}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_AR.et"
+   "{CFA6EC94C2E4D9EB}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_GL.et"
+   "{2FEEAC2DF6EE5B19}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_Sharpshooter.et"
+   "{D02632E464A522A2}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_Crew.et"
+   "{D02632E464A522A2}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_Crew.et"
+  }
+ }
+ tka7 {
+  components {
+   PS_GroupCallsignAssigner "{68D01154E1AD2059}" {
+    m_iCompanyCallsign 4
+   }
+  }
+  coords 7375.841 24.216 2982.55
+  angles 0 17.501 0
+  m_aUnitPrefabSlots {
+   "{AFFB63AA07D712D2}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_SL.et"
+   "{AFFB63AA07D712D2}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_SL.et"
+   "{AD11AF5C866B83E8}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_Rifle.et"
+   "{AD11AF5C866B83E8}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_Rifle.et"
+   "{AD11AF5C866B83E8}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_Rifle.et"
+   "{AD11AF5C866B83E8}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_Rifle.et"
+   "{AD11AF5C866B83E8}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_Rifle.et"
+  }
+  m_sCustomNameSet "Командир БМ-21"
+ }
+ zu {
+  components {
+   PS_GroupCallsignAssigner "{68D01154E1AD2059}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 3
+   }
+  }
+  coords 6526.532 17.844 6758.844
+  angles 0 -165 0
+  m_aUnitPrefabSlots {
+   "{CE8BA9D55FB9D7BD}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_CC.et"
+   "{D02632E464A522A2}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_Crew.et"
+  }
+  m_sCustomNameSet "Экипаж ЗУ-23"
+ }
+ zu2 {
+  components {
+   PS_GroupCallsignAssigner "{68D01154E1AD2059}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 3
+   }
+  }
+  coords 3304.406 17.864 1467.578
+  angles 0 -175.708 0
+  m_aUnitPrefabSlots {
+   "{CE8BA9D55FB9D7BD}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_CC.et"
+   "{D02632E464A522A2}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_Crew.et"
+  }
+  m_sCustomNameSet "Экипаж ЗУ-23"
+ }
+ zu3 {
+  components {
+   PS_GroupCallsignAssigner "{68D01154E1AD2059}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 1
+   }
+  }
+  coords 7356.245 23.739 2988.792
+  angles 0 19.292 0
+  m_aUnitPrefabSlots {
+   "{CE8BA9D55FB9D7BD}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_CC.et"
+   "{D02632E464A522A2}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_Crew.et"
+  }
+  m_sCustomNameSet "Экипаж ЗУ-23"
+ }
+ tka9 {
+  components {
+   PS_GroupCallsignAssigner "{68D01154E1AD2059}" {
+    m_iCompanyCallsign 4
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 7422.927 23.936 2941.197
+  angles 0 47.501 0
+  m_aUnitPrefabSlots {
+   "{AFFB63AA07D712D2}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_SL.et"
+   "{AD11AF5C866B83E8}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_Rifle.et"
+   "{AD11AF5C866B83E8}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_Rifle.et"
+   "{AD11AF5C866B83E8}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_Rifle.et"
+   "{AD11AF5C866B83E8}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_Rifle.et"
+   "{AD11AF5C866B83E8}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_Rifle.et"
+  }
+  m_sCustomNameSet "Командир 2Б9"
+ }
+}
+$grp Turret : "{D2E76AD59A5A3F41}Prefabs/Weapons/Core/Turret_2B9.et" {
+ {
+  coords 7433.785 22.094 2919.043
+  angles -3.543 -149.944 -1.017
+ }
+ {
+  coords 7430.141 22.185 2921.144
+  angles -4.314 -149.915 -1.465
+ }
+ {
+  coords 7426 22.37 2923.534
+  angles -3.867 -149.905 -2.238
+ }
+}
+Vehicle UAZ469_Ses_TKA1 : "{F3C22A3CC0664AB7}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_Ses_TKA.et" {
+ coords 7349.671 23.536 2994.824
+ angles 0 -74.337 0
+ m_sAttachmentGroupName "glav"
+}
+$grp Vehicle : "{FD109F3702AAB392}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_ZU23.et" {
+ Ural4320_ZU1 {
+  coords 6524.693 17.844 6753.208
+  angles 0 -75 0
+  m_sAttachmentGroupName "zu"
+ }
+ Ural4320_ZU2 {
+  coords 3299.27 17.844 1461.101
+  angles 0 -175.708 0
+  m_sAttachmentGroupName "zu2"
+ }
+ Ural4320_ZU3 {
+  coords 7358.576 23.721 2991.74
+  angles 0 -70.708 0
+  m_sAttachmentGroupName "zu3"
+ }
+}

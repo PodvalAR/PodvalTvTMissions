@@ -1,0 +1,45 @@
+SCR_AIWorld : "{1A22C9F8BF6E88AB}Prefabs/AI/SCR_AIWorld_Gogland.et" {
+ coords 4723.847 22.989 10602.218
+}
+PerceptionManager PerceptionManager2 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 4756.652 7.839 10736.56
+}
+PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
+ coords 4774.554 7.751 10783.468
+ m_iFreezeTime 360000
+}
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{68CB279FB9449B02}" {
+     m_Timer GUB_ZoneControlTimer "{68CB279FBA884D56}" {
+      timeToComplete 150
+     }
+     m_ZoneController GUB_ZoneController "{68CB279FC5338800}" {
+      m_sZoneEntityName "capture"
+     }
+     m_FlagController GUB_FlagController "{68CB279FC44CF743}" {
+      m_aFlagNames {
+       "flag1"
+       "flag2"
+       "flag3"
+       "flag4"
+      }
+      m_fStartFactionKey "RHS_AFRF"
+      m_fEndFactionKey "RHS_USAF"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{68CB279FC8CBEAB7}" {
+       m_sFirstFactionKey "RHS_USAF"
+       m_sSecondFactionKey "RHS_AFRF"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 5702.891 16.282 9739.917
+}

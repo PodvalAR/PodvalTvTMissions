@@ -1,0 +1,29 @@
+SCR_AIGroup : "{371433587517EBAC}Prefabs/Groups/OPFOR/Ses_TKA/Group_A2F_TKA_PL.et" {
+ components {
+  PS_GroupCallsignAssigner "{68F00ACAEBF5C220}" {
+  }
+ }
+ coords 4824.431 143.969 8332.636
+ m_sCustomNameSet "Командующий войсками ТКА Ибрагим Хамад"
+}
+$grp SCR_AIGroup : "{B2829E998DF41555}Prefabs/Groups/OPFOR/Ses_TKA/Group_A2F_TKA_Squad.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68F00ACAEEF8A381}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 4774.143 143.813 8187.493
+  angles 0 178.042 0
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68F00ACAEEF8A381}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 4817.441 144.034 8324.396
+  angles 0 46.477 0
+ }
+}

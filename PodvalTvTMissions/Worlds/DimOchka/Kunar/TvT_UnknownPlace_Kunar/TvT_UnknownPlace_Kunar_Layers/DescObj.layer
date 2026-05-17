@@ -1,0 +1,251 @@
+GenericEntity heli {
+ components {
+  MeshObject "{68EA330A9F1507BD}" {
+   Object "{8A08A0B2463F5137}Assets/ME_Wreck/CH_47FWreck.xob"
+  }
+ }
+ coords 1465.861 407.507 708.625
+ angles 2.75 -148.98 0
+ {
+  $grp GenericEntity {
+   rotor {
+    components {
+     MeshObject "{68EA330AB9A3AAB5}" {
+      Object "{A0A132D44D76CA73}Assets/Vehicles/Helicopters/UH1H/VehParts/Rotor/UH1H_rotorblur.xob"
+     }
+    }
+    coords -0.039 -0.357 6.62
+   }
+   rotor2 {
+    components {
+     MeshObject "{68EA330AB9A3AAB5}" {
+      Object "{A0A132D44D76CA73}Assets/Vehicles/Helicopters/UH1H/VehParts/Rotor/UH1H_rotorblur.xob"
+     }
+    }
+    coords -0.039 -1.578 -5.617
+    angles 0 60 0
+   }
+  }
+  $grp LightEntity {
+   svet1 {
+    coords -0.076 -0.041 -5.969
+    Color 0 0.502 0.1255 1
+    LV 9.48
+    Radius 2.01
+   }
+   svet2 {
+    coords -0.076 -0.041 4.267
+    Color 0.502 0 0 1
+    LV 9.48
+    Radius 4.25
+   }
+  }
+ }
+}
+$grp LightEntity {
+ Light {
+  coords 942.044 403.128 1407.781
+  angles -45 165 -15
+  Color 0.6549 0.7098 0.8745 1
+  LV 5.15
+  Type Spot
+  Radius 53.91
+  SpotAngle 170
+  DistanceAttenuation 2.62
+  LensFlareType Disabled
+ }
+ Light2 {
+  coords 938.731 401.452 1406.719
+  angles -33.061 161.231 -12.613
+  Color 0.6549 0.7098 0.8745 1
+  LV 6.16
+  Type Spot
+  Radius 53.91
+  SpotAngle 170
+  DistanceAttenuation 2.62
+  LensFlareType Disabled
+ }
+ Light3 {
+  coords 943.217 400.525 1408.881
+  angles -33.061 161.231 -12.613
+  Color 0.6549 0.7098 0.8745 1
+  LV 4.15
+  Type Spot
+  Radius 53.91
+  SpotAngle 170
+  DistanceAttenuation 2.62
+  LensFlareType Disabled
+ }
+ Light4 {
+  coords 936.885 402.726 1409.599
+  angles -19.679 148.931 -6.953
+  Color 0.412 0.4789 0.6939 1
+  LV 6.66
+  Type Spot
+  Radius 29.98
+  SpotAngle 143
+  DistanceAttenuation 2.67
+  LensFlareType Disabled
+ }
+ Light5 {
+  coords 767.897 382.266 864.174
+  angles -24.785 53.439 0
+  Color 0.412 0.4789 0.6939 1
+  LV 5.66
+  Type Spot
+  Radius 20.81
+  SpotAngle 170
+  DistanceAttenuation 3
+  LensFlareType Disabled
+ }
+ Light6 {
+  coords 2864.353 13.833 3023.811
+  angles -20.858 -105 0
+  Color 0.7305 0.7975 1 1
+  LV 3.34
+  Type Spot
+  Radius 9.4
+  SpotAngle 60.09
+  DistanceAttenuation 2.2
+  LensFlareType Disabled
+ }
+ Light7 {
+  coords 2860.811 11.731 3017.797
+  angles 1.659 -35.706 -7.496
+  Color 0.7305 0.7975 1 1
+  LV 2.21
+  Type Spot
+  Radius 59.73
+  SpotAngle 71.88
+  DistanceAttenuation 3
+  LensFlareType Disabled
+ }
+}
+ParticleEffectEntity {
+ coords 946.995 397.038 1406.441
+ angles 0 53.855 0
+ EffectPath "{C7C126B8FC38B083}Particles/Smoke_Building_Shop.ptc"
+}
+$grp StaticModelEntity : "{07D6AED5B385571A}PrefabsEditable/Auto/Structures/Military/Fortifications/E_DirtCover_01_long_v1_DIMKII.et" {
+ {
+  coords 958.437 -2.042 1409.829
+  angles -38.114 132.281 -3.129
+  scale 4.36
+ }
+ {
+  coords 949.041 -3.034 1419.109
+  angles 46.568 137.268 -8.521
+  scale 4.36
+ }
+ {
+  coords 943.703 0.736 1395.028
+  angles -45.395 157.3 -13.384
+  scale 4.36
+ }
+ {
+  coords 933.8 -0.398 1412.159
+  angles 35.584 140.916 -11.529
+  scale 4.36
+ }
+ {
+  coords 948.877 -1.034 1414.097
+  angles -15.343 158.825 -20.927
+  scale 4.36
+ }
+ {
+  coords 925.285 -1.409 1401.806
+  angles 27.347 142.797 -11.014
+  scale 4.36
+ }
+ {
+  coords 931.861 -0.132 1390.676
+  angles -17.529 150.667 -9.814
+  scale 4.36
+ }
+ {
+  coords 914.233 -1.541 1394.193
+  angles 27.347 142.797 -10.544
+  scale 4.36
+ }
+ {
+  coords 919.617 -1.067 1384.414
+  angles -7.238 148.884 -9.43
+  scale 4.36
+ }
+ {
+  coords 900.909 -1.781 1384.971
+  angles 33.657 141.388 -11.261
+  scale 4.36
+ }
+ {
+  coords 907.167 -0.048 1375.992
+  angles -2.338 148.07 -9.363
+  scale 4.36
+ }
+ {
+  coords 890.362 -1.182 1376.977
+  angles 31.913 141.797 6.658
+  scale 4.36
+ }
+ {
+  coords 890.349 -1.735 1370.629
+  angles 0.422 132.689 9.341
+  scale 4.36
+ }
+ {
+  coords 899.061 -0.152 1380.903
+  angles 13.686 119.139 -0.395
+  scale 2.747
+ }
+}
+DecalEntity : "{71979372AFE909E5}Prefabs/Decals/Blood/BloodStain_Large_01.et" {
+ coords 938.991 0.278 1401.957
+ angles -90 -180 -180
+ scale 1.095
+}
+SCR_ChimeraCharacter b : "{A83A0922BE675A53}Prefabs/Zar_Ranger_6.et" {
+ coords 939.772 397.805 1402.082
+ angles -4.972 -132.914 -18.018
+}
+$grp DecalEntity : "{D1D104EBCB9C5E2D}Prefabs/Decals/Miscellaneous/Decal_Damage_Burnt_02.et" {
+ {
+  coords 904.232 460.199 1380.254
+  angles -81.409 -126.145 -90
+  scale 30.2
+  FarPlane 0.81
+  Stretch 4.75
+ }
+ {
+  coords 877.186 477.698 1370.231
+  angles -90 -126.145 -90
+  scale 30.2
+  FarPlane 0.81
+  Stretch 4.75
+ }
+ {
+  coords 908.25 477.698 1392.921
+  angles -90 -126.145 -90
+  scale 30.2
+  FarPlane 0.81
+  Stretch 4.75
+ }
+ {
+  coords 859.751 477.698 1360.209
+  angles -89.972 53.855 92.821
+  scale 30.2
+  FarPlane 0.81
+  Stretch 4.75
+ }
+ {
+  coords 830.913 476.045 1341.248
+  angles -89.972 53.855 92.821
+  scale 30.2
+  FarPlane 0.81
+  Stretch 4.75
+ }
+}
+DecalEntity : "{FC56FA6166DEE7B7}Prefabs/Decals/Dirt/Decal_Dirt_Footprints_01.et" {
+ coords 939.233 0.421 1402.606
+ angles -90 -180 -180
+ scale 1.5
+}

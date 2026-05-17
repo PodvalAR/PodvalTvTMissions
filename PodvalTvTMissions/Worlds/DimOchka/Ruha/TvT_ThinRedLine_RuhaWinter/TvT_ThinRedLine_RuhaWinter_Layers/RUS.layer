@@ -1,0 +1,131 @@
+$grp Vehicle : "{00AED68EFBF251BA}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_covered_closed_camo1.et" {
+ Ural4320_transport_covered_closed_camo1 {
+  coords 3795.557 56.375 4426.444
+  angles 0 46.533 0
+ }
+ Ural4320_transport_covered_closed_camo3 {
+  coords 3767.823 56.344 4398.586
+  angles 0 45.655 0
+ }
+ Ural4320_transport_covered_closed_camo2 {
+  coords 3782.178 56.365 4413.197
+  angles 1.265 45.993 0.033
+ }
+ Ural4320_transport_covered_closed_camo5 {
+  coords 3743.689 56.406 4370.22
+  angles 0 36.452 0
+ }
+ Ural4320_transport_covered_closed_camo4 {
+  coords 3755.72 56.375 4385.523
+  angles 0 40.775 0
+ }
+ Ural4320_transport_covered_closed_camo6 {
+  coords 4994.695 56.802 3964.121
+  angles 0 -43.445 0
+ }
+ Ural4320_transport_covered_closed_camo7 {
+  coords 5004.806 56.719 3955.343
+  angles 0 -52.004 0
+ }
+ Ural4320_transport_covered_closed_camo8 {
+  coords 5017.049 56.813 3945.669
+  angles 0 -52.004 0
+ }
+}
+Vehicle APC_K17_Berezok1 : "{31F0866273C46D76}Prefabs/Vehicles/Wheeled/K17/APC_K17_Berezok.et" {
+ components {
+  SlotManagerComponent "{55BCE45E438E4CFF}" {
+   Slots {
+    RegisteringComponentSlotInfo Turret {
+     Prefab "{EF47FEB79F2DF58D}Prefabs/Vehicles/Wheeled/K17/VehPart/Turret_K17_Berezok_ION.et"
+    }
+   }
+  }
+ }
+ coords 5122.781 57.558 3696.956
+ angles -1.262 -130.629 -0.097
+ m_sAttachmentGroupName "RUS5"
+}
+$grp SCR_AIGroup : "{7F40D42C0CE8A499}Prefabs/Groups/OPFOR/RHS_AFRF/Group_RHS_AFRF_Base.et" {
+ {
+  coords 3808.69 56.375 4440.584
+  angles 0 45 0
+  m_aUnitPrefabSlots {
+   "{B8DD8AAD2BA1692B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Winter/dim_VDV_W_Officer.et"
+  }
+  m_sCustomNameSet "Командир ВС РФ"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 5111.779 58.188 3867.474
+  angles 0 15 0
+  m_aUnitPrefabSlots {
+   "{16A6DAAE90E9BCA6}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Winter/dim_VDV_W_PL.et"
+  }
+  m_sCustomNameSet "Командир взвода"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 4988.893 57.021 3980.988
+  angles 0 15 0
+  m_aUnitPrefabSlots {
+   "{16A6DAAE90E9BCA6}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Winter/dim_VDV_W_PL.et"
+  }
+  m_sCustomNameSet "Командир взвода"
+ }
+}
+$grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+ spec1 {
+  coords 3564.093 59.43 5516.986
+  angles 0 90 0
+  m_sImageSetGlow "{E23427CAC80DA8B7}UI/Textures/Icons/icons_mapMarkersUI.imageset"
+  m_MarkerColor 0.502 0 0 1
+  m_sQuadName "mark-question"
+  m_fWorldSize 170
+  m_sDescription "Возможное появление ДРГ"
+  m_aVisibleForFactions {
+   "RHS_USAF"
+   "RHS_AFRF"
+   ""
+  }
+  m_bVisibleForEmptyFaction 1
+ }
+ spec2 {
+  coords 4627.601 73.544 6145.349
+  angles 0 90 0
+  m_sImageSetGlow "{E23427CAC80DA8B7}UI/Textures/Icons/icons_mapMarkersUI.imageset"
+  m_MarkerColor 0.502 0 0 1
+  m_sQuadName "mark-question"
+  m_fWorldSize 170
+  m_sDescription "Возможное появление ДРГ"
+  m_aVisibleForFactions {
+   "RHS_USAF"
+   "RHS_AFRF"
+   ""
+  }
+  m_bVisibleForEmptyFaction 1
+ }
+ spec3 {
+  coords 5661 53.988 6082.063
+  angles 0 90 0
+  m_sImageSetGlow "{E23427CAC80DA8B7}UI/Textures/Icons/icons_mapMarkersUI.imageset"
+  m_MarkerColor 0.502 0 0 1
+  m_sQuadName "mark-question"
+  m_fWorldSize 170
+  m_sDescription "Возможное появление ДРГ"
+  m_aVisibleForFactions {
+   "RHS_USAF"
+   "RHS_AFRF"
+   ""
+  }
+  m_bVisibleForEmptyFaction 1
+ }
+}

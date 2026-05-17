@@ -1,0 +1,61 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ {
+  coords 6876.31 5.565 6301.583
+  m_sTitle "Правила и задачи"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "ПРАВИЛА:"\
+  "1. Вертолету запрещено использовать тактику \"КАМИКАДЗЕ\"."\
+  ""\
+  "ЗАДАЧИ:"\
+  "• РФ: "\
+  " 1. Удержать здание ФСБ (зеленый триггер)."\
+  ""\
+  "• США:"\
+  " 1. Захватить здание ФСБ (зеленый триггер)."\
+  ""\
+  "ДОПОЛНИТЕЛЬНО:"\
+  " 1. У ВС РФ в рюкзаках лежат мешки с песком для создания укреплений. Также на территории триггера есть УРАЛ с мешками."
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+ }
+ {
+  coords 6876.31 5.565 6301.583
+  m_sTitle "Обстановка"
+  m_sTextData "2021 г."\
+  "Конфликт между РФ и США перешёл в активную фазу. КМП США высадился на острове Гогланд, который рассматривается как удобный плацдарм для дальнейшего наступления на материковую часть России. С тяжёлыми потерями американские силы медленно продвигаются вглубь острова и уже контролируют около половины его территории."\
+  ""\
+  "После успешной высадки американской разведки на севере острова эвакуация секретных документов стала невозможной. Местному управлению ФСБ требуется время, чтобы уничтожить данные."\
+  ""\
+  "Заметив, что конвои с ценными документами больше не покидают остров, США предпринимают попытку ускоренного штурма здания УФСБ с целью его захвата и получения информации."
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+ }
+}
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ {
+  coords 6927.594 8.248 6204.361
+  m_sTitle "Здание ФСБ удержано"
+  m_sFactionKey "RHS_AFRF"
+ }
+ {
+  coords 6927.594 8.248 6204.361
+  m_sTitle "Здание ФСБ захвачено"
+  m_sFactionKey "RHS_USAF"
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 5547.709 15.194 4020.56
+}

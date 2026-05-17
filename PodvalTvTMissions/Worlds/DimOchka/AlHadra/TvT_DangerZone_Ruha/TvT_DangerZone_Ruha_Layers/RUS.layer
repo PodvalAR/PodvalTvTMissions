@@ -1,0 +1,320 @@
+Vehicle APC_K17_Epoch_NoPTUR1 : "{136AF62C14074BD6}Prefabs/Vehicles/Wheeled/K17/APC_K17_Epoch_NoPTUR.et" {
+ components {
+  SCR_UniversalInventoryStorageComponent "{5CE26149257047CD}" {
+   MultiSlots {
+    MultiSlotConfiguration "{5DE7299E8FA5ED73}" {
+     SlotTemplate InventoryStorageSlot nvg {
+      Prefab "{C581ED926D3CD9CE}Prefabs/Items/GasMask/Avon_GasMask.et"
+     }
+     NumSlots 6
+    }
+   }
+  }
+ }
+ coords 6702.527 96.656 1213.502
+ m_sAttachmentGroupName "RUS3"
+}
+$grp Vehicle : "{2B15F98903994DA3}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_covered_camo1.et" {
+ Ural4320_transport_covered_camo1 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{5916C58171230A92}" {
+    MultiSlots {
+     MultiSlotConfiguration "{5A60D38EDB3709A9}" {
+      SlotTemplate InventoryStorageSlot Bandages {
+       Prefab "{C581ED926D3CD9CE}Prefabs/Items/GasMask/Avon_GasMask.et"
+      }
+      NumSlots 3
+     }
+    }
+   }
+  }
+  coords 6594.804 96.656 1213.502
+  m_sAttachmentGroupName "RUS5"
+ }
+ Ural4320_transport_covered_camo2 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{5916C58171230A92}" {
+    MultiSlots {
+     MultiSlotConfiguration "{5A60D38EDB3709A9}" {
+      SlotTemplate InventoryStorageSlot Bandages {
+       Prefab "{C581ED926D3CD9CE}Prefabs/Items/GasMask/Avon_GasMask.et"
+      }
+      NumSlots 3
+     }
+    }
+   }
+  }
+  coords 6578.27 96.656 1213.502
+  m_sAttachmentGroupName "RUS6"
+ }
+ Ural4320_transport_covered_camo3 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{5916C58171230A92}" {
+    MultiSlots {
+     MultiSlotConfiguration "{5A60D38EDB3709A9}" {
+      SlotTemplate InventoryStorageSlot Bandages {
+       Prefab "{C581ED926D3CD9CE}Prefabs/Items/GasMask/Avon_GasMask.et"
+      }
+      NumSlots 3
+     }
+    }
+   }
+  }
+  coords 6562.629 96.656 1213.502
+  m_sAttachmentGroupName "RUS7"
+ }
+}
+Vehicle GAZ_TIGR_v2_Unarmed1 : "{2C9B4D8196812513}Prefabs/Vehicles/Wheeled/TIGR/Unarmed/GAZ_TIGR_v2_Unarmed.et" {
+ coords 5774.867 66.951 3137.542
+ angles 0 135 0
+ m_sAttachmentGroupName "rec"
+}
+$grp SCR_AIGroup : "{7F40D42C0CE8A499}Prefabs/Groups/OPFOR/RHS_AFRF/Group_RHS_AFRF_Base.et" {
+ RUS {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 6669.625 96.656 1209.403
+  angles 0 -1.088 0
+  m_aUnitPrefabSlots {
+   "{A467DC7A0F007B21}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_SL.et"
+   "{D97F30826A9347B8}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_SR.et"
+   "{114744A4440DC76E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_AT.et"
+   "{082072AAD96B86C2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_AAT.et"
+   "{DFA2A3CA1EA36572}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Rifleman.et"
+   "{0B5C277FBC2C8224}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Rifleman_3.et"
+   "{D4BBFCF5C28668FB}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_RTO.et"
+   "{2F6A9CD34B880FD2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Marksman_SVDM.et"
+   "{C71B7D7DEAD5B6F3}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Crew.et"
+  }
+  m_sCustomNameSet "Отделение ВДВ"
+ }
+ RUS2 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 2
+   }
+  }
+  coords 6652.955 96.656 1209.403
+  angles 0 -1.088 0
+  m_aUnitPrefabSlots {
+   "{A467DC7A0F007B21}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_SL.et"
+   "{D97F30826A9347B8}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_SR.et"
+   "{114744A4440DC76E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_AT.et"
+   "{082072AAD96B86C2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_AAT.et"
+   "{DFA2A3CA1EA36572}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Rifleman.et"
+   "{0B5C277FBC2C8224}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Rifleman_3.et"
+   "{D4BBFCF5C28668FB}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_RTO.et"
+   "{2F6A9CD34B880FD2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Marksman_SVDM.et"
+   "{C71B7D7DEAD5B6F3}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Crew.et"
+  }
+  m_sCustomNameSet "Отделение ВДВ"
+ }
+ RUS3 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 6707.942 96.656 1210.448
+  angles 0 -1.088 0
+  m_aUnitPrefabSlots {
+   "{A467DC7A0F007B21}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_SL.et"
+   "{D97F30826A9347B8}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_SR.et"
+   "{114744A4440DC76E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_AT.et"
+   "{082072AAD96B86C2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_AAT.et"
+   "{FBD41570B0C083C3}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_MG_Opt.et"
+   "{DFA2A3CA1EA36572}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Rifleman.et"
+   "{0B5C277FBC2C8224}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Rifleman_3.et"
+   "{D4BBFCF5C28668FB}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_RTO.et"
+   "{2F6A9CD34B880FD2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Marksman_SVDM.et"
+   "{C71B7D7DEAD5B6F3}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Crew.et"
+   "{E6D5BAE5703C9AA7}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Crew_Gunner.et"
+  }
+  m_sCustomNameSet "Отделение ВДВ"
+ }
+ RUS4 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 6725.085 96.656 1210.774
+  angles 0 -1.088 0
+  m_aUnitPrefabSlots {
+   "{A3AA1922DBC58B2E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/FSB/Shturm/dim_FSB_Shturm_SL.et"
+   "{A46DE373BD4331ED}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/FSB/Shturm/dim_FSB_Shturm_TL.et"
+   "{BBDFDBBF246219A7}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/FSB/Shturm/dim_FSB_Shturm_Rifleman.et"
+   "{012A86F6711E5FA2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/FSB/Shturm/dim_FSB_Shturm_Rifleman_2.et"
+   "{762780535F28CADC}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/FSB/Shturm/dim_FSB_Shturm_Rifleman_3.et"
+   "{C3F7961C1EF64017}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/FSB/Shturm/dim_FSB_Shturm_GL.et"
+   "{A0B06BC89D12FE3D}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/FSB/Shturm/dim_FSB_LightAT.et"
+  }
+  m_sCustomNameSet "ФСБ \"Альфа\""
+ }
+ RUS5 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 6598.683 96.656 1208.372
+  angles 0 -1.088 0
+  m_aUnitPrefabSlots {
+   "{A467DC7A0F007B21}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_SL.et"
+   "{D97F30826A9347B8}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_SR.et"
+   "{114744A4440DC76E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_AT.et"
+   "{082072AAD96B86C2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_AAT.et"
+   "{FBD41570B0C083C3}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_MG_Opt.et"
+   "{DFA2A3CA1EA36572}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Rifleman.et"
+   "{0B5C277FBC2C8224}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Rifleman_3.et"
+   "{D4BBFCF5C28668FB}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_RTO.et"
+  }
+  m_sCustomNameSet "Отделение ВДВ"
+ }
+ RUS6 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 6582.149 96.656 1208.372
+  angles 0 -1.088 0
+  m_aUnitPrefabSlots {
+   "{A467DC7A0F007B21}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_SL.et"
+   "{D97F30826A9347B8}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_SR.et"
+   "{114744A4440DC76E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_AT.et"
+   "{082072AAD96B86C2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_AAT.et"
+   "{FBD41570B0C083C3}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_MG_Opt.et"
+   "{DFA2A3CA1EA36572}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Rifleman.et"
+   "{0B5C277FBC2C8224}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Rifleman_3.et"
+   "{D4BBFCF5C28668FB}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_RTO.et"
+  }
+  m_sCustomNameSet "Отделение ВДВ"
+ }
+ RUS7 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 6566.507 96.656 1208.372
+  angles 0 -1.088 0
+  m_aUnitPrefabSlots {
+   "{A467DC7A0F007B21}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_SL.et"
+   "{D97F30826A9347B8}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_SR.et"
+   "{114744A4440DC76E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_AT.et"
+   "{082072AAD96B86C2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_AAT.et"
+   "{FBD41570B0C083C3}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_MG_Opt.et"
+   "{DFA2A3CA1EA36572}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Rifleman.et"
+   "{0B5C277FBC2C8224}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Rifleman_3.et"
+   "{D4BBFCF5C28668FB}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_RTO.et"
+  }
+  m_sCustomNameSet "Отделение ВДВ"
+ }
+ HQ {
+  coords 6733.554 96.656 1210.935
+  angles 0 -1.088 0
+  m_aUnitPrefabSlots {
+   "{7551E181CE4C6845}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Officer.et"
+  }
+  m_sCustomNameSet "Командир ВС РФ"
+ }
+ HQ2 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 6545.835 96.656 1278.539
+  angles 0 88.912 0
+  m_aUnitPrefabSlots {
+   "{3AF9FCD1A5F669AB}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Pilot.et"
+   "{B41DB2D49B8FE0A3}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Pilot_CoPilot.et"
+  }
+  m_sCustomNameSet "Экипаж МИ-8"
+ }
+}
+SCR_AIGroup : "{81C6F22168CB1184}Prefabs/Groups/OPFOR/RHS_AFRF/VDV/Recon/dim_VDV_Recon_1.et" {
+ components {
+  PS_GroupCallsignAssigner "{68B17A4378FC6401}" {
+   m_iCompanyCallsign 3
+   m_iPlatoonCallsign 1
+  }
+ }
+ coords 6545.977 96.656 1274.468
+ angles 0 88 0
+}
+Vehicle K4386_RG1 : "{A53F4D3BB9DC85D4}Prefabs/Vehicles/Wheeled/K4386/K4386_RG.et" {
+ coords 6722.14 96.719 1213.193
+ m_sAttachmentGroupName "RUS4"
+}
+Vehicle Mi8MT_armed_Podval_Black1 : "{B8F61AE66A7D7F8A}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_armed_Podval_Black.et" {
+ components {
+  SCR_UniversalInventoryStorageComponent "{5E1E99434B3A7648}" {
+   MultiSlots {
+    MultiSlotConfiguration "{68CF0E2A1A885EA6}" {
+     SlotTemplate InventoryStorageSlot gas {
+      Prefab "{C581ED926D3CD9CE}Prefabs/Items/GasMask/Avon_GasMask.et"
+     }
+    }
+   }
+  }
+ }
+ coords 6554.811 96.656 1276.256
+ m_sAttachmentGroupName "HQ2"
+}
+$grp Vehicle : "{DC6A0BC75B198106}Prefabs/Vehicles/Wheeled/K17/APC_K17_unarmed_camo1.et" {
+ APC_K17_unarmed_camo1 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{5CE26149257047CD}" {
+    MultiSlots {
+     MultiSlotConfiguration "{5DE7299E8FA5ED73}" {
+      SlotTemplate InventoryStorageSlot nvg {
+       Prefab "{C581ED926D3CD9CE}Prefabs/Items/GasMask/Avon_GasMask.et"
+      }
+      NumSlots 5
+     }
+    }
+   }
+  }
+  coords 6680.545 96.656 1213.502
+  m_sAttachmentGroupName "RUS"
+ }
+ APC_K17_unarmed_camo2 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{5CE26149257047CD}" {
+    MultiSlots {
+     MultiSlotConfiguration "{5DE7299E8FA5ED73}" {
+      SlotTemplate InventoryStorageSlot nvg {
+       Prefab "{C581ED926D3CD9CE}Prefabs/Items/GasMask/Avon_GasMask.et"
+      }
+      NumSlots 5
+     }
+    }
+   }
+  }
+  coords 6663.874 96.656 1213.502
+  m_sAttachmentGroupName "RUS2"
+ }
+}
+SCR_AIGroup rec : "{ED92C6C1D40F9EAA}Prefabs/Groups/OPFOR/RHS_AFRF/VDV/Recon/dim_VDV_Recon_2.et" {
+ coords 5769.783 66.959 3135.036
+ angles 0 49.228 0
+ m_aUnitPrefabSlots {
+  "{B0352DED7C922D46}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/Goblin/dim_VDV_Scout_SL_Goblin.et"
+  "{F7ACBE5E8FD7E6F3}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/Goblin/dim_VDV_Scout_SR_Goblin.et"
+  "{59154B82242F9575}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/Goblin/dim_VDV_Scout_MG_Goblin.et"
+  "{7B401E039F20A62B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/Goblin/dim_VDV_Scout_Flame_Goblin.et"
+  "{870A212A64167BED}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/Goblin/dim_VDV_Scout_VSS_Goblin.et"
+ }
+}

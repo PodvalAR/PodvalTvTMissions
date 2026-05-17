@@ -1,0 +1,146 @@
+$grp ParticleEffectEntity {
+ {
+  coords 6114.315 56.806 5308.146
+  EffectPath "{D336417BDD3DFD46}Particles/Weapon/Smoke_grenade_M18_Green_Repeating.ptc"
+ }
+ {
+  coords 6110.663 56.804 5303.607
+  EffectPath "{D336417BDD3DFD46}Particles/Weapon/Smoke_grenade_M18_Green_Repeating.ptc"
+ }
+}
+PolylineShapeEntity {
+ components {
+  PS_PolyZone "{68CF0E2A8EDF8211}" {
+   m_mPolygonTexture "{62F4404928D33DB5}UI/layouts/Textures/Grid1b.edds"
+   m_cPolygonColor 0 0.125 0.502 1
+   m_fPolygonUVScale 0.44
+   m_mPolygonTextureBorder ""
+   m_cPolygonBorderColor 0.502 0 0 1
+   m_fPolygonBorderWidth 6
+   m_aVisibleForFactions {
+    "RHS_ION"
+    "RHS_AFRF"
+    ""
+   }
+  }
+ }
+ coords 8191.825 104.935 2468.551
+ Points {
+  ShapePoint "{68CF0E2A62D27AC5}" {
+   Position 0 0 0
+  }
+  ShapePoint "{68CF0E2A62D29FFA}" {
+   Position -2791.483 -47.281 1901.643
+  }
+  ShapePoint "{68CF0E2A72E030BA}" {
+   Position -8181.425 -37.654 1748.654
+  }
+  ShapePoint "{68CF0E2AC764B4E8}" {
+   Position -8191.412 -35.794 -2468.007
+  }
+  ShapePoint "{68CF0E2AC36EE170}" {
+   Position -0.525 9.509 -2468.132
+  }
+ }
+ IsClosed 1
+}
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ {
+  coords 7426.97 82.295 5866.239
+  m_sTitle "Правила и задачи"
+  m_sTextData "ПРАВИЛА:"\
+  "1. ION запрещено взаимодействовать с папкой;"\
+  "2. Вертолету запрещено использовать тактику \"КАМИКАДЗЕ\"."\
+  ""\
+  "ЗАДАЧИ:"\
+  "• ВС РФ: "\
+  " 1. Захватить объект;"\
+  " ЛИБО"\
+  " 2. Вывезти папку с документами (за красную линию)."\
+  ""\
+  "• ION:"\
+  " 1. Удержать объект;"\
+  " 2. Не допустить кражу документов."\
+  ""\
+  "ДОПОЛНИТЕЛЬНО:"\
+  " 1. Если вы зайдете в здание объекта без противогаза - вас убьёт."
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_ION"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+ }
+ {
+  coords 7426.97 82.295 5735.072
+  m_sTitle "Обстановка"
+  m_sTextData "В свободной экономической зоне провинции Руха (Финляндия) на объекте британской компании «Progress Bar» произошла утечка химических веществ."\
+  "Правительство Финляндии направило полицию и группу экспертов для осмотра места происшествия, однако ЧВК ION, охраняющая предприятие, отказалась пропускать местные власти на территорию объекта. Попытки проникнуть на объект привели к кровопролитию."\
+  "Финляндия, на территории которой размещена база ВС РФ, обратилась к руководству России с просьбой о силовом проникновении на объект."
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_ION"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+ }
+}
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{68CEFD581ADBFF28}" {
+     m_Timer GUB_ZoneControlTimer "{68CEFD5824322F54}" {
+      timeToComplete 150
+     }
+     m_ZoneController GUB_ZoneController "{68CEFD58269541C9}" {
+      m_sZoneEntityName "capture"
+     }
+     m_FlagController GUB_FlagController "{68CEFD5821AEE12B}" {
+      m_aFlagNames {
+       "flag"
+       "flag2"
+       "flag3"
+       "flag4"
+      }
+      m_fStartFactionKey "RHS_ION"
+      m_fEndFactionKey "RHS_AFRF"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{68CEFD58295FDC86}" {
+       m_sFirstFactionKey "RHS_AFRF"
+       m_sSecondFactionKey "RHS_ION"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 7063.567 54.219 6087.269
+}
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ {
+  coords 7538.147 73.513 6006.613
+  m_sTitle "Объект захвачен"
+  m_sFactionKey "RHS_AFRF"
+ }
+ {
+  coords 7447.389 73.513 5906.844
+  m_sTitle "Папка с документами вывезена"
+  m_sFactionKey "RHS_AFRF"
+ }
+ {
+  coords 7368.504 73.513 5830.89
+  m_sTitle "Папка с документами не украдена"
+  m_iScore 75
+  m_sFactionKey "RHS_ION"
+ }
+ {
+  coords 7292.887 73.513 5869.325
+  m_sTitle "Объект защищен"
+  m_iScore 25
+  m_sFactionKey "RHS_ION"
+ }
+}

@@ -1,0 +1,126 @@
+$grp ParticleEffectEntity {
+ {
+  coords 6101.148 56.8 5303.195
+  EffectPath "{D336417BDD3DFD46}Particles/Weapon/Smoke_grenade_M18_Green_Repeating.ptc"
+ }
+ {
+  coords 6121.312 56.805 5310.004
+  EffectPath "{D336417BDD3DFD46}Particles/Weapon/Smoke_grenade_M18_Green_Repeating.ptc"
+ }
+ {
+  coords 6099.659 56.8 5288.12
+  EffectPath "{D336417BDD3DFD46}Particles/Weapon/Smoke_grenade_M18_Green_Repeating.ptc"
+ }
+ {
+  coords 6114.997 58.179 5292.961
+  EffectPath "{D336417BDD3DFD46}Particles/Weapon/Smoke_grenade_M18_Green_Repeating.ptc"
+ }
+ {
+  coords 6090.46 56.792 5280.447
+  EffectPath "{D336417BDD3DFD46}Particles/Weapon/Smoke_grenade_M18_Green_Repeating.ptc"
+ }
+ {
+  coords 6077.333 56.792 5279.918
+  EffectPath "{D336417BDD3DFD46}Particles/Weapon/Smoke_grenade_M18_Green_Repeating.ptc"
+ }
+ {
+  coords 6066.454 56.792 5285.838
+  EffectPath "{D336417BDD3DFD46}Particles/Weapon/Smoke_grenade_M18_Green_Repeating.ptc"
+ }
+ {
+  coords 6064.455 56.792 5302.928
+  EffectPath "{D336417BDD3DFD46}Particles/Weapon/Smoke_grenade_M18_Green_Repeating.ptc"
+ }
+ {
+  coords 6058.207 56.792 5291.65
+  EffectPath "{D336417BDD3DFD46}Particles/Weapon/Smoke_grenade_M18_Green_Repeating.ptc"
+ }
+ {
+  coords 6084.71 57.26 5320.054
+  EffectPath "{D336417BDD3DFD46}Particles/Weapon/Smoke_grenade_M18_Green_Repeating.ptc"
+ }
+ {
+  coords 6088.974 56.806 5335.848
+  EffectPath "{D336417BDD3DFD46}Particles/Weapon/Smoke_grenade_M18_Green_Repeating.ptc"
+ }
+ {
+  coords 6109.986 56.806 5331.947
+  EffectPath "{D336417BDD3DFD46}Particles/Weapon/Smoke_grenade_M18_Green_Repeating.ptc"
+ }
+ {
+  coords 6136.454 56.794 5311.982
+  EffectPath "{D336417BDD3DFD46}Particles/Weapon/Smoke_grenade_M18_Green_Repeating.ptc"
+ }
+ {
+  coords 6129.072 56.794 5297.663
+  EffectPath "{D336417BDD3DFD46}Particles/Weapon/Smoke_grenade_M18_Green_Repeating.ptc"
+ }
+ {
+  coords 6119.856 57.393 5294.39
+  EffectPath "{D336417BDD3DFD46}Particles/Weapon/Smoke_grenade_M18_Green_Repeating.ptc"
+ }
+ {
+  coords 6115.371 57.393 5287.214
+  EffectPath "{D336417BDD3DFD46}Particles/Weapon/Smoke_grenade_M18_Green_Repeating.ptc"
+ }
+ {
+  coords 6075.316 56.794 5310.325
+  EffectPath "{D336417BDD3DFD46}Particles/Weapon/Smoke_grenade_M18_Green_Repeating.ptc"
+ }
+ {
+  coords 6098.641 57.384 5322.347
+  EffectPath "{D336417BDD3DFD46}Particles/Weapon/Smoke_grenade_M18_Green_Repeating.ptc"
+ }
+ {
+  coords 6083.599 56.792 5298.52
+  EffectPath "{D336417BDD3DFD46}Particles/Weapon/Smoke_grenade_M18_Green_Repeating.ptc"
+ }
+}
+StaticModelEntity : "{2AD330CAD22BE0AC}Prefabs/Compositions/Misc/CustomEntities/DestructionEntities/CzechHedgehog_01_painted_CompositionDestruction.et" {
+ coords 6155.72 0.005 5266.038
+ angles -1.685 -141.118 2.089
+}
+GenericEntity : "{AE528A0B674FA712}Prefabs/Systems/DamageAreas/DamageArea_base.et" {
+ components {
+  SCR_DamageAreaComponent "{6646D2612811A3C6}" {
+   DamageAreas {
+    SCR_DotDamageArea "{689EB51AA2069686}" {
+     "Area shape" SCR_ConvexPolygonDamageAreaShape "{689EB51AAC4766AE}" {
+      m_aBounds {
+       SCR_BoundsPosition "{689EB51AFF9E39DB}" {
+        Offset 11.845 0 -29.641
+       }
+       SCR_BoundsPosition "{689EB51AFBC84E8C}" {
+        Offset 27.043 0 -17.312
+       }
+       SCR_BoundsPosition "{689EB51B059BFA17}" {
+        Offset 39.444 0 2.799
+       }
+       SCR_BoundsPosition "{689EB51B0A38DC9D}" {
+        Offset -17.219 0 37.735
+       }
+       SCR_BoundsPosition "{689EB51B238A63E5}" {
+        Offset -52.58 0 -19.359
+       }
+       SCR_BoundsPosition "{689EB51B28A6B473}" {
+        Offset -12.459 0 -44.187
+       }
+       SCR_BoundsPosition "{689EB51B37FAE332}" {
+        Offset 0.854 0 -22.693
+       }
+      }
+      m_fHeight 11
+     }
+     m_fDamageValue 1
+     m_DamageEffect SCR_PoisonDamageEffectWithProtection "{689EB51AA86A1766}" {
+     }
+     m_CustomHitZoneSelector SCR_CharacterHitZoneSelector "{689EB51AB52835E1}" {
+     }
+     m_fDotDamage 4
+     m_fEffectDuration 5
+    }
+   }
+  }
+ }
+ coords 6103.254 56.075 5310.85
+}

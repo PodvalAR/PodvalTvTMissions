@@ -1,0 +1,32 @@
+SCR_ChimeraCharacter : "{A46D4BCEDF79F186}Worlds/DimOchka/TvT_PhantomPain_Cain/tvt_phantompain_cain_vip.et" {
+ ID "520EC961A090B1EE"
+ components {
+  CharacterWeaponSlotComponent "{520EA1D2F659CFDC}" {
+   WeaponTemplate "{BEF39591F479F041}Prefabs/Weapons/Rifles/M9/M9_Silencer.et"
+  }
+  SCR_CharacterIdentityComponent "{5584CBC63E092DBC}" {
+   Identity Identity "{5584CBC6363C648B}" {
+    VisualIdentity VisualIdentity "{56E6D9456009D1C4}" {
+     Head "{91A7ADDAB9030F9E}Prefabs/Characters/Heads/Head_White_03/Head_White_03_camo_USSR_02.et"
+    }
+   }
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{A768B4F898E7855E}Prefabs/Characters/HeadGear/SAS_Facemask/GD_SAS_Facemask_Black.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{60DCBCECAC6C6E65}" {
+     PrefabsToSpawn + {
+      "{9C05543A503DB80E}Prefabs/Weapons/Magazines/Magazine_9x19_M9_15rnd_Ball.et" "{9C05543A503DB80E}Prefabs/Weapons/Magazines/Magazine_9x19_M9_15rnd_Ball.et"
+     }
+    }
+   }
+  }
+ }
+ coords 6654.98 26.227 3917.563
+}

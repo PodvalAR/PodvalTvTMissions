@@ -1,0 +1,56 @@
+$grp Vehicle : "{23FB589C8BF6EC6E}Prefabs/Vehicles/Wheeled/M998/M998_covered_long_USAF.et" {
+ M998_covered_long_USAF1 {
+  coords 3862.746 56.188 4495.789
+  angles 0 -132.307 0
+ }
+ M998_covered_long_USAF2 {
+  coords 3868.981 56.094 4501.577
+  angles 0 -132.307 0
+ }
+ M998_covered_long_USAF3 {
+  coords 4993.832 56.787 4020.071
+  angles 0 165 0
+ }
+ M998_covered_long_USAF4 {
+  coords 5000.663 56.787 4022.439
+  angles 0 172.671 0
+ }
+}
+Vehicle LAV25_RHS1 : "{3312ADBF53A16DD8}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS.et" {
+ coords 5001.537 55.907 4898.012
+ angles 2.905 35.723 2.087
+ m_sAttachmentGroupName "lav"
+}
+$grp Vehicle : "{D574C943C9F8C9DF}Prefabs/Vehicles/Wheeled/M998/M1151_armed_M2HB_AP.et" {
+ M1151_armed_M2HB_AP1 {
+  coords 3862.983 55.345 4451.514
+  angles -0.632 -134.979 -1.898
+ }
+ M1151_armed_M2HB_AP2 {
+  coords 3808.922 56.025 4491.602
+  angles -0.633 -134.993 -0.633
+ }
+}
+Vehicle UH1H_armed1 : "{DDDD9B51F1234DF3}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed.et" {
+ components {
+  MeshObject "{51DAA09FEFBFC0E7}" {
+   Materials {
+    MaterialAssignClass "{68CAE2AACA37C07A}" {
+     SourceMaterial "UH1H_Decals_8F0C257CDF7A2363"
+     AssignedMaterial "{8F0C257CDF7A2363}Assets/Vehicles/Helicopters/UH1H/Data/UH1H_Decals.emat"
+    }
+    MaterialAssignClass "{68CAE2AACA37C05D}" {
+     SourceMaterial "UH_1H_Body01_6224CA051369DE45"
+     AssignedMaterial "{9E8011EADCCC2F32}Assets/Vehicles/Helicopters/UH1H/Data/UH_1H_Body01_Shark.emat"
+    }
+    MaterialAssignClass "{64E86B9C19A2F290}" {
+     SourceMaterial "m_PRT_DoubleDoors_half_182B20BE4A5DF38E"
+     AssignedMaterial "{FCD51D86A834D109}Assets/_SharedMaterials/VehicleParts/m_PRT_Windows_opened.emat"
+    }
+   }
+  }
+ }
+ coords 4919.187 56.782 4985.399
+ angles 0 131.694 0
+ m_sAttachmentGroupName "uh"
+}
