@@ -56,6 +56,15 @@ $grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescripti
  }
 }
 GenericEntity : "{52327EA0926E4EC7}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_02_V1_USAF.et" {
+ components {
+  BaseActionsManagerComponent "{6202D4E6F133BF4A}" {
+   additionalActions {
+    PS_FlagChangeAction "{6202D4E6A53D4B3C}" {
+     Duration 10
+    }
+   }
+  }
+ }
  coords 6192.215 123.925 6230.038
  angles 0 -125.464 0
 }
