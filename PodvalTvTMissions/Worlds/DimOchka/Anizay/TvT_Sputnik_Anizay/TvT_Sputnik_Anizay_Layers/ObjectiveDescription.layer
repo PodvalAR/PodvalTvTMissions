@@ -57,6 +57,12 @@ $grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescripti
 }
 GenericEntity : "{52327EA0926E4EC7}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_02_V1_USAF.et" {
  components {
+  SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+   m_aObjectiveNames {
+    "AFRF_WIN"
+    "USAF_WIN"
+   }
+  }
   BaseActionsManagerComponent "{6202D4E6F133BF4A}" {
    additionalActions {
     PS_FlagChangeAction "{6202D4E6A53D4B3C}" {
@@ -69,12 +75,12 @@ GenericEntity : "{52327EA0926E4EC7}PrefabsEditable/Auto/Structures/Military/Flag
  angles 0 -125.464 0
 }
 $grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
- {
+ AFRF_WIN {
   coords 5869.864 121.781 6145.271
   m_sTitle "Зона падения захвачена"
   m_sFactionKey "RHS_AFRF"
  }
- {
+ USAF_WIN {
   coords 5888.533 121.781 6145.271
   m_sTitle "Упавший спутник удержан"
   m_sFactionKey "RHS_USAF"
