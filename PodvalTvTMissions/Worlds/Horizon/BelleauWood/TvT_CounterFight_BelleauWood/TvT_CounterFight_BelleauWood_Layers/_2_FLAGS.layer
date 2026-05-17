@@ -1,0 +1,78 @@
+GenericEntity FlagUS : "{52327EA0926E4EC7}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_02_V1_USAF.et" {
+ components {
+  SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+   m_aObjectiveNames {
+    "AFRF_WIN"
+    "USAF_WIN"
+   }
+  }
+  BaseActionsManagerComponent "{6202D4E6F133BF4A}" {
+   additionalActions {
+    PS_FlagChangeAction "{6202D4E6A53D4B3C}" {
+     Duration 10.2
+     m_bUseAnimation 1
+    }
+   }
+  }
+ }
+ coords 5561.622 176.573 5037.342
+}
+$grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+ FLAG {
+  coords 5662.882 164.971 5759.506
+  angles 0 90 0
+  m_MarkerColor 0.561 0.071 0.071 1
+  m_sQuadName "flag-2"
+  m_fWorldSize 50
+  m_sDescription "Флаг РФ"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+  }
+  m_iZOrder 10
+  m_bShowForAnyFaction 1
+ }
+ FLAG2 {
+  coords 5561.619 176.569 5037.357
+  angles 0 90 0
+  m_MarkerColor 0 0.125 0.502 1
+  m_sQuadName "flag-2"
+  m_fWorldSize 50
+  m_sDescription "Флаг США"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+  }
+  m_iZOrder 10
+  m_bShowForAnyFaction 1
+ }
+}
+GenericEntity FlagRF : "{F5EF4223ACA6169D}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_02_V1_AFRF.et" {
+ components {
+  SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+   m_aObjectiveNames {
+    "AFRF_WIN"
+    "USAF_WIN"
+   }
+   m_bUseAdvanceGameState 1
+   m_sUseNotification 1
+  }
+  BaseActionsManagerComponent "{6202D4E6F133BF4A}" {
+   additionalActions {
+    PS_FlagChangeAction "{6202D4E6A53D4B3C}" {
+     Duration 10.2
+    }
+   }
+  }
+ }
+ coords 5662.819 164.966 5759.68
+ angles -2.702 115.33 -2.625
+}
