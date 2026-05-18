@@ -1,0 +1,80 @@
+GenericEntity : "{04B5CC36F933A2D4}Prefabs/System/DRG_DateTimeInjectorPrefab.et" {
+ components {
+  DRG_DateTimeInjectorComponent "{658E74C94A2C74AE}" {
+   m_iYear 2019
+   m_iDay 21
+   m_iHours 0
+   m_iMinutes 58
+  }
+ }
+ coords 6687.139 110.987 945.525
+}
+$grp SCR_EditorRestrictionZoneEntity : "{6144B0BE2EAC6897}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneMedium.et" {
+ {
+  coords 4278.632 17.844 3460.917
+ }
+ {
+  coords 3840.458 17.844 6937.063
+ }
+ {
+  coords 2046.202 18.531 5928.363
+ }
+ {
+  coords 6083.795 123.922 6150.772
+ }
+ {
+  coords 2295.618 17.843 1915.076
+ }
+}
+SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+ coords 6374.646 17.843 2987.028
+ m_fWarnRadius 184
+ m_fZoneRadius 224
+ m_fZoneTeleportedRadius 234
+ {
+  GenericEntity {
+   ID "59D673B36B893D84"
+   components {
+    SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+     m_fRadius 184
+    }
+   }
+  }
+ }
+}
+$grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+ {
+  coords 6313.166 27.864 2967.623
+  angles 0 90 0
+  m_sImageSetGlow "{E23427CAC80DA8B7}UI/Textures/Icons/icons_mapMarkersUI.imageset"
+  m_MarkerColor 0.784 0.171 0 1
+  m_sQuadName "mark-exclamation"
+  m_fWorldSize 50
+  m_sDescription "ПТУР"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "Ses_TKA"
+  }
+ }
+ {
+  coords 6290.931 24.544 3088.157
+  angles 0 90 0
+  m_sImageSetGlow "{E23427CAC80DA8B7}UI/Textures/Icons/icons_mapMarkersUI.imageset"
+  m_MarkerColor 0.784 0.171 0 1
+  m_sQuadName "mark-exclamation"
+  m_fWorldSize 50
+  m_sDescription "ПТУР"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "Ses_TKA"
+  }
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 6882.253 142.454 909.366
+}

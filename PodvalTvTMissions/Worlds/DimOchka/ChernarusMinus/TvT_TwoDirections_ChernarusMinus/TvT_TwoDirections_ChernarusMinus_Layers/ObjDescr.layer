@@ -6,7 +6,8 @@ $grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescripti
   m_sTextData "ПРАВИЛА:"\
   "1. США запрещено покидать территорию города (синяя линия). Разрешено покидать разведке;"\
   "2. Разведка США может заезжать в красный триггер (подконтрольная территория РФ);"\
-  "3. Запрещено что-либо брать из грузовика с боеприпасами. Он существует только для пополнения БК градов."\
+  "3. Запрещено что-либо брать из грузовика с боеприпасами. Он существует только для пополнения БК градов;"\
+  "4. РФ для победы нужно захватить центр города и один из кварталов (жилой или пром.зона)."\
   ""\
   "ЗАДАЧИ:"\
   "• РФ: "\
@@ -42,37 +43,37 @@ $grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescripti
  }
 }
 $grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
- obj1 {
+ AFRF_WIN_1 {
   coords 6927.594 8.248 6204.361
   m_sTitle "Жилой квартал захвачен"
   m_iScore 25
   m_sFactionKey "RHS_AFRF"
  }
- {
+ USAF_WIN_1 {
   coords 6927.594 8.248 6204.361
   m_sTitle "Жилой квартал удержан"
   m_iScore 25
   m_sFactionKey "RHS_USAF"
  }
- obj2 {
+ AFRF_WIN_2 {
   coords 6927.594 8.248 6204.361
   m_sTitle "Пром. зона захвачена"
   m_iScore 25
   m_sFactionKey "RHS_AFRF"
  }
- obj3 {
+ AFRF_WIN_3 {
   coords 6927.594 8.248 6204.361
   m_sTitle "Центр города захвачен"
   m_iScore 55
   m_sFactionKey "RHS_AFRF"
  }
- {
+ USAF_WIN_2 {
   coords 6927.594 8.248 6204.361
   m_sTitle "Пром. зона удержана"
   m_iScore 25
   m_sFactionKey "RHS_USAF"
  }
- {
+ USAF_WIN_3 {
   coords 6927.594 8.248 6204.361
   m_sTitle "Центр города удержан"
   m_iScore 55
