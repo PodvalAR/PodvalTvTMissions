@@ -1,0 +1,166 @@
+SCR_AIGroup US_000_KS : "{15062749E6AB45DE}Prefabs/Groups/BLUFOR/US/Regular/Group_US_Regular_PL.et" {
+ coords 4961.932 28.378 11873.518
+ angles 0 -90.48 0
+ m_aUnitPrefabSlots +{
+  "{7FB18B47A7957C05}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_Medic.et"
+  "{F1DA9E09CC79F8FD}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_LAT.et"
+  "{5A3F99571616FD80}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_Marksman.et"
+ }
+}
+$grp SCR_AIGroup : "{6E2296FB529E9097}Prefabs/Groups/BLUFOR/US/dim_US_SPN_Force_Recon.et" {
+ US_500_SPN {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B0F0D80A730}" {
+    m_iCompanyCallsign 5
+   }
+  }
+  coords 4908.923 28.594 11745.327
+  angles 0 -89.461 0
+  m_aUnitPrefabSlots {
+   "{ED4E0ACF6FD3C80A}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_SL.et"
+   "{8D1385F1AAE00333}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_GL.et"
+   "{61F3754A8D172C22}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_Rifleman.et"
+   "{F7FE66E14E368DF9}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_RTO.et"
+   "{090346732FB897D1}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_Medic.et"
+   "{61F3754A8D172C22}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_Rifleman.et"
+   "{6956B24D18F9C0EC}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_Sapper.et"
+   "{07DB2A2C2FD68F06}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_Sniper.et"
+  }
+ }
+ US_501_SPN {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B0F0D80A730}" {
+    m_iCompanyCallsign 5
+    m_iSquadCallsign 1
+   }
+  }
+  coords 4908.203 28.594 11773.27
+  angles 0 -89.461 0
+  m_aUnitPrefabSlots {
+   "{ED4E0ACF6FD3C80A}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_SL.et"
+   "{8D1385F1AAE00333}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_GL.et"
+   "{61F3754A8D172C22}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_Rifleman.et"
+   "{F7FE66E14E368DF9}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_RTO.et"
+   "{090346732FB897D1}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_Medic.et"
+   "{61F3754A8D172C22}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_Rifleman.et"
+   "{6956B24D18F9C0EC}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_Sapper.et"
+   "{07DB2A2C2FD68F06}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_Sniper.et"
+  }
+ }
+}
+$grp SCR_AIGroup : "{AC37A0539DB4CA1C}Prefabs/Groups/BLUFOR/US/Regular/Group_US_Regular_Heli.et" {
+ US_400_HELI {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 4
+   }
+  }
+  coords 4892.379 28.594 11767.144
+ }
+ US_401_HELI {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 4
+    m_iSquadCallsign 1
+   }
+  }
+  coords 4893.743 28.591 11738.405
+ }
+ US_402_HELI {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 4
+    m_iSquadCallsign 2
+   }
+  }
+  coords 10661.504 2.344 11802.734
+  angles 0 -123.963 0
+ }
+}
+SCR_AIGroup US_301_Crew : "{E71CAFF0C1F1CB6C}Prefabs/Groups/BLUFOR/US/Regular/Group_US_Regular_Motorized.et" {
+ components {
+  PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+   m_iCompanyCallsign 3
+   m_iSquadCallsign 1
+  }
+ }
+ coords 4969.097 28.281 11946.419
+ angles 0 1.294 0
+ m_aUnitPrefabSlots {
+  "{BF6034039839323E}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_SL.et"
+  "{C278D8FBFDAA0EA7}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_SR.et"
+  "{D2E8C51CAABD902D}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_AR.et"
+  "{DF3DBB3D5D0AF907}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_GL.et"
+  "{F1DA9E09CC79F8FD}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_LAT.et"
+  "{088464049E963097}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_Rifle.et"
+  "{0004529856D9B351}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_CrewGunner.et"
+  "{A5EA776B389D1583}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_Crew.et"
+ }
+}
+$grp SCR_AIGroup : "{EE2BCF5671083A76}Prefabs/Groups/BLUFOR/US/Regular/Group_US_Regular_Squad.et" {
+ US_100_AR {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 4946.631 28.477 11894.424
+  angles 0 88.863 0
+ }
+ US_101_AR {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 4957.326 28.313 11903.925
+  angles 0 -91.068 0
+ }
+ US_200_AR {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 4944.766 28.367 11924.512
+  angles 0 87.774 0
+ }
+ US_201_AR {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 4957.228 28.253 11934.978
+  angles 0 -92.494 0
+  m_aUnitPrefabSlots {
+   "{BF6034039839323E}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_SL.et"
+   "{B8A7CE52FEBF88FD}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_TL.et"
+   "{D2E8C51CAABD902D}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_AR.et"
+   "{DF3DBB3D5D0AF907}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_GL.et"
+   "{F1DA9E09CC79F8FD}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_LAT.et"
+   "{B8A7CE52FEBF88FD}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_TL.et"
+   "{D2E8C51CAABD902D}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_AR.et"
+  }
+ }
+ US_300_AR {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 4943.004 28.515 11958.996
+  angles 0 91.099 0
+  m_aUnitPrefabSlots {
+   "{BF6034039839323E}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_SL.et"
+   "{B8A7CE52FEBF88FD}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_TL.et"
+   "{D2E8C51CAABD902D}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_AR.et"
+   "{DF3DBB3D5D0AF907}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_GL.et"
+   "{F1DA9E09CC79F8FD}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_LAT.et"
+   "{B8A7CE52FEBF88FD}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_TL.et"
+   "{D2E8C51CAABD902D}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_AR.et"
+  }
+ }
+}
