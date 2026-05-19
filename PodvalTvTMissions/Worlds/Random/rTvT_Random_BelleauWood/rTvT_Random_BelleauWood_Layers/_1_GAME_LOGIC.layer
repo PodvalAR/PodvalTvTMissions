@@ -1,0 +1,35 @@
+GenericEntity : "{574B8B93E7DDD76D}Prefabs/System/MissionRandomizer/GUB_RandomizeMissionPrefab.et" {
+ components {
+  GUB_RandomizeLossesComponent "{68DEB995D025C63E}" {
+   m_bIsAdvanceGameStage 0
+   m_sMessageDefendWin "Атака понесла критические потери! Победа Обороны!"
+   m_sMessageAttackWin "Оборона понесла критические потери! Победа Атаки!"
+   m_aObjectiveNames {
+    "ObjectiveAttackWin"
+    "ObjectiveDefendWin"
+   }
+  }
+  GUB_RandomizeMissionComponent "{68A6D25C69D035C5}" {
+   m_aFactionPrefabs {
+    GUB_FactionPrefab "{68B6C7459A1E0B05}" : "{B64CB0094354987B}Configs/RandomPrefabConfig_BellauWood_Test.conf" {
+     m_aEnemyFactionKeys +{
+      "RHS_ION"
+      "Ses_CDF"
+     }
+    }
+   }
+   m_fMinDistanceBetweenLocations 1500
+   m_fMaxDistanceBetweenLocations 4000
+   m_bMarkersOnlyOnBriefing 1
+   m_MarkerMakerConfigPath "{F4A0B8B3CF446139}Configs/MarkerMakerConfig_Random.conf"
+  }
+ }
+ coords 0 0 0
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 1800
+  }
+ }
+}
