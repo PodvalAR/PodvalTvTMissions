@@ -1,0 +1,83 @@
+$grp SCR_AIGroup : "{BB4FFFEF193951C4}Worlds/S1lENCE_prefabs/OPFOR/FSB/Group_FSB.et" {
+ F_RF200 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 2750.62 156.218 9526.674
+  angles 0 -99.468 0
+ }
+ F_RF201 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 2745.769 155.671 9541.547
+  angles 0 -94.693 0
+ }
+}
+SCR_AIGroup F_RF000 : "{C93CC37180C2D8A0}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_KS.et" {
+ coords 2863.89 154.201 9779.034
+ angles 0 -143.745 0
+ m_aUnitPrefabSlots {
+  "{6D3E95D0A37D54A3}Worlds/S1lENCE_prefabs/OPFOR/Modern/Modern_PL.et"
+  "{A32C758584D2E4AB}Worlds/S1lENCE_prefabs/OPFOR/Modern/Modern_StarshyStrelok.et"
+  "{58D892FA2DE927C4}Worlds/S1lENCE_prefabs/OPFOR/Modern/Modern_Strelok.et"
+  "{CBBF034CE251D3C3}Worlds/S1lENCE_prefabs/OPFOR/Modern/Modern_MG.et"
+  "{C9E4770F9B565A5D}Worlds/S1lENCE_prefabs/OPFOR/Modern/Modern_Medic.et"
+  "{947DA3777BA9AE0A}Worlds/S1lENCE_prefabs/OPFOR/Modern/Modern_GL.et"
+  "{CC15B14D564556E4}Worlds/S1lENCE_prefabs/OPFOR/Modern/Modern_sniper.et"
+ }
+}
+$grp SCR_AIGroup : "{EF3647A96763B0EA}Worlds/S1lENCE_prefabs/OPFOR/Modern/Groups/Group_Modern_Base.et" {
+ F_RF001 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iSquadCallsign 1
+   }
+  }
+  coords 2888.6 156.778 9769.128
+  angles 0 -122.065 0
+ }
+ F_RF002 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iSquadCallsign 2
+   }
+  }
+  coords 2907.645 156.53 9735.807
+  angles 0 -114.282 0
+ }
+ F_RF100 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 2871.824 156.532 9662.131
+  angles 0 -113.032 0
+ }
+ F_RF101 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 2861.646 156.684 9696.271
+  angles 0 -102.946 0
+ }
+ F_RF102 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 2843.698 156.545 9728.953
+  angles 0 -130.716 0
+ }
+}
