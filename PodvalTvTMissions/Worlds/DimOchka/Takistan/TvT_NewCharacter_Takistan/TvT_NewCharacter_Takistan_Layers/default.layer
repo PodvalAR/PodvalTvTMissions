@@ -1,0 +1,21 @@
+SCR_AIWorld : "{3DE6090FC602E566}Prefabs/AI/SCR_AIWorld_Takistan.et" {
+ coords 8616.412 453.946 112.821
+}
+PerceptionManager PerceptionManager1 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 8564.922 473.797 131.91
+}
+PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
+ components {
+  SCR_TimeAndWeatherHandlerComponent "{5EE3229927D4D2F5}" {
+   m_bUsePredefineStartingTimeAndWeather 1
+   m_aStartingWeatherAndTime {
+    SCR_TimeAndWeatherState "{69695EE2FBBC2C52}" {
+     m_sWeatherPresetName "Cloudy"
+     m_iStartingHour 4
+     m_iStartingMinutes 40
+    }
+   }
+  }
+ }
+ coords 8538.611 489.909 114.965
+}

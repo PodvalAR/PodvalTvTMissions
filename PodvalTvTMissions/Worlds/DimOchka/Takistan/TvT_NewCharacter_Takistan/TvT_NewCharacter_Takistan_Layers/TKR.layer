@@ -1,0 +1,127 @@
+SCR_AIGroup DEF_HQ : "{0217FB6BBEC0F7E1}Prefabs/Groups/INDFOR/TKR/Group_Ses_TKR_PL_1.et" {
+ coords 10279.371 375.259 2377.423
+ angles 0 -19.736 0
+ m_aUnitPrefabSlots {
+  "{9E55471E41BECBED}Worlds/DimOchka/Takistan/TvT_NewCharacter_Takistan/dim_TKR_PL_VIP.et"
+ }
+ m_sCustomNameSet "Шах Ли Валь"
+}
+$grp Vehicle : "{2B901976DA134BB0}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_uncovered_Turret_Ses_TKA_KORD_SPP.et" {
+ UAZ469_uncovered_Turret_Ses_TKA_KORD_SPP1 {
+  coords 10148.987 372.117 2356.16
+  angles -1.421 -90 0
+ }
+ UAZ469_uncovered_Turret_Ses_TKA_KORD_SPP2 {
+  coords 10162.125 372.475 2356.16
+  angles -1.421 -90 0
+ }
+}
+$grp SCR_AIGroup : "{3D1CD4754C0AF059}Prefabs/Groups/INDFOR/TKR/Group_Ses_TKR_Recon.et" {
+ REC1 {
+  components {
+   PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
+    m_iCompanyCallsign 4
+    m_iSquadCallsign 1
+   }
+  }
+  coords 10148.713 372.192 2359.89
+  angles 0 -180 0
+  m_sCustomNameSet "Разведка с ПТУР"
+ }
+ REC2 {
+  components {
+   PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
+    m_iCompanyCallsign 4
+   }
+  }
+  coords 10156.751 372.192 2359.89
+  angles 0 -180 0
+  m_sCustomNameSet "Разведка с ПТУР"
+ }
+}
+$grp Vehicle : "{6773D9209B13A292}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_uncovered_Ses_TKA.et" {
+ UAZ469_uncovered_Ses_TKA2 {
+  coords 10143.378 371.978 2355.863
+  angles -1.421 -90 0
+ }
+ UAZ469_uncovered_Ses_TKA1 {
+  coords 10155.632 372.314 2355.863
+  angles -1.421 -90 0
+ }
+}
+$grp SCR_AIGroup : "{A33B404F66AC1ED8}Prefabs/Groups/INDFOR/TKR/Group_Ses_TKR_Rifle.et" {
+ DEF_R {
+  components {
+   PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 10285.827 375.608 2380.094
+  angles 0 -23.021 0
+  m_sCustomNameSet "Охрана Шаха"
+ }
+ DEF_R2 {
+  components {
+   PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 10296.704 378.156 2384.717
+  angles 0 -21.709 0
+  m_sCustomNameSet "Охрана Шаха на УРАЛ 4320 с ЗУ-23"
+ }
+ DEF_R3 {
+  components {
+   PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 10211.443 373.656 2390.9
+  angles 0 135.496 0
+  m_sCustomNameSet "Охрана Шаха"
+ }
+ DEF_R4 {
+  components {
+   PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 10200.603 373.3 2380.245
+  angles 0 135.496 0
+  m_sCustomNameSet "Охрана Шаха"
+ }
+ DEF_R5 {
+  components {
+   PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 10202.222 373.3 2368.562
+  angles 0 -46.48 0
+  m_sCustomNameSet "Охрана Шаха на Урал 4320 с ЗУ-23"
+ }
+}
+$grp Vehicle : "{FD109F3702AAB392}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_ZU23.et" {
+ Ural4320_ZU3 {
+  coords 10305.644 377.708 2394.889
+  angles -5.836 -111.276 -0.159
+  m_sAttachmentGroupName "DEF_R2"
+ }
+ Ural4320_ZU2 {
+  coords 10200.155 372.661 2370.629
+  angles -0.427 -131.295 0.375
+  m_sAttachmentGroupName "DEF_R5"
+ }
+ Ural4320_ZU1 {
+  coords 10194.928 372.609 2360.639
+  angles 0.147 165.001 0.549
+  m_sAttachmentGroupName "DEF_R5"
+ }
+ Ural4320_ZU4 {
+  coords 10295.067 376.548 2390.771
+  angles -5.836 -111.276 -0.159
+  m_sAttachmentGroupName "DEF_R2"
+ }
+}
