@@ -1,0 +1,54 @@
+Vehicle LAV25_RHS1 : "{3312ADBF53A16DD8}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS.et" {
+ coords 4973.024 28.281 11950.478
+ angles 0 -87.842 0
+ m_sAttachmentGroupName "US_301_Crew"
+}
+Vehicle M151A2_transport1 : "{47D94E1193A88497}Prefabs/Vehicles/Wheeled/M151A2/M151A2_transport.et" {
+ coords 4958.008 28.344 11875.036
+ angles -0.016 -178.972 0.895
+ m_sAttachmentGroupName "US_000_KS"
+}
+$grp Vehicle : "{81FDAD5EB644CC3D}Prefabs/Vehicles/Wheeled/M923A1/M923A1_transport_covered.et" {
+ M923A1_transport_covered1 {
+  coords 4951.127 28.42 11890.094
+  angles -0.025 178.398 -0.895
+  m_sAttachmentGroupName "US_100_AR"
+ }
+ M923A1_transport_covered2 {
+  coords 4952.992 28.325 11907.258
+  angles 0.895 178.397 -0.025
+  m_sAttachmentGroupName "US_101_AR"
+ }
+ M923A1_transport_covered3 {
+  coords 4949.755 28.25 11919.874
+  angles 0 178.397 0
+  m_sAttachmentGroupName "US_200_AR"
+ }
+ M923A1_transport_covered4 {
+  coords 4952.692 28.281 11938.26
+  angles 0 176.939 0
+  m_sAttachmentGroupName "US_201_AR"
+ }
+ M923A1_transport_covered5 {
+  coords 4947.273 28.324 11954.488
+  angles -0.022 178.59 -0.895
+  m_sAttachmentGroupName "US_300_AR"
+ }
+}
+$grp Vehicle : "{999FC99369291EA4}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed_AP.et" {
+ UH1H_armed_AP1 {
+  coords 4893.839 28.594 11748.502
+  angles 0 -91.822 0
+  m_sAttachmentGroupName "US_401_HELI"
+ }
+ UH1H_armed_AP2 {
+  coords 4893.721 28.594 11776.589
+  angles 0 -90.412 0
+  m_sAttachmentGroupName "US_400_HELI"
+ }
+}
+Vehicle UH1H_armed_AP_HEDP1 : "{9C9BF0FF2BAA72E1}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed_AP_HEDP.et" {
+ coords 10661.51 2.344 11795.564
+ angles 0 -93.225 0
+ m_sAttachmentGroupName "US_402_HELI"
+}
