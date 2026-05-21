@@ -1,0 +1,167 @@
+$grp GenericEntity : "{3D78D7D606FF9818}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_NoCapture.et" {
+ flag {
+  coords 4712.494 22.939 2593.041
+ }
+ flag2 {
+  coords 5172.958 18.771 2300.344
+ }
+ flag3 {
+  coords 4702.615 17.225 2448.969
+ }
+}
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{696ACC4A038C6C4F}" {
+     m_sSuccessObjectiveNames {
+      "NAPA_WIN2"
+     }
+     m_sFailedObjectiveNames {
+      "AFRF_WIN"
+     }
+     m_Timer GUB_ZoneControlTimer "{696ACC4A0DE3A059}" {
+      timeToComplete 150
+     }
+     m_ZoneController GUB_ZoneController "{696ACC4A0FDB3CFB}" {
+      m_sZoneEntityName "capture"
+     }
+     m_FlagController GUB_FlagController "{696ACC4A0E035897}" {
+      m_aFlagNames {
+       "flag"
+       "flag2"
+       "flag3"
+      }
+      m_fStartFactionKey "RHS_AFRF"
+      m_fEndFactionKey "Ses_NAPA"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{696ACC4A1237FF9C}" {
+       m_sFirstFactionKey "Ses_NAPA"
+       m_sSecondFactionKey "RHS_AFRF"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 4725.636 0 1573.225
+}
+PolylineShapeEntity capture : "{7019844BAD5C4DD8}Prefabs/PolyZone/PolyZone_Border.et" {
+ components {
+  PS_PolyZone "{60E90266F25533F6}" {
+   m_mPolygonTexture "{62F4404928D33DB5}UI/layouts/Textures/Grid1b.edds"
+   m_cPolygonColor 0.506 0.584 0.812 1
+   m_fPolygonUVScale 0.44
+   m_cPolygonBorderColor 0 0.125 0.502 1
+   m_fPolygonBorderWidth 6
+   m_bReversed 0
+   m_aVisibleForFactions {
+    "RHS_AFRF"
+    "Ses_NAPA"
+    "Ses_Chdkz"
+    ""
+   }
+  }
+ }
+ coords 4549.466 6.388 2470.381
+ Points {
+  ShapePoint "{696ACC4CF28993BD}" {
+   Position 52.686 2.862 78.621
+  }
+  ShapePoint "{696ACC4D056AC57F}" {
+   Position 46.928 2.862 99.8
+  }
+  ShapePoint "{696ACC4D045F6355}" {
+   Position 60.875 2.862 133.656
+  }
+  ShapePoint "{696ACC4D071289C7}" {
+   Position 64.556 2.862 141.909
+  }
+  ShapePoint "{696ACC4D0657690E}" {
+   Position 93.846 2.862 158.905
+  }
+  ShapePoint "{696ACC4D000A331A}" {
+   Position 136.514 2.831 164.713
+  }
+  ShapePoint "{696ACC4D0375A0FD}" {
+   Position 164.239 1.577 180.219
+  }
+  ShapePoint "{696ACC4D0D033670}" {
+   Position 294.412 2.862 105.774
+  }
+  ShapePoint "{696ACC4D0FAB004D}" {
+   Position 363.187 2.92 55.335
+  }
+  ShapePoint "{696ACC4D0941D547}" {
+   Position 598.171 2.862 -77.792
+  }
+  ShapePoint "{696ACC4D087B23D1}" {
+   Position 633.987 2.018 -98.069
+  }
+  ShapePoint "{696ACC4D15B59A3B}" {
+   Position 608.014 2.863 -138.488
+  }
+  ShapePoint "{696ACC4D154C8D09}" {
+   Position 706.527 1.525 -202.977
+  }
+  ShapePoint "{696ACC4D1DA2CEDC}" {
+   Position 647.773 2.862 -294.906
+  }
+  ShapePoint "{696ACC4D1BEC0457}" {
+   Position 479.609 2.831 -199.673
+  }
+  ShapePoint "{696ACC4D1A602895}" {
+   Position 375.359 2.83 -137.352
+  }
+  ShapePoint "{696ACC4D248242BC}" {
+   Position 335.303 2.862 -118.274
+  }
+  ShapePoint "{696ACC4D245E9B23}" {
+   Position 274.482 2.83 -87.102
+  }
+  ShapePoint "{696ACC4D27104CCB}" {
+   Position 214.821 2.152 -61.701
+  }
+  ShapePoint "{696ACC4D26CAFD37}" {
+   Position 193.027 1.828 -54.954
+  }
+  ShapePoint "{696ACC4D21B1878B}" {
+   Position 155.342 2.293 -41.427
+  }
+  ShapePoint "{696ACC4D2160DD53}" {
+   Position 130.284 2.011 -31.705
+  }
+  ShapePoint "{696ACC4D20C7E20C}" {
+   Position 97.286 1.297 -27.812
+  }
+  ShapePoint "{696ACC4D23E4EB8B}" {
+   Position 61.482 0.118 -24.686
+  }
+  ShapePoint "{696ACC4D22A6C7B6}" {
+   Position 32.154 -0.16 -17.044
+  }
+  ShapePoint "{696ACC4D22424F2F}" {
+   Position 11.261 -0.218 -7.522
+  }
+ }
+ {
+  PS_PolyZoneTrigger {
+   ID "60FD050E1E83544C"
+   m_polyZoneEffect PS_PolyZoneEffectRestricted "{60FD050E0DC2A2AB}" {
+    m_fKillTime 10
+   }
+   m_sGroupKey "DEF_"
+  }
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 4798.521 0 1542.068
+}
