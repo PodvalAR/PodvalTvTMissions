@@ -22,18 +22,6 @@ PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_Game
 }
 $grp Vehicle : "{447CFE8D73F95C3F}Prefabs/Vehicles/Wheeled/BTR70/BTR70_AFRF_camo.et" {
  BTR70_AFRF_camo1 {
-  components {
-   SlotManagerComponent "{55BCE45E438E4CFF}" {
-    Slots {
-     RegisteringComponentSlotInfo Flag {
-      PivotID "v_antenna_01"
-      Offset 0 1.8071 0
-      Angles 0 -120 0
-      Prefab "{2F232A8E976012BE}Prefabs/Misc/Flag_AFRF.et"
-     }
-    }
-   }
-  }
   coords 6490.885 214.797 2396.922
   angles 0 30 0
   m_sAttachmentGroupName "rus3"
@@ -43,8 +31,8 @@ $grp Vehicle : "{447CFE8D73F95C3F}Prefabs/Vehicles/Wheeled/BTR70/BTR70_AFRF_camo
    SlotManagerComponent "{55BCE45E438E4CFF}" {
     Slots {
      RegisteringComponentSlotInfo Flag {
-      PivotID "v_antenna_01"
-      Offset 0 1.8071 0
+      PivotID "v_body"
+      Offset 0.6563 3.1082 -1.1377
       Angles 0 -120 0
       Prefab "{2F232A8E976012BE}Prefabs/Misc/Flag_AFRF.et"
      }
@@ -75,10 +63,8 @@ Vehicle GD_GAZ_TIGR_v2_KORD1_MP_Burned1 : "{C23CA73A11C4251E}Prefabs/Vehicle/GAZ
 Vehicle GD_GAZ_TIGR_v2_KORD1_MP2 : "{C97BD310208285CF}Prefabs/Vehicle/GAZ_Retexture/Military Police/Prefabs/GD_GAZ_TIGR_v2_KORD1_MP.et" {
  coords 6471.004 214.469 2386.642
  angles 0 64.777 0
- m_sAttachmentGroupName "rus"
 }
 Vehicle GD_GAZ_TIGR_v2_KORD1_MP_FLAG1 : "{CBF41167C0DDF01C}Prefabs/Vehicle/GAZ_Retexture/Military Police/Prefabs/GD_GAZ_TIGR_v2_KORD1_MP_FLAG.et" {
  coords 6481.554 214.587 2391.876
  angles 0.818 65.976 -0.364
- m_sAttachmentGroupName "rus2"
 }
