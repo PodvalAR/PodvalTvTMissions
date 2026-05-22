@@ -1,0 +1,363 @@
+SCR_AIWorld : "{3D0FE80570D5BFCC}Prefabs/AI/SCR_AIWorld_Anizay.et" {
+ coords 4437.33 203.939 3401.409
+}
+PerceptionManager PerceptionManager2 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 2638.406 174.488 3521.052
+}
+PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
+ coords 1069.526 178.081 3071.562
+}
+SCR_AIGroup CIV_VIP : "{000CD338713F2B5A}Prefabs/AI/Groups/Group_Base.et" {
+ coords 5318.639 250.531 3381.197
+ angles 0 -45 0
+ m_faction "CIV"
+ m_aUnitPrefabSlots {
+  "{A4C819E52261F2D7}Prefabs/Characters/Factions/INDFOR/CIV/VIP/dim_Shepard.et"
+ }
+ m_sCustomNameSet "Генерал Харбор"
+}
+SCR_AIGroup HQ : "{09F6CBFB9260D79C}Prefabs/Groups/BLUFOR/RHS_USAF/USMC/Desert/dim_USMC_D_HQ.et" {
+ coords 8390.121 113.412 7052.99
+ angles 0 90 0
+}
+$grp SCR_AIGroup : "{1CF5EFE6FE5047FB}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_Elite_Force.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 1
+   }
+  }
+  coords 5338.674 250.5 3413.994
+  angles 0 138.062 0
+  m_aUnitPrefabSlots {
+   "{680C6463897436EC}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_SL_4x_2.et"
+   "{17EC666D101F5E2E}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_TL_4x_2.et"
+   "{B615945A8AC2AFF4}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_AR_2.et"
+   "{8F7DF1662C20DC91}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_SMAW_Opt_2.et"
+   "{606C8A79C12683DA}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Marksman_2.et"
+  }
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 5326.308 250.5 3400.753
+  angles 0 135 0
+  m_aUnitPrefabSlots {
+   "{680C6463897436EC}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_SL_4x_2.et"
+   "{17EC666D101F5E2E}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_TL_4x_2.et"
+   "{B615945A8AC2AFF4}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_AR_2.et"
+   "{8F7DF1662C20DC91}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_SMAW_Opt_2.et"
+   "{606C8A79C12683DA}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Marksman_2.et"
+  }
+ }
+}
+$grp SCR_AIGroup : "{3298D6DA95D73EAD}Prefabs/Groups/BLUFOR/RHS_USAF/USMC/Desert/dim_USMC_D_Rifle_Squad.et" {
+ SQ3 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 3860.375 139.36 7283.392
+  angles 0 90 0
+  m_aUnitPrefabSlots {
+   "{CBD3035D8422544A}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/4x/dim_USMC_Modern_D_SL_4x.et.et"
+   "{3B8D013F339D1FC2}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/4x/dim_USMC_Modern_D_TL_1_4x.et.et"
+   "{AB4C01E03A6DB224}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_MG.et"
+   "{F48EA1DBA395CFED}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_GL.et"
+   "{3EEC3716FD9A9756}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/4x/dim_USMC_Modern_D_Rifleman_Holo.et"
+   "{384685D103D1E575}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/4x/dim_USMC_Modern_D_TL_2_4x.et"
+   "{AB4C01E03A6DB224}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_MG.et"
+   "{F48EA1DBA395CFED}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_GL.et"
+   "{0F322EF158E4EA64}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_Rifleman_2.et"
+  }
+ }
+ SQ4 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 3857.683 140.233 7305.85
+  angles -3.923 87.167 -5.403
+  m_aUnitPrefabSlots {
+   "{CBD3035D8422544A}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/4x/dim_USMC_Modern_D_SL_4x.et.et"
+   "{3B8D013F339D1FC2}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/4x/dim_USMC_Modern_D_TL_1_4x.et.et"
+   "{AB4C01E03A6DB224}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_MG.et"
+   "{F48EA1DBA395CFED}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_GL.et"
+   "{3EEC3716FD9A9756}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/4x/dim_USMC_Modern_D_Rifleman_Holo.et"
+   "{384685D103D1E575}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/4x/dim_USMC_Modern_D_TL_2_4x.et"
+   "{AB4C01E03A6DB224}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_MG.et"
+   "{F48EA1DBA395CFED}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_GL.et"
+   "{0F322EF158E4EA64}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_Rifleman_2.et"
+  }
+ }
+ SQ6 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 3
+   }
+  }
+  coords 3855.594 139.666 7338.317
+  angles 0 90 0
+  m_aUnitPrefabSlots {
+   "{CBD3035D8422544A}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/4x/dim_USMC_Modern_D_SL_4x.et.et"
+   "{3B8D013F339D1FC2}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/4x/dim_USMC_Modern_D_TL_1_4x.et.et"
+   "{AB4C01E03A6DB224}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_MG.et"
+   "{F48EA1DBA395CFED}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_GL.et"
+   "{3EEC3716FD9A9756}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/4x/dim_USMC_Modern_D_Rifleman_Holo.et"
+   "{384685D103D1E575}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/4x/dim_USMC_Modern_D_TL_2_4x.et"
+   "{AB4C01E03A6DB224}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_MG.et"
+   "{F48EA1DBA395CFED}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_GL.et"
+   "{0F322EF158E4EA64}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_Rifleman_2.et"
+  }
+ }
+ SQ5 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 2
+   }
+  }
+  coords 3856.724 140.682 7323.002
+  angles 0 81.938 0
+  m_aUnitPrefabSlots {
+   "{CBD3035D8422544A}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/4x/dim_USMC_Modern_D_SL_4x.et.et"
+   "{3B8D013F339D1FC2}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/4x/dim_USMC_Modern_D_TL_1_4x.et.et"
+   "{AB4C01E03A6DB224}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_MG.et"
+   "{F48EA1DBA395CFED}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_GL.et"
+   "{3EEC3716FD9A9756}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/4x/dim_USMC_Modern_D_Rifleman_Holo.et"
+   "{384685D103D1E575}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/4x/dim_USMC_Modern_D_TL_2_4x.et"
+   "{AB4C01E03A6DB224}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_MG.et"
+   "{AE64E70A4407F167}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_Crew_Gunner.et"
+   "{3B3E604C59BDE61E}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_D_Crew_Driver.et"
+  }
+  m_sCustomNameSet "Отряд USMC на LAV-25"
+ }
+ SQ1 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 8390.311 113.409 7040.706
+  angles 0 90 0
+  m_aUnitPrefabSlots {
+   "{CBD3035D8422544A}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/4x/dim_USMC_Modern_D_SL_4x.et.et"
+   "{3B8D013F339D1FC2}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/4x/dim_USMC_Modern_D_TL_1_4x.et.et"
+   "{AB4C01E03A6DB224}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_MG.et"
+   "{F48EA1DBA395CFED}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_GL.et"
+   "{3EEC3716FD9A9756}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/4x/dim_USMC_Modern_D_Rifleman_Holo.et"
+   "{384685D103D1E575}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/4x/dim_USMC_Modern_D_TL_2_4x.et"
+   "{AB4C01E03A6DB224}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_MG.et"
+   "{F48EA1DBA395CFED}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_GL.et"
+   "{0F322EF158E4EA64}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_Rifleman_2.et"
+  }
+ }
+ SQ2 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 8390.311 113.409 7075.773
+  angles 0 90 0
+  m_aUnitPrefabSlots {
+   "{CBD3035D8422544A}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/4x/dim_USMC_Modern_D_SL_4x.et.et"
+   "{3B8D013F339D1FC2}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/4x/dim_USMC_Modern_D_TL_1_4x.et.et"
+   "{AB4C01E03A6DB224}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_MG.et"
+   "{F48EA1DBA395CFED}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_GL.et"
+   "{3EEC3716FD9A9756}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/4x/dim_USMC_Modern_D_Rifleman_Holo.et"
+   "{384685D103D1E575}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/4x/dim_USMC_Modern_D_TL_2_4x.et"
+   "{AB4C01E03A6DB224}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_MG.et"
+   "{F48EA1DBA395CFED}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_GL.et"
+   "{0F322EF158E4EA64}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_Rifleman_2.et"
+  }
+ }
+ us1 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 8389.799 111.532 7092.808
+  angles 0 90.111 0
+  m_aUnitPrefabSlots {
+   "{CBD3035D8422544A}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/4x/dim_USMC_Modern_D_SL_4x.et.et"
+   "{3B8D013F339D1FC2}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/4x/dim_USMC_Modern_D_TL_1_4x.et.et"
+   "{AB4C01E03A6DB224}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_MG.et"
+   "{F48EA1DBA395CFED}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_GL.et"
+   "{384685D103D1E575}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/4x/dim_USMC_Modern_D_TL_2_4x.et"
+   "{8C523C7DD3665A86}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_Medic.et"
+   "{67BE56BB4DF94C17}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_Rifleman.et"
+   "{AE64E70A4407F167}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_Crew_Gunner.et"
+   "{3B3E604C59BDE61E}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_D_Crew_Driver.et"
+  }
+  m_sCustomNameSet "Отряд USMC на LAV-25"
+ }
+}
+$grp SCR_AIGroup : "{3688E2E2E835E748}Prefabs/Groups/BLUFOR/RHS_USAF/USMC/Desert/dim_USMC_D_SniperTeam_M40.et" {
+ SQ8 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iCompanyCallsign 4
+   }
+  }
+  coords 1687.901 140.875 3800.771
+  angles 0 0 0
+ }
+ SQ9 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iCompanyCallsign 4
+    m_iSquadCallsign 1
+   }
+  }
+  coords 5816.345 270.256 919.458
+  angles 0 -60 0
+ }
+}
+SCR_AIGroup DEF_STK : "{4482F48156932D3E}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_STK_3.et" {
+ components {
+  PS_GroupCallsignAssigner "{68B17A4778D2B8BD}" {
+   m_iCompanyCallsign 1
+  }
+ }
+ coords 5301.05 250.531 3345.478
+ angles 0 -45 0
+ m_aUnitPrefabSlots {
+  "{DA5C3C91B94EB0E4}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_SL_3_4x.et"
+  "{68D5FE4F636368AD}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_TL_1_4x.et"
+  "{222957B2ACBAC293}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Rifleman_1_NoSD.et"
+  "{300B9B6AEAA3D2FD}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Rifleman_4_NoSD.et"
+  "{90B50B55D1EC579F}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_SMAW_1_NoSD.et"
+  "{E35B94B055C975C6}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Sapper_2_NoSD.et"
+  "{884ED2D72B48E277}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Medic_1_NoSD.et"
+  "{B5A4124F110F3F38}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Marksman_2.et"
+ }
+}
+$grp GenericEntity : "{6D518F289805B8A1}Prefabs/Weapons/Magazines/NSV/Box_127x108_KORD_50rnd_4AP_1APIT.et" {
+ {
+  coords 5089.769 247.826 3658.047
+ }
+ {
+  coords 5091.132 247.738 3658.544
+ }
+}
+SCR_AIGroup DEF_HQ : "{963AB6930837A26F}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_HQ.et" {
+ coords 5297.671 250.531 3342.099
+ angles 0 -15 0
+}
+$grp SCR_AIGroup : "{A11EB8785A76BA55}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_STK_2.et" {
+ DEF_STK1 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A477EB020B5}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 5313.298 250.531 3357.725
+  angles 0 -45 0
+  m_aUnitPrefabSlots {
+   "{1D90AC0C4C18F3E8}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_SL_2_4x.et"
+   "{68D5FE4F636368AD}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_TL_1_4x.et"
+   "{C267862958299863}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_AR.et"
+   "{222957B2ACBAC293}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Rifleman_1_NoSD.et"
+   "{29C2D03D7A1F37FF}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Rifleman_3_NoSD.et"
+   "{07835B61834BB920}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_m72_2_NoSD.et"
+   "{E35B94B055C975C6}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Sapper_2_NoSD.et"
+   "{884ED2D72B48E277}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Medic_1_NoSD.et"
+  }
+ }
+ DEF_STK2 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A477EB020B5}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 5127.727 250.22 3659.157
+  angles 0 -113.12 0
+  m_aUnitPrefabSlots {
+   "{1735FC41FA08006F}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_SL_1_4x.et"
+   "{68D5FE4F636368AD}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_TL_1_4x.et"
+   "{222957B2ACBAC293}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Rifleman_1_NoSD.et"
+   "{E25581F1AB37C0D3}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Rifleman_2.et"
+   "{07835B61834BB920}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_m72_2_NoSD.et"
+   "{E35B94B055C975C6}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Sapper_2_NoSD.et"
+   "{884ED2D72B48E277}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Medic_1_NoSD.et"
+   "{1958A4565702D3D0}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Marksman.et"
+  }
+ }
+}
+Turret : "{CB76594700021AD3}Prefabs/Weapons/Tripods/6T7/Deployable_Tripod_6T7_KORD_SPP.et" {
+ coords 5090.378 247.717 3658.594
+ angles 0 -21.074 0
+}
+SCR_AIGroup STK : "{CD4A8C98E6B2357B}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_STK_1.et" {
+ components {
+  PS_GroupCallsignAssigner "{68B17A477D63A783}" {
+   m_iCompanyCallsign 1
+   m_iPlatoonCallsign 1
+  }
+ }
+ coords 5371.918 250.531 3422.305
+ angles 0 -45 0
+ m_aUnitPrefabSlots {
+  "{1735FC41FA08006F}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_SL_1_4x.et"
+  "{68D5FE4F636368AD}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_TL_1_4x.et"
+  "{29C2D03D7A1F37FF}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Rifleman_3_NoSD.et"
+  "{300B9B6AEAA3D2FD}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Rifleman_4_NoSD.et"
+  "{099D1F29BEBCB6FA}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_m72_1_NoSD.et"
+  "{E35B94B055C975C6}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Sapper_2_NoSD.et"
+  "{884ED2D72B48E277}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Medic_1_NoSD.et"
+  "{B5A4124F110F3F38}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Marksman_2.et"
+ }
+ m_sCustomNameSet "ION STK - Recon"
+}
+$grp SCR_AIGroup : "{E1F03F7213D8B57D}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_HeliCrew.et" {
+ pil {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 5340.731 250.531 3396.576
+  angles 0 -52.522 0
+  m_aUnitPrefabSlots {
+   "{E3BA31640CD7F87F}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Pilot.et"
+  }
+  m_sCustomNameSet "Пилот MH-6J"
+ }
+ pil2 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 5327.858 250.531 3382.828
+  angles 0 -46.546 0
+  m_aUnitPrefabSlots {
+   "{E3BA31640CD7F87F}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Pilot.et"
+  }
+  m_sCustomNameSet "Пилот MH-6J"
+ }
+}
+SCR_AIGroup SQ7 : "{FB9FC7E199257FEC}Prefabs/Groups/BLUFOR/RHS_USAF/USMC/Desert/dim_USMC_D_ForceRecon.et" {
+ components {
+  PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+   m_iCompanyCallsign 3
+  }
+ }
+ coords 6934.875 120.003 5618.966
+ angles 0 165 0
+}
