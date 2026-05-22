@@ -34,12 +34,6 @@ $grp Vehicle : "{A36B7742CB4CC489}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_Ses_CDF
    SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
     FuelNodes {
      SCR_FuelNode "{5622A70CD4036C5A}" {
-      MaxFuel 0
-      m_fInitialFuelTankState 0
-     }
-     SCR_FuelNode "{5AD4F813E67ECBD3}" {
-      MaxFuel 0
-      m_fInitialFuelTankState 0
      }
     }
    }
@@ -55,18 +49,15 @@ $grp Vehicle : "{A36B7742CB4CC489}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_Ses_CDF
   }
   coords 12266.909 108.305 10928.699
   angles 1.309 72.999 4.272
+  m_sAttachmentGroupName "napa3"
  }
  UAZ469_Ses_CDF2 {
   components {
    SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
     FuelNodes {
      SCR_FuelNode "{5622A70CD4036C5A}" {
-      MaxFuel 0
-      m_fInitialFuelTankState 0
      }
      SCR_FuelNode "{5AD4F813E67ECBD3}" {
-      MaxFuel 0
-      m_fInitialFuelTankState 0
      }
     }
    }
@@ -82,6 +73,7 @@ $grp Vehicle : "{A36B7742CB4CC489}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_Ses_CDF
   }
   coords 12282.043 86.773 10590.584
   angles -4.314 72.591 4.151
+  m_sAttachmentGroupName "napa4"
  }
 }
 $grp SCR_AIGroup : "{D38B5F25EE34A1D4}Prefabs/Groups/INDFOR/Ses_NAPA/dim_Group_NAPA_Squad_3.et" {
@@ -170,5 +162,36 @@ $grp SCR_AIGroup : "{EB059CC44716B326}Prefabs/Groups/INDFOR/Ses_NAPA/dim_Group_N
    "{C0B7FCD4E02BA6F7}Prefabs/Characters/Factions/INDFOR/NAPA/dim/Recon/dim_NAPA_Rec_Sapper.et"
    "{DD46B4F1457C63C5}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_Marksman_2.et"
   }
+ }
+ napa3 {
+  components {
+   PS_GroupCallsignAssigner "{696976B34DD51700}" {
+    m_iCompanyCallsign 4
+   }
+  }
+  coords 12267.469 107.808 10921.947
+  angles 0 -85.386 0
+  m_aUnitPrefabSlots {
+   "{A02DBD9FB1C438A0}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_SL_1.et"
+   "{E6E313AF43801300}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_Rifleman_1.et"
+   "{8AB7274FFF449C2E}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_Rifleman_2.et"
+  }
+  m_sCustomNameSet "Расчет миномета"
+ }
+ napa4 {
+  components {
+   PS_GroupCallsignAssigner "{696976B34DD51700}" {
+    m_iCompanyCallsign 4
+    m_iSquadCallsign 1
+   }
+  }
+  coords 12280.678 87.05 10595.314
+  angles 0 94.614 0
+  m_aUnitPrefabSlots {
+   "{A02DBD9FB1C438A0}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_SL_1.et"
+   "{6F2B6BB6F3A10B45}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_Rifleman_3.et"
+   "{521F4E8E86CD8272}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_Rifleman_4.et"
+  }
+  m_sCustomNameSet "Расчет миномета"
  }
 }
