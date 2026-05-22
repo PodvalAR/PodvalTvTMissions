@@ -17,22 +17,6 @@ SCR_AIGroup : "{1CF5EFE6FE5047FB}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_Elite_For
  }
  m_sCustomNameSet "ДРГ \"Мотылек\""
 }
-Vehicle UH1H_armed_gunship_HE1 : "{21E9A875C0A3C409}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed_gunship_HE.et" {
- components {
-  SCR_VehicleFactionAffiliationComponent "{5882CBD9AC741CEC}" {
-   "faction affiliation" "RHS_ION"
-  }
- }
- coords 10054.131 3.678 10759.905
- angles 0 -162.313 0
- m_sAttachmentGroupName "heli"
- {
-  GameEnvironmentProbeEntity {
-   ID "654C8CC81C957F97"
-   coords 0 1.812 1.074
-  }
- }
-}
 SCR_AIGroup : "{4482F48156932D3E}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_STK_3.et" {
  components {
   PS_GroupCallsignAssigner "{68B17A4778D2B8BD}" {
@@ -161,6 +145,11 @@ $grp SCR_AIGroup : "{A11EB8785A76BA55}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_STK_
   m_sCustomNameSet "Наемники"
  }
 }
+Vehicle AH_6J_Doors_M261_HE1_ION1 : "{C9FACE158812106F}Prefabs/Vehicles/Helicopters/MH-6J/AH_6J_Doors_M261_HE1_ION.et" {
+ coords 10053.773 3.49 10760.372
+ angles 0 -169.214 0
+ m_sAttachmentGroupName "heli"
+}
 $grp SCR_AIGroup : "{CD4A8C98E6B2357B}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_STK_1.et" {
  ion {
   components {
@@ -204,6 +193,9 @@ $grp SCR_AIGroup : "{CD4A8C98E6B2357B}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_STK_
 }
 SCR_AIGroup heli : "{E1F03F7213D8B57D}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_HeliCrew.et" {
  components {
+  AIFormationComponent "{507E9DC12F541FE6}" {
+   DefaultFormation "1"
+  }
   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
    m_iCompanyCallsign 8
   }
