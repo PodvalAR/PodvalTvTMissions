@@ -1,0 +1,85 @@
+SCR_AIGroup US000 : "{8BE5C4D411C5E59C}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_PL.et" {
+ coords 3997.514 110.302 7088.412
+ angles 0 -172.965 0
+ m_aUnitPrefabSlots +{
+  "{1932800B849A029E}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/Char_RHS_USAF_Regular_AMG.et"
+  "{46BDEE8A81730B33}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/Char_RHS_USAF_Regular_Sapper.et"
+  "{0D659E49AD2F5FF6}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/Char_RHS_USAF_Regular_Medic.et"
+  "{283076EBB65C44DA}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/Char_RHS_USAF_Regular_Barret_Sniper.et"
+  "{2DDD36502876310E}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/Char_RHS_USAF_Regular_AR.et"
+ }
+}
+$grp SCR_AIGroup : "{955623450C88D6F3}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_Squad.et" {
+ US003 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iSquadCallsign 3
+   }
+  }
+  coords 4122.631 120.483 7077.265
+  angles 0 -165.472 0
+ }
+ US002 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iSquadCallsign 2
+   }
+  }
+  coords 4085.153 118.932 7085.881
+  angles 0 -171.962 0
+ }
+ US001 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iSquadCallsign 1
+   }
+  }
+  coords 4038.532 118.102 7085.921
+  angles 0 -173.03 0
+ }
+ US202 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 2
+   }
+  }
+  coords 1155.298 166.63 9368.572
+  angles 0 -105.15 0
+ }
+ US201 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 1162.649 166.63 9345.178
+  angles 0 -105.15 0
+ }
+ US200 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 1170.329 166.63 9316.813
+  angles 0 -105.15 0
+ }
+}
+$grp SCR_AIGroup : "{F722F19CDE6535BA}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Squad_Motorized.et" {
+ US100 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 0
+   }
+  }
+  coords 997.3 167 3884.179
+  angles 0 103.814 0
+ }
+ US101 {
+  coords 1000.538 164.868 3916.957
+  angles 0 103.814 0
+ }
+}
