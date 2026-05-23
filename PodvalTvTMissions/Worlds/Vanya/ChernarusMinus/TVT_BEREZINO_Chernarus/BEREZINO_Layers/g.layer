@@ -31,6 +31,20 @@ $grp GenericEntity : "{0DE37DEC29C2DF3C}PrefabsEditable/Auto/Compositions/Misc/S
   angles -3.414 117.44 0.144
  }
 }
+$grp GenericEntity : "{13A99500A14FA14C}Prefabs/Props/Military/SupplyBox/SupplyShippingContainers/SupplyShippingContainers_01/SupplyShippingContainers_01_20ft.et" {
+ {
+  coords 13745.115 43.815 2884.894
+  angles 0 -45 0
+ }
+ {
+  coords 13743.348 43.815 2883.126
+  angles 0 -45 0
+ }
+ {
+  coords 13746.913 43.815 2886.684
+  angles 0 -45 0
+ }
+}
 $grp GenericEntity : "{144AA3DABB80974C}Prefabs/Weapons/Tripods/9K135/Part_9K135TB_Launcher.et" {
  {
   coords 12879.155 6.032 10001.231
@@ -49,9 +63,19 @@ $grp GenericEntity : "{144AA3DABB80974C}Prefabs/Weapons/Tripods/9K135/Part_9K135
   angles 0 9.417 -90
  }
 }
-Turret : "{1A407760EEAE4156}Prefabs/Vehicles/Static/BaconZU23/BaconZU23_Turret_Deployed.et" {
- coords 12893.091 17.404 9981.705
- angles -1.061 -0.011 0.608
+$grp Turret : "{1A407760EEAE4156}Prefabs/Vehicles/Static/BaconZU23/BaconZU23_Turret_Deployed.et" {
+ {
+  coords 12893.091 17.404 9981.705
+  angles -1.061 -0.011 0.608
+ }
+ {
+  coords 12803.932 23.948 10118.743
+  angles -2.313 -0.032 0.873
+ }
+ {
+  coords 12839.036 17.718 9939.537
+  angles -1.061 -0.011 0.608
+ }
 }
 Vehicle M923A1_tanker1 : "{2BE1F8B9299B67C1}Prefabs/Vehicles/Wheeled/M923A1/M923A1_tanker.et" {
  coords 13719.519 44.219 2921.335
@@ -1256,6 +1280,10 @@ $grp GameEntity : "{D9842C11742C00CF}Prefabs/Props/Civilian/Fireplace_01.et" {
  {
   coords 12834.057 5.75 9886.276
  }
+}
+GenericEntity : "{DBBF58FCDD2790EB}PrefabsEditable/Auto/Structures/Signs/Military/Supplies/E_Sign_SupplyStorage_Ammo_FIA_01.et" {
+ coords 13742.821 43.958 2887.459
+ angles 0 -46.563 0
 }
 $grp GenericEntity : "{DE25A434026D99AC}Prefabs/Weapons/Tripods/BGM71TOW/Part_BGM-71D_Launcher.et" {
  {
