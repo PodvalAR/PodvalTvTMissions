@@ -5,6 +5,14 @@ GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactions
     GUB_ZoneControlLogic "{695C9B4092206024}" {
      m_fCheckPeriod 0.2
      m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "AFRF_WIN"
+      "ION_WIN"
+     }
+     m_sFailedObjectiveNames {
+      "AFRF_LOSE"
+      "ION_LOSE"
+     }
      m_sMessage "КПП Захвачен"
      m_Timer GUB_ZoneControlTimer "{695C9B408685D0C3}" {
       timeToComplete 300

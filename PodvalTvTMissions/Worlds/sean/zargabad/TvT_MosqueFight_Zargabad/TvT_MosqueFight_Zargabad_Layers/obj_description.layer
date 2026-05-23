@@ -11,11 +11,7 @@ $grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescripti
   "1. Захватить мечеть"\
   ""\
   "> TKA: "\
-  "1. Захватить мечеть"\
-  ""\
-  "ДОПОЛНИТЕЛЬНО:"\
-  ""\
-  "1. У TKA есть КОРНЕТТЫ+ АГС в расспоряжение"
+  "1. Захватить мечеть"
   m_aVisibleForFactions {
    "RHS_USAF"
    "Ses_TKA"
@@ -44,14 +40,26 @@ $grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescripti
  }
 }
 $grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
- USAF_win {
+ USAF_WIN {
   coords 4259 16.732 4212.91
   m_sTitle "Мечеть захвачена"
   m_sFactionKey "RHS_USAF"
  }
- TKA_win {
+ TKA_WIN {
   coords 4191.206 16.881 4173.365
   m_sTitle "Мечеть захвачена "
+  m_sFactionKey "Ses_TKA"
+ }
+ USAF_LOSE {
+  coords 4259 16.732 4212.91
+  m_sTitle "Мечеть утерена "
+  m_iScore 0
+  m_sFactionKey "RHS_USAF"
+ }
+ TKA_LOSE {
+  coords 4191.206 16.881 4173.365
+  m_sTitle "Мечеть утерена"
+  m_iScore 0
   m_sFactionKey "Ses_TKA"
  }
 }
