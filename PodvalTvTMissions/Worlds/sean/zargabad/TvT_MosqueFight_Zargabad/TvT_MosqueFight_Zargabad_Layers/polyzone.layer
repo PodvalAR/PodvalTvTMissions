@@ -19,7 +19,7 @@ PolylineShapeEntity trigger {
  coords 4203.913 17 4124.555
  Points {
   ShapePoint "{696ECC4F6277FA1A}" {
-   Position 0 -0 0
+   Position 0 0 0
   }
   ShapePoint "{696ECC4F6277ED67}" {
    Position 75.751 0.71 -0.375
@@ -54,7 +54,7 @@ GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactions
      }
      m_sMessage "Мечеть захвачена"
      m_Timer GUB_ZoneControlTimer "{696ECC4FEC06833E}" {
-      timeToComplete 1
+      timeToComplete 300
      }
      m_ZoneController GUB_ZoneController "{696ECC4FE9D47CDA}" {
       m_sZoneEntityName "trigger"
