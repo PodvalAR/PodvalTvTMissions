@@ -1,0 +1,100 @@
+PolylineShapeEntity : "{7019844BAD5C4DD8}Prefabs/PolyZone/PolyZone_Border.et" {
+ components {
+  PS_PolyZone "{60E90266F25533F6}" {
+   m_mPolygonTexture "{62F4404928D33DB5}UI/layouts/Textures/Grid1b.edds"
+   m_cPolygonColor 0.686 0.116 0.116 1
+   m_fPolygonUVScale 0.44
+   m_cPolygonBorderColor 0.502 0 0 1
+   m_fPolygonBorderWidth 7
+   m_aVisibleForFactions {
+    "RHS_AFRF"
+    "RHS_ION"
+    "Ses_NAPA"
+    "CIV"
+   }
+  }
+ }
+ coords 13244.641 1.597 10315.092
+ Points {
+  ShapePoint "{60E90266E922A02A}" {
+   Position -4.313 0.607 6.533
+  }
+  ShapePoint "{6969357C7019142D}" {
+   Position 4.953 -0.884 3.608
+  }
+  ShapePoint "{6969357C85961E56}" {
+   Position 59.896 -9.793 -12.497
+  }
+  ShapePoint "{6969357C84DBC014}" {
+   Position 111.179 -30.268 -392.591
+  }
+  ShapePoint "{6969357C87E7B1AD}" {
+   Position 93.298 -26.579 -678.784
+  }
+  ShapePoint "{6969357C81BF4235}" {
+   Position 71.55 -24.548 -722.249
+  }
+  ShapePoint "{6969357C803A6551}" {
+   Position -226.496 -0.318 -726.896
+  }
+  ShapePoint "{6969357C82DCBC53}" {
+   Position -234.056 0.308 -714.866
+  }
+  ShapePoint "{6969357C8C56023D}" {
+   Position -248.799 2.661 -691.716
+  }
+  ShapePoint "{6969357C8F0A90EC}" {
+   Position -268.521 4.153 -680.089
+  }
+  ShapePoint "{6969357C8E0186C6}" {
+   Position -299.2 4.153 -619.546
+  }
+  ShapePoint "{6969357C95EBA15B}" {
+   Position -249.066 4.153 -360.181
+  }
+  ShapePoint "{6969357C92F1B781}" {
+   Position -230.874 4.153 -266.341
+  }
+  ShapePoint "{6969357C9DF8372F}" {
+   Position -214.031 4.154 -191.074
+  }
+  ShapePoint "{6969357C9C95080C}" {
+   Position -189.173 4.155 -115.706
+  }
+  ShapePoint "{6969357C9F9FBA8C}" {
+   Position -162.527 4.152 -39.002
+  }
+  ShapePoint "{6969357C9905E4CB}" {
+   Position -131.365 4.153 54.999
+  }
+  ShapePoint "{6969357C9BFB37D5}" {
+   Position -77.942 4.154 39.744
+  }
+  ShapePoint "{6969357C9AF40D25}" {
+   Position -73.254 4.153 53.039
+  }
+  ShapePoint "{6969357C9A020E95}" {
+   Position -59.117 4.154 49.28
+  }
+  ShapePoint "{6969357CA5FB47A7}" {
+   Position -64.978 4.153 27.107
+  }
+ }
+ {
+  PS_PolyZoneTrigger {
+   ID "60FD050E1E83544C"
+   m_polyZoneEffect PS_PolyZoneEffectRestricted "{60FD050E0DC2A2AB}" {
+    m_fKillTime 10
+   }
+   m_sGroupKey "DEF_"
+  }
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 16132.598 0 12511.571
+}

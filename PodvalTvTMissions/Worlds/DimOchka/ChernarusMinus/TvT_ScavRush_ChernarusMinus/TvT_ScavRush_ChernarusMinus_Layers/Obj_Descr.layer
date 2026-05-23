@@ -1,0 +1,82 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ {
+  coords 13392.822 0 10619.833
+  m_sTitle "Правила и задачи"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "ПРАВИЛА:"\
+  "1. ВС РФ и ЧВК BEER запрещено покидать красный триггер;"\
+  "2. ЧВК BEER должны всегда носить с собой ноутбук с данными;"\
+  "3. ION и NAPA враги друг другу;"\
+  "4. ВС РФ и ЧВК BEER союзники;"\
+  "5. Командиру ВС РФ разрешено прятаться только в домах."\
+  ""\
+  "ЗАДАЧИ:"\
+  "• ION: "\
+  " 1. Вытащить ноутбук с данными за красный триггер."\
+  ""\
+  "• НАПА:"\
+  " 1. Ликвидировать командира порта."\
+  ""\
+  "• ВС РФ:"\
+  " 1. Защитить командира порта."\
+  ""\
+  "• ЧВК BEER:"\
+  " 1. Защитить ноутбук с данными."\
+  ""\
+  "ДОПОЛНИТЕЛЬНО:"\
+  " 1. У НАПА есть минометы. Используйте их чтобы взорвать стены. Таблицы для минометов есть в УАЗиках. Машины без топлива (Заборы не рушатся из-за проблемы создателя карты, ждем его фиксов, можете использовать миномет для уничтожения построек);"\
+  " 2. Литл Берд ION находится на аэродроме Красностава."
+  m_aVisibleForFactions {
+   "RHS_ION"
+   "RHS_AFRF"
+   "Ses_NAPA"
+   "CIV"
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+ {
+  coords 13392.822 0 10601.173
+  m_sTitle "Сюжет"
+  m_sTextData "Завладев ноутбуком с данными, бойцы ЧВК BEER, договорившись с ВС РФ о проходе в порт, ожидают эвакуацию на большую землю. Однако, замешанная в скандалах ЗАО \"PodvalGroup\", не хочет чтобы информация попала в СМИ и отправляет одну из своих ЧВК \"ION\" разобраться с ситуацией. Вместе с ней помочь в нападении должны местными жители Черноруссии."
+  m_aVisibleForFactions {
+   "RHS_ION"
+   "RHS_AFRF"
+   "Ses_NAPA"
+   "CIV"
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+ {
+  coords 13392.822 0 10601.173
+  m_sTitle "Информация"
+  m_sTextData "Проникнуть на объект вы можете путем прямого штурма КПП, либо через обходные пути (ЖД мост с Севера, оплыть с берега, зайти через туннель с юга)."
+  m_aVisibleForFactions {
+   "RHS_ION"
+   "Ses_NAPA"
+  }
+ }
+}
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ AFRF_WIN {
+  coords 13366.94 0 10459.761
+  m_sTitle "Командир порта жив"
+  m_sFactionKey "RHS_AFRF"
+ }
+ ION_WIN {
+  coords 13366.94 0 10434.35
+  m_sTitle "Ноутбук с данными эвакуирован"
+  m_sFactionKey "RHS_ION"
+ }
+ CIV_WIN {
+  coords 13366.94 0 10416.384
+  m_sTitle "Ноутбук с данными спасен"
+  m_sFactionKey "CIV"
+ }
+ NAPA_WIN {
+  coords 13366.94 0 10434.35
+  m_sTitle "Командир ВС РФ ликвидирован"
+  m_sFactionKey "Ses_NAPA"
+ }
+}

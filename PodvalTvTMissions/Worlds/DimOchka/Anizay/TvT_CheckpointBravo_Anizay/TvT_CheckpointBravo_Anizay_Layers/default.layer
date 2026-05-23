@@ -20,3 +20,51 @@ PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_Game
  coords 2047.645 151.005 4759.809
  m_iFreezeTime 360000
 }
+$grp Vehicle : "{447CFE8D73F95C3F}Prefabs/Vehicles/Wheeled/BTR70/BTR70_AFRF_camo.et" {
+ BTR70_AFRF_camo1 {
+  coords 6490.885 214.797 2396.922
+  angles 0 30 0
+  m_sAttachmentGroupName "rus3"
+ }
+ BTR70_AFRF_camo2 {
+  coords 6500.831 214.917 2401.848
+  angles 1.223 60.007 0.328
+  m_sAttachmentGroupName "rus4"
+ }
+}
+Vehicle GD_GAZ_TIGR_v2_KORD1_MP_Burned1 : "{C23CA73A11C4251E}Prefabs/Vehicle/GAZ_Retexture/Military Police/Prefabs/GD_GAZ_TIGR_v2_KORD1_MP_Burned.et" {
+ components {
+  RigidBody "{51DAA09FECF52BBF}" {
+   Static 1
+  }
+  SlotManagerComponent "{55BCE45E438E4CFF}" {
+   Slots {
+    SCR_WheelSlotInfo Wheel_L02 {
+     Prefab ""
+    }
+   }
+  }
+ }
+ coords 3915.168 142.122 7794.134
+ angles 5.537 -141.102 -11.24
+}
+Vehicle GD_GAZ_TIGR_v2_KORD1_MP2 : "{C97BD310208285CF}Prefabs/Vehicle/GAZ_Retexture/Military Police/Prefabs/GD_GAZ_TIGR_v2_KORD1_MP.et" {
+ coords 6471.004 214.469 2386.642
+ angles 0 64.777 0
+}
+Vehicle GD_GAZ_TIGR_v2_KORD1_MP_FLAG1 : "{CBF41167C0DDF01C}Prefabs/Vehicle/GAZ_Retexture/Military Police/Prefabs/GD_GAZ_TIGR_v2_KORD1_MP_FLAG.et" {
+ coords 6481.554 214.587 2391.876
+ angles 0.818 65.976 -0.364
+}
+$grp Vehicle : "{F243A62346C9FEF0}Worlds/DimOchka/Anizay/TvT_CheckpointBravo_Anizay/M1151_Tan_Flag.et" {
+ M1151_Tan_Flag1 {
+  coords 6464.852 214.437 2389.904
+  angles 0 62.544 0
+  m_sAttachmentGroupName "us1"
+ }
+ M1151_Tan_Flag2 {
+  coords 6475.399 214.437 2395.384
+  angles 0 62.544 0
+  m_sAttachmentGroupName "us1"
+ }
+}

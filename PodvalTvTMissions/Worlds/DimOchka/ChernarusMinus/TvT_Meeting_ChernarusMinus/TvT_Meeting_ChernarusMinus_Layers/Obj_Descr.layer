@@ -1,0 +1,66 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ {
+  coords 11569.529 184.677 7190.966
+  m_sTitle "Правила и задачи"
+  m_sTextData "ПРАВИЛА:"\
+  "1. Лопатину и его охране запрещено покидать территорию аэродрома (синий триггер);"\
+  "2. Лопатину разрешено прятаться только в домах."\
+  ""\
+  "ЗАДАЧИ:"\
+  "• НАПА: "\
+  " 1. Ликвидировать Лопатина;"\
+  " 2. Захватить Аэродром."\
+  ""\
+  "• ВС РФ:"\
+  " 1. Удержать Аэродром."\
+  ""\
+  "• ЧДКЗ:"\
+  " 1. Защитить Лопатина."
+  m_aVisibleForFactions {
+   "Ses_NAPA"
+   "Ses_ChDKZ"
+   "RHS_AFRF"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+ {
+  coords 11569.529 184.677 6791.432
+  m_sTitle "Сюжет"
+  m_sTextData "Один из командиров ЧДКЗ, Андрей Лопатин, прибыл на аэродром Балото для встречи с полковником Воробьёвым и переговоров о поставках современного вооружения для дальнейшей борьбы с НАПА. Однако НАПА намерена сорвать сделку и готовит атаку на аэродром."
+  m_aVisibleForFactions {
+   "Ses_NAPA"
+   "Ses_ChDKZ"
+   "RHS_AFRF"
+   ""
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+}
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ AFRF_WIN {
+  coords 13366.94 0 10459.761
+  m_sTitle "Аэродром удержан"
+  m_sFactionKey "RHS_AFRF"
+ }
+ CHDKZ_WIN {
+  coords 13366.94 0 10416.384
+  m_sTitle "Андрей Лопатин жив"
+  m_sFactionKey "Ses_ChDKZ"
+ }
+ NAPA_WIN {
+  coords 13366.94 0 10434.35
+  m_sTitle "Андрей Лопатин ликвидирован"
+  m_iScore 75
+  m_sFactionKey "Ses_NAPA"
+ }
+ NAPA_WIN2 {
+  coords 13366.94 0 10434.35
+  m_sTitle "Аэродром захвачен"
+  m_iScore 25
+  m_sFactionKey "Ses_NAPA"
+ }
+}
