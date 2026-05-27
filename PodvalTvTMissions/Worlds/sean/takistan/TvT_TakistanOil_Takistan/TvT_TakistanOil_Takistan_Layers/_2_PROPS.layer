@@ -1,10 +1,30 @@
+$grp GenericEntity {
+ {
+  components {
+   MeshObject "{696C8495BC149858}" {
+    Object "{0BC6B061E8666140}Assets/tem_source/houses/tem_hangar1.xob"
+   }
+  }
+  coords 8200.492 322.033 2077.019
+  angles 0 60.874 0
+ }
+ {
+  components {
+   MeshObject "{696C8495BC149858}" {
+    Object "{0BC6B061E8666140}Assets/tem_source/houses/tem_hangar1.xob"
+   }
+  }
+  coords 8242.597 322.033 2101.851
+  angles 0 60.874 0
+ }
+}
 $grp StaticModelEntity : "{07F043DD6AACCD0B}Prefabs/Structures/Infrastructure/Barriers/BarGate_01/BarGate_01.et" {
  {
   coords 8894.182 0.074 5301.538
   angles 3.634 -127.487 0.075
  }
  {
-  coords 8962.813 -0 5355.422
+  coords 8962.813 0 5355.422
   angles -1.819 -129.246 0.019
  }
 }
@@ -85,6 +105,13 @@ $grp GenericEntity : "{4037BE9BF4045E59}Prefabs/Compositions/Misc/FreeRoamBuildi
  {
   coords 8959.515 291.67 5358.31
   angles 0 50.17 0
+  {
+   GenericEntity {
+    ID "5D6C9CAC63A47E43"
+    coords 0 -0.057 -0.218
+    angles 1.819 -0.001 -0.037
+   }
+  }
  }
  {
   coords 8956.992 291.67 5356.205
@@ -92,7 +119,8 @@ $grp GenericEntity : "{4037BE9BF4045E59}Prefabs/Compositions/Misc/FreeRoamBuildi
   {
    GenericEntity {
     ID "5D6C9CAC63A47E43"
-    coords 0.063 0 2.497
+    coords 0.063 -0.075 2.497
+    angles 1.819 -0.001 -0.037
    }
   }
  }
@@ -185,7 +213,7 @@ $grp StaticModelEntity : "{496015E50ADEE258}Prefabs/Props/Military/AntiVehicleOb
     Static 1
    }
   }
-  coords 8951.764 292.444 5362.723
+  coords 8951.828 292.444 5362.65
   angles 0 48.392 0
  }
  {
@@ -194,7 +222,7 @@ $grp StaticModelEntity : "{496015E50ADEE258}Prefabs/Props/Military/AntiVehicleOb
     Static 1
    }
   }
-  coords 8951.764 292.018 5362.723
+  coords 8951.828 292.018 5362.65
   angles 0 48.392 0
  }
  {
@@ -203,7 +231,7 @@ $grp StaticModelEntity : "{496015E50ADEE258}Prefabs/Props/Military/AntiVehicleOb
     Static 1
    }
   }
-  coords 8951.764 291.562 5362.723
+  coords 8951.828 291.562 5362.65
   angles 0 48.392 0
  }
  {
@@ -212,7 +240,7 @@ $grp StaticModelEntity : "{496015E50ADEE258}Prefabs/Props/Military/AntiVehicleOb
     Static 1
    }
   }
-  coords 8950.417 292.444 5362.808
+  coords 8950.481 292.444 5362.735
   angles 0 48.392 0
  }
  {
@@ -221,7 +249,7 @@ $grp StaticModelEntity : "{496015E50ADEE258}Prefabs/Props/Military/AntiVehicleOb
     Static 1
    }
   }
-  coords 8950.417 292.018 5362.808
+  coords 8950.481 292.018 5362.735
   angles 0 48.392 0
  }
  {
@@ -230,7 +258,7 @@ $grp StaticModelEntity : "{496015E50ADEE258}Prefabs/Props/Military/AntiVehicleOb
     Static 1
    }
   }
-  coords 8950.417 291.562 5362.808
+  coords 8950.481 291.562 5362.735
   angles 0 48.392 0
  }
  {
@@ -239,7 +267,7 @@ $grp StaticModelEntity : "{496015E50ADEE258}Prefabs/Props/Military/AntiVehicleOb
     Static 1
    }
   }
-  coords 8951.053 292.444 5362.092
+  coords 8951.117 292.444 5362.019
   angles 0 48.392 0
  }
  {
@@ -248,7 +276,7 @@ $grp StaticModelEntity : "{496015E50ADEE258}Prefabs/Props/Military/AntiVehicleOb
     Static 1
    }
   }
-  coords 8951.053 292.018 5362.092
+  coords 8951.117 292.018 5362.019
   angles 0 48.392 0
  }
  {
@@ -257,7 +285,7 @@ $grp StaticModelEntity : "{496015E50ADEE258}Prefabs/Props/Military/AntiVehicleOb
     Static 1
    }
   }
-  coords 8951.053 291.562 5362.092
+  coords 8951.117 291.562 5362.019
   angles 0 48.392 0
  }
  {
@@ -266,7 +294,7 @@ $grp StaticModelEntity : "{496015E50ADEE258}Prefabs/Props/Military/AntiVehicleOb
     Static 1
    }
   }
-  coords 8949.861 292.444 5362.314
+  coords 8949.926 292.444 5362.241
   angles 0 48.392 0
  }
  {
@@ -275,7 +303,7 @@ $grp StaticModelEntity : "{496015E50ADEE258}Prefabs/Props/Military/AntiVehicleOb
     Static 1
    }
   }
-  coords 8949.861 292.018 5362.314
+  coords 8949.926 292.018 5362.241
   angles 0 48.392 0
  }
  {
@@ -284,7 +312,7 @@ $grp StaticModelEntity : "{496015E50ADEE258}Prefabs/Props/Military/AntiVehicleOb
     Static 1
    }
   }
-  coords 8949.861 291.562 5362.314
+  coords 8949.926 291.562 5362.241
   angles 0 48.392 0
  }
  {
@@ -293,7 +321,7 @@ $grp StaticModelEntity : "{496015E50ADEE258}Prefabs/Props/Military/AntiVehicleOb
     Static 1
    }
   }
-  coords 8950.497 292.444 5361.598
+  coords 8950.562 292.444 5361.525
   angles 0 48.392 0
  }
  {
@@ -302,7 +330,7 @@ $grp StaticModelEntity : "{496015E50ADEE258}Prefabs/Props/Military/AntiVehicleOb
     Static 1
    }
   }
-  coords 8950.497 292.018 5361.598
+  coords 8950.562 292.018 5361.525
   angles 0 48.392 0
  }
  {
@@ -311,7 +339,7 @@ $grp StaticModelEntity : "{496015E50ADEE258}Prefabs/Props/Military/AntiVehicleOb
     Static 1
    }
   }
-  coords 8950.497 291.562 5361.598
+  coords 8950.562 291.562 5361.525
   angles 0 48.392 0
  }
  {
@@ -320,7 +348,7 @@ $grp StaticModelEntity : "{496015E50ADEE258}Prefabs/Props/Military/AntiVehicleOb
     Static 1
    }
   }
-  coords 8949.153 292.444 5361.685
+  coords 8949.218 292.444 5361.612
   angles 0 48.392 0
  }
  {
@@ -329,7 +357,7 @@ $grp StaticModelEntity : "{496015E50ADEE258}Prefabs/Props/Military/AntiVehicleOb
     Static 1
    }
   }
-  coords 8949.153 292.018 5361.685
+  coords 8949.218 292.018 5361.612
   angles 0 48.392 0
  }
  {
@@ -338,7 +366,7 @@ $grp StaticModelEntity : "{496015E50ADEE258}Prefabs/Props/Military/AntiVehicleOb
     Static 1
    }
   }
-  coords 8949.153 291.562 5361.685
+  coords 8949.218 291.562 5361.612
   angles 0 48.392 0
  }
  {
@@ -347,7 +375,7 @@ $grp StaticModelEntity : "{496015E50ADEE258}Prefabs/Props/Military/AntiVehicleOb
     Static 1
    }
   }
-  coords 8949.789 292.444 5360.969
+  coords 8949.854 292.444 5360.896
   angles 0 48.392 0
  }
  {
@@ -356,7 +384,7 @@ $grp StaticModelEntity : "{496015E50ADEE258}Prefabs/Props/Military/AntiVehicleOb
     Static 1
    }
   }
-  coords 8949.789 292.018 5360.969
+  coords 8949.854 292.018 5360.896
   angles 0 48.392 0
  }
  {
@@ -365,79 +393,79 @@ $grp StaticModelEntity : "{496015E50ADEE258}Prefabs/Props/Military/AntiVehicleOb
     Static 1
    }
   }
-  coords 8949.789 291.562 5360.969
+  coords 8949.854 291.562 5360.896
   angles 0 48.392 0
  }
  {
-  coords 8952.496 292.444 5363.374
+  coords 8952.561 292.444 5363.301
   angles 0 48.392 0
  }
  {
-  coords 8951.86 292.444 5364.09
+  coords 8951.925 292.444 5364.017
   angles 0 48.392 0
  }
  {
-  coords 8951.86 292.018 5364.09
+  coords 8951.925 292.018 5364.017
   angles 0 48.392 0
  }
  {
-  coords 8952.496 292.018 5363.374
+  coords 8952.561 292.018 5363.301
   angles 0 48.392 0
  }
  {
-  coords 8952.496 291.562 5363.374
+  coords 8952.561 291.562 5363.301
   angles 0 48.392 0
  }
  {
-  coords 8951.86 291.562 5364.09
+  coords 8951.925 291.562 5364.017
   angles 0 48.392 0
  }
  {
-  coords 8952.567 292.444 5364.718
+  coords 8952.632 292.444 5364.645
   angles 0 48.392 0
  }
  {
-  coords 8953.203 292.444 5364.002
+  coords 8953.268 292.444 5363.929
   angles 0 48.392 0
  }
  {
-  coords 8952.567 292.018 5364.718
+  coords 8952.632 292.018 5364.645
   angles 0 48.392 0
  }
  {
-  coords 8953.203 291.562 5364.002
+  coords 8953.268 291.562 5363.929
   angles 0 48.392 0
  }
  {
-  coords 8953.203 292.018 5364.002
+  coords 8953.268 292.018 5363.929
   angles 0 48.392 0
  }
  {
-  coords 8952.567 291.562 5364.718
+  coords 8952.632 291.562 5364.645
   angles 0 48.392 0
  }
  {
-  coords 8953.287 292.444 5365.357
+  coords 8953.352 292.444 5365.284
   angles 0 48.392 0
  }
  {
-  coords 8953.923 292.444 5364.641
+  coords 8953.987 292.444 5364.568
   angles 0 48.392 0
  }
  {
-  coords 8953.287 292.018 5365.357
+  coords 8953.352 292.018 5365.284
   angles 0 48.392 0
  }
  {
-  coords 8953.923 291.562 5364.641
+  coords 8953.987 291.562 5364.568
   angles 0 48.392 0
  }
  {
-  coords 8953.923 292.018 5364.641
+  coords 8953.987 292.018 5364.568
   angles 0 48.392 0
  }
  {
-  coords 8953.287 291.562 5365.357
+  coords 8953.352 291.562 5365.284
   angles 0 48.392 0
  }
 }
@@ -775,24 +803,24 @@ $grp StaticModelEntity : "{A46D45922F8CAD6C}Prefabs/Props/Military/Fortification
   coords 8953.302 1.301 5364.69
  }
  {
-  coords 8955.533 -0.022 5365.903
-  angles 1.421 89.942 0.284
+  coords 8955.533 0 5365.903
+  angles 0.57 89.925 1.136
  }
  {
-  coords 8958.696 0.065 5362.406
-  angles 0.569 89.954 1.136
+  coords 8958.696 0 5362.406
+  angles 1.421 89.971 1.136
  }
  {
-  coords 8957.707 0.045 5363.594
-  angles 1.421 89.942 0.284
+  coords 8957.707 0 5363.594
+  angles 0.57 89.925 1.136
  }
  {
-  coords 8960.911 0.103 5359.806
-  angles 0.569 89.954 1.136
+  coords 8960.911 0 5359.806
+  angles 1.421 89.971 1.135
  }
  {
-  coords 8959.923 0.095 5360.994
-  angles 1.421 89.942 0.284
+  coords 8959.923 0 5360.994
+  angles 1.422 89.942 1.135
  }
  {
   components {
@@ -839,14 +867,15 @@ $grp GenericEntity : "{A76FBE3B139F227A}PrefabsEditable/Auto/Structures/Signs/Mi
 }
 $grp StaticModelEntity : "{AE28D47CF26E91EA}Prefabs/Props/Military/Fortification/CzechHedgehog_01_rusty.et" {
  {
-  coords 8956.837 0.061 5364.82
+  coords 8956.837 0 5364.82
+  angles 1.137 -0.011 -0.568
  }
  {
   coords 8961.85 0 5348.262
   angles 0.568 -0.006 -0.853
  }
  {
-  coords 8960.734 -0 5349.604
+  coords 8960.734 0 5349.604
   angles 0.568 -0.006 -0.853
  }
 }
@@ -868,27 +897,15 @@ $grp GenericEntity : "{DEB80D9DB840F86F}PrefabsEditable/Auto/Props/VehicleParts/
   angles -2.266 -0.124 3.126
  }
  {
-  coords 8958.799 292.321 5358.688
+  coords 8958.799 292.207 5358.688
   angles 0 177.368 0
  }
  {
-  coords 8959.463 292.296 5357.736
-  angles 0 177.368 0
+  coords 8959.151 292.547 5358.22
+  angles -2.883 177.368 0
  }
  {
-  coords 8959.151 292.679 5358.22
-  angles 0 177.368 0
- }
- {
-  coords 8958.799 292.321 5358.688
-  angles 0 177.368 0
- }
- {
-  coords 8959.151 292.679 5358.22
-  angles 0 177.368 0
- }
- {
-  coords 8959.463 292.296 5357.736
+  coords 8959.463 292.182 5357.736
   angles 0 177.368 0
  }
 }

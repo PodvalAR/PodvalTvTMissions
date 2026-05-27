@@ -1,0 +1,28 @@
+SCR_ChimeraCharacter : "{44F829A0BCF2F1DA}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_PL.et" {
+ ID "520EC961A090B1EE"
+ components {
+  ActionsManagerComponent "{520EA1D2F659CE02}" {
+   additionalActions {
+    DRG_DeathConfirmAction "{696ACC4E47869F65}" {
+     ParentContextList {
+      "LowerTorso"
+     }
+     UIInfo UIInfo "{685EA7C38E96F29B}" {
+      Name "Подтвердить смерть"
+     }
+     ActionTitle "#drg_ConfirmDeathAction"
+     Duration 3
+     m_sEventMessage "Шах Ли Валь мертв!"
+     m_aObjectivesToDone {
+      "USAF_WIN"
+     }
+     m_aObjectivesToFail {
+      "TKR_WIN"
+     }
+     m_vFactionKey "RHS_USAF"
+    }
+   }
+  }
+ }
+ coords 10278.342 375.302 2381.886
+}

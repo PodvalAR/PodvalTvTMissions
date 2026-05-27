@@ -1,0 +1,122 @@
+$grp SCR_AIGroup : "{1CF5EFE6FE5047FB}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_Elite_Force.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 5919.347 109.312 11541.809
+  angles 0 135 0
+  m_aUnitPrefabSlots {
+   "{680C6463897436EC}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_SL_4x_2.et"
+   "{17EC666D101F5E2E}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_TL_4x_2.et"
+   "{B615945A8AC2AFF4}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_AR_2.et"
+   "{D201553E77FBEB5A}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Rifleman_3.et"
+   "{EF3570060297626D}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Rifleman_4.et"
+   "{1EAED95AA3D44AFD}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Medic_2.et"
+   "{606C8A79C12683DA}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Marksman_2.et"
+  }
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 5911.564 109.313 11533.898
+  angles 0 135 0
+  m_aUnitPrefabSlots {
+   "{680C6463897436EC}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_SL_4x_2.et"
+   "{17EC666D101F5E2E}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_TL_4x_2.et"
+   "{B615945A8AC2AFF4}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_AR_2.et"
+   "{D201553E77FBEB5A}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Rifleman_3.et"
+   "{EF3570060297626D}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Rifleman_4.et"
+   "{2E6BF79318C64624}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Sapper_2.et"
+   "{606C8A79C12683DA}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Marksman_2.et"
+  }
+ }
+}
+Vehicle UH1H_armed_AP1_ION1 : "{29B420D8FB51F991}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed_AP1_ION.et" {
+ coords 5918.433 109.312 11522.62
+ angles 0 135 0
+ m_sAttachmentGroupName "ionpil"
+}
+Vehicle LAV25_RHS_ION1 : "{2AE18AB65AFAB5C5}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS_ION.et" {
+ coords 8928.403 292.027 5331.554
+ angles 1.819 -129.154 -0.016
+ m_sAttachmentGroupName "STK1"
+}
+$grp Vehicle : "{6CF1EEE92139A849}Prefabs/Vehicles/Wheeled/M998/M1151_armed_M2HB_ION_AP.et" {
+ M1151_armed_M2HB_ION_AP1 {
+  coords 8934.945 291.853 5336.715
+  angles 0.8 -129.716 0.074
+  m_sAttachmentGroupName "STK2"
+ }
+ M1151_armed_M2HB_ION_AP2 {
+  coords 8940.896 291.739 5341.658
+  angles 1.019 -129.713 -0.108
+  m_sAttachmentGroupName "STK2"
+ }
+}
+SCR_AIGroup hqqq : "{963AB6930837A26F}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_HQ.et" {
+ coords 8923.055 292.351 5319.967
+ angles 0 -39.561 0
+}
+SCR_AIGroup STK2 : "{A11EB8785A76BA55}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_STK_2.et" {
+ components {
+  PS_GroupCallsignAssigner "{68B17A477EB020B5}" {
+   m_iCompanyCallsign 1
+   m_iSquadCallsign 1
+  }
+ }
+ coords 8939.898 291.815 5333.581
+ angles 0 -40.884 0
+ m_aUnitPrefabSlots {
+  "{1D90AC0C4C18F3E8}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_SL_2_4x.et"
+  "{68D5FE4F636368AD}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_TL_1_4x.et"
+  "{C267862958299863}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_AR.et"
+  "{300B9B6AEAA3D2FD}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Rifleman_4_NoSD.et"
+  "{07835B61834BB920}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_m72_2_NoSD.et"
+  "{E35B94B055C975C6}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Sapper_2_NoSD.et"
+  "{884ED2D72B48E277}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Medic_1_NoSD.et"
+ }
+}
+Vehicle M1151_armed_ION1 : "{BC96BAE82969FE34}Prefabs/Vehicles/Wheeled/M998/M1151_armed_ION.et" {
+ coords 8919.676 292.377 5324.787
+ angles 1.819 -129.975 -0.042
+ m_sAttachmentGroupName "hqqq"
+}
+Vehicle UH1H_armed_AP_HE1_ION1 : "{BD0897F5053269AB}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed_AP_HE1_ION.et" {
+ coords 5929.437 109.312 11533.624
+ angles 0 135 0
+ m_sAttachmentGroupName "ionpil"
+}
+SCR_AIGroup STK1 : "{CD4A8C98E6B2357B}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_STK_1.et" {
+ components {
+  PS_GroupCallsignAssigner "{68B17A477D63A783}" {
+   m_iCompanyCallsign 1
+  }
+ }
+ coords 8928.129 292.178 5324.263
+ angles 0 -39.512 0
+ m_aUnitPrefabSlots {
+  "{08DA0C97203914E6}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_SL_4_4x.et"
+  "{68D5FE4F636368AD}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_TL_1_4x.et"
+  "{29C2D03D7A1F37FF}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Rifleman_3_NoSD.et"
+  "{300B9B6AEAA3D2FD}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Rifleman_4_NoSD.et"
+  "{099D1F29BEBCB6FA}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_m72_1_NoSD.et"
+  "{E35B94B055C975C6}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Sapper_2_NoSD.et"
+  "{9A253DEEA8423780}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_Crew.et"
+  "{9A253DEEA8423780}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_Crew.et"
+ }
+}
+SCR_AIGroup ionpil : "{E1F03F7213D8B57D}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_HeliCrew.et" {
+ components {
+  PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+   m_iCompanyCallsign 3
+  }
+ }
+ coords 5924.702 109.313 11527.443
+ angles 0 135 0
+}

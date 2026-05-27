@@ -1,0 +1,21 @@
+SCR_ChimeraCharacter : "{E9C50BFACAED7776}Prefabs/Characters/Factions/OPFOR/ChDKZ/Char_ChDKZ_MG.et" {
+ ID "520EC961A090B1EE"
+ components {
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Pants {
+     Prefab "{6C008B62EE578395}Prefabs/Characters/Uniforms/ChDKZ/Pants_M88_ChDKZ_W.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{6895089E4D87A991}" {
+     TargetStorage "Pants/Pants_M88_ChDKZ_W.et"
+    }
+   }
+  }
+ }
+ coords 4719.067 9.25 2583.381
+ angles 0 138.904 0
+}

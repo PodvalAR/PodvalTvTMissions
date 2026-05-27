@@ -1,3 +1,47 @@
+$grp GenericEntity : "{C92071B2E5B2B82F}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_02_V1_USSR_Campaign.et" {
+ Gorod_Flag {
+  components {
+   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+    m_aObjectiveNames {
+     "US_Flag"
+     "USSR_Flag"
+    }
+   }
+   BaseActionsManagerComponent "{6202D4E6F133BF4A}" {
+    additionalActions {
+     PS_FlagChangeAction "{6202D4E6A53D4B3C}" {
+      ActionTitle "2"
+      Duration 10
+      m_bUseAnimation 1
+     }
+    }
+   }
+  }
+  coords 4511.823 18.54 9485.225
+  angles 25.012 -42.155 -22.831
+ }
+ Port_Flag {
+  components {
+   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+    m_aObjectiveNames {
+     "US_Flag2"
+     "USSR_Flag2"
+    }
+   }
+   BaseActionsManagerComponent "{6202D4E6F133BF4A}" {
+    additionalActions {
+     PS_FlagChangeAction "{6202D4E6A53D4B3C}" {
+      ActionTitle "1"
+      Duration 10
+      m_bUseAnimation 1
+     }
+    }
+   }
+  }
+  coords 4289.304 3.177 9545.719
+  angles 14.15 -17.421 -27.338
+ }
+}
 $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
  {
   coords 4297.686 8.074 9561.688
@@ -30,74 +74,5 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
    "USSR"
   }
   m_bVisibleForEmptyFaction 1
- }
-}
-$grp GenericEntity : "{F5EF4223ACA6169C}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_02_V1_AFRF.et" {
- {
-  components {
-   SCR_EditableEntityComponent "{5EF0BDF2D0A30F85}" {
-    m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
-     m_sFaction "USSR"
-    }
-   }
-   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
-    m_sDefaultMaterial "{D33A1334B4A3369D}Assets/Props/Fabric/Flags/Data/Flag_1_2_USSR.emat"
-    m_aObjectiveNames {
-     "US_Flag"
-    }
-    m_aFlagData {
-     PS_FlagData "{6588FCB6C8DD7B29}" {
-      m_sFactionKey "USSR"
-     }
-     PS_FlagData "{6588FCB6C83102AD}" {
-      m_sFactionKey "US"
-      m_iCaptureCounter 1
-     }
-    }
-    m_sFactionKey "USSR"
-   }
-   BaseActionsManagerComponent "{6202D4E6F133BF4A}" {
-    additionalActions {
-     PS_FlagChangeAction "{6202D4E6A53D4B3C}" {
-      Duration 10
-     }
-    }
-   }
-  }
-  coords 4511.823 18.54 9485.225
-  angles 33.3 -1.176 -2.142
- }
- {
-  components {
-   SCR_EditableEntityComponent "{5EF0BDF2D0A30F85}" {
-    m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
-    }
-   }
-   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
-    m_sDefaultMaterial "{D33A1334B4A3369D}Assets/Props/Fabric/Flags/Data/Flag_1_2_USSR.emat"
-    m_aObjectiveNames {
-     "US_Flag2"
-    }
-    m_aFlagData {
-     PS_FlagData "{6588FCB6C8DD7B29}" {
-      m_sFactionKey "USSR"
-     }
-     PS_FlagData "{6588FCB6C83102AD}" {
-      m_sFactionKey "US"
-      m_iCaptureCounter 1
-     }
-    }
-    m_sFactionKey "USSR"
-   }
-   BaseActionsManagerComponent "{6202D4E6F133BF4A}" {
-    additionalActions {
-     PS_FlagChangeAction "{6202D4E6A53D4B3C}" {
-      Duration 10
-     }
-    }
-   }
-  }
-  coords 4289.304 3.177 9545.719
-  angles 0 137.271 30.53
  }
 }
