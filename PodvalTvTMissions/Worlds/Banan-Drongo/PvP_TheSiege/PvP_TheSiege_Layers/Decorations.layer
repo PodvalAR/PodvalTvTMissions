@@ -1,7 +1,3 @@
-GenericEntity : "{00B1E3F86A9EF45D}Prefabs/Items/Equipment/Mortars/2B14/Part_2B14_Bipod.et" {
- coords 9360.494 204.35 1163.291
- angles 87.52 -85.456 14.179
-}
 SCR_IndestructibleEnvironmentalEntity : "{1F0AA3EA77753B5D}Prefabs/Rocks/Granite/Granite_Boulder_02.et" {
  coords 8514.799 0 2281.68
  angles -11.88 58.74 14.046
@@ -127,6 +123,9 @@ $grp StaticModelEntity : "{53CF78A46139AA55}Prefabs/Terrain/Erosion/ErodedEmbank
   angles -43.392 -93.596 -4.633
  }
 }
+SCR_ChimeraCharacter : "{5E10F18AF4717622}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_SL_P.et" {
+ coords 10145.749 82.674 470.082
+}
 $grp SCR_IndestructibleEnvironmentalEntity : "{735E970ACBB1B473}Prefabs/Rocks/Granite/Granite_Boulder_01.et" {
  {
   coords 8511.904 -0.234 2288.669
@@ -143,9 +142,6 @@ $grp SCR_IndestructibleEnvironmentalEntity : "{735E970ACBB1B473}Prefabs/Rocks/Gr
   angles -11.509 83.902 -155.881
   scale 1.032
  }
-}
-GenericEntity : "{7DF4266A58BF088F}Prefabs/Props/Military/AmmoBoxes/AmmoBox_82mm_mortar_3rnd.et" {
- coords 9361.202 204.313 1165.443
 }
 $grp GenericEntity : "{95D4766BBE46F23D}Prefabs/Items/Equipment/Backpacks/Backpack_IIFS_FieldPack.et" {
  {
@@ -336,6 +332,72 @@ $grp GenericEntity : "{B547CF929FCC6BB7}Prefabs/Props/Military/Sandbags/Sandbag_
   coords 8122.875 288.184 2462.218
   angles 9.504 -12.057 -21.687
   scale 0.8
+ }
+}
+$grp GenericEntity : "{E521AEA6D14589B1}Prefabs/Props/Military/AmmoBoxes/AmmoBox_545x39_2160rnd.et" {
+ {
+  components {
+   SCR_UniversalInventoryStorageComponent "{5476A2F100DF4EFF}" {
+    MultiSlots {
+     MultiSlotConfiguration "{5EBE9BE3CEFB5AFA}" {
+      SlotTemplate InventoryStorageSlot Saline {
+       Prefab "{98EC9C526AFBA282}Prefabs/Weapons/Ammo/Ammo_Shell_82mm_HE_O832DU.et"
+      }
+      NumSlots 20
+     }
+    }
+   }
+  }
+  coords 9359.771 204.324 1165.058
+  angles -1.114 -16.67 -0.601
+ }
+ {
+  components {
+   SCR_UniversalInventoryStorageComponent "{5476A2F100DF4EFF}" {
+    MultiSlots {
+     MultiSlotConfiguration "{5EBE9BE3CEFB5AFA}" {
+      SlotTemplate InventoryStorageSlot Saline {
+       Prefab "{98EC9C526AFBA282}Prefabs/Weapons/Ammo/Ammo_Shell_82mm_HE_O832DU.et"
+      }
+      NumSlots 20
+     }
+    }
+   }
+  }
+  coords 9360.411 204.331 1165.25
+  angles -1.114 -16.67 -0.601
+ }
+ {
+  components {
+   SCR_UniversalInventoryStorageComponent "{5476A2F100DF4EFF}" {
+    MultiSlots {
+     MultiSlotConfiguration "{5EBE9BE3CEFB5AFA}" {
+      SlotTemplate InventoryStorageSlot Saline {
+       Prefab "{98EC9C526AFBA282}Prefabs/Weapons/Ammo/Ammo_Shell_82mm_HE_O832DU.et"
+      }
+      NumSlots 20
+     }
+    }
+   }
+  }
+  coords 9361.132 204.339 1165.466
+  angles -1.114 -16.67 -0.601
+ }
+ {
+  components {
+   SCR_UniversalInventoryStorageComponent "{5476A2F100DF4EFF}" {
+    MultiSlots {
+     MultiSlotConfiguration "{5EBE9BE3CEFB5AFA}" {
+      SlotTemplate InventoryStorageSlot Saline {
+       Prefab "{98EC9C526AFBA282}Prefabs/Weapons/Ammo/Ammo_Shell_82mm_HE_O832DU.et"
+      }
+      NumSlots 20
+     }
+    }
+   }
+  }
+  coords 9361.843 204.347 1165.679
+  angles -1.114 -16.67 -0.601
  }
 }
 GenericEntity : "{F62E5FBCD723FF73}Prefabs/Items/Equipment/Mortars/2B14/Part_2B14_Barrel.et" {

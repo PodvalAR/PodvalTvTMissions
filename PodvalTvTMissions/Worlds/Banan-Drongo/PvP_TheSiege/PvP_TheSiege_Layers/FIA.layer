@@ -1,12 +1,15 @@
 $grp SCR_AIGroup : "{17C7309FFE4775B0}Prefabs/Groups/INDFOR/Group_FIA_RifleSquad_P.et" {
  FIA_2_1 {
   components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "s"
+   }
    PS_GroupCallsignAssigner "{5F0CF2CA5860FA6D}" {
     m_iCompanyCallsign 2
     m_iSquadCallsign 1
    }
   }
-  coords 9116.903 40 600.952
+  coords 9113.826 40.031 601.519
   angles 0 57.435 0
   m_aUnitPrefabSlots {
    "{5E10F18AF4717622}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_SL_P.et"
@@ -22,7 +25,12 @@ $grp SCR_AIGroup : "{17C7309FFE4775B0}Prefabs/Groups/INDFOR/Group_FIA_RifleSquad
   m_bDeleteWhenEmpty 0
  }
  FIA_2_2 {
-  coords 9118.313 39.997 597.88
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "s"
+   }
+  }
+  coords 9110.789 40.081 599.215
   angles -1.237 57.3 -0.27
   m_aUnitPrefabSlots {
    "{5E10F18AF4717622}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_SL_P.et"
@@ -37,6 +45,9 @@ $grp SCR_AIGroup : "{17C7309FFE4775B0}Prefabs/Groups/INDFOR/Group_FIA_RifleSquad
  }
  FIA_1_1 {
   components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "s"
+   }
    PS_GroupCallsignAssigner "{5F0CF2CA5860FA6D}" {
     m_iCompanyCallsign 1
     m_iSquadCallsign 1
@@ -60,12 +71,15 @@ $grp SCR_AIGroup : "{17C7309FFE4775B0}Prefabs/Groups/INDFOR/Group_FIA_RifleSquad
  }
  FIA_1_2 {
   components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "s"
+   }
    PS_GroupCallsignAssigner "{5F0CF2CA5860FA6D}" {
     m_iCompanyCallsign 1
     m_iSquadCallsign 2
    }
   }
-  coords 8648.381 287.443 1879.58
+  coords 8649.962 286.509 1884.143
   angles 0 143.722 0
   m_aUnitPrefabSlots {
    "{5E10F18AF4717622}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_SL_P.et"
@@ -83,12 +97,15 @@ $grp SCR_AIGroup : "{17C7309FFE4775B0}Prefabs/Groups/INDFOR/Group_FIA_RifleSquad
  }
  FIA_3_1 {
   components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "s"
+   }
    PS_GroupCallsignAssigner "{5F0CF2CA5860FA6D}" {
     m_iCompanyCallsign 3
     m_iSquadCallsign 1
    }
   }
-  coords 10153.992 81.532 472.53
+  coords 10151.546 81.227 469.19
   angles 0 5.221 0
   m_aUnitPrefabSlots {
    "{5E10F18AF4717622}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_SL_P.et"
@@ -106,11 +123,14 @@ $grp SCR_AIGroup : "{17C7309FFE4775B0}Prefabs/Groups/INDFOR/Group_FIA_RifleSquad
  }
  FIA_3_2 {
   components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "s"
+   }
    PS_GroupCallsignAssigner "{5F0CF2CA5860FA6D}" {
     m_iCompanyCallsign 3
    }
   }
-  coords 10159.341 79.59 473.736
+  coords 10151.236 80.606 466.65
   angles 0 5.221 0
   m_aUnitPrefabSlots {
    "{5E10F18AF4717622}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_SL_P.et"
@@ -128,12 +148,15 @@ $grp SCR_AIGroup : "{17C7309FFE4775B0}Prefabs/Groups/INDFOR/Group_FIA_RifleSquad
  }
  FIA_1_3 {
   components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "s"
+   }
    PS_GroupCallsignAssigner "{5F0CF2CA5860FA6D}" {
     m_iCompanyCallsign 1
     m_iSquadCallsign 3
    }
   }
-  coords 8643.447 287.879 1876.427
+  coords 8645.854 285.236 1889.227
   angles 0 143.722 0
   m_aUnitPrefabSlots {
    "{5E10F18AF4717622}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_SL_P.et"
@@ -148,12 +171,15 @@ $grp SCR_AIGroup : "{17C7309FFE4775B0}Prefabs/Groups/INDFOR/Group_FIA_RifleSquad
  }
  FIA_3_3 {
   components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "s"
+   }
    PS_GroupCallsignAssigner "{5F0CF2CA5860FA6D}" {
     m_iCompanyCallsign 3
     m_iSquadCallsign 3
    }
   }
-  coords 10165.46 79.241 474.313
+  coords 10150.667 80.029 463.748
   angles 0 5.871 0
   m_aUnitPrefabSlots {
    "{5E10F18AF4717622}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_SL_P.et"
@@ -209,11 +235,11 @@ $grp SCR_AIGroup : "{CA73F9230999408B}Prefabs/Groups/INDFOR/Group_FIA_PlatoonHQ_
  FIA_0_0 {
   components {
    AIFormationComponent "{507E9DC12F541FE6}" {
-    DefaultFormation "Column"
+    DefaultFormation "s"
    }
   }
   coords 8649.622 288.535 1875.27
-  angles 0 58.101 0
+  angles 0 151.708 0
   m_aUnitPrefabSlots {
    "{156CA8B61F1F1CD7}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_Officer_P.et"
   }
@@ -221,7 +247,7 @@ $grp SCR_AIGroup : "{CA73F9230999408B}Prefabs/Groups/INDFOR/Group_FIA_PlatoonHQ_
  FIA_2_0 {
   components {
    AIFormationComponent "{507E9DC12F541FE6}" {
-    DefaultFormation "Column"
+    DefaultFormation "s"
    }
    PS_GroupCallsignAssigner "{5F0CD1CD80B4F049}" {
     m_iCompanyCallsign 2
@@ -238,7 +264,7 @@ $grp SCR_AIGroup : "{CA73F9230999408B}Prefabs/Groups/INDFOR/Group_FIA_PlatoonHQ_
  FIA_1_0 {
   components {
    AIFormationComponent "{507E9DC12F541FE6}" {
-    DefaultFormation "Column"
+    DefaultFormation "s"
    }
    PS_GroupCallsignAssigner "{5F0CD1CD80B4F049}" {
     m_iCompanyCallsign 1
@@ -255,7 +281,7 @@ $grp SCR_AIGroup : "{CA73F9230999408B}Prefabs/Groups/INDFOR/Group_FIA_PlatoonHQ_
  FIA_3_0 {
   components {
    AIFormationComponent "{507E9DC12F541FE6}" {
-    DefaultFormation "Column"
+    DefaultFormation "s"
    }
    PS_GroupCallsignAssigner "{5F0CD1CD80B4F049}" {
     m_iCompanyCallsign 3
