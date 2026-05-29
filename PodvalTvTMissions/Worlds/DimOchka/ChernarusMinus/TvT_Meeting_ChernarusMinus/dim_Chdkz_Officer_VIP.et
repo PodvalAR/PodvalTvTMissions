@@ -1,0 +1,30 @@
+SCR_ChimeraCharacter : "{AC12AE23C273AA1A}Prefabs/Characters/Factions/OPFOR/ChDKZ/Char_ChDKZ_Oficer.et" {
+ ID "520EC961A090B1EE"
+ components {
+  ActionsManagerComponent "{520EA1D2F659CE02}" {
+   additionalActions {
+    DRG_DeathConfirmAction "{696ACC4D7D245273}" {
+     ParentContextList {
+      "LowerTorso"
+     }
+     UIInfo UIInfo "{685EA7C38E96F29B}" {
+      Name "Подтвердить смерть"
+     }
+     ActionTitle "#drg_ConfirmDeathAction"
+     Duration 3
+     m_bAdvanceGameStage 0
+     m_sEventMessage "Андрей Лопатин убит!"
+     m_aObjectivesToDone {
+      "NAPA_WIN"
+     }
+     m_aObjectivesToFail {
+      "CHDKZ_WIN"
+     }
+     m_vFactionKey "Ses_NAPA"
+    }
+   }
+  }
+ }
+ coords 4717.461 9.25 2577.987
+ angles 0 -105 0
+}

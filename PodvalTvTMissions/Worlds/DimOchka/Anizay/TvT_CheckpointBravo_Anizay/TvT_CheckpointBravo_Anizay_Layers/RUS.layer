@@ -1,26 +1,3 @@
-$grp Vehicle : "{447CFE8D73F95C3F}Prefabs/Vehicles/Wheeled/BTR70/BTR70_AFRF_camo.et" {
- BTR70_AFRF_camo1 {
-  coords 6490.354 214.71 2397.054
-  angles 1.223 29.993 -0.328
-  m_sAttachmentGroupName "rus3"
- }
- BTR70_AFRF_camo2 {
-  components {
-   SlotManagerComponent "{55BCE45E438E4CFF}" {
-    Slots {
-     RegisteringComponentSlotInfo Flag {
-      PivotID "v_antenna_01"
-      Offset -0.0001 1.7184 0.0193
-      Prefab "{2F232A8E976012BE}Prefabs/Misc/Flag_AFRF.et"
-     }
-    }
-   }
-  }
-  coords 6500.929 214.919 2401.944
-  angles 1.181 66.164 0.457
-  m_sAttachmentGroupName "rus4"
- }
-}
 $grp SCR_AIGroup : "{8403DA6F9500E9FA}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Desert/Group_RHS_AFRF_Desert_Base.et" {
  {
   coords 6507.021 215.079 2411.958
@@ -126,53 +103,5 @@ $grp SCR_AIGroup : "{8403DA6F9500E9FA}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Dese
    "{08592753DAA3702A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Desert/MP/dim_VDV_D_MP_Marksman.et"
   }
   m_sCustomNameSet "Выжившие РФ"
- }
-}
-Vehicle dim_GAZ_TIGR_v2_KORD1_Flag1 : "{9F1FF7849EDF4229}Worlds/DimOchka/TvT_CheckpointBravo_Anizay/dim_GAZ_TIGR_v2_KORD1_Flag.et" {
- coords 6481.172 214.581 2391.901
- angles 0.792 62.211 -0.417
- m_sAttachmentGroupName "rus2"
-}
-$grp Vehicle : "{E93C12E0CFAE656F}Worlds/DimOchka/TvT_CheckpointBravo_Anizay/dim_GAZ_TIGR_v2_KORD1.et" {
- dim_GAZ_TIGR_v2_KORD1 {
-  coords 6471.148 214.469 2386.516
-  angles 0 67.308 0
-  m_sAttachmentGroupName "rus"
- }
- dim_GAZ_TIGR_v2_KORD2 {
-  components {
-   MeshObject "{51DAA09FEFBFC0E7}" {
-    Materials {
-     MaterialAssignClass "{62231CDD4DA00603}" {
-      SourceMaterial "ext_1"
-      AssignedMaterial "{9CD1644405CA7B79}Assets/Vehicles/Wheeled/GAZ_TIGR_233014/Data/Ext1/ext_1_Multi_Burned.emat"
-     }
-     MaterialAssignClass "{62231CDD4DA0062F}" {
-      SourceMaterial "ext_2"
-      AssignedMaterial "{10E16859E9BDCE53}Assets/Vehicles/Wheeled/GAZ_TIGR_233014/Data/Ext2/ext_2_Multi.emat"
-     }
-     MaterialAssignClass "{62231CDD4DA039D9}" {
-      SourceMaterial "ext_3"
-      AssignedMaterial "{695CB5C19E0EB16E}Assets/Vehicles/Wheeled/GAZ_TIGR_233014/Data/Ext3/ext_3_Multi.emat"
-     }
-     MaterialAssignClass "{62231CDD4DA039DE}" {
-      SourceMaterial "ext_4"
-      AssignedMaterial "{40FE85162EF83AC2}Assets/Vehicles/Wheeled/GAZ_TIGR_233014/Data/Ext4/ext_4_Multi.emat"
-     }
-    }
-   }
-   RigidBody "{51DAA09FECF52BBF}" {
-    Static 1
-   }
-   SlotManagerComponent "{55BCE45E438E4CFF}" {
-    Slots {
-     SCR_WheelSlotInfo Wheel_L02 {
-      Prefab ""
-     }
-    }
-   }
-  }
-  coords 3916.362 141.706 7794.13
-  angles 3.556 -148.712 -7.396
  }
 }

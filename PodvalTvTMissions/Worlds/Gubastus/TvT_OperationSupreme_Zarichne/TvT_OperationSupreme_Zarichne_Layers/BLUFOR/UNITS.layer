@@ -1,100 +1,98 @@
-$grp SCR_AIGroup : "{12488ED8CAB8DCDC}Prefabs/Groups/BLUFOR/DRG_Group_RHS_USAF_Squad.et" {
- USAF_100 {
-  coords 919.135 35.788 4251.23
-  angles 0 -83.07 0
+SCR_AIGroup US_000_HQ : "{15062749E6AB45DE}Prefabs/Groups/BLUFOR/US/Regular/Group_US_Regular_PL.et" {
+ coords 928.248 36.163 4315.256
+ angles 0 -80.021 0
+}
+SCR_AIGroup US_500_SPN : "{6E2296FB529E9097}Prefabs/Groups/BLUFOR/US/dim_US_SPN_Force_Recon.et" {
+ components {
+  PS_GroupCallsignAssigner "{68CD6B0F0D80A730}" {
+   m_iCompanyCallsign 5
+  }
  }
- USAF_101 {
+ coords 1133.356 13.469 2161.89
+ angles 0 91.732 0
+ m_aUnitPrefabSlots {
+  "{ED4E0ACF6FD3C80A}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_SL.et"
+  "{8D1385F1AAE00333}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_GL.et"
+  "{61F3754A8D172C22}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_Rifleman.et"
+  "{F7FE66E14E368DF9}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_RTO.et"
+  "{090346732FB897D1}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_Medic.et"
+ }
+}
+$grp SCR_AIGroup : "{EE2BCF5671083A76}Prefabs/Groups/BLUFOR/US/Regular/Group_US_Regular_Squad.et" {
+ US_100_AR {
   components {
-   PS_GroupCallsignAssigner "{624D56B5FDC6118E}" {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 925.308 36.335 4295.794
+  angles 0 -81.133 0
+ }
+ US_101_AR {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 1
     m_iSquadCallsign 1
    }
   }
-  coords 921.188 36.22 4266.081
-  angles 0 -83.07 0
+  coords 923.215 36.344 4280.032
+  angles 0 -81.413 0
  }
- USAF_102 {
+ US_200_AR {
   components {
-   PS_GroupCallsignAssigner "{624D56B5FDC6118E}" {
-    m_iSquadCallsign 2
-   }
-  }
-  coords 923.173 36.344 4280.437
-  angles 0 -83.07 0
- }
- USAF_103 {
-  components {
-   PS_GroupCallsignAssigner "{624D56B5FDC6118E}" {
-    m_iSquadCallsign 3
-   }
-  }
-  coords 925.271 36.313 4295.786
-  angles 0 -83.07 0
- }
- USAF_200 {
-  components {
-   PS_GroupCallsignAssigner "{624D56B5FDC6118E}" {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
     m_iCompanyCallsign 2
    }
   }
-  coords 1642.91 13.159 563.104
-  angles 0 93.384 0
+  coords 921.169 36.54 4265.922
+  angles 0 -81.887 0
  }
- USAF_203 {
+ US_201_AR {
   components {
-   PS_GroupCallsignAssigner "{624D56B5FDC6118E}" {
-    m_iCompanyCallsign 2
-    m_iSquadCallsign 3
-   }
-  }
-  coords 1639.54 13.736 518.254
-  angles 0 93.384 0
- }
- USAF_201 {
-  components {
-   PS_GroupCallsignAssigner "{624D56B5FDC6118E}" {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
     m_iCompanyCallsign 2
     m_iSquadCallsign 1
    }
   }
-  coords 1641.778 13.383 548.154
-  angles 0 93.384 0
+  coords 919.104 35.774 4250.931
+  angles 0 -82.057 0
  }
- USAF_202 {
+ US_401_AR {
   components {
-   PS_GroupCallsignAssigner "{624D56B5FDC6118E}" {
-    m_iCompanyCallsign 2
-    m_iSquadCallsign 2
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 4
+    m_iSquadCallsign 1
    }
   }
-  coords 1640.685 13.566 533.703
-  angles 0 93.384 0
+  coords 1639.583 13.989 518.198
+  angles 0 95.585 0
  }
- USAF_000 {
+ US_400_AR {
   components {
-   PS_GroupCallsignAssigner "{624D56B5FDC6118E}" {
-    m_iCompanyCallsign 0
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 4
    }
   }
-  coords 928.255 36.168 4315.269
-  angles 0 -83.07 0
-  m_aUnitPrefabSlots {
-   "{F910309D8C211296}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_PL.et"
-  }
+  coords 1640.783 13.826 534.215
+  angles 0 93.683 0
  }
- USAF_300 {
+ US_301_AR {
   components {
-   PS_GroupCallsignAssigner "{624D56B5FDC6118E}" {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 1
+   }
+  }
+  coords 1641.735 13.19 548.202
+  angles 0 94.987 0
+ }
+ US_300_AR {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
     m_iCompanyCallsign 3
    }
   }
-  coords 1133.461 13.469 2161.831
-  angles 0 91.616 0
-  m_aUnitPrefabSlots {
-   "{CEDCC068342815AB}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Recon/drg_Role_RHS_USAF_Recon_SL.et"
-   "{B3C42C9051BB2932}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Recon/drg_Role_RHS_USAF_Recon_SR.et"
-   "{3C517FA8422C4B0A}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Recon/drg_Role_RHS_USAF_Recon_Grenadier.et"
-   "{7F9C9F5B2FFAF470}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Recon/drg_Role_RHS_USAF_Recon_LAT.et"
-   "{9C7B97483A24CEF9}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Recon/drg_Role_RHS_USAF_Recon_Rifleman.et"
-  }
+  coords 1642.988 13.162 563.108
+  angles 0 95.281 0
  }
 }

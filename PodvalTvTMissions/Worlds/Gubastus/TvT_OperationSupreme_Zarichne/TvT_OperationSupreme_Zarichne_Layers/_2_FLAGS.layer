@@ -1,14 +1,16 @@
-GenericEntity : "{EA3695BD1C032FE2}PrefabsEditable/Auto/Structures/Military/Flags/FlagPole_02_V1_ChDKZ_Editable.et" {
+GenericEntity : "{F5EF4223ACA6169C}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_02_V1_AFRF.et" {
  components {
   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+   m_sDefaultMaterial "{31E8D766C2FDE22E}Assets/Props/Fabric/Flags/Data/Flag_1_2_ChDKZ.emat"
+   m_aObjectiveNames {
+    "US_WIN"
+    "ChDKZ_WIN"
+   }
    m_sFactionKey "Ses_ChDKZ"
+   m_bUseAdvanceGameState 1
    m_sUseNotification 1
   }
   BaseActionsManagerComponent "{6202D4E6F133BF4A}" {
-   ActionContexts {
-    UserActionContext "{6202D793E4B0C277}" {
-    }
-   }
    additionalActions {
     PS_FlagChangeAction "{6202D4E6A53D4B3C}" {
      Duration 10
@@ -17,5 +19,5 @@ GenericEntity : "{EA3695BD1C032FE2}PrefabsEditable/Auto/Structures/Military/Flag
   }
  }
  coords 1600.411 39.252 2301.245
- angles 45 149.663 0
+ angles 20.913 82.128 -40.802
 }

@@ -1,0 +1,110 @@
+$grp SCR_AIGroup : "{1CF5EFE6FE5047FB}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_Elite_Force.et" {
+ el1 {
+  coords 13462.244 61.051 12142.844
+  angles 0 92.891 0
+  m_aUnitPrefabSlots {
+   "{680C6463897436EC}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_SL_4x_2.et"
+   "{17EC666D101F5E2E}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_TL_4x_2.et"
+   "{B615945A8AC2AFF4}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_AR_2.et"
+   "{D201553E77FBEB5A}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Rifleman_3.et"
+   "{EF3570060297626D}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Rifleman_4.et"
+   "{8F7DF1662C20DC91}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_SMAW_Opt_2.et"
+   "{1EAED95AA3D44AFD}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Medic_2.et"
+   "{606C8A79C12683DA}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Marksman_2.et"
+  }
+ }
+ el2 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iSquadCallsign 1
+   }
+  }
+  coords 13462.431 61.697 12154.338
+  angles 0 90.865 0
+  m_aUnitPrefabSlots {
+   "{680C6463897436EC}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_SL_4x_2.et"
+   "{17EC666D101F5E2E}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_TL_4x_2.et"
+   "{B615945A8AC2AFF4}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_AR_2.et"
+   "{D201553E77FBEB5A}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Rifleman_3.et"
+   "{EF3570060297626D}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Rifleman_4.et"
+   "{8F7DF1662C20DC91}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_SMAW_Opt_2.et"
+   "{2E6BF79318C64624}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Sapper_2.et"
+   "{606C8A79C12683DA}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Marksman_2.et"
+  }
+ }
+ el3 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iSquadCallsign 2
+   }
+  }
+  coords 13462.63 62.757 12167.535
+  angles 0 90.865 0
+  m_aUnitPrefabSlots {
+   "{680C6463897436EC}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_SL_4x_2.et"
+   "{17EC666D101F5E2E}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_TL_4x_2.et"
+   "{B615945A8AC2AFF4}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_AR_2.et"
+   "{8F7DF1662C20DC91}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_SMAW_Opt_2.et"
+   "{2E6BF79318C64624}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Sapper_2.et"
+   "{606C8A79C12683DA}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Marksman_2.et"
+  }
+ }
+ ionpil {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iSquadCallsign 3
+   }
+  }
+  coords 13462.744 63.225 12175.143
+  angles 0 90.865 0
+  m_aUnitPrefabSlots {
+   "{0800A7F185429701}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Pilot.et"
+   "{0800A7F185429701}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Pilot.et"
+  }
+  m_sCustomNameSet "ION AH-6 Crew"
+ }
+}
+$grp Vehicle : "{6CF1EEE92139A849}Prefabs/Vehicles/Wheeled/M998/M1151_armed_M2HB_ION_AP.et" {
+ M1151_armed_M2HB_ION_AP1 {
+  coords 13464.998 60.422 12135.527
+  angles -1.788 -179.944 -1.791
+  m_sAttachmentGroupName "el1"
+ }
+ M1151_armed_M2HB_ION_AP2 {
+  coords 13464.998 60.841 12142.16
+  angles -4.457 -179.791 -2.692
+  m_sAttachmentGroupName "el1"
+ }
+ M1151_armed_M2HB_ION_AP3 {
+  coords 13465.012 61.8 12155.85
+  angles -4.467 -179.791 -0.016
+  m_sAttachmentGroupName "el2"
+ }
+ M1151_armed_M2HB_ION_AP4 {
+  coords 13465.012 61.341 12149.217
+  angles -3.575 -179.916 -0.899
+  m_sAttachmentGroupName "el2"
+ }
+}
+$grp Vehicle : "{BC96BAE82969FE34}Prefabs/Vehicles/Wheeled/M998/M1151_armed_ION.et" {
+ M1151_armed_ION1 {
+  coords 13461.598 63.573 12178.758
+  angles -3.881 50.12 7.846
+  m_sAttachmentGroupName "ionpil"
+ }
+ M1151_armed_ION3 {
+  coords 13465.489 62.879 12169.657
+  angles -4.461 -177.04 -0.23
+  m_sAttachmentGroupName "el3"
+ }
+ M1151_armed_ION2 {
+  coords 13465.166 62.36 12163.402
+  angles -4.461 -177.04 -0.23
+  m_sAttachmentGroupName "el3"
+ }
+}
+Vehicle AH_6J_Doors_M261_HE1_ION1 : "{C9FACE158812106F}Prefabs/Vehicles/Helicopters/MH-6J/AH_6J_Doors_M261_HE1_ION.et" {
+ coords 11989.262 152.594 12691.463
+ angles 0 107.531 0
+ m_sAttachmentGroupName "ionpil"
+}

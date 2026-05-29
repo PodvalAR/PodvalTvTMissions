@@ -1,6 +1,17 @@
+$grp GenericEntity : "{1085CCC052C7F50D}Prefabs/Weapons/Magazines/AGS-17/Magazine_30mm_AGS17_29rnd_VOG17M.et" {
+ {
+  coords 9798.97 278.766 8780.975
+ }
+ {
+  coords 9798.918 278.766 8780.327
+ }
+ {
+  coords 9798.964 278.766 8780.649
+ }
+}
 Turret : "{1A407760EEAE4156}Prefabs/Vehicles/Static/BaconZU23/BaconZU23_Turret_Deployed.et" {
- coords 9800.039 297.715 8751.121
- angles 0 93.546 0
+ coords 9813.307 278.469 8763.862
+ angles 0 66.432 0
 }
 Vehicle Ural4320_CDF_ZU1 : "{36FFC2366A90A503}Prefabs/Vehicles/Wheeled/Ural4320/Ses_CDF/Ural4320_CDF_ZU23.et" {
  coords 9455.544 292.5 8807.23
@@ -25,6 +36,20 @@ Vehicle BTR70_Ses_CDF1 : "{3F3F663ED52E08B5}Prefabs/Vehicles/Wheeled/BTR70/BTR70
  coords 9482.217 292.125 8820.757
  angles 0 86.419 0
  m_sAttachmentGroupName "cdf4"
+}
+$grp GenericEntity : "{41A9C55B61F375F0}Prefabs/Items/Equipment/Backpacks/Backpack_Kolobok.et" {
+ {
+  coords 9798.573 278.776 8779.65
+  angles 0 136.164 0
+ }
+ {
+  coords 9801.928 278.719 8779.598
+  angles 0 -128.501 0
+ }
+ {
+  coords 9805.816 278.738 8779.787
+  angles 0 124.863 0
+ }
 }
 $grp SCR_AIGroup : "{6449AAD99869C0D5}Prefabs/Groups/BLUFOR/Ses_CDF/Group_A2F_CDF_Squad.et" {
  {
@@ -154,6 +179,37 @@ SCR_AIGroup cdf1 : "{6BF534002C76924B}Prefabs/Groups/BLUFOR/Ses_CDF/Group_A2F_CD
   "{F0B9576AA7854480}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Char_A2F_CDF_Crew_2.et"
  }
  m_sCustomNameSet "Экипаж ZU-23"
+}
+$grp StaticModelEntity : "{9C18C562C0BB5003}Prefabs/Compositions/Misc/CustomEntities/DestructionEntities/TentUS_01_Assembled_CompositionDestruction.et" {
+ {
+  coords 9807.149 278.591 8748.394
+  angles -0.217 177.116 -1.517
+ }
+ {
+  coords 9815.68 278.374 8748.483
+  angles -0.217 177.116 -1.517
+  {
+   StaticModelEntity {
+    ID "5D466416286F4114"
+    {
+     StaticModelEntity {
+      ID "5D44C7DD3033981E"
+      {
+       StaticModelEntity {
+        ID "5D38E5916001C17C"
+        {
+         StaticModelEntity {
+          ID "5D44AE1C21AF877B"
+          coords 0.001 0.01 0
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
 }
 $grp Vehicle : "{B8C6D4393223FDC2}Prefabs/Vehicles/Wheeled/Ural4320/Ses_CDF/Ural4320_Ses_CDF_command.et" {
  Ural4320_Ses_CDF_command1 {
