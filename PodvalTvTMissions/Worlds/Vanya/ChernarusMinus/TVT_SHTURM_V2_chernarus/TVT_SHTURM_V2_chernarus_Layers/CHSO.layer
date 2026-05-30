@@ -1,8 +1,3 @@
-Vehicle BRDM2_CDF1 : "{0CB42A0E046DAD19}Prefabs/Vehicles/Wheeled/BRDM2/BRDM2_CDF.et" {
- coords 8912.049 5.75 2233.044
- angles 0 137.668 0
- m_sAttachmentGroupName "cdf2"
-}
 GenericEntity : "{0DE37DEC29C2DF3C}PrefabsEditable/Auto/Compositions/Misc/SubCompositions/E_Sandbag_MG_USSR_02.et" {
  coords 10533.838 17.152 2226.339
  angles -1.66 -125.419 -0.021
@@ -43,6 +38,11 @@ $grp Turret : "{1A407760EEAE4156}Prefabs/Vehicles/Static/BaconZU23/BaconZU23_Tur
   angles 0 -36.388 0
  }
 }
+Vehicle LAV25_RHS1 : "{3312ADBF53A16DD9}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS.et" {
+ coords 8911.234 5.75 2232.781
+ angles 0 137.711 0
+ m_sAttachmentGroupName "cdf2"
+}
 StaticModelEntity : "{367F172BA690BB48}PrefabsEditable/Auto/Compositions/Misc/SubCompositions/E_Sandbag_Bunker_Cluttered_USSR_01.et" {
  coords 10478.638 6.116 2297.986
  angles 0 56.234 0
@@ -59,7 +59,7 @@ SCR_AIGroup cdf2 : "{3F29EA2D79388D65}Prefabs/Groups/BLUFOR/Ses_CDF/Group_A2F_CD
   "{84D5A1539E639EA0}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_CC_Random.et"
   "{90CD8E3B3F9CA0D7}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_Crew_Random.et"
  }
- m_sCustomNameSet "Обученый экипаж БРДМ"
+ m_sCustomNameSet "Обученый экипаж LAV"
 }
 $grp GenericEntity : "{598B1859AF3422F4}PrefabsEditable/Auto/Compositions/Misc/SubCompositions/E_Sandbag_round_Cluttered_USSR_02.et" {
  {
