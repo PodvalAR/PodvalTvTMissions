@@ -1,42 +1,20 @@
-$grp SCR_AIGroup : "{1CF5EFE6FE5047FB}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_Elite_Force.et" {
- el {
-  components {
-   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
-    m_iCompanyCallsign 2
-   }
-  }
-  coords 1251.545 159.852 1095.153
-  angles 0 -151.534 0
-  m_aUnitPrefabSlots {
-   "{CE938561FA2E6035}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_SL_4x.et"
-   "{8780DF05D9E1DF1E}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_TL_4x.et"
-   "{1C1830D4E184DE2D}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_AR.et"
-   "{1F19F6D64338C82F}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Rifleman.et"
-   "{5ADE3ACC5A6EB107}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Rifleman_2.et"
-   "{C634A558EB995632}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_SMAW_Opt.et"
-   "{974BDF9B605AC115}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Medic.et"
-   "{B73805E442B03186}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Marksman.et"
+SCR_AIGroup el : "{1CF5EFE6FE5047FB}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_Elite_Force.et" {
+ components {
+  PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+   m_iCompanyCallsign 2
   }
  }
- el2 {
-  components {
-   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
-    m_iCompanyCallsign 2
-    m_iSquadCallsign 1
-   }
-  }
-  coords 1229.678 159.512 1071.013
-  angles 0 33.387 0
-  m_aUnitPrefabSlots {
-   "{CE938561FA2E6035}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_SL_4x.et"
-   "{8780DF05D9E1DF1E}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_TL_4x.et"
-   "{1C1830D4E184DE2D}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_AR.et"
-   "{1F19F6D64338C82F}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Rifleman.et"
-   "{5ADE3ACC5A6EB107}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Rifleman_2.et"
-   "{C634A558EB995632}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_SMAW_Opt.et"
-   "{974BDF9B605AC115}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Medic.et"
-   "{B73805E442B03186}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Marksman.et"
-  }
+ coords 1251.545 159.852 1095.153
+ angles 0 -151.534 0
+ m_aUnitPrefabSlots {
+  "{680C6463897436EC}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_SL_4x_2.et"
+  "{17EC666D101F5E2E}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_TL_4x_2.et"
+  "{B615945A8AC2AFF4}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_AR_2.et"
+  "{0AA93CFF0E72F506}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Rifleman_5.et"
+  "{EF3570060297626D}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Rifleman_4.et"
+  "{8F7DF1662C20DC91}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_SMAW_Opt_2.et"
+  "{1EAED95AA3D44AFD}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Medic_2.et"
+  "{606C8A79C12683DA}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Marksman_2.et"
  }
 }
 SCR_AIGroup DEF_ION : "{4482F48156932D3E}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_STK_3.et" {
@@ -59,16 +37,6 @@ SCR_AIGroup DEF_ION : "{4482F48156932D3E}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_S
  }
 }
 $grp Vehicle : "{6CF1EEE92139A849}Prefabs/Vehicles/Wheeled/M998/M1151_armed_M2HB_ION_AP.et" {
- M1151_armed_M2HB_ION_AP1 {
-  coords 1235.823 159.989 1074.039
-  angles -3.095 -59.903 -1.793
-  m_sAttachmentGroupName "el2"
- }
- M1151_armed_M2HB_ION_AP2 {
-  coords 1237.815 160.026 1077.49
-  angles -1.549 -59.927 -0.897
-  m_sAttachmentGroupName "el2"
- }
  M1151_armed_M2HB_ION_AP3 {
   coords 1242.918 160.009 1086.329
   angles -1.223 -59.893 0.325
@@ -187,11 +155,11 @@ $grp Vehicle : "{FD109F3702AAB392}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_ZU2
  Ural4320_ZU1 {
   coords 1229.684 159.666 1119.875
   angles 3.669 81.546 0.358
-  m_sAttachmentGroupName "zu"
+  m_sAttachmentGroupName "DEF_zu"
  }
  Ural4320_ZU2 {
   coords 1216.557 159.089 1117.924
   angles 2.655 81.527 -0.395
-  m_sAttachmentGroupName "zu2"
+  m_sAttachmentGroupName "DEF_zu2"
  }
 }

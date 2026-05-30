@@ -1,0 +1,63 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ {
+  coords 177.671 306.141 2509.323
+  m_sTitle "Правила и задачи"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "ПРАВИЛА:"\
+  "1. Вертолету запрещено использовать тактику \"КАМИКАДЗЕ\";"\
+  "2. Пилотам США разрешено брать боевой Литл Берд после высадки десанта;"\
+  "3. КСу ТКР разрешено прятаться только в домах;"\
+  "4. Всем, кроме разведки ТКР запрещено покидать зеленый триггер;"\
+  "5. Для победы США надо подтвердить смерть Шах Ли Валя."\
+  ""\
+  "ЗАДАЧИ:"\
+  "• ТКР: "\
+  " 1. Недопустить убийство Шаха Ли Валь."\
+  ""\
+  "• США и ION:"\
+  " 1. Ликвидировать Шаха Ли Валь."\
+  ""\
+  "Дополнительно:"\
+  "1. У ТКР есть ПТУРы."
+  m_aVisibleForFactions {
+   "RHS_USAF"
+   "Ses_TKR"
+   "CIV"
+   "Ses_TKA"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+ {
+  coords 193.235 306.141 2509.323
+  m_sTitle "Сюжет"
+  m_sTextData "Шах Ли Валь — командир одной из террористических ячеек в Тарзабаде. По решению старейшин Такистана он был приглашён для борьбы с американскими войсками на территории страны. Однако ВС США с помощью информаторов и дронов узнали о месте перехода границы Шах Ли Валя и готовят операцию по его ликвидации. Поддержку им готова оказать ЧВК ION, желающая получить награду за его голову."
+  m_aVisibleForFactions {
+   "RHS_USAF"
+   "Ses_TKR"
+   "CIV"
+   "Ses_TKA"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+}
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ TKR_WIN {
+  coords 79.237 242.918 2670.881
+  m_sTitle "Шах Ли Валь жив"
+  m_sFactionKey "Ses_TKR"
+ }
+ USAF_WIN {
+  coords 79.237 242.918 2715.744
+  m_sTitle "Шах Ли Валь мертв"
+  m_sFactionKey "RHS_USAF"
+ }
+ ION_WIN {
+  coords 79.237 242.918 2756.24
+  m_sTitle "Шах Ли Валь мертв"
+  m_sFactionKey "RHS_ION"
+ }
+}

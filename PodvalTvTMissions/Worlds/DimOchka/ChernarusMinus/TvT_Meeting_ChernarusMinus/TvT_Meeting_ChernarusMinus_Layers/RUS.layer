@@ -1,0 +1,77 @@
+Vehicle UAZ469_uncovered_Turret_Ses_USSR_KORD2 : "{0A98FD9DE4E68CE8}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_uncovered_Turret_Ses_USSR_KORD.et" {
+ coords 4684.837 9.25 2520.853
+ angles 0 -56.248 0
+ m_sAttachmentGroupName "REC"
+}
+Vehicle dim_UAZ1 : "{0ACA2ED6AD52D641}Prefabs/Vehicles/Wheeled/UAZ469/dim_UAZ469.et" {
+ coords 4691.021 9.25 2517.137
+ angles 0 -57.548 0
+ m_sAttachmentGroupName "REC"
+}
+SCR_AIGroup : "{7F40D42C0CE8A499}Prefabs/Groups/OPFOR/RHS_AFRF/Group_RHS_AFRF_Base.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+   m_iCompanyCallsign 1
+  }
+ }
+ coords 4637.335 9.25 2528.089
+ angles 0 29.664 0
+ m_aUnitPrefabSlots {
+  "{5FAAC9807F552FAA}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_SL_NoOpt.et"
+  "{D97F30826A9347B8}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_SR.et"
+  "{114744A4440DC76E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_AT.et"
+  "{082072AAD96B86C2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_AAT.et"
+  "{FBD41570B0C083C3}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_MG_Opt.et"
+  "{C5C8302E93B80138}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Rifleman_8.et"
+  "{0B5C277FBC2C8224}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Rifleman_3.et"
+  "{DFA2A3CA1EA36572}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Rifleman.et"
+  "{2F6A9CD34B880FD2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Marksman_SVDM.et"
+ }
+ m_sCustomNameSet "Отделение ВДВ"
+}
+SCR_AIGroup REC : "{81C6F22168CB1184}Prefabs/Groups/OPFOR/RHS_AFRF/VDV/Recon/dim_VDV_Recon_1.et" {
+ components {
+  PS_GroupCallsignAssigner "{68B17A4378FC6401}" {
+   m_iCompanyCallsign 2
+  }
+ }
+ coords 4691.571 9.25 2520.844
+ angles 0 -149.607 0
+}
+SCR_AIGroup : "{C93CC37180C2D8A0}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_KS.et" {
+ coords 4720.781 9.25 2582.796
+ angles 0 -132.325 0
+ m_sCustomNameSet "Полковник Воробьев"
+}
+$grp SCR_AIGroup : "{EB131DDF464F90FD}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Squad.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 4649.709 9.25 2521.139
+  angles 0 30 0
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 4661.689 9.25 2514.367
+  angles 0 30.999 0
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 3
+   }
+  }
+  coords 4674.09 9.25 2506.969
+  angles 0 30.948 0
+ }
+}

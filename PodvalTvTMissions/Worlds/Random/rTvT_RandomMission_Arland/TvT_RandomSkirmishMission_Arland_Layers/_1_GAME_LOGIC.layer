@@ -1,0 +1,60 @@
+GenericEntity : "{574B8B93E7DDD76D}Prefabs/System/MissionRandomizer/GUB_RandomizeMissionPrefab.et" {
+ components {
+  GUB_RandomizeLossesComponent "{68DEB995D025C63E}" {
+   m_bIsAdvanceGameStage 0
+   m_sMessageDefendWin "Атака понесла критические потери! Победа обороны!"
+   m_sMessageAttackWin "Оборона понесла критические потери, Победа Атаки!"
+   m_aObjectiveNames {
+    "ObjectiveAttackWin"
+    "ObjectiveDefendWin"
+   }
+  }
+  GUB_RandomizeSkirmishMissionComponent "{68A6D25C69D035C5}" {
+   m_aFactionPrefabs {
+    GUB_FactionPrefab "{68B2D70FC18F2D0B}" : "{585DAD11963FFC1F}Configs/RandomPrefabConfig_AFRF.conf" {
+     m_aEnemyFactionKeys +{
+      "RHS_ION"
+      "Ses_CDF"
+     }
+    }
+    GUB_FactionPrefab "{68B2D70FC305EA79}" : "{C9CA310825B91CCE}Configs/RandomPrefabConfig_USMC.conf" {
+     m_aEnemyFactionKeys +{
+     }
+    }
+    GUB_FactionPrefab "{68C296C46401C4B4}" : "{E4F0DA38C0C32E2B}Configs/RandomPrefabConfig_ChDKZ.conf" {
+     m_aEnemyFactionKeys +{
+      "RHS_ION"
+     }
+    }
+    GUB_FactionPrefab "{68C296C466E2A854}" : "{7D84839F460B3E10}Configs/RandomPrefabConfig_CDF.conf" {
+     m_aEnemyFactionKeys +{
+      "RHS_ION"
+     }
+    }
+    GUB_FactionPrefab "{68C296C46764C846}" : "{2162A515C1EDE618}Configs/RandomPrefabConfig_USSR.conf" {
+    }
+    GUB_FactionPrefab "{68C296D108D7E037}" : "{AAA83BB78384B5D7}Configs/RandomPrefabConfig_UK89.conf" {
+    }
+    GUB_FactionPrefab "{694ACE0DE24EFC65}" : "{31104B51D0C52C75}Configs/RandomPrefabConfig_PMC.conf" {
+     m_aEnemyFactionKeys {
+      "Ses_ChDKZ"
+      "RHS_USAF"
+      "RHS_AFRF"
+      "RHS_ION"
+     }
+    }
+   }
+   m_fMaxDistanceBetweenLocations 5000
+   m_bMarkersOnlyOnBriefing 1
+   m_MarkerMakerConfigPath "{F4A0B8B3CF446139}Configs/MarkerMakerConfig_Random.conf"
+  }
+ }
+ coords 0 0 0
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 1800
+  }
+ }
+}

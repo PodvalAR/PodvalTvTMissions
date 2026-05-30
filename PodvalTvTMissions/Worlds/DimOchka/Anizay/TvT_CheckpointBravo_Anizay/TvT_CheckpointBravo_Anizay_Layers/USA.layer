@@ -1,13 +1,11 @@
-$grp Vehicle : "{2BBF59B422C597BB}Worlds/DimOchka/TvT_CheckpointBravo_Anizay/MATV_Flag.et" {
+$grp Vehicle : "{2BBF59B422C597BB}Worlds/DimOchka/Anizay/TvT_CheckpointBravo_Anizay/MATV_Flag.et" {
  MATV_Flag2 {
   coords 6444.329 214.344 2379.878
   angles 0 61.791 0
-  m_sAttachmentGroupName "us2"
  }
  MATV_Flag1 {
   coords 6455.423 214.344 2385.829
   angles 0 61.791 0
-  m_sAttachmentGroupName "us2"
  }
 }
 $grp SCR_AIGroup : "{3298D6DA95D73EAD}Prefabs/Groups/BLUFOR/RHS_USAF/USMC/Desert/dim_USMC_D_Rifle_Squad.et" {
@@ -74,38 +72,4 @@ $grp SCR_AIGroup : "{3298D6DA95D73EAD}Prefabs/Groups/BLUFOR/RHS_USAF/USMC/Desert
 SCR_AIGroup hq : "{4089AFD7DE24B7CF}Prefabs/Groups/BLUFOR/RHS_USAF/USMC/Desert/dim_USMC_HQ_Modern.et" {
  coords 6475.651 214.347 2399.173
  angles 0 156.511 0
-}
-$grp Vehicle : "{9C07B4B8CF07B8A1}Prefabs/Vehicles/Wheeled/M998/M1151_armed_M2HB_Tan_AP.et" {
- M1151_armed_M2HB_Tan_AP2 {
-  components {
-   SlotManagerComponent "{55BCE45E438E4CFF}" {
-    Slots {
-     RegisteringComponentSlotInfo Flag {
-      PivotID "v_root"
-      Offset 0.9275 3.1779 -2.2241
-      Prefab "{6E3FE40F6F5AA1E9}Prefabs/Props/Fabric/Flags/Flag_2_3_US_01.et"
-     }
-    }
-   }
-  }
-  coords 6475.013 214.61 2395.276
-  angles 0.814 65.441 -0.372
-  m_sAttachmentGroupName "us1"
- }
- M1151_armed_M2HB_Tan_AP1 {
-  components {
-   SlotManagerComponent "{55BCE45E438E4CFF}" {
-    Slots {
-     RegisteringComponentSlotInfo Flag {
-      PivotID "v_root"
-      Offset 0.9275 3.1779 -2.2241
-      Prefab "{6E3FE40F6F5AA1E9}Prefabs/Props/Fabric/Flags/Flag_2_3_US_01.et"
-     }
-    }
-   }
-  }
-  coords 6464.337 214.443 2390.397
-  angles 0.814 65.441 -0.372
-  m_sAttachmentGroupName "us1"
- }
 }

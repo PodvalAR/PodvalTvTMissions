@@ -1,0 +1,791 @@
+$grp PolylineShapeEntity : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
+ Zone_soumil {
+  components {
+   PS_PolyZone "{60E90266F25533F6}" {
+    m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
+    m_cPolygonColor 1 1 1 0
+    m_fPolygonUVScale 0.44
+    m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+    m_cPolygonBorderColor 0 0 0 0.784
+    m_fPolygonBorderWidth 5
+    m_aVisibleForFactions {
+     ""
+    }
+    m_aHideOnGameModeStates {
+     PREGAME
+     SLOTSELECTION
+    }
+   }
+  }
+  coords 1267.979 0 1701.07
+  Points {
+   ShapePoint "{60E90266E922A02A}" {
+    Position -404.725 0.66 687.138
+   }
+   ShapePoint "{690E74F4602E0702}" {
+    Position -692.046 0.82 492.781
+   }
+   ShapePoint "{690E74F460C6604E}" {
+    Position -240.66 1.347 -64.959
+   }
+   ShapePoint "{690E74F467EAF499}" {
+    Position 40.046 -2.318 -68.145
+   }
+   ShapePoint "{690E74F468366204}" {
+    Position 681.297 1.728 75.171
+   }
+   ShapePoint "{690E74F46E3C2968}" {
+    Position 792.588 3.104 418.825
+   }
+   ShapePoint "{693C8631D7A7B40B}" {
+    Position 642.008 0 636.307
+   }
+   ShapePoint "{693C8631D22599B8}" {
+    Position 258.138 3.137 867.423
+   }
+   ShapePoint "{693C863176C151CA}" {
+    Position 42.666 0 866.937
+   }
+   ShapePoint "{693C8631718B971D}" {
+    Position -3.164 0 775.882
+   }
+  }
+  {
+   PS_PolyZoneTrigger {
+    components {
+     Hierarchy "{60FD050E7DB5D4B9}" {
+     }
+    }
+    coords 44.315 -9.311 -46.774
+    TriggerShapeType Sphere
+    SphereRadius 999999
+    TriggerActivationType "All changes"
+    PeriodicQueries 1
+    ClassesFilter {
+     "SCR_ChimeraCharacter"
+    }
+    m_polyZoneEffect PS_PolyZoneEffectRestricted "{60FD050E0DC2A2AB}" {
+     m_fKillTime 30
+    }
+    m_bReversed 1
+   }
+  }
+ }
+ Zone_midmil {
+  components {
+   PS_PolyZone "{60E90266F25533F6}" {
+    m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
+    m_cPolygonColor 1 1 1 0
+    m_fPolygonUVScale 0.44
+    m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+    m_cPolygonBorderColor 0 0 0 0.784
+    m_fPolygonBorderWidth 5
+    m_aVisibleForFactions {
+     ""
+    }
+    m_aHideOnGameModeStates {
+     PREGAME
+     SLOTSELECTION
+    }
+   }
+  }
+  coords 1209.682 39 2294.442
+  Points {
+   ShapePoint "{60E90266E922A02A}" {
+    Position -311.571 14.91 613.214
+   }
+   ShapePoint "{690E74F4602E0702}" {
+    Position -489.78 -1.362 80.556
+   }
+   ShapePoint "{693C86313F7D75C3}" {
+    Position -297.495 0 -69.109
+   }
+   ShapePoint "{693C86313F899A4A}" {
+    Position -327.134 0 -174.569
+   }
+   ShapePoint "{693C86313E063DCB}" {
+    Position -313.865 0 -317.126
+   }
+   ShapePoint "{693C8631393BD256}" {
+    Position -208.953 0 -325.703
+   }
+   ShapePoint "{693C8631382DD1BD}" {
+    Position 81.125 0 -443.851
+   }
+   ShapePoint "{693C86313B7746A8}" {
+    Position 260.539 0 -383.129
+   }
+   ShapePoint "{693C86313A8C42D0}" {
+    Position 431.171 0 -315.455
+   }
+   ShapePoint "{693C863127F48491}" {
+    Position 584.366 0 -317.1
+   }
+   ShapePoint "{690E74F460C6604E}" {
+    Position 835.307 -13.786 -127.833
+   }
+   ShapePoint "{690E74F467EAF499}" {
+    Position 852.29 14.562 103.596
+   }
+   ShapePoint "{690E74F468366204}" {
+    Position 762.419 2.552 329.253
+   }
+   ShapePoint "{690E74F46E3C2968}" {
+    Position 613.2 4.64 517.29
+   }
+   ShapePoint "{693C86311042082D}" {
+    Position 558.241 -8.261 722.604
+   }
+   ShapePoint "{693C86311FF148F7}" {
+    Position 426.853 0 799.307
+   }
+   ShapePoint "{693C8631195B092A}" {
+    Position 4.558 0 689.82
+   }
+   ShapePoint "{693C8631052BBAE1}" {
+    Position -151.887 0 741.723
+   }
+  }
+  {
+   PS_PolyZoneTrigger {
+    components {
+     Hierarchy "{60FD050E7DB5D4B9}" {
+     }
+    }
+    coords 44.315 -9.311 -46.774
+    TriggerShapeType Sphere
+    SphereRadius 999999
+    TriggerActivationType "All changes"
+    PeriodicQueries 1
+    ClassesFilter {
+     "SCR_ChimeraCharacter"
+    }
+    m_polyZoneEffect PS_PolyZoneEffectRestricted "{60FD050E0DC2A2AB}" {
+     m_fKillTime 30
+    }
+    m_bReversed 1
+   }
+  }
+ }
+ Zone_airfild {
+  components {
+   PS_PolyZone "{60E90266F25533F6}" {
+    m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
+    m_cPolygonColor 1 1 1 0
+    m_fPolygonUVScale 0.44
+    m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+    m_cPolygonBorderColor 0 0 0 0.784
+    m_fPolygonBorderWidth 5
+    m_bLineMode 0
+    m_aVisibleForFactions {
+     ""
+    }
+    m_aHideOnGameModeStates {
+     PREGAME
+     SLOTSELECTION
+    }
+   }
+  }
+  coords 1329.974 41.779 2826.957
+  Points {
+   ShapePoint "{60E90266E922A02A}" {
+    Position -538.583 32.954 690.595
+   }
+   ShapePoint "{690E74F4602E0702}" {
+    Position -1047.953 -1.247 -390.98
+   }
+   ShapePoint "{690E74F460C6604E}" {
+    Position 119.471 -1.113 -687.81
+   }
+   ShapePoint "{690E74F467EAF499}" {
+    Position 548.105 -0.876 -478.059
+   }
+   ShapePoint "{690E74F468366204}" {
+    Position 770.274 0.273 72.353
+   }
+   ShapePoint "{693C8632E0EF4126}" {
+    Position 854.54 0 303.399
+   }
+   ShapePoint "{690E74F46E3C2968}" {
+    Position 800.513 2.563 714.926
+   }
+  }
+  {
+   PS_PolyZoneTrigger {
+    components {
+     Hierarchy "{60FD050E7DB5D4B9}" {
+     }
+    }
+    coords 44.315 -9.311 -46.774
+    TriggerShapeType Sphere
+    SphereRadius 999999
+    TriggerActivationType "All changes"
+    PeriodicQueries 1
+    ClassesFilter {
+     "SCR_ChimeraCharacter"
+    }
+    m_polyZoneEffect PS_PolyZoneEffectRestricted "{60FD050E0DC2A2AB}" {
+     m_fKillTime 30
+    }
+    m_bReversed 1
+   }
+  }
+ }
+}
+$grp GUB_DefendPointEntity : "{C7CE0DC3D5144B7D}Prefabs/System/MissionRandomizer/DefendPointEntity.et" {
+ DEFEND_ARLEVILLE {
+  coords 2785.856 74.184 1654.976
+  angles 0 0 0
+  m_sFlagName "FLAG_ARLEVILE"
+  m_sPolyzoneEntityName "Zone_arleville"
+  {
+   $grp GUB_SpawnPointEntity : "{0DCCBC83322A0A0D}Prefabs/System/MissionRandomizer/SpawnPointEntity.et" {
+    Squad_1 {
+     coords 31.851 -1.331 22.491
+     angles 0 -120.054 0
+     m_iCompanyCallsign 1
+    }
+    Squad_2 {
+     coords -23.045 3.191 -1.459
+     angles 0 -135.57 0
+     m_iCompanyCallsign 1
+     m_iSquadCallsign 1
+    }
+    Recon_2 {
+     coords 12.925 -0.209 -32.077
+     angles 0 -28.876 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+     m_iSquadCallsign 1
+    }
+    Recon_1 {
+     coords -8.527 1.104 -41.327
+     angles 0 -19.496 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+    }
+    Motorized_1 {
+     coords 66.243 -2.094 -2.847
+     angles 0 -30.229 0
+     m_eGroupType Motorized
+     m_iCompanyCallsign 2
+    }
+    Commander_1 {
+     coords -15.256 1.967 -17.029
+     angles 0 -137.139 0
+     m_eGroupType Command_1
+    }
+    Squad_3 {
+     coords 10.614 0.391 -65.529
+     angles 0 154.31 0
+     m_iCompanyCallsign 1
+     m_iSquadCallsign 2
+    }
+   }
+   SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+    coords 14.204 -0.464 -17.164
+   }
+   PolylineShapeEntity Zone_arleville : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
+    components {
+     PS_PolyZone "{60E90266F25533F6}" {
+      m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
+      m_cPolygonColor 1 1 1 0
+      m_fPolygonUVScale 0.44
+      m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+      m_cPolygonBorderColor 0 0 0 0.784
+      m_fPolygonBorderWidth 5
+      m_bLineMode 0
+      m_aVisibleForFactions {
+       ""
+      }
+      m_aHideOnGameModeStates {
+       PREGAME
+       SLOTSELECTION
+      }
+     }
+    }
+    coords 13.516 -15.091 -339.066
+    Points {
+     ShapePoint "{60E90266E922A02A}" {
+      Position 308.669 -0.152 962.328
+     }
+     ShapePoint "{693C701FFA86303D}" {
+      Position 127.89 -0.153 992.878
+     }
+     ShapePoint "{693C701FD704531D}" {
+      Position 44.277 0.002 980.391
+     }
+     ShapePoint "{693C701FD20F7F5C}" {
+      Position -50.406 0.027 1030.643
+     }
+     ShapePoint "{693C701FD94F4AB4}" {
+      Position -137.901 0 992.108
+     }
+     ShapePoint "{693C701FD8746577}" {
+      Position -262.938 0 919.808
+     }
+     ShapePoint "{693C701FC5B2E4CB}" {
+      Position -452.605 0 684.233
+     }
+     ShapePoint "{693C701FC76AE85B}" {
+      Position -538.41 0.429 565.848
+     }
+     ShapePoint "{690E74F4602E0702}" {
+      Position -615.568 -2.958 -13.972
+     }
+     ShapePoint "{690E74F460C6604E}" {
+      Position -471.032 1.343 -189.784
+     }
+     ShapePoint "{690E74F467EAF499}" {
+      Position 175.001 -5.852 -497.082
+     }
+     ShapePoint "{690E74F468366204}" {
+      Position 1007.177 -4.017 -78.802
+     }
+     ShapePoint "{690E74F46E3C2968}" {
+      Position 764.652 -4.352 927.924
+     }
+    }
+    {
+     PS_PolyZoneTrigger {
+      components {
+       Hierarchy "{60FD050E7DB5D4B9}" {
+       }
+      }
+      coords 44.315 -9.311 -46.774
+      TriggerShapeType Sphere
+      SphereRadius 999999
+      TriggerActivationType "All changes"
+      PeriodicQueries 1
+      ClassesFilter {
+       "SCR_ChimeraCharacter"
+      }
+      m_polyZoneEffect PS_PolyZoneEffectRestricted "{60FD050E0DC2A2AB}" {
+       m_fKillTime 30
+      }
+      m_bReversed 1
+     }
+    }
+   }
+  }
+ }
+ DEFEND_MILITARY_2 {
+  coords 1374.204 36.528 2383.094
+  angles 0 0 0
+  m_sFlagName "FLAG_MILITARY_2"
+  m_sPolyzoneEntityName "Zone_midmil"
+  {
+   $grp GUB_SpawnPointEntity : "{0DCCBC83322A0A0D}Prefabs/System/MissionRandomizer/SpawnPointEntity.et" {
+    Squad_4 {
+     coords -5.378 0.491 11.41
+     angles 0 -128.909 0
+     m_iCompanyCallsign 1
+    }
+    Squad_5 {
+     coords -1.642 0.732 37.31
+     angles 0 -124.997 0
+     m_iCompanyCallsign 1
+     m_iSquadCallsign 1
+    }
+    Recon_4 {
+     coords -53.375 1.961 -61.744
+     angles 0 -39.777 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+     m_iSquadCallsign 1
+    }
+    Recon_5 {
+     coords -62.943 1.965 -49.925
+     angles 0 -36.771 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+    }
+    Motorized_2 {
+     coords -28.174 0.099 -22.492
+     angles 0 -38.494 0
+     m_eGroupType Motorized
+     m_iCompanyCallsign 2
+    }
+    Commander_2 {
+     coords 27.091 -0.584 3.176
+     angles 0 -119.403 0
+     m_eGroupType Command_1
+    }
+    Squad_6 {
+     coords 5.905 -0.186 -28.059
+     angles 0 90.421 0
+     m_iCompanyCallsign 1
+     m_iSquadCallsign 2
+    }
+   }
+   SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+    coords -12.295 0.037 -7.246
+   }
+  }
+ }
+ DEFEND_MILITARY_3 {
+  coords 1311.709 39.82 2939.418
+  angles 0 0 0
+  m_sFlagName "FLAG_MILITARY_3"
+  m_sPolyzoneEntityName "Zone_airfild"
+  {
+   $grp GUB_SpawnPointEntity : "{0DCCBC83322A0A0D}Prefabs/System/MissionRandomizer/SpawnPointEntity.et" {
+    Squad_7 {
+     coords 48.503 -2.15 41.913
+     angles 0 165.07 0
+     m_iCompanyCallsign 1
+    }
+    Squad_8 {
+     coords -50.278 -2.414 7.95
+     angles 0 78.826 0
+     m_iCompanyCallsign 1
+     m_iSquadCallsign 1
+    }
+    Recon_7 {
+     coords -42.913 -4.38 44.493
+     angles 0 77.67 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+     m_iSquadCallsign 1
+    }
+    Recon_8 {
+     coords 61.907 -1.82 -22.09
+     angles 0 166.831 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+    }
+    Motorized_3 {
+     coords -14.411 -1.82 -50.415
+     angles 0 -103.897 0
+     m_eGroupType Motorized
+     m_iCompanyCallsign 2
+    }
+    Commander_3 {
+     coords 39.443 -1.886 22.774
+     angles 0 -102.004 0
+     m_eGroupType Command_1
+    }
+    Squad_9 {
+     coords -46.845 -1.82 -20.232
+     angles 0 76.074 0
+     m_iCompanyCallsign 1
+     m_iSquadCallsign 2
+    }
+   }
+   SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+    coords -0.09 0.376 -0.128
+   }
+  }
+ }
+ DEFEND_MILITARY_1 {
+  coords 1359.246 8.472 1852.969
+  angles 0 0 0
+  m_sFlagName "FLAG_MILITARY_1"
+  m_sPolyzoneEntityName "Zone_soumil"
+  {
+   $grp GUB_SpawnPointEntity : "{0DCCBC83322A0A0D}Prefabs/System/MissionRandomizer/SpawnPointEntity.et" {
+    Squad_10 {
+     coords -30.49 0.116 -26.742
+     angles 0 10.938 0
+     m_iCompanyCallsign 1
+    }
+    Squad_11 {
+     coords 58.94 5.319 -30.949
+     angles 0 -43.584 0
+     m_iCompanyCallsign 1
+     m_iSquadCallsign 1
+    }
+    Recon_10 {
+     coords -49.906 2.239 10.098
+     angles 0 -47.694 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+     m_iSquadCallsign 1
+    }
+    Recon_11 {
+     coords 58.221 3.161 42.023
+     angles 0 -174.651 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+    }
+    Motorized_4 {
+     coords 77.467 2.318 42.408
+     angles 0 168.362 0
+     m_eGroupType Motorized
+     m_iCompanyCallsign 2
+    }
+    Commander_4 {
+     coords 56.898 2.407 6.848
+     angles 0 -65.094 0
+     m_eGroupType Command_1
+    }
+    Squad_12 {
+     coords -9.557 4.05 42.756
+     angles 0 7.313 0
+     m_iCompanyCallsign 1
+     m_iSquadCallsign 2
+    }
+   }
+   SCR_EditorRestrictionZoneEntity : "{6144B0BE2EAC6897}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneMedium.et" {
+    coords -486.168 0.461 160.083
+   }
+   SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+    coords 14.001 1.273 20.296
+   }
+  }
+ }
+ DEFEND_BEUREGARD {
+  coords 3144.459 11.473 2775.158
+  angles 0 0 0
+  m_sFlagName "FLAG_BEUREGARD"
+  m_sPolyzoneEntityName "Zone_beau"
+  {
+   $grp GUB_SpawnPointEntity : "{0DCCBC83322A0A0D}Prefabs/System/MissionRandomizer/SpawnPointEntity.et" {
+    Squad_13 {
+     coords -51.648 4.438 -21.883
+     angles 0 131.342 0
+     m_iCompanyCallsign 1
+    }
+    Squad_14 {
+     coords 42.443 -0.967 36.876
+     angles 0 -43.584 0
+     m_iCompanyCallsign 1
+     m_iSquadCallsign 1
+    }
+    Recon_13 {
+     coords -11.672 2.803 -62.368
+     angles 0 -54.504 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+     m_iSquadCallsign 1
+    }
+    Recon_14 {
+     coords -39.261 -0.289 71.013
+     angles 0 36.216 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+    }
+    Motorized_5 {
+     coords 1.609 0.185 -9.208
+     angles 0 -50.482 0
+     m_eGroupType Motorized
+     m_iCompanyCallsign 2
+    }
+    Commander_5 {
+     coords 4.186 0.012 9.829
+     angles 0 132.402 0
+     m_eGroupType Command_1
+    }
+    Squad_15 {
+     coords -42.896 0.405 37.125
+     angles 0 131.627 0
+     m_iCompanyCallsign 1
+     m_iSquadCallsign 2
+    }
+   }
+   SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+    coords -9.374 -0.074 8.139
+   }
+   PolylineShapeEntity Zone_beau : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
+    components {
+     PS_PolyZone "{60E90266F25533F6}" {
+      m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
+      m_cPolygonColor 1 1 1 0
+      m_fPolygonUVScale 0.44
+      m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+      m_cPolygonBorderColor 0 0 0 0.784
+      m_fPolygonBorderWidth 5
+      m_bLineMode 0
+      m_aVisibleForFactions {
+       ""
+      }
+      m_aHideOnGameModeStates {
+       PREGAME
+       SLOTSELECTION
+      }
+     }
+    }
+    coords -138.751 27.465 -171.14
+    Points {
+     ShapePoint "{60E90266E922A02A}" {
+      Position 65.491 24.425 1004.009
+     }
+     ShapePoint "{690E74F4602E0702}" {
+      Position -346.893 2.692 742.204
+     }
+     ShapePoint "{693C86308077F99F}" {
+      Position -574.264 -0.002 175.021
+     }
+     ShapePoint "{690E74F460C6604E}" {
+      Position -460.012 7.703 103.713
+     }
+     ShapePoint "{693C863075DC9B9C}" {
+      Position -406.278 0 -58.111
+     }
+     ShapePoint "{693C863077349457}" {
+      Position -389.064 0 -166.807
+     }
+     ShapePoint "{693C86307659892D}" {
+      Position -400.663 -0.16 -324.391
+     }
+     ShapePoint "{693C86307F80BAB5}" {
+      Position -244.271 0 -299.045
+     }
+     ShapePoint "{690E74F467EAF499}" {
+      Position -55.631 -2.509 -368.463
+     }
+     ShapePoint "{693C863064D39A3D}" {
+      Position 75.985 0 -394.09
+     }
+     ShapePoint "{693C86306722CA6A}" {
+      Position 108.501 0 -512.861
+     }
+     ShapePoint "{690E74F468366204}" {
+      Position 451.466 -3.216 -409.165
+     }
+     ShapePoint "{690E74F46E3C2968}" {
+      Position 1000.085 -15.036 91.742
+     }
+    }
+    {
+     PS_PolyZoneTrigger {
+      components {
+       Hierarchy "{60FD050E7DB5D4B9}" {
+       }
+      }
+      coords 44.315 -9.311 -46.774
+      TriggerShapeType Sphere
+      SphereRadius 999999
+      TriggerActivationType "All changes"
+      PeriodicQueries 1
+      ClassesFilter {
+       "SCR_ChimeraCharacter"
+      }
+      m_polyZoneEffect PS_PolyZoneEffectRestricted "{60FD050E0DC2A2AB}" {
+       m_fKillTime 30
+      }
+      m_bReversed 1
+     }
+    }
+   }
+  }
+ }
+ DEFEND_KOROVNIK {
+  coords 1988.846 51.375 3007.469
+  angles 0 0 0
+  m_sFlagName "FLAG_KOROVNIK"
+  m_sPolyzoneEntityName "Zone_koro"
+  {
+   $grp GUB_SpawnPointEntity : "{0DCCBC83322A0A0D}Prefabs/System/MissionRandomizer/SpawnPointEntity.et" {
+    Squad_16 {
+     coords -15.398 -0.072 -1.639
+     angles 0 -158.655 0
+     m_iCompanyCallsign 1
+    }
+    Squad_17 {
+     coords 32.922 -0.024 52.078
+     angles 0 -156.359 0
+     m_iCompanyCallsign 1
+     m_iSquadCallsign 1
+    }
+    Recon_16 {
+     coords 50.122 0.328 -40.045
+     angles 0 -134.71 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+     m_iSquadCallsign 1
+    }
+    Recon_17 {
+     coords -66.14 -0.875 13.24
+     angles 0 26.592 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+    }
+    Motorized_6 {
+     coords -8.228 0.195 0.187
+     angles 0 -66.314 0
+     m_eGroupType Motorized
+     m_iCompanyCallsign 2
+    }
+    Commander_6 {
+     coords -0.804 0 -6.765
+     angles 0 -159.809 0
+     m_eGroupType Command_1
+    }
+    Squad_18 {
+     coords 22.471 0.031 -18.102
+     angles 0 -156.902 0
+     m_iCompanyCallsign 1
+     m_iSquadCallsign 2
+    }
+   }
+   SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+    coords 0.158 0 0.535
+   }
+   PolylineShapeEntity Zone_koro : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
+    components {
+     PS_PolyZone "{60E90266F25533F6}" {
+      m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
+      m_cPolygonColor 1 1 1 0
+      m_fPolygonUVScale 0.44
+      m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+      m_cPolygonBorderColor 0 0 0 0.784
+      m_fPolygonBorderWidth 5
+      m_bLineMode 0
+      m_aVisibleForFactions {
+       ""
+      }
+      m_aHideOnGameModeStates {
+       PREGAME
+       SLOTSELECTION
+      }
+     }
+    }
+    coords -29.359 -1.529 -26.132
+    Points {
+     ShapePoint "{60E90266E922A02A}" {
+      Position -806.239 19.983 631.796
+     }
+     ShapePoint "{690E74F4602E0702}" {
+      Position -808.227 -3.281 -126.606
+     }
+     ShapePoint "{690E74F460C6604E}" {
+      Position -502.369 -2.326 -485.999
+     }
+     ShapePoint "{690E74F467EAF499}" {
+      Position 75.796 -2.812 -629.588
+     }
+     ShapePoint "{690E74F468366204}" {
+      Position 463.553 -3.033 -386.591
+     }
+     ShapePoint "{690E74F46E3C2968}" {
+      Position 776.359 -14.074 541.661
+     }
+    }
+    {
+     PS_PolyZoneTrigger {
+      components {
+       Hierarchy "{60FD050E7DB5D4B9}" {
+       }
+      }
+      coords 44.315 -9.311 -46.774
+      TriggerShapeType Sphere
+      SphereRadius 999999
+      TriggerActivationType "All changes"
+      PeriodicQueries 1
+      ClassesFilter {
+       "SCR_ChimeraCharacter"
+      }
+      m_polyZoneEffect PS_PolyZoneEffectRestricted "{60FD050E0DC2A2AB}" {
+       m_fKillTime 30
+      }
+      m_bReversed 1
+     }
+    }
+   }
+   SCR_EditorRestrictionZoneEntity : "{EF72FA7CD87618D5}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneSmall.et" {
+    coords 199.566 -40.031 180.37
+   }
+  }
+ }
+}

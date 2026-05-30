@@ -1,0 +1,119 @@
+PolylineShapeEntity FLAG_TRIG_1 : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
+ components {
+  PS_PolyZone "{60E90266F25533F6}" {
+   m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
+   m_cPolygonColor 0 0 0 0.313
+   m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+   m_cPolygonBorderColor 0 0 0 1
+   m_fPolygonBorderWidth 5
+   m_aVisibleForFactions {
+    ""
+    "USSR"
+    "FIA"
+   }
+  }
+ }
+ coords 9321.207 200 1158.974
+ Points {
+  ShapePoint "{60E90266E922A02A}" {
+   Position -7.308 -0.084 12.044
+  }
+  ShapePoint "{68673B9A8424F92A}" {
+   Position -7.384 -0.115 1.321
+  }
+  ShapePoint "{6976FC6818F20550}" {
+   Position -2.088 0 1.662
+  }
+  ShapePoint "{6976FC681BF0DC26}" {
+   Position -1.69 0 -7.324
+  }
+  ShapePoint "{68673B9A83D3C060}" {
+   Position 8.593 -0.115 -7.284
+  }
+  ShapePoint "{68673B9A819C21E0}" {
+   Position 7.046 -0.147 12.876
+  }
+ }
+ {
+  PS_PolyZoneTrigger {
+   components {
+    Hierarchy "{614548BDF998E12B}" {
+    }
+   }
+   coords -12.806 -4.345 17.797
+   TriggerShapeType Polyline
+   "Polyline Height" 500
+   TriggerActivationType "All changes"
+   PeriodicQueries 1
+   UpdatePeriod 1
+   NamesFilter {
+    "RES_"
+   }
+   ClassesFilter {
+    "SCR_ChimeraCharacter"
+   }
+   m_polyZoneEffect PS_PolyZoneEffectRestricted "{614548BC046ADB65}" {
+    m_fKillTime 20
+   }
+   m_bReversed 1
+   m_sFactionKey "USSR"
+  }
+ }
+}
+PS_ManualMarker M_Flag_1 : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+ coords 9313.497 231.206 1168.358
+ angles 0 90 0
+ m_MarkerColor 0 0 0 1
+ m_sQuadName "flag-2"
+ m_fWorldSize 35
+ m_sDescription "Замок"
+ m_bUseWorldScale 0
+ m_aVisibleForFactions {
+  ""
+  "CIV"
+  "USSR"
+  "FIA"
+ }
+ m_bVisibleForEmptyFaction 1
+}
+GenericEntity FLAG_1 : "{F5EF4223ACA6169D}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_02_V1_AFRF.et" {
+ components {
+  SCR_EditableEntityComponent "{5EF0BDF2D0A30F85}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+   }
+  }
+  SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+   m_sDefaultMaterial "{D33A1334B4A3369D}Assets/Props/Fabric/Flags/Data/Flag_1_2_USSR.emat"
+   m_aFlagData {
+    PS_FlagData "{68610EEC937A7FC2}" {
+     m_sFactionKey "USSR"
+     m_iCaptureCounter 1
+    }
+    PS_FlagData "{68610EF8A0CAF4DA}" {
+     m_sFactionKey "FIA"
+     m_iCaptureCounter 1
+    }
+   }
+   m_sFactionKey "CIV"
+  }
+  BaseActionsManagerComponent "{6202D4E6F133BF4A}" {
+   ActionContexts {
+    UserActionContext "{6202D793E4B0C277}" {
+     Position PointInfo "{6202D793E70D1EFB}" {
+      Offset -0.0001 1.8386 -0.0001
+     }
+     Radius 1
+     LineOfSightCheck 1
+    }
+   }
+   additionalActions {
+    PS_FlagChangeAction "{6202D4E6A53D4B3C}" {
+     VisibilityRange -1
+     Duration 15
+    }
+   }
+  }
+ }
+ coords 9313.497 231.206 1168.358
+ angles 0 0 0
+}

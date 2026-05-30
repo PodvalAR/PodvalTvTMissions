@@ -1,0 +1,268 @@
+GenericEntity : "{574B8B93E7DDD76D}Prefabs/System/MissionRandomizer/GUB_RandomizeMissionPrefab.et" {
+ components {
+  GUB_RandomizeLossesComponent "{68DEB995D025C63E}" {
+   m_bIsAdvanceGameStage 0
+   m_sMessageDefendWin "Атака понесла критические потери! Победа обороны!"
+   m_sMessageAttackWin "Оборона понесла критические потери, Победа Атаки!"
+   m_aObjectiveNames {
+    "ObjectiveAttackWin"
+    "ObjectiveDefendWin"
+   }
+  }
+  GUB_RandomizeMissionComponent "{68A6D25C69D035C5}" {
+   m_aFactionPrefabs {
+    GUB_FactionPrefab "{68B2D70FC18F2D0B}" : "{585DAD11963FFC1F}Configs/RandomPrefabConfig_AFRF.conf" {
+     m_aEnemyFactionKeys +{
+      "UK"
+     }
+     m_aGroupPrefabs {
+      GUB_GroupPrefab "{68AF32C8D84E5CC3}" {
+       m_aAttackGroupPrefabs {
+        "{EF3647A96763B0EA}Worlds/S1lENCE_prefabs/OPFOR/Modern/Groups/Group_Modern_Base.et"
+       }
+       m_aDefendGroupPrefabs {
+        "{EF3647A96763B0EA}Worlds/S1lENCE_prefabs/OPFOR/Modern/Groups/Group_Modern_Base.et"
+       }
+      }
+      GUB_GroupPrefab "{68AF32C8D84E5C3B}" {
+       m_aAttackGroupPrefabs {
+        "{EF3647A96763B0EA}Worlds/S1lENCE_prefabs/OPFOR/Modern/Groups/Group_Modern_Base.et"
+       }
+       m_aDefendGroupPrefabs {
+        "{EF3647A96763B0EA}Worlds/S1lENCE_prefabs/OPFOR/Modern/Groups/Group_Modern_Base.et"
+       }
+      }
+      GUB_GroupPrefab "{68AF32C8D84E5C34}" {
+       m_aAttackGroupPrefabs {
+        "{BB4FFFEF193951C4}Worlds/S1lENCE_prefabs/OPFOR/FSB/Group_FSB.et"
+       }
+       m_aDefendGroupPrefabs {
+        "{BB4FFFEF193951C4}Worlds/S1lENCE_prefabs/OPFOR/FSB/Group_FSB.et"
+       }
+      }
+      GUB_GroupPrefab "{68AF32C8D84E5C35}" {
+       m_aAttackGroupPrefabs {
+        "{16E4A62A5B3D393D}Worlds/S1lENCE_prefabs/OPFOR/Modern/Groups/Group_Modern_PL1.et"
+       }
+       m_aDefendGroupPrefabs {
+        "{16E4A62A5B3D393D}Worlds/S1lENCE_prefabs/OPFOR/Modern/Groups/Group_Modern_PL1.et"
+       }
+      }
+      GUB_GroupPrefab "{68B89801535DE34D}" {
+       m_aAttackGroupPrefabs {
+        "{7AB092CAE7F9B613}Worlds/S1lENCE_prefabs/OPFOR/Modern/Groups/Group_Modern_PL2.et"
+       }
+       m_aDefendGroupPrefabs {
+        "{7AB092CAE7F9B613}Worlds/S1lENCE_prefabs/OPFOR/Modern/Groups/Group_Modern_PL2.et"
+       }
+      }
+      GUB_GroupPrefab "{68B898015C1FC0F7}" {
+       m_aAttackGroupPrefabs {
+        "{9F2CDE33EB1C2178}Worlds/S1lENCE_prefabs/OPFOR/Modern/Groups/Group_Modern_PL3.et"
+       }
+       m_aDefendGroupPrefabs {
+        "{9F2CDE33EB1C2178}Worlds/S1lENCE_prefabs/OPFOR/Modern/Groups/Group_Modern_PL3.et"
+       }
+      }
+      GUB_GroupPrefab "{68B898015DF5905E}" {
+       m_aAttackGroupPrefabs {
+        "{A218FB0B9E70A84F}Worlds/S1lENCE_prefabs/OPFOR/Modern/Groups/Group_Modern_PL4.et"
+       }
+       m_aDefendGroupPrefabs {
+        "{A218FB0B9E70A84F}Worlds/S1lENCE_prefabs/OPFOR/Modern/Groups/Group_Modern_PL4.et"
+       }
+      }
+      GUB_GroupPrefab "{68B898015D89A917}" {
+       m_aAttackGroupPrefabs {
+        "{4784B7F292953F24}Worlds/S1lENCE_prefabs/OPFOR/Modern/Groups/Group_Modern_PL5.et"
+       }
+       m_aDefendGroupPrefabs {
+        "{4784B7F292953F24}Worlds/S1lENCE_prefabs/OPFOR/Modern/Groups/Group_Modern_PL5.et"
+       }
+      }
+      GUB_GroupPrefab "{68B898015D58DBF4}" {
+       m_aAttackGroupPrefabs {
+        "{2BD083122E51B00A}Worlds/S1lENCE_prefabs/OPFOR/Modern/Groups/Group_Modern_PL6.et"
+       }
+       m_aDefendGroupPrefabs {
+        "{2BD083122E51B00A}Worlds/S1lENCE_prefabs/OPFOR/Modern/Groups/Group_Modern_PL6.et"
+       }
+      }
+      GUB_GroupPrefab "{68B898015D686F61}" {
+       m_aAttackGroupPrefabs {
+        "{CE4CCFEB22B42761}Worlds/S1lENCE_prefabs/OPFOR/Modern/Groups/Group_Modern_PL7.et"
+       }
+       m_aDefendGroupPrefabs {
+        "{CE4CCFEB22B42761}Worlds/S1lENCE_prefabs/OPFOR/Modern/Groups/Group_Modern_PL7.et"
+       }
+      }
+      GUB_GroupPrefab "{68B8980104DB6BE7}" {
+       m_aAttackGroupPrefabs {
+        "{51B8C962C488A265}Worlds/S1lENCE_prefabs/OPFOR/Modern/Groups/Group_Modern_PL8.et"
+       }
+       m_aDefendGroupPrefabs {
+        "{51B8C962C488A265}Worlds/S1lENCE_prefabs/OPFOR/Modern/Groups/Group_Modern_PL8.et"
+       }
+      }
+      GUB_GroupPrefab "{68B898015D37A951}" {
+       m_aAttackGroupPrefabs {
+        "{B424859BC86D350F}Worlds/S1lENCE_prefabs/OPFOR/Modern/Groups/Group_Modern_PL9.et"
+       }
+       m_aDefendGroupPrefabs {
+        "{B424859BC86D350F}Worlds/S1lENCE_prefabs/OPFOR/Modern/Groups/Group_Modern_PL9.et"
+       }
+      }
+      GUB_GroupPrefab "{68AF32C8D84E8766}" {
+       m_aAttackGroupPrefabs {
+        "{BB4FFFEF193951C4}Worlds/S1lENCE_prefabs/OPFOR/FSB/Group_FSB.et"
+       }
+       m_aDefendGroupPrefabs {
+        "{BB4FFFEF193951C4}Worlds/S1lENCE_prefabs/OPFOR/FSB/Group_FSB.et"
+       }
+      }
+      GUB_GroupPrefab "{68AF32C8D84E8760}" {
+       m_aAttackGroupPrefabs {
+        "{1A07D929D07CD634}Worlds/S1lENCE_prefabs/OPFOR/Modern/Groups/Group_Modern_Sniper.et"
+       }
+       m_aDefendGroupPrefabs {
+        "{1A07D929D07CD634}Worlds/S1lENCE_prefabs/OPFOR/Modern/Groups/Group_Modern_Sniper.et"
+       }
+      }
+      GUB_GroupPrefab "{68AF32C8D84E8761}" {
+       m_aAttackGroupPrefabs {
+        "{EF3647A96763B0EA}Worlds/S1lENCE_prefabs/OPFOR/Modern/Groups/Group_Modern_Base.et"
+       }
+      }
+     }
+    }
+    GUB_FactionPrefab "{68B2D70FC305EA79}" : "{C9CA310825B91CCE}Configs/RandomPrefabConfig_USMC.conf" {
+     m_aEnemyFactionKeys {
+      "RHS_AFRF"
+     }
+     m_aGroupPrefabs {
+      GUB_GroupPrefab "{69375923205399F9}" {
+       m_aAttackGroupPrefabs {
+        "{31AB820D0C151298}Worlds/S1lENCE_prefabs/BLUFOR/Regular/USMC/Groups/Group_Marpat_SL9.et"
+       }
+       m_aDefendGroupPrefabs {
+        "{31AB820D0C151298}Worlds/S1lENCE_prefabs/BLUFOR/Regular/USMC/Groups/Group_Marpat_SL9.et"
+       }
+      }
+      GUB_GroupPrefab "{69375923205399C9}" {
+       m_aAttackGroupPrefabs {
+        "{31AB820D0C151298}Worlds/S1lENCE_prefabs/BLUFOR/Regular/USMC/Groups/Group_Marpat_SL9.et"
+       }
+       m_aDefendGroupPrefabs {
+        "{31AB820D0C151298}Worlds/S1lENCE_prefabs/BLUFOR/Regular/USMC/Groups/Group_Marpat_SL9.et"
+       }
+      }
+      GUB_GroupPrefab "{6937592320539930}" {
+       m_aAttackGroupPrefabs {
+        "{FB2725744046CE1D}Worlds/S1lENCE_prefabs/BLUFOR/Recon/Group_USAF_SPN.et"
+       }
+       m_aDefendGroupPrefabs {
+        "{FB2725744046CE1D}Worlds/S1lENCE_prefabs/BLUFOR/Recon/Group_USAF_SPN.et"
+       }
+      }
+      GUB_GroupPrefab "{693759232053993C}" {
+       m_aAttackGroupPrefabs {
+        "{3347A85A08949915}Worlds/S1lENCE_prefabs/BLUFOR/Regular/USMC/Groups/Group_USMC_PL1.et"
+       }
+       m_aDefendGroupPrefabs {
+        "{3347A85A08949915}Worlds/S1lENCE_prefabs/BLUFOR/Regular/USMC/Groups/Group_USMC_PL1.et"
+       }
+      }
+      GUB_GroupPrefab "{6937592320539951}" {
+       m_aAttackGroupPrefabs {
+        "{5F139CBAB450163B}Worlds/S1lENCE_prefabs/BLUFOR/Regular/USMC/Groups/Group_USMC_PL2.et"
+       }
+       m_aDefendGroupPrefabs {
+        "{5F139CBAB450163B}Worlds/S1lENCE_prefabs/BLUFOR/Regular/USMC/Groups/Group_USMC_PL2.et"
+       }
+      }
+      GUB_GroupPrefab "{6937592320539958}" {
+       m_aAttackGroupPrefabs {
+        "{BA8FD043B8B58150}Worlds/S1lENCE_prefabs/BLUFOR/Regular/USMC/Groups/Group_USMC_PL3.et"
+       }
+       m_aDefendGroupPrefabs {
+        "{BA8FD043B8B58150}Worlds/S1lENCE_prefabs/BLUFOR/Regular/USMC/Groups/Group_USMC_PL3.et"
+       }
+      }
+      GUB_GroupPrefab "{693759232053995F}" {
+       m_aAttackGroupPrefabs {
+        "{87BBF57BCDD90867}Worlds/S1lENCE_prefabs/BLUFOR/Regular/USMC/Groups/Group_USMC_PL4.et"
+       }
+       m_aDefendGroupPrefabs {
+        "{87BBF57BCDD90867}Worlds/S1lENCE_prefabs/BLUFOR/Regular/USMC/Groups/Group_USMC_PL4.et"
+       }
+      }
+      GUB_GroupPrefab "{6937592320539946}" {
+       m_aAttackGroupPrefabs {
+        "{6227B982C13C9F0C}Worlds/S1lENCE_prefabs/BLUFOR/Regular/USMC/Groups/Group_USMC_PL5.et"
+       }
+       m_aDefendGroupPrefabs {
+        "{6227B982C13C9F0C}Worlds/S1lENCE_prefabs/BLUFOR/Regular/USMC/Groups/Group_USMC_PL5.et"
+       }
+      }
+      GUB_GroupPrefab "{69375923205396B9}" {
+       m_aAttackGroupPrefabs {
+        "{0E738D627DF81022}Worlds/S1lENCE_prefabs/BLUFOR/Regular/USMC/Groups/Group_USMC_PL6.et"
+       }
+       m_aDefendGroupPrefabs {
+        "{0E738D627DF81022}Worlds/S1lENCE_prefabs/BLUFOR/Regular/USMC/Groups/Group_USMC_PL6.et"
+       }
+      }
+      GUB_GroupPrefab "{69375923205396A2}" {
+       m_aAttackGroupPrefabs {
+        "{EBEFC19B711D8749}Worlds/S1lENCE_prefabs/BLUFOR/Regular/USMC/Groups/Group_USMC_PL7.et"
+       }
+       m_aDefendGroupPrefabs {
+        "{EBEFC19B711D8749}Worlds/S1lENCE_prefabs/BLUFOR/Regular/USMC/Groups/Group_USMC_PL7.et"
+       }
+      }
+      GUB_GroupPrefab "{69375923205396AB}" {
+       m_aAttackGroupPrefabs {
+        "{741BC7129721024C}Worlds/S1lENCE_prefabs/BLUFOR/Regular/USMC/Groups/Group_USMC_PL8.et"
+       }
+       m_aDefendGroupPrefabs {
+        "{741BC7129721024C}Worlds/S1lENCE_prefabs/BLUFOR/Regular/USMC/Groups/Group_USMC_PL8.et"
+       }
+      }
+      GUB_GroupPrefab "{6937592320539694}" {
+       m_aAttackGroupPrefabs {
+        "{9B41F30D5752EA80}Worlds/S1lENCE_prefabs/BLUFOR/Regular/USMC/Groups/Group_USMC_PL9.et"
+       }
+       m_aDefendGroupPrefabs {
+        "{9B41F30D5752EA80}Worlds/S1lENCE_prefabs/BLUFOR/Regular/USMC/Groups/Group_USMC_PL9.et"
+       }
+      }
+      GUB_GroupPrefab "{69375923205396F2}" {
+       m_aAttackGroupPrefabs {
+        "{FB2725744046CE1D}Worlds/S1lENCE_prefabs/BLUFOR/Recon/Group_USAF_SPN.et"
+       }
+       m_aDefendGroupPrefabs {
+        "{FB2725744046CE1D}Worlds/S1lENCE_prefabs/BLUFOR/Recon/Group_USAF_SPN.et"
+       }
+      }
+     }
+    }
+    GUB_FactionPrefab "{696A1B47AAB493BF}" : "{C7FDDE6DF139FD9E}Configs/RandomPrefabConfig_UK_modern.conf" {
+     m_aEnemyFactionKeys {
+      "RHS_AFRF"
+     }
+    }
+   }
+   m_fMaxDistanceBetweenLocations 5000
+   m_bMarkersOnlyOnBriefing 1
+   m_MarkerMakerConfigPath "{F4A0B8B3CF446139}Configs/MarkerMakerConfig_Random.conf"
+  }
+ }
+ coords 0 0 0
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 1800
+  }
+ }
+}
