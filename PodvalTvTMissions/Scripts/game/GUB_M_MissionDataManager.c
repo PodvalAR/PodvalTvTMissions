@@ -51,8 +51,7 @@ modded class PS_MissionDataManager
 			descriptionData.Title = WidgetManager.Translate("%1", description.m_sTitle);
 			descriptionData.DescriptionLayout = description.m_sDescriptionLayout;
 			descriptionData.TextData = WidgetManager.Translate("%1", description.m_sTextData);
-			foreach (FactionKey factionKey, bool visible : description.GetVisibleForFactionsRaw())
-				descriptionData.VisibleForFactions.Insert(factionKey);
+			descriptionData.VisibleForFactions = description.m_aVisibleForFactions;
 			descriptionData.EmptyFactionVisibility = description.m_bEmptyFactionVisibility;
 		}
 		
