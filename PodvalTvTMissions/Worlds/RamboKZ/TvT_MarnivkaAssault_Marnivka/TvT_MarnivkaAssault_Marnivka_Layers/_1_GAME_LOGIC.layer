@@ -1,0 +1,77 @@
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{6982E28F80B7B1D4}" {
+     m_sZonePreviewName "Административные здания"
+     m_sSuccessObjectiveNames {
+      "AFRF_MERIA"
+     }
+     m_sFailedObjectiveNames {
+      "NAPA_MERIA"
+     }
+     m_Timer GUB_ZoneControlTimer "{6982E28FE0BE05AA}" {
+      timeToComplete 120
+     }
+     m_ZoneController GUB_ZoneController "{6982E28FE2C54345}" {
+      m_sZoneEntityName "TRIG_MERIA"
+     }
+     m_FlagController GUB_FlagController "{6982E28FEAE06B58}" {
+      m_aFlagNames {
+       "MERIA_FLAG_1"
+       "MERIA_FLAG_2"
+      }
+      m_fStartFactionKey "Ses_NAPA"
+      m_fEndFactionKey "RHS_AFRF"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{6982E28FDF7B6DA0}" {
+       m_sFirstFactionKey "RHS_AFRF"
+       m_sSecondFactionKey "Ses_NAPA"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+    GUB_ZoneControlLogic "{6982E28FC679B97D}" {
+     m_sZonePreviewName "Стройка"
+     m_sSuccessObjectiveNames {
+      "AFRF_STROIKA"
+     }
+     m_sFailedObjectiveNames {
+      "NAPA_STROIKA"
+     }
+     m_Timer GUB_ZoneControlTimer "{6982E28FE0BE05AA}" {
+      timeToComplete 120
+     }
+     m_ZoneController GUB_ZoneController "{6982E28FE2C54345}" {
+      m_sZoneEntityName "TRIG_STROIKA"
+     }
+     m_FlagController GUB_FlagController "{6982E28FEAE06B58}" {
+      m_aFlagNames {
+       "STROIKA_FLAG_1"
+       "STROIKA_FLAG_2"
+      }
+      m_fStartFactionKey "Ses_NAPA"
+      m_fEndFactionKey "RHS_AFRF"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{6982E28FDF7B6DA0}" {
+       m_sFirstFactionKey "RHS_AFRF"
+       m_sSecondFactionKey "Ses_NAPA"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+}
