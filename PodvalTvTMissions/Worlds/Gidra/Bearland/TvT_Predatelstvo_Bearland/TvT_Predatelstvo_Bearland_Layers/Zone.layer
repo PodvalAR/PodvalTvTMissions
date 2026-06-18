@@ -1,0 +1,119 @@
+GenericEntity PREFABIKAL : "{3D78D7D606FF9818}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_NoCapture.et" {
+ coords 870.877 16.665 1497.016
+}
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{697554C54818FB47}" {
+     m_sZonePreviewName "GOLD"
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "ION_WIN"
+     }
+     m_sFailedObjectiveNames {
+      "AFRF_WIN"
+     }
+     m_sMessage "ВС РФ заватили базу"
+     m_Timer GUB_ZoneControlTimer "{697554C57599DC60}" {
+     }
+     m_ZoneController GUB_ZoneController "{697554C574C55AA8}" {
+      m_sZoneEntityName "EBAL"
+     }
+     m_FlagController GUB_FlagController "{697554C57356AEDD}" {
+      m_aFlagNames {
+       "PREFABIKAL"
+      }
+      m_fStartFactionKey "RHS_ION"
+      m_fEndFactionKey "RHS_AFRF"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{697554C59D549267}" {
+       m_sFirstFactionKey "RHS_AFRF"
+       m_sSecondFactionKey "RHS_ION"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 954.596 5.25 1412.177
+}
+$grp SCR_EditorRestrictionZoneEntity : "{7846A93EA395CFBA}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneBase.et" {
+ {
+  coords 436.333 7.531 1773.248
+ }
+ {
+  coords 1015.741 7.868 1014.584
+ }
+}
+$grp SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+ {
+  coords 829.053 7.346 1467.894
+ }
+ {
+  coords 1343.23 3.538 543.855
+ }
+ {
+  coords 1496.753 23.013 1481.509
+ }
+}
+PolylineShapeEntity EBAL : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
+ components {
+  PS_PolyZone "{60E90266F25533F6}" {
+   m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
+   m_cPolygonColor 0 0 0 0
+   m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+   m_cPolygonBorderColor 0.245 0.055 0.435 1
+   m_aVisibleForFactions {
+    ""
+    "RHS_AFRF"
+    "RHS_ION"
+   }
+  }
+ }
+ coords 881.761 7.889 1442.051
+ Points {
+  ShapePoint "{697554C23CA240F5}" {
+   Position -1.421 0 17.936
+  }
+  ShapePoint "{697554C23AA74D0F}" {
+   Position 1.536 0 26.088
+  }
+  ShapePoint "{697554C221C5030B}" {
+   Position 29.708 0 61.757
+  }
+  ShapePoint "{697554C22DDF9C1C}" {
+   Position -26.229 0 95.618
+  }
+  ShapePoint "{697554C22AAA8FBC}" {
+   Position -76.646 0 60.591
+  }
+  ShapePoint "{697554C250FBC128}" {
+   Position -82.299 0 55.828
+  }
+  ShapePoint "{697554C25FE6913A}" {
+   Position -92.375 0 66.042
+  }
+  ShapePoint "{697554C25DA2A9FE}" {
+   Position -136.466 0 21.815
+  }
+  ShapePoint "{697554C2590B8C85}" {
+   Position -106.25 0 -8.058
+  }
+  ShapePoint "{697554C24688B2FB}" {
+   Position -98.646 0 -15.814
+  }
+  ShapePoint "{697554C24504244C}" {
+   Position -82.857 0 -3.255
+  }
+  ShapePoint "{697554C249428243}" {
+   Position -61.684 0 -27.63
+  }
+  ShapePoint "{697554C2771B3F6D}" {
+   Position -11.579 0 -47.304
+  }
+ }
+}
