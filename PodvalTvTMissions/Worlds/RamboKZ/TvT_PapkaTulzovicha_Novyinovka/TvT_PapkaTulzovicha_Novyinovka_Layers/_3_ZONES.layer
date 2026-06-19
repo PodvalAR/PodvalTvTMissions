@@ -1,60 +1,123 @@
-PolylineShapeEntity MANSION_TRIG : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
- components {
-  PS_PolyZone "{60E90266F25533F6}" {
-   m_mPolygonTexture ""
-   m_cPolygonColor 0.474 0 0 0.219
-   m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
-   m_cPolygonBorderColor 0.474 0 0 1
-   m_fPolygonBorderWidth 8
-   m_aVisibleForFactions {
-    ""
-    "RHS_AFRF"
-    "RHS_USAF"
+$grp PolylineShapeEntity : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
+ MANSION_TRIG {
+  components {
+   PS_PolyZone "{60E90266F25533F6}" {
+    m_mPolygonTexture ""
+    m_cPolygonColor 0.474 0 0 0.219
+    m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+    m_cPolygonBorderColor 0.474 0 0 1
+    m_fPolygonBorderWidth 8
+    m_aVisibleForFactions {
+     ""
+     "RHS_AFRF"
+     "RHS_USAF"
+    }
+   }
+  }
+  coords 1513.178 140.886 1417.692
+  angles 0 13.909 0
+  Points {
+   ShapePoint "{6950E7C19B891F15}" {
+    Position -53.554 -0.167 -14.863
+   }
+   ShapePoint "{6950E7C19916B916}" {
+    Position -61.206 -0.167 -17.782
+   }
+   ShapePoint "{6950E7C195387FF6}" {
+    Position -177.241 0.212 -42.505
+   }
+   ShapePoint "{6950E7C1AE85821E}" {
+    Position -156.201 0.352 -138.033
+   }
+   ShapePoint "{6950E7C1AD56F57E}" {
+    Position -141.111 0.655 -176.822
+   }
+   ShapePoint "{6950E7C1A6E291CA}" {
+    Position -127.243 0.741 -212.599
+   }
+   ShapePoint "{6950E7C1A2B2A8D7}" {
+    Position -90.659 -1.438 -255.402
+   }
+   ShapePoint "{6950E7C1BF06C27F}" {
+    Position -10.942 -1.636 -263.177
+   }
+   ShapePoint "{6950E7C1BBE140D3}" {
+    Position 45.152 -0.347 -244.816
+   }
+   ShapePoint "{6950E7C1B87F6080}" {
+    Position 75.88 -0.53 -208.46
+   }
+   ShapePoint "{6950E7C1B90ED552}" {
+    Position 71.581 -0.126 -197.34
+   }
+   ShapePoint "{6950E7C1B4E172B8}" {
+    Position 64.05 -0.359 -177.795
+   }
+   ShapePoint "{6950E7C1B29E5130}" {
+    Position 39.697 -1.419 -126.975
+   }
+  }
+  LineColor 0.8745 0.6823 0.1098 1
+ }
+ SAFE_ZONE {
+  components {
+   PS_PolyZone "{60E90266F25533F6}" {
+    m_mPolygonTexture ""
+    m_cPolygonColor 0.251 0.502 0.314 0.35
+    m_cPolygonBorderColor 0.114 0.509 0.193 1
+    m_fPolygonBorderWidth 7
+    m_aVisibleForFactions {
+     ""
+     "RHS_AFRF"
+     "RHS_USAF"
+    }
+   }
+  }
+  coords 3134.816 142.583 1068.549
+  Points {
+   ShapePoint "{69A708CC12D769B6}" {
+    Position -0.703 -1.551 -61.93
+   }
+   ShapePoint "{69A708CC13BA9CC3}" {
+    Position 62.208 -1.232 -65.248
+   }
+   ShapePoint "{69A708CC10AF28CA}" {
+    Position 66.568 -0.645 2.749
+   }
+   ShapePoint "{60E90266E922A02A}" {
+    Position -1.385 -1.043 4.652
    }
   }
  }
- coords 1513.178 140.886 1417.692
- angles 0 13.909 0
- Points {
-  ShapePoint "{6950E7C19B891F15}" {
-   Position -53.554 -0.167 -14.863
+ SAFE_ZONE2 {
+  components {
+   PS_PolyZone "{60E90266F25533F6}" {
+    Enabled 1
+    m_mPolygonTexture ""
+    m_cPolygonColor 0.251 0.502 0.314 0.35
+    m_cPolygonBorderColor 0.114 0.509 0.193 1
+    m_fPolygonBorderWidth 7
+    m_aVisibleForFactions {
+     ""
+     "RHS_AFRF"
+     "RHS_USAF"
+    }
+   }
   }
-  ShapePoint "{6950E7C19916B916}" {
-   Position -61.206 -0.167 -17.782
-  }
-  ShapePoint "{6950E7C195387FF6}" {
-   Position -177.241 0.212 -42.505
-  }
-  ShapePoint "{6950E7C1AE85821E}" {
-   Position -156.201 0.352 -138.033
-  }
-  ShapePoint "{6950E7C1AD56F57E}" {
-   Position -141.111 0.655 -176.822
-  }
-  ShapePoint "{6950E7C1A6E291CA}" {
-   Position -127.243 0.741 -212.599
-  }
-  ShapePoint "{6950E7C1A2B2A8D7}" {
-   Position -90.659 -1.438 -255.402
-  }
-  ShapePoint "{6950E7C1BF06C27F}" {
-   Position -10.942 -1.636 -263.177
-  }
-  ShapePoint "{6950E7C1BBE140D3}" {
-   Position 45.152 -0.347 -244.816
-  }
-  ShapePoint "{6950E7C1B87F6080}" {
-   Position 75.88 -0.53 -208.46
-  }
-  ShapePoint "{6950E7C1B90ED552}" {
-   Position 71.581 -0.126 -197.34
-  }
-  ShapePoint "{6950E7C1B4E172B8}" {
-   Position 64.05 -0.359 -177.795
-  }
-  ShapePoint "{6950E7C1B29E5130}" {
-   Position 39.697 -1.419 -126.975
+  coords 1681.227 140.085 3061.776
+  Points {
+   ShapePoint "{69A708CC4E0CCCD4}" {
+    Position 40.348 0.235 19.561
+   }
+   ShapePoint "{69A708CC4CE7DF52}" {
+    Position 60.702 0.604 75.815
+   }
+   ShapePoint "{69A708CC4DEAE597}" {
+    Position -33.963 -0.011 110.7
+   }
+   ShapePoint "{69A708CC4D23ADAE}" {
+    Position -57.47 -0.279 97.165
+   }
   }
  }
- LineColor 0.8745 0.6823 0.1098 1
 }
