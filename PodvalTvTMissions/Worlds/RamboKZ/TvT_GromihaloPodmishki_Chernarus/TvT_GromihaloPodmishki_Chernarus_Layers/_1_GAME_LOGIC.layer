@@ -1,0 +1,76 @@
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{69A8B99F29CEFD51}" {
+     m_sZonePreviewName "Здание леспоилки"
+     m_sSuccessObjectiveNames {
+      "AFRF_2"
+     }
+     m_sFailedObjectiveNames {
+      "CDF_2"
+     }
+     m_Timer GUB_ZoneControlTimer "{69A8B99F70793DCC}" {
+     }
+     m_ZoneController GUB_ZoneController "{69A8B99F74916B0C}" {
+      m_sZoneEntityName "TRIG_BASE_1"
+     }
+     m_FlagController GUB_FlagController "{69A8B99F68F6FE32}" {
+      m_aFlagNames {
+       "BASE1_FLAG"
+       "BASE1_FLAG2"
+       "BASE1_FLAG3"
+      }
+      m_fStartFactionKey "Ses_CDF"
+      m_fEndFactionKey "RHS_AFRF"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{69A8B99F59DBB114}" {
+       m_sFirstFactionKey "RHS_AFRF"
+       m_sSecondFactionKey "Ses_CDF"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+    GUB_ZoneControlLogic "{69A8B99F411025B2}" {
+     m_sZonePreviewName "Полевой лагерь"
+     m_sSuccessObjectiveNames {
+      "AFRF_3"
+     }
+     m_sFailedObjectiveNames {
+      "CDF_3"
+     }
+     m_Timer GUB_ZoneControlTimer "{69A8B99F70793DCC}" {
+     }
+     m_ZoneController GUB_ZoneController "{69A8B99F74916B0C}" {
+      m_sZoneEntityName "TRIG_BASE_2"
+     }
+     m_FlagController GUB_FlagController "{69A8B99F68F6FE32}" {
+      m_aFlagNames {
+       "BASE2_FLAG"
+       "BASE2_FLAG2"
+      }
+      m_fStartFactionKey "Ses_CDF"
+      m_fEndFactionKey "RHS_AFRF"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{69A8B99F59DBB114}" {
+       m_sFirstFactionKey "RHS_AFRF"
+       m_sSecondFactionKey "Ses_CDF"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+}
