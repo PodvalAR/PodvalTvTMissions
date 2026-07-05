@@ -1,0 +1,59 @@
+$grp Vehicle : "{B47110AA1A806556}Prefabs/Vehicles/Wheeled/BTR70/BTR70_FIA.et" {
+ BTR70_FIA1 {
+  coords 4799.387 166.998 7048.719
+  angles -2.525 -19.829 0.91
+  m_sAttachmentGroupName "squad2"
+ }
+ BTR70_FIA2 {
+  coords 7096.682 117.08 5990.364
+  angles 1.927 -44.123 -1.868
+  m_sAttachmentGroupName "squad6"
+ }
+ BTR70_FIA3 {
+  coords 7083.064 117.794 6004.459
+  angles 1.766 -41.118 2.022
+  m_sAttachmentGroupName "squad5"
+ }
+}
+$grp Vehicle : "{B70E6D12A8EC2410}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_FIA_transport_covered.et" {
+ Ural4320_FIA_transport_covered1 {
+  coords 4801.684 167.67 7034.41
+  angles -1.866 -5.373 -0.723
+  m_sAttachmentGroupName "squad3"
+ }
+ Ural4320_FIA_transport_covered2 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{5916C58171230A92}" {
+    MultiSlots {
+     MultiSlotConfiguration "{69CA8D2F6A0E8A10}" {
+      SlotTemplate InventoryStorageSlot sandbag {
+       Prefab "{07BC23F8D9223863}Prefabs/Items/Misc/Sandbags/Part_Sandbag_Burlap.et"
+      }
+      NumSlots 150
+     }
+     MultiSlotConfiguration "{69CA8D2FD75DD845}" {
+      SlotTemplate InventoryStorageSlot table {
+       Prefab "{792F06155BEBD71D}Prefabs/Items/Equipment/BallisticTable/BallisticTable_US_base.et"
+      }
+      NumSlots 20
+     }
+    }
+   }
+  }
+  coords 4790.941 167.544 7023.938
+  angles 3.012 60.505 -3.752
+  m_sAttachmentGroupName "squadmortat4"
+ }
+}
+$grp Vehicle : "{F7E9AA0C813EABDA}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_FIA.et" {
+ UAZ469_FIA1 {
+  coords 4792.835 166.101 7066.13
+  angles -2.81 -25.092 0.328
+  m_sAttachmentGroupName "squad1"
+ }
+ UAZ469_FIA2 {
+  coords 4795.172 166.371 7061.137
+  angles -2.81 -25.092 0.328
+  m_sAttachmentGroupName "squad1"
+ }
+}
