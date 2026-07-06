@@ -2,10 +2,38 @@ $grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
  USSR_WIN {
   m_sTitle "Техника защищена"
   m_sTextData "Техника защищена"
+  m_iScore 70
   m_sFactionKey "USSR"
  }
  FIA_WIN {
   m_sTitle "Техника уничтожена"
   m_sTextData "Техника уничтожена"
+  m_iScore 70
+ }
+ FIA_WIN2 {
+  coords 0 0 0
+  m_sTitle "Порт в Мортоне захвачен"
+  m_sTextData "Техника уничтожена"
+  m_iScore 15
+ }
+ FIA_WIN3 {
+  coords 0 0 0
+  m_sTitle "Причал у военной базы захвачен"
+  m_sTextData "Техника уничтожена"
+  m_iScore 15
+ }
+ USSR_WIN3 {
+  coords 0 0 0
+  m_sTitle "Причал у военной базы удержан"
+  m_sTextData "Техника защищена"
+  m_iScore 15
+  m_sFactionKey "USSR"
+ }
+ USSR_WIN2 {
+  coords 0 0 0
+  m_sTitle "Порт в Мортоне удержан"
+  m_sTextData "Техника защищена"
+  m_iScore 15
+  m_sFactionKey "USSR"
  }
 }

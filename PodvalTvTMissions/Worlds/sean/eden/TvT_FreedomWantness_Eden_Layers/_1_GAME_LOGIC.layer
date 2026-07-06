@@ -1,3 +1,89 @@
+$grp GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ {
+  components {
+   GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+    m_aControlLogics {
+     GUB_ZoneControlLogic "{69CCC9D8D05ECF46}" {
+      m_sZonePreviewName "Порт в Мортоне"
+      m_fCheckPeriod 0.2
+      m_sSuccessObjectiveNames {
+       "FIA_WIN2"
+      }
+      m_sFailedObjectiveNames {
+       "USSR_WIN2"
+      }
+      m_sMessage "Порт в Мортоне захвачен."
+      m_Timer GUB_ZoneControlTimer "{69CCC9D8BBDEF870}" {
+       timeToComplete 10
+      }
+      m_ZoneController GUB_ZoneController "{69CCC9D8B9B0A4E6}" {
+       m_sZoneEntityName "trigger1"
+      }
+      m_FlagController GUB_FlagController "{69CCC9D8B65E763E}" {
+       m_aFlagNames {
+        "flag1"
+        "flag2"
+       }
+       m_fStartFactionKey "USSR"
+       m_fEndFactionKey "FIA"
+      }
+      m_aConditions {
+       GUB_ZoneControlBetweenFactionsCondition "{69CCC9D8AC82B120}" {
+        m_sFirstFactionKey "FIA"
+        m_sSecondFactionKey "USSR"
+        m_fComparisonMultiplier 2
+        m_iOperator GREATER
+       }
+      }
+     }
+    }
+   }
+  }
+  coords 4959.785 2.212 3880.482
+ }
+ {
+  components {
+   GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+    m_aControlLogics {
+     GUB_ZoneControlLogic "{69CCC9D8D05ECF46}" {
+      m_sZonePreviewName "Причал у военной базы"
+      m_fCheckPeriod 0.2
+      m_sSuccessObjectiveNames {
+       "FIA_WIN3"
+      }
+      m_sFailedObjectiveNames {
+       "USSR_WIN3"
+      }
+      m_sMessage "Причал у военной базы захвачен."
+      m_Timer GUB_ZoneControlTimer "{69CCC9D8BBDEF870}" {
+       timeToComplete 10
+      }
+      m_ZoneController GUB_ZoneController "{69CCC9D8B9B0A4E6}" {
+       m_sZoneEntityName "trigger2"
+      }
+      m_FlagController GUB_FlagController "{69CCC9D8B65E763E}" {
+       m_aFlagNames {
+        "flag3"
+        "flag4"
+       }
+       m_fStartFactionKey "USSR"
+       m_fEndFactionKey "FIA"
+      }
+      m_aConditions {
+       GUB_ZoneControlBetweenFactionsCondition "{69CCC9D8AC82B120}" {
+        m_sFirstFactionKey "FIA"
+        m_sSecondFactionKey "USSR"
+        m_fComparisonMultiplier 2
+        m_iOperator GREATER
+       }
+      }
+     }
+    }
+   }
+  }
+  coords 4959.785 2.212 3880.482
+ }
+}
 GenericEntity : "{6A3CDCFB475BF1B2}Prefabs/System/DRG_CriticalLossPrefab.et" {
 }
 GenericEntity : "{7A333AFB11EA847A}Prefabs/System/DRG_VehicleDestroyPrefab.et" {
@@ -24,6 +110,7 @@ GenericEntity : "{7A333AFB11EA847A}Prefabs/System/DRG_VehicleDestroyPrefab.et" {
       ""
       ""
      }
+     m_sMessage "Техника уничтожена."
     }
    }
   }
