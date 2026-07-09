@@ -1,0 +1,125 @@
+$grp Vehicle : "{136AF62C14074BD6}Prefabs/Vehicles/Wheeled/K17/APC_K17_Epoch_NoPTUR.et" {
+ APC_K17_Epoch_NoPTUR1 {
+  coords 7967.07 118.406 12612.547
+  angles 3.996 155.084 0.115
+  m_sAttachmentGroupName "squad7rf"
+ }
+ APC_K17_Epoch_NoPTUR2 {
+  coords 7975.093 119.028 12595.275
+  angles 1.227 149.238 0.311
+  m_sAttachmentGroupName "squad6rf"
+ }
+}
+Vehicle BTR72aberez1 : "{1A0C6B9108D0E089}Prefabs/Vehicles/Wheeled/BTR70/BTR72aberez.et" {
+ coords 7982.791 118.988 12583.169
+ angles -0.457 149.281 -0.77
+ m_sAttachmentGroupName "squad5rf"
+}
+$grp Vehicle : "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et" {
+ UAZ1 {
+  coords 7910.173 118.742 12556.289
+  angles -0.906 59.594 -1.544
+  m_sAttachmentGroupName "pl"
+ }
+ UAZ2 {
+  coords 8045.403 119.683 12570.851
+  angles 1.99 57.527 -0.206
+  m_sAttachmentGroupName "squad9rf"
+ }
+ UAZ3 {
+  coords 8040.457 119.449 12567.704
+  angles 3.224 57.539 0.069
+  m_sAttachmentGroupName "squad9rf"
+ }
+ UAZ4 {
+  coords 8032.713 119.156 12562.777
+  angles 0 57.529 0
+  m_sAttachmentGroupName "squad10rf"
+ }
+}
+$grp Vehicle : "{D9B91FAB817A6033}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_covered.et" {
+ Ural4320_transport_covered2 {
+  coords 7898.659 118.491 12575.922
+  angles -1.203 63.156 -0.394
+  m_sAttachmentGroupName "squad4rf"
+ }
+ Ural4320_transport_covered3 {
+  coords 7912.602 118.322 12582.98
+  angles 0.799 63.143 -0.404
+  m_sAttachmentGroupName "squad3rf"
+ }
+ Ural4320_transport_covered4 {
+  coords 7927.1 118.307 12590.319
+  angles -0.404 63.154 -0.799
+  m_sAttachmentGroupName "squad2rf"
+ }
+ Ural4320_transport_covered1 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{5916C58171230A92}" {
+    MultiSlots {
+     MultiSlotConfiguration "{69D0DACD839E5569}" {
+      SlotTemplate InventoryStorageSlot mavic {
+       Prefab "{358CAF5CD0C8D04D}Prefabs/Drones/DJIBase/DJIVOG25Dropper.et"
+      }
+      NumSlots 2
+     }
+     MultiSlotConfiguration "{69D0DACC6A2ABE73}" {
+      SlotTemplate InventoryStorageSlot antenna {
+       Prefab "{F09518802063A355}Prefabs/Items/Equipment/DroneAntenna/DroneAntenna.et"
+      }
+      NumSlots 1
+     }
+     MultiSlotConfiguration "{69D0DACC5D0C63F8}" {
+      SlotTemplate InventoryStorageSlot googles {
+       Prefab "{8951045BFE8BC8E4}Prefabs/Characters/HeadGear/FPV_Goggles.et"
+      }
+     }
+     MultiSlotConfiguration "{69D0DACC38A37729}" {
+      SlotTemplate InventoryStorageSlot vogs {
+       Prefab "{D1F489A772F01320}Prefabs/Drones/DJIBase/VOG25GrenadeDropper.et"
+      }
+      NumSlots 24
+     }
+     MultiSlotConfiguration "{69D0DACC2BECBA60}" {
+      SlotTemplate InventoryStorageSlot sandbags {
+       Prefab "{07BC23F8D9223863}Prefabs/Items/Misc/Sandbags/Part_Sandbag_Burlap.et"
+      }
+      NumSlots 150
+     }
+     MultiSlotConfiguration "{69D0DACCBC52BF02}" {
+      SlotTemplate InventoryStorageSlot table {
+       Prefab "{B41607EAB58A4252}Prefabs/Items/Equipment/BallisticTable/BallisticTable_USSR.et"
+      }
+      NumSlots 200
+     }
+     MultiSlotConfiguration "{69D0DACFB91E519E}" {
+      SlotTemplate InventoryStorageSlot controller {
+       Prefab "{E2434ED1318D8476}Prefabs/Characters/Items/DroneController.et"
+      }
+      NumSlots 1
+     }
+     MultiSlotConfiguration "{69D2D014A354570C}" {
+      SlotTemplate InventoryStorageSlot reb {
+       Prefab "{4977C9711C8F1943}Prefabs/Items/Equipment/Backpacks/JammerBag.et"
+      }
+      NumSlots 1
+     }
+     MultiSlotConfiguration "{69D2D01491622770}" {
+      SlotTemplate InventoryStorageSlot station {
+       Prefab "{6356BFD802DEB290}Prefabs/Characters/Items/DroneCommandStation.et"
+      }
+      NumSlots 1
+     }
+    }
+   }
+  }
+  coords 7892.878 118.656 12558.893
+  angles 0 152.756 0
+  m_sAttachmentGroupName "squad8rf"
+ }
+ Ural4320_transport_covered5 {
+  coords 7919.566 118.592 12562.074
+  angles -0.808 63.171 -1.597
+  m_sAttachmentGroupName "squad1rf"
+ }
+}
