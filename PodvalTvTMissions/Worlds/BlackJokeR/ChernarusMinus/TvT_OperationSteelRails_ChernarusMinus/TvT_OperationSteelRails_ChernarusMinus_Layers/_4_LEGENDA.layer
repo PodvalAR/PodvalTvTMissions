@@ -1,6 +1,6 @@
 $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
  RHS_USAF_G_100_M {
-  coords 4788.815 9.251 2548.009
+  coords 4530.883 327.405 9882.537
   m_sImageSet "{1228936E5DB30403}UI/Textures/GroupManagement/FlagIcons/GroupFlagsBlufor.imageset"
   m_sImageSetGlow ""
   m_MarkerColor 1 1 1 1
@@ -16,6 +16,7 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
@@ -30,7 +31,7 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   m_iZOrder 10
  }
  RHS_USAF_G_101_M {
-  coords 4756.824 9.25 2567.638
+  coords 4530.879 327.407 9884.825
   m_sImageSet "{1228936E5DB30403}UI/Textures/GroupManagement/FlagIcons/GroupFlagsBlufor.imageset"
   m_sImageSetGlow ""
   m_MarkerColor 1 1 1 1
@@ -46,6 +47,7 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
@@ -59,14 +61,14 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   }
   m_iZOrder 10
  }
- RHS_USAF_G_200_M {
-  coords 4960.907 327.335 9990.101
+ RHS_USAF_G_102_M {
+  coords 4592.938 327.406 9651.356
   m_sImageSet "{1228936E5DB30403}UI/Textures/GroupManagement/FlagIcons/GroupFlagsBlufor.imageset"
   m_sImageSetGlow ""
   m_MarkerColor 1 1 1 1
   m_sQuadName "undefined"
   m_fWorldSize 50
-  m_sDescription "(#PDVL_Squad_Pilot) Хаос 1–1"
+  m_sDescription "(#PDVL_Squad_Pilot) Блэйзер 1–3"
   m_bUseWorldScale 0
   m_aVisibleForFactions {
    "RHS_AFRF"
@@ -76,6 +78,7 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
@@ -89,14 +92,14 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   }
   m_iZOrder 10
  }
- RHS_USAF_G_201_M {
-  coords 4934.512 327.425 10034.218
+ RHS_USAF_G_103_M {
+  coords 4594.285 327.406 9661.186
   m_sImageSet "{1228936E5DB30403}UI/Textures/GroupManagement/FlagIcons/GroupFlagsBlufor.imageset"
   m_sImageSetGlow ""
   m_MarkerColor 1 1 1 1
   m_sQuadName "undefined"
   m_fWorldSize 50
-  m_sDescription "(#PDVL_Squad_Pilot) Хаос 1–2"
+  m_sDescription "(#PDVL_Squad_Pilot) Блэйзер 1–4"
   m_bUseWorldScale 0
   m_aVisibleForFactions {
    "RHS_AFRF"
@@ -106,96 +109,7 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
-   "Drg_IGF"
-   "Drg_PIR"
-   "UK"
-   "USSR"
-   "US"
-   "FIA"
-   "Drg_VCA"
-  }
-  m_bVisibleForEmptyFaction 1
-  m_aHideOnGameModeStates {
-  }
-  m_iZOrder 10
- }
- RHS_USAF_G_202_M {
-  coords 4906.716 327.496 10073.083
-  m_sImageSet "{1228936E5DB30403}UI/Textures/GroupManagement/FlagIcons/GroupFlagsBlufor.imageset"
-  m_sImageSetGlow ""
-  m_MarkerColor 1 1 1 1
-  m_sQuadName "undefined"
-  m_fWorldSize 50
-  m_sDescription "(#PDVL_Squad_Pilot) Хаос 1–3"
-  m_bUseWorldScale 0
-  m_aVisibleForFactions {
-   "RHS_AFRF"
-   "RHS_USAF"
-   "RHS_ION"
-   "Ses_CDF"
-   "Ses_ChDKZ"
-   "Ses_TKR"
-   "Ses_TKA"
-   "Drg_IGF"
-   "Drg_PIR"
-   "UK"
-   "USSR"
-   "US"
-   "FIA"
-   "Drg_VCA"
-  }
-  m_bVisibleForEmptyFaction 1
-  m_aHideOnGameModeStates {
-  }
-  m_iZOrder 10
- }
- RHS_USAF_G_203_M {
-  coords 4883.05 327.453 10118.392
-  m_sImageSet "{1228936E5DB30403}UI/Textures/GroupManagement/FlagIcons/GroupFlagsBlufor.imageset"
-  m_sImageSetGlow ""
-  m_MarkerColor 1 1 1 1
-  m_sQuadName "undefined"
-  m_fWorldSize 50
-  m_sDescription "(#PDVL_Squad_Pilot) Хаос 1–4"
-  m_bUseWorldScale 0
-  m_aVisibleForFactions {
-   "RHS_AFRF"
-   "RHS_USAF"
-   "RHS_ION"
-   "Ses_CDF"
-   "Ses_ChDKZ"
-   "Ses_TKR"
-   "Ses_TKA"
-   "Drg_IGF"
-   "Drg_PIR"
-   "UK"
-   "USSR"
-   "US"
-   "FIA"
-   "Drg_VCA"
-  }
-  m_bVisibleForEmptyFaction 1
-  m_aHideOnGameModeStates {
-  }
-  m_iZOrder 10
- }
- RHS_USAF_G_204_M {
-  coords 4861.886 327.405 10155.089
-  m_sImageSet "{1228936E5DB30403}UI/Textures/GroupManagement/FlagIcons/GroupFlagsBlufor.imageset"
-  m_sImageSetGlow ""
-  m_MarkerColor 1 1 1 1
-  m_sQuadName "undefined"
-  m_fWorldSize 50
-  m_sDescription "(#PDVL_Squad_Pilot) Хаос 1–5"
-  m_bUseWorldScale 0
-  m_aVisibleForFactions {
-   "RHS_AFRF"
-   "RHS_USAF"
-   "RHS_ION"
-   "Ses_CDF"
-   "Ses_ChDKZ"
-   "Ses_TKR"
-   "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
@@ -210,7 +124,7 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   m_iZOrder 10
  }
  RHS_USAF_G_000_M {
-  coords 12863.504 5.75 10001.743
+  coords 12862.43 5.75 9999.923
   m_sImageSet "{1228936E5DB30403}UI/Textures/GroupManagement/FlagIcons/GroupFlagsBlufor.imageset"
   m_sImageSetGlow ""
   m_MarkerColor 1 1 1 1
@@ -226,6 +140,38 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
+   "Ses_NAPA"
+   "Drg_IGF"
+   "Drg_PIR"
+   "UK"
+   "USSR"
+   "US"
+   "FIA"
+   "Drg_VCA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+  }
+  m_iZOrder 10
+ }
+ RHS_USAF_G_200_M {
+  coords 12851.577 5.75 9980.592
+  m_sImageSet "{1228936E5DB30403}UI/Textures/GroupManagement/FlagIcons/GroupFlagsBlufor.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 1 1 1 1
+  m_sQuadName "undefined"
+  m_fWorldSize 50
+  m_sDescription "Хаос 1–1"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "RHS_ION"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
@@ -240,7 +186,7 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   m_iZOrder 10
  }
  RHS_USAF_G_002_M {
-  coords 12875.438 5.751 10022.514
+  coords 12875.34 5.751 10022.564
   m_sImageSet "{1228936E5DB30403}UI/Textures/GroupManagement/FlagIcons/GroupFlagsBlufor.imageset"
   m_sImageSetGlow ""
   m_MarkerColor 1 1 1 1
@@ -256,6 +202,7 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
@@ -286,6 +233,7 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
@@ -316,6 +264,7 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
@@ -346,6 +295,7 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
@@ -360,7 +310,7 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   m_iZOrder 10
  }
  RHS_USAF_G_500_M {
-  coords 12025.692 152.684 12642.384
+  coords 12129.159 146.889 12823.885
   m_sImageSet "{1228936E5DB30403}UI/Textures/GroupManagement/FlagIcons/GroupFlagsBlufor.imageset"
   m_sImageSetGlow ""
   m_MarkerColor 1 1 1 1
@@ -376,6 +326,7 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
@@ -406,6 +357,7 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
@@ -436,6 +388,7 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
@@ -466,6 +419,7 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
@@ -480,7 +434,7 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   m_iZOrder 10
  }
  RHS_USAF_G_401_M {
-  coords 10481.728 110.543 9947.593
+  coords 10481.728 109.769 9947.593
   m_sImageSet "{1228936E5DB30403}UI/Textures/GroupManagement/FlagIcons/GroupFlagsBlufor.imageset"
   m_sImageSetGlow ""
   m_MarkerColor 1 1 1 1
@@ -496,6 +450,7 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
@@ -526,6 +481,7 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
@@ -556,6 +512,7 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
@@ -586,6 +543,7 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
@@ -616,6 +574,7 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
@@ -646,6 +605,7 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
@@ -660,22 +620,24 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   m_iZOrder 10
  }
  {
-  coords 4720.998 9.251 2535.197
-  angles 0 33.52 0
+  coords 4611.567 327.406 9916.307
+  angles 0 -31.532 0
   m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
   m_sImageSetGlow ""
   m_MarkerColor 0.016 0.552 0.905 1
   m_sQuadName "Helicopter"
-  m_fWorldSize 4.095
-  m_sDescription "AH-6J (Doors) | M134 - GAU19 - M260"
+  m_fWorldSize 3.717
+  m_sDescription "#AH6M-Vehicle_AH6M_Name - #WCS-Weapon_M134_Name/#WCS-Weapon_M260_Name/#AH6M-Weapon_GAU19_Name"
   m_bUseWorldScale 1
   m_aVisibleForFactions {
    "RHS_AFRF"
    "RHS_USAF"
+   "RHS_ION"
    "Ses_CDF"
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
@@ -691,22 +653,90 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   m_iZOrder 0
  }
  {
-  coords 4753.762 9.251 2516.044
-  angles 0 31.014 0
+  coords 4621.959 327.406 9896.555
+  angles 0 -29.061 0
   m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
   m_sImageSetGlow ""
   m_MarkerColor 0.016 0.552 0.905 1
   m_sQuadName "Helicopter"
-  m_fWorldSize 4.095
-  m_sDescription "AH-6J (Doors) | M134 - M260 HEDP"
+  m_fWorldSize 3.717
+  m_sDescription "#AH6M-Vehicle_AH6M_Name - #WCS-Weapon_M134_Name/#WCS-Weapon_M260_Name/#AH6M-Weapon_GAU19_Name"
   m_bUseWorldScale 1
   m_aVisibleForFactions {
    "RHS_AFRF"
    "RHS_USAF"
+   "RHS_ION"
    "Ses_CDF"
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
+   "Ses_NAPA"
+   "Drg_IGF"
+   "Drg_PIR"
+   "UK"
+   "USSR"
+   "US"
+   "FIA"
+   "Drg_VCA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+   GAME
+  }
+  m_iZOrder 0
+ }
+ {
+  coords 4711.968 327.406 9740.623
+  angles 0 -30.019 0
+  m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 0.016 0.552 0.905 1
+  m_sQuadName "Helicopter"
+  m_fWorldSize 3.717
+  m_sDescription "#AH6M-Vehicle_AH6M_Name - #WCS-Weapon_M134_Name/#WCS-Weapon_M260_Name"
+  m_bUseWorldScale 1
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "RHS_ION"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+   "Ses_NAPA"
+   "Drg_IGF"
+   "Drg_PIR"
+   "UK"
+   "USSR"
+   "US"
+   "FIA"
+   "Drg_VCA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+   GAME
+  }
+  m_iZOrder 0
+ }
+ {
+  coords 4700.876 327.406 9759.987
+  angles 0 -30.353 0
+  m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 0.016 0.552 0.905 1
+  m_sQuadName "Helicopter"
+  m_fWorldSize 3.717
+  m_sDescription "#AH6M-Vehicle_AH6M_Name - #WCS-Weapon_M134_Name/#WCS-Weapon_M260_Name"
+  m_bUseWorldScale 1
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "RHS_ION"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
@@ -734,10 +764,12 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   m_aVisibleForFactions {
    "RHS_AFRF"
    "RHS_USAF"
+   "RHS_ION"
    "Ses_CDF"
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
@@ -765,10 +797,12 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   m_aVisibleForFactions {
    "RHS_AFRF"
    "RHS_USAF"
+   "RHS_ION"
    "Ses_CDF"
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
@@ -796,10 +830,12 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   m_aVisibleForFactions {
    "RHS_AFRF"
    "RHS_USAF"
+   "RHS_ION"
    "Ses_CDF"
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
@@ -815,7 +851,74 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   m_iZOrder 0
  }
  {
-  coords 10476.183 109.83 9949.533
+  coords 10475.518 109.812 9948.98
+  angles 0.075 87.597 1.788
+  m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 0.016 0.552 0.905 1
+  m_sQuadName "Car"
+  m_fWorldSize 2.399
+  m_sDescription "#TF-Vehicle_M1151A1_M2_Name + Crows(M2)"
+  m_bUseWorldScale 1
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "RHS_ION"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+   "Ses_NAPA"
+   "Drg_IGF"
+   "Drg_PIR"
+   "UK"
+   "USSR"
+   "US"
+   "FIA"
+   "Drg_VCA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+   GAME
+  }
+  m_iZOrder 0
+ }
+ {
+  coords 10474.006 110.556 9981.578
+  angles 0.893 86.265 -0.058
+  m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 0.016 0.552 0.905 1
+  m_sQuadName "Car"
+  m_fWorldSize 2.399
+  m_sDescription "#TF-Vehicle_M1151A1_M2_Name + Crows(M2)"
+  m_bUseWorldScale 1
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "RHS_ION"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+   "Ses_NAPA"
+   "Drg_IGF"
+   "Drg_PIR"
+   "UK"
+   "USSR"
+   "US"
+   "FIA"
+   "Drg_VCA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+   GAME
+  }
+  m_iZOrder 0
+ }
+ {
+  coords 4982.02 327.425 10017.468
+  angles 0 -30.315 0
   m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
   m_sImageSetGlow ""
   m_MarkerColor 0.016 0.552 0.905 1
@@ -826,10 +929,12 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   m_aVisibleForFactions {
    "RHS_AFRF"
    "RHS_USAF"
+   "RHS_ION"
    "Ses_CDF"
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
@@ -845,8 +950,8 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   m_iZOrder 0
  }
  {
-  coords 10475.046 110.573 9982.221
-  angles 0 87.805 0
+  coords 4958.064 327.425 10059.625
+  angles 0 -30.076 0
   m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
   m_sImageSetGlow ""
   m_MarkerColor 0.016 0.552 0.905 1
@@ -857,10 +962,12 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   m_aVisibleForFactions {
    "RHS_AFRF"
    "RHS_USAF"
+   "RHS_ION"
    "Ses_CDF"
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
@@ -876,8 +983,8 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   m_iZOrder 0
  }
  {
-  coords 4871.086 327.496 10174.541
-  angles 0 -26.84 0
+  coords 4933.463 327.496 10098.59
+  angles 0 -24.744 0
   m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
   m_sImageSetGlow ""
   m_MarkerColor 0.016 0.552 0.905 1
@@ -888,10 +995,12 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   m_aVisibleForFactions {
    "RHS_AFRF"
    "RHS_USAF"
+   "RHS_ION"
    "Ses_CDF"
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
@@ -907,8 +1016,8 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   m_iZOrder 0
  }
  {
-  coords 4895.718 327.496 10133.879
-  angles 0 -27.648 0
+  coords 4908.944 327.496 10142.545
+  angles 0 -29.768 0
   m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
   m_sImageSetGlow ""
   m_MarkerColor 0.016 0.552 0.905 1
@@ -919,10 +1028,12 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   m_aVisibleForFactions {
    "RHS_AFRF"
    "RHS_USAF"
+   "RHS_ION"
    "Ses_CDF"
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
@@ -938,8 +1049,8 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   m_iZOrder 0
  }
  {
-  coords 4917.766 327.496 10092.248
-  angles 0 -29.119 0
+  coords 4885.862 327.496 10183.844
+  angles 0 -31.657 0
   m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
   m_sImageSetGlow ""
   m_MarkerColor 0.016 0.552 0.905 1
@@ -950,10 +1061,12 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   m_aVisibleForFactions {
    "RHS_AFRF"
    "RHS_USAF"
+   "RHS_ION"
    "Ses_CDF"
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
@@ -969,22 +1082,24 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   m_iZOrder 0
  }
  {
-  coords 4943.345 327.425 10050.337
-  angles 0 -30.303 0
+  coords 12845.787 5.75 9985.646
+  angles 0 118.957 0
   m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
   m_sImageSetGlow ""
   m_MarkerColor 0.016 0.552 0.905 1
   m_sQuadName "Car"
   m_fWorldSize 2.399
-  m_sDescription "#TF-Vehicle_M1151A1_M2_Name"
+  m_sDescription "#TF-Vehicle_M1167_Name"
   m_bUseWorldScale 1
   m_aVisibleForFactions {
    "RHS_AFRF"
    "RHS_USAF"
+   "RHS_ION"
    "Ses_CDF"
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
@@ -1000,177 +1115,24 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   m_iZOrder 0
  }
  {
-  coords 4971.082 327.425 10009.356
-  angles 0 -29.301 0
-  m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
-  m_sImageSetGlow ""
-  m_MarkerColor 0.016 0.552 0.905 1
-  m_sQuadName "Car"
-  m_fWorldSize 2.399
-  m_sDescription "#TF-Vehicle_M1151A1_M2_Name"
-  m_bUseWorldScale 1
-  m_aVisibleForFactions {
-   "RHS_AFRF"
-   "RHS_USAF"
-   "Ses_CDF"
-   "Ses_ChDKZ"
-   "Ses_TKR"
-   "Ses_TKA"
-   "Drg_IGF"
-   "Drg_PIR"
-   "UK"
-   "USSR"
-   "US"
-   "FIA"
-   "Drg_VCA"
-  }
-  m_bVisibleForEmptyFaction 1
-  m_aHideOnGameModeStates {
-   GAME
-  }
-  m_iZOrder 0
- }
- {
-  coords 12014.774 152.685 12630.314
-  angles 0 85.896 0
-  m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
-  m_sImageSetGlow ""
-  m_MarkerColor 0.016 0.552 0.905 1
-  m_sQuadName "Car"
-  m_fWorldSize 3.246
-  m_sDescription "#TF-Vehicle_MATV_Name"
-  m_bUseWorldScale 1
-  m_aVisibleForFactions {
-   "RHS_AFRF"
-   "RHS_USAF"
-   "Ses_CDF"
-   "Ses_ChDKZ"
-   "Ses_TKR"
-   "Ses_TKA"
-   "Drg_IGF"
-   "Drg_PIR"
-   "UK"
-   "USSR"
-   "US"
-   "FIA"
-   "Drg_VCA"
-  }
-  m_bVisibleForEmptyFaction 1
-  m_aHideOnGameModeStates {
-   GAME
-  }
-  m_iZOrder 0
- }
- {
-  coords 12005.328 152.685 12633.657
-  angles 0 125.274 0
-  m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
-  m_sImageSetGlow ""
-  m_MarkerColor 0.016 0.552 0.905 1
-  m_sQuadName "Car"
-  m_fWorldSize 3.246
-  m_sDescription "#TF-Vehicle_MATV_Name"
-  m_bUseWorldScale 1
-  m_aVisibleForFactions {
-   "RHS_AFRF"
-   "RHS_USAF"
-   "Ses_CDF"
-   "Ses_ChDKZ"
-   "Ses_TKR"
-   "Ses_TKA"
-   "Drg_IGF"
-   "Drg_PIR"
-   "UK"
-   "USSR"
-   "US"
-   "FIA"
-   "Drg_VCA"
-  }
-  m_bVisibleForEmptyFaction 1
-  m_aHideOnGameModeStates {
-   GAME
-  }
-  m_iZOrder 0
- }
- {
-  coords 11856.701 142.749 12410.312
-  angles 0 99.889 0
-  m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
-  m_sImageSetGlow ""
-  m_MarkerColor 0.016 0.552 0.905 1
-  m_sQuadName "Car"
-  m_fWorldSize 1.844
-  m_sDescription "#AR-Vehicle_M151A2_Name"
-  m_bUseWorldScale 1
-  m_aVisibleForFactions {
-   "RHS_AFRF"
-   "RHS_USAF"
-   "Ses_CDF"
-   "Ses_ChDKZ"
-   "Ses_TKR"
-   "Ses_TKA"
-   "Drg_IGF"
-   "Drg_PIR"
-   "UK"
-   "USSR"
-   "US"
-   "FIA"
-   "Drg_VCA"
-  }
-  m_bVisibleForEmptyFaction 1
-  m_aHideOnGameModeStates {
-   GAME
-  }
-  m_iZOrder 0
- }
- {
-  coords 11858.625 142.75 12424.232
-  angles 0 95.481 0
-  m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
-  m_sImageSetGlow ""
-  m_MarkerColor 0.016 0.552 0.905 1
-  m_sQuadName "Car"
-  m_fWorldSize 1.844
-  m_sDescription "#AR-Vehicle_M151A2_Name"
-  m_bUseWorldScale 1
-  m_aVisibleForFactions {
-   "RHS_AFRF"
-   "RHS_USAF"
-   "Ses_CDF"
-   "Ses_ChDKZ"
-   "Ses_TKR"
-   "Ses_TKA"
-   "Drg_IGF"
-   "Drg_PIR"
-   "UK"
-   "USSR"
-   "US"
-   "FIA"
-   "Drg_VCA"
-  }
-  m_bVisibleForEmptyFaction 1
-  m_aHideOnGameModeStates {
-   GAME
-  }
-  m_iZOrder 0
- }
- {
-  coords 4880.332 327.406 10012.938
-  angles 0 59.822 0
+  coords 4902.792 327.406 9973.947
+  angles 0 60.841 0
   m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
   m_sImageSetGlow ""
   m_MarkerColor 0.016 0.552 0.905 1
   m_sQuadName "Helicopter"
-  m_fWorldSize 4.095
-  m_sDescription "MH-6J (Doors)"
+  m_fWorldSize 3.717
+  m_sDescription "#AH6M-Vehicle_MH6M_Name"
   m_bUseWorldScale 1
   m_aVisibleForFactions {
    "RHS_AFRF"
    "RHS_USAF"
+   "RHS_ION"
    "Ses_CDF"
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
@@ -1186,22 +1148,24 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   m_iZOrder 0
  }
  {
-  coords 4904.651 327.405 9970.876
-  angles 0 59.551 0
+  coords 4807.241 327.406 10139.143
+  angles 0 60.841 0
   m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
   m_sImageSetGlow ""
   m_MarkerColor 0.016 0.552 0.905 1
   m_sQuadName "Helicopter"
-  m_fWorldSize 4.095
-  m_sDescription "MH-6J (Doors)"
+  m_fWorldSize 3.717
+  m_sDescription "#AH6M-Vehicle_MH6M_Name"
   m_bUseWorldScale 1
   m_aVisibleForFactions {
    "RHS_AFRF"
    "RHS_USAF"
+   "RHS_ION"
    "Ses_CDF"
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
@@ -1217,22 +1181,24 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   m_iZOrder 0
  }
  {
-  coords 4855.472 327.406 10055.946
-  angles 0 60.56 0
+  coords 4828.741 327.406 10102.043
+  angles 0 60.841 0
   m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
   m_sImageSetGlow ""
   m_MarkerColor 0.016 0.552 0.905 1
   m_sQuadName "Helicopter"
-  m_fWorldSize 4.095
-  m_sDescription "MH-6J (Doors)"
+  m_fWorldSize 3.717
+  m_sDescription "#AH6M-Vehicle_MH6M_Name"
   m_bUseWorldScale 1
   m_aVisibleForFactions {
    "RHS_AFRF"
    "RHS_USAF"
+   "RHS_ION"
    "Ses_CDF"
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
@@ -1248,22 +1214,24 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   m_iZOrder 0
  }
  {
-  coords 4830.5 327.406 10098.978
-  angles 0 61.454 0
+  coords 4853.224 327.406 10059.717
+  angles 0 60.841 0
   m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
   m_sImageSetGlow ""
   m_MarkerColor 0.016 0.552 0.905 1
   m_sQuadName "Helicopter"
-  m_fWorldSize 4.095
-  m_sDescription "MH-6J (Doors)"
+  m_fWorldSize 3.717
+  m_sDescription "#AH6M-Vehicle_MH6M_Name"
   m_bUseWorldScale 1
   m_aVisibleForFactions {
    "RHS_AFRF"
    "RHS_USAF"
+   "RHS_ION"
    "Ses_CDF"
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
@@ -1279,22 +1247,24 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   m_iZOrder 0
  }
  {
-  coords 4808.822 327.407 10136.807
-  angles 0 58.968 0
+  coords 4880.788 327.406 10012.043
+  angles 0 60.841 0
   m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
   m_sImageSetGlow ""
   m_MarkerColor 0.016 0.552 0.905 1
   m_sQuadName "Helicopter"
-  m_fWorldSize 4.095
-  m_sDescription "MH-6J (Doors)"
+  m_fWorldSize 3.717
+  m_sDescription "#AH6M-Vehicle_MH6M_Name"
   m_bUseWorldScale 1
   m_aVisibleForFactions {
    "RHS_AFRF"
    "RHS_USAF"
+   "RHS_ION"
    "Ses_CDF"
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
@@ -1326,6 +1296,7 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
@@ -1356,6 +1327,7 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
@@ -1386,6 +1358,7 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
@@ -1416,6 +1389,7 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
@@ -1446,6 +1420,7 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
@@ -1476,6 +1451,7 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
@@ -1506,6 +1482,7 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
@@ -1536,6 +1513,7 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
@@ -1550,22 +1528,24 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   m_iZOrder 10
  }
  {
-  coords 14013.982 6.188 13491.335
-  angles 0 237.412 0
+  coords 13989.469 6.188 13529.299
+  angles 0 236.874 0
   m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
   m_sImageSetGlow ""
   m_MarkerColor 0.555 0.002 0 1
   m_sQuadName "APC"
   m_fWorldSize 4.551
-  m_sDescription "#Pdvl_Vehicle_k17_arbalet_AGS"
+  m_sDescription "#RHS-Vehicle_K17_Epoch_Name"
   m_bUseWorldScale 1
   m_aVisibleForFactions {
    "RHS_AFRF"
    "RHS_USAF"
+   "RHS_ION"
    "Ses_CDF"
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
@@ -1581,22 +1561,24 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   m_iZOrder 0
  }
  {
-  coords 13987.9 6.21 13528.438
-  angles 0 237.814 0
+  coords 14014.137 6.188 13491.031
+  angles 0 237.285 0
   m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
   m_sImageSetGlow ""
   m_MarkerColor 0.555 0.002 0 1
   m_sQuadName "APC"
   m_fWorldSize 4.551
-  m_sDescription "#Pdvl_Vehicle_k17_arbalet_AGS"
+  m_sDescription "#RHS-Vehicle_K17_Epoch_Name"
   m_bUseWorldScale 1
   m_aVisibleForFactions {
    "RHS_AFRF"
    "RHS_USAF"
+   "RHS_ION"
    "Ses_CDF"
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
@@ -1624,10 +1606,12 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   m_aVisibleForFactions {
    "RHS_AFRF"
    "RHS_USAF"
+   "RHS_ION"
    "Ses_CDF"
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
@@ -1643,22 +1627,24 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   m_iZOrder 0
  }
  {
-  coords 12108.835 95.856 13746.36
-  angles 0 -55.614 0
+  coords 12109.449 95.844 13746.561
+  angles 0 -55.629 0
   m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
   m_sImageSetGlow ""
   m_MarkerColor 0.855 0.031 0.028 1
   m_sQuadName "Car"
   m_fWorldSize 2.974
-  m_sDescription "#TF-Vehicle-Gaz233114 - #TF-Vehicle-Color-Camo (#TF-Vehicle-Weapons-KORD)"
+  m_sDescription "#TF-Vehicle-Gaz233114 - #TF-Vehicle-Color-Camo (#TF-Vehicle-Weapon-Arbalet #TF-Vehicle-Weapons-KORD)"
   m_bUseWorldScale 1
   m_aVisibleForFactions {
    "RHS_AFRF"
    "RHS_USAF"
+   "RHS_ION"
    "Ses_CDF"
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
@@ -1686,10 +1672,12 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   m_aVisibleForFactions {
    "RHS_AFRF"
    "RHS_USAF"
+   "RHS_ION"
    "Ses_CDF"
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
@@ -1717,10 +1705,12 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   m_aVisibleForFactions {
    "RHS_AFRF"
    "RHS_USAF"
+   "RHS_ION"
    "Ses_CDF"
    "Ses_ChDKZ"
    "Ses_TKR"
    "Ses_TKA"
+   "Ses_NAPA"
    "Drg_IGF"
    "Drg_PIR"
    "UK"
