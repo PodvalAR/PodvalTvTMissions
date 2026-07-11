@@ -1,5 +1,112 @@
+PolylineShapeEntity : "{7019844BAD5C4DD8}Prefabs/PolyZone/PolyZone_Border.et" {
+ components {
+  PS_PolyZone "{60E90266F25533F6}" {
+   m_mPolygonTexture ""
+   m_cPolygonColor 1 1 1 0
+   m_fPolygonUVScale 0.44
+   m_cPolygonBorderColor 0 0.502 0.125 1
+   m_fPolygonBorderWidth 9
+   m_aVisibleForFactions {
+    "Ses_CDF"
+    "RHS_USAF"
+    "RHS_AFRF"
+    ""
+   }
+  }
+ }
+ coords 14401.651 51.352 11435.514
+ Points {
+  ShapePoint "{60E90266E922A02A}" {
+   Position -2.784 -0.304 0.148
+  }
+  ShapePoint "{69B12CF64BF81EBA}" {
+   Position -15.348 -1.298 1.779
+  }
+  ShapePoint "{69B12CF655AC1F36}" {
+   Position -32.348 -1.789 3.545
+  }
+  ShapePoint "{69B12CF655479795}" {
+   Position -55.701 -1.752 6.098
+  }
+  ShapePoint "{69B12CF654190A67}" {
+   Position -90.489 -1.557 10.055
+  }
+  ShapePoint "{69B12CF6570592C7}" {
+   Position -141.941 0.479 15.979
+  }
+  ShapePoint "{69B12CF65635FB46}" {
+   Position -184.37 0.165 20.781
+  }
+  ShapePoint "{69B12CF650EE03BD}" {
+   Position -490.286 -1.518 135.921
+  }
+  ShapePoint "{69B12CF6532FA0D2}" {
+   Position -576.866 -0.446 302.657
+  }
+  ShapePoint "{69B12CF65DCE6877}" {
+   Position -749.635 -1.789 711.253
+  }
+  ShapePoint "{69B12CF65FD81353}" {
+   Position -647.389 -1.789 1231.718
+  }
+  ShapePoint "{69B12CF659E386C2}" {
+   Position -340.621 -1.79 1529.996
+  }
+  ShapePoint "{69B12CF65B9E2B75}" {
+   Position 123.567 -0.445 1728.554
+  }
+  ShapePoint "{69B12CF664CBFF73}" {
+   Position 265.197 -0.446 1727.715
+  }
+  ShapePoint "{69B12CF660E4A3C7}" {
+   Position 861.927 -0.342 1638.275
+  }
+  ShapePoint "{69B12CF6603688DB}" {
+   Position 906.208 -0.288 1594.442
+  }
+  ShapePoint "{69B12CF66339D71F}" {
+   Position 937.98 -0.134 1444.732
+  }
+  ShapePoint "{69B12CF670940513}" {
+   Position 883.613 0.163 1219.564
+  }
+  ShapePoint "{69B12CF67357431A}" {
+   Position 871.271 -0.124 1173.73
+  }
+  ShapePoint "{69B12CF672730158}" {
+   Position 814.223 1.128 1071.829
+  }
+  ShapePoint "{69B12CF67D365AB2}" {
+   Position 741.34 -0.509 960.721
+  }
+  ShapePoint "{69B12CF679ECEF8C}" {
+   Position 689.815 3.949 454.241
+  }
+  ShapePoint "{69B12CF67AB80AFA}" {
+   Position 659.292 6.192 220.184
+  }
+  ShapePoint "{69B12CF67A69B35B}" {
+   Position 612.571 3.766 198.912
+  }
+  ShapePoint "{69B12CF687E85B66}" {
+   Position 212.789 2.703 41.374
+  }
+  ShapePoint "{69B12CF686FA1C8C}" {
+   Position 117.503 -0.966 -8.024
+  }
+ }
+ {
+  PS_PolyZoneTrigger {
+   ID "60FD050E1E83544C"
+   m_polyZoneEffect PS_PolyZoneEffectRestricted "{60FD050E0DC2A2AB}" {
+    m_fKillTime 10
+   }
+   m_sGroupKey "DEF_"
+  }
+ }
+}
 $grp SCR_AIGroup : "{7F40D42C0CE8A499}Prefabs/Groups/OPFOR/RHS_AFRF/Group_RHS_AFRF_Base.et" {
- RUS0 {
+ DEF_RUS0 {
   coords 14913.063 50.906 12238.786
   angles 0 -34.454 0
   m_aUnitPrefabSlots {
@@ -7,7 +114,7 @@ $grp SCR_AIGroup : "{7F40D42C0CE8A499}Prefabs/Groups/OPFOR/RHS_AFRF/Group_RHS_AF
   }
   m_sCustomNameSet "Командир ВС РФ"
  }
- RUS1 {
+ DEF_RUS1 {
   components {
    PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
     m_iCompanyCallsign 1
@@ -27,7 +134,7 @@ $grp SCR_AIGroup : "{7F40D42C0CE8A499}Prefabs/Groups/OPFOR/RHS_AFRF/Group_RHS_AF
   }
   m_sCustomNameSet "Отделение ВДВ"
  }
- RUS3 {
+ DEF_RUS3 {
   components {
    PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
     m_iCompanyCallsign 1
@@ -48,7 +155,7 @@ $grp SCR_AIGroup : "{7F40D42C0CE8A499}Prefabs/Groups/OPFOR/RHS_AFRF/Group_RHS_AF
   }
   m_sCustomNameSet "Отделение ВДВ"
  }
- RUS2 {
+ DEF_RUS2 {
   components {
    PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
     m_iCompanyCallsign 1
@@ -69,7 +176,7 @@ $grp SCR_AIGroup : "{7F40D42C0CE8A499}Prefabs/Groups/OPFOR/RHS_AFRF/Group_RHS_AF
   }
   m_sCustomNameSet "Отделение ВДВ"
  }
- RUS4 {
+ DEF_RUS4 {
   components {
    PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
     m_iCompanyCallsign 3
@@ -89,7 +196,7 @@ $grp SCR_AIGroup : "{7F40D42C0CE8A499}Prefabs/Groups/OPFOR/RHS_AFRF/Group_RHS_AF
   }
   m_sCustomNameSet "Отделение ВДВ"
  }
- RUS5 {
+ DEF_RUS5 {
   components {
    PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
     m_iCompanyCallsign 3
@@ -110,7 +217,7 @@ $grp SCR_AIGroup : "{7F40D42C0CE8A499}Prefabs/Groups/OPFOR/RHS_AFRF/Group_RHS_AF
   }
   m_sCustomNameSet "Отделение ВДВ"
  }
- RUS6 {
+ DEF_RUS6 {
   components {
    PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
     m_iCompanyCallsign 3
@@ -130,7 +237,7 @@ $grp SCR_AIGroup : "{7F40D42C0CE8A499}Prefabs/Groups/OPFOR/RHS_AFRF/Group_RHS_AF
   }
   m_sCustomNameSet "Отделение ВДВ"
  }
- RUS7 {
+ DEF_RUS7 {
   components {
    PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
     m_iCompanyCallsign 2
@@ -144,7 +251,7 @@ $grp SCR_AIGroup : "{7F40D42C0CE8A499}Prefabs/Groups/OPFOR/RHS_AFRF/Group_RHS_AF
   }
   m_sCustomNameSet "Экипаж ЗУ-23"
  }
- RUS8 {
+ DEF_RUS8 {
   components {
    PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
     m_iCompanyCallsign 2

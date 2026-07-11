@@ -3,9 +3,10 @@ $grp PolylineShapeEntity : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
   components {
    PS_PolyZone "{60E90266F25533F6}" {
     m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
-    m_cPolygonColor 1 1 1 0
+    m_cPolygonColor 0 0.502 0.125 0.156
     m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
     m_cPolygonBorderColor 0 0.502 0.125 1
+    m_fPolygonBorderWidth 10
     m_aVisibleForFactions {
      ""
      "Ses_NAPA"
@@ -193,5 +194,52 @@ $grp PolylineShapeEntity : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
     Position 60.313 1.976 36.647
    }
   }
+ }
+}
+$grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+ MARKER_EXIT_1 {
+  coords 4551.003 68.74 5540.66
+  angles 0 90 0
+  m_sImageSet "{C3F217CA9CF060B4}UI/Imagesets/Conflict/ConflictIconsSet.imageset"
+  m_sQuadName "Task_Defend"
+  m_fWorldSize 35
+  m_sDescription "Зона транспортировки 1"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   ""
+   "Ses_NAPA"
+   "RHS_AFRF"
+  }
+  m_bVisibleForEmptyFaction 1
+ }
+ MARKER_EXIT_2 {
+  coords 7020.614 62.125 4556.988
+  angles 0 90 0
+  m_sImageSet "{C3F217CA9CF060B4}UI/Imagesets/Conflict/ConflictIconsSet.imageset"
+  m_sQuadName "Task_Defend"
+  m_fWorldSize 35
+  m_sDescription "Зона транспортировки 2"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   ""
+   "Ses_NAPA"
+   "RHS_AFRF"
+  }
+  m_bVisibleForEmptyFaction 1
+ }
+ MARKER_EXIT_3 {
+  coords 7682.977 87.45 6537.078
+  angles 0 90 0
+  m_sImageSet "{C3F217CA9CF060B4}UI/Imagesets/Conflict/ConflictIconsSet.imageset"
+  m_sQuadName "Task_Defend"
+  m_fWorldSize 35
+  m_sDescription "Зона транспортировки 3"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   ""
+   "Ses_NAPA"
+   "RHS_AFRF"
+  }
+  m_bVisibleForEmptyFaction 1
  }
 }

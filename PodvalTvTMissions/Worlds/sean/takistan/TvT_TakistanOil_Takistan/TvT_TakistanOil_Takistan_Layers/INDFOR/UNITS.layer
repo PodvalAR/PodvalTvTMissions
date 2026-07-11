@@ -3,11 +3,11 @@ SCR_AIGroup pl : "{000CD338713F2B5A}Prefabs/AI/Groups/Group_Base.et" {
   PS_GroupCallsignAssigner "{6958F5021E4BDE9E}" {
   }
  }
- coords 8189.012 322.187 2098.825
+ coords 8189.018 322.187 2098.844
  angles 0 -31.002 0
  m_faction "RHS_ION"
  m_aUnitPrefabSlots {
-  "{428D3323BE5B424B}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_Officer.et"
+  "{51345187E30EFC66}Worlds/sean/sean_prefabs/RHS_ION/PL's/sean_ION_Officer_noOpt.et"
  }
  m_sCustomNameSet "Elite ION STK PL"
 }
@@ -23,10 +23,17 @@ $grp SCR_AIGroup : "{30D6C6236F21A6FA}Prefabs/Groups/INDFOR/RHS_ION/PMC/Group_RH
    PS_PolyZone "{695ACA1282F978E3}" {
    }
   }
-  coords 8189.89 322.271 2092.094
-  angles 0 145.705 0
-  m_aUnitPrefabSlots +{
-   "{974BDF9B605AC115}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Medic.et"
+  coords 8219.964 322.271 2051.088
+  angles 0 152.708 0
+  m_aUnitPrefabSlots {
+   "{2D4557D4F3E37B8D}Worlds/sean/sean_prefabs/RHS_ION/SL's/sean_ION_SL_noOpt.et"
+   "{29C2D03D7A1F37FF}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Rifleman_3_NoSD.et"
+   "{2B951DA165375A8B}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_M72.et"
+   "{1EAED95AA3D44AFD}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Medic_2.et"
+   "{8780DF05D9E1DF1E}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_TL_4x.et"
+   "{E318D6B7BA66E41F}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_Rifl_AK_Random.et"
+   "{1C1830D4E184DE2D}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_AR.et"
+   "{1958A4565702D3D0}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Marksman.et"
   }
   m_sCustomNameSet "Infantry ION PMC"
  }
@@ -37,8 +44,17 @@ $grp SCR_AIGroup : "{30D6C6236F21A6FA}Prefabs/Groups/INDFOR/RHS_ION/PMC/Group_RH
     m_iSquadCallsign 3
    }
   }
-  coords 8236.833 322.271 2118.449
+  coords 8262.595 322.271 2077.439
   angles 0 145.705 0
+  m_aUnitPrefabSlots {
+   "{2D4557D4F3E37B8D}Worlds/sean/sean_prefabs/RHS_ION/SL's/sean_ION_SL_noOpt.et"
+   "{29C2D03D7A1F37FF}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Rifleman_3_NoSD.et"
+   "{2B951DA165375A8B}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_M72.et"
+   "{1EAED95AA3D44AFD}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Medic_2.et"
+   "{D9E710BE3F80BA37}Worlds/sean/sean_prefabs/RHS_ION/TL's/sean_ION_tl_noOpt.et"
+   "{2E6BF79318C64624}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Sapper_2.et"
+   "{1C1830D4E184DE2D}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_AR.et"
+  }
  }
 }
 $grp SCR_AIGroup : "{3A0064C5998CA032}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_rtvt_PL_6.et" {
@@ -51,12 +67,12 @@ $grp SCR_AIGroup : "{3A0064C5998CA032}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_rtvt
   coords 8352.692 322.187 1872.881
   angles 0 -125.042 0
   m_aUnitPrefabSlots {
-   "{AFEF77366AAD3A70}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_SL.et"
+   "{CE938561FA2E6035}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_SL_4x.et"
    "{2A8DD0DBEA7BE9E2}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_SR_Optic_Random.et"
-   "{E9893D293318AC54}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_SMAW.et"
-   "{E9893D293318AC54}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_SMAW.et"
-   "{E318D6B7BA66E41F}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_Rifl_AK_Random.et"
+   "{C267862958299863}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_AR.et"
+   "{CF7D22658BFE1B22}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_M72_2.et"
    "{A536AFA035B4146D}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Medic.et"
+   "{606C8A79C12683DA}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Marksman_2.et"
   }
   m_sCustomNameSet "Semi-Elite ION STK"
  }
@@ -70,11 +86,11 @@ $grp SCR_AIGroup : "{3A0064C5998CA032}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_rtvt
   coords 8358.118 322.187 1865.043
   angles 0 -122.294 0
   m_aUnitPrefabSlots {
-   "{AFEF77366AAD3A70}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_SL.et"
+   "{CE938561FA2E6035}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_SL_4x.et"
    "{2A8DD0DBEA7BE9E2}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_SR_Optic_Random.et"
-   "{E9893D293318AC54}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_SMAW.et"
-   "{E9893D293318AC54}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_SMAW.et"
-   "{E318D6B7BA66E41F}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_Rifl_AK_Random.et"
+   "{C267862958299863}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_AR.et"
+   "{CF7D22658BFE1B22}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_M72_2.et"
+   "{C634A558EB995632}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_SMAW_Opt.et"
    "{A536AFA035B4146D}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Medic.et"
   }
   m_sCustomNameSet "Semi-Elite ION STK"
@@ -91,11 +107,11 @@ $grp SCR_AIGroup : "{40682EB57355B25C}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_rtvt
   coords 8292.989 322.187 2095.108
   angles 0 -122.52 0
   m_aUnitPrefabSlots {
-   "{AFEF77366AAD3A70}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_SL.et"
-   "{78D53375E47371B1}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_SR_Random.et"
-   "{E318D6B7BA66E41F}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_Rifl_AK_Random.et"
-   "{D57611E14B802669}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_Rifl_Random.et"
-   "{E9893D293318AC54}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_SMAW.et"
+   "{2D4557D4F3E37B8D}Worlds/sean/sean_prefabs/RHS_ION/SL's/sean_ION_SL_noOpt.et"
+   "{29C2D03D7A1F37FF}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Rifleman_3_NoSD.et"
+   "{2B951DA165375A8B}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_M72.et"
+   "{1EAED95AA3D44AFD}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Medic_2.et"
+   "{D9E710BE3F80BA37}Worlds/sean/sean_prefabs/RHS_ION/TL's/sean_ION_tl_noOpt.et"
    "{E9893D293318AC54}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_SMAW.et"
    "{E5D286AD0454E484}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Sapper_2.et"
    "{A536AFA035B4146D}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Medic.et"
@@ -108,17 +124,17 @@ $grp SCR_AIGroup : "{40682EB57355B25C}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_rtvt
     m_iSquadCallsign 1
    }
   }
-  coords 8189.962 322.271 2068.259
+  coords 8213.841 322.271 2029.642
   angles 0 60.247 0
   m_aUnitPrefabSlots {
-   "{AFEF77366AAD3A70}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_SL.et"
-   "{78D53375E47371B1}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_SR_Random.et"
-   "{E318D6B7BA66E41F}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_Rifl_AK_Random.et"
-   "{D57611E14B802669}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_Rifl_Random.et"
-   "{E9893D293318AC54}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_SMAW.et"
-   "{E9893D293318AC54}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_SMAW.et"
-   "{E5D286AD0454E484}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Sapper_2.et"
-   "{A536AFA035B4146D}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Medic.et"
+   "{2D4557D4F3E37B8D}Worlds/sean/sean_prefabs/RHS_ION/SL's/sean_ION_SL_noOpt.et"
+   "{29C2D03D7A1F37FF}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Rifleman_3_NoSD.et"
+   "{2B951DA165375A8B}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_M72.et"
+   "{1EAED95AA3D44AFD}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Medic_2.et"
+   "{D9E710BE3F80BA37}Worlds/sean/sean_prefabs/RHS_ION/TL's/sean_ION_tl_noOpt.et"
+   "{2E6BF79318C64624}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Sapper_2.et"
+   "{1C1830D4E184DE2D}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_AR.et"
+   "{1958A4565702D3D0}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Marksman.et"
   }
   m_sCustomNameSet "Infantry ION STK"
  }
@@ -129,14 +145,14 @@ $grp SCR_AIGroup : "{40682EB57355B25C}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_rtvt
     m_iSquadCallsign 2
    }
   }
-  coords 8229.953 322.271 2099.582
+  coords 8253.815 322.271 2060.985
   angles 0 60.247 0
   m_aUnitPrefabSlots {
-   "{AFEF77366AAD3A70}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_SL.et"
+   "{2D4557D4F3E37B8D}Worlds/sean/sean_prefabs/RHS_ION/SL's/sean_ION_SL_noOpt.et"
    "{78D53375E47371B1}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_SR_Random.et"
    "{E318D6B7BA66E41F}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_Rifl_AK_Random.et"
    "{D57611E14B802669}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_Rifl_Random.et"
-   "{E9893D293318AC54}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_SMAW.et"
+   "{1958A4565702D3D0}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Marksman.et"
    "{E9893D293318AC54}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_SMAW.et"
    "{E5D286AD0454E484}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Sapper_2.et"
    "{A536AFA035B4146D}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Medic.et"
@@ -149,14 +165,14 @@ $grp SCR_AIGroup : "{40682EB57355B25C}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_rtvt
     m_iSquadCallsign 1
    }
   }
-  coords 8216.897 322.271 2079.645
+  coords 8240.76 322.271 2041.048
   angles 0 -122.59 0
   m_aUnitPrefabSlots {
-   "{AFEF77366AAD3A70}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_SL.et"
-   "{78D53375E47371B1}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_SR_Random.et"
-   "{E318D6B7BA66E41F}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_Rifl_AK_Random.et"
-   "{D57611E14B802669}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_Rifl_Random.et"
-   "{E9893D293318AC54}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_SMAW.et"
+   "{2D4557D4F3E37B8D}Worlds/sean/sean_prefabs/RHS_ION/SL's/sean_ION_SL_noOpt.et"
+   "{29C2D03D7A1F37FF}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Rifleman_3_NoSD.et"
+   "{2B951DA165375A8B}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_M72.et"
+   "{1EAED95AA3D44AFD}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Medic_2.et"
+   "{D9E710BE3F80BA37}Worlds/sean/sean_prefabs/RHS_ION/TL's/sean_ION_tl_noOpt.et"
    "{E9893D293318AC54}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_SMAW.et"
    "{E5D286AD0454E484}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Sapper_2.et"
    "{A536AFA035B4146D}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Medic.et"
@@ -171,16 +187,16 @@ $grp SCR_AIGroup : "{40682EB57355B25C}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_rtvt
     m_iCompanyCallsign 2
    }
   }
-  coords 8257.238 322.271 2105.435
+  coords 8281.101 322.271 2066.838
   angles 0 -122.59 0
   m_aUnitPrefabSlots {
-   "{AFEF77366AAD3A70}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_SL.et"
-   "{78D53375E47371B1}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_SR_Random.et"
+   "{2D4557D4F3E37B8D}Worlds/sean/sean_prefabs/RHS_ION/SL's/sean_ION_SL_noOpt.et"
+   "{29C2D03D7A1F37FF}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Rifleman_3_NoSD.et"
+   "{2B951DA165375A8B}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_M72.et"
+   "{1EAED95AA3D44AFD}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Medic_2.et"
+   "{D9E710BE3F80BA37}Worlds/sean/sean_prefabs/RHS_ION/TL's/sean_ION_tl_noOpt.et"
+   "{2E6BF79318C64624}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Sapper_2.et"
    "{E318D6B7BA66E41F}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_Rifl_AK_Random.et"
-   "{D57611E14B802669}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_Rifl_Random.et"
-   "{E9893D293318AC54}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_SMAW.et"
-   "{E9893D293318AC54}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_SMAW.et"
-   "{E5D286AD0454E484}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Sapper_2.et"
    "{A536AFA035B4146D}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Medic.et"
    "{9A253DEEA8423780}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_Crew.et"
    "{9A253DEEA8423780}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_Crew.et"

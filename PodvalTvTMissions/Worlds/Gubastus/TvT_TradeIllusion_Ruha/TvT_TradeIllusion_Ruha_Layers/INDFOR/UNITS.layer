@@ -1,83 +1,13 @@
+SCR_AIGroup NAPA_100 : "{361713DCE2D136BF}Prefabs/Groups/INDFOR/Ses_NAPA/dim_Group_NAPA_Squad_2.et" {
+ components {
+  PS_GroupCallsignAssigner "{696976B34DD51700}" {
+   m_iCompanyCallsign 1
+  }
+ }
+ coords 6080.35 56.878 6938.401
+ angles 0 176.531 0
+}
 $grp SCR_AIGroup : "{BB92D0A030A3F21C}Prefabs/Groups/INDFOR/Ses_NAPA/Group_NAPA_ALL.et" {
- NAPA_100 {
-  components {
-   PS_GroupCallsignAssigner "{66F30E2ADE5A8B5B}" {
-    m_iCompanyCallsign 1
-   }
-  }
-  coords 6080.347 56.863 6938.419
-  angles 0 176.169 0
-  m_aUnitPrefabSlots {
-   "{59828BA441CE93A6}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_SL_3.et"
-   "{DCD11431A73AEC78}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_RTO.et"
-   "{7CE344969FFFB2E5}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_AT_4.et"
-   "{B6E6593C10A2F99F}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_AAT_3.et"
-   "{696AF8A8B8729255}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_MG_3.et"
-   "{14620E60CE394C79}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_AMG_PKM_3.et"
-   "{6436F37C14C908C8}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_Rifleman_AKSU.et"
-   "{12CFDD0AF3E85B99}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_Sharpshooter_3.et"
-   "{E6A32FEAA73639D4}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_Medic.et"
-  }
-  m_sCustomNameSet "Пехотный отряд"
- }
- NAPA_101 {
-  components {
-   PS_GroupCallsignAssigner "{66F30E2ADFB5DC4E}" {
-    m_iCompanyCallsign 1
-    m_iSquadCallsign 1
-   }
-  }
-  coords 6062.708 56.938 6937.664
-  angles 0 178.343 0
-  m_aUnitPrefabSlots {
-   "{59828BA441CE93A6}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_SL_3.et"
-   "{DCD11431A73AEC78}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_RTO.et"
-   "{7CE344969FFFB2E5}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_AT_4.et"
-   "{B6E6593C10A2F99F}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_AAT_3.et"
-   "{696AF8A8B8729255}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_MG_3.et"
-   "{14620E60CE394C79}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_AMG_PKM_3.et"
-   "{6436F37C14C908C8}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_Rifleman_AKSU.et"
-   "{12CFDD0AF3E85B99}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_Sharpshooter_3.et"
-   "{E6A32FEAA73639D4}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_Medic.et"
-  }
-  m_sCustomNameSet "Пехотный отряд"
- }
- NAPA_001 {
-  components {
-   PS_GroupCallsignAssigner "{66F30E2AD8A1658B}" {
-    m_iCompanyCallsign 0
-    m_iSquadCallsign 1
-   }
-  }
-  coords 6120.234 56.84 6960.847
-  angles 0 -127.511 0
-  m_aUnitPrefabSlots {
-   "{59828BA441CE93A6}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_SL_3.et"
-   "{DCD11431A73AEC78}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_RTO.et"
-   "{7CE344969FFFB2E5}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_AT_4.et"
-   "{B6E6593C10A2F99F}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_AAT_3.et"
-   "{696AF8A8B8729255}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_MG_3.et"
-   "{14620E60CE394C79}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_AMG_PKM_3.et"
-   "{6436F37C14C908C8}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_Rifleman_AKSU.et"
-   "{12CFDD0AF3E85B99}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_Sharpshooter_3.et"
-   "{E6A32FEAA73639D4}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_Medic.et"
-  }
-  m_sCustomNameSet "Пехотный отряд"
- }
- NAPA_000 {
-  components {
-   PS_GroupCallsignAssigner "{66F30E2AD73F0EDF}" {
-    m_iCompanyCallsign 0
-    m_iPlatoonCallsign 0
-   }
-  }
-  coords 6110.078 56.478 6958.687
-  angles 0 52.488 0
-  m_aUnitPrefabSlots {
-   "{6E13FED182B2E916}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_PL_4.et"
-  }
-  m_sCustomNameSet "Командир стороны"
- }
  NAPA_201 {
   components {
    PS_GroupCallsignAssigner "{66F30E2ADE5A8B5B}" {
@@ -88,9 +18,8 @@ $grp SCR_AIGroup : "{BB92D0A030A3F21C}Prefabs/Groups/INDFOR/Ses_NAPA/Group_NAPA_
   coords 6179.871 54.04 8074.698
   angles 0 112.69 0
   m_aUnitPrefabSlots {
-   "{59828BA441CE93A6}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_SL_3.et"
-   "{7D2E61FEEDE0394A}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_Crew_2.et"
-   "{1CFF4E8E34E4C9D3}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_Crew.et"
+   "{13055722528394A4}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_CC.et"
+   "{6C9800AC74CF7A90}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_Crew.et"
   }
   m_sCustomNameSet "Отряд БРДМ"
  }
@@ -104,54 +33,10 @@ $grp SCR_AIGroup : "{BB92D0A030A3F21C}Prefabs/Groups/INDFOR/Ses_NAPA/Group_NAPA_
   coords 6715.82 54.272 7922.469
   angles 0 86.905 0
   m_aUnitPrefabSlots {
-   "{59828BA441CE93A6}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_SL_3.et"
-   "{7D2E61FEEDE0394A}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_Crew_2.et"
-   "{1CFF4E8E34E4C9D3}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_Crew.et"
+   "{13055722528394A4}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_CC.et"
+   "{6C9800AC74CF7A90}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_Crew.et"
   }
   m_sCustomNameSet "Отряд БРДМ"
- }
- NAPA_002 {
-  components {
-   PS_GroupCallsignAssigner "{66F30E2ADFB5DC4E}" {
-    m_iSquadCallsign 2
-   }
-  }
-  coords 6117.923 56.844 6942.97
-  angles 0 -36.828 0
-  m_aUnitPrefabSlots {
-   "{59828BA441CE93A6}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_SL_3.et"
-   "{DCD11431A73AEC78}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_RTO.et"
-   "{7CE344969FFFB2E5}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_AT_4.et"
-   "{B6E6593C10A2F99F}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_AAT_3.et"
-   "{696AF8A8B8729255}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_MG_3.et"
-   "{14620E60CE394C79}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_AMG_PKM_3.et"
-   "{6436F37C14C908C8}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_Rifleman_AKSU.et"
-   "{12CFDD0AF3E85B99}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_Sharpshooter_3.et"
-   "{E6A32FEAA73639D4}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_Medic.et"
-  }
-  m_sCustomNameSet "Пехотный отряд"
- }
- NAPA_102 {
-  components {
-   PS_GroupCallsignAssigner "{66F30E2ADFB5DC4E}" {
-    m_iCompanyCallsign 1
-    m_iSquadCallsign 2
-   }
-  }
-  coords 6044.995 56.967 6938.09
-  angles 0 179.487 0
-  m_aUnitPrefabSlots {
-   "{59828BA441CE93A6}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_SL_3.et"
-   "{DCD11431A73AEC78}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_RTO.et"
-   "{7CE344969FFFB2E5}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_AT_4.et"
-   "{B6E6593C10A2F99F}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_AAT_3.et"
-   "{696AF8A8B8729255}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_MG_3.et"
-   "{14620E60CE394C79}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_AMG_PKM_3.et"
-   "{6436F37C14C908C8}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_Rifleman_AKSU.et"
-   "{12CFDD0AF3E85B99}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_Sharpshooter_3.et"
-   "{E6A32FEAA73639D4}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_Medic.et"
-  }
-  m_sCustomNameSet "Пехотный отряд"
  }
  NAPA_200 {
   components {
@@ -162,10 +47,60 @@ $grp SCR_AIGroup : "{BB92D0A030A3F21C}Prefabs/Groups/INDFOR/Ses_NAPA/Group_NAPA_
   coords 6167.295 53.875 8047.349
   angles 0 112.69 0
   m_aUnitPrefabSlots {
-   "{59828BA441CE93A6}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_SL_3.et"
-   "{7D2E61FEEDE0394A}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_Crew_2.et"
-   "{1CFF4E8E34E4C9D3}Prefabs/Characters/Factions/INDFOR/NAPA/Character_NAPA_Crew.et"
+   "{13055722528394A4}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_CC.et"
+   "{6C9800AC74CF7A90}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_Crew.et"
   }
   m_sCustomNameSet "Отряд БРДМ"
+ }
+}
+$grp SCR_AIGroup : "{D38B5F25EE34A1D4}Prefabs/Groups/INDFOR/Ses_NAPA/dim_Group_NAPA_Squad_3.et" {
+ NAPA_002 {
+  components {
+   PS_GroupCallsignAssigner "{696976B34DD51700}" {
+    m_iSquadCallsign 2
+   }
+  }
+  coords 6117.89 56.843 6942.995
+  angles 0 -38.175 0
+ }
+ NAPA_101 {
+  components {
+   PS_GroupCallsignAssigner "{696976B34DD51700}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 6062.732 56.937 6937.626
+  angles 0 179.699 0
+ }
+}
+SCR_AIGroup NAPA_000 : "{D5D0C33728F89BC6}Prefabs/Groups/INDFOR/Ses_NAPA/dim_Group_NAPA_KS.et" {
+ coords 6109.556 56.437 6959.329
+ angles 0 51.143 0
+ m_aUnitPrefabSlots +{
+  "{C657D0B8EDFE0DD0}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_TL_4.et"
+  "{6C321CBBD9ED84D2}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_Medic_3.et"
+  "{2894A79DA29AF2EC}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_Sniper_1.et"
+ }
+}
+$grp SCR_AIGroup : "{EB059CC44716B326}Prefabs/Groups/INDFOR/Ses_NAPA/dim_Group_NAPA_Squad.et" {
+ NAPA_001 {
+  components {
+   PS_GroupCallsignAssigner "{696976B34DD51700}" {
+    m_iSquadCallsign 1
+   }
+  }
+  coords 6120.245 56.839 6960.784
+  angles 0 -127.895 0
+ }
+ NAPA_102 {
+  components {
+   PS_GroupCallsignAssigner "{696976B34DD51700}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 6044.956 56.917 6938.056
+  angles 0 177.439 0
  }
 }

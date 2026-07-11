@@ -1,0 +1,57 @@
+PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+ coords 5928.693 34.497 7716.095
+ m_sImageSet "{E23427CAC80DA8B7}UI/Textures/Icons/icons_mapMarkersUI.imageset"
+ m_sImageSetGlow "{67B3A6DC2D712B52}UI/Textures/Icons/icons_mapMarkersUI-glow.imageset"
+ m_MarkerColor 0 0 0 1
+ m_sQuadName "flag1"
+ m_fWorldSize 40
+ m_sDescription ""
+ m_bUseWorldScale 1
+ m_aVisibleForFactions {
+  "RHS_AFRF"
+  "RHS_USAF"
+  "RHS_ION"
+  "Ses_CDF"
+  "Ses_ChDKZ"
+  "Ses_TKR"
+  "Ses_TKA"
+  "Ses_NAPA"
+  "Drg_IGF"
+  "Drg_PIR"
+  "UK"
+  "USSR"
+  "US"
+  "FIA"
+  "Drg_VCA"
+ }
+ m_bVisibleForEmptyFaction 1
+ m_aHideOnGameModeStates {
+ }
+ m_iZOrder 0
+}
+GenericEntity : "{F5EF4223ACA6169C}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_02_V1_AFRF.et" {
+ components {
+  SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+   m_aObjectiveNames {
+    "USAF_WIN"
+    "AFRF_WIN"
+   }
+   m_aFlagData {
+    PS_FlagData "{69B6B5C62C011755}" {
+     m_sFactionKey "RHS_USAF"
+     m_iCaptureCounter 1
+    }
+   }
+  }
+  BaseActionsManagerComponent "{6202D4E6F133BF4A}" {
+   additionalActions {
+    PS_FlagChangeAction "{6202D4E6A53D4B3C}" {
+     Duration 10
+     m_fAnimationFPS 60
+    }
+   }
+  }
+ }
+ coords 5928.693 34.497 7716.095
+ angles 11.29 -75.093 -28.371
+}
