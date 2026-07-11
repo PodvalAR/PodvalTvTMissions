@@ -1,0 +1,150 @@
+$grp SCR_AIGroup : "{3A14655AA0638454}Prefabs/Groups/OPFOR/RHS_AFRF/Modern/EMR/Group_RHS_AFRF_Modern_EMR_Squad.et" {
+ squad1rf {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 7917.53 118.659 12557.922
+  angles -1.564 -29.137 0.871
+ }
+ squad4rf {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 7900.641 118.395 12581.711
+  angles 0.696 150.944 -2.433
+ }
+ squad3rf {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 7913.519 118.281 12588.857
+  angles 0 150.944 0
+ }
+ squad2rf {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 7927.83 118.232 12597.157
+  angles 0.783 150.944 -0.435
+ }
+}
+SCR_AIGroup squad9rf : "{4E3EA1C06CD8E4F0}Prefabs/Groups/OPFOR/RHS_AFRF/Modern/Ghillie/Group_RHS_AFRF_Modern_Ghillie_Recon.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+   m_iCompanyCallsign 4
+  }
+ }
+ coords 8041.962 119.45 12564.879
+ angles 0 -33.287 0
+}
+$grp SCR_AIGroup : "{643D556449A91F31}Prefabs/Groups/OPFOR/RHS_AFRF/Modern/EMR/Group_RHS_AFRF_Modern_EMR_Motorized.et" {
+ squad6rf {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 7980.422 119.095 12594.75
+  angles 1.681 -120.543 1.087
+ }
+ squad5rf {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 7988.402 118.971 12582.129
+  angles -0.482 -122.587 -0.754
+ }
+ squad7rf {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 7971.389 118.57 12611.531
+  angles 0 -113.51 0
+ }
+}
+SCR_AIGroup pl : "{6796DBDCA019EF3B}Prefabs/Groups/OPFOR/RHS_AFRF/Modern/EMR/Group_RHS_AFRF_Modern_EMR_PL.et" {
+ coords 7910.447 118.758 12554.122
+ angles 0 -26.938 0
+ m_aUnitPrefabSlots {
+  "{8297A76A8EC4E973}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Modern/EMR/Char_RHS_RF_Modern_EMR_PL_Optic.et"
+  "{52790943BFEBE2E3}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Modern/EMR/Char_RHS_RF_Modern_EMR_Medic.et"
+ }
+}
+$grp GenericEntity : "{8EFDFF8205A28E26}Prefabs/Props/Military/AmmoBoxes/drg_AmmoBox_82mm_mortar_3rnd_Smoke.et" {
+ {
+  coords 7888.486 118.818 12561.68
+  angles -70.154 -27.954 0
+ }
+ {
+  components {
+   SCR_FilteredInventoryStorageComponent "{5476A2F100DF4EFF}" {
+    MultiSlots {
+     MultiSlotConfiguration "{64F707D11FA7A94D}" {
+      NumSlots 10
+     }
+    }
+   }
+  }
+  coords 7888.486 118.818 12561.68
+  angles -70.154 -27.954 0
+ }
+}
+$grp GenericEntity : "{8F17290FBF410605}Prefabs/Props/Military/AmmoBoxes/drg_AmmoBox_82mm_mortar_10rnd_HE.et" {
+ {
+  coords 7888.599 118.657 12561.521
+  angles 0 64.21 0
+ }
+ {
+  coords 7888.599 118.753 12561.521
+  angles 0.018 64.21 0.023
+ }
+ {
+  coords 7888.599 118.851 12561.521
+  angles 0.035 64.21 0.046
+ }
+}
+SCR_AIGroup squad10rf : "{AC7A597E5645CFB6}Prefabs/Groups/OPFOR/RHS_AFRF/Modern/Ghillie/Group_RHS_AFRF_Modern_GhillieLite_Sniper.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+   m_iCompanyCallsign 4
+   m_iPlatoonCallsign 1
+  }
+ }
+ coords 8033.995 119.154 12559.87
+ angles 0.378 -27.624 -1.208
+}
+SCR_AIGroup squad8rf : "{BB73CA2C18BCA912}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Mortar.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+   m_iCompanyCallsign 3
+  }
+ }
+ coords 7890.325 118.656 12558.078
+ angles 0 58.692 0
+}
+Turret : "{D1FFE458E8AC4BDB}Prefabs/Weapons/Mortars/2B14/Mortar_2B14_hand.et" {
+ coords 7888.849 118.656 12560.648
+ angles 0 59.439 0
+}

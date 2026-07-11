@@ -1,0 +1,652 @@
+SplineShapeEntity {
+ coords 4334.596 59.273 2520.563
+ Points {
+  ShapePoint "{653CB36863930A61}" {
+   Position -14.063 -1.076 17.559
+  }
+  ShapePoint "{69CAC5A43CD4D853}" {
+   Position -2.278 -0.816 21.34
+   Data {
+    SplinePointData SplinePointData {
+     InTangent 29.331 0.685 -1.646
+     OutTangent 29.331 0.685 -1.646
+    }
+   }
+  }
+  ShapePoint "{69CAC5A43C621AE6}" {
+   Position 10.063 -0.236 20.908
+  }
+  ShapePoint "{69CAC5A43D0230EB}" {
+   Position 23.624 0.043 16.935
+  }
+  ShapePoint "{69CAC5A43EE6AA3A}" {
+   Position 31.768 0.09 9.598
+  }
+  ShapePoint "{69CAC5A43F48AC77}" {
+   Position 30.256 0.008 -5.695
+  }
+ }
+ LineColor 0.93 0.13 0.33 1
+ {
+  SCR_RoadGeneratorEntity : "{2D9AEF10F5FEA98B}PrefabLibrary/DefaultLibrary/Generators/Roads/Dirt/RG_Road_Dirt_01.et" {
+   coords 0 0 0
+   {
+    RoadEntity {
+     ID "523EAA80CAA6C6B5"
+     SplinePoints {
+      ShapePoint "{52346539D885C296}" {
+       Position -14.063 -1.076 17.559
+      }
+      ShapePoint "{69CAC5A43CD480BB}" {
+       Position -2.278 -0.816 21.34
+       Data {
+        SplinePointData "{00000000D8F1BA4F}" {
+         InTangent 29.331 0.685 -1.646
+         OutTangent 29.331 0.685 -1.646
+        }
+       }
+      }
+      ShapePoint "{69CAC5A43C62DDEF}" {
+       Position 10.063 -0.236 20.908
+      }
+      ShapePoint "{69CAC5A43D02F8AE}" {
+       Position 23.624 0.043 16.935
+      }
+      ShapePoint "{69CAC5A43EE1528E}" {
+       Position 31.768 0.09 9.598
+      }
+      ShapePoint "{69CAC5A43F4B55E8}" {
+       Position 30.256 0.008 -5.695
+      }
+     }
+     IsClosedSpline 0
+     Width 4
+     Material "{8CA3D2FFCA15F556}Assets/Structures/Infrastructure/Roads/Data/Ruha_Road_Dirt_01.emat"
+    }
+   }
+  }
+ }
+}
+SCR_DestructibleBuildingEntity : "{0628C52DA626BE08}Prefabs/Structures/Military/Houses/Barracks_01/Barracks_01_military_white_tutorial.et" {
+ coords 4361.664 0.002 2465.302
+ angles 0 9.3 0
+}
+StaticModelEntity : "{07F043DD6AACCD0B}Prefabs/Structures/Infrastructure/Barriers/BarGate_01/BarGate_01.et" {
+ coords 4349.038 0 2539.86
+ angles 0 -79.22 0
+}
+Vehicle Ural4320_tanker_camo2 : "{13139B95B13DDA35}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_tanker_camo1.et" {
+ coords 4344.522 59.416 2518.212
+ angles 0 101.336 0
+}
+GenericEntity : "{1B79BB823DC46F9D}Prefabs/Props/Industrial/CargoContainers/CargoContainer_01/CargoContainer_01_20ft_green.et" {
+ coords 4373.892 61.977 2499.358
+ angles 0 -137.007 0
+}
+GenericEntity : "{24EC7B889E5166AB}PrefabLibrary/props/ConcretePipe_01_Long_Pile.et" {
+ coords 4375.268 59.342 2511.829
+ angles 0 -83.334 0
+}
+$grp GenericEntity : "{29BA224E4FC03542}Prefabs/Props/Military/H Barrier/Hesco barrier Five.et" {
+ {
+  coords 4325.362 -0 2449.147
+  angles 0 23.008 0
+  scale 2.2
+  {
+   GenericEntity {
+    ID "60D13471F824CC30"
+    coords -2.416 -0.049 -0
+   }
+   GenericEntity {
+    ID "60D13471F824CC31"
+    coords -1.202 0.008 0
+   }
+   GenericEntity {
+    ID "60D13471F8251C99"
+    coords 1.209 -0.018 0
+   }
+   GenericEntity {
+    ID "60D13471F8251C9B"
+    coords 2.412 -0.044 0
+   }
+  }
+ }
+ {
+  coords 4337.789 0 2443.87
+  angles 0 23.008 0
+  scale 2.2
+  {
+   GenericEntity {
+    ID "60D13471F824CC30"
+    coords -2.416 0 -0
+   }
+   GenericEntity {
+    ID "60D13471F824CC31"
+    coords -1.202 0.006 0
+   }
+   GenericEntity {
+    ID "60D13471F8251C99"
+    coords 1.209 -0.009 0
+   }
+   GenericEntity {
+    ID "60D13471F8251C9B"
+    coords 2.412 -0.02 0
+   }
+  }
+ }
+ {
+  coords 4350.215 -0 2438.593
+  angles 0 23.008 0
+  scale 2.2
+  {
+   GenericEntity {
+    ID "60D13471F824CC30"
+    coords -2.416 0.066 0
+   }
+   GenericEntity {
+    ID "60D13471F824CC31"
+    coords -1.202 0.039 0
+   }
+   GenericEntity {
+    ID "60D13471F8251C99"
+    coords 1.209 -0.047 0
+   }
+   GenericEntity {
+    ID "60D13471F8251C9B"
+    coords 2.412 -0.074 0
+   }
+  }
+ }
+ {
+  coords 4362.641 -0.383 2433.317
+  angles 0 23.008 0
+  scale 2.2
+  {
+   GenericEntity {
+    ID "60D13471F824CC30"
+    coords -2.416 0.199 0
+   }
+   GenericEntity {
+    ID "60D13471F824CC31"
+    coords -1.202 0.113 0
+   }
+   GenericEntity {
+    ID "60D13471F8251C99"
+    coords 1.209 -0.221 0
+   }
+   GenericEntity {
+    ID "60D13471F8251C9B"
+    coords 2.412 -0.422 0
+   }
+  }
+ }
+ {
+  coords 4376.655 -0.001 2543.159
+  angles 0 8.47 0
+  scale 2.2
+  {
+   GenericEntity {
+    ID "60D13471F824CC30"
+    coords -2.416 0.117 -0
+   }
+   GenericEntity {
+    ID "60D13471F824CC31"
+    coords -1.202 0.081 -0
+   }
+   GenericEntity {
+    ID "60D13471F8251C99"
+    coords 1.209 -0.153 0
+   }
+   GenericEntity {
+    ID "60D13471F8251C9B"
+    coords 2.412 -0.357 -0
+   }
+  }
+ }
+ {
+  coords 4363.302 0.001 2545.147
+  angles 0 8.47 0
+  scale 2.2
+  {
+   GenericEntity {
+    ID "60D13471F824CC30"
+    coords -2.416 -0.095 0
+   }
+   GenericEntity {
+    ID "60D13471F824CC31"
+    coords -1.202 -0.048 0
+   }
+   GenericEntity {
+    ID "60D13471F8251C99"
+    coords 1.209 0.034 0
+   }
+   GenericEntity {
+    ID "60D13471F8251C9B"
+    coords 2.412 0.056 0
+   }
+  }
+ }
+ {
+  coords 4349.949 0.001 2547.135
+  angles 0 8.47 0
+  scale 2.2
+  {
+   GenericEntity {
+    ID "60D13471F824CC30"
+    coords -2.416 -0.121 -0
+   }
+   GenericEntity {
+    ID "60D13471F824CC31"
+    coords -1.202 -0.053 -0
+   }
+   GenericEntity {
+    ID "60D13471F8251C99"
+    coords 1.209 0.037 0
+   }
+   GenericEntity {
+    ID "60D13471F8251C9B"
+    coords 2.412 0.074 -0
+   }
+  }
+ }
+ {
+  coords 4341.09 -0.053 2531.772
+  angles 0 8.47 0
+  scale 2.2
+  {
+   GenericEntity {
+    ID "60D13471F824CC30"
+    coords -2.416 -0.121 -0
+   }
+   GenericEntity {
+    ID "60D13471F824CC31"
+    coords -1.202 -0.053 -0
+   }
+   GenericEntity {
+    ID "60D13471F8251C99"
+    coords 1.209 0.037 0
+   }
+   GenericEntity {
+    ID "60D13471F8251C9B"
+    coords 2.412 0.074 -0
+   }
+  }
+ }
+}
+GenericEntity : "{35E211705F8FED68}Prefabs/Props/Industrial/CargoContainers/CargoContainer_01/CargoContainer_01_40ft_blue.et" {
+ coords 4372.783 59.421 2500.369
+ angles -0.144 9.232 0.884
+}
+$grp GenericEntity : "{3F8BE66EB83CD81F}Prefabs/Props/Military/H Barrier/Hesco barrier Five v2.et" {
+ {
+  coords 4329.647 0 2510.167
+  angles 0 8.47 0
+  scale 2.2
+  {
+   GenericEntity {
+    ID "60D1347194B10BC4"
+    coords 0 0.147 1.499
+   }
+   GenericEntity {
+    ID "60D1347194B10BC6"
+    coords 0 -0.176 -1.51
+   }
+   GenericEntity {
+    ID "60D1347194B16FF8"
+    coords -0 -0.188 -2.982
+   }
+   GenericEntity {
+    ID "60D1347194B1A475"
+    coords 0 0.134 2.97
+   }
+  }
+ }
+ {
+  coords 4327.217 0 2493.847
+  angles 0 8.47 0
+  scale 2.2
+  {
+   GenericEntity {
+    ID "60D1347194B10BC4"
+    coords 0 -0.037 1.499
+   }
+   GenericEntity {
+    ID "60D1347194B10BC6"
+    coords 0 0.05 -1.51
+   }
+   GenericEntity {
+    ID "60D1347194B16FF8"
+    coords 0 0.082 -2.982
+   }
+   GenericEntity {
+    ID "60D1347194B1A475"
+    coords 0 -0.043 2.97
+   }
+  }
+ }
+ {
+  coords 4324.787 0 2477.527
+  angles 0 8.47 0
+  scale 2.2
+  {
+   GenericEntity {
+    ID "60D1347194B10BC4"
+    coords 0 0.046 1.499
+   }
+   GenericEntity {
+    ID "60D1347194B10BC6"
+    coords 0 -0.017 -1.51
+   }
+   GenericEntity {
+    ID "60D1347194B16FF8"
+    coords 0 -0.03 -2.982
+   }
+   GenericEntity {
+    ID "60D1347194B1A475"
+    coords 0 0.082 2.97
+   }
+  }
+ }
+ {
+  coords 4322.356 0 2461.207
+  angles 0 8.47 0
+  scale 2.2
+  {
+   GenericEntity {
+    ID "60D1347194B10BC4"
+    coords 0 -0.181 1.499
+   }
+   GenericEntity {
+    ID "60D1347194B10BC6"
+    coords 0 0.062 -1.51
+   }
+   GenericEntity {
+    ID "60D1347194B16FF8"
+    coords 0 0.023 -2.982
+   }
+   GenericEntity {
+    ID "60D1347194B1A475"
+    coords 0 -0.244 2.97
+   }
+  }
+ }
+ {
+  coords 4332.077 -0 2526.487
+  angles 0 8.47 0
+  scale 2.2
+  {
+   GenericEntity {
+    ID "60D1347194B10BC4"
+    coords 0 -0.045 1.499
+   }
+   GenericEntity {
+    ID "60D1347194B10BC6"
+    coords 0 0.037 -1.51
+   }
+   GenericEntity {
+    ID "60D1347194B16FF8"
+    coords 0 0.085 -2.982
+   }
+   GenericEntity {
+    ID "60D1347194B1A475"
+    coords 0 -0.091 2.97
+   }
+  }
+ }
+ {
+  coords 4369.546 -0.077 2441.094
+  angles 0 8.47 0
+  scale 2.2
+  {
+   GenericEntity {
+    ID "60D1347194B10BC4"
+    coords 0 0.001 1.499
+   }
+   GenericEntity {
+    ID "60D1347194B10BC6"
+    coords 0 -0.159 -1.51
+   }
+   GenericEntity {
+    ID "60D1347194B16FF8"
+    coords 0 -0.34 -2.982
+   }
+   GenericEntity {
+    ID "60D1347194B1A475"
+    coords 0 -0.015 2.97
+   }
+  }
+ }
+ {
+  coords 4371.976 0 2457.414
+  angles 0 8.47 0
+  scale 2.2
+  {
+   GenericEntity {
+    ID "60D1347194B10BC4"
+    coords 0 0.053 1.499
+   }
+   GenericEntity {
+    ID "60D1347194B10BC6"
+    coords 0 -0.025 -1.51
+   }
+   GenericEntity {
+    ID "60D1347194B16FF8"
+    coords 0 0.003 -2.982
+   }
+   GenericEntity {
+    ID "60D1347194B1A475"
+    coords 0 0.077 2.97
+   }
+  }
+ }
+ {
+  coords 4373.891 -0 2470.272
+  angles 0 8.47 0
+  scale 2.2
+  {
+   GenericEntity {
+    ID "60D1347194B10BC4"
+    coords 0 0.034 1.499
+   }
+   GenericEntity {
+    ID "60D1347194B10BC6"
+    coords 0 -0.031 -1.51
+   }
+   GenericEntity {
+    ID "60D1347194B16FF8"
+    coords 0 -0.04 -2.982
+   }
+   GenericEntity {
+    ID "60D1347194B1A475"
+    coords 0 0.084 2.97
+   }
+  }
+ }
+ {
+  coords 4376.321 -0 2486.592
+  angles 0 8.47 0
+  scale 2.2
+  {
+   GenericEntity {
+    ID "60D1347194B10BC4"
+    coords 0 0.01 1.499
+   }
+   GenericEntity {
+    ID "60D1347194B10BC6"
+    coords 0 -0.011 -1.51
+   }
+   GenericEntity {
+    ID "60D1347194B16FF8"
+    coords 0 -0.03 -2.982
+   }
+   GenericEntity {
+    ID "60D1347194B1A475"
+    coords 0 0.013 2.97
+   }
+  }
+ }
+ {
+  coords 4378.751 0 2502.912
+  angles 0 8.47 0
+  scale 2.2
+  {
+   GenericEntity {
+    ID "60D1347194B10BC4"
+    coords 0 0.035 1.499
+   }
+   GenericEntity {
+    ID "60D1347194B10BC6"
+    coords 0 0.041 -1.51
+   }
+   GenericEntity {
+    ID "60D1347194B16FF8"
+    coords 0 0.095 -2.982
+   }
+   GenericEntity {
+    ID "60D1347194B1A475"
+    coords 0 0.096 2.97
+   }
+  }
+ }
+ {
+  coords 4381.181 -0 2519.232
+  angles 0 8.47 0
+  scale 2.2
+  {
+   GenericEntity {
+    ID "60D1347194B10BC4"
+    coords 0 0.009 1.499
+   }
+   GenericEntity {
+    ID "60D1347194B10BC6"
+    coords 0 0.002 -1.51
+   }
+   GenericEntity {
+    ID "60D1347194B16FF8"
+    coords -0 -0.002 -2.982
+   }
+   GenericEntity {
+    ID "60D1347194B1A475"
+    coords -0 0.022 2.97
+   }
+  }
+ }
+ {
+  coords 4383.611 -0 2535.552
+  angles 0 8.47 0
+  scale 2.2
+  {
+   GenericEntity {
+    ID "60D1347194B10BC4"
+    coords 0 -0.235 1.499
+   }
+   GenericEntity {
+    ID "60D1347194B10BC6"
+    coords 0 0.18 -1.51
+   }
+   GenericEntity {
+    ID "60D1347194B16FF8"
+    coords 0 0.17 -2.982
+   }
+   GenericEntity {
+    ID "60D1347194B1A475"
+    coords 0 -0.28 2.97
+   }
+  }
+ }
+}
+Vehicle GAZ_TIGR_v2_KORD_SSP_ARMOR_CAMO3 : "{7BC76F92B882889D}Prefabs/Vehicles/Wheeled/TIGR/PKP/GAZ_TIGR_v2_PKM.et" {
+ coords 4344.227 59.416 2512.155
+ angles 0 100.254 0
+}
+$grp GenericEntity : "{63B897390FAE01A2}PrefabLibrary/props/PlankPile_01_Medium.et" {
+ {
+  coords 4373.977 60.269 2521.814
+  angles 0.895 1.612 0.025
+ }
+ {
+  coords 4373.905 59.396 2519.349
+  angles 0.895 1.675 0.026
+ }
+ {
+  coords 4374.038 59.437 2523.844
+  angles -0.026 1.649 0.895
+ }
+ {
+  coords 4377.231 59.572 2530.651
+  angles 0.89 -6.204 -0.097
+ }
+ {
+  coords 4377.713 59.471 2526.18
+  angles 0.89 -6.177 -0.096
+ }
+ {
+  coords 4377.448 60.334 2528.605
+  angles 1.779 -6.242 -0.195
+ }
+}
+Vehicle Ural4320_engineer_sand2 : "{7009ED8FBA7A1E7E}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_engineer_sand.et" {
+ coords 4343.162 59.416 2505.747
+ angles 0 100.426 0
+}
+SCR_DestructibleBuildingEntity : "{80A5B37A1472B084}Prefabs/Structures/Industrial/Garages/Garage_E_02/Garage_E_02.et" {
+ coords 4343.983 0 2508.899
+ angles 0 98.929 0
+}
+SCR_DestructibleBuildingEntity : "{8A8A7A558772D718}Prefabs/Structures/Military/Bunkers/AirfieldBunker_E_01/AirfieldBunker_E_01_small.et" {
+ coords 4332.181 60.399 2464.785
+ angles 0 97.295 0
+}
+$grp GenericEntity : "{9CCBB070214C0140}PrefabLibrary/props/ContainerMetal_01_low_grey.et" {
+ {
+  coords 4349.302 59.363 2491.973
+  angles 0 -101.711 0
+ }
+ {
+  coords 4356.222 59.344 2527.01
+  angles 0 -156.855 0
+ }
+}
+SCR_DestructibleBuildingEntity : "{CCE6A451A226AF4E}Prefabs/Structures/Military/Houses/GuardHouse_01/GuardHouse_01_beige.et" {
+ coords 4350.904 0.101 2529.146
+ angles 0 10.488 0
+}
+GenericEntity : "{EF2962FC3EFD9C17}Prefabs/Props/Industrial/CargoContainers/CargoContainer_01/CargoContainer_01_40ft_grey.et" {
+ coords 4375.396 59.385 2499.687
+ angles -0.132 8.493 0.885
+}
+SCR_DestructibleBuildingEntity : "{F6FC9703E7F4FDCA}Prefabs/Structures/Military/Houses/ControlTowerMilitary_E_01/ControlTowerMilitary_E_01.et" {
+ coords 4337.211 0.001 2481.211
+ angles 0 100.822 0
+}
+$grp SCR_DestructibleBuildingEntity : "{FBCE1861B987EA68}Prefabs/Structures/Military/Houses/GuardTower_01/GuardTower_01.et" {
+ {
+  coords 4362.217 0 2442.02
+  angles 0 129.36 0
+ }
+ {
+  coords 4327.741 0 2455.347
+  angles 0 -83.885 0
+ }
+ {
+  coords 4375.053 -0 2533.786
+  angles 0 48.293 0
+ }
+}
+$grp GenericEntity : "{FC609C179F576083}Prefabs/Props/Military/H Barrier/Hesco barrier.et" {
+ {
+  coords 4342.037 -0.001 2548.313
+  angles 0 8.47 0
+  scale 2.2
+ }
+ {
+  coords 4339.564 -0 2548.681
+  angles 0 8.47 0
+  scale 2.2
+ }
+ {
+  coords 4337.091 -0 2549.049
+  angles 0 8.47 0
+  scale 2.2
+ }
+}

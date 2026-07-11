@@ -1,41 +1,3 @@
-$grp Vehicle : "{1A0C6B9108D0E089}Prefabs/Vehicles/Wheeled/BTR70/BTR72aberez.et" {
- RU_012_BTR72 {
-  coords 2975.187 56.083 3126.602
-  angles 4.465 -128.745 -0.146
- }
- RU_102_BTR72 {
-  coords 1136.401 89.904 3307.695
-  angles -6.24 -177.923 -0.131
-  m_sAttachmentGroupName "RU_102"
- }
-}
-$grp Vehicle : "{2C9B4D8196812513}Prefabs/Vehicles/Wheeled/TIGR/Unarmed/GAZ_TIGR_v2_Unarmed.et" {
- RU_010_GAZ {
-  coords 2941.367 59.286 3099.372
-  angles 5.712 -129.795 -0.113
-  m_sAttachmentGroupName "RU_010"
- }
- RU_011_GAZ2 {
-  coords 2961.661 57.388 3115.368
-  angles 5.712 -129.795 -0.113
-  m_sAttachmentGroupName "RU_011"
- }
- RU_101_GAZ {
-  coords 1135.165 88.512 3289.762
-  angles -3.575 -178.139 -0.116
-  m_sAttachmentGroupName "RU_101"
- }
- RU_100_GAZ {
-  coords 1133.509 86.859 3264.736
-  angles -3.572 -177.276 -0.213
-  m_sAttachmentGroupName "RU_100"
- }
-}
-Vehicle RU_000_GAZ : "{5C38170BFBE9F966}Prefabs/Vehicles/Wheeled/TIGR/KORD/GAZ_TIGR_v2_KORD_SSP_ARMOR_CAMO.et" {
- coords 2920.412 61.605 3082.514
- angles 2.514 -128.299 0.295
- m_sAttachmentGroupName "RU_000"
-}
 $grp Vehicle : "{6F4D5B56F4905A62}Prefabs/Vehicles/Wheeled/TIGR/Unarmed/GAZ_TIGR_v2_Unarmed_Green.et" {
  RU_300_GAZ {
   coords 3229.845 60.478 1363.642
@@ -47,30 +9,46 @@ $grp Vehicle : "{6F4D5B56F4905A62}Prefabs/Vehicles/Wheeled/TIGR/Unarmed/GAZ_TIGR
   angles -0.871 103.364 -0.207
   m_sAttachmentGroupName "RU_301"
  }
- RU_200_GAZ_TIGR {
+ RU_200_V {
   coords 1129.322 80.315 3180.721
   angles -2.679 -176.697 -0.154
   m_sAttachmentGroupName "RU_200"
  }
 }
-$grp Vehicle : "{AC12E5669B411D57}Prefabs/Vehicles/Wheeled/TIGR/KORD/GAZ_TIGR_v2_KORD.et" {
- RU_010_GAZ_KORD {
-  coords 2934.115 60.082 3093.449
+Vehicle RU_000_GAZ : "{7B4BBFD80FB91FF0}Prefabs/Vehicles/Wheeled/TIGR/KORD/GAZ_TIGR_v2_KORD_SPP_Green.et" {
+ coords 2920.412 61.606 3082.514
+ angles 4.466 -128.303 -0.112
+ m_sAttachmentGroupName "RU_000"
+}
+$grp Vehicle : "{C012BB3488BEA0C2}Prefabs/Vehicles/Wheeled/BTR70/BTR70.et" {
+ RU_012_BTR72 {
+  coords 2990.744 54.644 3137.942
+  angles 4.465 -128.745 -0.146
+ }
+ RU_102_BTR72 {
+  coords 1136.401 89.904 3307.695
+  angles -6.24 -177.923 -0.131
+  m_sAttachmentGroupName "RU_102"
+ }
+}
+$grp Vehicle : "{D9B91FAB817A6033}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_covered.et" {
+ RU_010_V {
+  coords 2939.964 59.408 3098.666
   angles 4.465 -128.433 -0.122
   m_sAttachmentGroupName "RU_010"
  }
- RU_011_GAZ_KORD {
-  coords 2954.409 58.162 3109.445
+ RU_011_V {
+  coords 2964.404 57.07 3118.627
   angles 4.465 -128.433 -0.122
   m_sAttachmentGroupName "RU_011"
  }
- RU_101_GAZ_KORD {
-  coords 1134.764 87.913 3280.724
+ RU_101_V {
+  coords 1134.86 88.21 3285.365
   angles -3.573 -177.617 -0.149
   m_sAttachmentGroupName "RU_101"
  }
- RU_100_GAZ_KORD {
-  coords 1133.103 86.242 3255.358
+ RU_100_V {
+  coords 1133.552 86.549 3260.28
   angles -3.57 -176.694 -0.249
   m_sAttachmentGroupName "RU_100"
  }
