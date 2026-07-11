@@ -91,7 +91,7 @@ $grp SCR_AIGroup : "{0261BC928498DE59}Prefabs/Groups/BLUFOR/RHS_USAF/USMC/Summer
     m_iSquadCallsign 1
    }
   }
-  coords 10481.728 110.519 9947.593
+  coords 10481.728 109.769 9947.593
   angles 0 -90.341 0
   m_aUnitPrefabSlots {
    "{33B313818C46457C}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/Force_Recon/dim_USMC_TL.et"
@@ -265,14 +265,23 @@ $grp SCR_AIGroup : "{F7883B3CE7CC7F99}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Mar
   coords 12129.159 146.889 12823.885
   angles 0 -140.619 0
  }
+ USAF_KS200 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 12851.577 5.75 9980.592
+  angles 0 -61.718 0
+  m_aUnitPrefabSlots {
+   "{B98AD05A3EC703BA}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/MARSOC/Char_RHS_TF_USAF_MarpatWD_SL_ACOG.et"
+   "{C66AD254A7AC6B78}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/MARSOC/Char_RHS_TF_USAF_MarpatWD_TL_ACOG.et"
+   "{0F5A981783A5FBBD}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/MARSOC/Char_RHS_TF_USAF_MarpatWD_CREW_CC.et"
+   "{D3BDB9D84381756E}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/MARSOC/Char_RHS_TF_USAF_MarpatWD_CREW_DRIVER.et"
+  }
+ }
 }
 SCR_AIGroup USAF_KS000 : "{F7B4CB9B865A4129}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/MarpatWD/Group_RHS_USAF_Marpat_HQ_KS.et" {
- coords 12860.599 5.75 9996.82
+ coords 12862.43 5.75 9999.923
  angles 0 -59.453 0
- m_aUnitPrefabSlots +{
-  "{D1C9C38D76278ABE}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/MARSOC/Char_RHS_TF_USAF_MarpatWD_AR.et"
-  "{17CD2DE9AC5D3048}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/MARSOC/Char_RHS_TF_USAF_MarpatWD_LAT.et"
-  "{0F5A981783A5FBBD}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/MARSOC/Char_RHS_TF_USAF_MarpatWD_CREW_CC.et"
-  "{D3BDB9D84381756E}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/MARSOC/Char_RHS_TF_USAF_MarpatWD_CREW_DRIVER.et"
- }
 }
