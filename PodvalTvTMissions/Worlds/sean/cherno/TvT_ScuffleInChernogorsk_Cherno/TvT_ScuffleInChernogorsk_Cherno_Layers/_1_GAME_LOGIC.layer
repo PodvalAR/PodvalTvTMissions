@@ -1,0 +1,52 @@
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{69DCE55829978704}" {
+     m_sZonePreviewName "Элеватор"
+     m_fCheckPeriod 0.2
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "AFRF_WIN"
+     }
+     m_sFailedObjectiveNames {
+      "NAPA_WIN"
+     }
+     m_sMessage "Элеватор захвачен."
+     m_Timer GUB_ZoneControlTimer "{69DCE5581DBCD299}" {
+      timeToComplete 300
+     }
+     m_ZoneController GUB_ZoneController "{69DCE5581C7B39C2}" {
+      m_sZoneEntityName "trigger1"
+     }
+     m_FlagController GUB_FlagController "{69DCE55819045E02}" {
+      m_aFlagNames {
+       "flag1"
+       "flag2"
+       "flag3"
+      }
+      m_fStartFactionKey "Ses_NAPA"
+      m_fEndFactionKey "RHS_AFRF"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{69DCE558D7CC7877}" {
+       m_sFirstFactionKey "RHS_AFRF"
+       m_sSecondFactionKey "Ses_NAPA"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+}
+GenericEntity : "{6A3CDCFB475BF1B2}Prefabs/System/DRG_CriticalLossPrefab.et" {
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+}
