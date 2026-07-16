@@ -1,0 +1,62 @@
+$grp Vehicle : "{34C6F46F067729EB}Prefabs/Vehicles/Wheeled/TIGR/KORD/GAZ_TIGR_v2_KORD.et" {
+ GAZ_TIGR_v2_KORD3 {
+  coords 1560.648 18.312 6828.704
+  angles 0 177.448 0
+  m_sAttachmentGroupName "squad3"
+ }
+ GAZ_TIGR_v2_KORD2 {
+  coords 1561.552 18.312 6807.775
+  angles 0 177.448 0
+  m_sAttachmentGroupName "squad2"
+ }
+ GAZ_TIGR_v2_KORD1 {
+  coords 1562.699 18.312 6786.888
+  angles 0 177.448 0
+  m_sAttachmentGroupName "squad1"
+ }
+}
+Vehicle BTR72a_camo1 : "{C95038CAE8C8DB1B}Prefabs/Vehicles/Wheeled/BTR70/BTR72a_camo.et" {
+ coords 1559.063 18.281 6854.16
+ angles 0 177.636 0
+ m_sAttachmentGroupName "squad5mechanized"
+}
+Vehicle Ural4320_transport_covered1 : "{D9B91FAB817A6033}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_covered.et" {
+ components {
+  SCR_UniversalInventoryStorageComponent "{5916C58171230A92}" {
+   MultiSlots {
+    MultiSlotConfiguration "{69DE65E6B0413A71}" {
+     SlotTemplate InventoryStorageSlot mortar {
+      Prefab "{B41607EAB58A4252}Prefabs/Items/Equipment/BallisticTable/BallisticTable_USSR.et"
+     }
+     NumSlots 150
+    }
+    MultiSlotConfiguration "{69DE65E551F617FA}" {
+     SlotTemplate InventoryStorageSlot sandbags {
+      Prefab "{07BC23F8D9223863}Prefabs/Items/Misc/Sandbags/Part_Sandbag_Burlap.et"
+     }
+     NumSlots 150
+    }
+   }
+  }
+ }
+ coords 1563.796 18.312 6775.029
+ angles 0 177.49 0
+ m_sAttachmentGroupName "plafrf"
+}
+$grp Vehicle : "{ED23D3FD79C7DECF}Prefabs/Vehicles/Wheeled/TIGR/GAZ_TIGR_v2_Base.et" {
+ GAZ_TIGR_v2_Base1 {
+  coords 1562.228 18.312 6794.961
+  angles 0 179.056 0
+  m_sAttachmentGroupName "squad1"
+ }
+ GAZ_TIGR_v2_Base2 {
+  coords 1561.081 18.312 6815.848
+  angles 0 179.056 0
+  m_sAttachmentGroupName "squad2"
+ }
+ GAZ_TIGR_v2_Base3 {
+  coords 1560.177 18.312 6836.777
+  angles 0 179.056 0
+  m_sAttachmentGroupName "squad3"
+ }
+}

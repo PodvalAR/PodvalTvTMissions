@@ -1,12 +1,23 @@
+$grp SCR_EditorRestrictionZoneEntity : "{6144B0BE2EAC6897}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneMedium.et" {
+ {
+  coords 4954.198 327.405 9949.234
+ }
+ {
+  coords 2536.515 187.541 5044.787
+ }
+}
+SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+ coords 2747.366 200.037 5274.56
+}
 $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
- USSR_G_010_M {
-  coords 3879.685 15.25 8447.236
-  m_sImageSet "{7CD99D22C7AE8195}UI/Textures/GroupManagement/FlagIcons/GroupFlagsOpfor.imageset"
+ Ses_NAPA_G_000_M {
+  coords 6557.41 5.75 2715.776
+  m_sImageSet "{301FC1A2A46D3E0D}UI/Textures/GroupManagement/FlagIcons/GroupFlagsIndfor.imageset"
   m_sImageSetGlow ""
-  m_MarkerColor 1 1 1 1
+  m_MarkerColor 0.005 0.07 0.048 1
   m_sQuadName "undefined"
   m_fWorldSize 50
-  m_sDescription "Aktiv 2–1"
+  m_sDescription "(Полевой командир НАПА) Racek-11"
   m_bUseWorldScale 0
   m_aVisibleForFactions {
    "RHS_AFRF"
@@ -30,14 +41,14 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   }
   m_iZOrder 10
  }
- USSR_G_000_M {
-  coords 3881.142 15.25 8462.1
-  m_sImageSet "{7CD99D22C7AE8195}UI/Textures/GroupManagement/FlagIcons/GroupFlagsOpfor.imageset"
+ Ses_NAPA_G_410_M {
+  coords 6551.068 5.75 2772.063
+  m_sImageSet "{301FC1A2A46D3E0D}UI/Textures/GroupManagement/FlagIcons/GroupFlagsIndfor.imageset"
   m_sImageSetGlow ""
-  m_MarkerColor 1 1 1 1
+  m_MarkerColor 0.005 0.07 0.048 1
   m_sQuadName "undefined"
   m_fWorldSize 50
-  m_sDescription "Aktiv 1–1"
+  m_sDescription "(Разведка НАПА) Mýval-21"
   m_bUseWorldScale 0
   m_aVisibleForFactions {
    "RHS_AFRF"
@@ -61,14 +72,14 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   }
   m_iZOrder 10
  }
- USSR_G_210_M {
-  coords 3901.066 15.219 8478.859
-  m_sImageSet "{7CD99D22C7AE8195}UI/Textures/GroupManagement/FlagIcons/GroupFlagsOpfor.imageset"
+ Ses_NAPA_G_400_M {
+  coords 6560.053 5.75 2763.759
+  m_sImageSet "{301FC1A2A46D3E0D}UI/Textures/GroupManagement/FlagIcons/GroupFlagsIndfor.imageset"
   m_sImageSetGlow ""
-  m_MarkerColor 1 1 1 1
+  m_MarkerColor 0.005 0.07 0.048 1
   m_sQuadName "undefined"
   m_fWorldSize 50
-  m_sDescription "(Разведка ГРУ) Kompas 2–1"
+  m_sDescription "(Разведка НАПА) Mýval-11"
   m_bUseWorldScale 0
   m_aVisibleForFactions {
    "RHS_AFRF"
@@ -92,14 +103,14 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   }
   m_iZOrder 10
  }
- USSR_G_120_M {
-  coords 5124.506 14.523 4032.287
-  m_sImageSet "{7CD99D22C7AE8195}UI/Textures/GroupManagement/FlagIcons/GroupFlagsOpfor.imageset"
+ Ses_NAPA_G_100_M {
+  coords 6545.42 5.75 2730.096
+  m_sImageSet "{301FC1A2A46D3E0D}UI/Textures/GroupManagement/FlagIcons/GroupFlagsIndfor.imageset"
   m_sImageSetGlow ""
-  m_MarkerColor 1 1 1 1
+  m_MarkerColor 0.005 0.07 0.048 1
   m_sQuadName "undefined"
   m_fWorldSize 50
-  m_sDescription "Buran 3–1"
+  m_sDescription "(Пехотный отряд) Bříza-11"
   m_bUseWorldScale 0
   m_aVisibleForFactions {
    "RHS_AFRF"
@@ -123,14 +134,107 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   }
   m_iZOrder 10
  }
- USSR_G_200_M {
-  coords 5171.219 14.498 4018.1
-  m_sImageSet "{7CD99D22C7AE8195}UI/Textures/GroupManagement/FlagIcons/GroupFlagsOpfor.imageset"
+ Ses_NAPA_G_110_M {
+  coords 6533.02 5.75 2752.498
+  m_sImageSet "{301FC1A2A46D3E0D}UI/Textures/GroupManagement/FlagIcons/GroupFlagsIndfor.imageset"
   m_sImageSetGlow ""
-  m_MarkerColor 1 1 1 1
+  m_MarkerColor 0.005 0.07 0.048 1
   m_sQuadName "undefined"
   m_fWorldSize 50
-  m_sDescription "(Разведка ГРУ) Kompas 1–1"
+  m_sDescription "(Пехотный отряд) Bříza-21"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "RHS_ION"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+   "Ses_NAPA"
+   "Drg_IGF"
+   "Drg_PIR"
+   "UK"
+   "USSR"
+   "US"
+   "FIA"
+   "Drg_VCA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+  }
+  m_iZOrder 10
+ }
+ Ses_NAPA_G_210_M {
+  coords 6535.18 5.75 2705.403
+  m_sImageSet "{301FC1A2A46D3E0D}UI/Textures/GroupManagement/FlagIcons/GroupFlagsIndfor.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 0.005 0.07 0.048 1
+  m_sQuadName "undefined"
+  m_fWorldSize 50
+  m_sDescription "(Пехотный отряд) Cedr-21"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "RHS_ION"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+   "Ses_NAPA"
+   "Drg_IGF"
+   "Drg_PIR"
+   "UK"
+   "USSR"
+   "US"
+   "FIA"
+   "Drg_VCA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+  }
+  m_iZOrder 10
+ }
+ Ses_NAPA_G_200_M {
+  coords 6513.372 5.75 2725.248
+  m_sImageSet "{301FC1A2A46D3E0D}UI/Textures/GroupManagement/FlagIcons/GroupFlagsIndfor.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 0.005 0.07 0.048 1
+  m_sQuadName "undefined"
+  m_fWorldSize 50
+  m_sDescription "(Пехотный отряд) Cedr-11"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "RHS_ION"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+   "Ses_NAPA"
+   "Drg_IGF"
+   "Drg_PIR"
+   "UK"
+   "USSR"
+   "US"
+   "FIA"
+   "Drg_VCA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+  }
+  m_iZOrder 10
+ }
+ Ses_NAPA_G_300_M {
+  coords 6581.877 5.75 2744.421
+  m_sImageSet "{301FC1A2A46D3E0D}UI/Textures/GroupManagement/FlagIcons/GroupFlagsIndfor.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 0.005 0.07 0.048 1
+  m_sQuadName "undefined"
+  m_fWorldSize 50
+  m_sDescription "(Мотострелковый отряд) Datel-11"
   m_bUseWorldScale 0
   m_aVisibleForFactions {
    "RHS_AFRF"
@@ -155,106 +259,11 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   m_iZOrder 10
  }
  {
-  coords 5136.632 14.25 3982.187
-  angles 0 163.852 0
+  coords 6576.05 5.75 2745.198
+  angles 0 42.176 0
   m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
   m_sImageSetGlow ""
-  m_MarkerColor 0.855 0.031 0.028 1
-  m_sQuadName "Truck"
-  m_fWorldSize 3.722
-  m_sDescription "#AR-Vehicle_Ural4320_Transport_Covered_Name"
-  m_bUseWorldScale 1
-  m_aVisibleForFactions {
-   "RHS_AFRF"
-   "RHS_USAF"
-   "RHS_ION"
-   "Ses_CDF"
-   "Ses_ChDKZ"
-   "Ses_TKR"
-   "Ses_TKA"
-   "Ses_NAPA"
-   "Drg_IGF"
-   "Drg_PIR"
-   "UK"
-   "USSR"
-   "US"
-   "FIA"
-   "Drg_VCA"
-  }
-  m_bVisibleForEmptyFaction 1
-  m_aHideOnGameModeStates {
-   GAME
-  }
-  m_iZOrder 0
- }
- USSR_G_110_M {
-  coords 5109.641 14.199 3965.385
-  m_sImageSet "{7CD99D22C7AE8195}UI/Textures/GroupManagement/FlagIcons/GroupFlagsOpfor.imageset"
-  m_sImageSetGlow ""
-  m_MarkerColor 1 1 1 1
-  m_sQuadName "undefined"
-  m_fWorldSize 50
-  m_sDescription "Buran 2–1"
-  m_bUseWorldScale 0
-  m_aVisibleForFactions {
-   "RHS_AFRF"
-   "RHS_USAF"
-   "RHS_ION"
-   "Ses_CDF"
-   "Ses_ChDKZ"
-   "Ses_TKR"
-   "Ses_TKA"
-   "Ses_NAPA"
-   "Drg_IGF"
-   "Drg_PIR"
-   "UK"
-   "USSR"
-   "US"
-   "FIA"
-   "Drg_VCA"
-  }
-  m_bVisibleForEmptyFaction 1
-  m_aHideOnGameModeStates {
-  }
-  m_iZOrder 10
- }
- USSR_G_100_M {
-  coords 5124.097 14.061 3967.241
-  m_sImageSet "{7CD99D22C7AE8195}UI/Textures/GroupManagement/FlagIcons/GroupFlagsOpfor.imageset"
-  m_sImageSetGlow ""
-  m_MarkerColor 1 1 1 1
-  m_sQuadName "undefined"
-  m_fWorldSize 50
-  m_sDescription "Buran 1–1"
-  m_bUseWorldScale 0
-  m_aVisibleForFactions {
-   "RHS_AFRF"
-   "RHS_USAF"
-   "RHS_ION"
-   "Ses_CDF"
-   "Ses_ChDKZ"
-   "Ses_TKR"
-   "Ses_TKA"
-   "Ses_NAPA"
-   "Drg_IGF"
-   "Drg_PIR"
-   "UK"
-   "USSR"
-   "US"
-   "FIA"
-   "Drg_VCA"
-  }
-  m_bVisibleForEmptyFaction 1
-  m_aHideOnGameModeStates {
-  }
-  m_iZOrder 10
- }
- {
-  coords 5120.644 14.552 4028.577
-  angles -0.873 167.306 0.197
-  m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
-  m_sImageSetGlow ""
-  m_MarkerColor 0.855 0.031 0.028 1
+  m_MarkerColor 0.005 0.07 0.048 1
   m_sQuadName "APC"
   m_fWorldSize 3.691
   m_sDescription "#AR-Vehicle_BTR70_Name"
@@ -283,14 +292,14 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   m_iZOrder 0
  }
  {
-  coords 5168.486 14.471 4019.86
-  angles 0.858 253.529 -0.254
+  coords 6555.519 5.75 2761.626
+  angles 0 40.594 0
   m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
   m_sImageSetGlow ""
-  m_MarkerColor 0.855 0.031 0.028 1
+  m_MarkerColor 0.005 0.07 0.048 1
   m_sQuadName "Car"
-  m_fWorldSize 2.043
-  m_sDescription "#AR-Vehicle_UAZ469_Name"
+  m_fWorldSize 2.22
+  m_sDescription "#AR-Vehicle_Skoda105_Name"
   m_bUseWorldScale 1
   m_aVisibleForFactions {
    "RHS_AFRF"
@@ -316,14 +325,14 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   m_iZOrder 0
  }
  {
-  coords 3896.707 15.208 8471.274
-  angles -0.884 188.981 -0.14
+  coords 6560.143 5.75 2757.814
+  angles 0 40.594 0
   m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
   m_sImageSetGlow ""
-  m_MarkerColor 0.502 0 0 1
+  m_MarkerColor 0.005 0.07 0.048 1
   m_sQuadName "Car"
-  m_fWorldSize 2.043
-  m_sDescription "#AR-Vehicle_UAZ469_Name"
+  m_fWorldSize 2.22
+  m_sDescription "#AR-Vehicle_Skoda105_Name"
   m_bUseWorldScale 1
   m_aVisibleForFactions {
    "RHS_AFRF"
@@ -349,14 +358,80 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   m_iZOrder 0
  }
  {
-  coords 5172.828 14.25 3983.885
-  angles 0 154.107 0
+  coords 6544.01 5.75 2772.004
+  angles 0 43.7 0
   m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
   m_sImageSetGlow ""
-  m_MarkerColor 0.502 0 0.376 1
+  m_MarkerColor 0.005 0.07 0.048 1
+  m_sQuadName "Car"
+  m_fWorldSize 2.22
+  m_sDescription "#AR-Vehicle_Skoda105_Name"
+  m_bUseWorldScale 1
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "RHS_ION"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+   "Ses_NAPA"
+   "Drg_IGF"
+   "Drg_PIR"
+   "UK"
+   "USSR"
+   "US"
+   "FIA"
+   "Drg_VCA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+   GAME
+  }
+  m_iZOrder 0
+ }
+ {
+  coords 6548.116 5.75 2768.26
+  angles 0 43.7 0
+  m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 0.005 0.07 0.048 1
+  m_sQuadName "Car"
+  m_fWorldSize 2.22
+  m_sDescription "#AR-Vehicle_Skoda105_Name"
+  m_bUseWorldScale 1
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "RHS_ION"
+   "Ses_CDF"
+   "Ses_ChDKZ"
+   "Ses_TKR"
+   "Ses_TKA"
+   "Ses_NAPA"
+   "Drg_IGF"
+   "Drg_PIR"
+   "UK"
+   "USSR"
+   "US"
+   "FIA"
+   "Drg_VCA"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_aHideOnGameModeStates {
+   GAME
+  }
+  m_iZOrder 0
+ }
+ {
+  coords 6559.837 5.75 2707.339
+  angles 0 130.869 0
+  m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
+  m_sImageSetGlow ""
+  m_MarkerColor 0.005 0.07 0.048 1
   m_sQuadName "Truck"
   m_fWorldSize 3.722
-  m_sDescription "Бензовоз"
+  m_sDescription "#AR-Vehicle_Ural4320_Engineer_Name"
   m_bUseWorldScale 1
   m_aVisibleForFactions {
    "RHS_AFRF"
@@ -382,14 +457,21 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
   m_iZOrder 0
  }
  {
-  coords 3907.022 15.231 8444.438
-  angles 0 154.107 0
+  components {
+   PS_EditableMarkerComponent "{5EDF4803CD048668}" {
+    m_UIInfo SCR_EditableDescriptorUIInfo "{5EDF4803E71335A1}" {
+     m_sFaction "Ses_NAPA"
+    }
+   }
+  }
+  coords 6551.783 5.75 2731.048
+  angles 0 38.887 0
   m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
   m_sImageSetGlow ""
-  m_MarkerColor 0.502 0 0.376 1
+  m_MarkerColor 0.005 0.07 0.048 1
   m_sQuadName "Truck"
   m_fWorldSize 3.722
-  m_sDescription "Бензовоз"
+  m_sDescription "Ural ZU23"
   m_bUseWorldScale 1
   m_aVisibleForFactions {
    "RHS_AFRF"

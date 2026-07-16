@@ -1,0 +1,91 @@
+$grp SCR_AIGroup : "{07CF13D51001EF00}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Desert/Group_RHS_AFRF_Desert_RifS.et" {
+ squad1 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 0
+   }
+  }
+  coords 1570.517 18.312 6787.819
+  angles 0 -92.667 0
+ }
+ squad2 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 0
+   }
+  }
+  coords 1569.57 18.312 6808.143
+  angles 0 -92.667 0
+ }
+ squad3 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 2
+    m_iSquadCallsign 0
+   }
+  }
+  coords 1568.624 18.312 6828.451
+  angles 0 -92.667 0
+ }
+}
+SCR_AIGroup plafrf : "{37D81A594841B91E}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Desert/Group_RHS_AFRF_Desert_Mortar.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+   m_iCompanyCallsign 0
+  }
+ }
+ coords 1571.407 18.313 6774.577
+ angles 0 -95.605 0
+ m_aUnitPrefabSlots {
+  "{552177162DF26397}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_PL.et"
+  "{B3DC9591269D6A15}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_SL_Mortar.et"
+  "{C33B709D769207BC}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_Rifle.et"
+  "{C33B709D769207BC}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_Rifle.et"
+ }
+}
+SCR_AIGroup squad5mechanized : "{CD784C02581E2C8B}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Desert/Group_RHS_AFRF_Desert_Motorized.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+   m_iCompanyCallsign 2
+   m_iSquadCallsign 0
+  }
+ }
+ coords 1566.951 18.281 6851.645
+ angles 0 -93.516 0
+}
+$grp SCR_AIGroup : "{CDD5EF47F889695E}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Desert/dim_AFRF_D_SPN_Rand_recon6.et" {
+ reconafrf2 {
+  components {
+   PS_GroupCallsignAssigner "{690F20D6F3866B26}" {
+    m_iCompanyCallsign 3
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 4289.266 17.844 4789.302
+  angles 0 -41.064 0
+  m_sCustomNameSet "Выжившие"
+ }
+ reconafrf1 {
+  components {
+   PS_GroupCallsignAssigner "{690F20D6F3866B26}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 4276.273 17.844 4777.631
+  angles 0 -41.064 0
+  m_sCustomNameSet "Выжившие"
+ }
+}
+SCR_AIGroup pilots : "{D43A9753198C5D8F}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Heli.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+   m_iCompanyCallsign 4
+  }
+ }
+ coords 4299.124 17.844 4796.281
+ angles 0 5.645 0
+}
