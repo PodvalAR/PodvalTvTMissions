@@ -1,0 +1,167 @@
+$grp SCR_AIGroup : "{5AC79B71E9E08397}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Mechanized.et" {
+ bt1 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 3
+   }
+  }
+  coords 5556.346 123.406 6797.165
+  angles 0 14.52 0
+  m_sCustomNameSet "Экипаж БТР 72"
+ }
+ bt2 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 4
+   }
+  }
+  coords 5538.517 123.406 6802.166
+  angles 0 14.52 0
+  m_sCustomNameSet "Экипаж БТР 72"
+ }
+}
+$grp Vehicle : "{6151F65EB5DD7B1E}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_armed_gunship_HEDP_Podval_Black.et" {
+ Mi8MT_armed_gunship_HEDP_Podval_Black1 {
+  coords 5505.672 123.406 6758.625
+  angles 0 19.392 0
+  m_sAttachmentGroupName "pil1"
+ }
+ Mi8MT_armed_gunship_HEDP_Podval_Black2 {
+  coords 5569.215 123.364 6730.507
+  angles 0 18.362 0
+  m_sAttachmentGroupName "pil2"
+ }
+}
+$grp Vehicle : "{81BD03EBFC27D4CE}Prefabs/Vehicles/Wheeled/TIGR/Unarmed/GAZ_TIGR_v2_Unarmed_Green_tow.et" {
+ GAZ_TIGR_v2_Unarmed_Green_tow1 {
+  coords 7474.344 18.5 3154.876
+  angles 0 -176.741 0
+  m_sAttachmentGroupName "spc1"
+ }
+ GAZ_TIGR_v2_Unarmed_Green_tow2 {
+  coords 6762.541 14.06 4943.272
+  angles 0 -125.018 0
+  m_sAttachmentGroupName "spc2"
+ }
+}
+SCR_AIGroup : "{8418108290CF1C16}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Sniper.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+   m_iCompanyCallsign 3
+  }
+ }
+ coords 5617.148 123.383 6791.25
+ angles 0 -171.436 0
+ m_sCustomNameSet "Снайперская пара"
+}
+$grp Vehicle : "{8778C71315C623CB}Prefabs/Vehicles/Wheeled/TIGR/PKP/GAZ_TIGR_v2_PKM.et" {
+ GAZ_TIGR_v2_PKM1 {
+  coords 5521.076 122.575 6919.506
+  angles 0 -164.713 0
+  m_sAttachmentGroupName "rf1"
+ }
+ GAZ_TIGR_v2_PKM2 {
+  coords 5573.897 123.438 6796.403
+  angles 0 107.144 0
+ }
+ GAZ_TIGR_v2_PKM3 {
+  coords 5602.896 123.5 6791.304
+  angles 0 100.871 0
+  m_sAttachmentGroupName "rf3"
+ }
+}
+$grp SCR_AIGroup : "{B700E7417DA5CF8D}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Squad_V2.et" {
+ rf2 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 5569.772 123.429 6792.537
+  angles 0 12.133 0
+  m_sCustomNameSet "Гарнизон базы"
+ }
+ rf3 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 5600.245 123.438 6786.252
+  angles 0 12.133 0
+  m_sCustomNameSet "Гарнизон базы"
+ }
+ rf1 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 2
+   }
+  }
+  coords 5518.321 123.725 6924.999
+  angles 0 115.063 0
+ }
+}
+$grp Vehicle : "{C95038CAE8C8DB1B}Prefabs/Vehicles/Wheeled/BTR70/BTR72a_camo.et" {
+ BTR72a_camo1 {
+  coords 5538.87 123.406 6805.962
+  angles 0 102.323 0
+  m_sAttachmentGroupName "bt2"
+ }
+ BTR72a_camo2 {
+  coords 5556.776 123.406 6800.729
+  angles 0 107.788 0
+  m_sAttachmentGroupName "bt1"
+ }
+}
+$grp SCR_AIGroup : "{D43A9753198C5D8F}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Heli.et" {
+ pil1 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 4
+   }
+  }
+  coords 5524.941 123.375 6744.11
+  angles 0 -84.878 0
+ }
+ pil2 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 4
+    m_iSquadCallsign 1
+   }
+  }
+  coords 5544.662 124.272 6741.137
+  angles 0 109.599 0
+ }
+}
+SCR_AIGroup : "{E625399A1E96672A}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_PL_2.et" {
+ coords 5616.491 122.899 6780.007
+ angles 0 19.751 0
+}
+$grp SCR_AIGroup : "{ED92C6C1D40F9EAA}Prefabs/Groups/OPFOR/RHS_AFRF/VDV/Recon/dim_VDV_Recon_2.et" {
+ spc1 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4378FC6401}" {
+    m_iCompanyCallsign 5
+   }
+  }
+  coords 7468.387 18.643 3155.853
+  angles 0 98.43 0
+  m_sCustomNameSet "Спецназ"
+ }
+ spc2 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4378FC6401}" {
+    m_iCompanyCallsign 5
+    m_iSquadCallsign 1
+   }
+  }
+  coords 6759.619 14.034 4948.553
+  angles 0 150.153 0
+  m_sCustomNameSet "Спецназ"
+ }
+}
