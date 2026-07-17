@@ -1,81 +1,42 @@
-$grp GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
- {
-  components {
-   GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
-    m_aControlLogics {
-     GUB_ZoneControlLogic "{69DE6DF0FA64D07F}" {
-      m_sZonePreviewName "Место крушения"
-      m_bAdvanceGameStage 1
-      m_sSuccessObjectiveNames {
-       "TKR_WIN"
-       "TKR_WIN2"
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{69DE6DF0FA64D07F}" {
+     m_sZonePreviewName "Место крушения"
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "TKR_WIN"
+      "TKR_WIN2"
+     }
+     m_sFailedObjectiveNames {
+      "AFRF_WIN"
+     }
+     m_sMessage "Место крушения захвачено"
+     m_Timer GUB_ZoneControlTimer "{69DE6DF0BC36D4E9}" {
+      timeToComplete 300
+     }
+     m_ZoneController GUB_ZoneController "{69DE6DF0BAADC680}" {
+      m_sZoneEntityName "trigger"
+     }
+     m_FlagController GUB_FlagController "{69DE6DF0B6D435B5}" {
+      m_aFlagNames {
+       "flag"
       }
-      m_sFailedObjectiveNames {
-       "AFRF_WIN"
-      }
-      m_sMessage "Место крушения захвачено"
-      m_Timer GUB_ZoneControlTimer "{69DE6DF0BC36D4E9}" {
-       timeToComplete 300
-      }
-      m_ZoneController GUB_ZoneController "{69DE6DF0BAADC680}" {
-       m_sZoneEntityName "trigger"
-      }
-      m_FlagController GUB_FlagController "{69DE6DF0B6D435B5}" {
-       m_aFlagNames {
-        "flag"
-       }
-       m_fStartFactionKey "RHS_AFRF"
-       m_fEndFactionKey "Ses_TKR"
-      }
-      m_aConditions {
-       GUB_ZoneControlBetweenFactionsCondition "{69DE6DF0AF5E0EF5}" {
-        m_sFirstFactionKey "Ses_TKR"
-        m_sSecondFactionKey "RHS_AFRF"
-        m_fComparisonMultiplier 2
-        m_iOperator GREATER
-       }
+      m_fStartFactionKey "RHS_AFRF"
+      m_fEndFactionKey "Ses_TKR"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{69DE6DF0AF5E0EF5}" {
+       m_sFirstFactionKey "Ses_TKR"
+       m_sSecondFactionKey "RHS_AFRF"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
       }
      }
     }
    }
   }
- }
- {
-  components {
-   GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
-    m_aControlLogics {
-     GUB_ZoneControlLogic "{69DE6DF0FA64D07F}" {
-      m_bAdvanceGameStage 1
-      m_sSuccessObjectiveNames {
-       "AFRF_WIN2"
-      }
-      m_sFailedObjectiveNames {
-       "TKR_WIN2"
-      }
-      m_sMessage "Выжившие эвакуированны"
-      m_Timer GUB_ZoneControlTimer "{69DE6DF0BC36D4E9}" {
-       timeToComplete 5
-      }
-      m_ZoneController GUB_ZoneController "{69DE6DF0BAADC680}" {
-       m_sZoneEntityName "trigger2"
-      }
-      m_FlagController GUB_FlagController "{69DE6DF0B6D435B5}" {
-       m_fStartFactionKey "Ses_TKR"
-       m_fEndFactionKey "RHS_AFRF"
-      }
-      m_aConditions {
-       GUB_ZoneControlBetweenFactionsCondition "{69DE6DF0AF5E0EF5}" {
-        m_sFirstFactionKey "RHS_AFRF"
-        m_sSecondFactionKey "Ses_TKR"
-        m_fComparisonMultiplier 3
-        m_iOperator GREATER
-       }
-      }
-     }
-    }
-   }
-  }
-  coords 0 0 0
  }
 }
 GenericEntity : "{6A3CDCFB475BF1B2}Prefabs/System/DRG_CriticalLossPrefab.et" {
