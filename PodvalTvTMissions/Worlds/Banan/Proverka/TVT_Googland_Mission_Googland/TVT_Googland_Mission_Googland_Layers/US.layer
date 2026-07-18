@@ -1,0 +1,246 @@
+SCR_AIGroup law2 : "{00317932FDF37911}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/MarpatWD/Group_RHS_USAF_Marpat_Squad_Motorized.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+   m_iCompanyCallsign 3
+  }
+ }
+ coords 4541.042 11.156 8814.98
+ angles 0 71.908 0
+}
+SCR_AIGroup law1 : "{0088A63CDFED6837}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/MarpatWD/Group_RHS_USAF_Marpat_Squad_Motorized_Random.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+   m_iCompanyCallsign 3
+   m_iSquadCallsign 1
+  }
+ }
+ coords 4511.114 11.156 8828.137
+ m_sCustomNameSet "Моторизованная пехота"
+}
+SCR_AIGroup tr3 : "{3CB180F292A52F34}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_Sniper.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+   m_iCompanyCallsign 4
+   m_iSquadCallsign 2
+  }
+ }
+ coords 4508.388 11.156 8843.701
+ angles 0 -82.718 0
+}
+$grp SCR_AIGroup : "{3EECAF1E0650D775}Prefabs/Groups/BLUFOR/RHS_USAF/Recon/Group_RHS_USAF_Recon_Squad.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 1288.713 4.353 5024.076
+  angles 0 131.288 0
+  m_sCustomNameSet "Спецназ"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 4
+   }
+  }
+  coords 1203.307 3 5042.027
+  angles 0 122.094 0
+  m_sCustomNameSet "Спецназ"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 5
+   }
+  }
+  coords 1181.771 4.817 5048.744
+  angles 0 30.708 0
+  m_sCustomNameSet "Спецназ"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 3
+   }
+  }
+  coords 1273.016 2.75 5038.231
+  angles 0 -149.065 0
+  m_sCustomNameSet "Спецназ"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 1302.595 4.353 5038.488
+  angles 0 -56.274 0
+  m_sCustomNameSet "Спецназ"
+ }
+}
+SCR_AIGroup tr2 : "{45EE09346B6C33AE}Prefabs/Groups/BLUFOR/RHS_USAF/RandomSpawn/Defend/Group_RHS_USAF_Regular_Sniper_Defend.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+   m_iCompanyCallsign 4
+   m_iSquadCallsign 1
+  }
+ }
+ coords 4520.617 11.156 8842.572
+ angles 0 -75.227 0
+}
+$grp SCR_AIGroup : "{6981CA4A67B1A730}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_Heli.et" {
+ hel1 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 8
+    m_iSquadCallsign 4
+   }
+  }
+  coords 1182.614 3 5066.376
+  angles 0 126.773 0
+  m_sCustomNameSet "Пилоты UH1H"
+ }
+ hel2 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 3
+   }
+  }
+  coords 1201.277 3 5022.761
+  angles 0 33.36 0
+  m_sCustomNameSet "Пилоты UH1H"
+ }
+ hel5 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 1286.778 2.75 5064.864
+  angles 0 126.773 0
+  m_sCustomNameSet "Пилоты UH1H"
+ }
+ hel4 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 1286.265 2.75 4998.126
+  angles 0 33.374 0
+  m_sCustomNameSet "Пилоты UH1H"
+ }
+ hel3 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 2
+   }
+  }
+  coords 1256.295 2.75 5035.535
+  angles 0 126.773 0
+  m_sCustomNameSet "Пилоты UH1H"
+ }
+}
+$grp GenericEntity : "{6FD4268EA745B585}Prefabs/Structures/Airport/LightRunway_01/LightRunway_01_light.et" {
+ {
+  components {
+   LightSourceVisualizationObject "{5A02839A0D5BE210}" {
+    Material "{256A40F608390FD8}Common/Materials/LightSourceVisualization/LightSourceVisualization_base.emat"
+   }
+  }
+  coords 1280.691 2.75 5051.488
+ }
+ {
+  components {
+   LightSourceVisualizationObject "{5A02839A0D5BE210}" {
+    Material "{256A40F608390FD8}Common/Materials/LightSourceVisualization/LightSourceVisualization_base.emat"
+   }
+  }
+  coords 1306.875 2.75 5068.468
+ }
+ {
+  components {
+   LightSourceVisualizationObject "{5A02839A0D5BE210}" {
+    Material "{256A40F608390FD8}Common/Materials/LightSourceVisualization/LightSourceVisualization_base.emat"
+   }
+  }
+  coords 1308.794 2.75 5046.838
+ }
+}
+$grp Vehicle : "{7BC74A3F9EDBEFF4}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed_AP_HE.et" {
+ UH1H_armed_AP_HE3 {
+  coords 1295.687 2.75 5007.185
+  angles 0 -54.901 0
+  m_sAttachmentGroupName "hel4"
+ }
+ UH1H_armed_AP_HE4 {
+  coords 1210.84 3.351 5031.09
+  angles 0 -58.387 0
+  m_sAttachmentGroupName "hel2"
+ }
+ UH1H_armed_AP_HE1 {
+  coords 1297.709 2.75 5056.514
+  angles 0 -54.525 0
+  m_sAttachmentGroupName "hel5"
+ }
+ UH1H_armed_AP_HE2 {
+  coords 1267.431 2.75 5026.606
+  angles 0 -53.43 0
+  m_sAttachmentGroupName "hel3"
+ }
+ UH1H_armed_AP_HE5 {
+  coords 1194.28 3.352 5060.459
+  angles 0 -53.5 0
+  m_sAttachmentGroupName "hel1"
+ }
+}
+$grp Vehicle : "{94DE32169691AC35}Prefabs/Vehicles/Wheeled/M151A2/M151A2_transport_MERDC.et" {
+ M151A2_transport_MERDC1 {
+  coords 4552.258 11.156 8845.236
+  angles 0 -167.791 0
+  m_sAttachmentGroupName "tr1"
+ }
+ M151A2_transport_MERDC2 {
+  coords 4504.985 11.156 8845.02
+  angles 0 -179.968 0
+  m_sAttachmentGroupName "tr3"
+ }
+ M151A2_transport_MERDC3 {
+  coords 4517.483 11.156 8843.339
+  angles 0 -179.968 0
+  m_sAttachmentGroupName "tr2"
+ }
+}
+SCR_AIGroup tr1 : "{A25621139106C898}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/MarpatWD/Group_RHS_USAF_Marpat_Sniper.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+   m_iCompanyCallsign 4
+  }
+ }
+ coords 4555.293 11.156 8843.838
+ angles 0 -76.906 0
+}
+$grp Vehicle : "{BA1C2367A4C6580C}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS_CAMO.et" {
+ LAV25_RHS_CAMO1 {
+  coords 4515.926 11.156 8832.562
+  angles 0 93.304 0
+  m_sAttachmentGroupName "law1"
+ }
+ LAV25_RHS_CAMO2 {
+  coords 4545.606 11.156 8813.932
+  angles 0 152.788 0
+  m_sAttachmentGroupName "law2"
+ }
+}
+SCR_AIGroup : "{C6A109B199C8850B}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/MTVT/Group_RHS_USAF_ATAK_Regular_PL_2.et" {
+ coords 1311.746 2.75 5023.313
+ angles 0 -60.917 0
+}

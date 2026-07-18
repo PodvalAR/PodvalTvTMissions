@@ -4,7 +4,7 @@ $grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescripti
   m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
   m_sTextData "ОБЩИЕ ПРАВИЛА "\
   "— Всем запрещено надевать форму, головные уборы, разгрузки, бронежилеты противника (рюкзаки можно) "\
-  "— Количество радиостанций ограничено до 2-3 шт. в отделении. "\
+  "— Количество радиостанций у ФИА ограничено до 2-3 шт. в отделении. "\
   ""\
   "ПРАВИЛА ДЛЯ СССР"\
   "— 1. Запрещено находиться на подконтрольной FIA территории (зелёная зона)"\
@@ -30,11 +30,11 @@ $grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescripti
   ""\
   "Каждый бтр, грузовик, КШМ снабжения стоит 5 очков. "\
   ""\
-  ""\
-  "."\
   ""
   m_aVisibleForFactions {
-   "US" "USSR" "FIA"
+   "US"
+   "USSR"
+   "FIA"
   }
   m_bEmptyFactionVisibility 1
   m_iOrder 1
@@ -63,8 +63,7 @@ $grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescripti
   "– Вывести из строя как можно больше техники и припасов – без снабжения советам не продержаться!"\
   ""\
   "Бьем точно, уходим быстро! За свободу Эверона!"\
-  ""\
-  "."
+  ""
   m_aVisibleForFactions {
    "FIA"
   }
@@ -94,9 +93,7 @@ $grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescripti
   "– Сохранение техники и ресурсов имеет высокий приоритет."\
   "– Любая потеря транспортных средств или личного состава недопустима."\
   "– Подозрительные объекты и возможные засады устраняются на опережение."\
-  "– Авиация действует по запросу командиров групп и обеспечивает воздушное прикрытие."\
-  ""\
-  "."
+  "– Авиация действует по запросу командиров групп и обеспечивает воздушное прикрытие."
   m_aVisibleForFactions {
    "USSR"
   }

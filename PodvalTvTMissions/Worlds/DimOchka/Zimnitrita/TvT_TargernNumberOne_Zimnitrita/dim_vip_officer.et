@@ -1,0 +1,28 @@
+SCR_ChimeraCharacter : "{7551E181CE4C6845}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Officer.et" {
+ ID "520EC961A090B1EE"
+ components {
+  ActionsManagerComponent "{520EA1D2F659CE02}" {
+   additionalActions {
+    DRG_DeathConfirmAction "{69D13D917B7FACBE}" {
+     ParentContextList {
+      "LowerTorso"
+     }
+     UIInfo UIInfo "{69D13D9195420B2D}" {
+      Name "Подтвердить смерть"
+     }
+     ActionTitle "#drg_ConfirmDeathAction"
+     Duration 3
+     m_sEventMessage "Офицер ликвидирован"
+     m_aObjectivesToDone {
+      "USAF_WIN"
+     }
+     m_aObjectivesToFail {
+      "AFRF_WIN"
+     }
+     m_vFactionKey "RHS_USAF"
+    }
+   }
+  }
+ }
+ coords 8705.412 91.938 13406.78
+}
