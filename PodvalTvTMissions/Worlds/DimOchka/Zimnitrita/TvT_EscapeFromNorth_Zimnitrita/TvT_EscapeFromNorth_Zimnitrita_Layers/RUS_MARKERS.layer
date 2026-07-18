@@ -966,10 +966,10 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
  {
   coords 14445.893 29.893 15543.734
   angles -0.097 210.228 -1.61
-  m_sImageSet "{E23427CAC80DA8B7}UI/Textures/Icons/icons_mapMarkersUI.imageset"
-  m_sImageSetGlow "{67B3A6DC2D712B52}UI/Textures/Icons/icons_mapMarkersUI-glow.imageset"
+  m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
+  m_sImageSetGlow ""
   m_MarkerColor 0.555 0.002 0 1
-  m_sQuadName "circle-2"
+  m_sQuadName "Truck"
   m_fWorldSize 3.722
   m_sDescription "#RHS-Vehicle_Ural4320_fuel_camo_Name"
   m_bUseWorldScale 1
@@ -998,10 +998,10 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
  {
   coords 14435.024 29.915 15550.908
   angles 0.151 219.063 -1.606
-  m_sImageSet "{E23427CAC80DA8B7}UI/Textures/Icons/icons_mapMarkersUI.imageset"
-  m_sImageSetGlow "{67B3A6DC2D712B52}UI/Textures/Icons/icons_mapMarkersUI-glow.imageset"
+  m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
+  m_sImageSetGlow ""
   m_MarkerColor 0.555 0.002 0 1
-  m_sQuadName "circle-2"
+  m_sQuadName "Truck"
   m_fWorldSize 3.722
   m_sDescription "#RHS-Vehicle_Ural4320_fuel_camo_Name"
   m_bUseWorldScale 1
@@ -1125,5 +1125,21 @@ $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker
    GAME
   }
   m_iZOrder 0
+ }
+ {
+  coords 14522.553 53.438 3855.559
+  angles 0 90 0
+  m_sImageSet "{37204ADEBD67C8A6}UI/Imagesets/Notifications/NotificationIcons.imageset"
+  m_sImageSetGlow "{37204ADEBD67C8A6}UI/Imagesets/Notifications/NotificationIcons.imageset"
+  m_MarkerColor 0.502 0 0 1
+  m_sQuadName "Notification_Conflict_SupplyTruck"
+  m_fWorldSize 1500
+  m_sDescription "Зона эвакуации (Б)"
+  m_aVisibleForFactions {
+   "RHS_USAF"
+   "RHS_AFRF"
+   ""
+  }
+  m_bVisibleForEmptyFaction 1
  }
 }
