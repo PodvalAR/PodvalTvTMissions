@@ -4,7 +4,7 @@ $grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescripti
   m_sTitle "#PS-Description_HeaderRules"
   m_sTextData "ОБЩИЕ ПРАВИЛА "\
   "— Всем запрещено надевать форму, головные уборы, разгрузки, бронежилеты противника (рюкзаки можно) "\
-  "— Количество радиостанций ограничено до 2-3 шт. в отделении. "\
+  "— Количество радиостанций у ФИА ограничено до 2-3 шт. в отделении. "\
   ""\
   "ПРАВИЛА ДЛЯ FIA"\
   "— Виктор Трошка должен выбрать одно из тайных убежишь и написать администратору чтобы тот переместил его в выбранное укрытие."\
@@ -19,7 +19,9 @@ $grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescripti
   "— 2. Разгромить противника"\
   " "
   m_aVisibleForFactions {
-   "US" "USSR" "FIA"
+   "US"
+   "USSR"
+   "FIA"
   }
   m_bEmptyFactionVisibility 1
   m_iOrder 1
