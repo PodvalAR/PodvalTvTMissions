@@ -1,62 +1,74 @@
 Vehicle M1167_armed_TOW1 : "{08DC83258B558A9F}Prefabs/Vehicles/Wheeled/M998/M1167_armed_TOW.et" {
- coords 12850.575 5.75 9993.628
- angles 0 29.551 0
- m_sAttachmentGroupName "USAF_KS000"
+ coords 12845.787 5.75 9985.646
+ angles 0 28.957 0
+ m_sAttachmentGroupName "USAF_KS200"
 }
 Vehicle LAV25_RHS1 : "{3312ADBF53A16DD9}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS.et" {
  coords 12866.59 5.749 10024.292
  angles 0 28.886 0
  m_sAttachmentGroupName "USAF_MEH002"
 }
-$grp Vehicle : "{6AFBB88C4B3CEA19}Prefabs/Vehicles/Helicopters/MH-6J/AH-6J_Doors_M134_M260.et" {
- AH_6J_Doors_M134_M1 {
-  coords 4711.527 327.406 9743.013
-  angles 0 -120.669 0
-  m_sAttachmentGroupName "USAF_HELARM_103"
- }
- AH_6J_Doors_M134_M2 {
-  coords 4727.555 327.406 9715.029
-  angles 0 -120.599 0
-  m_sAttachmentGroupName "USAF_HELARM_102"
- }
-}
 $grp Vehicle : "{7D9668EDADFCD7E1}Prefabs/Vehicles/Wheeled/M998/M1151_armed_CROWS_M2.et" {
  M1151_armed_CROWS_M1 {
-  coords 10474.041 110.568 9982.374
-  angles 0.894 -2.455 -0.038
-  m_sAttachmentGroupName "USAF_SPN400"
- }
- M1151_armed_CROWS_M2 {
-  coords 10477.104 109.81 9948.94
-  angles 1.79 0 0
+  coords 10475.506 109.809 9948.897
+  angles 0.894 -3.032 -0.047
   m_sAttachmentGroupName "USAF_SPN401"
  }
+ M1151_armed_CROWS_M2 {
+  coords 10474.029 110.556 9981.58
+  angles 0.893 -3.735 -0.058
+  m_sAttachmentGroupName "USAF_SPN400"
+ }
 }
-$grp Vehicle : "{9C5C813B65D932F7}Prefabs/Vehicles/Helicopters/MH-6J/MH-6J_Doors.et" {
- MH_6J_Doors1 {
-  coords 4880.332 327.406 10012.938
-  angles 0 -30.178 0
-  m_sAttachmentGroupName "USAF_SPNHEL301"
+$grp Vehicle : "{823CA4130CE90077}Prefabs/Vehicles/Helicopters/AH6M/AH6M_RKT.et" {
+ AH6M_RKT1 {
+  coords 4711.968 327.406 9740.623
+  angles 0 -120.019 0
+  m_sAttachmentGroupName "USAF_HELARM_102"
  }
- MH_6J_Doors3 {
-  coords 4855.472 327.406 10055.946
-  angles 0 -29.44 0
-  m_sAttachmentGroupName "USAF_SPNHEL302"
+ AH6M_RKT2 {
+  coords 4700.876 327.406 9759.987
+  angles 0 -120.353 0
+  m_sAttachmentGroupName "USAF_HELARM_103"
  }
- MH_6J_Doors4 {
-  coords 4830.5 327.406 10098.978
-  angles 0 -28.546 0
-  m_sAttachmentGroupName "USAF_SPNHEL303"
+}
+$grp Vehicle : "{A317D959A4248173}Prefabs/Vehicles/Helicopters/AH6M/AH6M_GAU19.et" {
+ AH6M_GAU1 {
+  coords 4611.567 327.406 9916.307
+  angles 0 -121.532 0
+  m_sAttachmentGroupName "USAF_HELARM_101"
  }
- MH_6J_Doors2 {
-  coords 4904.651 327.405 9970.876
-  angles 0 -30.449 0
+ AH6M_GAU2 {
+  coords 4621.959 327.406 9896.555
+  angles 0 -119.061 0
+  m_sAttachmentGroupName "USAF_HELARM_100"
+ }
+}
+$grp Vehicle : "{AF950919C81D91B4}Prefabs/Vehicles/Helicopters/AH6M/MH6M.et" {
+ MH6M1 {
+  coords 4902.792 327.406 9973.947
+  angles 0 -29.159 0
   m_sAttachmentGroupName "USAF_SPNHEL300"
  }
- MH_6J_Doors5 {
-  coords 4808.822 327.407 10136.807
-  angles 0 -31.032 0
+ MH6M2 {
+  coords 4807.241 327.406 10139.143
+  angles 0 -29.159 0
   m_sAttachmentGroupName "USAF_SPNHEL304"
+ }
+ MH6M3 {
+  coords 4828.741 327.406 10102.043
+  angles 0 -29.159 0
+  m_sAttachmentGroupName "USAF_SPNHEL303"
+ }
+ MH6M4 {
+  coords 4853.224 327.406 10059.717
+  angles 0 -29.159 0
+  m_sAttachmentGroupName "USAF_SPNHEL302"
+ }
+ MH6M5 {
+  coords 4880.788 327.406 10012.043
+  angles 0 -29.159 0
+  m_sAttachmentGroupName "USAF_SPNHEL301"
  }
 }
 Vehicle LAV25_RHS_CAMO1 : "{BA1C2367A4C6580C}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS_CAMO.et" {
@@ -64,16 +76,31 @@ Vehicle LAV25_RHS_CAMO1 : "{BA1C2367A4C6580C}Prefabs/Vehicles/Wheeled/LAV25/LAV2
  angles 0 29.466 0
  m_sAttachmentGroupName "USAF_MEH004"
 }
-$grp Vehicle : "{C0D7B28C6951690E}Prefabs/Vehicles/Helicopters/MH-6J/AH-6J_Doors_M134_GAU19_M260.et" {
- AH_6J_Doors_M134_GAU19_M2 {
-  coords 4612.439 327.405 9916.886
-  angles 0 -119.67 0
-  m_sAttachmentGroupName "USAF_HELARM_100"
+$grp Vehicle : "{D574C943C9F8C9DF}Prefabs/Vehicles/Wheeled/M998/M1151_armed_M2HB_AP.et" {
+ M1151_armed_M2HB_AP1 {
+  coords 4982.02 327.425 10017.468
+  angles 0 -120.315 0
+  m_sAttachmentGroupName "USAF_SPNHEL300"
  }
- AH_6J_Doors_M134_GAU19_M3 {
-  coords 4602.563 327.405 9934.22
-  angles 0 -119.67 0
-  m_sAttachmentGroupName "USAF_HELARM_101"
+ M1151_armed_M2HB_AP2 {
+  coords 4958.064 327.425 10059.625
+  angles 0 -120.076 0
+  m_sAttachmentGroupName "USAF_SPNHEL301"
+ }
+ M1151_armed_M2HB_AP3 {
+  coords 4933.463 327.496 10098.59
+  angles 0 -114.744 0
+  m_sAttachmentGroupName "USAF_SPNHEL302"
+ }
+ M1151_armed_M2HB_AP4 {
+  coords 4908.944 327.496 10142.545
+  angles 0 -119.768 0
+  m_sAttachmentGroupName "USAF_SPNHEL303"
+ }
+ M1151_armed_M2HB_AP5 {
+  coords 4885.862 327.496 10183.844
+  angles 0 -121.657 0
+  m_sAttachmentGroupName "USAF_SPNHEL304"
  }
 }
 Vehicle M1083_Command1 : "{D9E287595E3AF7C5}Prefabs/Vehicles/Wheeled/M1083/M1083_Command.et" {
