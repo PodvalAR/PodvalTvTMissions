@@ -1,0 +1,97 @@
+$grp Vehicle : "{123595894023C474}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS_D.et" {
+ LAV25_RHS_D1 {
+  coords 5183.516 207.219 1811.912
+  angles 0 -79.029 0
+  m_sAttachmentGroupName "RHS_USAF_300"
+ }
+ LAV25_RHS_D2 {
+  coords 5200.074 207.219 1808.399
+  angles 0 -78.457 0
+  m_sAttachmentGroupName "RHS_USAF_301"
+ }
+}
+$grp Vehicle : "{1ACE0D91D7E2BD0C}Prefabs/Vehicles/Wheeled/M1083/Armed/M1083_Transport_Covered_Armed_TF.et" {
+ M1083_Transport_Covered_Armed_TF1 {
+  coords 5154.584 207.219 1810.024
+  angles 0 -115.446 0
+  m_sAttachmentGroupName "RHS_USAF_200"
+ }
+ M1083_Transport_Covered_Armed_TF2 {
+  coords 5168.46 207.219 1812.083
+  angles 0 -89.528 0
+  m_sAttachmentGroupName "RHS_USAF_201"
+ }
+}
+Vehicle M1151_armed_Tan1 : "{2281BC448B4A04FD}Prefabs/Vehicles/Wheeled/M998/M1151_armed_Tan.et" {
+ coords 5129.908 207.219 1731.086
+ angles 0 -178.669 0
+ m_sAttachmentGroupName "RHS_USAF_000"
+}
+SCR_AIGroup RHS_USAF_201 : "{3298D6DA95D73EAD}Prefabs/Groups/BLUFOR/RHS_USAF/USMC/Desert/dim_USMC_D_Rifle_Squad.et" {
+ components {
+  PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+   m_iCompanyCallsign 2
+   m_iSquadCallsign 1
+  }
+ }
+ coords 5172.38 207.219 1817.822
+ angles 0 -179.557 0
+}
+$grp Vehicle : "{36ED190F9C9A8E0D}Prefabs/Vehicles/Wheeled/M998/M1151_armed_CROWS_M2_Tan.et" {
+ M1151_armed_CROWS_M2_Tan1 {
+  coords 5129.915 207.219 1750.954
+  angles 0 179.141 0
+  m_sAttachmentGroupName "RHS_USAF_100"
+ }
+ M1151_armed_CROWS_M2_Tan3 {
+  coords 5134.788 207.219 1789.663
+  angles 0 -153.9 0
+  m_sAttachmentGroupName "RHS_USAF_102"
+ }
+}
+$grp Vehicle : "{88AC991871268D13}Prefabs/Vehicles/Wheeled/M998/M1151_armed_MK19_Tan.et" {
+ M1151_armed_MK19_Tan1 {
+  coords 5139.774 207.219 1797.955
+  angles 0 -140.528 0
+  m_sAttachmentGroupName "RHS_USAF_103"
+ }
+ M1151_armed_MK19_Tan2 {
+  coords 5145.733 207.219 1803.577
+  angles 0 -129.83 0
+  m_sAttachmentGroupName "RHS_USAF_103"
+ }
+}
+$grp Vehicle : "{9C07B4B8CF07B8A1}Prefabs/Vehicles/Wheeled/M998/M1151_armed_M2HB_Tan_AP.et" {
+ M1151_armed_M2HB_Tan_AP1 {
+  coords 5130.066 207.219 1742.947
+  angles 0 178.105 0
+  m_sAttachmentGroupName "RHS_USAF_100"
+ }
+ M1151_armed_M2HB_Tan_AP2 {
+  coords 5129.811 207.219 1761.999
+  angles 0 -178.901 0
+  m_sAttachmentGroupName "RHS_USAF_101"
+ }
+ M1151_armed_M2HB_Tan_AP3 {
+  coords 5131.784 207.219 1781.557
+  angles 0 -166.22 0
+  m_sAttachmentGroupName "RHS_USAF_102"
+ }
+ M1151_armed_M2HB_Tan_AP4 {
+  coords 5130.233 207.219 1770.579
+  angles 0 -175.131 0
+  m_sAttachmentGroupName "RHS_USAF_101"
+ }
+}
+$grp Vehicle : "{9C5C813B65D932F6}Prefabs/Vehicles/Helicopters/MH-6J/MH-6J_Doors.et" {
+ MH_6J_Doors1 {
+  coords 5194.78 207.219 1743.295
+  angles 0 -78.098 0
+  m_sAttachmentGroupName "RHS_USAF_500"
+ }
+ MH_6J_Doors2 {
+  coords 5203.096 207.307 1777.157
+  angles 0.044 -80.089 -0.078
+  m_sAttachmentGroupName "RHS_USAF_500"
+ }
+}
