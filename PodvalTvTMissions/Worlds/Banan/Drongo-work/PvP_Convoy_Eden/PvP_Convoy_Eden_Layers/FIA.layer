@@ -1,0 +1,306 @@
+$grp Vehicle : "{86D830868F026D54}Prefabs/Vehicles/Wheeled/M151A2/M151A2_MERDC_MINES.et" {
+ M151A2_MERDC_MINES1 {
+  coords 4318.469 138.312 6731.397
+  angles -5.521 -88.521 -0.218
+  m_sAttachmentGroupName "FIA_2_0_0"
+ }
+ M151A2_MERDC_MINES2 {
+  coords 4323.717 138.82 6731.563
+  angles -5.521 -88.521 -0.218
+  m_sAttachmentGroupName "FIA_2_0_0"
+ }
+ M151A2_MERDC_MINES3 {
+  coords 4310.195 137.617 6730.703
+  angles -4.519 -88.525 -0.218
+  m_sAttachmentGroupName "FIA_2_0_1"
+ }
+ M151A2_MERDC_MINES4 {
+  coords 4304.335 137.139 6730.575
+  angles -5.016 -88.523 -0.218
+  m_sAttachmentGroupName "FIA_2_0_1"
+ }
+ M151A2_MERDC_MINES5 {
+  coords 4295.381 136.534 6730.174
+  angles -5.016 -88.523 -0.218
+  m_sAttachmentGroupName "FIA_2_0_2"
+ }
+ M151A2_MERDC_MINES6 {
+  coords 4289.456 136.042 6729.744
+  angles -5.016 -88.523 -0.218
+  m_sAttachmentGroupName "FIA_2_0_2"
+ }
+ M151A2_MERDC_MINES7 {
+  coords 3310.15 118.095 4408.396
+  angles 0 -44.304 0
+  m_sAttachmentGroupName "FIA_1_0_2"
+ }
+ M151A2_MERDC_MINES8 {
+  coords 3314.183 117.817 4404.33
+  angles 0 -44.304 0
+  m_sAttachmentGroupName "FIA_1_0_2"
+ }
+ M151A2_MERDC_MINES9 {
+  coords 3320.643 117.409 4399.171
+  angles 0 -44.304 0
+  m_sAttachmentGroupName "FIA_1_0_1"
+ }
+ M151A2_MERDC_MINES10 {
+  coords 3325.232 117.118 4394.961
+  angles 0 -44.304 0
+  m_sAttachmentGroupName "FIA_1_0_1"
+ }
+ M151A2_MERDC_MINES11 {
+  coords 3331.086 116.647 4389.864
+  angles 0 -44.304 0
+  m_sAttachmentGroupName "FIA_1_0_0"
+ }
+ M151A2_MERDC_MINES12 {
+  coords 3336.462 116.304 4385.013
+  angles 0 -44.304 0
+  m_sAttachmentGroupName "FIA_1_0_0"
+ }
+ M151A2_MERDC_MINES13 {
+  coords 3342.294 115.94 4380.068
+  angles 0 -44.304 0
+  m_sAttachmentGroupName "FIA_0_0"
+ }
+}
+$grp SCR_AIGroup : "{CA73F9230999408B}Prefabs/Groups/INDFOR/Group_FIA_PlatoonHQ_P.et" {
+ FIA_0_0 {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation ""
+   }
+  }
+  coords 3342.788 116.042 4383.131
+  angles 0 -137.555 0
+  m_aUnitPrefabSlots {
+   "{156CA8B61F1F1CD7}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_Officer_P.et"
+  }
+ }
+ FIA_1_0_0 {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation ""
+   }
+   PS_GroupCallsignAssigner "{5F0CD1CD80B4F049}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 3337.734 116.37 4387.227
+  angles -0.184 -140.972 -4.494
+  m_aUnitPrefabSlots {
+   "{5E10F18AF4717622}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_SL_P.et"
+   "{46451B805F2CDE56}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_AT_P.et"
+   "{BF44997B8982C009}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_Rifleman_P.et"
+   "{BF44997B8982C009}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_Rifleman_P.et"
+   "{91602AC724D27762}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_SR_P.et"
+   "{6EF882860DCD77D1}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_MG_P.et"
+   "{BF44997B8982C009}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_Rifleman_P.et"
+   "{BF44997B8982C009}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_Rifleman_P.et"
+  }
+  m_bDeleteWhenEmpty 0
+ }
+ FIA_1_0_1 {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation ""
+   }
+   PS_GroupCallsignAssigner "{5F0CD1CD80B4F049}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 3326.446 117.549 4397.078
+  angles -0.041 -139.154 -4.497
+  m_aUnitPrefabSlots {
+   "{5E10F18AF4717622}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_SL_P.et"
+   "{46451B805F2CDE56}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_AT_P.et"
+   "{BF44997B8982C009}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_Rifleman_P.et"
+   "{BF44997B8982C009}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_Rifleman_P.et"
+   "{91602AC724D27762}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_SR_P.et"
+   "{6EF882860DCD77D1}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_MG_P.et"
+   "{BF44997B8982C009}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_Rifleman_P.et"
+   "{BF44997B8982C009}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_Rifleman_P.et"
+  }
+  m_bDeleteWhenEmpty 0
+ }
+ FIA_1_0_2 {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation ""
+   }
+   PS_GroupCallsignAssigner "{5F0CD1CD80B4F049}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 3315.875 118.648 4406.216
+  angles -0.041 -139.154 -4.497
+  m_aUnitPrefabSlots {
+   "{5E10F18AF4717622}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_SL_P.et"
+   "{46451B805F2CDE56}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_AT_P.et"
+   "{BF44997B8982C009}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_Rifleman_P.et"
+   "{BF44997B8982C009}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_Rifleman_P.et"
+   "{91602AC724D27762}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_SR_P.et"
+   "{6EF882860DCD77D1}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_MG_P.et"
+   "{BF44997B8982C009}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_Rifleman_P.et"
+   "{BF44997B8982C009}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_Rifleman_P.et"
+  }
+  m_bDeleteWhenEmpty 0
+ }
+ FIA_2_0_0 {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation ""
+   }
+   PS_GroupCallsignAssigner "{5F0CD1CD80B4F049}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 4317.253 138.223 6728.456
+  angles -0.154 -1.975 -4.464
+  m_aUnitPrefabSlots {
+   "{5E10F18AF4717622}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_SL_P.et"
+   "{46451B805F2CDE56}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_AT_P.et"
+   "{BF44997B8982C009}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_Rifleman_P.et"
+   "{BF44997B8982C009}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_Rifleman_P.et"
+   "{91602AC724D27762}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_SR_P.et"
+   "{6EF882860DCD77D1}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_MG_P.et"
+   "{BF44997B8982C009}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_Rifleman_P.et"
+   "{BF44997B8982C009}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_Rifleman_P.et"
+  }
+  m_bDeleteWhenEmpty 0
+ }
+ FIA_2_0_1 {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation ""
+   }
+   PS_GroupCallsignAssigner "{5F0CD1CD80B4F049}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 4303.437 137.137 6727.606
+  angles 0.735 -2.043 -4.496
+  m_aUnitPrefabSlots {
+   "{5E10F18AF4717622}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_SL_P.et"
+   "{46451B805F2CDE56}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_AT_P.et"
+   "{BF44997B8982C009}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_Rifleman_P.et"
+   "{BF44997B8982C009}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_Rifleman_P.et"
+   "{91602AC724D27762}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_SR_P.et"
+   "{6EF882860DCD77D1}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_MG_P.et"
+   "{BF44997B8982C009}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_Rifleman_P.et"
+   "{BF44997B8982C009}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_Rifleman_P.et"
+  }
+  m_bDeleteWhenEmpty 0
+ }
+ FIA_2_0_2 {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation ""
+   }
+   PS_GroupCallsignAssigner "{5F0CD1CD80B4F049}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 2
+   }
+  }
+  coords 4288.362 135.991 6726.69
+  angles -0.124 -1.99 -3.574
+  m_aUnitPrefabSlots {
+   "{5E10F18AF4717622}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_SL_P.et"
+   "{46451B805F2CDE56}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_AT_P.et"
+   "{BF44997B8982C009}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_Rifleman_P.et"
+   "{BF44997B8982C009}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_Rifleman_P.et"
+   "{91602AC724D27762}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_SR_P.et"
+   "{6EF882860DCD77D1}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_MG_P.et"
+   "{BF44997B8982C009}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_Rifleman_P.et"
+   "{BF44997B8982C009}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_Rifleman_P.et"
+  }
+  m_bDeleteWhenEmpty 0
+ }
+ FIA_3_0_0 {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation ""
+   }
+   PS_GroupCallsignAssigner "{5F0CD1CD80B4F049}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 4176.833 96.882 5420.215
+  angles 0.788 -28.288 -0.424
+  m_aUnitPrefabSlots {
+   "{5E10F18AF4717622}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_SL_P.et"
+   "{6EF882860DCD77D1}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_MG_P.et"
+   "{46451B805F2CDE56}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_AT_P.et"
+   "{BF44997B8982C009}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_Rifleman_P.et"
+   "{BF44997B8982C009}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_Rifleman_P.et"
+  }
+  m_bDeleteWhenEmpty 0
+ }
+ FIA_3_0_1 {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation ""
+   }
+   PS_GroupCallsignAssigner "{5F0CD1CD80B4F049}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 1
+   }
+  }
+  coords 4179.271 96.568 5415.985
+  angles 1.939 -28.33 -2.06
+  m_aUnitPrefabSlots {
+   "{5E10F18AF4717622}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_SL_P.et"
+   "{6EF882860DCD77D1}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_MG_P.et"
+   "{46451B805F2CDE56}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_AT_P.et"
+   "{BF44997B8982C009}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_Rifleman_P.et"
+   "{BF44997B8982C009}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_Rifleman_P.et"
+  }
+  m_bDeleteWhenEmpty 0
+ }
+ FIA_3_0_2 {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation ""
+   }
+   PS_GroupCallsignAssigner "{5F0CD1CD80B4F049}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 2
+   }
+  }
+  coords 4182.356 96.351 5410.324
+  angles 1.939 -28.33 -2.06
+  m_aUnitPrefabSlots {
+   "{5E10F18AF4717622}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_SL_P.et"
+   "{6EF882860DCD77D1}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_MG_P.et"
+   "{46451B805F2CDE56}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_AT_P.et"
+   "{BF44997B8982C009}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_Rifleman_P.et"
+   "{BF44997B8982C009}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_Rifleman_P.et"
+  }
+  m_bDeleteWhenEmpty 0
+ }
+ FIA_3_0_3 {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation ""
+   }
+   PS_GroupCallsignAssigner "{5F0CD1CD80B4F049}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 3
+   }
+  }
+  coords 4185.119 96.631 5404.16
+  angles 0.788 -28.288 -0.424
+  m_aUnitPrefabSlots {
+   "{5E10F18AF4717622}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_SL_P.et"
+   "{6EF882860DCD77D1}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_MG_P.et"
+   "{46451B805F2CDE56}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_AT_P.et"
+   "{BF44997B8982C009}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_Rifleman_P.et"
+   "{BF44997B8982C009}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_Rifleman_P.et"
+  }
+  m_bDeleteWhenEmpty 0
+ }
+}

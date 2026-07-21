@@ -1,0 +1,35 @@
+SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
+ coords 11513.379 284.792 10928.023
+}
+PerceptionManager PerceptionManager2 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 11514.904 284.275 10930.402
+}
+PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
+ components {
+  SCR_TimeAndWeatherHandlerComponent "{5EE3229927D4D2F5}" {
+   m_bUsePredefineStartingTimeAndWeather 1
+   m_aStartingWeatherAndTime {
+    SCR_TimeAndWeatherState "{69DAF0C2BCE0F98A}" {
+     m_sWeatherPresetName "cloudy"
+     m_iStartingHour 21
+     m_iStartingMinutes 30
+    }
+   }
+  }
+ }
+ coords 11515.035 284.415 10933.135
+}
+SCR_EditorRestrictionZoneEntity : "{6144B0BE2EAC6897}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneMedium.et" {
+ coords 5546.613 123.399 6807.426
+}
+$grp SCR_EditorRestrictionZoneEntity : "{EF72FA7CD87618D5}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneSmall.et" {
+ {
+  coords 5522.86 124.882 6920.3
+ }
+ {
+  coords 5610.335 123.063 6786.504
+ }
+ {
+  coords 5535.605 123.375 6742.313
+ }
+}

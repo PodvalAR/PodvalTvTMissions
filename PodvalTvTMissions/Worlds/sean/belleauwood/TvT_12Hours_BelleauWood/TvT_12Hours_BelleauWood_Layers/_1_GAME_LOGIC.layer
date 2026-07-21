@@ -1,0 +1,75 @@
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{69E87B32B8F82B92}" {
+     m_sZonePreviewName "Аэропорт"
+     m_sSuccessObjectiveNames {
+      "USAF_WIN"
+     }
+     m_sFailedObjectiveNames {
+      "AFRF_WIN"
+     }
+     m_sMessage "Аэропорт захвачен"
+     m_Timer GUB_ZoneControlTimer "{69E87B32A16B521C}" {
+      timeToComplete 300
+     }
+     m_ZoneController GUB_ZoneController "{69E87B329D1B03B4}" {
+      m_sZoneEntityName "trigger1"
+     }
+     m_FlagController GUB_FlagController "{69E87B329011D144}" {
+      m_aFlagNames {
+       "flag1"
+       "flag2"
+       "flag3"
+      }
+      m_fStartFactionKey "RHS_AFRF"
+      m_fEndFactionKey "RHS_USAF"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{69E87B329931C709}" {
+       m_sFirstFactionKey "RHS_USAF"
+       m_sSecondFactionKey "RHS_AFRF"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+}
+GenericEntity : "{6A3CDCFB475BF1B2}Prefabs/System/DRG_CriticalLossPrefab.et" {
+}
+GenericEntity : "{7A333AFB11EA847A}Prefabs/System/DRG_VehicleDestroyPrefab.et" {
+ components {
+  DRG_VehicleDestroyComponent "{65733BD6110AE8FC}" {
+   m_aVehicleLossLogics {
+    VehicleLossLogic "{69E898ADE5E5C999}" {
+     m_iAdvanceAfterSec 2
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "USAF_WIN2"
+     }
+     m_sFailedObjectiveNames {
+      "AFRF_WIN2"
+     }
+     m_sVehicleEntityNames {
+      "benzovoz1"
+      "benzovoz2"
+      "benzovoz3"
+     }
+     m_sMessage "Бензовозы уничтожены"
+    }
+   }
+  }
+ }
+ coords 2838.966 84.673 7335.922
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+}

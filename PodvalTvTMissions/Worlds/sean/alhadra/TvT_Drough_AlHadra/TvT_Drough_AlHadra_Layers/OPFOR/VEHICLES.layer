@@ -1,0 +1,67 @@
+$grp Vehicle : "{34C6F46F067729EB}Prefabs/Vehicles/Wheeled/TIGR/KORD/GAZ_TIGR_v2_KORD.et" {
+ GAZ_TIGR_v2_KORD3 {
+  coords 7718.495 15.494 4826.08
+  angles 0.89 -84.074 0.092
+  m_sAttachmentGroupName "squad3"
+ }
+ GAZ_TIGR_v2_KORD2 {
+  coords 7697.586 15.594 4827.818
+  angles 0 -84.075 0
+  m_sAttachmentGroupName "squad2"
+ }
+ GAZ_TIGR_v2_KORD1 {
+  coords 7676.802 15.688 4829.992
+  angles 0 -84.075 0
+  m_sAttachmentGroupName "squad1"
+ }
+}
+Vehicle BTR72a_camo1 : "{C95038CAE8C8DB1B}Prefabs/Vehicles/Wheeled/BTR70/BTR72a_camo.et" {
+ coords 7743.865 15.346 4824.039
+ angles 0.893 -85.854 0.065
+ m_sAttachmentGroupName "squad5mechanized"
+}
+Vehicle Ural4320_transport_covered1 : "{D9B91FAB817A6033}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_covered.et" {
+ components {
+  SCR_UniversalInventoryStorageComponent "{5916C58171230A92}" {
+   MultiSlots {
+    MultiSlotConfiguration "{69DE65E6B0413A71}" {
+     SlotTemplate InventoryStorageSlot mortar {
+      Prefab "{B41607EAB58A4252}Prefabs/Items/Equipment/BallisticTable/BallisticTable_USSR.et"
+     }
+     NumSlots 150
+    }
+    MultiSlotConfiguration "{69DE65E551F617FA}" {
+     SlotTemplate InventoryStorageSlot sandbags {
+      Prefab "{07BC23F8D9223863}Prefabs/Items/Misc/Sandbags/Part_Sandbag_Burlap.et"
+     }
+     NumSlots 150
+    }
+   }
+  }
+ }
+ coords 7664.954 15.75 4831.237
+ angles 0 -84.033 0
+ m_sAttachmentGroupName "plafrf"
+}
+$grp Vehicle : "{ED23D3FD79C7DECF}Prefabs/Vehicles/Wheeled/TIGR/GAZ_TIGR_v2_Base.et" {
+ GAZ_TIGR_v2_Base1 {
+  coords 7684.854 15.656 4829.268
+  angles 0 -82.467 0
+  m_sAttachmentGroupName "squad1"
+ }
+ GAZ_TIGR_v2_Base2 {
+  coords 7705.644 15.563 4827.095
+  angles 0 -82.467 0
+  m_sAttachmentGroupName "squad2"
+ }
+ GAZ_TIGR_v2_Base3 {
+  coords 7726.546 15.438 4825.355
+  angles 0 -82.467 0
+  m_sAttachmentGroupName "squad3"
+ }
+}
+Vehicle Ural4320_transport_covered_CIV_JZD3 : "{FB219B49A448A8EA}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_covered_CIV_JZD.et" {
+ coords 1530.23 19.219 7426.376
+ angles 0 -178.51 0
+ m_sAttachmentGroupName "tkrsquad5"
+}

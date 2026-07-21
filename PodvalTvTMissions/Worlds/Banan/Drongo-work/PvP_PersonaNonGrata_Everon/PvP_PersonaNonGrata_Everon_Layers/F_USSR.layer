@@ -1,0 +1,239 @@
+Vehicle Ural4320_transport1 : "{16C1F16C9B053801}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport.et" {
+ coords 4903.044 28.594 11898.303
+ angles 0 -86.981 0
+}
+Vehicle Ural4320_ammo1 : "{3336BE330C4F355B}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_ammo.et" {
+ coords 4902.971 28.594 11913.211
+ angles 0 -88.978 0
+}
+Vehicle Mi8MT_armed_gunship_HE1 : "{3C6B3ED0C3AC30D5}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_armed_gunship_HE.et" {
+ coords 4848.385 28.367 11929.301
+ angles 0.882 -179.587 1.796
+ m_sAttachmentGroupName "USSR_4_0_0"
+}
+Vehicle Ural4320_tanker1 : "{4C81D7ED8F8C0D87}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_tanker.et" {
+ coords 4903.189 28.594 11903.231
+ angles 0 -86.981 0
+}
+$grp SCR_AIGroup : "{6C5B3A696E89B65E}Prefabs/Groups/OPFOR/USSR/RandomSpawn/Attack/Group_USSR_Heli_Attack.et" {
+ USSR_4_0_0 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 4
+   }
+  }
+  coords 4862.526 28.594 11926.481
+  angles 0 -89.731 0
+ }
+ USSR_3_0_0 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 4862.396 28.594 11870.674
+  angles 0 -89.731 0
+ }
+ USSR_3_0_1 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 1
+   }
+  }
+  coords 4862.372 28.594 11835.29
+  angles 0 -89.731 0
+ }
+ USSR_3_0_2 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 2
+   }
+  }
+  coords 4862.355 28.594 11800.481
+  angles 0 -89.731 0
+ }
+ USSR_3_0_3 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 3
+   }
+  }
+  coords 4862.251 28.594 11763.708
+  angles 0 -89.731 0
+ }
+}
+$grp Vehicle : "{7BD282AF716ED639}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_armed.et" {
+ Mi8MT_armed1 {
+  coords 4848.487 28.57 11870.609
+  angles -0.009 -179.391 0.895
+  m_sAttachmentGroupName "USSR_3_0_0"
+ }
+ Mi8MT_armed2 {
+  coords 4848.12 28.594 11836.046
+  angles 0 -179.391 0
+  m_sAttachmentGroupName "USSR_3_0_1"
+ }
+ Mi8MT_armed3 {
+  coords 4847.738 28.594 11800.281
+  angles 0 -179.391 0
+  m_sAttachmentGroupName "USSR_3_0_2"
+ }
+ Mi8MT_armed4 {
+  coords 4847.339 28.593 11762.819
+  angles 0 -179.391 0
+  m_sAttachmentGroupName "USSR_3_0_3"
+ }
+}
+$grp SCR_AIGroup : "{88E22D61081222B3}Prefabs/Groups/OPFOR/USSR/RandomSpawn/Attack/Group_USSR_Recon_Squad_Attack.et" {
+ USSR_1_0_0 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 4906.61 28.594 11788.938
+  angles 0 -89.842 0
+  m_aUnitPrefabSlots +{
+   "{38C945FFB7C0FDED}Prefabs/Characters/Factions/OPFOR/USSR_Army/Spetsnaz/Character_USSR_SF_Medic_P.et"
+  }
+ }
+ USSR_1_0_1 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 4906.785 28.594 11800.384
+  angles 0 -89.842 0
+  m_aUnitPrefabSlots +{
+   "{A317336F18478B2A}Prefabs/Characters/Factions/OPFOR/USSR_Army/Spetsnaz/Character_USSR_SF_GL_P.et"
+   "{38C945FFB7C0FDED}Prefabs/Characters/Factions/OPFOR/USSR_Army/Spetsnaz/Character_USSR_SF_Medic_P.et"
+  }
+ }
+ USSR_1_0_2 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 4906.744 28.594 11811.15
+  angles 0 -89.842 0
+  m_aUnitPrefabSlots +{
+   "{38C945FFB7C0FDED}Prefabs/Characters/Factions/OPFOR/USSR_Army/Spetsnaz/Character_USSR_SF_Medic_P.et"
+  }
+ }
+ USSR_1_0_3 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 3
+   }
+  }
+  coords 4906.802 28.594 11822.143
+  angles 0 -89.842 0
+  m_aUnitPrefabSlots +{
+   "{A317336F18478B2A}Prefabs/Characters/Factions/OPFOR/USSR_Army/Spetsnaz/Character_USSR_SF_GL_P.et"
+   "{38C945FFB7C0FDED}Prefabs/Characters/Factions/OPFOR/USSR_Army/Spetsnaz/Character_USSR_SF_Medic_P.et"
+  }
+ }
+ USSR_2_0_0 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 4906.735 28.594 11846.584
+  angles 0 -89.842 0
+  m_aUnitPrefabSlots +{
+   "{A317336F18478B2A}Prefabs/Characters/Factions/OPFOR/USSR_Army/Spetsnaz/Character_USSR_SF_GL_P.et"
+   "{38C945FFB7C0FDED}Prefabs/Characters/Factions/OPFOR/USSR_Army/Spetsnaz/Character_USSR_SF_Medic_P.et"
+  }
+ }
+ USSR_2_0_1 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 4906.833 28.594 11856.938
+  angles 0 -89.842 0
+  m_aUnitPrefabSlots +{
+   "{38C945FFB7C0FDED}Prefabs/Characters/Factions/OPFOR/USSR_Army/Spetsnaz/Character_USSR_SF_Medic_P.et"
+  }
+ }
+ USSR_2_0_2 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 2
+   }
+  }
+  coords 4906.951 28.594 11867.981
+  angles 0 -89.842 0
+  m_aUnitPrefabSlots +{
+   "{A317336F18478B2A}Prefabs/Characters/Factions/OPFOR/USSR_Army/Spetsnaz/Character_USSR_SF_GL_P.et"
+   "{38C945FFB7C0FDED}Prefabs/Characters/Factions/OPFOR/USSR_Army/Spetsnaz/Character_USSR_SF_Medic_P.et"
+  }
+ }
+ USSR_2_0_3 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 3
+   }
+  }
+  coords 4906.856 28.594 11877.793
+  angles 0 -89.842 0
+  m_aUnitPrefabSlots +{
+   "{38C945FFB7C0FDED}Prefabs/Characters/Factions/OPFOR/USSR_Army/Spetsnaz/Character_USSR_SF_Medic_P.et"
+  }
+ }
+}
+Vehicle Ural4320_repair1 : "{A5647958579A4149}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_repair.et" {
+ coords 4902.973 28.593 11908.111
+ angles 0 -88.013 0
+}
+SCR_AIGroup USSR_0_0_0 : "{CADFA3F3B9F28F09}Prefabs/Groups/OPFOR/USSR/RandomSpawn/Attack/Group_USSR_PL_1_Attack.et" {
+ coords 4906.919 28.594 11780.996
+ angles 0 -88.346 0
+ m_aUnitPrefabSlots +{
+  "{C425B14F87DAE72F}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_Rifleman_RANDOM.et"
+ }
+}
+PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+ coords 4903.102 28.594 11903.264
+ angles 0 3.019 0
+ m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
+ m_sImageSetGlow ""
+ m_MarkerColor 0.855 0.031 0.028 1
+ m_sQuadName "Truck"
+ m_fWorldSize 3.722
+ m_sDescription "#AR-Vehicle_Ural4320_Fuel_Name"
+ m_bUseWorldScale 1
+ m_aVisibleForFactions {
+  "RHS_AFRF"
+  "RHS_USAF"
+  "Ses_CDF"
+  "Ses_ChDKZ"
+  "Ses_TKR"
+  "Ses_TKA"
+  "Drg_IGF"
+  "Drg_PIR"
+  "UK"
+  "USSR"
+  "USA"
+  "FIA"
+  "Drg_VCA"
+ }
+ m_bVisibleForEmptyFaction 1
+ m_aHideOnGameModeStates {
+  GAME
+ }
+ m_iZOrder 0
+}

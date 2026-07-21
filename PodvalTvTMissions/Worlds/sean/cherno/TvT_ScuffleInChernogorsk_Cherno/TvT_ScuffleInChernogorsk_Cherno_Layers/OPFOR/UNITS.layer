@@ -1,0 +1,131 @@
+$grp SCR_AIGroup : "{3A14655AA0638454}Prefabs/Groups/OPFOR/RHS_AFRF/Modern/EMR/Group_RHS_AFRF_Modern_EMR_Squad.et" {
+ afrfsquad3 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 2
+   }
+  }
+  coords 2755.21 199.878 5261.319
+  angles -0.001 -77.564 0.001
+ }
+ afrfsquad2 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 2750.522 198.805 5240.313
+  angles -0.001 -79.775 -0.035
+ }
+ afrfsquad1 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 2741.369 196.276 5213.204
+  angles -2.591 -65.546 -5.094
+ }
+ afrfsquad4 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 3
+   }
+  }
+  coords 2758.318 200.449 5283.884
+  angles -2.326 -79.839 -2.233
+ }
+}
+$grp SCR_AIGroup : "{643D556449A91F31}Prefabs/Groups/OPFOR/RHS_AFRF/Modern/EMR/Group_RHS_AFRF_Modern_EMR_Motorized.et" {
+ afrfsquad1mechanized {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 2535.664 187.562 5039.653
+  angles 0 55.757 0
+  m_aUnitPrefabSlots {
+   "{A8B380C9782A8F5C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Modern/EMR/Char_RHS_RF_Modern_EMR_SL_Optic.et"
+   "{597ED172A0733285}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Modern/EMR/Char_RHS_RF_Modern_EMR_SR.et"
+   "{9146A5548EEDB253}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Modern/EMR/Char_RHS_RF_Modern_EMR_AT.et"
+   "{FF3B67A0442CCF0F}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Modern/EMR/Char_RHS_RF_Modern_EMR_AAT.et"
+   "{A21DAD0A87B90D8C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Modern/EMR/Char_RHS_RF_Modern_EMR_MG.et"
+   "{82AFD5605E760310}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Modern/EMR/Char_RHS_RF_Modern_EMR_MGAB.et"
+   "{443BB2B400D3C525}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Modern/EMR/Char_RHS_RF_Modern_EMR_GL.et"
+   "{52790943BFEBE2E3}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Modern/EMR/Char_RHS_RF_Modern_EMR_Medic.et"
+   "{8FC57B6A84200E20}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Modern/EMR/Char_RHS_RF_Modern_EMR_CrewCommader.et"
+   "{F7FE665001AC32D4}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Modern/EMR/Char_RHS_RF_Modern_EMR_Crew.et"
+  }
+ }
+ afrfsquad2mechanized {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 2526.156 187.47 5055.905
+  angles -0.481 57.491 -0.755
+  m_aUnitPrefabSlots {
+   "{A8B380C9782A8F5C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Modern/EMR/Char_RHS_RF_Modern_EMR_SL_Optic.et"
+   "{597ED172A0733285}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Modern/EMR/Char_RHS_RF_Modern_EMR_SR.et"
+   "{9146A5548EEDB253}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Modern/EMR/Char_RHS_RF_Modern_EMR_AT.et"
+   "{FF3B67A0442CCF0F}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Modern/EMR/Char_RHS_RF_Modern_EMR_AAT.et"
+   "{A21DAD0A87B90D8C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Modern/EMR/Char_RHS_RF_Modern_EMR_MG.et"
+   "{82AFD5605E760310}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Modern/EMR/Char_RHS_RF_Modern_EMR_MGAB.et"
+   "{443BB2B400D3C525}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Modern/EMR/Char_RHS_RF_Modern_EMR_GL.et"
+   "{52790943BFEBE2E3}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Modern/EMR/Char_RHS_RF_Modern_EMR_Medic.et"
+   "{8FC57B6A84200E20}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Modern/EMR/Char_RHS_RF_Modern_EMR_CrewCommader.et"
+   "{F7FE665001AC32D4}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Modern/EMR/Char_RHS_RF_Modern_EMR_Crew.et"
+  }
+ }
+}
+SCR_AIGroup afrfpl : "{6796DBDCA019EF3B}Prefabs/Groups/OPFOR/RHS_AFRF/Modern/EMR/Group_RHS_AFRF_Modern_EMR_PL.et" {
+ coords 2754.714 201.179 5318.379
+ angles 0.54 100.9 1.927
+ m_aUnitPrefabSlots {
+  "{8297A76A8EC4E973}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Modern/EMR/Char_RHS_RF_Modern_EMR_PL_Optic.et"
+  "{52790943BFEBE2E3}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Modern/EMR/Char_RHS_RF_Modern_EMR_Medic.et"
+  "{2F1C96F48096BD2C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Modern/EMR/Char_RHS_RF_Modern_EMR_Rifle_Optic.et"
+  "{E59F13C9E9FDD769}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Modern/EMR/Char_RHS_RF_Modern_EMR_Sharpshooter.et"
+ }
+}
+SCR_AIGroup pilots : "{EE5650ADC19402A1}Prefabs/Groups/OPFOR/RHS_AFRF/Modern/EMR/Group_RHS_AFRF_Modern_EMR_Heli.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+   m_iCompanyCallsign 4
+  }
+ }
+ coords 4951.125 327.406 9957.746
+ angles 0 151.041 0
+}
+$grp SCR_AIGroup : "{EE7194A6598EAC83}Prefabs/Groups/OPFOR/RHS_AFRF/Modern/EMR/Group_RHS_AFRF_Modern_EMR_Recon.et" {
+ reconafrf2 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 4950.2 327.406 9962.771
+  angles 0 148.231 0
+  m_aUnitPrefabSlots +{
+   "{B4E5B4C26398175E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Modern/EMR/Recon/Char_RHS_RF_Modern_EMR_Recon_AT.et"
+  }
+ }
+ reconafrf1 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 4948.592 327.406 9965.768
+  angles 0 151.481 0
+  m_aUnitPrefabSlots +{
+   "{B4E5B4C26398175E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Modern/EMR/Recon/Char_RHS_RF_Modern_EMR_Recon_AT.et"
+  }
+ }
+}
