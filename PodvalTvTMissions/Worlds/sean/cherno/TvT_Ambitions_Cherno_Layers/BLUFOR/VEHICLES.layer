@@ -1,0 +1,105 @@
+Vehicle M923A1_engineer_tow_nm1 : "{08E3E68460F7564F}Prefabs/Vehicles/Wheeled/M923A1/M923A1_engineer_tow_nm.et" {
+ components {
+  SCR_UniversalInventoryStorageComponent "{5916C580F1DA28BB}" {
+   MultiSlots {
+    MultiSlotConfiguration "{69D2D5D288DD28B3}" {
+     SlotTemplate InventoryStorageSlot ptrk {
+      Prefab "{DE25A434026D99AC}Prefabs/Weapons/Tripods/BGM71TOW/Part_BGM-71D_Launcher.et"
+     }
+     NumSlots 1
+    }
+    MultiSlotConfiguration "{69D2D5D2881164B7}" {
+     SlotTemplate InventoryStorageSlot asd {
+      Prefab "{DE25A434026D99AC}Prefabs/Weapons/Tripods/BGM71TOW/Part_BGM-71D_Launcher.et"
+     }
+    }
+    MultiSlotConfiguration "{69D2D5D28856F080}" {
+     SlotTemplate InventoryStorageSlot asdds {
+      Prefab "{DE25A434026D99AC}Prefabs/Weapons/Tripods/BGM71TOW/Part_BGM-71D_Launcher.et"
+     }
+     NumSlots 1
+    }
+    MultiSlotConfiguration "{69D2D5D053A995F9}" {
+     SlotTemplate InventoryStorageSlot reb {
+     }
+    }
+   }
+  }
+ }
+ coords 12722.544 5.75 9694.167
+ angles 0 -82.128 0
+ m_sAttachmentGroupName "squad2"
+}
+Vehicle LAV25_RHS1 : "{3312ADBF53A16DD9}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS.et" {
+ components {
+  SCR_UniversalInventoryStorageComponent "{60488A9A95F85114}" {
+   MultiSlots {
+    MultiSlotConfiguration "{69D2D5D03CC9BADF}" {
+     SlotTemplate InventoryStorageSlot reb {
+     }
+     NumSlots 1
+    }
+   }
+  }
+ }
+ coords 12758.597 5.75 9689.199
+ angles 0 -170.27 0
+ m_sAttachmentGroupName "squad6"
+}
+Vehicle M1151_armed_CROWS_M1 : "{7D9668EDADFCD7E1}Prefabs/Vehicles/Wheeled/M998/M1151_armed_CROWS_M2.et" {
+ coords 12769.969 5.751 9696.98
+ angles 0 -168.042 0
+ m_sAttachmentGroupName "squad1"
+}
+$grp Vehicle : "{81FDAD5EB644CC3D}Prefabs/Vehicles/Wheeled/M923A1/M923A1_transport_covered.et" {
+ truck2 {
+  coords 12808.905 5.749 9620.389
+  angles 0 -80.762 0
+ }
+ truck1 {
+  coords 12807.659 5.749 9612.727
+  angles 0 -80.762 0
+ }
+ truck3 {
+  coords 12810.358 5.749 9629.326
+  angles 0 -80.762 0
+ }
+ truck4 {
+  coords 12812.882 5.749 9644.843
+  angles 0 -80.762 0
+ }
+}
+$grp Vehicle : "{D574C943C9F8C9DF}Prefabs/Vehicles/Wheeled/M998/M1151_armed_M2HB_AP.et" {
+ M1151_armed_M2HB_AP2 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{5916C587FC993363}" {
+    MultiSlots {
+     MultiSlotConfiguration "{69D2D5D03411FDF5}" {
+      SlotTemplate InventoryStorageSlot reb {
+      }
+      NumSlots 1
+     }
+    }
+   }
+  }
+  coords 12750.414 5.75 9656.616
+  angles 0 8.153 0
+  m_sAttachmentGroupName "sso1"
+ }
+ M1151_armed_M2HB_AP1 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{5916C587FC993363}" {
+    MultiSlots {
+     MultiSlotConfiguration "{69D2D5D02DDE5EA2}" {
+      SlotTemplate InventoryStorageSlot reb {
+      }
+      NumSlots 1
+     }
+    }
+   }
+  }
+  coords 12762.501 5.75 9653.821
+  angles 0 8.153 0
+  m_sAttachmentGroupName "sso2"
+ }
+}

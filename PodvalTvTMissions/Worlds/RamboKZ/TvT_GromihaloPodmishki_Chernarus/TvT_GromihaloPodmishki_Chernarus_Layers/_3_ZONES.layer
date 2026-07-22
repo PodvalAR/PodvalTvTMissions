@@ -1,0 +1,283 @@
+PolylineShapeEntity GAME_ZONE : "{7019844BAD5C4DD8}Prefabs/PolyZone/PolyZone_Border.et" {
+ components {
+  PS_PolyZone "{60E90266F25533F6}" {
+   m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
+   m_cPolygonColor 0.125 0.11 0.11 0.675
+   m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+   m_cPolygonBorderColor 0.125 0.11 0.11 1
+   m_fPolygonBorderWidth 10
+   m_aVisibleForFactions {
+    ""
+    "RHS_AFRF"
+    "Ses_CDF"
+   }
+  }
+ }
+ coords 136.215 205.331 6690.096
+ Points {
+  ShapePoint "{60E90266E922A02A}" {
+   Position 59.575 18.169 47.491
+  }
+  ShapePoint "{66F496734D67FCA5}" {
+   Position -31.591 86.628 695.849
+  }
+  ShapePoint "{66F4967397029658}" {
+   Position 5.193 112.065 1246.135
+  }
+  ShapePoint "{66F4967391B2D32A}" {
+   Position 115.948 97.844 1819.531
+  }
+  ShapePoint "{66F49673A232732F}" {
+   Position 239.069 70.573 2380.173
+  }
+  ShapePoint "{673B332DBAD09593}" {
+   Position 826.596 22.566 2599.262
+  }
+  ShapePoint "{66F496705F4CEF86}" {
+   Position 1466.291 74.757 2275.885
+  }
+  ShapePoint "{673B332DD6688B10}" {
+   Position 1776.365 109.382 1810.834
+  }
+  ShapePoint "{69AAB5A0942CDC17}" {
+   Position 1806.831 108.093 1534.067
+  }
+  ShapePoint "{69A8E3B155E17008}" {
+   Position 1898.096 34.612 571.811
+  }
+  ShapePoint "{673B332DD76BD6DB}" {
+   Position 1836.339 33.137 303.794
+  }
+  ShapePoint "{673B332DD57B44C5}" {
+   Position 1516.312 55.076 -782.869
+  }
+  ShapePoint "{673B332DFF6B85E5}" {
+   Position 1358.037 -33.935 -1129.965
+  }
+  ShapePoint "{673B332DFA013F0A}" {
+   Position 846.207 -90.075 -1191.08
+  }
+  ShapePoint "{673B332CAEDE4BE0}" {
+   Position 462.925 -91.781 -1070.089
+  }
+  ShapePoint "{673B332D81B89875}" {
+   Position 327.101 -38.023 -878.506
+  }
+  ShapePoint "{66F496704312ADEE}" {
+   Position 253.628 -7.685 -651.834
+  }
+ }
+}
+$grp PolylineShapeEntity : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
+ TRIG_BASE_2 {
+  components {
+   PS_PolyZone "{60E90266F25533F6}" {
+    m_mPolygonTexture ""
+    m_cPolygonColor 1 0.745 0 0.157
+    m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+    m_cPolygonBorderColor 1 0.749 0 1
+    m_fPolygonBorderWidth 5
+    m_aVisibleForFactions {
+     "Ses_CDF"
+     ""
+    }
+   }
+  }
+  coords 1185.904 189.156 7269.165
+  Points {
+   ShapePoint "{60E90266E922A02A}" {
+    Position -0.108 0 -0.701
+   }
+   ShapePoint "{69A8B999A4DA465D}" {
+    Position -9.587 0 1.206
+   }
+   ShapePoint "{69A8B999A57A8529}" {
+    Position -20.676 0 4.42
+   }
+   ShapePoint "{69A8B999A3E7FE5D}" {
+    Position -36.679 0 7.043
+   }
+   ShapePoint "{69A8B999A3603CB0}" {
+    Position -45.631 0 5.587
+   }
+   ShapePoint "{69A8B999A056A489}" {
+    Position -58.174 0 -1.155
+   }
+   ShapePoint "{69A8B999BEEBDAA8}" {
+    Position -62.524 0 -9.481
+   }
+   ShapePoint "{69A8B999BFF67130}" {
+    Position -63.176 0 -18.316
+   }
+   ShapePoint "{69A8B999BF7626CB}" {
+    Position -63.005 0 -22.098
+   }
+   ShapePoint "{69A8B999BCB91F7F}" {
+    Position -60.838 0 -29.705
+   }
+   ShapePoint "{69A8B999BD7522FA}" {
+    Position -55.652 0 -36.208
+   }
+   ShapePoint "{69A8B999BAAFA503}" {
+    Position -53.899 0 -45.478
+   }
+   ShapePoint "{69A8B999BA194746}" {
+    Position -43.877 0.343 -49.504
+   }
+   ShapePoint "{69A8B999B9E31C96}" {
+    Position -0.048 -0.029 -48.9
+   }
+  }
+ }
+ TRIG_ATTACK_2 {
+  components {
+   PS_PolyZone "{60E90266F25533F6}" {
+    Enabled 1
+    m_mPolygonTexture ""
+    m_cPolygonColor 0.456 0 0 0.157
+    m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+    m_cPolygonBorderColor 0.456 0 0 1
+    m_fPolygonBorderWidth 5
+    m_aVisibleForFactions {
+     "RHS_AFRF"
+    }
+   }
+  }
+  coords 1185.904 189.156 7269.165
+  Points {
+   ShapePoint "{60E90266E922A02A}" {
+    Position -0.108 0 -0.701
+   }
+   ShapePoint "{69A8B999A4DA465D}" {
+    Position -9.587 0 1.206
+   }
+   ShapePoint "{69A8B999A57A8529}" {
+    Position -20.676 0 4.42
+   }
+   ShapePoint "{69A8B999A3E7FE5D}" {
+    Position -36.679 0 7.043
+   }
+   ShapePoint "{69A8B999A3603CB0}" {
+    Position -45.631 0 5.587
+   }
+   ShapePoint "{69A8B999A056A489}" {
+    Position -58.174 0 -1.155
+   }
+   ShapePoint "{69A8B999BEEBDAA8}" {
+    Position -62.524 0 -9.481
+   }
+   ShapePoint "{69A8B999BFF67130}" {
+    Position -63.176 0 -18.316
+   }
+   ShapePoint "{69A8B999BF7626CB}" {
+    Position -63.005 0 -22.098
+   }
+   ShapePoint "{69A8B999BCB91F7F}" {
+    Position -60.838 0 -29.705
+   }
+   ShapePoint "{69A8B999BD7522FA}" {
+    Position -55.652 0 -36.208
+   }
+   ShapePoint "{69A8B999BAAFA503}" {
+    Position -53.899 0 -45.478
+   }
+   ShapePoint "{69A8B999BA194746}" {
+    Position -43.877 0.343 -49.504
+   }
+   ShapePoint "{69A8B999B9E31C96}" {
+    Position -0.048 -0.029 -48.9
+   }
+  }
+ }
+ TRIG_BASE_1 {
+  components {
+   PS_PolyZone "{60E90266F25533F6}" {
+    Enabled 1
+    m_mPolygonTexture ""
+    m_cPolygonColor 1 0.745 0 0.157
+    m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+    m_cPolygonBorderColor 1 0.749 0 1
+    m_fPolygonBorderWidth 5
+    m_aVisibleForFactions {
+     "Ses_CDF"
+     ""
+    }
+   }
+  }
+  coords 921.742 195.427 7616.511
+  Points {
+   ShapePoint "{69AA9BD295C65BFE}" {
+    Position 15.015 -0.052 -0.228
+   }
+   ShapePoint "{69AA9BD2957C19C3}" {
+    Position 15.08 -0.052 0.625
+   }
+   ShapePoint "{69AA9BD2923AE60A}" {
+    Position 20.097 -0.052 0.561
+   }
+   ShapePoint "{69AA9BD293073068}" {
+    Position 20.176 -0.052 4.176
+   }
+   ShapePoint "{69AA9BD291B8BF3E}" {
+    Position 24.372 -0.052 4.117
+   }
+   ShapePoint "{69AA9BD2AFBBB798}" {
+    Position 24.786 -0.052 27.275
+   }
+   ShapePoint "{69AA9BD2AC715FFD}" {
+    Position 15.53 -0.052 27.479
+   }
+   ShapePoint "{69AA9BD2AD4EAB1F}" {
+    Position 15.668 -0.052 36.644
+   }
+   ShapePoint "{69AA9BD2AB7B86D2}" {
+    Position 0.821 -0.052 36.95
+   }
+  }
+ }
+ TRIG_ATTACK_1 {
+  components {
+   PS_PolyZone "{60E90266F25533F6}" {
+    Enabled 1
+    m_mPolygonTexture ""
+    m_cPolygonColor 0.456 0 0 0.157
+    m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+    m_cPolygonBorderColor 0.456 0 0 1
+    m_fPolygonBorderWidth 5
+    m_aVisibleForFactions {
+     "RHS_AFRF"
+    }
+   }
+  }
+  coords 921.742 195.427 7616.511
+  Points {
+   ShapePoint "{69AA9BD295C65BFE}" {
+    Position 15.015 -0.052 -0.228
+   }
+   ShapePoint "{69AA9BD2957C19C3}" {
+    Position 15.08 -0.052 0.625
+   }
+   ShapePoint "{69AA9BD2923AE60A}" {
+    Position 20.097 -0.052 0.561
+   }
+   ShapePoint "{69AA9BD293073068}" {
+    Position 20.176 -0.052 4.176
+   }
+   ShapePoint "{69AA9BD291B8BF3E}" {
+    Position 24.372 -0.052 4.117
+   }
+   ShapePoint "{69AA9BD2AFBBB798}" {
+    Position 24.786 -0.052 27.275
+   }
+   ShapePoint "{69AA9BD2AC715FFD}" {
+    Position 15.53 -0.052 27.479
+   }
+   ShapePoint "{69AA9BD2AD4EAB1F}" {
+    Position 15.668 -0.052 36.644
+   }
+   ShapePoint "{69AA9BD2AB7B86D2}" {
+    Position 0.821 -0.052 36.95
+   }
+  }
+ }
+}

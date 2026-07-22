@@ -1,3 +1,114 @@
-SCR_AIGroup : "{DEFE2AA6ED9A15CC}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Mortar.et" {
- coords 3108.339 121.312 1757.414
+SCR_AIGroup RHS_USAF_000 : "{0E75661F5BF771D5}Prefabs/Groups/BLUFOR/RHS_USAF/USMC/Desert/Group_RHS_USMC_D_Regular_PL_1.et" {
+ coords 5126.887 207.219 1732.353
+ angles 0 91.344 0
+}
+SCR_AIGroup RHS_USAF_500 : "{1F713A197E1A3E28}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/MTVT/Group_RHS_USAF_Regular_Heli.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+   m_iCompanyCallsign 5
+  }
+ }
+ coords 5209.24 207.702 1757.518
+ angles 0 -74.811 0
+}
+$grp SCR_AIGroup : "{3298D6DA95D73EAD}Prefabs/Groups/BLUFOR/RHS_USAF/USMC/Desert/dim_USMC_D_Rifle_Squad.et" {
+ RHS_USAF_100 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 5125.526 209.482 1749.639
+  angles 0 89.442 0
+ }
+ RHS_USAF_101 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 5124.817 207.219 1769.618
+  angles 0 91.828 0
+ }
+ RHS_USAF_102 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 5129.164 207.219 1790.702
+  angles 0 106.37 0
+ }
+ RHS_USAF_200 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 5155.441 207.206 1816.468
+  angles 0 152.462 0
+ }
+ RHS_USAF_103 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 3
+   }
+  }
+  coords 5140.205 207.219 1807.754
+  angles 0 132.566 0
+  m_aUnitPrefabSlots {
+   "{94D32EE566A604D4}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_SL.et"
+   "{77DDB3A4441099F7}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_TL_1.et"
+   "{AB4C01E03A6DB224}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_MG.et"
+   "{F48EA1DBA395CFED}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_GL.et"
+   "{67BE56BB4DF94C17}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_Rifleman.et"
+   "{1B898744F8D416D9}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Modern_2020/dim_USMC_Modern_D_TL_2.et"
+   ""
+   ""
+   ""
+  }
+ }
+}
+SCR_AIGroup RHS_USAF_400 : "{3BDB670EA85924EA}Prefabs/Groups/BLUFOR/RHS_USAF/USMC/Desert/Group_RHS_USMC_D_Recon_Squad_Attack.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+   m_iCompanyCallsign 4
+  }
+ }
+ coords 5187.698 207.21 1767.793
+ angles 0 100.669 0
+ m_aUnitPrefabSlots {
+  "{C991866AFA632B28}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Force Recon/dim_Role_Character_USAF_USMC_FR_SL_D.et"
+  "{9F97A00E4BD39D9B}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Force Recon/dim_Role_Character_USAF_USMC_FR_TF_D.et"
+  "{68197C2121709D23}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Force Recon/Assault/dim_Role_Character_USMC_FR_A_AR.et"
+  "{BCDD20AE9E669837}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Force Recon/dim_Role_Character_USAF_USMC_FR_Grenadier_D.et"
+  "{4702F75F9F839C72}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Force Recon/dim_Role_Character_USAF_USMC_FR_LAT_D.et"
+  "{1E206ABD8FCA9145}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Force Recon/dim_Role_Character_USAF_USMC_FR_Rifleman_D.et"
+  "{BCDD20AE9E669837}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Force Recon/dim_Role_Character_USAF_USMC_FR_Grenadier_D.et"
+  "{FB0695DF46E2DE77}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Force Recon/dim_Role_Character_USAF_USMC_FR_Sniper.et"
+ }
+}
+$grp SCR_AIGroup : "{C3D0F24D08FA6CA5}Prefabs/Groups/BLUFOR/RHS_USAF/USMC/Desert/Group_RHS_USMC_D_Squad_Motorized_Defend.et" {
+ RHS_USAF_301 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 1
+   }
+  }
+  coords 5205.641 207.82 1811.497
+  angles 0 -167.903 0
+ }
+ RHS_USAF_300 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 5189.031 207.334 1815.057
+  angles 0 -172.152 0
+ }
 }

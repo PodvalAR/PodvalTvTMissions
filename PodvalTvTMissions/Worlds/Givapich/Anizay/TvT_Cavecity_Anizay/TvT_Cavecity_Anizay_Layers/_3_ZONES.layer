@@ -1,0 +1,114 @@
+PolylineShapeEntity : "{7019844BAD5C4DD8}Prefabs/PolyZone/PolyZone_Border.et" {
+ components {
+  PS_PolyZone "{60E90266F25533F6}" {
+   m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
+   m_cPolygonColor 0.259 0.686 0.365 0.438
+   m_fPolygonUVScale 0.55
+   m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+   m_cPolygonBorderColor 0 0.502 0.125 1
+   m_bReversed 0
+   m_aVisibleForFactions {
+    "CIV"
+    "RHS_USAF"
+    "Ses_TKR"
+   }
+  }
+ }
+ coords 3073.524 135.331 1651.914
+ Points {
+  ShapePoint "{69E707C7FF2285B8}" {
+   Position -2.962 -6.527 7.206
+  }
+  ShapePoint "{69E707C7FD462B40}" {
+   Position -47.301 -10.417 40.8
+  }
+  ShapePoint "{69E707C7F10278C3}" {
+   Position -81.696 -4.281 63.231
+  }
+  ShapePoint "{69E707C7F63BD42E}" {
+   Position -112.518 4.473 108.048
+  }
+  ShapePoint "{69E707C7F444939B}" {
+   Position -138.367 0.762 154.529
+  }
+  ShapePoint "{69E707C7CF8C9245}" {
+   Position -160.112 -3.139 186.636
+  }
+  ShapePoint "{69E707C7CC87CAF6}" {
+   Position -82.353 34.981 250.102
+  }
+  ShapePoint "{69E707C7C34BB419}" {
+   Position -0.181 37.666 247.31
+  }
+  ShapePoint "{69E707C7DFB15F88}" {
+   Position 59.33 38.474 237.049
+  }
+  ShapePoint "{69E707C42E480865}" {
+   Position 199.358 43.677 338.963
+  }
+  ShapePoint "{69E707C42F951F33}" {
+   Position 209.423 26.089 319.653
+  }
+  ShapePoint "{69E707C422E8DBF7}" {
+   Position 190.359 1.871 289.692
+  }
+  ShapePoint "{69E707C420022EC7}" {
+   Position 242.22 5.685 230.951
+  }
+  ShapePoint "{69E707C40D127A01}" {
+   Position 272.883 19.098 240.901
+  }
+  ShapePoint "{69E707C40D83B008}" {
+   Position 283.915 29.215 220.011
+  }
+  ShapePoint "{69E707C402171EDB}" {
+   Position 283.542 34.931 204.169
+  }
+  ShapePoint "{69E707C4037F5F06}" {
+   Position 268.711 37.639 184.512
+  }
+  ShapePoint "{69E707C4012616C2}" {
+   Position 241.901 39.766 161.965
+  }
+  ShapePoint "{69E707C401FE7A69}" {
+   Position 224.203 38.933 145.46
+  }
+  ShapePoint "{69E707C404DC9CFA}" {
+   Position 185.577 40.173 116.639
+  }
+  ShapePoint "{69E707C41ABD498D}" {
+   Position 164.011 36.889 93.023
+  }
+  ShapePoint "{69E707C41B05786E}" {
+   Position 140.647 33.993 70.119
+  }
+  ShapePoint "{69E707C41BDA3BC5}" {
+   Position 121.874 33.332 51.207
+  }
+  ShapePoint "{69E707C41EBA0381}" {
+   Position 103.193 30.804 39.305
+  }
+  ShapePoint "{69E707C41F33A08C}" {
+   Position 94.183 31.43 31.184
+  }
+  ShapePoint "{69E707C41F89FBAF}" {
+   Position 84.559 33.013 21.803
+  }
+  ShapePoint "{69E707C41D2C4D57}" {
+   Position 51.572 36.949 -7.211
+  }
+ }
+ {
+  PS_PolyZoneTrigger {
+   ID "60FD050E1E83544C"
+   m_polyZoneEffect PS_PolyZoneEffectRestricted "{60FD050E0DC2A2AB}" {
+    m_fKillTime 20
+   }
+   m_sFactionKey "Ses_TKR"
+  }
+ }
+}
+SCR_DestructibleBuildingEntity : "{86F818710CC0EC19}Prefabs/Models/houses/tem_House_K_8.et" {
+ coords 3109.386 1.582 1704.306
+ angles 0 41.132 0
+}

@@ -1,0 +1,24 @@
+Vehicle : "{F649585ABB3706C4}Prefabs/Vehicles/Wheeled/M151A2/M151A2.et" {
+ ID "44EC665ABD2FF04B"
+ components {
+  SCR_UniversalInventoryStorageComponent "{5916C5825BF621D1}" {
+   MultiSlots {
+    MultiSlotConfiguration "{5A60CC529C3B736D}" {
+     NumSlots 10
+    }
+    MultiSlotConfiguration "{69E33D49BA0793CC}" {
+     SlotTemplate InventoryStorageSlot mines {
+      Prefab "{D6EF54367CECE1D9}Prefabs/Weapons/Explosives/Mine_TM62M/Mine_TM62M.et"
+     }
+     NumSlots 2
+    }
+    MultiSlotConfiguration "{69ED0434D098DD03}" {
+     SlotTemplate InventoryStorageSlot Morhin {
+      Prefab "{0D9A5DCF89AE7AA9}Prefabs/Items/Medicine/MorphineInjection_01/MorphineInjection_01.et"
+     }
+     NumSlots 8
+    }
+   }
+  }
+ }
+}

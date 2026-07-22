@@ -1,0 +1,81 @@
+Vehicle Ural4320_command1 : "{1BABF6B33DA0AEB6}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_command.et" {
+ coords 7647.162 64.772 7351.416
+ angles -0.888 -172.799 -0.112
+ m_sAttachmentGroupName "AFRF_000"
+}
+Vehicle Mi8MT_armed_Podval1 : "{31E004EC353C42B2}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_armed_Podval.et" {
+ coords 5527.15 62.638 7900.874
+ angles 1.159 162.253 -2.249
+ m_sAttachmentGroupName "AFRF_200"
+}
+Vehicle APC_K17_Berezok1 : "{31F0866273C46D76}Prefabs/Vehicles/Wheeled/K17/APC_K17_Berezok.et" {
+ coords 7632.248 63.812 7231.441
+ angles 0 -171.519 0
+ m_sAttachmentGroupName "AFRF_300"
+ {
+  GameEnvironmentProbeEntity {
+   ID "64A8C5B805478DB9"
+   coords -0.001 1.851 -2.834
+  }
+ }
+}
+$grp Vehicle : "{5C38170BFBE9F966}Prefabs/Vehicles/Wheeled/TIGR/KORD/GAZ_TIGR_v2_KORD_SSP_ARMOR_CAMO.et" {
+ GAZ_TIGR_v2_KORD_SSP_ARMOR_CAMO6 {
+  coords 7645.461 64.563 7331.827
+  angles 0 -171.819 0
+  m_sAttachmentGroupName "AFRF_500"
+ }
+ GAZ_TIGR_v2_KORD_SSP_ARMOR_CAMO7 {
+  coords 7643.227 64.375 7308.753
+  angles -1.013 -171.833 0.759
+  m_sAttachmentGroupName "AFRF_501"
+ }
+}
+$grp Vehicle : "{5F1FDC2EF2755773}Prefabs/Vehicles/Wheeled/K4386/K4386_Armed_teplak_of.et" {
+ K4386_Armed_teplak_of1 {
+  coords 7639.325 64.157 7282.692
+  angles 0 -172.29 0
+  m_sAttachmentGroupName "AFRF_400"
+  {
+   GameEnvironmentProbeEntity {
+    ID "64F5300043896B60"
+    coords 0.175 1.715 -0.546
+    angles 0 -0.718 0
+   }
+  }
+ }
+ K4386_Armed_teplak_of3 {
+  coords 7634.737 63.915 7251.639
+  angles -0.886 -172.528 -0.127
+  m_sAttachmentGroupName "AFRF_402"
+  {
+   GameEnvironmentProbeEntity {
+    ID "64F5300043896B60"
+    coords 0.005 1.835 -0.591
+   }
+  }
+ }
+ K4386_Armed_teplak_of2 {
+  coords 7637.105 64.045 7267.378
+  angles 0 -173.008 0
+  m_sAttachmentGroupName "AFRF_401"
+  {
+   GameEnvironmentProbeEntity {
+    ID "64F5300043896B60"
+    coords 0.002 1.843 -0.593
+   }
+  }
+ }
+}
+$grp Vehicle : "{7A21F47E09038E58}Prefabs/Vehicles/Wheeled/TIGR/ArbaletDM/GAZ_TIGR_v2_Arbalet_KORD.et" {
+ GAZ_TIGR_v2_Arbalet_KORD2 {
+  coords 7640.734 64.497 7325.062
+  angles -0.992 -173.393 0.786
+  m_sAttachmentGroupName "AFRF_500"
+ }
+ GAZ_TIGR_v2_Arbalet_KORD3 {
+  coords 7638.063 64.304 7301.493
+  angles -0.889 -173.378 -0.103
+  m_sAttachmentGroupName "AFRF_501"
+ }
+}

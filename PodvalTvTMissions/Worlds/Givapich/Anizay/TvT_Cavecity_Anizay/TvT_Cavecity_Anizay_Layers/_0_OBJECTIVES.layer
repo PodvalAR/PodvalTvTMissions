@@ -1,10 +1,22 @@
 $grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
  USSR_WIN {
-  m_sTitle ""
-  m_sFactionKey "USSR"
+  m_sTitle "Артефакт  успешно защищён."
+  m_sFactionKey "Ses_TKR"
  }
  US_WIN {
-  m_sTitle ""
-  m_sFactionKey "US"
+  m_sTitle "Артефакт захвачен силами ВС США"
+  m_sFactionKey "RHS_USAF"
+ }
+ US_WIN2 {
+  coords -0.629 -2.471 -2.836
+  m_sTitle "Археолог Джонс эвакуирован"
+  m_iScore 20
+  m_sFactionKey "RHS_USAF"
+ }
+ USSR_WIN2 {
+  coords -1.602 -2.295 -2.591
+  m_sTitle "Археолог Джонс остался в плену."
+  m_iScore 20
+  m_sFactionKey "Ses_TKR"
  }
 }

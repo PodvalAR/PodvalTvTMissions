@@ -1,0 +1,97 @@
+SCR_AIGroup plusaf : "{8BE5C4D411C5E59C}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_PL.et" {
+ coords 2840.986 84.746 7341.589
+ angles 0 -172.604 0
+}
+$grp SCR_AIGroup : "{955623450C88D6F3}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_Squad.et" {
+ usafsquad1 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 2863.387 85.102 7340.181
+  angles -2.682 -178.173 -0.086
+ }
+ usafsquad2 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 2886.143 85.315 7338.994
+  angles -1.83 -177.314 0.81
+ }
+ usafsquad3 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 2
+   }
+  }
+  coords 2910.328 85.773 7337.7
+  angles -4.584 -177.393 2.47
+ }
+ usafmechasquad5 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 8858.123 120.651 9270.644
+  angles -0.668 158.262 3.154
+ }
+}
+$grp SCR_AIGroup : "{F722F19CDE6535BA}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Squad_Motorized.et" {
+ usafmechasquad4 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 3
+   }
+  }
+  coords 2930.417 86.817 7335.635
+  angles -4.65 -177.599 4.263
+ }
+ usafmechasquad6 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 8878.45 121.865 9280.994
+  angles 0 150.534 0
+ }
+ usafmechasquad7 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 2
+   }
+  }
+  coords 8902.602 123.216 9294.64
+  angles 0.101 150.538 1.998
+ }
+}
+$grp SCR_AIGroup : "{FD531F571854D70B}Prefabs/Groups/BLUFOR/RHS_USAF/Recon/Group_RHS_USAF_Recon_Squad_6.et" {
+ usafrecon2 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 3
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 4356.155 101.265 8334.503
+  angles -6.286 90.714 3.477
+ }
+ usafrecon1 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 4353.635 102.744 8358.709
+  angles -5.108 83.201 2.403
+ }
+}

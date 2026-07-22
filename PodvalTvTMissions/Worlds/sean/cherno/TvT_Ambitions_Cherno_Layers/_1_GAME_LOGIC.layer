@@ -1,0 +1,74 @@
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{69D2D5D52C2CB50D}" {
+     m_sZonePreviewName "Склад"
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "AFRF_WIN"
+     }
+     m_sFailedObjectiveNames {
+      "USAF_WIN"
+     }
+     m_sMessage "Склад захвачен."
+     m_Timer GUB_ZoneControlTimer "{69D2D5D520474ECB}" {
+      timeToComplete 300
+     }
+     m_ZoneController GUB_ZoneController "{69D2D5D51D9A2EF7}" {
+      m_sZoneEntityName "trigger1"
+     }
+     m_FlagController GUB_FlagController "{69D2D5D5109E0976}" {
+      m_aFlagNames {
+       "flag1"
+       "flag2"
+      }
+      m_fStartFactionKey "RHS_USAF"
+      m_fEndFactionKey "RHS_AFRF"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{69D2D5D5FDDEF2DA}" {
+       m_sFirstFactionKey "RHS_AFRF"
+       m_sSecondFactionKey "RHS_USAF"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+}
+GenericEntity : "{6A3CDCFB475BF1B2}Prefabs/System/DRG_CriticalLossPrefab.et" {
+}
+GenericEntity : "{7A333AFB11EA847A}Prefabs/System/DRG_VehicleDestroyPrefab.et" {
+ components {
+  DRG_VehicleDestroyComponent "{65733BD6110AE8FC}" {
+   m_aVehicleLossLogics {
+    VehicleLossLogic "{69D0F219368D5D4E}" {
+     m_sSuccessObjectiveNames {
+      "AFRF_WIN2"
+     }
+     m_sFailedObjectiveNames {
+      "USAF_WIN2"
+     }
+     m_sVehicleEntityNames {
+      "truck1"
+      "truck2"
+      "truck3"
+      "truck4"
+     }
+     m_sMessage "Грузовики уничтожены."
+    }
+   }
+  }
+ }
+ coords 12736.539 5.75 9674.242
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+}
