@@ -1,0 +1,35 @@
+SCR_ChimeraCharacter : "{A01ABEF9300D0C66}Prefabs/Characters/Factions/INDFOR/CIV/General (FIA)/FIA_CIV_CottonShirt_3_dimkii.et" {
+ ID "520EC961A090B1EE"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Техник"
+    Icon "{B0611A54EB6AA798}UI/Icons/engineer.edds"
+   }
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{DF26044449C06EAB}Prefabs/Characters/HeadGear/Hat_Hard_01/Hat_Hard_01_white.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{21495551C443655A}Prefabs/Characters/Uniforms/Suit_Pilot_RF/Suit_PILOT_RUS_Blue.et"
+    }
+    LoadoutSlotInfo Pants {
+     Prefab ""
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{60DCBCECAC6C6E65}" {
+     TargetStorage "Jacket/Suit_PILOT_RUS_Blue.et"
+    }
+    ItemsInitConfigurationItem "{688505F34D064F8E}" {
+     TargetStorage "Jacket/Suit_PILOT_RUS_Blue.et"
+    }
+   }
+  }
+ }
+ coords 7510.204 36.469 1791.087
+}
