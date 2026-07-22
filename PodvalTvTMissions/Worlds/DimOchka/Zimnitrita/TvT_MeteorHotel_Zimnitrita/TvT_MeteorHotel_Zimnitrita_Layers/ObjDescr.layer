@@ -1,0 +1,62 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ {
+  coords 6876.31 5.565 6301.583
+  m_sTitle "Правила и задачи"
+  m_sTextData "ПРАВИЛА:"\
+  "1. Вертолету запрещено использовать тактику \"КАМИКАДЗЕ\";"\
+  "2. Вертолету разрешено запускать двигатели только после конца фризтайма;"\
+  "3. Президента с переводчиком запрещено убивать;"\
+  "4. Президент с переводчиком должны подчиняться любым приказам ВС РФ и США;"\
+  "5. Всем, кроме вертолета, запрещено покидать зону боевых действий (красная линия)."\
+  ""\
+  "ЗАДАЧИ:"\
+  "• РФ: "\
+  " 1. Спасти президента (вывезти за зеленую линию)."\
+  ""\
+  "• США:"\
+  " 1. Недопустить спасение президента."\
+  ""\
+  "ДОПОЛНИТЕЛЬНО:"\
+  " 1. У ВС США имеются Stinger и SMAW."
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "CIV"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+ }
+ {
+  coords 6876.31 5.565 6301.583
+  m_sTitle "Обстановка"
+  m_sTextData "2018 г."\
+  "Место боевых действий перешло на территорию Зимнитриты. Президент страны, симпатизирующий РФ, был пойман ВС США и перевезен в отель \"Метеор\". ВС РФ планируют операцию по его спасению."
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "CIV"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+ }
+}
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ AFRF_WIN {
+  coords 6927.594 8.248 6204.361
+  m_sTitle "Президент спасен"
+  m_sFactionKey "RHS_AFRF"
+ }
+ USAF_WIN {
+  coords 6927.594 8.248 6204.361
+  m_sTitle "Президент удержан"
+  m_sFactionKey "RHS_USAF"
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 5547.709 15.194 4020.56
+}
