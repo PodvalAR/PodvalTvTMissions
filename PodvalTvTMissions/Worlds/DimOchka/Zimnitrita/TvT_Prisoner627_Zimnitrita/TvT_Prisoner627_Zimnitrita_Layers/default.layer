@@ -1,0 +1,34 @@
+SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
+ coords 2638.41 87.32 7663.507
+}
+GenericWorldFogEntity Fog_Haze2 {
+ coords 8721.456 47.558 985.352
+ FakeDistFog 0.534
+ HeightDensity 0.936
+ DistanceDensity 0.015
+ HazeDensity 0.832
+ HeightOffset 0.412
+ FogHeightStart entity
+}
+PerceptionManager PerceptionManager1 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 2666.354 86.479 7672.433
+}
+PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
+ components {
+  SCR_TimeAndWeatherHandlerComponent "{5EE3229927D4D2F5}" {
+   m_bUsePredefineStartingTimeAndWeather 1
+   m_aStartingWeatherAndTime {
+    SCR_TimeAndWeatherState "{695C5C9B737A86C0}" {
+     m_sWeatherPresetName "Cloudy"
+     m_iStartingHour 14
+     m_iStartingMinutes 44
+    }
+   }
+  }
+ }
+ coords 2641.267 87.799 7675.509
+}
+GameEntity : "{F088066F5F807748}Prefabs/Weapons/Attachments/Bayonets/Bayonet_OKC3S.et" {
+ coords 9994.31 44.532 933.136
+ angles 0 0 90
+}
