@@ -1,0 +1,142 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ {
+  coords 6876.31 5.565 6301.583
+  m_sTitle "Правила и задачи"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "ПРАВИЛА:"\
+  "1. США запрещено заходить за красную линию."\
+  ""\
+  "ЗАДАЧИ:"\
+  "• РФ: "\
+  " 1. Захватить лагерь;"\
+  " 2. Захватить крепость Зар-Шах."\
+  ""\
+  "• США:"\
+  " 1. Удержать лагерь;"\
+  " 2. Удержать крепость Зар-Щах."
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "Ses_CDF"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+ }
+ {
+  coords 6876.31 5.565 6301.583
+  m_sTitle "Обстановка"
+  m_sTextData "2018 г."\
+  "ВС РФ активно продвигаются по территории Зимнитриты. Их следующая цель - крепость Зар-Шах, расположенная в болотной местности страны. Разведка, при помощи дронов, обнаружила большое скопление войск США в данном районе. Для дальнейшего продвижения ВС РФ необходимо зачистить объект. В операции планируется задействовать экспериментальную технику - Т-14 \"Армата\" и К17 \"Бумеранг\"."\
+  "Время на задачу - 45 минут. По метереологическим сводкам - в это время будет туман, что позволит ВС РФ подойти ближе к ВС США."
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "Ses_CDF"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+ }
+}
+$grp GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ {
+  components {
+   GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+    m_aControlLogics {
+     GUB_ZoneControlLogic "{69F355C9BB929C88}" {
+      m_sMessage "Лагерь захвачен"
+      m_Timer GUB_ZoneControlTimer "{69F355C9BA20C003}" {
+       timeToComplete 150
+      }
+      m_ZoneController GUB_ZoneController "{69F355C9C42AEC46}" {
+       m_sZoneEntityName "capturee2"
+      }
+      m_FlagController GUB_FlagController "{69F355C9C0F16A90}" {
+       m_aFlagNames {
+        "flag1"
+       }
+       m_fStartFactionKey "RHS_USAF"
+       m_fEndFactionKey "RHS_AFRF"
+      }
+      m_aConditions {
+       GUB_ZoneControlBetweenFactionsCondition "{69F355C9C8905F8E}" {
+        m_sFirstFactionKey "RHS_AFRF"
+        m_sSecondFactionKey "RHS_USAF"
+        m_fComparisonMultiplier 2
+        m_iOperator GREATER
+       }
+      }
+     }
+    }
+   }
+  }
+  coords 11113.575 6.468 13562.337
+ }
+ {
+  components {
+   GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+    m_aControlLogics {
+     GUB_ZoneControlLogic "{69F355C9BB929C88}" {
+      m_sMessage "Крепость захвачена"
+      m_Timer GUB_ZoneControlTimer "{69F355C9BA20C003}" {
+       timeToComplete 150
+      }
+      m_ZoneController GUB_ZoneController "{69F355C9C42AEC46}" {
+       m_sZoneEntityName "capturee1"
+      }
+      m_FlagController GUB_FlagController "{69F355C9C0F16A90}" {
+       m_aFlagNames {
+        "flag2"
+        "flag3"
+       }
+       m_fStartFactionKey "RHS_USAF"
+       m_fEndFactionKey "RHS_AFRF"
+      }
+      m_aConditions {
+       GUB_ZoneControlBetweenFactionsCondition "{69F355C9C8905F8E}" {
+        m_sFirstFactionKey "RHS_AFRF"
+        m_sSecondFactionKey "RHS_USAF"
+        m_fComparisonMultiplier 2
+        m_iOperator GREATER
+       }
+      }
+     }
+    }
+   }
+  }
+  coords 11113.575 6.468 13598.767
+ }
+}
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ AFRF_WIN {
+  coords 6927.594 8.248 6204.361
+  m_sTitle "Лагерь захвачен"
+  m_iScore 40
+  m_sFactionKey "RHS_AFRF"
+ }
+ USAF_WIN {
+  coords 6927.594 8.248 6204.361
+  m_sTitle "Лагерь удержан"
+  m_iScore 40
+  m_sFactionKey "RHS_USAF"
+ }
+ AFRF_WIN2 {
+  coords 6927.594 8.248 6204.361
+  m_sTitle "Крепость Зар-Шах захвачена"
+  m_iScore 60
+  m_sFactionKey "RHS_AFRF"
+ }
+ USAF_WIN2 {
+  coords 6927.594 8.248 6204.361
+  m_sTitle "Крепость Зар-Шах удержана"
+  m_iScore 60
+  m_sFactionKey "RHS_USAF"
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 5547.709 15.194 4020.56
+}
