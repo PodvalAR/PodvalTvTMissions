@@ -1,0 +1,308 @@
+$grp Vehicle : "{0ACA2ED6AD52D641}Prefabs/Vehicles/Wheeled/UAZ469/dim_UAZ469.et" {
+ dim_UAZ1 {
+  coords 2536.393 130.031 6986.614
+  angles 0 -149.358 0
+  m_sAttachmentGroupName "ALL_RUS10"
+  m_bEnableMoveOnFreeze 1
+ }
+ dim_UAZ3 {
+  coords 2529.499 130.111 6974.342
+  angles 0.142 -167.305 1.408
+  m_sAttachmentGroupName "ALL_RUS12"
+  m_bEnableMoveOnFreeze 1
+ }
+ dim_UAZ2 {
+  coords 2532.97 130.062 6980.545
+  angles 0 -147.515 0
+  m_sAttachmentGroupName "ALL_RUS11"
+  m_bEnableMoveOnFreeze 1
+ }
+ dim_UAZ4 {
+  coords 2591.303 130.111 7067.617
+  angles -0.94 -96.562 -0.342
+  m_sAttachmentGroupName "ALL_RUS4"
+  m_bEnableMoveOnFreeze 1
+ }
+ dim_UAZ5 {
+  coords 2591.651 130.092 7063.44
+  angles -0.879 -92.019 0.479
+  m_sAttachmentGroupName "ALL_RUS2"
+  m_bEnableMoveOnFreeze 1
+ }
+}
+Vehicle GAZ_TIGR_v2_Unarmed_Recon_1L1 : "{162B7A60442C5913}Prefabs/Vehicles/Wheeled/TIGR/Unarmed/WithAist/GAZ_TIGR_v2_Unarmed_Recon_1L271.et" {
+ coords 2195.689 292.184 5411.045
+ angles 0.107 79.278 -1.842
+ m_sAttachmentGroupName "AT_REC"
+}
+Vehicle GAZ_TIGR_v2_Unarmed_Mortar1 : "{25C776216C2C63D0}Worlds/DimOchka/Zimnitrita/TvT_EnergyCrysis_Zimnitrita/GAZ_TIGR_v2_Unarmed_Mortar.et" {
+ coords 2206.754 291.77 5413.242
+ angles -1.894 82.23 -0.645
+ m_sAttachmentGroupName "AT_REC"
+}
+Vehicle BTR70_AFRF1 : "{447CFE8D73F95C40}Prefabs/Vehicles/Wheeled/BTR70/BTR70_AFRF.et" {
+ components {
+  SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+   FuelNodes {
+    SCR_FuelNode "{5622A70CD4036C5A}" {
+     MaxFuel 0
+     m_fInitialFuelTankState 0
+    }
+    SCR_FuelNode "{5628CA8E08F1AAF4}" {
+     MaxFuel 0
+     m_fInitialFuelTankState 0
+    }
+   }
+  }
+ }
+ coords 2671.845 155.829 7030.729
+ angles 0 42.958 0
+ m_sAttachmentGroupName "ALL_RUS6"
+}
+$grp Vehicle : "{7009ED8FBA7A1E7E}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_engineer_sand.et" {
+ Ural4320_engineer_sand1 {
+  coords 2573.845 130.556 7045.421
+  angles 2.114 119.911 -1.88
+  m_bEnableMoveOnFreeze 1
+ }
+ Ural4320_engineer_sand2 {
+  coords 2585.103 130.284 7048.283
+  angles -0.448 179.421 0.004
+  m_bEnableMoveOnFreeze 1
+ }
+}
+Vehicle GAZ_TIGR_v2_PKM1 : "{7BC76F92B882889D}Prefabs/Vehicles/Wheeled/TIGR/PKP/GAZ_TIGR_v2_PKM.et" {
+ coords 2227.408 291.316 5417.428
+ angles -1.413 75.002 -0.085
+ m_sAttachmentGroupName "AT_REC2"
+}
+$grp SCR_AIGroup : "{7F40D42C0CE8A499}Prefabs/Groups/OPFOR/RHS_AFRF/Group_RHS_AFRF_Base.et" {
+ US_RUSRECON1 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 2199.224 292.301 5408.419
+  angles 0 -7.814 0
+  m_aUnitPrefabSlots {
+   "{6478BF78B0C885F6}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/CamoSuit/dim_VDV_Recon_Suit_SL.et"
+   "{19605380D55BB96F}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/CamoSuit/dim_VDV_Recon_Suit_SR.et"
+   "{9BE3309876F5FBBD}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/CamoSuit/dim_VDV_Recon_Suit_Rfl.et"
+   "{9BE3309876F5FBBD}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/CamoSuit/dim_VDV_Recon_Suit_Rfl.et"
+   "{53428799C1FD7D0C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/CamoSuit/dim_VDV_Recon_Suit_PKP.et"
+   "{9C60FCF343AB2D1F}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/CamoSuit/dim_VDV_Recon_Suit_Flame.et"
+   "{8B14F695DD38BB1B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/CamoSuit/dim_VDV_Recon_Suit_VAL.et"
+  }
+  m_sCustomNameSet "Разведка с РЛС \"Аистёнок\""
+ }
+ DEF_RUS2 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 2597.756 130.094 7057.634
+  angles 0 -90.571 0
+  m_aUnitPrefabSlots {
+   "{EFC0F0711BD4543E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_SL.et"
+   "{92D81C897E4768A7}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_SR.et"
+   "{5AE068AF50D9E871}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_AT.et"
+   "{207E951D01933AE6}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_AAT.et"
+   "{64827A390333DE0A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_Rfl_1.et"
+   "{ED4A0220B312C64F}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_Rfl_3.et"
+   "{531C05BDC885CB8C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_Sniper.et"
+  }
+  m_bSnapToTerrain 0
+  m_sCustomNameSet "Отделение ВДВ"
+ }
+ DEF_RUS0 {
+  coords 2576.428 129.985 7070.946
+  angles 0 -179.293 0
+  m_aUnitPrefabSlots {
+   "{7BBA2F3CA6F7FBA8}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_Officer.et"
+  }
+  m_sCustomNameSet "Командир ВС РФ"
+ }
+ DEF_RUS3 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 2590.796 130.165 7052.138
+  angles 0 2.148 0
+  m_aUnitPrefabSlots {
+   "{EFC0F0711BD4543E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_SL.et"
+   "{92D81C897E4768A7}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_SR.et"
+   "{5AE068AF50D9E871}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_AT.et"
+   "{207E951D01933AE6}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_AAT.et"
+   "{08D64ED9BFF75124}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_Rfl_2.et"
+   "{D07E2718C67E4F78}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_Rfl_4.et"
+   "{531C05BDC885CB8C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_Sniper.et"
+  }
+  m_sCustomNameSet "Отделение ВДВ"
+ }
+ DEF_RUS4 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 2383.394 117.81 7065.688
+  angles 0 40.547 0
+  m_aUnitPrefabSlots {
+   "{EFC0F0711BD4543E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_SL.et"
+   "{92D81C897E4768A7}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_SR.et"
+   "{A2B650E98667DA1B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_MG_Opt.et"
+   "{91DB7FFC0EC554C9}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_MGAB.et"
+   "{35E26BE1CA9BD813}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_Rfl_5.et"
+   "{64827A390333DE0A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_Rfl_1.et"
+   "{531C05BDC885CB8C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_Sniper.et"
+  }
+  m_bSnapToTerrain 0
+  m_sCustomNameSet "Отделение ВДВ"
+ }
+ DEF_RUS6 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 2668.535 156.099 7037.363
+  angles 0 -139.778 0
+  m_aUnitPrefabSlots {
+   "{EFC0F0711BD4543E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_SL.et"
+   "{92D81C897E4768A7}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_SR.et"
+   "{35E26BE1CA9BD813}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_Rfl_5.et"
+   "{D07E2718C67E4F78}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_Rfl_4.et"
+   "{C71B7D7DEAD5B6F3}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Crew.et"
+  }
+  m_bSnapToTerrain 0
+  m_sCustomNameSet "Отделение ВДВ"
+ }
+ DEF_RUS10 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 4
+   }
+  }
+  coords 2527.798 130.013 6989.642
+  angles 0 121.437 0
+  m_aUnitPrefabSlots {
+   "{EFC0F0711BD4543E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_SL.et"
+   "{ED4A0220B312C64F}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_Rfl_3.et"
+   "{08D64ED9BFF75124}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_Rfl_2.et"
+  }
+  m_sCustomNameSet "Расчет ПТРК"
+ }
+ DEF_RUS11 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 4
+    m_iSquadCallsign 1
+   }
+  }
+  coords 2525.155 129.967 6985.336
+  angles -2.058 120.038 0.877
+  m_aUnitPrefabSlots {
+   "{EFC0F0711BD4543E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_SL.et"
+   "{08D64ED9BFF75124}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_Rfl_2.et"
+   "{D07E2718C67E4F78}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_Rfl_4.et"
+  }
+  m_sCustomNameSet "Расчет ПТРК"
+ }
+ DEF_RUS12 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 4
+    m_iSquadCallsign 2
+   }
+  }
+  coords 2522.298 129.949 6980.45
+  angles -1.079 121.206 0.916
+  m_aUnitPrefabSlots {
+   "{EFC0F0711BD4543E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_SL.et"
+   "{D07E2718C67E4F78}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_Rfl_4.et"
+   "{64827A390333DE0A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_Rfl_1.et"
+  }
+  m_sCustomNameSet "Расчет ПТРК"
+ }
+ US_RUSRECON2 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 3
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 2229.367 292.301 5414.016
+  angles 0 -13.293 0
+  m_aUnitPrefabSlots {
+   "{6478BF78B0C885F6}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/CamoSuit/dim_VDV_Recon_Suit_SL.et"
+   "{19605380D55BB96F}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/CamoSuit/dim_VDV_Recon_Suit_SR.et"
+   "{53428799C1FD7D0C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/CamoSuit/dim_VDV_Recon_Suit_PKP.et"
+   "{42752DA263E80990}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/CamoSuit/dim_VDV_Recon_Suit_Igla.et"
+   "{42752DA263E80990}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/CamoSuit/dim_VDV_Recon_Suit_Igla.et"
+   "{9C60FCF343AB2D1F}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/CamoSuit/dim_VDV_Recon_Suit_Flame.et"
+   "{8B14F695DD38BB1B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/CamoSuit/dim_VDV_Recon_Suit_VAL.et"
+  }
+  m_sCustomNameSet "Разведка с ПЗРК"
+ }
+ DEF_RUS5 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 2568.719 142.251 6990.968
+  angles 0 31.437 0
+  m_aUnitPrefabSlots {
+   "{EFC0F0711BD4543E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_SL.et"
+   "{ED4A0220B312C64F}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_Rfl_3.et"
+  }
+  m_bSnapToTerrain 0
+  m_sCustomNameSet "ПВО (ЗУ-23)"
+ }
+ DEF_RUS7 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 2
+   }
+  }
+  coords 2479.567 129.543 6984.969
+  angles 0 9.316 0
+  m_aUnitPrefabSlots {
+   "{EFC0F0711BD4543E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_SL.et"
+   "{08D64ED9BFF75124}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_Rfl_2.et"
+  }
+  m_bSnapToTerrain 0
+  m_sCustomNameSet "ПВО (ЗУ-23)"
+ }
+ DEF_RUS8 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 2259.228 153.241 7121.971
+  angles 0 -34.778 0
+  m_aUnitPrefabSlots {
+   "{EFC0F0711BD4543E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_SL.et"
+   "{92D81C897E4768A7}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_SR.et"
+   "{ED4A0220B312C64F}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_Rfl_3.et"
+   "{D07E2718C67E4F78}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_Rfl_4.et"
+  }
+  m_bSnapToTerrain 0
+  m_sCustomNameSet "Отделение ВДВ"
+ }
+}
+Vehicle GAZ_TIGR_v2_KORD1 : "{AC12E5669B411D57}Prefabs/Vehicles/Wheeled/TIGR/KORD/GAZ_TIGR_v2_KORD.et" {
+ coords 2235.692 291.129 5419.059
+ angles -0.882 80.283 0.151
+ m_sAttachmentGroupName "AT_REC2"
+}
