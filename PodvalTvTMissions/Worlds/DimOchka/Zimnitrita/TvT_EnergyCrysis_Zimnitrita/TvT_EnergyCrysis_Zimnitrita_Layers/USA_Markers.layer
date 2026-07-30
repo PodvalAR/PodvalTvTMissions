@@ -1,3 +1,94 @@
+$grp GenericEntity : "{039F825B8B83B86D}Prefabs/Props/Military/AmmoBoxes/drg_AmmoBox_81mm_mortar_10rnd_HE.et" {
+ {
+  coords 2637.2 216.659 10528.169
+ }
+ {
+  coords 2637.2 216.659 10528.358
+ }
+ {
+  coords 2637.2 216.659 10528.535
+ }
+ {
+  coords 2637.2 216.659 10528.723
+ }
+ {
+  coords 2637.2 216.659 10528.925
+ }
+ {
+  coords 2637.2 216.659 10529.146
+ }
+ {
+  coords 2637.2 216.659 10529.351
+ }
+ {
+  coords 2637.2 216.659 10529.58
+ }
+ {
+  coords 2637.2 216.659 10529.831
+ }
+ {
+  coords 2637.2 216.659 10530.055
+ }
+}
+$grp Vehicle : "{36CFD2EC7644EFF2}Prefabs/Vehicles/Wheeled/M998/M1151_armed_Green.et" {
+ M1151_armed_Green1 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{5916C587FC993363}" {
+    MultiSlots {
+     MultiSlotConfiguration "{66F2D69AD3FC9113}" {
+      SlotTemplate InventoryStorageSlot SAWammo {
+       Prefab "{6113990D163E5249}Prefabs/Items/Equipment/BallisticTable/BallisticTable_US.et"
+      }
+     }
+     MultiSlotConfiguration "{66F2D69AD3FC911C}" {
+      SlotTemplate InventoryStorageSlot ATmine {
+       Prefab "{95DC7FA72AE32F0E}Prefabs/Items/Equipment/Programmer/MMS_Programmer.et"
+      }
+     }
+    }
+   }
+  }
+  coords 2638.716 216.501 10516.101
+  angles 0 180 0
+ }
+ M1151_armed_Green2 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{5916C587FC993363}" {
+    MultiSlots {
+     MultiSlotConfiguration "{66F2D69AD3FC9116}" {
+      SlotTemplate InventoryStorageSlot M2Ammo {
+       Enabled 1
+       Prefab "{6113990D163E5249}Prefabs/Items/Equipment/BallisticTable/BallisticTable_US.et"
+      }
+      NumSlots 2
+     }
+    }
+   }
+  }
+  coords 2638.957 216.687 10531.022
+  angles 0 180 0
+ }
+}
+$grp GenericEntity : "{43CFFF98E14D7A12}Prefabs/Props/Military/AmmoBoxes/drg_AmmoBox_81mm_mortar_10rnd_RCWG.et" {
+ {
+  coords 2636.871 216.471 10513.986
+ }
+ {
+  coords 2636.871 216.471 10513.807
+ }
+ {
+  coords 2636.871 216.471 10513.625
+ }
+ {
+  coords 2636.871 216.471 10514.34
+ }
+ {
+  coords 2636.871 216.471 10514.515
+ }
+ {
+  coords 2636.871 216.471 10514.692
+ }
+}
 $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
  {
   coords 2588.94 218.19 10511.231

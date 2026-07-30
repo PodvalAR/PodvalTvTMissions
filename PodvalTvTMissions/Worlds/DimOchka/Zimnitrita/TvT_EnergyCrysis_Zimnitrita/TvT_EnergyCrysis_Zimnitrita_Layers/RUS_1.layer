@@ -33,12 +33,23 @@ $grp Vehicle : "{0ACA2ED6AD52D641}Prefabs/Vehicles/Wheeled/UAZ469/dim_UAZ469.et"
 Vehicle GAZ_TIGR_v2_Unarmed_Recon_1L1 : "{162B7A60442C5913}Prefabs/Vehicles/Wheeled/TIGR/Unarmed/WithAist/GAZ_TIGR_v2_Unarmed_Recon_1L271.et" {
  coords 2195.689 292.184 5411.045
  angles 0.107 79.278 -1.842
- m_sAttachmentGroupName "AT_REC"
+ m_sAttachmentGroupName "US_RUSRECON1"
 }
-Vehicle GAZ_TIGR_v2_Unarmed_Mortar1 : "{25C776216C2C63D0}Worlds/DimOchka/Zimnitrita/TvT_EnergyCrysis_Zimnitrita/GAZ_TIGR_v2_Unarmed_Mortar.et" {
- coords 2206.754 291.77 5413.242
- angles -1.894 82.23 -0.645
- m_sAttachmentGroupName "AT_REC"
+Vehicle GAZ_TIGR_v2_Unarmed1 : "{2C9B4D8196812513}Prefabs/Vehicles/Wheeled/TIGR/Unarmed/GAZ_TIGR_v2_Unarmed.et" {
+ components {
+  SCR_UniversalInventoryStorageComponent "{62B233ED7C26143C}" {
+   MultiSlots {
+    MultiSlotConfiguration "{62B233ED7C2615D2}" {
+     SlotTemplate InventoryStorageSlot Table {
+      Prefab "{B41607EAB58A4252}Prefabs/Items/Equipment/BallisticTable/BallisticTable_USSR.et"
+     }
+    }
+   }
+  }
+ }
+ coords 2206.709 291.773 5413.31
+ angles 0 84.289 0
+ m_sAttachmentGroupName "US_RUSRECON1"
 }
 Vehicle BTR70_AFRF1 : "{447CFE8D73F95C40}Prefabs/Vehicles/Wheeled/BTR70/BTR70_AFRF.et" {
  components {
@@ -74,7 +85,7 @@ $grp Vehicle : "{7009ED8FBA7A1E7E}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_eng
 Vehicle GAZ_TIGR_v2_PKM1 : "{7BC76F92B882889D}Prefabs/Vehicles/Wheeled/TIGR/PKP/GAZ_TIGR_v2_PKM.et" {
  coords 2227.408 291.316 5417.428
  angles -1.413 75.002 -0.085
- m_sAttachmentGroupName "AT_REC2"
+ m_sAttachmentGroupName "US_RUSRECON2"
 }
 $grp SCR_AIGroup : "{7F40D42C0CE8A499}Prefabs/Groups/OPFOR/RHS_AFRF/Group_RHS_AFRF_Base.et" {
  US_RUSRECON1 {
@@ -304,5 +315,5 @@ $grp SCR_AIGroup : "{7F40D42C0CE8A499}Prefabs/Groups/OPFOR/RHS_AFRF/Group_RHS_AF
 Vehicle GAZ_TIGR_v2_KORD1 : "{AC12E5669B411D57}Prefabs/Vehicles/Wheeled/TIGR/KORD/GAZ_TIGR_v2_KORD.et" {
  coords 2235.692 291.129 5419.059
  angles -0.882 80.283 0.151
- m_sAttachmentGroupName "AT_REC2"
+ m_sAttachmentGroupName "US_RUSRECON2"
 }
