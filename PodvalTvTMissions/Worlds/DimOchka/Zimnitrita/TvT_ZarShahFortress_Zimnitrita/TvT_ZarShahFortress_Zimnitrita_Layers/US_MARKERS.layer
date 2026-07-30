@@ -1,3 +1,181 @@
+$grp GenericEntity {
+ {
+  components {
+   MeshObject "{69FD1DC2A7D62D67}" {
+    Object "{A302DA87201698EA}Assets/Vehicles/Wheeled/K4386/K4386.xob"
+    Materials {
+     MaterialAssignClass "{69FD1DC2DDF11C72}" {
+      SourceMaterial "Hull_Mat"
+      AssignedMaterial "{F50DE092A9ECD2F3}Assets/Vehicles/Wheeled/K4386/Data/Hull_Mat_RG.emat"
+     }
+     MaterialAssignClass "{69FD1DC2DDF11C59}" {
+      SourceMaterial "Hull_Parts_Mat"
+      AssignedMaterial "{F443174E007EAF6F}Assets/Vehicles/Wheeled/K4386/Data/Hull_Parts_Mat_RG.emat"
+     }
+    }
+   }
+  }
+  coords 13238.176 50.656 12635.313
+  angles 0 -105 0
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{69FD1DC2A8DFF693}" {
+       Object "{46635ADB6673794B}Assets/Vehicles/Wheeled/K4386/VehParts/Wheels/K4386_wheel.xob"
+      }
+      Hierarchy "{69FD1DC2B67FB95A}" {
+       PivotID "v_wheel_L01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{69FD1DC2A8DFF693}" {
+       Object "{46635ADB6673794B}Assets/Vehicles/Wheeled/K4386/VehParts/Wheels/K4386_wheel.xob"
+      }
+      Hierarchy "{69FD1DC2B67FB95A}" {
+       PivotID "v_wheel_R01"
+      }
+     }
+     coords 0 0 0
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{69FD1DC2A8DFF693}" {
+       Object "{46635ADB6673794B}Assets/Vehicles/Wheeled/K4386/VehParts/Wheels/K4386_wheel.xob"
+      }
+      Hierarchy "{69FD1DC2B67FB95A}" {
+       PivotID "v_wheel_R02"
+      }
+     }
+     coords 0 0 0
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{69FD1DC2A8DFF693}" {
+       Object "{46635ADB6673794B}Assets/Vehicles/Wheeled/K4386/VehParts/Wheels/K4386_wheel.xob"
+      }
+      Hierarchy "{69FD1DC2B67FB95A}" {
+       PivotID "v_wheel_L02"
+      }
+     }
+    }
+   }
+  }
+ }
+ {
+  components {
+   MeshObject "{69FD1DC2A7D62D67}" {
+    Object "{A302DA87201698EA}Assets/Vehicles/Wheeled/K4386/K4386.xob"
+    Materials {
+     MaterialAssignClass "{69FD1DC2DDF11C72}" {
+      SourceMaterial "Hull_Mat"
+      AssignedMaterial "{F50DE092A9ECD2F3}Assets/Vehicles/Wheeled/K4386/Data/Hull_Mat_RG.emat"
+     }
+     MaterialAssignClass "{69FD1DC2DDF11C59}" {
+      SourceMaterial "Hull_Parts_Mat"
+      AssignedMaterial "{F443174E007EAF6F}Assets/Vehicles/Wheeled/K4386/Data/Hull_Parts_Mat_RG.emat"
+     }
+    }
+   }
+  }
+  coords 13236.432 50.656 12640.644
+  angles 0 165 0
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{69FD1DC2A8DFF693}" {
+       Object "{46635ADB6673794B}Assets/Vehicles/Wheeled/K4386/VehParts/Wheels/K4386_wheel.xob"
+      }
+      Hierarchy "{69FD1DC2B67FB95A}" {
+       PivotID "v_wheel_L01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{69FD1DC2A8DFF693}" {
+       Object "{46635ADB6673794B}Assets/Vehicles/Wheeled/K4386/VehParts/Wheels/K4386_wheel.xob"
+      }
+      Hierarchy "{69FD1DC2B67FB95A}" {
+       PivotID "v_wheel_R01"
+      }
+     }
+     coords 0 0 0
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{69FD1DC2A8DFF693}" {
+       Object "{46635ADB6673794B}Assets/Vehicles/Wheeled/K4386/VehParts/Wheels/K4386_wheel.xob"
+      }
+      Hierarchy "{69FD1DC2B67FB95A}" {
+       PivotID "v_wheel_R02"
+      }
+     }
+     coords 0 0 0
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{69FD1DC2A8DFF693}" {
+       Object "{46635ADB6673794B}Assets/Vehicles/Wheeled/K4386/VehParts/Wheels/K4386_wheel.xob"
+      }
+      Hierarchy "{69FD1DC2B67FB95A}" {
+       PivotID "v_wheel_L02"
+      }
+     }
+    }
+   }
+  }
+ }
+}
+$grp Vehicle : "{2B15F98903994DA3}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_covered_camo1.et" {
+ Ural4320_transport_covered_camo7 {
+  coords 13247.444 50.656 12650.377
+  angles 0 -11 0
+ }
+ Ural4320_transport_covered_camo4 {
+  components {
+   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+    FuelNodes {
+     SCR_FuelNode "{5622A70CD4036C5A}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{5628CA84B129D4CE}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+    }
+   }
+  }
+  coords 13254.521 50.656 12558.262
+  angles 0 -15 0
+ }
+ Ural4320_transport_covered_camo5 {
+  components {
+   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+    FuelNodes {
+     SCR_FuelNode "{5622A70CD4036C5A}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{5628CA84B129D4CE}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+    }
+   }
+  }
+  coords 13248.287 50.656 12566.593
+  angles 0 -35.079 0
+ }
+}
 $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
  RHS_USAF_G_000_M {
   coords 11652.656 5.187 13821.58
