@@ -8,10 +8,12 @@ $grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescripti
   ""\
   "ЗАДАЧИ:"\
   "• НАПА: "\
-  " 1. Удержать Ферму."\
+  " 1. Удержать Ферму;"\
+  " 2. Удержать заложников."\
   ""\
   "• Британии:"\
-  " 1. Захватить Ферму."\
+  " 1. Захватить Ферму;"\
+  " 2. Найти заложников (5-ти секундный захват территории)."\
   ""\
   "ДОПОЛНИТЕЛЬНО:"\
   " 1. У НАПА есть строительный грузовик с припасами - стройте укрепления как душа пожелает. Также там есть 14 лопат и мешки с песком. На нем можно ездить во время фризтайма."
@@ -50,11 +52,25 @@ $grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
  UK_WIN {
   coords 1726.439 0 467.155
   m_sTitle "Ферма захвачена"
+  m_iScore 60
   m_sFactionKey "UK"
  }
  NAPA_WIN {
   coords 1228.963 0 467.155
   m_sTitle "Ферма удержана"
+  m_iScore 60
   m_sFactionKey "Ses_NAPA"
+ }
+ NAPA_WIN2 {
+  coords 1228.963 0 467.155
+  m_sTitle "Заложники удержаны"
+  m_iScore 40
+  m_sFactionKey "Ses_NAPA"
+ }
+ UK_WIN2 {
+  coords 1726.439 0 467.155
+  m_sTitle "Заложники найдены"
+  m_iScore 40
+  m_sFactionKey "UK"
  }
 }
