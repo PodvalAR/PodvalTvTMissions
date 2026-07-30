@@ -1,0 +1,50 @@
+Vehicle BTR70_Ses_TKR1 : "{04B2A928ED8A2754}Prefabs/Vehicles/Wheeled/BTR70/BTR70_Ses_TKR.et" {
+ coords 1710.828 140.762 3827.648
+ angles -0.06 93.811 0.893
+ m_sAttachmentGroupName "TKR_100"
+}
+Vehicle UAZ469_uncovered_Turret_Ses_TKR_KORD1 : "{4FE7DBC898416589}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_uncovered_Turret_Ses_TKR_KORD.et" {
+ coords 1708.613 139.75 3789.084
+ angles -0.07 94.493 0.892
+}
+$grp Vehicle : "{5F112AA90CCA5368}Prefabs/Vehicles/Wheeled/BRDM2/BRDM2_Ses_TKR.et" {
+ BRDM2_Ses_TKR1 {
+  coords 1717.088 140.691 3873.601
+  angles -0.126 98.094 0.886
+  m_sAttachmentGroupName "TKR_111"
+ }
+ BRDM2_Ses_TKR2 {
+  coords 1715.75 140.946 3864.112
+  angles -0.126 98.094 0.886
+  m_sAttachmentGroupName "TKR_110"
+ }
+}
+Vehicle Ural4320_engineer_sand1 : "{7009ED8FBA7A1E7E}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_engineer_sand.et" {
+ components {
+  SCR_VehicleFactionAffiliationComponent "{5882CBD9AC741CEC}" {
+   "faction affiliation" "Ses_TKR"
+  }
+ }
+ coords 1654.368 141.108 3790.564
+ angles 0 -178.754 0
+}
+Vehicle UAZ452_transport_TKR1 : "{CEF1B6BBB4205D92}Prefabs/Vehicles/Wheeled/UAZ452/UAZ452_transport_TKR.et" {
+ coords 1708.451 139.376 3770.706
+ angles 2.722 87.344 0.769
+ m_sAttachmentGroupName "TKR_201"
+}
+Vehicle Ural4320_ZU1 : "{FD109F3702AAB392}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_ZU23.et" {
+ components {
+  SCR_VehicleFactionAffiliationComponent "{5882CBD9AC741CEC}" {
+   "faction affiliation" "Ses_TKR"
+  }
+ }
+ coords 1712.382 140.764 3843.852
+ angles 0 96.968 0
+ m_sAttachmentGroupName "TKR_112"
+}
+Vehicle UAZ469_uncovered_Turret_Ses_TKR_AGS1 : "{FD4DC101618C3BDE}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_uncovered_Turret_Ses_TKR_AGS.et" {
+ coords 1708.854 139.844 3793.448
+ angles -0.059 93.76 0.893
+ m_sAttachmentGroupName "TKR_200"
+}
