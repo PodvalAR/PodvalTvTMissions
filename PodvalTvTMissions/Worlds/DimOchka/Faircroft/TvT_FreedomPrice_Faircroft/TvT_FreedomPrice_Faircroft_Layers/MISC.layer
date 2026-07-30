@@ -1,0 +1,108 @@
+$grp ParticleEffectEntity {
+ {
+  coords 4072.15 9.806 6445.333
+  angles 0 7.841 0
+  EffectPath "{C7C126B8FC38B083}Particles/Smoke_Building_Shop.ptc"
+ }
+ {
+  coords 4066.991 9.59 6438.571
+  angles 0 -45 0
+  EffectPath "{C7C126B8FC38B083}Particles/Smoke_Building_Shop.ptc"
+ }
+}
+$grp GenericEntity : "{002B8C09F0E7E371}Prefabs/Props/Wrecks/S1203_wreck/S1203_wreck_static.et" {
+ {
+  coords 4067.261 9.599 6438.795
+  angles 1.898 -134.993 0.633
+ }
+ {
+  coords 4072.136 9.347 6445.523
+  angles 3.306 -174.059 0
+ }
+}
+GenericEntity : "{24F98A215FAA249C}Prefabs/Structures/Signs/Military/Supplies/Sign_SupplyStorage_01_Supplies_FIA.et" {
+ coords 3301.964 1.499 6433.184
+ angles 0 120 0
+}
+GenericEntity : "{261F10BDC068BB35}Prefabs/Props/Furniture/ChairOld_01.et" {
+ coords 3282.914 1.499 6412.876
+ angles 0 -30 0
+}
+SCR_ChimeraCharacter : "{51665F104FD8A4EB}Worlds/DimOchka/Faircroft/TvT_FreedomPrice_Faircroft/Static_CIV_3.et" {
+ coords 3280.697 1.499 6413.893
+ angles 0 75 0
+}
+SCR_ChimeraCharacter : "{6C527A283AB42DDC}Worlds/DimOchka/Faircroft/TvT_FreedomPrice_Faircroft/Static_CIV_4.et" {
+ coords 3281.532 1.499 6412.627
+ angles 0 14.609 0
+}
+Vehicle _Series_SWB_Transport_Covered_Variant_1 : "{88D5E9D74E9FBB42}Prefabs/Vehicles/Wheeled/LR_3Series/3Series_SWB_Transport_Covered_Variant_2.et" {
+ components {
+  RigidBody "{51DAA09FECF52BBF}" {
+   LayerPreset "PropFireView"
+   Static 1
+  }
+  ActionsManagerComponent "{C97BE5489221AE18}" {
+   Enabled 0
+  }
+ }
+ coords 4061.825 10.735 6431.843
+ angles -0.175 175.417 -92.179
+}
+Vehicle _Series_LWB_Base1 : "{9C7C2DC1C45E06A0}Prefabs/Vehicles/Wheeled/LR_3Series/3Series_LWB_Base.et" {
+ components {
+  RigidBody "{51DAA09FECF52BBF}" {
+   LayerPreset "PropFireView"
+   Static 1
+  }
+  ActionsManagerComponent "{C97BE5489221AE18}" {
+   Enabled 0
+  }
+ }
+ coords 4074.564 9.059 6454.835
+ angles -0.734 -113.88 -11.57
+}
+SCR_ChimeraCharacter A : "{B4FA13E9433D3380}Worlds/DimOchka/Faircroft/TvT_FreedomPrice_Faircroft/Static_CIV_2.et" {
+ coords 3283.678 1.499 6414.475
+ angles 0 52.54 0
+}
+$grp GenericEntity : "{CA1CCD5CC00C512A}PrefabsEditable/Auto/Props/Military/SupplyBox/SupplyShippingContainers/SupplyShippingContainers_01/E_SupplyShippingContainers_01_20ft.et" {
+ {
+  coords 3298.35 1.469 6432.935
+  angles 0 108.169 0
+ }
+ {
+  coords 3299.163 1.469 6435.411
+  angles 0 108.169 0
+ }
+}
+$grp GenericEntity : "{D7F69BF7D2DCA0A8}Prefabs/Props/Industrial/Pallets/Pallet_01.et" {
+ {
+  coords 3285.609 2.903 6414.292
+  angles 0 21.84 90
+ }
+ {
+  coords 3285.609 3.489 6414.292
+  angles 0 21.84 90
+ }
+ {
+  coords 3284.728 3.489 6412.095
+  angles 0 21.84 90
+ }
+ {
+  coords 3284.728 2.903 6412.095
+  angles 0 21.84 90
+ }
+ {
+  coords 3281.829 3.489 6411.081
+  angles 0 111.84 90
+ }
+ {
+  coords 3281.829 2.903 6411.081
+  angles 0 111.84 90
+ }
+}
+SCR_ChimeraCharacter : "{D8AE2709FFF9BCAE}Worlds/DimOchka/Faircroft/TvT_FreedomPrice_Faircroft/Static_CIV_1.et" {
+ coords 3282.034 1.499 6415.379
+ angles 0 180 0
+}
