@@ -228,16 +228,6 @@ $grp Vehicle : "{701ADC27F9D842DF}Prefabs/Vehicles/Wheeled/LR_3Series/3Series_LW
   angles -1.261 -130.02 -0.11
   m_sAttachmentGroupName "BRIT4"
  }
- _Series_LWB_Transport4 {
-  coords 4272.915 20.937 9382.177
-  angles 0 -135 0
-  m_sAttachmentGroupName "BRIT3"
- }
- _Series_LWB_Transport5 {
-  coords 4296.005 19.639 9403.574
-  angles 2.53 -135 0
-  m_sAttachmentGroupName "BRIT2"
- }
 }
 $grp Vehicle : "{8ACB8116F334AE6C}Prefabs/Vehicles/Wheeled/LR_3Series/dim_LWB_M2.et" {
  dim_LWB_M1 {
@@ -249,16 +239,6 @@ $grp Vehicle : "{8ACB8116F334AE6C}Prefabs/Vehicles/Wheeled/LR_3Series/dim_LWB_M2
   coords 6358.799 21.295 5472.032
   angles -1.258 -128.628 -0.14
   m_sAttachmentGroupName "BRIT4"
- }
- dim_LWB_M3 {
-  coords 4259.426 21.166 9370.048
-  angles 1.258 -128.781 0.137
-  m_sAttachmentGroupName "BRIT8"
- }
- dim_LWB_M4 {
-  coords 4302.089 19.022 9409.561
-  angles 5.031 -140.126 -0.451
-  m_sAttachmentGroupName "BRIT2"
  }
 }
 $grp Vehicle : "{935CA5B25EEF2E4D}Prefabs/Vehicles/Wheeled/LAV25/ROSOMAK.et" {
@@ -273,6 +253,23 @@ $grp Vehicle : "{935CA5B25EEF2E4D}Prefabs/Vehicles/Wheeled/LAV25/ROSOMAK.et" {
   m_sAttachmentGroupName "BRIT6"
  }
 }
+$grp Vehicle : "{9EA5E74FBE33D514}Prefabs/Vehicles/Wheeled/LAV25/ROSOMAKtransport.et" {
+ ROSOMAKtransport3 {
+  coords 4262.696 21.251 9373.251
+  angles 1.26 -129.463 0.122
+  m_sAttachmentGroupName "BRIT8"
+ }
+ ROSOMAKtransport1 {
+  coords 4296.542 19.62 9403.643
+  angles 2.53 -134.747 0.011
+  m_sAttachmentGroupName "BRIT2"
+ }
+ ROSOMAKtransport2 {
+  coords 4274.173 20.92 9382.96
+  angles 1.26 -129.463 0.122
+  m_sAttachmentGroupName "BRIT3"
+ }
+}
 $grp Vehicle : "{CAB4546B5DCE0AFB}Prefabs/Boat_base_us.et" {
  Boat_base_us1 {
   coords 1730.54 0 5127.348
@@ -283,15 +280,8 @@ $grp Vehicle : "{CAB4546B5DCE0AFB}Prefabs/Boat_base_us.et" {
   angles 0 -90 0
  }
 }
-$grp Vehicle : "{EDEAE951AFF2A836}Prefabs/Vehicles/Wheeled/LR_3Series/3Series_SWB_Transport.et" {
- _Series_SWB_Transport1 {
-  coords 6345.922 20.896 5461.386
-  angles -1.258 -128.586 -0.141
-  m_sAttachmentGroupName "BRIT9"
- }
- _Series_SWB_Transport2 {
-  coords 4265.074 21.062 9375.036
-  angles 0 -132.354 0
-  m_sAttachmentGroupName "BRIT8"
- }
+Vehicle _Series_SWB_Transport1 : "{EDEAE951AFF2A836}Prefabs/Vehicles/Wheeled/LR_3Series/3Series_SWB_Transport.et" {
+ coords 6345.922 20.896 5461.386
+ angles -1.258 -128.586 -0.141
+ m_sAttachmentGroupName "BRIT9"
 }
