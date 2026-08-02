@@ -1,0 +1,38 @@
+SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
+ coords 2638.41 87.32 7663.507
+}
+PerceptionManager PerceptionManager1 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 2666.354 86.479 7672.433
+}
+PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
+ components {
+  SCR_TimeAndWeatherHandlerComponent "{5EE3229927D4D2F5}" {
+   m_bUsePredefineStartingTimeAndWeather 1
+   m_aStartingWeatherAndTime {
+    SCR_TimeAndWeatherState "{695C5C9B737A86C0}" {
+     m_sWeatherPresetName "Clear"
+     m_iStartingHour 19
+     m_iStartingMinutes 45
+    }
+   }
+  }
+ }
+ coords 2641.267 87.799 7675.509
+}
+PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+ coords 7464.89 57.303 2740.56
+ angles 0 90 0
+ m_MarkerColor 0.502 0 0 1
+ m_sQuadName "flag-2"
+ m_fWorldSize 50
+ m_sDescription "Населенный пункт"
+ m_bUseWorldScale 0
+ m_aVisibleForFactions {
+  "RHS_USAF"
+  "RHS_AFRF"
+  "Ses_CDF"
+  ""
+ }
+ m_bVisibleForEmptyFaction 1
+ m_bShowForAnyFaction 1
+}

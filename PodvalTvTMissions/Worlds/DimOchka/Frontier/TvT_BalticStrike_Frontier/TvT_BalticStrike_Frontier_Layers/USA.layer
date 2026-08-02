@@ -1,0 +1,246 @@
+Vehicle _Series_LWB_Transport_Camo1 : "{098E31B006CAE0CE}Prefabs/Vehicles/Wheeled/LR_3Series/3Series_LWB_Transport_Camo.et" {
+ coords 4577.101 40.438 4699.372
+ angles 0 123.181 0
+ m_sAttachmentGroupName "AT_HQ8"
+}
+$grp Vehicle : "{3312ADBF53A16DD9}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS.et" {
+ LAV25_RHS1 {
+  coords 6796.033 57.36 6148.722
+  angles 0 162.713 0
+  m_sAttachmentGroupName "AT_USA3"
+ }
+ LAV25_RHS2 {
+  coords 6801.652 57.344 6127.502
+  angles 0 162.713 0
+  m_sAttachmentGroupName "AT_USA2"
+ }
+}
+$grp SCR_AIGroup : "{5E14FD08E0C65019}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/MTVT/Group_RHS_USAF_PDVL_ATAK_Squad_Motorized.et" {
+ AT_USA3 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 3
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 6783.167 57.344 6148.364
+  angles 0 70.559 0
+ }
+ AT_USA2 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 3
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 6790.236 57.344 6128.247
+  angles 0 70.559 0
+ }
+}
+$grp Vehicle : "{8ACB8116F334AE6C}Prefabs/Vehicles/Wheeled/LR_3Series/dim_LWB_M2.et" {
+ dim_LWB_M1 {
+  coords 4593.952 40.438 4692.82
+  angles 0 120 0
+  m_sAttachmentGroupName "AT_HQ6"
+ }
+ dim_LWB_M2 {
+  coords 4588.121 40.438 4694.737
+  angles 0 110.994 0
+  m_sAttachmentGroupName "AT_HQ6"
+ }
+ dim_LWB_M3 {
+  coords 3045.632 57.403 2223.822
+  angles 0 153.501 0
+  m_sAttachmentGroupName "AT_HQ4"
+ }
+ dim_LWB_M4 {
+  coords 3037.883 57.438 2239.405
+  angles 0 153.501 0
+  m_sAttachmentGroupName "AT_HQ5"
+ }
+}
+$grp Vehicle : "{935CA5B25EEF2E4D}Prefabs/Vehicles/Wheeled/LAV25/ROSOMAK.et" {
+ ROSOMAK1 {
+  coords 3050.819 57.375 2213.661
+  angles 0 153.023 0
+  m_sAttachmentGroupName "AT_HQ3"
+ }
+ ROSOMAK2 {
+  coords 3057.609 57.375 2200.322
+  angles 0 153.023 0
+  m_sAttachmentGroupName "AT_HQ2"
+ }
+}
+SCR_AIGroup AT_USA : "{BC3F32868941B97A}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/MTVT/Group_RHS_USAF_ATAK_Regular_Squad.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+   m_iCompanyCallsign 3
+  }
+ }
+ coords 6827.818 57.315 6142.343
+ angles 0 -105.933 0
+ m_sCustomNameSet "Пехотный отряд на M1151"
+}
+$grp Vehicle : "{D574C943C9F8C9DF}Prefabs/Vehicles/Wheeled/M998/M1151_armed_M2HB_AP.et" {
+ M1151_armed_M2HB_AP1 {
+  coords 6818.234 57.349 6131.642
+  angles 0 -16.331 0
+  m_sAttachmentGroupName "AT_USA"
+ }
+ M1151_armed_M2HB_AP2 {
+  coords 6826.273 57.343 6134.091
+  angles 0 -15.357 0
+  m_sAttachmentGroupName "AT_USA"
+ }
+}
+$grp SCR_AIGroup : "{F77D5F8E4E2A70A7}Prefabs/Groups/BLUFOR/RHS_USAF/Group_RHS_USAF_Base.et" {
+ AT_HQ {
+  coords 3069.156 57.313 2192.615
+  angles 0 -117.935 0
+  m_aUnitPrefabSlots {
+   "{A01565FBD3DF8C5E}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/dim_LAT_Officer.et"
+  }
+  m_sCustomNameSet "Командующий ВС Латвии"
+ }
+ AT_HQ2 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 3065.706 57.344 2199.95
+  angles 0 -114.835 0
+  m_aUnitPrefabSlots {
+   "{5F44C873761F23B9}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/dim_LAT_SL.et"
+   "{588332221099997A}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/dim_LAT_TL.et"
+   "{EA6450AD3D129FF6}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/dim_LAT_AT.et"
+   "{F8FBFBB006F4471A}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/dim_LAT_AAT.et"
+   "{3F19474DB32CE880}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/dim_LAT_GL.et"
+   "{DA27C1532D507433}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/dim_LAT_Rifleman.et"
+   "{35A3F8CD5CF521C1}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/dim_LAT_LAT.et"
+   "{3E34020C2E71E6D6}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/dim_LAT_CC.et"
+   "{B940326B2D5890BE}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/dim_LAT_Crew.et"
+  }
+  m_sCustomNameSet "Zemessardze (ROSOMAK)"
+ }
+ AT_HQ3 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 3059.384 57.344 2213.341
+  angles 0 -115.608 0
+  m_aUnitPrefabSlots {
+   "{5F44C873761F23B9}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/dim_LAT_SL.et"
+   "{588332221099997A}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/dim_LAT_TL.et"
+   "{EA6450AD3D129FF6}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/dim_LAT_AT.et"
+   "{F8FBFBB006F4471A}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/dim_LAT_AAT.et"
+   "{3F19474DB32CE880}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/dim_LAT_GL.et"
+   "{DA27C1532D507433}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/dim_LAT_Rifleman.et"
+   "{35A3F8CD5CF521C1}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/dim_LAT_LAT.et"
+   "{3E34020C2E71E6D6}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/dim_LAT_CC.et"
+   "{B940326B2D5890BE}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/dim_LAT_Crew.et"
+  }
+  m_sCustomNameSet "Zemessardze (ROSOMAK)"
+ }
+ AT_HQ4 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 3052.348 57.375 2227.427
+  angles 0 -116.238 0
+  m_aUnitPrefabSlots {
+   "{5F44C873761F23B9}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/dim_LAT_SL.et"
+   "{588332221099997A}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/dim_LAT_TL.et"
+   "{EA6450AD3D129FF6}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/dim_LAT_AT.et"
+   "{F8FBFBB006F4471A}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/dim_LAT_AAT.et"
+   "{3F19474DB32CE880}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/dim_LAT_GL.et"
+   "{DA27C1532D507433}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/dim_LAT_Rifleman.et"
+   "{35A3F8CD5CF521C1}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/dim_LAT_LAT.et"
+   "{889C3C00A5D0B924}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/dim_LAT_Marksman.et"
+  }
+  m_sCustomNameSet "Zemessardze"
+ }
+ AT_HQ6 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 4593.588 40.437 4695.805
+  angles 0 -159.587 0
+  m_aUnitPrefabSlots {
+   "{ADF0357018DF8B6B}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/SPN/dim_LAT_SPN_TL.et"
+   "{CA6A401FBB6AFA91}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/SPN/dim_LAT_SPN_GL.et"
+   "{0390FADF477668DF}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/SPN/dim_LAT_SPN_Javelin.et"
+   "{B43AF1F19BC4C338}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/SPN/dim_LAT_SPN_Rifleman.et"
+   "{0072EB3EC2C1F3B3}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/SPN/dim_LAT_SPN_Sapper.et"
+   "{6EFF735FF5EEBC59}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/SPN/dim_LAT_SPN_Sniper.et"
+  }
+  m_sCustomNameSet "SUV"
+ }
+ AT_HQ8 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 4573.757 40.438 4697.006
+  angles 0 21.203 0
+  m_aUnitPrefabSlots {
+   "{ADF0357018DF8B6B}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/SPN/dim_LAT_SPN_TL.et"
+   "{CA6A401FBB6AFA91}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/SPN/dim_LAT_SPN_GL.et"
+   "{0390FADF477668DF}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/SPN/dim_LAT_SPN_Javelin.et"
+   "{B43AF1F19BC4C338}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/SPN/dim_LAT_SPN_Rifleman.et"
+   "{0072EB3EC2C1F3B3}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/SPN/dim_LAT_SPN_Sapper.et"
+   "{6EFF735FF5EEBC59}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/SPN/dim_LAT_SPN_Sniper.et"
+  }
+  m_sCustomNameSet "SUV"
+ }
+ AT_HQ5 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 3044.018 57.375 2244.327
+  angles 0 -116.238 0
+  m_aUnitPrefabSlots {
+   "{5F44C873761F23B9}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/dim_LAT_SL.et"
+   "{588332221099997A}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/dim_LAT_TL.et"
+   "{EA6450AD3D129FF6}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/dim_LAT_AT.et"
+   "{F8FBFBB006F4471A}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/dim_LAT_AAT.et"
+   "{3F19474DB32CE880}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/dim_LAT_GL.et"
+   "{DA27C1532D507433}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/dim_LAT_Rifleman.et"
+   "{35A3F8CD5CF521C1}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/dim_LAT_LAT.et"
+   "{889C3C00A5D0B924}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/dim_LAT_Marksman.et"
+  }
+  m_sCustomNameSet "Zemessardze"
+ }
+}
+$grp Vehicle : "{FDDB4A5C62272B16}Prefabs/Vehicles/Wheeled/LR_3Series/3Series_LWB_Transport_Variant_2.et" {
+ _Series_LWB_Transport_Variant_1 {
+  coords 3042.042 57.406 2231.043
+  angles 0 153.559 0
+  m_sAttachmentGroupName "AT_HQ4"
+ }
+ _Series_LWB_Transport_Variant_2 {
+  coords 3034.292 57.438 2246.626
+  angles 0 153.559 0
+  m_sAttachmentGroupName "AT_HQ5"
+ }
+ _Series_LWB_Transport_Variant_3 {
+  coords 3062.252 57.406 2190.405
+  angles 0 153.559 0
+  m_sAttachmentGroupName "AT_HQ"
+ }
+}
