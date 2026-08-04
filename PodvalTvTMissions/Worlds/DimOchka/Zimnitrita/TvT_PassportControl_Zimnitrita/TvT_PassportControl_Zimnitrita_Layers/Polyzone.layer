@@ -1,0 +1,112 @@
+$grp GenericEntity : "{27EDF8AFC363A7D5}Prefabs/Props/Signs/Industrial/SignIndustrial_USSR_02_warnings_underminedarea_pole.et" {
+ {
+  coords 2241.952 172.204 7197.789
+  angles -9.589 136.123 -6.712
+ }
+ {
+  coords 2213.583 172.347 7157.656
+  angles -11.817 87.47 12.173
+ }
+ {
+  coords 2198.276 155.517 7084.207
+  angles 2.92 59.853 -2.894
+ }
+ {
+  coords 2689.98 244.337 6700.348
+  angles -7.672 -29.765 -1.758
+ }
+ {
+  coords 2713.3 237.863 6756.472
+  angles 3.64 -59.833 2.629
+ }
+ {
+  coords 2758.077 241.051 6828.16
+  angles -0.963 -56.048 -6.555
+ }
+ {
+  coords 2832.862 226.509 6901.276
+  angles -4.388 -41.501 4.465
+ }
+ {
+  coords 2919.492 231.255 7003.225
+  angles 2.973 -71.179 -0.404
+ }
+ {
+  coords 2917.582 229.698 7044.857
+  angles 0.092 -116.135 14.121
+ }
+ {
+  coords 2291.55 155.872 7250.19
+  angles -9.589 136.123 -6.712
+ }
+ {
+  coords 2531.473 83.336 7334.598
+  angles 12.228 -151.752 -13.111
+ }
+ {
+  coords 2554.763 83.601 7323.184
+  angles 11.492 -151.772 5.612
+ }
+ {
+  coords 2649.148 127.108 7263.008
+  angles 0 -150 0
+ }
+}
+$grp GenericEntity : "{3D78D7D606FF9818}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_NoCapture.et" {
+ flag1 {
+  coords 7232.574 63.079 6299.226
+ }
+ flag2 {
+  coords 7308.563 66.337 6236.646
+ }
+ flag3 {
+  coords 7444.681 63.472 6306.23
+ }
+ flag4 {
+  coords 7486.367 56.319 6353.562
+  angles 0 -15 0
+ }
+}
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{69F4ABD0C13CC2CA}" {
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "USAF_WIN"
+     }
+     m_sFailedObjectiveNames {
+      "AFRF_WIN"
+     }
+     m_sMessage "ГЭС захвачена"
+     m_Timer GUB_ZoneControlTimer "{69F4ABD0C2942D8E}" {
+      timeToComplete 150
+     }
+     m_ZoneController GUB_ZoneController "{69F4ABD0CD09E009}" {
+      m_sZoneEntityName "capture"
+     }
+     m_FlagController GUB_FlagController "{69F4ABD0CE2CC267}" {
+      m_aFlagNames {
+       "flag1"
+       "flag2"
+       "flag3"
+       "flag4"
+      }
+      m_fStartFactionKey "RHS_AFRF"
+      m_fEndFactionKey "RHS_USAF"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{69F4ABD0CB823B14}" {
+       m_sFirstFactionKey "RHS_USAF"
+       m_sSecondFactionKey "RHS_AFRF"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 403.473 54.19 6769.772
+}

@@ -1,0 +1,42 @@
+SCR_ChimeraCharacter : "{28824B729BF4BF03}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/FSB/dim_FSB_TL.et" {
+ ID "520EC961A090B1EE"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Старший пограничник ФСБ"
+    Icon "{8C052FF3E225CE4A}UI/Icons/dim/FSB_SL.edds"
+   }
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{BFEA719491610A45}Prefabs/Weapons/Rifles/AKS74U/Rifle_AKS74U.et"
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{45FB7DC87BAE49AA}Prefabs/Characters/HeadGear/Hat_PeakedCap_USSR_01/dim_Hat_PeakedCap_USSR_01.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{E652D625A46A00FC}Prefabs/Characters/Uniforms/Jacket_Suit_01/Jacket_Suit_01_Grey_V1.et"
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{401072A652DD9849}Prefabs/Characters/Uniforms/Pants_Suit_01/Pants_Suit_01_grey_V1.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{68AEDB5590B6AF3A}" {
+     TargetStorage "Pants/Pants_Suit_01_grey_V1.et"
+    }
+    ItemsInitConfigurationItem "{68AEDB559092C98F}" {
+     TargetStorage "Pants/Pants_Suit_01_grey_V1.et"
+    }
+    ItemsInitConfigurationItem "{68AF141C4C1D61CC}" {
+     TargetStorage "Jacket/Jacket_Suit_01_Grey_V1.et"
+    }
+   }
+  }
+ }
+ coords 7476.688 56.438 6339.982
+ angles 0 105 0
+}
