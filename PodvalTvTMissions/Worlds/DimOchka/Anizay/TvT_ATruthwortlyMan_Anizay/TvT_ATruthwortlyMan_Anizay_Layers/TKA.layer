@@ -1,0 +1,293 @@
+$grp Vehicle : "{123595894023C474}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS_D.et" {
+ LAV25_RHS_D1 {
+  coords 3640.517 190.545 1626.033
+  angles 0 -120 0
+ }
+ LAV25_RHS_D2 {
+  coords 3644.776 190.545 1618.657
+  angles 0 -120 0
+ }
+}
+$grp Vehicle : "{2E86C8B789E79728}Prefabs/Vehicles/Wheeled/Ural4320/Ses_TKA/Ural4320_engineer_sand_TKA.et" {
+ Ural4320_engineer_sand_TKA1 {
+  coords 8434.596 111.532 6996.567
+  angles 0 -90 0
+  m_bEnableMoveOnFreeze 1
+ }
+ Ural4320_engineer_sand_TKA2 {
+  coords 8434.759 111.531 6975.691
+  angles 0 -90 0
+  m_bEnableMoveOnFreeze 1
+ }
+}
+Vehicle dim_Cessna1 : "{8A5B16A2EB176788}Prefabs/Vehicles/Planes/dim_Cessna172.et" {
+ coords 3524.023 190.392 1551.457
+ angles 0 75 0
+}
+Vehicle Ural4320_Ses_TKA_transport_covered6 : "{AC3FA513706226DD}Prefabs/Vehicles/Wheeled/Ural4320/Ses_TKA/Ural4320_Ses_TKA_transport_covered.et" {
+ components {
+  SCR_UniversalInventoryStorageComponent "{5916C58171230A92}" {
+   MultiSlots {
+    MultiSlotConfiguration "{5A60D38EDB3709A9}" {
+     SlotTemplate InventoryStorageSlot Bandages {
+      Prefab "{0570CF5F094A554F}Prefabs/Weapons/Launchers/RPG7/Launcher_RPG7_empty_PGO.et"
+     }
+     NumSlots 5
+    }
+    MultiSlotConfiguration "{6A0906F0358A5EBD}" {
+     SlotTemplate InventoryStorageSlot AMMO {
+      Prefab "{FBBF84E3B447D822}Prefabs/Weapons/Ammo/RPG/RHS_AmmoRocket_PG7VL.et"
+     }
+     NumSlots 20
+    }
+   }
+  }
+ }
+ coords 5210.408 207.219 1807.238
+ angles 0 -75 0
+ m_bEnableMoveOnFreeze 1
+}
+$grp SCR_AIGroup : "{B2829E998DF41555}Prefabs/Groups/OPFOR/Ses_TKA/Group_A2F_TKA_Squad.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68E7468B5129FCA8}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 8353.833 111.531 6956.189
+  angles 0 -0.343 0
+  m_faction "Ses_TKR"
+  m_aUnitPrefabSlots {
+   "{3EAB31BD43ECDF10}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_SL_1.et"
+   "{C8DC8AFF9B099571}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL_3.et"
+   "{0E4342B1BA50DEE3}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_MG_1.et"
+   "{4860C7A306B8BD26}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AMG_1.et"
+   "{F77ABDD02B6EE454}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AR_2.et"
+   "{4114F2E62B288D34}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL_1.et"
+   "{403DDD18AFFBC0D9}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Sapper_1.et"
+   "{D0E3CB03406978A3}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Marksman.et"
+  }
+  m_sCustomNameSet "Отряд боевиков"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68E7468B5129FCA8}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 8379.956 111.531 6955.947
+  angles 0 2.643 0
+  m_faction "Ses_TKR"
+  m_aUnitPrefabSlots {
+   "{833007A59429D956}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_SL_4.et"
+   "{2D40C60697EC021A}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL_2.et"
+   "{62177651069451CD}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_MG_2.et"
+   "{2434F343BA7C3208}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AMG_2.et"
+   "{F77ABDD02B6EE454}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AR_2.et"
+   "{BDBB1F0764260B73}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL.et"
+   "{878B3AA80A71C6A6}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_MG_3.et"
+   "{C1A8BFBAB699A563}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AMG_3.et"
+  }
+  m_sCustomNameSet "Отряд боевиков"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68E7468B5129FCA8}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 3
+   }
+  }
+  coords 8437.437 111.531 6959.735
+  angles 0 -90.215 0
+  m_faction "Ses_TKR"
+  m_aUnitPrefabSlots {
+   "{3EAB31BD43ECDF10}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_SL_1.et"
+   "{2D40C60697EC021A}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL_2.et"
+   "{878B3AA80A71C6A6}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_MG_3.et"
+   "{A30720AB3537A74E}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AMG.et"
+   "{F77ABDD02B6EE454}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AR_2.et"
+   "{BDBB1F0764260B73}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL.et"
+   "{82583650C8E9B5B4}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman.et"
+   "{C9F5A5011FDAD89C}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Sapper_3.et"
+   "{0280BB939933F116}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Marksman_3.et"
+  }
+  m_sCustomNameSet "Отряд боевиков"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68E7468B5129FCA8}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 4
+   }
+  }
+  coords 8438.723 111.531 7011.632
+  angles 0 -86.394 0
+  m_faction "Ses_TKR"
+  m_aUnitPrefabSlots {
+   "{3EAB31BD43ECDF10}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_SL_1.et"
+   "{BDBB1F0764260B73}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL.et"
+   "{B06E612693916259}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AR.et"
+   "{DCB95034932A16B8}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman_1.et"
+   "{B0ED64D42FEE9996}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman_2.et"
+   "{403DDD18AFFBC0D9}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Sapper_1.et"
+   "{D0E3CB03406978A3}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Marksman.et"
+  }
+  m_sCustomNameSet "Отряд боевиков"
+ }
+ DEF_HQ1 {
+  components {
+   PS_GroupCallsignAssigner "{68E7468B5129FCA8}" {
+   }
+  }
+  coords 8364.212 111.531 7056.835
+  angles 0 88.79 0
+  m_faction "Ses_TKR"
+  m_aUnitPrefabSlots {
+   "{9D924C7042A44B05}Worlds/DimOchka/Kunar/TvT_BountyHunters_Kunar/dim_VIP_TKR_1.et"
+  }
+  m_sCustomNameSet "Командир боевиков"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68E7468B5129FCA8}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 8364.67 111.531 7032.195
+  angles 0 89.361 0
+  m_faction "Ses_TKR"
+  m_aUnitPrefabSlots {
+   "{52FF055DFF28503E}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_SL_2.et"
+   "{BDBB1F0764260B73}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL.et"
+   "{62177651069451CD}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_MG_2.et"
+   "{4860C7A306B8BD26}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AMG_1.et"
+   "{F77ABDD02B6EE454}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AR_2.et"
+   "{2C69E9F8133F4FF7}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Sapper_2.et"
+   "{E71CF76A95D6667D}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Marksman_2.et"
+  }
+  m_sCustomNameSet "Отряд боевиков"
+ }
+ TKR {
+  components {
+   PS_GroupCallsignAssigner "{68E7468B5129FCA8}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 8406.949 111.531 6790.313
+  angles 0 1.037 0
+  m_faction "Ses_TKR"
+  m_aUnitPrefabSlots {
+   "{3EAB31BD43ECDF10}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_SL_1.et"
+   "{82583650C8E9B5B4}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman.et"
+   "{DCB95034932A16B8}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman_1.et"
+  }
+  m_sCustomNameSet "Расчет ПТРК"
+ }
+ TKR2 {
+  components {
+   PS_GroupCallsignAssigner "{68E7468B5129FCA8}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 8391.194 111.531 6790.492
+  angles 0 -0.94 0
+  m_faction "Ses_TKR"
+  m_aUnitPrefabSlots {
+   "{3EAB31BD43ECDF10}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_SL_1.et"
+   "{B0ED64D42FEE9996}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman_2.et"
+   "{5571282D230B0EFD}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman_3.et"
+  }
+  m_sCustomNameSet "Расчет ПТРК"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68E7468B5129FCA8}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 8364.509 111.531 7041.983
+  angles 0 90.606 0
+  m_faction "Ses_TKR"
+  m_aUnitPrefabSlots {
+   "{08705F90B79D0BFA}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Sniper.et"
+   "{58AE4C26D0517659}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Sniper_2.et"
+  }
+  m_sCustomNameSet "Пара снайперов"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68E7468B5129FCA8}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 8364.418 111.531 7050.851
+  angles 0 90.606 0
+  m_faction "Ses_TKR"
+  m_aUnitPrefabSlots {
+   "{CEFA20AB0C0BE1B6}Worlds/DimOchka/Anizay/TvT_ATruthwortlyMan_Anizay/dim_TKR_Crew_1.et"
+   "{A2AE144BB0CF6E98}Worlds/DimOchka/Anizay/TvT_ATruthwortlyMan_Anizay/dim_TKR_Crew_2.et"
+  }
+  m_sCustomNameSet "Агенты ЦРУ (Экипаж)"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68E7468B5129FCA8}" {
+    m_iCompanyCallsign 4
+   }
+  }
+  coords 3530.102 190.392 1560.496
+  angles 0 79.852 0
+  m_faction "Ses_TKR"
+  m_aUnitPrefabSlots {
+   "{D19ABDC2755AD17F}Worlds/DimOchka/Anizay/TvT_ATruthwortlyMan_Anizay/dim_Gastovski.et"
+  }
+  m_sCustomNameSet "Джеймс Гастовски"
+ }
+ CIA {
+  components {
+   PS_GroupCallsignAssigner "{68E7468B5129FCA8}" {
+    m_iCompanyCallsign 4
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 5209.841 207.219 1813.505
+  angles 0 -169.483 0
+  m_faction "Ses_TKR"
+  m_aUnitPrefabSlots {
+   "{839E2EECC596FD11}Worlds/DimOchka/Anizay/TvT_ATruthwortlyMan_Anizay/dim_CIA.et"
+  }
+  m_sCustomNameSet "Агент ЦРУ"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68E7468B5129FCA8}" {
+    m_iCompanyCallsign 4
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 5213.635 207.219 1812.788
+  angles 0 -168.315 0
+  m_faction "Ses_TKR"
+  m_aUnitPrefabSlots {
+   "{CEFA20AB0C0BE1B6}Worlds/DimOchka/Anizay/TvT_ATruthwortlyMan_Anizay/dim_TKR_Crew_1.et"
+   "{A2AE144BB0CF6E98}Worlds/DimOchka/Anizay/TvT_ATruthwortlyMan_Anizay/dim_TKR_Crew_2.et"
+  }
+  m_sCustomNameSet "Агенты ЦРУ (Экипаж)"
+ }
+}
+$grp Vehicle : "{F3C22A3CC0664AB8}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_Ses_TKA.et" {
+ UAZ469_Ses_TKA1 {
+  coords 8414.654 111.542 6797.048
+  angles 0 -0.551 0
+  m_sAttachmentGroupName "TKR"
+ }
+ UAZ469_Ses_TKA2 {
+  coords 8386.178 111.542 6796.773
+  angles 0 -0.551 0
+  m_sAttachmentGroupName "TKR2"
+ }
+}

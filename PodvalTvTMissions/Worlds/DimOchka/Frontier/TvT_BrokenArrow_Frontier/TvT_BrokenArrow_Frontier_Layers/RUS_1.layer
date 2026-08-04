@@ -1,0 +1,281 @@
+Vehicle _Series_LWB_Transport_Camo1 : "{098E31B006CAE0CE}Prefabs/Vehicles/Wheeled/LR_3Series/3Series_LWB_Transport_Camo.et" {
+ coords 4653.84 57.344 6092.301
+ angles 0 3.181 0
+ m_sAttachmentGroupName "DEF_HQ8"
+}
+$grp Vehicle : "{2B15F98903994DA3}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_covered_camo1.et" {
+ Ural4320_transport_covered_camo1 {
+  coords 6786.15 73.469 2551.986
+  angles 0 -83.318 0
+  m_sAttachmentGroupName "ALL_RUS2"
+ }
+ Ural4320_transport_covered_camo2 {
+  coords 6809.772 73.5 2548.902
+  angles 0 -82.327 0
+  m_sAttachmentGroupName "ALL_RUS3"
+ }
+}
+Vehicle GAZ_TIGR_v2_Unarmed1 : "{2C9B4D8196812513}Prefabs/Vehicles/Wheeled/TIGR/Unarmed/GAZ_TIGR_v2_Unarmed.et" {
+ coords 6726.459 73.375 2560.065
+ angles 0 -83.477 0
+ m_sAttachmentGroupName "ALL_RUS0"
+}
+$grp Vehicle : "{451D0A74C978CB21}Prefabs/Vehicles/Wheeled/TIGR/ArbaletDM/GAZ_TIGR_v2_Arbalet.et" {
+ GAZ_TIGR_v2_Arbalet1 {
+  coords 2476.614 73.469 6491.004
+  angles 0 127.146 0
+  m_sAttachmentGroupName "AT_REC"
+ }
+ GAZ_TIGR_v2_Arbalet2 {
+  coords 2464.944 73.439 6495.034
+  angles -1.554 119.783 -0.889
+  m_sAttachmentGroupName "AT_REC2"
+ }
+ GAZ_TIGR_v2_Arbalet3 {
+  coords 6833.728 73.501 2544.998
+  angles -0.886 -81.868 -0.127
+  m_sAttachmentGroupName "ALL_RUS7"
+ }
+}
+Vehicle dim_Mi24V_armed_S1 : "{4BE7C1D6097A827F}Prefabs/Vehicles/Helicopters/Mi24/dim_Mi24V_armed_S8.et" {
+ coords 8039.688 73.794 1826.335
+ angles 0 0 0
+ m_sAttachmentGroupName "ALL_RUS5"
+}
+$grp SCR_AIGroup : "{7F40D42C0CE8A499}Prefabs/Groups/OPFOR/RHS_AFRF/Group_RHS_AFRF_Base.et" {
+ AT_REC {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 4
+   }
+  }
+  coords 2481.488 73.469 6491.996
+  angles 0 -140.45 0
+  m_aUnitPrefabSlots {
+   "{6478BF78B0C885F6}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/CamoSuit/dim_VDV_Recon_Suit_SL.et"
+   "{19605380D55BB96F}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/CamoSuit/dim_VDV_Recon_Suit_SR.et"
+   "{9BE3309876F5FBBD}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/CamoSuit/dim_VDV_Recon_Suit_Rfl.et"
+   "{9C60FCF343AB2D1F}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/CamoSuit/dim_VDV_Recon_Suit_Flame.et"
+   "{8B14F695DD38BB1B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/CamoSuit/dim_VDV_Recon_Suit_VAL.et"
+  }
+  m_sCustomNameSet "Разведка"
+ }
+ AT_REC2 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 4
+    m_iSquadCallsign 1
+   }
+  }
+  coords 2462.059 73.429 6493.333
+  angles 0 39.381 0
+  m_aUnitPrefabSlots {
+   "{6478BF78B0C885F6}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/CamoSuit/dim_VDV_Recon_Suit_SL.et"
+   "{19605380D55BB96F}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/CamoSuit/dim_VDV_Recon_Suit_SR.et"
+   "{9BE3309876F5FBBD}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/CamoSuit/dim_VDV_Recon_Suit_Rfl.et"
+   "{9C60FCF343AB2D1F}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/CamoSuit/dim_VDV_Recon_Suit_Flame.et"
+   "{8B14F695DD38BB1B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Scout/CamoSuit/dim_VDV_Recon_Suit_VAL.et"
+  }
+  m_sCustomNameSet "Разведка"
+ }
+ ALL_RUS2 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 6784.035 73.469 2556.918
+  angles 0 -174.348 0
+  m_aUnitPrefabSlots {
+   "{D8E969BC8B5E3B04}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_SL.et"
+   "{A5F18544EECD079D}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_SR.et"
+   "{6DC9F162C053874B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_AT.et"
+   "{2D8295F4CEA239BD}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_AAT.et"
+   "{DC9CE5F7416CDCB7}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_Rfl_1.et"
+   "{55549DEEF14DC4F2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_Rfl_3.et"
+   "{25919A731E43E20C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_SVD.et"
+  }
+  m_sCustomNameSet "Отделение ВДВ"
+ }
+ ALL_RUS0 {
+  coords 6728.277 73.358 2564.193
+  angles 0 -175.704 0
+  m_aUnitPrefabSlots {
+   "{7516B89936D669A5}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_Officer.et"
+  }
+  m_sCustomNameSet "Командир ВС РФ"
+ }
+ ALL_RUS3 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 6807.598 74.044 2554.142
+  angles 0 -172.802 0
+  m_aUnitPrefabSlots {
+   "{D8E969BC8B5E3B04}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_SL.et"
+   "{A5F18544EECD079D}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_SR.et"
+   "{6DC9F162C053874B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_AT.et"
+   "{2D8295F4CEA239BD}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_AAT.et"
+   "{DC9CE5F7416CDCB7}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_Rfl_1.et"
+   "{55549DEEF14DC4F2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_Rfl_3.et"
+   "{25919A731E43E20C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_SVD.et"
+  }
+  m_sCustomNameSet "Отделение ВДВ"
+ }
+ ALL_RUS4 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 6819.314 73.5 2552.463
+  angles 0 -173.331 0
+  m_aUnitPrefabSlots {
+   "{D8E969BC8B5E3B04}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_SL.et"
+   "{A5F18544EECD079D}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_SR.et"
+   "{72F23EE109F04459}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_MG_Opt.et"
+   "{F47EDD1784EB0C3B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_MGAB.et"
+   "{B0C8D117FDA85399}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_Rfl_2.et"
+   "{6860B8D684214DC5}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_Rfl_4.et"
+   "{25919A731E43E20C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_SVD.et"
+  }
+  m_sCustomNameSet "Отделение ВДВ"
+ }
+ ALL_RUS6 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 6794.266 73.469 2555.559
+  angles 0 -172.449 0
+  m_aUnitPrefabSlots {
+   "{D8E969BC8B5E3B04}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_SL.et"
+   "{A5F18544EECD079D}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_SR.et"
+   "{72F23EE109F04459}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_MG_Opt.et"
+   "{F47EDD1784EB0C3B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_MGAB.et"
+   "{8DFCF42F88C4DAAE}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_Rfl_5.et"
+   "{6860B8D684214DC5}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_Rfl_4.et"
+   "{25919A731E43E20C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_SVD.et"
+  }
+  m_sCustomNameSet "Отделение ВДВ"
+ }
+ ALL_RUS10 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 6743.313 73.375 2562.457
+  angles 0 -173.471 0
+  m_aUnitPrefabSlots {
+   "{D8E969BC8B5E3B04}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_SL.et"
+   "{A5F18544EECD079D}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_SR.et"
+   "{6DC9F162C053874B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_AT.et"
+   "{2D8295F4CEA239BD}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_AAT.et"
+   "{DC9CE5F7416CDCB7}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_Rfl_1.et"
+   "{55549DEEF14DC4F2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_Rfl_3.et"
+   "{25919A731E43E20C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_SVD.et"
+   "{E6D5BAE5703C9AA7}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Crew_Gunner.et"
+   "{C71B7D7DEAD5B6F3}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Crew.et"
+  }
+  m_sCustomNameSet "Отделение ВДВ"
+ }
+ ALL_RUS11 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 6759.681 73.375 2560.306
+  angles 0 -171.643 0
+  m_aUnitPrefabSlots {
+   "{D8E969BC8B5E3B04}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_SL.et"
+   "{A5F18544EECD079D}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_SR.et"
+   "{6DC9F162C053874B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_AT.et"
+   "{2D8295F4CEA239BD}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_AAT.et"
+   "{DC9CE5F7416CDCB7}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_Rfl_1.et"
+   "{55549DEEF14DC4F2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_Rfl_3.et"
+   "{25919A731E43E20C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_SVD.et"
+   "{E6D5BAE5703C9AA7}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Crew_Gunner.et"
+   "{C71B7D7DEAD5B6F3}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Crew.et"
+  }
+  m_sCustomNameSet "Отделение ВДВ"
+ }
+ ALL_RUS12 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 6774.692 73.375 2558.101
+  angles 0 -171.643 0
+  m_aUnitPrefabSlots {
+   "{D8E969BC8B5E3B04}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_SL.et"
+   "{A5F18544EECD079D}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_SR.et"
+   "{6DC9F162C053874B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_AT.et"
+   "{2D8295F4CEA239BD}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_AAT.et"
+   "{DC9CE5F7416CDCB7}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_Rfl_1.et"
+   "{55549DEEF14DC4F2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_Rfl_3.et"
+   "{25919A731E43E20C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_SVD.et"
+   "{E6D5BAE5703C9AA7}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Crew_Gunner.et"
+   "{C71B7D7DEAD5B6F3}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Crew.et"
+  }
+  m_sCustomNameSet "Отделение ВДВ"
+ }
+ ALL_RUS5 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 8028.528 73.437 1828.548
+  angles 0 91.143 0
+  m_aUnitPrefabSlots {
+   "{3AF9FCD1A5F669AB}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Pilot.et"
+   "{B41DB2D49B8FE0A3}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Pilot_CoPilot.et"
+  }
+  m_sCustomNameSet "Экипаж Ми-24"
+ }
+ ALL_RUS7 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 2
+   }
+  }
+  coords 6835.726 73.5 2549.496
+  angles 0 -170.873 0
+  m_aUnitPrefabSlots {
+   "{D8E969BC8B5E3B04}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_SL.et"
+   "{B0C8D117FDA85399}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_Rfl_2.et"
+   "{6860B8D684214DC5}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_Rfl_4.et"
+  }
+  m_sCustomNameSet "Отделение ВДВ"
+ }
+}
+$grp Vehicle : "{E5FE9FFC9ED44048}Prefabs/Vehicles/Wheeled/K17/APC_K17_nopt.et" {
+ APC_K17_nopt1 {
+  coords 6739.01 73.375 2558.342
+  angles 0 -84.368 0
+  m_sAttachmentGroupName "ALL_RUS10"
+ }
+ APC_K17_nopt2 {
+  coords 6754.421 73.406 2556.465
+  angles 0 -81.645 0
+  m_sAttachmentGroupName "ALL_RUS11"
+ }
+ APC_K17_nopt3 {
+  coords 6770.2 73.406 2554.29
+  angles 0 -81.645 0
+  m_sAttachmentGroupName "ALL_RUS12"
+ }
+}

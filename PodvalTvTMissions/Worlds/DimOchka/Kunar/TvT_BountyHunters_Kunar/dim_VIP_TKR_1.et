@@ -1,0 +1,33 @@
+SCR_ChimeraCharacter : "{44F829A0BCF2F1DA}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_PL.et" {
+ ID "520EC961A090B1EE"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Касран Рамаев"
+   }
+  }
+  ActionsManagerComponent "{520EA1D2F659CE02}" {
+   additionalActions {
+    DRG_DeathConfirmAction "{6A071C6CA7EF853C}" {
+     ParentContextList {
+      "LowerTorso"
+     }
+     UIInfo UIInfo "{6A071C6CAC028031}" {
+      Name "Подтвердить смерть"
+     }
+     ActionTitle "#drg_ConfirmDeathAction"
+     Duration 3
+     m_bAdvanceGameStage 0
+     m_aObjectivesToDone {
+      "ION_WIN1"
+     }
+     m_aObjectivesToFail {
+      "TKR_WIN1"
+     }
+     m_vFactionKey "RHS_ION"
+    }
+   }
+  }
+ }
+ coords 3463.035 18.969 3221.059
+}

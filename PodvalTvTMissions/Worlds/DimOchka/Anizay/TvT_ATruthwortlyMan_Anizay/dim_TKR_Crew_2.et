@@ -1,0 +1,28 @@
+SCR_ChimeraCharacter : "{B0ED64D42FEE9996}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman_2.et" {
+ ID "520EC961A090B1EE"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "#PDVL_Role_Crew"
+    Icon "{916C4E2CE39A8915}UI/Icons/crew.edds"
+   }
+  }
+  SCR_CharacterIdentityComponent "{5584CBC63E092DBC}" {
+   Override 1
+   Identity Identity "{5584CBC6363C648B}" {
+    VisualIdentity VisualIdentity "{56E6D9456009D1C4}" {
+     Head "{32583C88222142FD}Prefabs/Characters/Heads/Head_White_04.et"
+    }
+   }
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{7F65745CA4111DF2}Prefabs/Characters/HeadGear/Hat_FlatCap_01/Shemag_3.et"
+    }
+   }
+  }
+ }
+ coords 8369.257 111.531 7047.185
+ angles 0 90 0
+}

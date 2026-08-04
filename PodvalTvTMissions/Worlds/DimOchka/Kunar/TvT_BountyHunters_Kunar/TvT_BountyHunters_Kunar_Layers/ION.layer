@@ -1,0 +1,271 @@
+SCR_AIGroup ion8 : "{1CF5EFE6FE5047FB}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_Elite_Force.et" {
+ components {
+  PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+   m_iCompanyCallsign 4
+  }
+ }
+ coords 2407.302 22.75 3902.561
+ angles 0 122.33 0
+ m_aUnitPrefabSlots {
+  "{680C6463897436EC}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_SL_4x_2.et"
+  "{17EC666D101F5E2E}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_TL_4x_2.et"
+  "{B615945A8AC2AFF4}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_AR_2.et"
+  "{EF3570060297626D}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Rifleman_4.et"
+  "{DB53EA29DCFE77D0}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_DroneOperator.et"
+  "{1EAED95AA3D44AFD}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Medic_2.et"
+  "{606C8A79C12683DA}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Marksman_2.et"
+ }
+}
+$grp Vehicle : "{2AE18AB65AFAB5C5}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS_ION.et" {
+ LAV25_RHS_ION1 {
+  coords 3798.249 231.553 1008.534
+  angles 0 0 0
+  m_sAttachmentGroupName "ion10"
+ }
+ LAV25_RHS_ION2 {
+  coords 1489.454 39.836 3362.835
+  angles 0 -6.064 0
+  m_sAttachmentGroupName "ion2"
+ }
+}
+$grp SCR_AIGroup : "{4482F48156932D3E}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_STK_3.et" {
+ ion5 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4778D2B8BD}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 1491.047 39.33 3377.212
+  angles 0 -97.218 0
+  m_aUnitPrefabSlots {
+   "{DA5C3C91B94EB0E4}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_SL_3_4x.et"
+   "{68D5FE4F636368AD}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_TL_1_4x.et"
+   "{222957B2ACBAC293}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Rifleman_1_NoSD.et"
+   "{300B9B6AEAA3D2FD}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Rifleman_4_NoSD.et"
+   "{29C2D03D7A1F37FF}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Rifleman_3_NoSD.et"
+   "{E35B94B055C975C6}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Sapper_2_NoSD.et"
+   "{884ED2D72B48E277}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Medic_1_NoSD.et"
+   "{B5A4124F110F3F38}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Marksman_2.et"
+  }
+ }
+ ion3 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4778D2B8BD}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 1499.274 40.181 3328.295
+  angles 0 -101.392 0
+  m_aUnitPrefabSlots {
+   "{1735FC41FA08006F}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_SL_1_4x.et"
+   "{68D5FE4F636368AD}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_TL_1_4x.et"
+   "{222957B2ACBAC293}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Rifleman_1_NoSD.et"
+   "{300B9B6AEAA3D2FD}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Rifleman_4_NoSD.et"
+   "{099D1F29BEBCB6FA}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_m72_1_NoSD.et"
+   "{E35B94B055C975C6}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Sapper_2_NoSD.et"
+   "{884ED2D72B48E277}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Medic_1_NoSD.et"
+   "{B5A4124F110F3F38}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Marksman_2.et"
+  }
+ }
+}
+$grp Vehicle : "{6CF1EEE92139A849}Prefabs/Vehicles/Wheeled/M998/M1151_armed_M2HB_ION_AP.et" {
+ M1151_armed_M2HB_ION_AP1 {
+  coords 1486.999 39.036 3385.042
+  angles 0 -8.01 0
+  m_sAttachmentGroupName "ion5"
+ }
+ M1151_armed_M2HB_ION_AP2 {
+  coords 1488.01 39.339 3376.233
+  angles 0 -7.526 0
+  m_sAttachmentGroupName "ion5"
+ }
+ M1151_armed_M2HB_ION_AP3 {
+  coords 3798.117 231.09 999.367
+  angles 0 5.306 0
+  m_sAttachmentGroupName "ion6"
+ }
+ M1151_armed_M2HB_ION_AP4 {
+  coords 3796.475 230.352 983.519
+  angles 2.78 7.748 -0.524
+  m_sAttachmentGroupName "ion7"
+ }
+}
+SCR_AIGroup HQ : "{963AB6930837A26F}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_HQ.et" {
+ coords 3799.853 232.04 1019.787
+ angles 0 -109.764 0
+}
+$grp SCR_AIGroup : "{A11EB8785A76BA55}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_STK_2.et" {
+ ion7 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A477EB020B5}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 3796.713 230.084 973.444
+  angles 0 -77.569 0
+  m_aUnitPrefabSlots {
+   "{1D90AC0C4C18F3E8}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_SL_2_4x.et"
+   "{68D5FE4F636368AD}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_TL_1_4x.et"
+   "{C267862958299863}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_AR.et"
+   "{222957B2ACBAC293}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Rifleman_1_NoSD.et"
+   "{E25581F1AB37C0D3}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Rifleman_2.et"
+   "{884ED2D72B48E277}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Medic_1_NoSD.et"
+   "{07835B61834BB920}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_m72_2_NoSD.et"
+   "{E35B94B055C975C6}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Sapper_2_NoSD.et"
+   "{B5A4124F110F3F38}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Marksman_2.et"
+  }
+ }
+ ion2 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A477EB020B5}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 1493.223 39.927 3360.702
+  angles 0 -97.596 0
+  m_aUnitPrefabSlots {
+   "{1D90AC0C4C18F3E8}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_SL_2_4x.et"
+   "{68D5FE4F636368AD}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_TL_1_4x.et"
+   "{C267862958299863}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_AR.et"
+   "{222957B2ACBAC293}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Rifleman_1_NoSD.et"
+   "{300B9B6AEAA3D2FD}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Rifleman_4_NoSD.et"
+   "{07835B61834BB920}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_m72_2_NoSD.et"
+   "{E35B94B055C975C6}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Sapper_2_NoSD.et"
+   "{9A253DEEA8423780}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_Crew.et"
+   "{9A253DEEA8423780}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_Crew.et"
+  }
+ }
+ ion4 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A477EB020B5}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 2
+   }
+  }
+  coords 1496.421 40.062 3341.964
+  angles 0 -102.353 0
+  m_aUnitPrefabSlots {
+   "{1D90AC0C4C18F3E8}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_SL_2_4x.et"
+   "{68D5FE4F636368AD}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_TL_1_4x.et"
+   "{C267862958299863}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_AR.et"
+   "{222957B2ACBAC293}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Rifleman_1_NoSD.et"
+   "{29C2D03D7A1F37FF}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Rifleman_3_NoSD.et"
+   "{07835B61834BB920}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_m72_2_NoSD.et"
+   "{E35B94B055C975C6}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Sapper_2_NoSD.et"
+   "{884ED2D72B48E277}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Medic_1_NoSD.et"
+  }
+ }
+ ion10 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A477EB020B5}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 3801.112 231.258 1003.802
+  angles 0 -91.098 0
+  m_aUnitPrefabSlots {
+   "{1D90AC0C4C18F3E8}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_SL_2_4x.et"
+   "{68D5FE4F636368AD}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_TL_1_4x.et"
+   "{C267862958299863}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_AR.et"
+   "{222957B2ACBAC293}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Rifleman_1_NoSD.et"
+   "{29C2D03D7A1F37FF}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Rifleman_3_NoSD.et"
+   "{07835B61834BB920}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_m72_2_NoSD.et"
+   "{E35B94B055C975C6}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Sapper_2_NoSD.et"
+   "{9A253DEEA8423780}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_Crew.et"
+   "{9A253DEEA8423780}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_Crew.et"
+  }
+ }
+}
+Vehicle M1151_armed_ION1 : "{BC96BAE82969FE34}Prefabs/Vehicles/Wheeled/M998/M1151_armed_ION.et" {
+ coords 3796.895 232.087 1019.711
+ angles 0 -22.327 0
+ m_sAttachmentGroupName "HQ"
+}
+$grp Vehicle : "{CD1B5570AF3D50B6}Prefabs/Vehicles/Wheeled/M998/M1025_ION.et" {
+ M1025_ION1 {
+  coords 1492.249 40.063 3349.529
+  angles 0 -10.867 0
+  m_sAttachmentGroupName "ion4"
+ }
+ M1025_ION2 {
+  coords 1493.511 40.063 3341.969
+  angles 0 -8.008 0
+  m_sAttachmentGroupName "ion4"
+ }
+ M1025_ION3 {
+  coords 1495.379 40.168 3332.651
+  angles 0 -10.878 0
+  m_sAttachmentGroupName "ion3"
+ }
+ M1025_ION4 {
+  coords 1496.93 40.104 3324.879
+  angles 0 -10.813 0
+  m_sAttachmentGroupName "ion3"
+ }
+ M1025_ION5 {
+  coords 3797.551 230.746 992.571
+  angles 2.644 9.911 0.462
+  m_sAttachmentGroupName "ion6"
+ }
+ M1025_ION6 {
+  coords 3794.395 229.929 972.534
+  angles 2.598 14.54 0.674
+  m_sAttachmentGroupName "ion7"
+ }
+ M1025_ION7 {
+  coords 1498.548 40.063 3316.059
+  angles 0 -10.878 0
+  m_sAttachmentGroupName "ion"
+ }
+ M1025_ION8 {
+  coords 1500.099 40.063 3308.287
+  angles 0 -10.813 0
+  m_sAttachmentGroupName "ion"
+ }
+}
+$grp SCR_AIGroup : "{CD4A8C98E6B2357B}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_STK_1.et" {
+ ion6 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A477D63A783}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 3800.305 230.914 991.161
+  angles 0 -83.81 0
+  m_aUnitPrefabSlots {
+   "{08DA0C97203914E6}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_SL_4_4x.et"
+   "{68D5FE4F636368AD}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_TL_1_4x.et"
+   "{C267862958299863}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_AR.et"
+   "{29C2D03D7A1F37FF}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Rifleman_3_NoSD.et"
+   "{300B9B6AEAA3D2FD}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Rifleman_4_NoSD.et"
+   "{099D1F29BEBCB6FA}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_m72_1_NoSD.et"
+   "{E35B94B055C975C6}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Sapper_2_NoSD.et"
+   "{884ED2D72B48E277}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Medic_1_NoSD.et"
+   "{B5A4124F110F3F38}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Marksman_2.et"
+  }
+ }
+ ion {
+  components {
+   PS_GroupCallsignAssigner "{68B17A477D63A783}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 1503.093 40.062 3309.862
+  angles 0 -101.381 0
+  m_aUnitPrefabSlots {
+   "{08DA0C97203914E6}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_SL_4_4x.et"
+   "{68D5FE4F636368AD}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_TL_1_4x.et"
+   "{29C2D03D7A1F37FF}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Rifleman_3_NoSD.et"
+   "{300B9B6AEAA3D2FD}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Rifleman_4_NoSD.et"
+   "{099D1F29BEBCB6FA}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_m72_1_NoSD.et"
+   "{E35B94B055C975C6}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Sapper_2_NoSD.et"
+   "{884ED2D72B48E277}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/4x/dim_ION_STK_Medic_1_NoSD.et"
+   "{B5A4124F110F3F38}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Marksman_2.et"
+  }
+ }
+}

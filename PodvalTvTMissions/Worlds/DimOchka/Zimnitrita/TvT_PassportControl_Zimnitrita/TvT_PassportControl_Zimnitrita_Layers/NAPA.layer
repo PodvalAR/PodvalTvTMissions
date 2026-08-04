@@ -1,0 +1,251 @@
+SCR_AIGroup AT2 : "{361713DCE2D136BF}Prefabs/Groups/INDFOR/Ses_NAPA/dim_Group_NAPA_Squad_2.et" {
+ components {
+  PS_GroupCallsignAssigner "{696976B34DD51700}" {
+   m_iCompanyCallsign 2
+   m_iSquadCallsign 1
+  }
+ }
+ coords 8048.38 42.969 8364.694
+ angles 0 -162.212 0
+ m_aUnitPrefabSlots {
+  "{CC79897F0D00B78E}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_SL_2.et"
+  "{1EFFB9799477138C}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_TL_2.et"
+  "{D42C6375A65D1FFA}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_AT_2.et"
+  "{4476BC906CBA82EA}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_AAT_2.et"
+  "{FC91FA73F4BCB67D}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_MG_2.et"
+  "{B3C64A2465C4E5AA}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_GL_2.et"
+  "{8AB7274FFF449C2E}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_Rifleman_2.et"
+  "{13055722528394A4}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_CC.et"
+  "{6C9800AC74CF7A90}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_Crew.et"
+ }
+ m_sCustomNameSet "Отряд боевиков на БТР-70"
+}
+$grp SCR_AIGroup : "{3F606D38BEFB9BF1}Prefabs/Groups/INDFOR/Ses_NAPA/dim_Group_NAPA_Recon.et" {
+ REC_NAPA {
+  components {
+   PS_GroupCallsignAssigner "{696976B34559C462}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 7764.675 58.89 5525.986
+  angles -0.341 -99.981 -4.528
+ }
+ REC_NAPA2 {
+  components {
+   PS_GroupCallsignAssigner "{696976B34559C462}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 2
+   }
+  }
+  coords 7551.466 7.234 7337.288
+  angles -0.018 63.093 -3
+  m_aUnitPrefabSlots {
+   "{D139D6C452E41C81}Prefabs/Characters/Factions/INDFOR/NAPA/dim/Guard/dim_NAPA_Guard_SL.et"
+   "{B6495B1DCF27F6CD}Prefabs/Characters/Factions/INDFOR/NAPA/dim/Guard/dim_NAPA_Guard_TL_1.et"
+   "{95C83621BFED3844}Prefabs/Characters/Factions/INDFOR/NAPA/dim/Guard/dim_NAPA_Guard_Rfl_1.et"
+   "{F99C02C10329B76A}Prefabs/Characters/Factions/INDFOR/NAPA/dim/Guard/dim_NAPA_Guard_Rfl_2.et"
+   "{1C004E380FCC2001}Prefabs/Characters/Factions/INDFOR/NAPA/dim/Guard/dim_NAPA_Guard_Rfl_3.et"
+   "{38DAF8084999F4AE}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_Marksman_3.et"
+  }
+  m_sCustomNameSet "Разведка командира НАПА"
+ }
+ REC_NAPA3 {
+  components {
+   PS_GroupCallsignAssigner "{696976B34559C462}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 1
+   }
+  }
+  coords 8464.96 56.211 6510.701
+  angles 0 -94.831 0
+  m_aUnitPrefabSlots {
+   "{164BBFC492A34390}Prefabs/Characters/Factions/INDFOR/NAPA/dim/Recon/dim_NAPA_Rec_SL.et"
+   "{FB63F580989284E7}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_TL_3.et"
+   "{C0B7FCD4E02BA6F7}Prefabs/Characters/Factions/INDFOR/NAPA/dim/Recon/dim_NAPA_Rec_Sapper.et"
+   "{521F4E8E86CD8272}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_Rifleman_4.et"
+   "{8AB7274FFF449C2E}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_Rifleman_2.et"
+   "{05EEDD303CF57D99}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_Marksman_4.et"
+  }
+ }
+}
+Vehicle UAZ452_transport_CIV_grey1 : "{780FA841BFE4077F}Prefabs/Vehicles/Wheeled/UAZ452/UAZ452_transport_CIV_grey.et" {
+ coords 9453.866 31.894 7311.33
+ angles -2.197 170.345 3.093
+ m_sAttachmentGroupName "AT6"
+}
+$grp Vehicle : "{8B65BE75C84F3696}Prefabs/Vehicles/Wheeled/vaz_2109/vaz_2109_cherry.et" {
+ vaz_2109_cherry1 {
+  coords 9462.896 31.915 7313.547
+  angles -1.226 166.67 2.588
+  m_sAttachmentGroupName "AT"
+ }
+ vaz_2109_cherry2 {
+  coords 15325.973 42.594 270.245
+  angles 0 -90 0
+ }
+}
+Vehicle BRDM2_Ses_NAPA1 : "{8CF38D3EFC558D85}Prefabs/Vehicles/Wheeled/BRDM2/BRDM2_Ses_NAPA.et" {
+ coords 9180.593 68.687 8378.494
+ angles 0 -30 0
+ m_sAttachmentGroupName "AT8"
+}
+Vehicle UAZ469_covered_CIV_VAK2 : "{B2CC137FE424B129}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_covered_CIV_VAK.et" {
+ coords 13756.994 23.639 2649.428
+ angles 2.822 157.592 -0.196
+}
+$grp Vehicle : "{C20FAA7594CC3784}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_PKM_Ses_NAPA.et" {
+ UAZ469_PKM_Ses_NAPA1 {
+  coords 15202.845 60.008 1560.928
+  angles -0.424 -161.333 -0.143
+ }
+ UAZ469_PKM_Ses_NAPA2 {
+  coords 15208.571 60.098 1565.432
+  angles -0.424 -161.333 -0.143
+ }
+ UAZ469_PKM_Ses_NAPA3 {
+  coords 15319.694 42.594 270.432
+  angles 0 -90 0
+ }
+}
+$grp Vehicle : "{C63F988320179F50}Prefabs/Vehicles/Wheeled/BTR70/BTR70_Ses_NAPA.et" {
+ BTR70_Ses_NAPA1 {
+  coords 8041.401 42.969 8364.003
+  angles 0.575 110.222 -0.265
+  m_sAttachmentGroupName "AT2"
+ }
+ BTR70_Ses_NAPA2 {
+  coords 8053.655 42.982 8359.765
+  angles -0.85 108.141 -0.278
+  m_sAttachmentGroupName "AT3"
+ }
+ BTR70_Ses_NAPA3 {
+  coords 9475.307 31.903 7314.245
+  angles -0.184 168.14 -0.875
+  m_sAttachmentGroupName "AT5"
+ }
+}
+Vehicle UAZ469_covered_CIV_blue1 : "{C8B16ABCA57679A2}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_covered_CIV_blue.et" {
+ coords 9449.577 31.925 7310.959
+ angles 0 166.596 0
+ m_sAttachmentGroupName "AT6"
+}
+$grp SCR_AIGroup : "{D38B5F25EE34A1D4}Prefabs/Groups/INDFOR/Ses_NAPA/dim_Group_NAPA_Squad_3.et" {
+ AT3 {
+  components {
+   PS_GroupCallsignAssigner "{696976B34DD51700}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 8060.122 42.969 8360.167
+  angles 0 -160.148 0
+  m_aUnitPrefabSlots {
+   "{29E5C58601E520E5}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_SL_3.et"
+   "{FB63F580989284E7}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_TL_3.et"
+   "{31B02F8CAAB88891}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_AT_3.et"
+   "{9C716F176E683D36}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_AAT.et"
+   "{565A06DD692172C1}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_GL_3.et"
+   "{FC91FA73F4BCB67D}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_MG_2.et"
+   "{6F2B6BB6F3A10B45}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_Rifleman_3.et"
+   "{13055722528394A4}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_CC.et"
+   "{6C9800AC74CF7A90}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_Crew.et"
+  }
+  m_sCustomNameSet "Отряд боевиков на БТР-70"
+ }
+ AT5 {
+  components {
+   PS_GroupCallsignAssigner "{696976B34DD51700}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 9483.837 31.906 7310.017
+  angles 0 -94.012 0
+  m_aUnitPrefabSlots {
+   "{A02DBD9FB1C438A0}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_SL_1.et"
+   "{1EFFB9799477138C}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_TL_2.et"
+   "{DF927EC4D9006A84}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_GL_1.et"
+   "{FC91FA73F4BCB67D}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_MG_2.et"
+   "{E6E313AF43801300}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_Rifleman_1.et"
+   "{8AB7274FFF449C2E}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_Rifleman_2.et"
+   "{2894A79DA29AF2EC}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_Sniper_1.et"
+   "{13055722528394A4}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_CC.et"
+   "{6C9800AC74CF7A90}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_Crew.et"
+  }
+  m_sCustomNameSet "Отряд боевиков на БТР-70"
+ }
+ AT6 {
+  components {
+   PS_GroupCallsignAssigner "{696976B34DD51700}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 9451.595 31.906 7289.474
+  angles 0 -26.884 0
+  m_aUnitPrefabSlots {
+   "{CC79897F0D00B78E}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_SL_2.et"
+   "{FB63F580989284E7}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_TL_3.et"
+   "{D42C6375A65D1FFA}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_AT_2.et"
+   "{4476BC906CBA82EA}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_AAT_2.et"
+   "{FC91FA73F4BCB67D}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_MG_2.et"
+   "{6F2B6BB6F3A10B45}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_Rifleman_3.et"
+   "{521F4E8E86CD8272}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_Rifleman_4.et"
+   "{C0B7FCD4E02BA6F7}Prefabs/Characters/Factions/INDFOR/NAPA/dim/Recon/dim_NAPA_Rec_Sapper.et"
+   "{A15CDF8412BBEAA9}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_Sniper_3.et"
+  }
+  m_sCustomNameSet "Отряд боевиков"
+ }
+ AT8 {
+  components {
+   PS_GroupCallsignAssigner "{696976B34DD51700}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 9174.511 68.873 8376.36
+  angles 0 60.024 0
+  m_aUnitPrefabSlots {
+   "{29E5C58601E520E5}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_SL_3.et"
+   "{E6E313AF43801300}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_Rifleman_1.et"
+   "{8AB7274FFF449C2E}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_Rifleman_2.et"
+  }
+  m_sCustomNameSet "Экипаж БРДМ"
+ }
+}
+SCR_AIGroup KS : "{D5D0C33728F89BC6}Prefabs/Groups/INDFOR/Ses_NAPA/dim_Group_NAPA_KS.et" {
+ coords 9448.191 31.906 7287.972
+ angles 0 -25.085 0
+ m_aUnitPrefabSlots +{
+  "{B6495B1DCF27F6CD}Prefabs/Characters/Factions/INDFOR/NAPA/dim/Guard/dim_NAPA_Guard_TL_1.et"
+ }
+}
+Vehicle vaz_2109_emerald1 : "{E96EEFE63BEDA956}Prefabs/Vehicles/Wheeled/vaz_2109/vaz_2109_emerald.et" {
+ coords 9458.385 31.91 7312.407
+ angles -0.438 168.163 0.092
+ m_sAttachmentGroupName "AT"
+}
+SCR_AIGroup AT : "{EB059CC44716B326}Prefabs/Groups/INDFOR/Ses_NAPA/dim_Group_NAPA_Squad.et" {
+ components {
+  PS_GroupCallsignAssigner "{696976B34DD51700}" {
+   m_iCompanyCallsign 1
+   m_iSquadCallsign 1
+  }
+ }
+ coords 9461.404 31.906 7294.52
+ angles 0 -25.204 0
+ m_aUnitPrefabSlots {
+  "{A02DBD9FB1C438A0}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_SL_1.et"
+  "{72AB8D9928B39CA2}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_TL_1.et"
+  "{B87857951A9990D4}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_AT_1.et"
+  "{9C716F176E683D36}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_AAT.et"
+  "{DF927EC4D9006A84}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_GL_1.et"
+  "{90C5CE9348783953}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_MG_1.et"
+  "{6C321CBBD9ED84D2}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_Medic_3.et"
+  "{B1128011F9B8ECEB}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_Marksman_1.et"
+ }
+ m_sCustomNameSet "Отряд боевиков"
+}
+Vehicle vaz_2109_Pearl1 : "{FA1939066D85A1C5}Prefabs/Vehicles/Wheeled/vaz_2109/vaz_2109_Pearl.et" {
+ coords 9445.864 31.925 7310.33
+ angles 0 171.053 0
+ m_sAttachmentGroupName "KS"
+}

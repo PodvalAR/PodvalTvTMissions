@@ -1,0 +1,33 @@
+SCR_ChimeraCharacter : "{AC12AE23C273AA1A}Prefabs/Characters/Factions/OPFOR/ChDKZ/Char_ChDKZ_Oficer.et" {
+ ID "520EC961A090B1EE"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Григорий Лапышов"
+   }
+  }
+  ActionsManagerComponent "{520EA1D2F659CE02}" {
+   additionalActions {
+    DRG_DeathConfirmAction "{6A0756CD87145455}" {
+     ParentContextList {
+      "LowerTorso"
+     }
+     UIInfo UIInfo "{6A0756CD81287EB3}" {
+      Name "Подтвердить смерть"
+     }
+     ActionTitle "#drg_ConfirmDeathAction"
+     Duration 3
+     m_bAdvanceGameStage 0
+     m_aObjectivesToDone {
+      "ION_WIN1"
+     }
+     m_aObjectivesToFail {
+      "CHDKZ_WIN1"
+     }
+     m_vFactionKey "RHS_ION"
+    }
+   }
+  }
+ }
+ coords 55.733 1 189.726
+}

@@ -1,0 +1,69 @@
+SCR_ChimeraCharacter : "{44F829A0BCF2F1DA}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_PL.et" {
+ ID "520EC961A090B1EE"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Муран Вали"
+   }
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Jacket {
+     Prefab "{C765CE33535F1B3E}Prefabs/Characters/Uniforms/Jacket_Bomber_1.et"
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{C5C2320E37105CF5}Prefabs/Characters/Uniforms/Pants_Cargo_4.et"
+    }
+    LoadoutSlotInfo Vest {
+     Prefab "{6670741861B607F0}Prefabs/Characters/Vests/Vest_ChestRigSmal/Vest_ChestRigSmall_1.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{68A8820B1B87DF9C}" {
+     TargetStorage "Pants/Pants_Cargo_4.et"
+    }
+    ItemsInitConfigurationItem "{68A8820B008B5065}" {
+     Enabled 0
+     TargetStorage "Jacket/Jacket_Bomber_1.et"
+    }
+    ItemsInitConfigurationItem "{68A8820B371119B4}" {
+     TargetStorage "Jacket/Jacket_Bomber_1.et"
+    }
+    ItemsInitConfigurationItem "{68EA046792400867}" {
+     TargetStorage "Vest/Vest_ChestRigSmall_1.et"
+    }
+    ItemsInitConfigurationItem "{68EA784A2AF1D06C}" {
+     TargetStorage "Pants/Pants_Cargo_4.et"
+    }
+    ItemsInitConfigurationItem "{68EA784A2AC739DE}" {
+     TargetStorage "Jacket/Jacket_Bomber_1.et"
+    }
+   }
+  }
+  ActionsManagerComponent "{520EA1D2F659CE02}" {
+   additionalActions {
+    DRG_DeathConfirmAction "{6A071C6CA7EF853C}" {
+     ParentContextList {
+      "LowerTorso"
+     }
+     UIInfo UIInfo "{6A071C6CAC028031}" {
+      Name "Подтвердить смерть"
+     }
+     ActionTitle "#drg_ConfirmDeathAction"
+     Duration 3
+     m_bAdvanceGameStage 0
+     m_aObjectivesToDone {
+      "ION_WIN2"
+     }
+     m_aObjectivesToFail {
+      "TKR_WIN2"
+     }
+     m_vFactionKey "RHS_ION"
+    }
+   }
+  }
+ }
+ coords 3463.035 18.969 3221.054
+}

@@ -1,0 +1,103 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ {
+  coords 6876.31 5.565 6301.583
+  m_sTitle "Правила и задачи"
+  m_sTextData "ПРАВИЛА:"\
+  "1. Командирам боевиков (ВИПы) запрещено покидать город (синия линия)."\
+  ""\
+  "ЗАДАЧИ:"\
+  "• ИОН: "\
+  " 1. Ликвидировать 3 целей - за каждого 5000$."\
+  ""\
+  "• ТКР:"\
+  " 1. Защитить командиров."\
+  ""\
+  "Дополнительно:"\
+  "1. У ТКР есть строительные грузовики с песком и 3000 ресурсов для строительства. На них можно ездить во время фриз-тайма;"\
+  "2. У ТКР есть ПТУРы."
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_ION"
+   "Ses_TKR"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+ }
+ {
+  coords 6876.31 5.565 6301.583
+  m_sTitle "Обстановка"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "2026 г."\
+  "После серии нападений на американские военные объекты и союзные конвои разведка США установила личности трёх полевых командиров, руководящих деятельностью боевиков в провинции Кунар. Именно они координируют нападения, организуют поставки оружия и вербуют новых бойцов."\
+  "Из-за политических рисков, проведение открытой военной операции признано нецелесообразным. Вместо этого США заключили контракт с ЧВК «ИОН», назначив награду в 5 000 долларов за каждого ликвидированного командира."\
+  ""
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_ION"
+   "Ses_TKR"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+ }
+ {
+  coords 6876.31 5.565 6301.583
+  m_sTitle "ВАЖНО"
+  m_sTextData "Чем больше целей уничтожит ЧВК ИОН, тем больше техники они смогут получить на следующей миссии."\
+  "Пример:"\
+  "ЧВК ИОН ликвидировали 2 из 3 целей. На следующей миссии КС ЧВК сможет выбрать для своей стороны 2 техники - LAV25 или AH6J с нарами."\
+  "Одна цель = одна техника (на выбор литл-берд или лав25)."
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_ION"
+   "Ses_TKR"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+ }
+}
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ ION_WIN1 {
+  coords 6927.594 8.248 6204.361
+  m_sTitle "Касран Рамаев ликвидирован - 5000$"
+  m_iScore 35
+  m_sFactionKey "RHS_ION"
+ }
+ ION_WIN2 {
+  coords 6927.594 8.248 6204.361
+  m_sTitle "Муран Вали ликвидирован - 5000$"
+  m_iScore 35
+  m_sFactionKey "RHS_ION"
+ }
+ ION_WIN3 {
+  coords 6927.594 8.248 6204.361
+  m_sTitle "Вальхам Хаким ликвидирован - 5000$"
+  m_iScore 35
+  m_sFactionKey "RHS_ION"
+ }
+ TKR_WIN1 {
+  coords 6927.594 8.248 6204.361
+  m_sTitle "Касран Рамаев жив"
+  m_iScore 35
+  m_sFactionKey "Ses_TKR"
+ }
+ TKR_WIN2 {
+  coords 6927.594 8.248 6204.361
+  m_sTitle "Муран Вали жив"
+  m_iScore 35
+  m_sFactionKey "Ses_TKR"
+ }
+ TKR_WIN3 {
+  coords 6927.594 8.248 6204.361
+  m_sTitle "Вальхам Хаким жив"
+  m_iScore 35
+  m_sFactionKey "Ses_TKR"
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 5547.709 75.207 4020.56
+}
