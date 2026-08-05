@@ -38,7 +38,7 @@ $grp SCR_AIGroup : "{1CF5EFE6FE5047FB}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_Elit
    "{606C8A79C12683DA}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Marksman_2.et"
   }
  }
- DEF_ION3 {
+ DEFF_ION3 {
   components {
    PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
     m_iCompanyCallsign 2
@@ -111,7 +111,7 @@ $grp SCR_AIGroup : "{1CF5EFE6FE5047FB}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_Elit
   }
   m_bSnapToTerrain 0
  }
- ION6 {
+ DEF_ION6 {
   components {
    PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
     m_iCompanyCallsign 2
@@ -127,7 +127,7 @@ $grp SCR_AIGroup : "{1CF5EFE6FE5047FB}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_Elit
   }
   m_sCustomNameSet "Расчет миномета APKWS с SOFLAM"
  }
- DEF_ION7 {
+ DEFF_ION7 {
   components {
    PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
     m_iCompanyCallsign 3
@@ -158,12 +158,6 @@ $grp Vehicle : "{7009ED8FBA7A1E7E}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_eng
   angles 0.448 -0.579 -0.004
   m_bEnableMoveOnFreeze 1
  }
-}
-Vehicle UAZ452_transport_base1 : "{92AA1080824A3F7E}Prefabs/Vehicles/Wheeled/UAZ452/UAZ452_transport_base.et" {
- coords 12561.557 10.562 768.485
- angles 0 -90 0
- m_sAttachmentGroupName "DEF_ION7"
- m_bEnableMoveOnFreeze 1
 }
 SCR_AIGroup DEF_HQ : "{963AB6930837A26F}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_HQ.et" {
  coords 12644.162 10.844 895.78
