@@ -1,3 +1,15 @@
+$grp Vehicle {
+ Boat_base_us2 {
+  coords 9949.189 0 -53.293
+  angles 0 120 0
+  m_sAttachmentGroupName "ION5"
+ }
+ Boat_base_us1 {
+  coords 9955.334 0 -56.841
+  angles 0 120 0
+  m_sAttachmentGroupName "ION5"
+ }
+}
 $grp SCR_AIGroup : "{1CF5EFE6FE5047FB}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_Elite_Force.et" {
  DEF_ION1 {
   components {
@@ -166,31 +178,6 @@ SCR_AIGroup DEF_HQ : "{963AB6930837A26F}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_HQ
   "{0E2B2C6F9C2C2EB1}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Officer.et"
  }
 }
-$grp Vehicle : "{99F1610551D54D17}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_base.et" {
- UAZ469_base2 {
-  coords 12642.419 10.844 854.422
-  angles 0 90 0
-  m_sAttachmentGroupName "DEF_ION3"
-  m_bEnableMoveOnFreeze 1
- }
- UAZ469_base1 {
-  components {
-   SCR_UniversalInventoryStorageComponent "{5AD4F813E67ECB5D}" {
-    MultiSlots {
-     MultiSlotConfiguration "{5AD4F813E67ECB53}" {
-      SlotTemplate InventoryStorageSlot Bandages {
-       Prefab "{6113990D163E5249}Prefabs/Items/Equipment/BallisticTable/BallisticTable_US.et"
-      }
-     }
-    }
-   }
-  }
-  coords 12642.419 10.844 833.924
-  angles 0 90 0
-  m_sAttachmentGroupName "ION6"
-  m_bEnableMoveOnFreeze 1
- }
-}
 $grp Vehicle : "{A003493D32140960}Prefabs/Vehicles/Wheeled/UAZ452/UAZ452_cargo_CIV_base.et" {
  UAZ452_cargo_CIV_base2 {
   coords 12651.205 10.844 850.035
@@ -206,23 +193,23 @@ $grp Vehicle : "{A003493D32140960}Prefabs/Vehicles/Wheeled/UAZ452/UAZ452_cargo_C
        Prefab "{6113990D163E5249}Prefabs/Items/Equipment/BallisticTable/BallisticTable_US.et"
       }
      }
+     MultiSlotConfiguration "{6A10344B06CBD94B}" {
+      SlotTemplate InventoryStorageSlot Soflam {
+       Prefab "{FD315CB1803037F1}Prefabs/Items/Equipment/Binoculars/SOFLAM/SOFLAM_Binoculars.et"
+      }
+      NumSlots 1
+     }
+    }
+   }
+   SCR_VehicleInventoryStorageManagerComponent "{591056FA3B752FE6}" {
+    InitialInventoryItems {
+     ItemsInitConfigurationItem "{6A10344B843D94A6}" {
+     }
     }
    }
   }
   coords 12651.205 10.844 838.391
   m_sAttachmentGroupName "ION6"
   m_bEnableMoveOnFreeze 1
- }
-}
-$grp Vehicle : "{CAB4546B5DCE0AFB}Prefabs/Boat_base_us.et" {
- Boat_base_us2 {
-  coords 9949.189 0 -53.293
-  angles 0 120 0
-  m_sAttachmentGroupName "ION5"
- }
- Boat_base_us1 {
-  coords 9955.334 0 -56.841
-  angles 0 120 0
-  m_sAttachmentGroupName "ION5"
  }
 }
