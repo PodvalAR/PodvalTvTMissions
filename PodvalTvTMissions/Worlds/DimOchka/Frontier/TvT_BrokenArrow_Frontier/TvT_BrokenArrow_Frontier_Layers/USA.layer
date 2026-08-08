@@ -1,7 +1,14 @@
-Vehicle M1167_armed_TOW2 : "{08DC83258B558A9F}Prefabs/Vehicles/Wheeled/M998/M1167_armed_TOW.et" {
- coords 9054.798 73.469 9079.003
- angles 0 -168.546 0
- m_sAttachmentGroupName "DEF_USA2"
+$grp Vehicle : "{08DC83258B558A9F}Prefabs/Vehicles/Wheeled/M998/M1167_armed_TOW.et" {
+ M1167_armed_TOW1 {
+  coords 9052.688 73.469 9070.38
+  angles 0 -168.546 0
+  m_sAttachmentGroupName "DEF_USA2"
+ }
+ M1167_armed_TOW2 {
+  coords 9054.798 73.469 9079.003
+  angles 0 -168.546 0
+  m_sAttachmentGroupName "DEF_USA2"
+ }
 }
 Vehicle M923A1_engineer1 : "{2D74C39A650A3031}Prefabs/Vehicles/Wheeled/M923A1/M923A1_engineer.et" {
  coords 6200.669 57.344 6118.264
@@ -15,13 +22,13 @@ Vehicle M1151_armed_CROWS_M1 : "{7D9668EDADFCD7E1}Prefabs/Vehicles/Wheeled/M998/
 }
 $grp Vehicle : "{8ACB8116F334AE6C}Prefabs/Vehicles/Wheeled/LR_3Series/dim_LWB_M2.et" {
  dim_LWB_M1 {
-  coords 6237.112 57.25 8255.495
-  angles 0 164.87 0
+  coords 6174.703 57.25 6041.423
+  angles 0 -180 0
   m_sAttachmentGroupName "DEF_HQ6"
  }
  dim_LWB_M2 {
-  coords 6234.489 57.252 8265.293
-  angles 0 165.602 0
+  coords 6176.734 57.252 6049.383
+  angles 0 170.994 0
   m_sAttachmentGroupName "DEF_HQ6"
  }
 }
@@ -68,68 +75,10 @@ $grp SCR_AIGroup : "{BC3F32868941B97A}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/MTV
   m_sCustomNameSet "Подкрепление на 2-х M1167 TOW"
  }
 }
-PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
- coords 9053.276 73.468 9071.638
- angles 0 -77.138 0
- m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
- m_sImageSetGlow ""
- m_MarkerColor 0.016 0.552 0.905 1
- m_sQuadName "Car"
- m_fWorldSize 2.399
- m_sDescription "#TF-Vehicle_M1151A1_M2_Name"
- m_bUseWorldScale 1
- m_aVisibleForFactions {
-  "RHS_AFRF"
-  "RHS_USAF"
-  "RHS_ION"
-  "Ses_CDF"
-  "Ses_ChDKZ"
-  "Ses_TKR"
-  "Ses_TKA"
-  "Ses_NAPA"
-  "Drg_IGF"
-  "Drg_PIR"
-  "UK"
-  "USSR"
-  "US"
-  "FIA"
-  "Drg_VCA"
- }
- m_bVisibleForEmptyFaction 1
- m_aHideOnGameModeStates {
-  GAME
- }
- m_iZOrder 0
-}
-Turret : "{D062475B3C6426A3}Prefabs/Weapons/Tripods/BGM71TOW/Deployable_Tripod_BGM71_TOW.et" {
- coords 6203.366 57.312 6127.109
- angles 0 178.013 0
-}
-$grp Vehicle : "{D574C943C9F8C9DF}Prefabs/Vehicles/Wheeled/M998/M1151_armed_M2HB_AP.et" {
- M1151_armed_M2HB_AP1 {
-  coords 9050.204 73.468 9059.511
-  angles 0 -167.138 0
-  m_sAttachmentGroupName "DEF_USA1"
- }
- M1151_armed_M2HB_AP2 {
-  coords 9053.276 73.468 9071.638
-  angles 0 -167.138 0
-  m_sAttachmentGroupName "DEF_USA2"
- }
-}
-$grp GenericEntity : "{DE25A434026D99AC}Prefabs/Weapons/Tripods/BGM71TOW/Part_BGM-71D_Launcher.et" {
- {
-  coords 6202.029 57.62 6126.979
-  angles 0 10.685 -90
- }
- {
-  coords 6201.428 57.62 6127.157
-  angles 0 10.685 -90
- }
- {
-  coords 6201.738 57.62 6127.058
-  angles 0 10.685 -90
- }
+Vehicle M1151_armed_M2HB_AP1 : "{D574C943C9F8C9DF}Prefabs/Vehicles/Wheeled/M998/M1151_armed_M2HB_AP.et" {
+ coords 9050.204 73.468 9059.511
+ angles 0 -167.138 0
+ m_sAttachmentGroupName "DEF_USA1"
 }
 $grp SCR_AIGroup : "{F77D5F8E4E2A70A7}Prefabs/Groups/BLUFOR/RHS_USAF/Group_RHS_USAF_Base.et" {
  DEF_HQ {
@@ -222,8 +171,8 @@ $grp SCR_AIGroup : "{F77D5F8E4E2A70A7}Prefabs/Groups/BLUFOR/RHS_USAF/Group_RHS_U
     m_iCompanyCallsign 3
    }
   }
-  coords 6230.962 57.26 8261.167
-  angles 0 73.67 0
+  coords 6171.644 57.26 6049.677
+  angles 0 83.767 0
   m_aUnitPrefabSlots {
    "{ADF0357018DF8B6B}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/SPN/dim_LAT_SPN_TL.et"
    "{CA6A401FBB6AFA91}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/LatvianArmy/SPN/dim_LAT_SPN_GL.et"
