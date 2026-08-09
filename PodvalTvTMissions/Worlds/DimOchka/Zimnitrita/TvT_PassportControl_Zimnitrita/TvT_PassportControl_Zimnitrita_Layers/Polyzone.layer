@@ -20,14 +20,14 @@ GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactions
     GUB_ZoneControlLogic "{69F4ABD0C13CC2CA}" {
      m_bAdvanceGameStage 1
      m_sSuccessObjectiveNames {
-      "USAF_WIN"
+      "NAPA_WIN"
      }
      m_sFailedObjectiveNames {
       "AFRF_WIN"
      }
-     m_sMessage "ГЭС захвачена"
+     m_sMessage "Погран. пункт захвачен"
      m_Timer GUB_ZoneControlTimer "{69F4ABD0C2942D8E}" {
-      timeToComplete 150
+      timeToComplete 360
      }
      m_ZoneController GUB_ZoneController "{69F4ABD0CD09E009}" {
       m_sZoneEntityName "capture"

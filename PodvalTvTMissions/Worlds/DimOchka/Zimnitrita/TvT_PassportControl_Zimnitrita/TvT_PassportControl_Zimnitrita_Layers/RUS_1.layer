@@ -22,6 +22,18 @@ $grp Vehicle : "{7009ED8FBA7A1E7E}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_eng
   m_bEnableMoveOnFreeze 1
  }
  Ural4320_engineer_sand2 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{5916C58171230A92}" {
+    MultiSlots {
+     MultiSlotConfiguration "{5EB0D397ACA7A685}" {
+      SlotTemplate InventoryStorageSlot Shovel {
+       Prefab "{B05A816C0BF50802}Prefabs/Weapons/Explosives/Mine_PMN4/Mine_PMN4.et"
+      }
+      NumSlots 20
+     }
+    }
+   }
+  }
   coords 7375.504 56.469 6316.126
   angles 0.098 77.326 0.437
   m_bEnableMoveOnFreeze 1
@@ -49,7 +61,7 @@ $grp SCR_AIGroup : "{7F40D42C0CE8A499}Prefabs/Groups/OPFOR/RHS_AFRF/Group_RHS_AF
   m_bSnapToTerrain 0
   m_sCustomNameSet "Миротворческий отряд"
  }
- DEFD_RUS0 {
+ KEK_RUS0 {
   coords 7237.788 54.156 6299.474
   angles 0 -9.397 0
   m_aUnitPrefabSlots {
@@ -77,7 +89,7 @@ $grp SCR_AIGroup : "{7F40D42C0CE8A499}Prefabs/Groups/OPFOR/RHS_AFRF/Group_RHS_AF
   }
   m_sCustomNameSet "Миротворческий отряд"
  }
- DEFD_RUS4 {
+ KEK_RUS4 {
   components {
    PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
     m_iSquadCallsign 1
@@ -120,7 +132,7 @@ $grp SCR_AIGroup : "{7F40D42C0CE8A499}Prefabs/Groups/OPFOR/RHS_AFRF/Group_RHS_AF
   m_bPlayable 1
   m_sCustomNameSet "Миротворческий отряд на БТР-70"
  }
- DEF_RUS10 {
+ KEK_RUS10 {
   components {
    PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
     m_iCompanyCallsign 2
@@ -135,7 +147,7 @@ $grp SCR_AIGroup : "{7F40D42C0CE8A499}Prefabs/Groups/OPFOR/RHS_AFRF/Group_RHS_AF
   }
   m_sCustomNameSet "Пограничники ФСБ"
  }
- DEF_RUS4 {
+ KEK_RRUS4 {
   components {
    PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
     m_iCompanyCallsign 2
@@ -151,7 +163,7 @@ $grp SCR_AIGroup : "{7F40D42C0CE8A499}Prefabs/Groups/OPFOR/RHS_AFRF/Group_RHS_AF
   }
   m_sCustomNameSet "Пограничники ФСБ"
  }
- DEF_RUS5 {
+ KEK_RUS5 {
   components {
    PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
     m_iCompanyCallsign 2
