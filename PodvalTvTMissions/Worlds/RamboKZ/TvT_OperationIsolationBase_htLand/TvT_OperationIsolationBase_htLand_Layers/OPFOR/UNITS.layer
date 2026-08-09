@@ -1,0 +1,71 @@
+$grp SCR_AIGroup : "{3A14655AA0638454}Prefabs/Groups/OPFOR/RHS_AFRF/Modern/EMR/Group_RHS_AFRF_Modern_EMR_Squad.et" {
+ AFRF_011 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 789.071 14.242 948.693
+  angles 0 -84.769 0
+ }
+ AFRF_010 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 778.866 14.389 937.728
+  angles 0 103.127 0
+ }
+ AFRF_110 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 821.089 2.864 627.502
+  angles 0 -84.324 0
+ }
+ AFRF_100 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 804.842 3.41 621.39
+  angles 0 90.733 0
+ }
+ AFRF_111 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 818.909 2.562 604.848
+  angles 0 -83.824 0
+ }
+}
+SCR_AIGroup AFRF_200 : "{4E3EA1C06CD8E4F0}Prefabs/Groups/OPFOR/RHS_AFRF/Modern/Ghillie/Group_RHS_AFRF_Modern_Ghillie_Recon.et" {
+ coords 357.653 5.11 1303.97
+ angles 0 -95.663 0
+ m_aUnitPrefabSlots {
+  "{89C4B07037F7232E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Modern/Ghillie/Char_RHS_RF_Modern_Ghillie_SL_Optic.et"
+  "{E6DD352FA5954E68}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Modern/Ghillie/Char_RHS_RF_Modern_Ghillie_SR.et"
+  "{717C653AB5944518}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Modern/Ghillie/Char_RHS_RF_Modern_Ghillie_MG_SD.et"
+  "{D17EDDEBDCB8D0FC}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Modern/Ghillie/Char_RHS_RF_Modern_Ghillie_LAT.et"
+  "{225A4EA74191FCD6}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Modern/Ghillie/Char_RHS_RF_Modern_Ghillie_Sharpshooter.et"
+ }
+}
+SCR_AIGroup AFRF_000 : "{E625399A1E96672A}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_PL_2.et" {
+ coords 785.851 14.379 913.474
+ m_aUnitPrefabSlots {
+  "{8297A76A8EC4E973}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Modern/EMR/Char_RHS_RF_Modern_EMR_PL_Optic.et"
+  "{FA561681D7BAD427}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Modern/EMR/Char_RHS_RF_Modern_EMR_Sapper.et"
+  "{52790943BFEBE2E3}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Modern/EMR/Char_RHS_RF_Modern_EMR_Medic.et"
+  "{E59F13C9E9FDD769}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Modern/EMR/Char_RHS_RF_Modern_EMR_Sharpshooter.et"
+ }
+}

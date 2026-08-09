@@ -1,0 +1,85 @@
+Vehicle UAZ2 : "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et" {
+ coords 351.889 5.248 1305.779
+ angles -0.984 173.987 -0.796
+ m_sAttachmentGroupName "AFRF_200"
+}
+$grp Vehicle : "{4C81D7ED8F8C0D87}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_tanker.et" {
+ Ural4320_tanker1 {
+  coords 795.103 15.015 920.796
+  angles 1.786 -0.084 -2.685
+  m_bEnableMoveOnFreeze 1
+  {
+   PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+    coords 0 0 0
+    angles -0.9 89.944 -4.469
+    m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
+    m_sImageSetGlow ""
+    m_MarkerColor 0.855 0.031 0.028 1
+    m_sQuadName "Truck"
+    m_fWorldSize 3.722
+    m_sDescription "#AR-Vehicle_Ural4320_Fuel_Name"
+    m_bUseWorldScale 1
+    m_aVisibleForFactions {
+     "RHS_AFRF"
+    }
+    m_bVisibleForEmptyFaction 1
+    m_aHideOnGameModeStates {
+    }
+    m_iZOrder 0
+   }
+  }
+ }
+ Ural4320_tanker2 {
+  coords 805.295 2.989 607.947
+  angles 1.786 -0.084 -2.685
+  m_bEnableMoveOnFreeze 1
+  {
+   PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+    coords 0 0 0
+    angles -0.9 89.944 -4.469
+    m_sImageSet "{F3A9B47F55BE8D2B}UI/Textures/Icons/PS_Atlas_x64.imageset"
+    m_sImageSetGlow ""
+    m_MarkerColor 0.855 0.031 0.028 1
+    m_sQuadName "Truck"
+    m_fWorldSize 3.722
+    m_sDescription "#AR-Vehicle_Ural4320_Fuel_Name"
+    m_aVisibleForFactions {
+     "RHS_AFRF"
+    }
+    m_bVisibleForEmptyFaction 1
+    m_aHideOnGameModeStates {
+    }
+   }
+  }
+ }
+}
+$grp Vehicle : "{7009ED8FBA7A1E7E}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_engineer_sand.et" {
+ Ural4320_engineer_sand1 {
+  components {
+   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+    FuelNodes {
+     SCR_FuelNode "{5628CA84B129D4CE}" {
+      m_fInitialFuelTankState 0
+     }
+    }
+   }
+  }
+  coords 792.124 3.575 607.725
+  angles -2.68 89.91 2.685
+  m_sAttachmentGroupName "AFRF_000"
+ }
+ Ural4320_engineer_sand2 {
+  components {
+   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+    FuelNodes {
+     SCR_FuelNode "{5628CA84B129D4CE}" {
+      m_fInitialFuelTankState 0
+     }
+    }
+   }
+  }
+  coords 795.808 15.148 937.697
+  angles -0.15 11.704 -3.683
+  m_sAttachmentGroupName "AFRF_000"
+ }
+}
