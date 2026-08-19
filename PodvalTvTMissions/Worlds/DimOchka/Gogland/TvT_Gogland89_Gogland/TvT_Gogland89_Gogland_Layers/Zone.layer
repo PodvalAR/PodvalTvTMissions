@@ -1,0 +1,43 @@
+$grp SCR_EditorRestrictionZoneEntity : "{6144B0BE2EAC6897}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneMedium.et" {
+ {
+  coords 4325.041 4.302 9097.46
+ }
+ {
+  coords 7219.095 5.97 5263.498
+ }
+}
+SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+ coords 5535.995 123.407 6843.812
+ m_fWarnRadius 154
+ m_fZoneRadius 194
+ m_fZoneTeleportedRadius 204
+ {
+  GenericEntity {
+   ID "59D673B36B893D84"
+   components {
+    SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+     m_fRadius 154
+    }
+   }
+  }
+ }
+}
+PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+ coords 5587.578 127.521 6870.109
+ angles 0 90 0
+ m_MarkerColor 0.502 0 0 1
+ m_sQuadName "flag-2"
+ m_fWorldSize 50
+ m_sDescription "Оружейная"
+ m_aVisibleForFactions {
+  "US"
+ }
+}
+$grp SCR_EditorRestrictionZoneEntity : "{EF72FA7CD87618D5}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneSmall.et" {
+ {
+  coords 5569.534 64.022 6025.792
+ }
+ {
+  coords 6107.761 45.774 7150.924
+ }
+}

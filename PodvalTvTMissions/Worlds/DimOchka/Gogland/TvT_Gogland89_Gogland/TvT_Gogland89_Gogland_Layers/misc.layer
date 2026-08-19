@@ -1,0 +1,87 @@
+$grp GenericEntity : "{13A99500A14FA14C}Prefabs/Props/Military/SupplyBox/SupplyShippingContainers/SupplyShippingContainers_01/SupplyShippingContainers_01_20ft.et" {
+ {
+  coords 5548.777 123.375 6734.591
+  angles 0 8.586 0
+ }
+ {
+  coords 5546.256 123.375 6734.971
+  angles 0 8.586 0
+ }
+ {
+  coords 5543.727 123.375 6735.353
+  angles 0 8.586 0
+ }
+ {
+  coords 5541.187 123.375 6735.737
+  angles 0 8.586 0
+ }
+}
+GenericEntity : "{24F98A215FAA249C}Prefabs/Structures/Signs/Military/Supplies/Sign_SupplyStorage_01_Supplies_FIA.et" {
+ coords 5545.421 123.375 6738.531
+ angles 0 7.806 0
+}
+Vehicle M1 : "{5674FAEB9AB7BDD0}Prefabs/Vehicles/Wheeled/M998/M998.et" {
+ coords 5201.482 7.304 8987.659
+ angles 0 150 0
+ m_bEnableMoveOnFreeze 1
+}
+Vehicle UAZ469_covered_CIV_Randomized1 : "{57A441224AC02CF3}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_covered_CIV_Randomized.et" {
+ coords 5223.816 6.659 8999.627
+ angles -2.889 -29.928 -1.432
+ m_bEnableMoveOnFreeze 1
+}
+Vehicle S105_red1 : "{85F0BD6AF0F42D6D}Prefabs/Vehicles/Wheeled/S105/S105_red.et" {
+ coords 5382.666 5.451 8751.754
+ angles 1.004 33.331 1.731
+ m_bEnableMoveOnFreeze 1
+}
+Vehicle UAZ469_covered_CIV_teal1 : "{870EB660433857D3}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_covered_CIV_teal.et" {
+ coords 5452.654 10.156 9213.436
+ m_bEnableMoveOnFreeze 1
+}
+SCR_DestructibleBuildingEntity : "{97380F89AA02D20B}Prefabs/Structures/Infrastructure/Bus/BusShed_E_01/BusShed_E_01_blue.et" {
+ coords 5453.365 -0.065 8631.912
+ angles 0 -125.606 0
+}
+Vehicle S105_darkblue1 : "{9C3269FB43F989A3}Prefabs/Vehicles/Wheeled/S105/S105_darkblue.et" {
+ coords 5380.707 12.406 9148.371
+ m_bEnableMoveOnFreeze 1
+}
+Vehicle S105_green1 : "{AD80FB47D868C775}Prefabs/Vehicles/Wheeled/S105/S105_green.et" {
+ components {
+  SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+   FuelNodes {
+    SCR_FuelNode "{5622A70CD4036C5A}" {
+     m_fInitialFuelTankState 0
+    }
+   }
+  }
+ }
+ coords 5388.704 5.504 8720.472
+ angles 1.266 134.635 -0.008
+ m_bEnableMoveOnFreeze 1
+}
+Vehicle vaz_2109_baltic1 : "{D895470B08B655EE}Prefabs/Vehicles/Wheeled/vaz_2109/vaz_2109_baltic.et" {
+ components {
+  SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+   FuelNodes {
+    SCR_FuelNode "{5622A70CD4036C5A}" {
+     m_fInitialFuelTankState 5
+    }
+   }
+  }
+ }
+ coords 5172.392 7.875 9068.407
+ angles 0 -135 0
+ m_bEnableMoveOnFreeze 1
+}
+Vehicle vaz_2109_Onyx1 : "{E6C08F22CB673453}Prefabs/Vehicles/Wheeled/vaz_2109/vaz_2109_Onyx.et" {
+ coords 4182.541 11.681 8510.141
+ angles 4.369 104.807 -2.538
+ m_bEnableMoveOnFreeze 1
+}
+Vehicle Ural4320_transport_CIV_randomized1 : "{EEAC3A94929A2B55}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_CIV_randomized.et" {
+ coords 5223.443 6.082 9196.825
+ angles 7.146 104.199 -6.416
+ m_bEnableMoveOnFreeze 1
+}

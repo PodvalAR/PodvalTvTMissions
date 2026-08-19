@@ -1,0 +1,252 @@
+Vehicle M923A1_ANTPS1 : "{06276B6E9CEB130A}Prefabs/Vehicles/Wheeled/M923A1/M923A1_ANTPS43.et" {
+ coords 5466.274 129.406 6933.536
+ angles 0 -140.556 0
+ m_sAttachmentGroupName "pvo"
+}
+SCR_AIGroup : "{15062749E6AB45DE}Prefabs/Groups/BLUFOR/US/Regular/Group_US_Regular_PL.et" {
+ coords 5465.519 129.406 6916.802
+ angles 0 88.882 0
+ m_sCustomNameSet "Командир гарнизона"
+}
+$grp Vehicle : "{2D74C39A650A3031}Prefabs/Vehicles/Wheeled/M923A1/M923A1_engineer.et" {
+ M923A1_engineer1 {
+  coords 5521.318 123.375 6739.487
+  angles 0 9.864 0
+  m_bEnableMoveOnFreeze 1
+ }
+ M923A1_engineer2 {
+  coords 5514.968 123.375 6740.591
+  angles 0 9.864 0
+  m_bEnableMoveOnFreeze 1
+ }
+}
+$grp SCR_AIGroup : "{EE2BCF5671083A76}Prefabs/Groups/BLUFOR/US/Regular/Group_US_Regular_Squad.et" {
+ sq2 {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 5586.284 89.684 7646.642
+  angles 0 91.942 0
+  m_aUnitPrefabSlots {
+   "{BF6034039839323E}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_SL.et"
+   "{C1EA5E8B4B295153}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_Rifle_2.et"
+   "{5A6252A2D968F586}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_SMAW.et"
+  }
+  m_sCustomNameSet "Восточный рубеж"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 3
+   }
+  }
+  coords 5529.562 123.375 6733.562
+  angles 0 8.53 0
+  m_aUnitPrefabSlots {
+   "{BF6034039839323E}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_SL.et"
+   "{7FB18B47A7957C05}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_Medic.et"
+   "{7FB18B47A7957C05}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_Medic.et"
+   "{670BA84233CA3A0B}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_Sapper.et"
+   "{670BA84233CA3A0B}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_Sapper.et"
+  }
+  m_sCustomNameSet "Отряд поддержки"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 5564.972 123.406 6830.838
+  angles 0 17.134 0
+  m_aUnitPrefabSlots {
+   "{BF6034039839323E}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_SL.et"
+   "{B8A7CE52FEBF88FD}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_TL.et"
+   "{5C7D45C7E961BB47}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_AR.et"
+   "{51A83BE61ED6D26D}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_GL.et"
+   "{CC14C9922C73BE77}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_LAT.et"
+   "{B8A7CE52FEBF88FD}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_TL.et"
+   "{5C7D45C7E961BB47}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_AR.et"
+   "{C1EA5E8B4B295153}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_Rifle_2.et"
+   "{5A6252A2D968F586}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_SMAW.et"
+  }
+  m_sCustomNameSet "Гарнизон ВС США"
+ }
+ pvo {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 2
+   }
+  }
+  coords 5476.405 129.406 6942.952
+  angles 0 175.013 0
+  m_aUnitPrefabSlots {
+   "{BF6034039839323E}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_SL.et"
+   "{9A2A10AC7A9A83DE}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_Stinger.et"
+   "{9A2A10AC7A9A83DE}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_Stinger.et"
+   "{9A2A10AC7A9A83DE}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_Stinger.et"
+  }
+  m_sCustomNameSet "Группа ПВО"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 4130.178 5.564 8503.894
+  angles 0 -161.928 0
+  m_aUnitPrefabSlots {
+   "{3ACB32D6CD0C25AB}Worlds/DimOchka/Gogland/TvT_Gogland89_Gogland/dim_US_SL_1_CIV_89.et"
+   "{E4C9196C67477410}Worlds/DimOchka/Gogland/TvT_Gogland89_Gogland/dim_US_TL_1_CIV_89.et"
+  }
+  m_sCustomNameSet "Гарнизон ВС США в увале"
+ }
+ sq1 {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 5624.138 90.938 7709.264
+  angles 0 74.39 0
+  m_aUnitPrefabSlots {
+   "{BF6034039839323E}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_SL.et"
+   "{B8A7CE52FEBF88FD}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_TL.et"
+   "{5C7D45C7E961BB47}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_AR.et"
+   "{51A83BE61ED6D26D}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_GL.et"
+   "{CC14C9922C73BE77}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_LAT.et"
+   "{B8A7CE52FEBF88FD}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_TL.et"
+   "{C1EA5E8B4B295153}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_Rifle_2.et"
+   "{9A2A10AC7A9A83DE}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_Stinger.et"
+  }
+  m_sCustomNameSet "Восточный рубеж с BGM-71 TOW"
+ }
+ sq3 {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 5369.365 117.375 7751.124
+  angles 0 19.892 0
+  m_aUnitPrefabSlots {
+   "{BF6034039839323E}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_SL.et"
+   "{B8A7CE52FEBF88FD}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_TL.et"
+   "{51A83BE61ED6D26D}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_GL.et"
+   "{CC14C9922C73BE77}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_LAT.et"
+   "{B8A7CE52FEBF88FD}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_TL.et"
+   "{5C7D45C7E961BB47}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_AR.et"
+   "{51A83BE61ED6D26D}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_GL.et"
+   "{5A6252A2D968F586}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_SMAW.et"
+  }
+  m_sCustomNameSet "Западный рубеж"
+ }
+ zue {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 5470.326 129.445 6889.733
+  angles 0 -6.47 0
+  m_aUnitPrefabSlots {
+   "{BF6034039839323E}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_SL.et"
+   "{088464049E963097}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_Rifle.et"
+  }
+  m_sCustomNameSet "Экипаж захваченного УРАЛа 4320 с ЗУ-23"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 4
+   }
+  }
+  coords 5289.875 9.73 9111.374
+  angles 0 -80.548 0
+  m_aUnitPrefabSlots {
+   "{CEED3ECF91A9123F}Worlds/DimOchka/Gogland/TvT_Gogland89_Gogland/dim_US_TL_2_CIV_89.et"
+   "{DED329CBA5AEA68A}Worlds/DimOchka/Gogland/TvT_Gogland89_Gogland/dim_US_Rfl_6_CIV_89.et"
+   "{F4F70E685340C0A5}Worlds/DimOchka/Gogland/TvT_Gogland89_Gogland/dim_US_Rfl_5_CIV_89.et"
+  }
+  m_sCustomNameSet "Гарнизон ВС США в увале"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 4
+    m_iSquadCallsign 1
+   }
+  }
+  coords 5112.027 10.063 9071.85
+  angles 0 -170.548 0
+  m_aUnitPrefabSlots {
+   "{E4C9196C67477410}Worlds/DimOchka/Gogland/TvT_Gogland89_Gogland/dim_US_TL_1_CIV_89.et"
+   "{52D724B47D71A540}Worlds/DimOchka/Gogland/TvT_Gogland89_Gogland/dim_US_Rfl_1_CIV_89.et"
+  }
+  m_sCustomNameSet "Гарнизон ВС США в увале"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 4
+    m_iSquadCallsign 2
+   }
+  }
+  coords 5533.349 5.75 9267.803
+  angles 0 -65.548 0
+  m_aUnitPrefabSlots {
+   "{78F303178B9FC36F}Worlds/DimOchka/Gogland/TvT_Gogland89_Gogland/dim_US_Rfl_2_CIV_89.et"
+   "{A0BF412FBE9C0CFB}Worlds/DimOchka/Gogland/TvT_Gogland89_Gogland/dim_US_Rfl_3_CIV_89.et"
+  }
+  m_sCustomNameSet "Гарнизон ВС США в увале"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 5
+   }
+  }
+  coords 5453.397 7.375 8631.398
+  angles 0 -141.333 0
+  m_aUnitPrefabSlots {
+   "{2CBB4C5066430F31}Worlds/DimOchka/Gogland/TvT_Gogland89_Gogland/dim_US_Rfl_4_CIV_89.et"
+   "{3ACB32D6CD0C25AB}Worlds/DimOchka/Gogland/TvT_Gogland89_Gogland/dim_US_SL_1_CIV_89.et"
+  }
+  m_sCustomNameSet "Гарнизон ВС США в увале"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 4
+    m_iSquadCallsign 3
+   }
+  }
+  coords 5299.978 8.004 9159.752
+  angles 0 -96.557 0
+  m_aUnitPrefabSlots {
+   "{E4C9196C67477410}Worlds/DimOchka/Gogland/TvT_Gogland89_Gogland/dim_US_TL_1_CIV_89.et"
+   "{A0BF412FBE9C0CFB}Worlds/DimOchka/Gogland/TvT_Gogland89_Gogland/dim_US_Rfl_3_CIV_89.et"
+  }
+  m_sCustomNameSet "Гарнизон ВС США в увале"
+ }
+}
+$grp Vehicle : "{FD109F3702AAB393}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_ZU23.et" {
+ Ural4320_ZU1 {
+  coords 5466.486 129.412 6895.577
+  angles 0 83.826 0
+  m_sAttachmentGroupName "zue"
+ }
+ Ural4320_ZU2 {
+  coords 5465.882 129.412 6901.163
+  angles 0 83.826 0
+  m_sAttachmentGroupName "zue"
+ }
+}

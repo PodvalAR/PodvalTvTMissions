@@ -1,0 +1,56 @@
+SCR_ChimeraCharacter : "{C1EA5E8B4B295153}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_Rifle_2.et" {
+ ID "520EC961A090BBD5"
+ components {
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate ""
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{477D52F01DC45C55}Prefabs/Characters/HeadGear/Hat_TruckerCap_01/Hat_TruckerCap_01_pohona.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{044560269A810B60}Prefabs/Characters/Uniforms/Terra_arma_shirt/Terra_arma_shirt_base.et"
+    }
+    LoadoutSlotInfo ArmoredVest {
+     Prefab ""
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{91D84F0E37E17441}Prefabs/Characters/Uniforms/Pants_Trousers_01/GD_Pants_Trousers_01_Black_Dirty.et"
+    }
+    LoadoutSlotInfo Vest {
+     Prefab ""
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{68C296C7D8DB0537}" {
+     TargetStorage "Jacket/Shirt_CottonShirt_01_V3_Dirty.et"
+     PrefabsToSpawn {
+      "{922F95F91943F69A}Prefabs/Items/Equipment/Maps/Map_Paper_01/PaperMap_01_folded_US.et" "{61D4F80E49BF9B12}Prefabs/Items/Equipment/Compass/Compass_SY183.et" "{0D9A5DCF89AE7AA9}Prefabs/Items/Medicine/MorphineInjection_01/MorphineInjection_01.et" "{0D9A5DCF89AE7AA9}Prefabs/Items/Medicine/MorphineInjection_01/MorphineInjection_01.et"
+     }
+    }
+    ItemsInitConfigurationItem "{68C296C643D42AA9}" {
+     TargetStorage "Jacket/Jacket_US_BDU_rolledup.et"
+    }
+    ItemsInitConfigurationItem "{68C296C6496CFB2A}" {
+     TargetStorage "Pants/GD_Pants_Trousers_01_Black_Dirty.et"
+     PrefabsToSpawn {
+      "{A81F501D3EF6F38E}Prefabs/Items/Medicine/FieldDressing_01/FieldDressing_US_01.et" "{A81F501D3EF6F38E}Prefabs/Items/Medicine/FieldDressing_01/FieldDressing_US_01.et" "{A81F501D3EF6F38E}Prefabs/Items/Medicine/FieldDressing_01/FieldDressing_US_01.et" "{A81F501D3EF6F38E}Prefabs/Items/Medicine/FieldDressing_01/FieldDressing_US_01.et" "{D70216B1B2889129}Prefabs/Items/Medicine/Tourniquet_01/Tourniquet_US_01.et" "{D70216B1B2889129}Prefabs/Items/Medicine/Tourniquet_01/Tourniquet_US_01.et"
+     }
+    }
+    ItemsInitConfigurationItem "{68C296C24A8F554B}" {
+     Enabled 0
+    }
+    ItemsInitConfigurationItem "{68C296CB56D87F2B}" {
+     Enabled 0
+    }
+    ItemsInitConfigurationItem "{68C296CB31DBAE59}" {
+     Enabled 0
+    }
+   }
+  }
+ }
+ coords 4144.889 5.58 8500.889
+}

@@ -1,0 +1,32 @@
+SCR_AIWorld : "{1A22C9F8BF6E88AB}Prefabs/AI/SCR_AIWorld_Gogland.et" {
+ coords 4723.847 22.989 10602.218
+}
+GenericWorldFogEntity : "{78D9BBF0F423FEB4}Prefabs/World/DefaultWorld/FogHaze_Default.et" {
+ coords 4064.563 -96.96 8185.886
+ DistanceDensity 0.817
+ HazeDensity 0.814
+ HeightOffset 0.911
+ FogHeightStart entity
+ Color 0.502 0 0 1
+ ColorBack 0.502 0 0 1
+ ColorIntensityLV 20
+}
+PerceptionManager PerceptionManager2 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 4756.652 7.839 10736.56
+}
+PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
+ components {
+  SCR_TimeAndWeatherHandlerComponent "{5EE3229927D4D2F5}" {
+   m_bUsePredefineStartingTimeAndWeather 1
+   m_aStartingWeatherAndTime {
+    SCR_TimeAndWeatherState "{6A2533E73FF849EA}" {
+     m_sWeatherPresetName "Overcast"
+     m_iStartingHour 12
+     m_iStartingMinutes 30
+    }
+   }
+  }
+ }
+ coords 4774.554 7.751 10783.468
+ m_iFreezeTime 360000
+}
