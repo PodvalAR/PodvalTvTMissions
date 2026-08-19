@@ -1,0 +1,375 @@
+PolylineShapeEntity capture {
+ components {
+  PS_PolyZone "{6A04AD9143499BB2}" {
+   m_mPolygonTexture "{62F4404928D33DB5}UI/layouts/Textures/Grid1b.edds"
+   m_cPolygonColor 0.659 0.812 0.506 1
+   m_fPolygonUVScale 0.44
+   m_cPolygonBorderColor 0.143 0.502 0 1
+   m_fPolygonBorderWidth 12
+   m_aVisibleForFactions {
+    "US"
+    "USSR"
+    ""
+   }
+  }
+ }
+ coords 3563.465 57.238 6098.262
+ Points {
+  ShapePoint "{6A04AD912A922EFA}" {
+   Position -0.745 0.156 -10.009
+  }
+  ShapePoint "{6A251041F1DE68F6}" {
+   Position -55.894 0.199 -17.777
+  }
+  ShapePoint "{6A251041F07C2CB4}" {
+   Position -78.974 -0.057 150.158
+  }
+  ShapePoint "{6A251041F2DE61C6}" {
+   Position 96.589 0.156 166.82
+  }
+  ShapePoint "{6A251041FCFC9436}" {
+   Position 102.537 -0.123 1.098
+  }
+  ShapePoint "{6A251041F930D356}" {
+   Position 10.353 0.2 -7.246
+  }
+ }
+ IsClosed 1
+}
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ {
+  coords 8267.328 57.438 6310.739
+  m_sTitle "Правила и задачи"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "ПРАВИЛА:"\
+  "1. Экипажу Ми-24 разрешено садиться и заводить двигатели только после конца фриз-тайма;"\
+  "2. Всем, кроме Ми-24, запрещено пересекать красный триггер;"\
+  "3. Строительные грузовики запрещено вывозить за пределы базы;"\
+  "4. На базе должен обязательно быть 1 пехотный отряд ВС США;"\
+  ""\
+  "ЗАДАЧИ:"\
+  "• СССР: "\
+  " 1. Захватить объект."\
+  ""\
+  "• США:"\
+  " 1. Удержать объект."\
+  ""\
+  "Дополнительно:"\
+  "1. У ВС США имеются 2 УРАЛа с ЗУ-23, 4 ПЗРК \"Стингер\", РЛС;"\
+  "2. У ВС США имеются строительные грузовики - можете строить что угодно, хоть миномет. Ресурсов 4000. На нем можно ездить во время фриз-тайма;"\
+  "3. Техника, приписанная экипажу БМ-21 \"Град\", может ездить на фриз-тайме для зарядки;"\
+  "4. У СССР есть дрон \"Пчела-1\", Сканеры у СПН (подробно в пункте \"Важно\"). Дрон сбивается со стрелкового оружия (особенно с пулемета). Со стингера нельзя сбить;"\
+  "5. Рации есть не у всех;"\
+  "6. LAV-25 без топлива. Советую как можно скорее привезти заправщик."
+  m_aVisibleForFactions {
+   "US"
+   "USSR"
+   "Ses_CDF"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+ }
+ {
+  coords 8267.328 57.438 6310.739
+  m_sTitle "Обстановка"
+  m_sTextData "1989 г. Германия"\
+  "Холодная война переросла в открытый конфликт. 2-я дивизия КМП США прорвала оборону в районе Фульды и, продвинувшись на юго-восток, захватила бывший военный объект ВС СССР."\
+  ""\
+  "Для ликвидации прорыва и возвращения объекта в бой была направлена 5-я рота 35 гв. ОДШБр"
+  m_aVisibleForFactions {
+   "US"
+   "USSR"
+   "Ses_CDF"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+ }
+ {
+  coords 8267.328 57.438 6310.739
+  m_sTitle "ВАЖНО (Гайд)"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "• КАК ПОЛЬЗОВАТЬСЯ РЛС:"\
+  "Ищите место где разложить РЛС, приезжаете туда, сзади машины будет два пункта:"\
+  " 1. Разложить антенну (РЛС);"\
+  " 2. Разложить модуль."\
+  "После того как разложится антенна и установится модуль, в кабину можно войти. Там будет кнопка \"man scope radar\" (плюс минус так), затем у вас открывается радар. Space - запустить скан (вас можно будет найти сканером как только радар начнет работу), R - менять дальность."\
+  "На радаре будет отображаться вся воздушная техника - тот же Ми-24 и дрон. Пользуйтесь для обнаружения и уничтожения воздушных целей."\
+  ""\
+  "• КАК ПОЛЬЗОВАТЬСЯ ДРОНОМ:"\
+  "Садитесь в УРАЛ на пассажира, запускаете дрон, затем нажимаете access...(переходите в дрон)."\
+  "WASD - управлять, кнопки \"+\" и \"-\" это зум."\
+  "Кнопка \"Return base\" - возвращает дрон к уралу, затем после приземления дрона надо подъехать к нему на Урале и через меню загрузить его. "\
+  "(Используйте это если в дроне начнет заканчиваться топливо)"\
+  ""\
+  "• КАК ПОЛЬЗОВАТЬСЯ СКАНЕРОМ (СПН):"\
+  "Берете в руки, включаете через R, Gain должен быть High (лучше просто не тыкайте там, он по умолчанию установлен на это значение)."\
+  "После этого по горизонтале водите им и когда получится найти источник он начнет гудеть."\
+  "Сканер шипит когда:"\
+  "1. Кто то говорит в рацию;"\
+  "2. Работает радар. "\
+  "Используйте его для того чтобы найти РЛС и приблизительное направление где сидит враг."
+  m_aVisibleForFactions {
+   "US"
+   "USSR"
+   "Ses_CDF"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+ }
+ {
+  coords 8267.328 57.438 6310.739
+  m_sTitle "Командиру СССР"
+  m_sTextData "Советую использовать дрон для корректировки Града и управления стороной."
+  m_aVisibleForFactions {
+   "USSR"
+  }
+ }
+}
+$grp GenericEntity : "{3D78D7D606FF9818}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_NoCapture.et" {
+ flag1 {
+  coords 3664.767 64.546 6104.232
+ }
+ flag2 {
+  coords 3642.134 69.517 6218.642
+ }
+ flag3 {
+  coords 3514.623 66.642 6094.095
+ }
+ flag4 {
+  coords 3497.304 69.651 6240.515
+ }
+}
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{69F4ABD0C13CC2CA}" {
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "USSR_WIN"
+     }
+     m_sFailedObjectiveNames {
+      "US_WIN"
+     }
+     m_sMessage "Объект захвачен"
+     m_Timer GUB_ZoneControlTimer "{69F4ABD0C2942D8E}" {
+      timeToComplete 150
+     }
+     m_ZoneController GUB_ZoneController "{69F4ABD0CD09E009}" {
+      m_sZoneEntityName "capture"
+     }
+     m_FlagController GUB_FlagController "{69F4ABD0CE2CC267}" {
+      m_aFlagNames {
+       "flag1"
+       "flag2"
+       "flag3"
+       "flag4"
+      }
+      m_fStartFactionKey "US"
+      m_fEndFactionKey "USSR"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{69F4ABD0CB823B14}" {
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 5190.508 170.357 704.102
+}
+PolylineShapeEntity : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
+ components {
+  PS_PolyZone "{60E90266F25533F6}" {
+   m_mPolygonTexture "{62F4404928D33DB5}UI/layouts/Textures/Grid1b.edds"
+   m_fPolygonUVScale 0.44
+   m_cPolygonBorderColor 0.502 0 0 1
+   m_aVisibleForFactions {
+    "US"
+    "USSR"
+    ""
+   }
+  }
+ }
+ coords 0.892 42.905 4395.421
+ Points {
+  ShapePoint "{6A25104E7200B710}" {
+   Position 54.99 -2.394 24.312
+  }
+  ShapePoint "{6A25104E7DD9936F}" {
+   Position 266.359 -2.315 105.201
+  }
+  ShapePoint "{6A25104E7C67DC6E}" {
+   Position 643.163 -2.202 205.632
+  }
+  ShapePoint "{6A25104E7C5661B1}" {
+   Position 704 -2.363 214.954
+  }
+  ShapePoint "{6A25104E7FFB740D}" {
+   Position 807.598 -2.373 171.266
+  }
+  ShapePoint "{6A25104E7F159CF9}" {
+   Position 851.918 -2.53 158.301
+  }
+  ShapePoint "{6A25104E7EFB9B90}" {
+   Position 950.288 -2.312 171.28
+  }
+  ShapePoint "{6A25104E7E067FAB}" {
+   Position 1086.401 -2.487 210.326
+  }
+  ShapePoint "{6A25104E79F099F3}" {
+   Position 1232.047 -2.529 256.218
+  }
+  ShapePoint "{6A25104E792B5DE5}" {
+   Position 1350.515 -2.485 272.899
+  }
+  ShapePoint "{6A25104E788DA397}" {
+   Position 1606.078 -2.529 293.165
+  }
+  ShapePoint "{6A25104E78D28E8C}" {
+   Position 1773.906 -2.28 288.037
+  }
+  ShapePoint "{6A25104E7B871695}" {
+   Position 2187.174 -2.53 274.069
+  }
+  ShapePoint "{6A25104E7B65BEF8}" {
+   Position 2483.027 -1.463 280.962
+  }
+  ShapePoint "{6A25104E7AA7B200}" {
+   Position 2605.107 -2.53 330.664
+  }
+  ShapePoint "{6A25104E7AEF0C43}" {
+   Position 2739.947 -2.237 365.012
+  }
+  ShapePoint "{6A25104E85BA3D45}" {
+   Position 2827.718 -2.53 379.903
+  }
+  ShapePoint "{6A25104E85F7B14E}" {
+   Position 2933.954 -2.186 380.812
+  }
+  ShapePoint "{6A25104E852E7AAC}" {
+   Position 3057.015 -1.483 394.299
+  }
+  ShapePoint "{6A25104E855A79E6}" {
+   Position 3220.876 -2.241 487.044
+  }
+  ShapePoint "{6A25104E847A1AEC}" {
+   Position 3333.966 -2.53 554.458
+  }
+  ShapePoint "{6A25104E8788E9D7}" {
+   Position 3399.597 -2.485 569.623
+  }
+  ShapePoint "{6A25104E86A24827}" {
+   Position 3539.328 -2.467 567.229
+  }
+  ShapePoint "{6A25104E863F2EB4}" {
+   Position 3728.6 -2.53 558.742
+  }
+  ShapePoint "{6A25104E8139D49B}" {
+   Position 3764.59 -2.53 562.343
+  }
+  ShapePoint "{6A25104E80E83C8F}" {
+   Position 4096.642 -2.265 435.304
+  }
+  ShapePoint "{6A25104E8055673E}" {
+   Position 4360.632 -2.53 333.319
+  }
+  ShapePoint "{6A25104E83945233}" {
+   Position 4408.194 -2.529 292.346
+  }
+  ShapePoint "{6A25104E8339139E}" {
+   Position 4445.187 -2.467 248.445
+  }
+  ShapePoint "{6A25104E82F65A41}" {
+   Position 4595.219 -2.436 185.846
+  }
+  ShapePoint "{6A25104E820ACCE8}" {
+   Position 4680.601 -2.444 160.369
+  }
+  ShapePoint "{6A25104E8DBB5C04}" {
+   Position 4802.537 -2.529 168.878
+  }
+  ShapePoint "{6A25104E8C858467}" {
+   Position 5189.395 -2.528 -5.958
+  }
+  ShapePoint "{6A25104E8F95631A}" {
+   Position 5342.107 -2.529 -85.443
+  }
+  ShapePoint "{6A25104E8F02FC29}" {
+   Position 5498.374 -2.435 -155.716
+  }
+  ShapePoint "{6A25104E8ECB36A7}" {
+   Position 5663.23 -2.467 -210.298
+  }
+  ShapePoint "{6A25104E8E136BA7}" {
+   Position 5775.171 -2.505 -241.238
+  }
+  ShapePoint "{6A25104E8915CE50}" {
+   Position 6038.233 -2.529 -296.412
+  }
+  ShapePoint "{6A25104E88A7A777}" {
+   Position 6239.279 -2.522 -327.184
+  }
+  ShapePoint "{6A25104E884CC135}" {
+   Position 6670.239 -2.53 -355.452
+  }
+  ShapePoint "{6A25104E8B4BEE92}" {
+   Position 6953.324 -2.19 -377.23
+  }
+  ShapePoint "{6A25104E8A6018F8}" {
+   Position 7259.128 -2.476 -405.912
+  }
+  ShapePoint "{6A25104E9529AB22}" {
+   Position 7505.993 -2.378 -430.37
+  }
+  ShapePoint "{6A25104E948BE3BC}" {
+   Position 7697.181 -2.53 -465.037
+  }
+  ShapePoint "{6A25104E9442CA36}" {
+   Position 7847.209 -2.53 -502.358
+  }
+  ShapePoint "{6A25104E9797FA79}" {
+   Position 7963.885 -2.308 -561.462
+  }
+  ShapePoint "{6A25104E974F1926}" {
+   Position 8159.472 -2.412 -645.814
+  }
+  ShapePoint "{6A25104E96E112B7}" {
+   Position 8319.26 -2.058 -694.776
+  }
+  ShapePoint "{6A25104E962EC740}" {
+   Position 8455.921 -2.194 -707.241
+  }
+  ShapePoint "{6A25104E91E9DAAA}" {
+   Position 8625.218 -2.386 -700.257
+  }
+  ShapePoint "{6A25104E913F9326}" {
+   Position 8791.99 -2.437 -656.96
+  }
+  ShapePoint "{6A25104E928AFB80}" {
+   Position 8911.189 -2.529 -614.098
+  }
+  ShapePoint "{6A25104E92307ADF}" {
+   Position 9037.668 -2.53 -585.28
+  }
+  ShapePoint "{6A25104E9D7FA0E5}" {
+   Position 9214.438 -2.213 -565.879
+  }
+  ShapePoint "{6A25104EAE1CCFF6}" {
+   Position 9214.146 30.564 -4394.346
+  }
+  ShapePoint "{6A25104EAB110C45}" {
+   Position 3.401 14.447 -4392.408
+  }
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 5547.709 15.194 4020.56
+}

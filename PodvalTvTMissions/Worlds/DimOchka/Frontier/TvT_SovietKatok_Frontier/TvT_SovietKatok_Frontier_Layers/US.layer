@@ -1,0 +1,276 @@
+Vehicle M923A1_ANTPS1 : "{06276B6E9CEB130A}Prefabs/Vehicles/Wheeled/M923A1/M923A1_ANTPS43.et" {
+ coords 2488.678 73.469 6512.404
+ angles -2.911 -140.556 2.079
+ m_sAttachmentGroupName "pvo"
+}
+$grp SCR_AIGroup : "{15062749E6AB45DE}Prefabs/Groups/BLUFOR/US/Regular/Group_US_Regular_PL.et" {
+ {
+  coords 3627.219 57.17 6190.914
+  angles 0 178.882 0
+  m_sCustomNameSet "Командир 3-й роты 2 дивизии КМП США"
+ }
+ sniper {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 1562.27 57.156 6186.454
+  angles 0 -76.118 0
+  m_aUnitPrefabSlots {
+   "{FEF94DDB849A2D4E}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_Observer.et"
+   "{0986302304E575E1}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_Sniper.et"
+  }
+  m_sCustomNameSet "Снайперская пара"
+ }
+}
+Vehicle M923A1_tanker1 : "{2BE1F8B9299B67C1}Prefabs/Vehicles/Wheeled/M923A1/M923A1_tanker.et" {
+ coords 539.466 73.367 7675.207
+ angles 0.893 93.731 0.058
+ m_sAttachmentGroupName "sq3"
+}
+$grp Vehicle : "{2D74C39A650A3031}Prefabs/Vehicles/Wheeled/M923A1/M923A1_engineer.et" {
+ M923A1_engineer1 {
+  coords 3586.596 57.34 6133.949
+  angles 0 -5.136 0
+  m_bEnableMoveOnFreeze 1
+ }
+ M923A1_engineer2 {
+  coords 3595.272 57.438 6134.729
+  angles 0 -5.136 0
+  m_bEnableMoveOnFreeze 1
+ }
+}
+Vehicle LAV25_RHS1 : "{3312ADBF53A16DD9}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS.et" {
+ components {
+  SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+   FuelNodes {
+    SCR_FuelNode "{5622A70CD4036C5A}" {
+     m_fInitialFuelTankState 0
+    }
+   }
+  }
+ }
+ coords 3647.913 57.704 6142.831
+ angles 0 -60 0
+ m_sAttachmentGroupName "lav25"
+}
+$grp Vehicle : "{62A90E61C8062970}Prefabs/Vehicles/Wheeled/M998/dim_M1025_armed_TOW.et" {
+ dim_M1025_armed_TOW1 {
+  coords 558.821 73.375 7674.027
+  angles 0 94.983 0
+  m_sAttachmentGroupName "sq2"
+ }
+ dim_M1025_armed_TOW2 {
+  coords 550.963 73.375 7674.504
+  angles 0 94.037 0
+  m_sAttachmentGroupName "sq2"
+ }
+}
+Vehicle M923A1_transport_covered1 : "{81FDAD5EB644CC3D}Prefabs/Vehicles/Wheeled/M923A1/M923A1_transport_covered.et" {
+ coords 527.56 73.344 7676.497
+ angles 0 96.471 0
+ m_sAttachmentGroupName "sq3"
+}
+$grp Vehicle : "{9B1BF9644E0378D6}Prefabs/Vehicles/Wheeled/M998/M998_covered_long.et" {
+ M998_covered_long1 {
+  coords 2475.62 73.434 6511.304
+  angles 0 135 0
+  m_sAttachmentGroupName "pvo"
+ }
+ M998_covered_long2 {
+  coords 1558.254 57.125 6183.299
+  angles 0 13.986 0
+  m_sAttachmentGroupName "sniper"
+ }
+}
+$grp Vehicle : "{B995CA2A76E7924A}Prefabs/Vehicles/Wheeled/M998/dim_M1025_armed_M2HB1.et" {
+ dim_M1025_armed_M2HB1 {
+  coords 568.163 73.406 7672.735
+  angles 0 99.052 0
+  m_sAttachmentGroupName "sq1"
+ }
+ dim_M1025_armed_M2HB2 {
+  coords 578.124 73.406 7671.288
+  angles 0 99.052 0
+  m_sAttachmentGroupName "sq1"
+ }
+}
+$grp SCR_AIGroup : "{EE2BCF5671083A76}Prefabs/Groups/BLUFOR/US/Regular/Group_US_Regular_Squad.et" {
+ sq2 {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 4
+    m_iSquadCallsign 1
+   }
+  }
+  coords 549.715 73.375 7669.694
+  angles 0 2.911 0
+  m_aUnitPrefabSlots {
+   "{BF6034039839323E}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_SL.et"
+   "{B8A7CE52FEBF88FD}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_TL.et"
+   "{5C7D45C7E961BB47}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_AR.et"
+   "{51A83BE61ED6D26D}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_GL.et"
+   "{CC14C9922C73BE77}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_LAT.et"
+   "{B8A7CE52FEBF88FD}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_TL.et"
+   "{5C7D45C7E961BB47}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_AR.et"
+   "{C1EA5E8B4B295153}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_Rifle_2.et"
+  }
+  m_sCustomNameSet "Подкрепление на М998 с TOW"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 3557.076 57.413 6182.487
+  angles 0 83.53 0
+  m_aUnitPrefabSlots {
+   "{BF6034039839323E}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_SL.et"
+   "{7FB18B47A7957C05}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_Medic.et"
+   "{7FB18B47A7957C05}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_Medic.et"
+   "{670BA84233CA3A0B}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_Sapper.et"
+   "{670BA84233CA3A0B}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_Sapper.et"
+  }
+  m_sCustomNameSet "Отряд поддержки"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 3568.372 57.437 6109.246
+  angles 0 80.488 0
+  m_aUnitPrefabSlots {
+   "{BF6034039839323E}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_SL.et"
+   "{B8A7CE52FEBF88FD}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_TL.et"
+   "{5C7D45C7E961BB47}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_AR.et"
+   "{51A83BE61ED6D26D}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_GL.et"
+   "{CC14C9922C73BE77}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_LAT.et"
+   "{B8A7CE52FEBF88FD}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_TL.et"
+   "{5C7D45C7E961BB47}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_AR.et"
+   "{C1EA5E8B4B295153}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_Rifle_2.et"
+  }
+ }
+ pvo {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 2478.715 73.403 6518.378
+  angles 0 163.289 0
+  m_aUnitPrefabSlots {
+   "{BF6034039839323E}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_SL.et"
+   "{9A2A10AC7A9A83DE}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_Stinger.et"
+   "{9A2A10AC7A9A83DE}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_Stinger.et"
+   "{9A2A10AC7A9A83DE}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_Stinger.et"
+  }
+  m_sCustomNameSet "Группа ПВО"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 3623.533 57.4 6110.698
+  angles 0 -0.48 0
+  m_aUnitPrefabSlots {
+   "{BF6034039839323E}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_SL.et"
+   "{B8A7CE52FEBF88FD}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_TL.et"
+   "{5C7D45C7E961BB47}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_AR.et"
+   "{51A83BE61ED6D26D}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_GL.et"
+   "{CC14C9922C73BE77}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_LAT.et"
+   "{B8A7CE52FEBF88FD}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_TL.et"
+   "{5C7D45C7E961BB47}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_AR.et"
+   "{CC14C9922C73BE77}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_LAT.et"
+  }
+ }
+ sq1 {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 4
+   }
+  }
+  coords 569.213 73.375 7668.25
+  angles 0 6.525 0
+  m_aUnitPrefabSlots {
+   "{BF6034039839323E}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_SL.et"
+   "{B8A7CE52FEBF88FD}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_TL.et"
+   "{5C7D45C7E961BB47}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_AR.et"
+   "{51A83BE61ED6D26D}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_GL.et"
+   "{CC14C9922C73BE77}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_LAT.et"
+   "{B8A7CE52FEBF88FD}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_TL.et"
+   "{C1EA5E8B4B295153}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_Rifle_2.et"
+   "{9A2A10AC7A9A83DE}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_Stinger.et"
+  }
+  m_sCustomNameSet "Подкрепление на М998 с M2"
+ }
+ sq3 {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 4
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 533.271 73.367 7670.913
+  angles 0 4.892 0
+  m_aUnitPrefabSlots {
+   "{BF6034039839323E}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_SL.et"
+   "{B8A7CE52FEBF88FD}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_TL.et"
+   "{5C7D45C7E961BB47}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_AR.et"
+   "{51A83BE61ED6D26D}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_GL.et"
+   "{CC14C9922C73BE77}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_LAT.et"
+   "{B8A7CE52FEBF88FD}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_TL.et"
+   "{5C7D45C7E961BB47}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_AR.et"
+   "{51A83BE61ED6D26D}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_GL.et"
+   "{ADBE6A6BF7EDDE7D}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_Rifle_1.et"
+  }
+ }
+ lav25 {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 3
+   }
+  }
+  coords 3639.281 57.385 6127.223
+  angles 0 -88.525 0
+  m_aUnitPrefabSlots {
+   "{DE10FE7CC057F751}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_CC.et"
+   "{A5EA776B389D1583}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_Crew.et"
+  }
+  m_sCustomNameSet "Экипаж LAV-25"
+ }
+ zue {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 2
+   }
+  }
+  coords 3614.457 57.413 6150.852
+  angles 0 -6.47 0
+  m_aUnitPrefabSlots {
+   "{BF6034039839323E}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_SL.et"
+   "{088464049E963097}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_Rifle.et"
+  }
+  m_sCustomNameSet "Экипаж захваченного УРАЛа 4320 с ЗУ-23"
+ }
+}
+$grp Vehicle : "{FD109F3702AAB393}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_ZU23.et" {
+ Ural4320_ZU1 {
+  coords 3615.882 57.438 6154.605
+  angles 0 -96.174 0
+  m_sAttachmentGroupName "zue"
+ }
+ Ural4320_ZU2 {
+  coords 3615.252 57.119 6160.427
+  angles 0 -96.174 0
+ }
+}

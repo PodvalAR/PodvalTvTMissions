@@ -1,0 +1,280 @@
+Vehicle dim_UAZ3 : "{0ACA2ED6AD52D641}Prefabs/Vehicles/Wheeled/UAZ469/dim_UAZ469.et" {
+ coords 6183.412 57.5 7443.194
+ angles 0 165 0
+ m_sAttachmentGroupName "SPN"
+}
+Vehicle Ural4320_transport1 : "{16C1F16C9B053801}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport.et" {
+ coords 7795.114 73.469 7500.271
+ angles 0 180 0
+ m_sAttachmentGroupName "grad"
+ m_bEnableMoveOnFreeze 1
+}
+Vehicle Ural4320_ammo1 : "{3336BE330C4F355B}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_ammo.et" {
+ coords 7802.42 73.344 7491.661
+ angles 0 -90 0
+ m_sAttachmentGroupName "grad"
+ m_bEnableMoveOnFreeze 1
+}
+Vehicle BM_21_1_Base1 : "{3ADAB98297CE0203}Prefabs/Vehicles/Wheeled/Ural_4320_Grad/BM 21-1_Base.et" {
+ coords 7791.574 73.344 7491.55
+ angles 0 -90 0
+ m_sAttachmentGroupName "grad"
+ m_bEnableMoveOnFreeze 1
+}
+$grp Vehicle : "{447CFE8D73F95C40}Prefabs/Vehicles/Wheeled/BTR70/BTR70_AFRF.et" {
+ BTR70_AFRF1 {
+  coords 7675.052 73.469 7498.476
+  angles 0 -87.288 0
+  m_sAttachmentGroupName "btr"
+ }
+ BTR70_AFRF2 {
+  coords 7692.646 73.438 7497.465
+  angles 0 -85.522 0
+  m_sAttachmentGroupName "btr2"
+ }
+ BTR70_AFRF3 {
+  coords 7709.236 73.437 7496.108
+  angles 0 -85.522 0
+  m_sAttachmentGroupName "btr3"
+ }
+}
+$grp SCR_AIGroup : "{46EDA9AE5FBA3A4B}Prefabs/Groups/OPFOR/USSR/dim_Group_USSR_GRU_Shturm.et" {
+ SPN {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B351898A1AB}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 6177.065 57.438 7442.025
+  angles 0 74.143 0
+  m_aUnitPrefabSlots {
+   "{6E89A2DB1591A7D0}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/dim_USSR_SPN_SL_Val.et"
+   "{5A7E1FBB12ECF27D}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/dim_USSR_SPN_RER_Val.et"
+   "{28FA33C97D507345}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/dim_USSR_SPN_Sapper_VAL.et"
+   "{EF580BEA47F2999A}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/dim_USSR_SPN_Sniper_SVD_Armor.et"
+  }
+ }
+ SPN2 {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B351898A1AB}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 5280.13 57.438 4701.195
+  angles 0 -162.482 0
+  m_aUnitPrefabSlots {
+   "{6E89A2DB1591A7D0}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/dim_USSR_SPN_SL_Val.et"
+   "{5A7E1FBB12ECF27D}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/dim_USSR_SPN_RER_Val.et"
+   "{28FA33C97D507345}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/dim_USSR_SPN_Sapper_VAL.et"
+   "{EF580BEA47F2999A}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/dim_USSR_SPN_Sniper_SVD_Armor.et"
+  }
+ }
+}
+Vehicle dim_Mi24V_armed_S1 : "{4BE7C1D6097A827F}Prefabs/Vehicles/Helicopters/Mi24/dim_Mi24V_armed_S8.et" {
+ coords 8040.544 73.737 1826.304
+ angles 0 0 0
+ m_sAttachmentGroupName "pil"
+}
+$grp SCR_AIGroup : "{84AF92E239A71FCE}Prefabs/Groups/OPFOR/USSR/Group_USSR_Rifle_SQ.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 7723.292 73.406 7490.781
+  angles 0 3.665 0
+  m_aUnitPrefabSlots {
+   "{B199DDF22D5E3806}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_SL.et"
+   "{CC81310A48CD049F}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_SR.et"
+   "{8E06F2F771958EF6}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_MG.et"
+   "{1160B202A7A7F4DE}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_AMG.et"
+   "{CC81310A48CD049F}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_SR.et"
+   "{320908931A590EC2}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_Rifleman.et"
+   "{568706A4EA6098BA}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_LAT.et"
+   "{F05AC590367CD079}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_Sniper.et"
+  }
+  m_sCustomNameSet "Отделение ВДВ"
+ }
+ hqq {
+  coords 7777.045 73.469 7487.471
+  angles 0 7.06 0
+  m_aUnitPrefabSlots {
+   "{2887646B30B90996}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_PL.et"
+  }
+  m_sCustomNameSet "Командир 5-й роты 35 гв. ОДШБр"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 7736.67 73.406 7489.835
+  angles 0 3.665 0
+  m_aUnitPrefabSlots {
+   "{B199DDF22D5E3806}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_SL.et"
+   "{CC81310A48CD049F}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_SR.et"
+   "{04B9452C66538449}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_AT.et"
+   "{9BDF05D9B061FE61}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_AAT.et"
+   "{CC81310A48CD049F}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_SR.et"
+   "{320908931A590EC2}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_Rifleman.et"
+   "{DC112CED1FDA9A15}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_AR.et"
+   "{9ED75DF101539F93}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_Sapper.et"
+  }
+  m_sCustomNameSet "Отделение ВДВ"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 2
+   }
+  }
+  coords 7751.885 73.438 7498.813
+  angles 0 -175.943 0
+  m_aUnitPrefabSlots {
+   "{B199DDF22D5E3806}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_SL.et"
+   "{CC81310A48CD049F}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_SR.et"
+   "{04B9452C66538449}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_AT.et"
+   "{9BDF05D9B061FE61}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_AAT.et"
+   "{CC81310A48CD049F}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_SR.et"
+   "{320908931A590EC2}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_Rifleman.et"
+   "{DC112CED1FDA9A15}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_AR.et"
+   "{9ED75DF101539F93}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_Sapper.et"
+  }
+  m_sCustomNameSet "Отделение ВДВ"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 7766.319 73.375 7497.745
+  angles 0 -174.372 0
+  m_aUnitPrefabSlots {
+   "{B199DDF22D5E3806}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_SL.et"
+   "{CC81310A48CD049F}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_SR.et"
+   "{8E06F2F771958EF6}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_MG.et"
+   "{1160B202A7A7F4DE}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_AMG.et"
+   "{CC81310A48CD049F}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_SR.et"
+   "{320908931A590EC2}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_Rifleman.et"
+   "{568706A4EA6098BA}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_LAT.et"
+   "{F05AC590367CD079}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_Sniper.et"
+  }
+  m_sCustomNameSet "Отделение ВДВ"
+ }
+ btr {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 7672.425 73.469 7493.323
+  angles 0 2.859 0
+  m_aUnitPrefabSlots {
+   "{B199DDF22D5E3806}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_SL.et"
+   "{CC81310A48CD049F}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_SR.et"
+   "{8E06F2F771958EF6}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_MG.et"
+   "{1160B202A7A7F4DE}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_AMG.et"
+   "{CC81310A48CD049F}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_SR.et"
+   "{320908931A590EC2}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_Rifleman.et"
+   "{6BCAD897EF22E64D}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_CC.et"
+   "{9FFEF10757E742EC}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_CREW.et"
+  }
+  m_sCustomNameSet "Отделение ВДВ на БТР-70"
+ }
+ pil {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 4
+   }
+  }
+  coords 8041.507 73.406 1800.536
+  m_aUnitPrefabSlots {
+   "{0A2C6FAE508B7ACF}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/dubok/Char_USSR_HeliPilot_2.et"
+   "{47A05F499D165378}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_HeliCoPilot.et"
+  }
+  m_sCustomNameSet "Экипаж Ми-24"
+ }
+ btr2 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 7688.813 73.441 7492.451
+  angles 0 2.859 0
+  m_aUnitPrefabSlots {
+   "{B199DDF22D5E3806}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_SL.et"
+   "{CC81310A48CD049F}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_SR.et"
+   "{8E06F2F771958EF6}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_MG.et"
+   "{1160B202A7A7F4DE}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_AMG.et"
+   "{CC81310A48CD049F}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_SR.et"
+   "{320908931A590EC2}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_Rifleman.et"
+   "{6BCAD897EF22E64D}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_CC.et"
+   "{9FFEF10757E742EC}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_CREW.et"
+  }
+  m_sCustomNameSet "Отделение ВДВ на БТР-70"
+ }
+ btr3 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 7705.725 73.438 7491.416
+  angles 0 2.859 0
+  m_aUnitPrefabSlots {
+   "{B199DDF22D5E3806}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_SL.et"
+   "{CC81310A48CD049F}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_SR.et"
+   "{8E06F2F771958EF6}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_MG.et"
+   "{1160B202A7A7F4DE}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_AMG.et"
+   "{CC81310A48CD049F}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_SR.et"
+   "{320908931A590EC2}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_Rifleman.et"
+   "{6BCAD897EF22E64D}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_CC.et"
+   "{9FFEF10757E742EC}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Char_USSR_CREW.et"
+  }
+  m_sCustomNameSet "Отделение ВДВ на БТР-70"
+ }
+ grad {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 7793.567 73.406 7486.19
+  angles 0 3.665 0
+  m_aUnitPrefabSlots {
+   "{B199DDF22D5E3806}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_SL.et"
+   "{CC81310A48CD049F}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_SR.et"
+   "{320908931A590EC2}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_Rifleman.et"
+   "{320908931A590EC2}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_Rifleman.et"
+  }
+  m_sCustomNameSet "Экипаж БМ-21 \"Град\""
+ }
+}
+Vehicle Ural4320_GCS1 : "{C19FD21369B4E1BE}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_GCS.et" {
+ coords 7778.321 73.344 7491.943
+ angles 0 -87.693 0
+ m_sAttachmentGroupName "hqq"
+}
+$grp Vehicle : "{D9B91FAB817A6033}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_covered.et" {
+ Ural4320_transport_covered1 {
+  coords 7733.225 73.406 7495.018
+  angles 0 -86.48 0
+ }
+ Ural4320_transport_covered2 {
+  coords 7755.936 73.418 7493.386
+  angles 0.827 -85.806 0.958
+ }
+}
