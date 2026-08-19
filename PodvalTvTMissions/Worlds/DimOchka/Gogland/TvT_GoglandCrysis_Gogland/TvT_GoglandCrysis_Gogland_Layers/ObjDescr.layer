@@ -1,0 +1,189 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ {
+  coords 4232.639 0 481.413
+  m_sTitle "Правила и задачи"
+  m_sTextData "ПРАВИЛА:"\
+  "1. Вертолету запрещено использовать тактику \"КАМИКАДЗЕ\";"\
+  "2. Вертолету разрешено запускать двигатель только после конца фриз-тайма;"\
+  "3. Строительные грузовики и УАЗики 452 запрещено вывозить за пределы плацдарма (тригер)."\
+  ""\
+  "ЗАДАЧИ:"\
+  "• СССР: "\
+  " 1. Захватить плацдарм (поменять флаг на маяке)."\
+  ""\
+  "• Британии:"\
+  " 1. Удержать плацдарм."\
+  ""\
+  "ДОПОЛНИТЕЛЬНО:"\
+  " 1. У Британии в распоряжении есть ПТУРы. Они принадлежат отряду с которым появились;"\
+  " 2. У Британии есть строительные грузовики с мешками с песком и 4000 припасами рядом. Используйте их для постройки укреплений (можно хоть миномет). На них можно ездить во время фриз-тайма;"\
+  "3. УАЗики 452 используйте для перевозки ПТУРов."
+  m_aVisibleForFactions {
+   "UK"
+   "USSR"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+ {
+  coords 3726.272 0 481.413
+  m_sTitle "Обстановка"
+  m_sTextData "1990 г."\
+  "Британские морские пехотинцы высаживаются на подконтрольный СССР остров Гогланд с целью превращения его в дальнейший плацдарм для высадки в Ленинградскую область."\
+  ""\
+  "Основная авианосная ударная группа ВМФ Великобритании движется пехотинцам на поддержку, однако до их прибытия еще около двух часов. "\
+  ""\
+  "ВС СССР планируют выбить врага с их острова."\
+  ""\
+  ""
+  m_aVisibleForFactions {
+   "UK"
+   "USSR"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+ {
+  coords 4232.639 0 481.413
+  m_sTitle "ВАЖНО"
+  m_sTextData "1. У британцев могут не отображаться магазины в инвентаре. Скиньте и наденьте разгрузку;"\
+  "2. Если не получается поставить снаряд на ПТУР - разберите и соберите его снова;"\
+  "3. Рация есть только у СПН, Командиров отделений, групп и снайперов;"\
+  "4. Вертолет можно спокойно посадить на воду, он не уходит под воду пока работают двигатели."
+  m_aVisibleForFactions {
+   "UK"
+   "USSR"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+}
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ BRIT_WIN {
+  coords 1726.439 0 467.155
+  m_sTitle "Плацдарм удержан"
+  m_sFactionKey "UK"
+ }
+ USSR_WIN {
+  coords 1228.963 0 467.155
+  m_sTitle "Плацдарм захвачен"
+  m_sFactionKey "USSR"
+ }
+}
+GenericEntity : "{A80E80B60FEAE52D}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_02_V1_UK.et" {
+ components {
+  SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+   m_aObjectiveNames {
+    "USSR_WIN"
+   }
+   m_sFactionKey "UK"
+   m_bUseAdvanceGameState 1
+   m_sUseNotification 1
+  }
+  BaseActionsManagerComponent "{6202D4E6F133BF4A}" {
+   additionalActions {
+    PS_FlagChangeAction "{6202D4E6A53D4B3C}" {
+     Duration 15
+     m_bUseAnimation 1
+    }
+   }
+  }
+ }
+ coords 7349.584 29.125 1071.063
+}
+PolylineShapeEntity : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
+ components {
+  PS_PolyZone "{60E90266F25533F6}" {
+   m_mPolygonTexture "{62F4404928D33DB5}UI/layouts/Textures/Grid1b.edds"
+   m_cPolygonColor 0.624 0.157 0.157 1
+   m_fPolygonUVScale 0.44
+   m_cPolygonBorderColor 0 0.125 0.502 1
+   m_aVisibleForFactions {
+    "UK"
+    "USSR"
+    ""
+   }
+  }
+ }
+ coords 7303.341 0 934.058
+ Points {
+  ShapePoint "{6A20D5333CFD4ABB}" {
+   Position -82.58 -1.859 63.043
+  }
+  ShapePoint "{6A20D5333E890D9A}" {
+   Position -96.187 6.468 162.981
+  }
+  ShapePoint "{6A20D53339C79B30}" {
+   Position -91.292 6.415 179.183
+  }
+  ShapePoint "{6A20D53345765005}" {
+   Position -110.748 7.371 204.385
+  }
+  ShapePoint "{6A20D53344BE9349}" {
+   Position -95.935 9.909 218.481
+  }
+  ShapePoint "{6A20D53344C5DE75}" {
+   Position -77.591 8.62 224.592
+  }
+  ShapePoint "{6A20D533440D3185}" {
+   Position -61.463 5.062 222.887
+  }
+  ShapePoint "{6A20D533444687C9}" {
+   Position -45.107 4.768 209.042
+  }
+  ShapePoint "{6A20D533478407F7}" {
+   Position -24.677 4.874 201.178
+  }
+  ShapePoint "{6A20D53347C35F99}" {
+   Position -13.053 3.927 200.355
+  }
+  ShapePoint "{6A20D533470F6F83}" {
+   Position 3.937 4.105 200.738
+  }
+  ShapePoint "{6A20D53346A60173}" {
+   Position 23.439 5.731 206.985
+  }
+  ShapePoint "{6A20D53346C15001}" {
+   Position 43.845 7.338 209.508
+  }
+  ShapePoint "{6A20D53341BCDBB6}" {
+   Position 63.739 9.208 216.631
+  }
+  ShapePoint "{6A20D53341C2CFAA}" {
+   Position 72.237 10.07 223.541
+  }
+  ShapePoint "{6A20D53341029D53}" {
+   Position 92.614 9.704 228.654
+  }
+  ShapePoint "{6A20D533417FE092}" {
+   Position 113.373 7.506 230.249
+  }
+  ShapePoint "{6A20D533408B90BF}" {
+   Position 140.811 7.25 244.28
+  }
+  ShapePoint "{6A20D53340D23CF9}" {
+   Position 157.945 7.604 246.653
+  }
+  ShapePoint "{6A20D53342B469E1}" {
+   Position 221.394 7.443 222.311
+  }
+  ShapePoint "{6A20D5334238D0DB}" {
+   Position 259.633 0.188 204.527
+  }
+  ShapePoint "{6A20D5334D2E0839}" {
+   Position 223.518 -0.321 153.159
+  }
+  ShapePoint "{6A20D5334D46853E}" {
+   Position 227.957 -4.387 97.195
+  }
+  ShapePoint "{6A20D5334F81B502}" {
+   Position 204.74 -5.803 33.09
+  }
+  ShapePoint "{6A20D533498D53F5}" {
+   Position 144.253 -5.962 -4.45
+  }
+ }
+}

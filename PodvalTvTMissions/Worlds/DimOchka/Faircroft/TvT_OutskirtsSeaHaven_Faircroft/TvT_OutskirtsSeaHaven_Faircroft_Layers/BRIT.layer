@@ -1,0 +1,295 @@
+Vehicle _Series_SWB_Transport_Variant_1 : "{37E409E5C8E39405}Prefabs/Vehicles/Wheeled/LR_3Series/3Series_SWB_Transport_Variant_2.et" {
+ coords 9052.024 67.708 5195.772
+ angles 2.803 -10.687 0.381
+ m_sAttachmentGroupName "HQ"
+}
+$grp SCR_AIGroup : "{654E3A922B11EC94}Prefabs/Groups/BLUFOR/British Forces/Regular/Group_UK_Squad.et" {
+ BRIT5 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 6392.508 21.781 5492.03
+  angles 0 141.16 0
+  m_aUnitPrefabSlots {
+   "{26ACCE7333F6CB13}Prefabs/Characters/Factions/BLUFOR/UK/UK1/UK1_SL.et"
+   "{DC65DEBC801D8511}Prefabs/Characters/Factions/BLUFOR/UK/UK1/NoRadio/dim_UK1_MG_NoRadio.et"
+   "{59E1FBBFFEEB8CA0}Prefabs/Characters/Factions/BLUFOR/UK/UK1/NoRadio/dim_UK1_Rifleman_2_NoRadio.et"
+   "{B0D29F742B991C18}Prefabs/Characters/Factions/BLUFOR/UK/UK1/NoRadio/dim_UK1_Rifleman_AT_NoRadio.et"
+   "{5BB4228B5665F78A}Prefabs/Characters/Factions/BLUFOR/UK/UK1/UK1_SR.et"
+   "{09903C12FE4B541A}Prefabs/Characters/Factions/BLUFOR/UK/UK1/NoRadio/dim_UK1_HeavyMG_NoRadio.et"
+   "{3DE9E69D2112EB50}Prefabs/Characters/Factions/BLUFOR/UK/UK1/NoRadio/dim_UK1_AMG_NoRadio.et"
+   "{D262AC8C35FF2E6D}Prefabs/Characters/Factions/BLUFOR/UK/UK1/UK1_Marksman.et"
+  }
+  m_sCustomNameSet "Marine Rifle Section"
+ }
+ PILOT {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 4
+   }
+  }
+  coords 7956.522 36.469 1595.553
+  angles 0 -94.982 0
+  m_aUnitPrefabSlots {
+   "{152074BB52FA8B94}Prefabs/Characters/Factions/BLUFOR/UK/UK1/UK1_Pilot.et"
+   "{59A6189159B6C512}Prefabs/Characters/Factions/BLUFOR/UK/UK1/UK1_CoPilot.et"
+  }
+  m_sCustomNameSet "UH1H Crew"
+ }
+ HQ {
+  coords 9055.903 67.679 5195.827
+  angles 0 -93.457 0
+  m_aUnitPrefabSlots {
+   "{AE0C102109B4DB62}Prefabs/Characters/Factions/BLUFOR/UK/UK1/UK1_Officer.et"
+  }
+  m_sCustomNameSet "UK Marine HQ"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 7959.871 36.469 1595.4
+  angles 0 -91.961 0
+  m_aUnitPrefabSlots {
+   "{F44D719A9873F889}Prefabs/Characters/Factions/BLUFOR/UK/UK1/SPN/dim_UK1_SPN_SL.et"
+   "{5F99BA10CA144AAA}Prefabs/Characters/Factions/BLUFOR/UK/UK1/SPN/dim_UK1_SPN_TL_2.et"
+   "{99C58085AAF75A9A}Prefabs/Characters/Factions/BLUFOR/UK/UK1/SPN/dim_UK1_SPN_AR.et"
+   "{076B8D2FDC2893AC}Prefabs/Characters/Factions/BLUFOR/UK/UK1/SPN/dim_UK1_SPN_Scout_Light.et"
+   "{934E69528556632D}Prefabs/Characters/Factions/BLUFOR/UK/UK1/SPN/dim_UK1_SPN_Rifleman_2.et"
+   "{767C7727AC54B45C}Prefabs/Characters/Factions/BLUFOR/UK/UK1/SPN/dim_UK1_SPN_Sapper_2.et"
+   "{0F590C1FF714E476}Prefabs/Characters/Factions/BLUFOR/UK/UK1/SPN/dim_UK1_SPN_Medic.et"
+   "{7309759AC3308363}Prefabs/Characters/Factions/BLUFOR/UK/UK1/SPN/dim_UK1_SPN_Marksman.et"
+  }
+  m_sCustomNameSet "SAS"
+ }
+ BRIT6 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 6384.21 21.781 5485.349
+  angles 0 141.16 0
+  m_aUnitPrefabSlots {
+   "{26ACCE7333F6CB13}Prefabs/Characters/Factions/BLUFOR/UK/UK1/UK1_SL.et"
+   "{DC65DEBC801D8511}Prefabs/Characters/Factions/BLUFOR/UK/UK1/NoRadio/dim_UK1_MG_NoRadio.et"
+   "{59E1FBBFFEEB8CA0}Prefabs/Characters/Factions/BLUFOR/UK/UK1/NoRadio/dim_UK1_Rifleman_2_NoRadio.et"
+   "{B0D29F742B991C18}Prefabs/Characters/Factions/BLUFOR/UK/UK1/NoRadio/dim_UK1_Rifleman_AT_NoRadio.et"
+   "{5BB4228B5665F78A}Prefabs/Characters/Factions/BLUFOR/UK/UK1/UK1_SR.et"
+   "{09903C12FE4B541A}Prefabs/Characters/Factions/BLUFOR/UK/UK1/NoRadio/dim_UK1_HeavyMG_NoRadio.et"
+   "{3DE9E69D2112EB50}Prefabs/Characters/Factions/BLUFOR/UK/UK1/NoRadio/dim_UK1_AMG_NoRadio.et"
+   "{D262AC8C35FF2E6D}Prefabs/Characters/Factions/BLUFOR/UK/UK1/UK1_Marksman.et"
+  }
+  m_sCustomNameSet "Marine Rifle Section"
+ }
+ BRIT7 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 2
+   }
+  }
+  coords 6399.774 21.781 5466.86
+  angles 0 -38.84 0
+  m_aUnitPrefabSlots {
+   "{26ACCE7333F6CB13}Prefabs/Characters/Factions/BLUFOR/UK/UK1/UK1_SL.et"
+   "{DC65DEBC801D8511}Prefabs/Characters/Factions/BLUFOR/UK/UK1/NoRadio/dim_UK1_MG_NoRadio.et"
+   "{59E1FBBFFEEB8CA0}Prefabs/Characters/Factions/BLUFOR/UK/UK1/NoRadio/dim_UK1_Rifleman_2_NoRadio.et"
+   "{B0D29F742B991C18}Prefabs/Characters/Factions/BLUFOR/UK/UK1/NoRadio/dim_UK1_Rifleman_AT_NoRadio.et"
+   "{5BB4228B5665F78A}Prefabs/Characters/Factions/BLUFOR/UK/UK1/UK1_SR.et"
+   "{09903C12FE4B541A}Prefabs/Characters/Factions/BLUFOR/UK/UK1/NoRadio/dim_UK1_HeavyMG_NoRadio.et"
+   "{3DE9E69D2112EB50}Prefabs/Characters/Factions/BLUFOR/UK/UK1/NoRadio/dim_UK1_AMG_NoRadio.et"
+   "{D262AC8C35FF2E6D}Prefabs/Characters/Factions/BLUFOR/UK/UK1/UK1_Marksman.et"
+  }
+  m_sCustomNameSet "Marine Rifle Section"
+ }
+ BRIT2 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 9065.281 66.631 5176.973
+  angles 0 -122.992 0
+  m_aUnitPrefabSlots {
+   "{26ACCE7333F6CB13}Prefabs/Characters/Factions/BLUFOR/UK/UK1/UK1_SL.et"
+   "{DC65DEBC801D8511}Prefabs/Characters/Factions/BLUFOR/UK/UK1/NoRadio/dim_UK1_MG_NoRadio.et"
+   "{6F14AC38777D339E}Prefabs/Characters/Factions/BLUFOR/UK/UK1/NoRadio/dim_UK1_AT_1_NoRadio.et"
+   "{3FDE855B1C66A6AC}Prefabs/Characters/Factions/BLUFOR/UK/UK1/NoRadio/dim_UK1_ATA_NoRadio.et"
+   "{5BB4228B5665F78A}Prefabs/Characters/Factions/BLUFOR/UK/UK1/UK1_SR.et"
+   "{09903C12FE4B541A}Prefabs/Characters/Factions/BLUFOR/UK/UK1/NoRadio/dim_UK1_HeavyMG_NoRadio.et"
+   "{3DE9E69D2112EB50}Prefabs/Characters/Factions/BLUFOR/UK/UK1/NoRadio/dim_UK1_AMG_NoRadio.et"
+   "{D262AC8C35FF2E6D}Prefabs/Characters/Factions/BLUFOR/UK/UK1/UK1_Marksman.et"
+  }
+  m_sCustomNameSet "Marine Rifle Section"
+ }
+ BRIT3 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 9074.549 65.88 5164.634
+  angles 0 -126.287 0
+  m_aUnitPrefabSlots {
+   "{26ACCE7333F6CB13}Prefabs/Characters/Factions/BLUFOR/UK/UK1/UK1_SL.et"
+   "{DC65DEBC801D8511}Prefabs/Characters/Factions/BLUFOR/UK/UK1/NoRadio/dim_UK1_MG_NoRadio.et"
+   "{90CEF16CF789A3D8}Prefabs/Characters/Factions/BLUFOR/UK/UK1/NoRadio/dim_UK1_AT_2_NoRadio.et"
+   "{3FDE855B1C66A6AC}Prefabs/Characters/Factions/BLUFOR/UK/UK1/NoRadio/dim_UK1_ATA_NoRadio.et"
+   "{5BB4228B5665F78A}Prefabs/Characters/Factions/BLUFOR/UK/UK1/UK1_SR.et"
+   "{09903C12FE4B541A}Prefabs/Characters/Factions/BLUFOR/UK/UK1/NoRadio/dim_UK1_HeavyMG_NoRadio.et"
+   "{3DE9E69D2112EB50}Prefabs/Characters/Factions/BLUFOR/UK/UK1/NoRadio/dim_UK1_AMG_NoRadio.et"
+   "{D262AC8C35FF2E6D}Prefabs/Characters/Factions/BLUFOR/UK/UK1/UK1_Marksman.et"
+  }
+  m_sCustomNameSet "Marine Rifle Section"
+ }
+ BRIT4 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 9082.975 65.46 5150.381
+  angles 0 -119.383 0
+  m_aUnitPrefabSlots {
+   "{26ACCE7333F6CB13}Prefabs/Characters/Factions/BLUFOR/UK/UK1/UK1_SL.et"
+   "{DC65DEBC801D8511}Prefabs/Characters/Factions/BLUFOR/UK/UK1/NoRadio/dim_UK1_MG_NoRadio.et"
+   "{90CEF16CF789A3D8}Prefabs/Characters/Factions/BLUFOR/UK/UK1/NoRadio/dim_UK1_AT_2_NoRadio.et"
+   "{3FDE855B1C66A6AC}Prefabs/Characters/Factions/BLUFOR/UK/UK1/NoRadio/dim_UK1_ATA_NoRadio.et"
+   "{5BB4228B5665F78A}Prefabs/Characters/Factions/BLUFOR/UK/UK1/UK1_SR.et"
+   "{59E1FBBFFEEB8CA0}Prefabs/Characters/Factions/BLUFOR/UK/UK1/NoRadio/dim_UK1_Rifleman_2_NoRadio.et"
+   "{78FC3E4BE88F8C60}Prefabs/Characters/Factions/BLUFOR/UK/UK1/NoRadio/dim_UK1_MEDIC_NoRadio.et"
+   "{D262AC8C35FF2E6D}Prefabs/Characters/Factions/BLUFOR/UK/UK1/UK1_Marksman.et"
+  }
+  m_sCustomNameSet "Marine Rifle Section"
+ }
+ BRIT8 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 9090.446 65.286 5136.32
+  angles 0 -115.294 0
+  m_aUnitPrefabSlots {
+   "{26ACCE7333F6CB13}Prefabs/Characters/Factions/BLUFOR/UK/UK1/UK1_SL.et"
+   "{DC65DEBC801D8511}Prefabs/Characters/Factions/BLUFOR/UK/UK1/NoRadio/dim_UK1_MG_NoRadio.et"
+   "{90CEF16CF789A3D8}Prefabs/Characters/Factions/BLUFOR/UK/UK1/NoRadio/dim_UK1_AT_2_NoRadio.et"
+   "{3FDE855B1C66A6AC}Prefabs/Characters/Factions/BLUFOR/UK/UK1/NoRadio/dim_UK1_ATA_NoRadio.et"
+   "{5BB4228B5665F78A}Prefabs/Characters/Factions/BLUFOR/UK/UK1/UK1_SR.et"
+   "{59E1FBBFFEEB8CA0}Prefabs/Characters/Factions/BLUFOR/UK/UK1/NoRadio/dim_UK1_Rifleman_2_NoRadio.et"
+   "{78FC3E4BE88F8C60}Prefabs/Characters/Factions/BLUFOR/UK/UK1/NoRadio/dim_UK1_MEDIC_NoRadio.et"
+   "{D262AC8C35FF2E6D}Prefabs/Characters/Factions/BLUFOR/UK/UK1/UK1_Marksman.et"
+  }
+  m_sCustomNameSet "Marine Rifle Section"
+ }
+ BRIT9 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 2
+   }
+  }
+  coords 9093.452 65.286 5124.856
+  angles 0 -101.693 0
+  m_aUnitPrefabSlots {
+   "{26ACCE7333F6CB13}Prefabs/Characters/Factions/BLUFOR/UK/UK1/UK1_SL.et"
+   "{5BB4228B5665F78A}Prefabs/Characters/Factions/BLUFOR/UK/UK1/UK1_SR.et"
+   "{6F14AC38777D339E}Prefabs/Characters/Factions/BLUFOR/UK/UK1/NoRadio/dim_UK1_AT_1_NoRadio.et"
+   "{3FDE855B1C66A6AC}Prefabs/Characters/Factions/BLUFOR/UK/UK1/NoRadio/dim_UK1_ATA_NoRadio.et"
+   "{59E1FBBFFEEB8CA0}Prefabs/Characters/Factions/BLUFOR/UK/UK1/NoRadio/dim_UK1_Rifleman_2_NoRadio.et"
+   "{0FB4E6F8957FF97B}Prefabs/Characters/Factions/BLUFOR/UK/UK1/UK_1980/UK1_1980_CC.et"
+   "{6EC55D1D2D67C1F1}Prefabs/Characters/Factions/BLUFOR/UK/UK1/UK_1980/UK1_1980_Crew.et"
+  }
+  m_sCustomNameSet "Marine Rifle Section"
+ }
+}
+$grp Vehicle : "{8ACB8116F334AE6C}Prefabs/Vehicles/Wheeled/LR_3Series/dim_LWB_M2.et" {
+ dim_LWB_M1 {
+  coords 6390.373 21.812 5484.858
+  angles 0 140.224 0
+  m_sAttachmentGroupName "BRIT5"
+ }
+ dim_LWB_M2 {
+  coords 6382.176 21.812 5478.034
+  angles 0 140.224 0
+  m_sAttachmentGroupName "BRIT6"
+ }
+ dim_LWB_M3 {
+  coords 6397.56 21.812 5470.621
+  angles 0 -39.776 0
+  m_sAttachmentGroupName "BRIT7"
+ }
+}
+Vehicle LAV25_RHS_CAMO1 : "{BA1C2367A4C6580C}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS_CAMO.et" {
+ coords 9087.852 65.2 5126.823
+ angles 0.887 -7.735 -0.12
+ m_sAttachmentGroupName "BRIT9"
+}
+Vehicle UH1H_armed_gunship_HE_UK1 : "{CD887C4D54D7F827}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed_gunship_HE_UK.et" {
+ components {
+  SCR_UniversalInventoryStorageComponent "{5E1E994304F0E0D3}" {
+   MultiSlots {
+    MultiSlotConfiguration "{60F6C785F08E4AE4}" {
+     SlotTemplate InventoryStorageSlot Bandages {
+      Prefab "{9C5C20FB0E01E64F}Prefabs/Weapons/Launchers/M72/Launcher_M72A3.et"
+     }
+     NumSlots 2
+    }
+   }
+  }
+ }
+ coords 7949.84 36.469 1594.187
+ angles 0 -2.513 0
+ m_sAttachmentGroupName "PILOT"
+}
+Vehicle M923A1_transport_covered_UK1 : "{F9FD7E24B28538EE}Prefabs/Vehicles/Wheeled/M923A1/M923A1_transport_covered_UK.et" {
+ coords 9080.684 65.409 5144.822
+ angles 1.207 -27.394 0.383
+}
+$grp Vehicle : "{FDDB4A5C62272B16}Prefabs/Vehicles/Wheeled/LR_3Series/3Series_LWB_Transport_Variant_2.et" {
+ _Series_LWB_Transport_Variant_5 {
+  coords 9072.591 65.719 5158.3
+  angles 1.992 -32.044 -0.191
+  m_sAttachmentGroupName "BRIT3"
+ }
+ _Series_LWB_Transport_Variant_6 {
+  coords 9067.72 66.05 5165.266
+  angles 2.514 -38.482 0.287
+  m_sAttachmentGroupName "BRIT3"
+ }
+ _Series_LWB_Transport_Variant_7 {
+  coords 9061.504 66.61 5174.007
+  angles 2.466 -32.045 0.567
+  m_sAttachmentGroupName "BRIT2"
+ }
+ _Series_LWB_Transport_Variant_8 {
+  coords 9056.211 67.101 5182.43
+  angles 2.466 -32.036 0.567
+  m_sAttachmentGroupName "BRIT2"
+ }
+ _Series_LWB_Transport_Variant_9 {
+  coords 6401.025 21.812 5473.646
+  angles 0 -39.776 0
+  m_sAttachmentGroupName "BRIT7"
+ }
+ _Series_LWB_Transport_Variant_10 {
+  coords 6394.109 21.812 5488.028
+  angles 0 140.224 0
+  m_sAttachmentGroupName "BRIT5"
+ }
+ _Series_LWB_Transport_Variant_11 {
+  coords 6386.172 21.812 5481.421
+  angles 0 140.224 0
+  m_sAttachmentGroupName "BRIT6"
+ }
+}

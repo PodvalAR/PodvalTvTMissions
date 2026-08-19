@@ -1,0 +1,61 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ {
+  coords 6876.31 5.565 6301.583
+  m_sTitle "Правила и задачи"
+  m_sTextData "ПРАВИЛА:"\
+  "1. Инженерный грузовик с мешками с песком запрещено вывозить за пределы триггера."\
+  ""\
+  "ЗАДАЧИ:"\
+  "• ИОН: "\
+  " 1. Удержать зону передачи сигнала."\
+  ""\
+  "• НАПА:"\
+  " 1. Захватить зону передачи сигнала."\
+  ""\
+  "Дополнительно:"\
+  "1. У ИОН есть строительный грузовик и 4000 припасов."
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_ION"
+   "Ses_NAPA"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+ }
+ {
+  coords 6876.31 5.565 6301.583
+  m_sTitle "Обстановка"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "2023 г. Баренцово море, о. Новка"\
+  "Ночью на небольшой мирный остров с гарнизоном ВС РФ высадилась группа ЧВК «ION». Наёмники захватили мощный центр связи и начали передавать зашифрованные сообщения в море. Вскоре на горизонте появился неизвестный танкер «Грозный»."\
+  ""\
+  "ВС РФ вычислили источник сигнала и направили гарнизон для его остановки. В случае неудачи неизвестно, что ждёт мир дальше..."
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_ION"
+   ""
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+ }
+}
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ AFRF_WIN {
+  coords 6927.594 8.248 6204.361
+  m_sTitle "Сигнал остановлен"
+  m_sFactionKey "RHS_AFRF"
+ }
+ ION_WIN {
+  coords 6927.594 8.248 6204.361
+  m_sTitle "Сигнал передан"
+  m_sFactionKey "RHS_ION"
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 5547.709 75.207 4020.56
+}
