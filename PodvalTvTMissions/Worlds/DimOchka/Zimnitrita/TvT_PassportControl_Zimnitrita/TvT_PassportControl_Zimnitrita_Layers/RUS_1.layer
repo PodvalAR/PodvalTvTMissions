@@ -27,6 +27,28 @@ $grp Vehicle : "{7009ED8FBA7A1E7E}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_eng
   m_bEnableMoveOnFreeze 1
  }
  Ural4320_engineer_sand2 {
+<<<<<<< Updated upstream
+=======
+  components {
+   SCR_UniversalInventoryStorageComponent "{5916C58171230A92}" {
+    MultiSlots {
+     MultiSlotConfiguration "{5EB0D397ACA7A685}" {
+      SlotTemplate InventoryStorageSlot Shovel {
+       Prefab "{B05A816C0BF50802}Prefabs/Weapons/Explosives/Mine_PMN4/Mine_PMN4.et"
+      }
+      NumSlots 20
+     }
+    }
+   }
+   SCR_VehicleDustPerWheel "{5476BC43E4910F64}" {
+    m_aWheels +{
+     4
+     5
+    }
+    m_fDustTopSpeed 60
+   }
+  }
+>>>>>>> Stashed changes
   coords 7375.504 56.469 6316.126
   angles 0.098 77.326 0.437
   m_bEnableMoveOnFreeze 1
@@ -225,6 +247,25 @@ $grp SCR_AIGroup : "{7F40D42C0CE8A499}Prefabs/Groups/OPFOR/RHS_AFRF/Group_RHS_AF
    "{7BBA2F3CA6F7FBA8}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_Officer.et"
   }
   m_sCustomNameSet "Командир миротворческих сил РФ"
+ }
+ KEK_RUS2 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iSquadCallsign 2
+   }
+  }
+  coords 7243.743 54.156 6331.132
+  angles 0 171.467 0
+  m_aUnitPrefabSlots {
+   "{EFC0F0711BD4543E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_SL.et"
+   "{5AE068AF50D9E871}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_AT.et"
+   "{207E951D01933AE6}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_AAT.et"
+   "{08D64ED9BFF75124}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_Rfl_2.et"
+   "{D07E2718C67E4F78}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_Rfl_4.et"
+   "{531C05BDC885CB8C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Peacekeepers/New/dim_MC_Sniper.et"
+  }
+  m_bSnapToTerrain 0
+  m_sCustomNameSet "Миротворческий отряд"
  }
 }
 $grp Vehicle : "{8778C71315C623CB}Prefabs/Vehicles/Wheeled/TIGR/PKP/GAZ_TIGR_v2_PKM.et" {
