@@ -1,0 +1,170 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ {
+  coords 8267.328 57.438 6310.739
+  m_sTitle "Правила и задачи"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "ПРАВИЛА:"\
+  "1. Экипажу вертолета запрещено садиться в топливный грузовик до конца фриз-тайма;"\
+  "2. Вертолету запрещено стрелять по пусковой установке;"\
+  "3. СССР запрещено прятаться (использовать как укрытие) пусковую установку;"\
+  "4. Для защиты каждой из пусковых установок, в ее близости должен находиться хотя бы 1 отряд (в пределах триггеров);"\
+  "5. Строительные грузовики запрещено вывозить за пределы триггеров."\
+  ""\
+  "ЗАДАЧИ:"\
+  "• СССР: "\
+  " 1. Защитить пусковые установки 9П117."\
+  ""\
+  "• США:"\
+  " 1. Найти и уничтожить пусковые установки 9П117 (2 шт.)."\
+  ""\
+  "Дополнительно:"\
+  "1. СССР имеют 2 корда, 2 ПТУРа, 2 строительных грузовика с мешками с песком и 3000 ресурсов на точку (можете строить что угодно);"\
+  "2. СССР имеют ИГЛЫ и ЗУ-23;"\
+  "3. Кобра без топлива. Надо заправить;"\
+  "4. В каждом триггере по 1 пусковой установке. Взрывается с 1 пуска гранатомета, 2-х С4."
+  m_aVisibleForFactions {
+   "US"
+   "USSR"
+   "Ses_CDF"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+ }
+ {
+  coords 8267.328 57.438 6310.739
+  m_sTitle "Обстановка"
+  m_sTextData "Отряды Губы стоят на коленях, но у них еще остался неразыгранный козырь - ядерные ракеты."\
+  ""\
+  "Из-за крупномасштабного наступления ВС США на северо-запад острова, русские готовят пусковые установки к бою. По данным разведки у сил США в запасе около одного часа."\
+  ""\
+  "От итогов этой операции зависит будущее мира."
+  m_aVisibleForFactions {
+   "US"
+   "USSR"
+   "Ses_CDF"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+ }
+}
+$grp PolylineShapeEntity : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
+ {
+  components {
+   PS_PolyZone "{60E90266F25533F6}" {
+    m_mPolygonTexture "{62F4404928D33DB5}UI/layouts/Textures/Grid1b.edds"
+    m_cPolygonColor 0.875 0.655 0.655 1
+    m_fPolygonUVScale 0.44
+    m_cPolygonBorderColor 0.099 0.502 0 1
+    m_aVisibleForFactions {
+     "US"
+     "USSR"
+     ""
+    }
+   }
+  }
+  coords 9877.567 50.792 9387.865
+  Points {
+   ShapePoint "{6A2752F29A1590C1}" {
+    Position -41.697 3.093 -39.298
+   }
+   ShapePoint "{6A2752F2A597ED02}" {
+    Position -80.939 3.06 -60.428
+   }
+   ShapePoint "{6A2752F2A4D6914F}" {
+    Position -133.845 -0.959 -84.528
+   }
+   ShapePoint "{6A2752F2A4619B67}" {
+    Position -180.281 -5.95 -108.238
+   }
+   ShapePoint "{6A2752F2A7AE1C2D}" {
+    Position -214.943 1.892 -42.178
+   }
+   ShapePoint "{6A2752F2A6F0B29D}" {
+    Position -229.306 7.477 48.683
+   }
+   ShapePoint "{6A2752F2A60AC5A1}" {
+    Position -166.027 10.303 151.942
+   }
+   ShapePoint "{6A2752F2A17BF198}" {
+    Position -57.517 15.848 225.145
+   }
+   ShapePoint "{6A2752F2A0F64AAD}" {
+    Position 4.701 7.454 183.705
+   }
+   ShapePoint "{6A2752F2A3BBA7ED}" {
+    Position 47.613 1.822 138.332
+   }
+   ShapePoint "{6A2752F2A2F9C2CE}" {
+    Position 28.815 1.989 68.385
+   }
+  }
+ }
+ {
+  components {
+   PS_PolyZone "{60E90266F25533F6}" {
+    m_mPolygonTexture "{62F4404928D33DB5}UI/layouts/Textures/Grid1b.edds"
+    m_cPolygonColor 0.875 0.655 0.655 1
+    m_fPolygonUVScale 0.44
+    m_cPolygonBorderColor 0.099 0.502 0 1
+    m_aVisibleForFactions {
+     "US"
+     "USSR"
+     ""
+    }
+   }
+  }
+  coords 9686.892 139.118 9933.208
+  Points {
+   ShapePoint "{6A2752F2B55F617E}" {
+    Position -35.354 -8.933 -1.929
+   }
+   ShapePoint "{6A2752F2B4F4C372}" {
+    Position -58.185 -8.66 6.979
+   }
+   ShapePoint "{6A2752F2B7EBDA8A}" {
+    Position -125.305 -11.262 52.687
+   }
+   ShapePoint "{6A2752F2B6A9B7FB}" {
+    Position -173.955 -10.065 119.2
+   }
+   ShapePoint "{6A2752F2B10BF9AE}" {
+    Position -188.102 -9.532 228.112
+   }
+   ShapePoint "{6A2752F2B0B0E84E}" {
+    Position -165.364 -9.562 245.907
+   }
+   ShapePoint "{6A2752F2B386BD43}" {
+    Position 12.788 -9.778 258.343
+   }
+   ShapePoint "{6A2752F2B2047CA4}" {
+    Position 81.843 -9.493 268.266
+   }
+   ShapePoint "{6A2752F2BCA218FE}" {
+    Position 87.981 -26.274 62.661
+   }
+   ShapePoint "{6A2752F2BFABF6FF}" {
+    Position 58.662 -19.527 30.731
+   }
+  }
+ }
+}
+PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+ coords 9544.505 129.969 10160.584
+ angles 0 90 0
+ m_MarkerColor 0.502 0 0 1
+ m_sQuadName "mark-exclamation"
+ m_fWorldSize 50
+ m_sDescription "Окопы"
+ m_bUseWorldScale 0
+ m_aVisibleForFactions {
+  "USSR"
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 5547.709 15.194 4020.56
+}
