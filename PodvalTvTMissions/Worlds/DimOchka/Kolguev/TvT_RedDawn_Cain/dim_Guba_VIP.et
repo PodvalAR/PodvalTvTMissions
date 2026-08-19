@@ -1,0 +1,90 @@
+SCR_ChimeraCharacter : "{2887646B30B90996}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_PL.et" {
+ ID "520EC961A090B1EE"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Генерал Губа"
+    Icon "{B0B3E06A17B8AC6D}UI/Icons/officer.edds"
+   }
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate ""
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFDC}" {
+   WeaponTemplate "{C0F7DD85A86B2900}Prefabs/Weapons/Handguns/PM/Handgun_PM.et"
+  }
+  SCR_CharacterIdentityComponent "{5584CBC63E092DBC}" {
+   Override 1
+   Identity Identity "{5584CBC6363C648B}" {
+    VisualIdentity VisualIdentity "{56E6D9456009D1C4}" {
+     Head "{5793DF10BF10B857}Prefabs/Characters/Heads/Head_White_03_Old.et"
+    }
+   }
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{E7D50A282DFEEE5A}Worlds/DimOchka/Kolguev/TvT_RedDawn_Cain/Guba_Cap.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{ED9FFC8C35C98B8B}Prefabs/Characters/Uniforms/Jacket_M88_TTsKO.et"
+    }
+    LoadoutSlotInfo ArmoredVest {
+     Prefab ""
+    }
+    LoadoutSlotInfo Boots {
+     Prefab "{C7923961D7235D70}Prefabs/Characters/Footwear/CombatBoots_Soviet_01.et"
+    }
+    LoadoutSlotInfo Back {
+     Prefab ""
+    }
+    LoadoutSlotInfo Vest {
+     Prefab "{F2D03ED36FAC87FF}Prefabs/Characters/Vests/Vest_SovietHarness/Variants/Vest_SovietHarness_officer.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{689E8D71B384265F}" {
+     TargetStorage "Jacket/Jacket_M88_TTsKO.et"
+     PrefabsToSpawn {
+      "{AC04D0D1EABC994F}Prefabs/Items/Equipment/Radios/Radio_R148_RF_Multi.et" "{F849217AB3BA88BE}Prefabs/Items/Equipment/Maps/Map_Paper_01/PaperMap_01_folded_USSR.et" "{7CEF68E2BC68CE71}Prefabs/Items/Equipment/Compass/Compass_Adrianov.et"
+     }
+    }
+    ItemsInitConfigurationItem "{68A08C39AF9DAB67}" {
+     TargetStorage "Vest/Vest_SovietHarness_officer.et/MagPouch_6Sh46/Holster_PM_magpouch.et"
+     PrefabsToSpawn {
+      "{8B853CDD11BA916E}Prefabs/Weapons/Magazines/Magazine_9x18_PM_8rnd_Ball.et" "{8B853CDD11BA916E}Prefabs/Weapons/Magazines/Magazine_9x18_PM_8rnd_Ball.et" "{8B853CDD11BA916E}Prefabs/Weapons/Magazines/Magazine_9x18_PM_8rnd_Ball.et" "{8B853CDD11BA916E}Prefabs/Weapons/Magazines/Magazine_9x18_PM_8rnd_Ball.et" "{8B853CDD11BA916E}Prefabs/Weapons/Magazines/Magazine_9x18_PM_8rnd_Ball.et"
+     }
+    }
+    ItemsInitConfigurationItem "{68A08C3946529762}" {
+     Enabled 0
+    }
+   }
+  }
+  ActionsManagerComponent "{520EA1D2F659CE02}" {
+   additionalActions {
+    DRG_DeathConfirmAction "{6A26E8FA559FA312}" {
+     ParentContextList {
+      "LowerTorso"
+     }
+     UIInfo UIInfo "{6A26E8FA56846705}" {
+      Name "Подтвердить смерть"
+     }
+     ActionTitle "#drg_ConfirmDeathAction"
+     Duration 3
+     m_sEventMessage "Генерал Губа мертв"
+     m_aObjectivesToDone {
+      "US_WIN"
+     }
+     m_aObjectivesToFail {
+      "USSR_WIN"
+     }
+     m_vFactionKey "US"
+    }
+   }
+  }
+ }
+ coords 1933.043 132.5 7416.838
+ angles 0 -150 0
+}
