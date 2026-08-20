@@ -1,0 +1,50 @@
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{6A2683AA14E2C700}" {
+     m_sZonePreviewName "Монтиньяк"
+     m_fCheckPeriod 0.2
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "USSR_WIN"
+     }
+     m_sFailedObjectiveNames {
+      "US_WIN"
+     }
+     m_sMessage "Монтиньяк захвачен!"
+     m_Timer GUB_ZoneControlTimer "{6A2683AA03D6029A}" {
+      timeToComplete 300
+     }
+     m_ZoneController GUB_ZoneController "{6A2683AA008A8D2D}" {
+      m_sZoneEntityName "trigger"
+     }
+     m_FlagController GUB_FlagController "{6A2683AAFC5726F0}" {
+      m_aFlagNames {
+       "flag1"
+       "flag2"
+       "flag3"
+      }
+      m_fStartFactionKey "US"
+      m_fEndFactionKey "USSR"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{6A2683AAFAF0AC36}" {
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+}
+GenericEntity : "{6A3CDCFB475BF1B2}Prefabs/System/DRG_CriticalLossPrefab.et" {
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+}
