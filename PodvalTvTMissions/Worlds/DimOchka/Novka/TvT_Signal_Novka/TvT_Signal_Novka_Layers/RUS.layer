@@ -65,7 +65,7 @@ $grp SCR_AIGroup : "{7F40D42C0CE8A499}Prefabs/Groups/OPFOR/RHS_AFRF/Group_RHS_AF
    "{4A2662C00DEF1D4E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/Winter/dim_VDV_Winter_CC.et"
    "{316C5EE91DFBD86B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/Winter/dim_VDV_Winter_Crew.et"
   }
-  m_sCustomNameSet "Отделение ВДВ на К17 \"Бумеранг\" (57 мм)"
+  m_sCustomNameSet "Отделение ВДВ на К17 \"Бумеранг\""
  }
  ALL_RUS3 {
   components {
@@ -87,7 +87,7 @@ $grp SCR_AIGroup : "{7F40D42C0CE8A499}Prefabs/Groups/OPFOR/RHS_AFRF/Group_RHS_AF
    "{4A2662C00DEF1D4E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/Winter/dim_VDV_Winter_CC.et"
    "{316C5EE91DFBD86B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/Winter/dim_VDV_Winter_Crew.et"
   }
-  m_sCustomNameSet "Отделение ВДВ на К17 \"Бумеранг\" (57 мм)"
+  m_sCustomNameSet "Отделение ВДВ на К17 \"Бумеранг\""
  }
  ALL_RUS4 {
   components {
@@ -239,15 +239,15 @@ $grp SCR_AIGroup : "{7F40D42C0CE8A499}Prefabs/Groups/OPFOR/RHS_AFRF/Group_RHS_AF
   m_sCustomNameSet "Отделение ВДВ"
  }
 }
-$grp Vehicle : "{AC75962D780CF87F}Prefabs/Vehicles/Wheeled/K17/dim_APC_K17_57mm_NoPtur.et" {
- dim_APC_K17_57mm_NoPtur1 {
-  coords 316.409 67.219 2346.877
-  angles 0 139.715 0
-  m_sAttachmentGroupName "ALL_RUS2"
- }
- dim_APC_K17_57mm_NoPtur2 {
+$grp Vehicle : "{E5FE9FFC9ED44048}Prefabs/Vehicles/Wheeled/K17/APC_K17_nopt.et" {
+ APC_K17_nopt2 {
   coords 304.38 67.117 2358.883
-  angles 1.262 130.766 -0.094
+  angles 1.263 139.002 0.088
   m_sAttachmentGroupName "ALL_RUS3"
+ }
+ APC_K17_nopt1 {
+  coords 316.409 67.219 2346.877
+  angles 0 139 0
+  m_sAttachmentGroupName "ALL_RUS2"
  }
 }
