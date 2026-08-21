@@ -1,0 +1,109 @@
+PolylineShapeEntity Capture {
+ components {
+  PS_PolyZone "{6A2ACEB1D7FEFB8B}" {
+   m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
+   m_cPolygonColor 0.157 0.275 0.624 1
+   m_fPolygonUVScale 0.44
+   m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+   m_cPolygonBorderColor 0 0.125 0.502 1
+   m_aVisibleForFactions {
+    "RHS_AFRF"
+    "RHS_USAF"
+    ""
+   }
+  }
+ }
+ coords 11074.818 35.544 1660.8
+ Points {
+  ShapePoint "{6A2ACEB0675F08CC}" {
+   Position 5 0.047 0
+  }
+  ShapePoint "{6A2ACEB065A9FDF8}" {
+   Position 28.232 0.144 0.999
+  }
+  ShapePoint "{6A2ACEB064C9AACE}" {
+   Position 51.097 0.144 1.893
+  }
+  ShapePoint "{6A2ACEB063C228AB}" {
+   Position 62.491 0.144 2.323
+  }
+  ShapePoint "{6A2ACEB0612268A1}" {
+   Position 87.731 0.143 3.212
+  }
+  ShapePoint "{6A2ACEB07F22B0AB}" {
+   Position 87.288 0.144 17.932
+  }
+  ShapePoint "{6A2ACEB07E39C506}" {
+   Position 86.437 0.144 36.534
+  }
+  ShapePoint "{6A2ACEB07A0446B5}" {
+   Position 86.198 0.144 43.149
+  }
+  ShapePoint "{6A2ACEB00F2CB678}" {
+   Position 86.113 0.144 44.951
+  }
+  ShapePoint "{6A2ACEB00EE23772}" {
+   Position 77.917 0.144 44.677
+  }
+  ShapePoint "{6A2ACEB00C5EFFFE}" {
+   Position 59.294 0.144 43.868
+  }
+  ShapePoint "{6A2ACEB00B91CD32}" {
+   Position 51.168 0.144 43.488
+  }
+  ShapePoint "{6A2ACEB0090C7859}" {
+   Position 32.956 0.144 42.551
+  }
+  ShapePoint "{6A2ACEB008487726}" {
+   Position 16.405 0.144 41.627
+  }
+  ShapePoint "{6A2ACEB007F6F135}" {
+   Position -3.693 0.269 40.481
+  }
+  ShapePoint "{6A2ACEB001B13755}" {
+   Position -4.387 0.269 40.416
+  }
+  ShapePoint "{6A2ACEB01E583147}" {
+   Position -1.014 -0.001 -0.053
+  }
+ }
+ IsClosed 1
+}
+$grp GenericEntity : "{3D78D7D606FF9818}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_NoCapture.et" {
+ FLAG1 {
+  coords 11091.016 41.716 1681.71
+ }
+ FLAG2 {
+  coords 11110.321 46.03 1714.702
+ }
+ FLAG3 {
+  coords 11141.829 41.632 1672.228
+  angles -1.871 -89.389 -10.905
+ }
+}
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{6A2ACEB64065389D}" {
+     m_Timer GUB_ZoneControlTimer "{6A2ACEB66703481E}" {
+      timeToComplete 180
+     }
+     m_ZoneController GUB_ZoneController "{6A2ACEB67A4395F6}" {
+      m_sZoneEntityName "Capture"
+     }
+     m_FlagController GUB_FlagController "{6A2ACEB635AB97B6}" {
+      m_aFlagNames {
+       "FLAG1"
+       "FLAG2"
+       "FLAG3"
+      }
+      m_fStartFactionKey "RHS_AFRF"
+      m_fEndFactionKey "RHS_USAF"
+     }
+    }
+   }
+  }
+ }
+ coords 11468.851 155.682 1624.092
+}
