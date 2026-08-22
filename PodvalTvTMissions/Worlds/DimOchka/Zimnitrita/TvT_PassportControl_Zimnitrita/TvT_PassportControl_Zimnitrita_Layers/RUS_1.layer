@@ -15,11 +15,6 @@ $grp Vehicle : "{34C6F46F067729EB}Prefabs/Vehicles/Wheeled/TIGR/KORD/GAZ_TIGR_v2
   m_sAttachmentGroupName "DEFD_RUS2"
  }
 }
-Vehicle dim_APC_K17_57mm1 : "{482206FECB5F4AC4}Prefabs/Vehicles/Wheeled/K17/dim_APC_K17_57mm.et" {
- coords 5147.194 91.699 2337.853
- angles -4.882 -38.632 1.042
- m_sAttachmentGroupName "DEFD_RUS6"
-}
 $grp Vehicle : "{7009ED8FBA7A1E7E}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_engineer_sand.et" {
  Ural4320_engineer_sand1 {
   coords 7377.118 56.469 6308.076
@@ -37,6 +32,13 @@ $grp Vehicle : "{7009ED8FBA7A1E7E}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_eng
       NumSlots 20
      }
     }
+   }
+   SCR_VehicleDustPerWheel "{5476BC43E4910F64}" {
+    m_aWheels +{
+     4
+     5
+    }
+    m_fDustTopSpeed 60
    }
    SCR_VehicleDustPerWheel "{5476BC43E4910F64}" {
     m_aWheels +{

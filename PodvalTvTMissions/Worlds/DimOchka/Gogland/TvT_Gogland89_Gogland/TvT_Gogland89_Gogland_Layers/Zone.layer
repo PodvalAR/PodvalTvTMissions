@@ -5,21 +5,29 @@ $grp SCR_EditorRestrictionZoneEntity : "{6144B0BE2EAC6897}PrefabsEditable/Restri
  {
   coords 7219.095 5.97 5263.498
  }
-}
-SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
- coords 5535.995 123.407 6843.812
- m_fWarnRadius 154
- m_fZoneRadius 194
- m_fZoneTeleportedRadius 204
  {
-  GenericEntity {
-   ID "59D673B36B893D84"
-   components {
-    SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
-     m_fRadius 154
+  coords 5363.111 118.744 7749.382
+ }
+}
+$grp SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+ {
+  coords 5535.995 123.407 6843.812
+  m_fWarnRadius 154
+  m_fZoneRadius 194
+  m_fZoneTeleportedRadius 204
+  {
+   GenericEntity {
+    ID "59D673B36B893D84"
+    components {
+     SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+      m_fRadius 154
+     }
     }
    }
   }
+ }
+ {
+  coords 5591.776 90.484 7688.009
  }
 }
 PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
