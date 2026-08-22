@@ -1,0 +1,299 @@
+$grp Vehicle : "{4ED7C573CCD46482}Prefabs/Vehicles/Helicopters/MH-6J/AH-6J_Doors_Base_M134.et" {
+ AH_6J_Doors_Base_M3 {
+  coords 2373.81 67.469 6766.108
+  angles 0 -171.984 0
+ }
+ AH_6J_Doors_Base_M2 {
+  coords 2286.378 67.36 6778.42
+  angles 0 -171.984 0
+ }
+}
+Vehicle dim_LWB_Mk1 : "{6EADB67E99CA3D04}Prefabs/Vehicles/Wheeled/LR_3Series/dim_LWB_Mk19.et" {
+ coords 7502.574 85.906 3534.766
+ angles 0 -5.137 0
+ m_sAttachmentGroupName "spn"
+}
+$grp Vehicle : "{701ADC27F9D842DF}Prefabs/Vehicles/Wheeled/LR_3Series/3Series_LWB_Transport.et" {
+ _Series_LWB_Transport1 {
+  coords 7501.073 85.861 3541.988
+  angles -0.289 -18.856 -0.847
+  m_sAttachmentGroupName "spn"
+ }
+ _Series_LWB_Transport2 {
+  coords 7503.425 85.906 3517.448
+  angles 0 -0.887 0
+  m_sAttachmentGroupName "spn2"
+ }
+}
+$grp Vehicle : "{83ADA27C791212AA}Prefabs/Vehicles/Wheeled/M1240A1_MATV/M1240A1_MATV_CROWS.et" {
+ M1240A1_MATV_CROWS1 {
+  coords 4431.662 54.219 4423.338
+  angles 0 -127.468 0
+  m_sAttachmentGroupName "uk3"
+ }
+ M1240A1_MATV_CROWS2 {
+  coords 4439.922 54.219 4429.67
+  angles 0 -127.468 0
+  m_sAttachmentGroupName "uk3"
+ }
+ M1240A1_MATV_CROWS3 {
+  coords 4396.059 54.344 4455.713
+  angles 0 142.532 0
+  m_sAttachmentGroupName "uk1"
+ }
+}
+$grp Vehicle : "{8ACB8116F334AE6C}Prefabs/Vehicles/Wheeled/LR_3Series/dim_LWB_M2.et" {
+ dim_LWB_M1 {
+  coords 7497.836 85.765 3548.866
+  angles -1.211 -28.061 -0.369
+  m_sAttachmentGroupName "spn"
+ }
+ dim_LWB_M2 {
+  coords 7503.272 85.906 3525.687
+  angles 0 -1.15 0
+  m_sAttachmentGroupName "spn2"
+ }
+}
+$grp Vehicle : "{92BDA256ABCC4103}Prefabs/Vehicles/Wheeled/M1240A1_MATV/M1240A1_MATV_NoTurret_Camo.et" {
+ M1240A1_MATV_NoTurret_Camo1 {
+  coords 4417.346 54.26 4442.017
+  angles 0 -127.468 0
+  m_sAttachmentGroupName "uk2"
+ }
+ M1240A1_MATV_NoTurret_Camo2 {
+  coords 4425.695 54.219 4448.417
+  angles 0 -127.468 0
+  m_sAttachmentGroupName "uk2"
+ }
+ M1240A1_MATV_NoTurret_Camo3 {
+  components {
+   SlotManagerComponent "{55BCE45E438E4CFF}" {
+    Slots {
+     RegisteringComponentSlotInfo Flag {
+      PivotID "v_body"
+      Offset -1.1252 4.7406 -2.8667
+      Prefab "{3ACF7B73AA7BC1DB}Prefabs/Props/Fabric/Flags/Flag_1_2_UK_01.et"
+     }
+    }
+   }
+  }
+  coords 4403.549 54.313 4446.346
+  angles 0 141.725 0
+  m_sAttachmentGroupName "hq"
+ }
+ M1240A1_MATV_NoTurret_Camo4 {
+  coords 4389.313 54.375 4464.313
+  angles 0 142.532 0
+  m_sAttachmentGroupName "uk1"
+ }
+}
+$grp Vehicle : "{9C5C813B65D932F6}Prefabs/Vehicles/Helicopters/MH-6J/MH-6J_Doors.et" {
+ MH_6J_Doors2 {
+  coords 2368.33 67.336 6725.141
+  angles 0 -171.348 0
+  m_sAttachmentGroupName "pil2"
+ }
+ MH_6J_Doors1 {
+  coords 2280.958 67.364 6738.87
+  angles 0 -171.348 0
+  m_sAttachmentGroupName "pil"
+ }
+}
+$grp SCR_AIGroup : "{AE323503E7643499}Prefabs/Groups/BLUFOR/British Forces/dim_SBS_UK_SPN.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 2295.268 66.951 6729.88
+  angles 0 -80.587 0.184
+  m_aUnitPrefabSlots {
+   "{54FAFBF704AE1302}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/Black/dim_SAS_Black_SL.et"
+   "{34A774C9C19DD83B}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/Black/dim_SAS_Black_GL.et"
+   "{A75402E342988340}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/Black/dim_SAS_Black_Rifleman.et"
+   "{B1EF8436DD4A572F}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/Black/dim_SAS_Black_Sapper.et"
+   "{DF621C57EA6518C5}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/Black/dim_SAS_Black_Sniper.et"
+  }
+  m_sCustomNameSet "SAS - Air Team"
+ }
+ spn {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 4
+   }
+  }
+  coords 7508.679 85.875 3544.144
+  angles 0 -110.052 0
+  m_sCustomNameSet "SAS - Light team"
+ }
+ uk3 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 2
+   }
+  }
+  coords 4435.506 54.219 4434.422
+  angles 0 141.102 0
+  m_aUnitPrefabSlots {
+   "{7B4E54390F860D16}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/dim_SBS_UK_SL.et"
+   "{7C89AE686900B7D5}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/dim_SBS_UK_TL.et"
+   "{1B13DB07CAB5C62F}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/dim_SBS_UK_GL.et"
+   "{44D17B3C534DBBE6}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/dim_SBS_UK_MG.et"
+   "{D9CC41C115798B88}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/dim_SBS_UK_Rifleman.et"
+   "{BD31DDAB3AF6086E}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/dim_SBS_UK_Medic.et"
+   "{4E4360DD943469CF}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/dim_SBS_UK_Sapper.et"
+   "{7522B4F28612639D}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/dim_SBS_UK_Marksman.et"
+  }
+  m_sCustomNameSet "SAS - Ground Team"
+ }
+ uk2 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 4422.377 54.219 4437.973
+  angles 0 -38.572 0
+  m_aUnitPrefabSlots {
+   "{7B4E54390F860D16}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/dim_SBS_UK_SL.et"
+   "{7C89AE686900B7D5}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/dim_SBS_UK_TL.et"
+   "{1B13DB07CAB5C62F}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/dim_SBS_UK_GL.et"
+   "{44D17B3C534DBBE6}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/dim_SBS_UK_MG.et"
+   "{610F25E9C797FE7A}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/dim_SBS_UK_Rifleman_2.et"
+   "{BD31DDAB3AF6086E}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/dim_SBS_UK_Medic.et"
+   "{4E4360DD943469CF}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/dim_SBS_UK_Sapper.et"
+   "{7522B4F28612639D}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/dim_SBS_UK_Marksman.et"
+  }
+  m_sCustomNameSet "SAS - Ground Team"
+ }
+ hq {
+  coords 4400.699 54.313 4442.413
+  angles 0 49.082 0
+  m_aUnitPrefabSlots {
+   "{1E14877E996AA603}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/dim_SBS_UK_Officer.et"
+   "{BD31DDAB3AF6086E}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/dim_SBS_UK_Medic.et"
+   "{BD31DDAB3AF6086E}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/dim_SBS_UK_Medic.et"
+   "{BD31DDAB3AF6086E}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/dim_SBS_UK_Medic.et"
+  }
+  m_sCustomNameSet "SAS HQ"
+ }
+ spn2 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 4
+    m_iSquadCallsign 1
+   }
+  }
+  coords 7509.128 85.906 3518.29
+  angles 0 -88.046 0
+  m_sCustomNameSet "SAS - Light team"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 3
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 2355.877 67.161 6734.318
+  angles 0 99.413 -0.184
+  m_aUnitPrefabSlots {
+   "{54FAFBF704AE1302}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/Black/dim_SAS_Black_SL.et"
+   "{34A774C9C19DD83B}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/Black/dim_SAS_Black_GL.et"
+   "{A75402E342988340}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/Black/dim_SAS_Black_Rifleman.et"
+   "{B1EF8436DD4A572F}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/Black/dim_SAS_Black_Sapper.et"
+   "{DF621C57EA6518C5}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/Black/dim_SAS_Black_Sniper.et"
+  }
+  m_sCustomNameSet "SAS - Air Team"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 3
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 2354.13 66.94 6723.777
+  angles 0 99.413 -0.184
+  m_aUnitPrefabSlots {
+   "{54FAFBF704AE1302}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/Black/dim_SAS_Black_SL.et"
+   "{34A774C9C19DD83B}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/Black/dim_SAS_Black_GL.et"
+   "{A75402E342988340}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/Black/dim_SAS_Black_Rifleman.et"
+   "{B1EF8436DD4A572F}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/Black/dim_SAS_Black_Sapper.et"
+   "{DF621C57EA6518C5}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/Black/dim_SAS_Black_Sniper.et"
+  }
+  m_sCustomNameSet "SAS - Air Team"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 2297.015 66.917 6740.42
+  angles 0 -80.587 0.184
+  m_aUnitPrefabSlots {
+   "{54FAFBF704AE1302}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/Black/dim_SAS_Black_SL.et"
+   "{34A774C9C19DD83B}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/Black/dim_SAS_Black_GL.et"
+   "{A75402E342988340}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/Black/dim_SAS_Black_Rifleman.et"
+   "{B1EF8436DD4A572F}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/Black/dim_SAS_Black_Sapper.et"
+   "{DF621C57EA6518C5}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/Black/dim_SAS_Black_Sniper.et"
+  }
+  m_sCustomNameSet "SAS - Air Team"
+ }
+ uk1 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 4387.309 54.219 4459.367
+  angles 0 51.428 0
+  m_aUnitPrefabSlots {
+   "{7B4E54390F860D16}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/dim_SBS_UK_SL.et"
+   "{7C89AE686900B7D5}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/dim_SBS_UK_TL.et"
+   "{1B13DB07CAB5C62F}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/dim_SBS_UK_GL.et"
+   "{44D17B3C534DBBE6}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/dim_SBS_UK_MG.et"
+   "{610F25E9C797FE7A}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/dim_SBS_UK_Rifleman_2.et"
+   "{BD31DDAB3AF6086E}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/dim_SBS_UK_Medic.et"
+   "{4E4360DD943469CF}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/dim_SBS_UK_Sapper.et"
+   "{7522B4F28612639D}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/dim_SBS_UK_Marksman.et"
+  }
+  m_sCustomNameSet "SAS - Ground Team"
+ }
+}
+$grp SCR_AIGroup : "{BBA36FB95553E79C}Prefabs/Groups/BLUFOR/British Forces/Regular/Group_UK_PL.et" {
+ pil {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 2278.745 66.875 6722.031
+  angles 0 7.817 0
+  m_aUnitPrefabSlots {
+   "{FBBD436F0395E47C}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/dim_SBS_UK_Pilot.et"
+  }
+  m_sCustomNameSet "Пилот MH6J"
+ }
+ pil2 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 2365.825 66.875 6710.076
+  angles 0 7.817 0
+  m_aUnitPrefabSlots {
+   "{FBBD436F0395E47C}Prefabs/Characters/Factions/BLUFOR/UK/UK2_SPN/SBS/dim_SBS_UK_Pilot.et"
+  }
+  m_sCustomNameSet "Пилот MH6J"
+ }
+}

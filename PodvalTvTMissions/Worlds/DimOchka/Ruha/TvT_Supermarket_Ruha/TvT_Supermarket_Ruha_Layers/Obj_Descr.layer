@@ -1,0 +1,59 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ {
+  coords 11569.529 184.677 7190.966
+  m_sTitle "Правила и задачи"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "ПРАВИЛА:"\
+  "1. Пилотам вертолетов разрешено брать боевые только после того как высадят все группы десанта;"\
+  "2. Вертолетами могут управлять только пилоты;"\
+  "3. Запрещено строить командный пункт;"\
+  "4. Запрещено прятаться среди заложников;"\
+  "5. В триггере должен находиться как минимум 1 отряд пехоты (КС не в счет)."\
+  ""\
+  "ЗАДАЧИ:"\
+  "• НАПА: "\
+  " 1. Удержать супермаркет."\
+  ""\
+  "• ВС Великобритании:"\
+  " 1. Захватить супермаркет."\
+  ""\
+  "ДОПОЛНИТЕЛЬНО:"\
+  "1. У НАПА есть 2 строительных грузовика и 4000 ресурсов. Можете строить что угодно (хоть миномет, но см. пункт 3);"\
+  "2. НАПА имеют 2 пулемета М2, миномет, 1 ПТУР."
+  m_aVisibleForFactions {
+   "Ses_NAPA"
+   "UK"
+   "CIV"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+ {
+  coords 11569.529 184.677 6791.432
+  m_sTitle "Сюжет"
+  m_sTextData "2023 г., Восточная Англия"\
+  "Контртеррористическое подразделение SAS проводит спецоперацию по освобождению заложников в супермаркете, захваченном террористами НАПА."
+  m_aVisibleForFactions {
+   "Ses_NAPA"
+   "UK"
+   "CIV"
+   ""
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+}
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ UK_WIN {
+  coords 13366.94 0 10459.761
+  m_sTitle "Супермаркет захвачен"
+  m_sFactionKey "UK"
+ }
+ NAPA_WIN {
+  coords 13366.94 0 10434.35
+  m_sTitle "Супермаркет удержан"
+  m_sFactionKey "Ses_NAPA"
+ }
+}

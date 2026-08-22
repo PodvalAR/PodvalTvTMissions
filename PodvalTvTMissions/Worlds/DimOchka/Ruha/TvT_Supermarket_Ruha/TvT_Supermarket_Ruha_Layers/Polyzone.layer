@@ -1,0 +1,137 @@
+$grp GenericEntity : "{3D78D7D606FF9818}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_NoCapture.et" {
+ flag1 {
+  coords 3678.74 73.704 1130.67
+  angles 0 30 0
+ }
+ flag2 {
+  coords 3659.722 74.266 1042.697
+  angles 0 45 30
+ }
+}
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{6A2D1A91DCF8BD1C}" {
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "UK_WIN"
+     }
+     m_sFailedObjectiveNames {
+      "NAPA_WIN"
+     }
+     m_sMessage "Заложники спасены"
+     m_Timer GUB_ZoneControlTimer "{6A2D1A91DF38129D}" {
+      timeToComplete 180
+     }
+     m_ZoneController GUB_ZoneController "{6A2D1A91E18CEF85}" {
+      m_sZoneEntityName "capture"
+     }
+     m_FlagController GUB_FlagController "{6A2D1A91ECECF355}" {
+      m_aFlagNames {
+       "flag1"
+       "flag2"
+      }
+      m_fStartFactionKey "Ses_NAPA"
+      m_fEndFactionKey "UK"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{6A2D1A91F53E4C77}" {
+       m_sFirstFactionKey "UK"
+       m_sSecondFactionKey "Ses_NAPA"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 3919.198 72.769 725.02
+}
+PolylineShapeEntity capture : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
+ components {
+  PS_PolyZone "{60E90266F25533F6}" {
+   m_mPolygonTexture "{62F4404928D33DB5}UI/layouts/Textures/Grid1b.edds"
+   m_cPolygonColor 0.658 0.875 0.655 1
+   m_fPolygonUVScale 0.44
+   m_cPolygonBorderColor 0.012 0.502 0 1
+   m_aVisibleForFactions {
+    "UK"
+    "Ses_NAPA"
+    ""
+   }
+  }
+ }
+ coords 3733.632 65.156 1063.536
+ Points {
+  ShapePoint "{6A2D1A9327194A63}" {
+   Position -0.028 0 -2.365
+  }
+  ShapePoint "{6A2D1A93265388D6}" {
+   Position -15.521 -0 -15.681
+  }
+  ShapePoint "{6A2D1A9321338DF4}" {
+   Position -23.615 -0 -19.885
+  }
+  ShapePoint "{6A2D1A9320EE2FCA}" {
+   Position -27.954 0 -25.658
+  }
+  ShapePoint "{6A2D1A9323EE5C3D}" {
+   Position -46.749 0 -42.922
+  }
+  ShapePoint "{6A2D1A9322216B5F}" {
+   Position -73.475 -0 -64.866
+  }
+  ShapePoint "{6A2D1A932DE1DD80}" {
+   Position -82.021 0 -68.794
+  }
+  ShapePoint "{6A2D1A932D3616E5}" {
+   Position -88.209 0 -74.146
+  }
+  ShapePoint "{6A2D1A932C3E27C5}" {
+   Position -130.772 -0.001 -112.413
+  }
+  ShapePoint "{6A2D1A932F630C13}" {
+   Position -193.329 0 -62.302
+  }
+  ShapePoint "{6A2D1A932ECABDED}" {
+   Position -178.539 0 -48.19
+  }
+  ShapePoint "{6A2D1A9329ED1B4B}" {
+   Position -152.453 0 -22.422
+  }
+  ShapePoint "{6A2D1A932900FF02}" {
+   Position -149.943 -0 -16.46
+  }
+  ShapePoint "{6A2D1A93294E5BE3}" {
+   Position -150.816 0 -11.854
+  }
+  ShapePoint "{6A2D1A93280DB823}" {
+   Position -149.882 0 -7.901
+  }
+  ShapePoint "{6A2D1A932AF91C2D}" {
+   Position -61.922 0 76.6
+  }
+  ShapePoint "{6A2D1A9334AF7F5B}" {
+   Position -56.339 -0.007 78.681
+  }
+  ShapePoint "{6A2D1A9337472D04}" {
+   Position -15.439 -0.826 29.474
+  }
+  ShapePoint "{6A2D1A93362409F6}" {
+   Position -13.705 -0.035 21.659
+  }
+  ShapePoint "{6A2D1A933118C37A}" {
+   Position -1.834 0 4.532
+  }
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 4798.521 0 1542.068
+}

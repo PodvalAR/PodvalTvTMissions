@@ -1,0 +1,6241 @@
+$grp GenericEntity {
+ vaz {
+  components {
+   MeshObject "{6A12A798421809F0}" {
+    Object "{200E9280DF53E3A8}Assets/Vehicles/Wheeled/vaz_2109_car/mesh/vaz_2109.xob"
+   }
+   RigidBody "{6A12A798D2DE9A04}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3696.923 65.156 1063.818
+  angles 0 -170.532 0
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_l01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_r01"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_l02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_r02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79885C2D73A}" {
+       Object "{4EC91F9E1BFE0334}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/bumper_front.xob"
+      }
+      RigidBody "{6A12A79882C58C40}" {
+      }
+      Hierarchy "{6A12A79889B9D6F0}" {
+       PivotID "bumper_f"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A798DE5A0E08}" {
+       Object "{4E188E3FAB7502D7}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Fender_L.xob"
+      }
+      RigidBody "{6A12A798E2A4FA4D}" {
+       Static 1
+      }
+      Hierarchy "{6A12A798F7BB703A}" {
+       PivotID "Fender_L"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A798FDEE29C7}" {
+       Object "{BF13B66BD82A373B}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Fender_R.xob"
+      }
+      RigidBody "{6A12A798FEE25FE5}" {
+       Static 1
+      }
+      Hierarchy "{6A12A798FBE5F7AC}" {
+       PivotID "Fender_R"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A799028D9A69}" {
+       Object "{85A60A8F0973AA7B}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/bumper_back.xob"
+      }
+      RigidBody "{6A12A7990FD5C2A1}" {
+       Static 1
+      }
+      Hierarchy "{6A12A799090280C4}" {
+       PivotID "bumper_b"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A7991316EFB2}" {
+       Object "{5C6A3C07A785E9AD}Assets/Vehicles/Wheeled/vaz_2109_car/lights/headlight_L_vaz_2109.xob"
+      }
+      RigidBody "{6A12A79918051F21}" {
+       Static 1
+      }
+      Hierarchy "{6A12A7991A616F5A}" {
+       PivotID "v_root"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A7993517B7B4}" {
+       Object "{B1A9771B5E7CCF3E}Assets/Vehicles/Wheeled/vaz_2109_car/lights/headlight_R_vaz_2109.xob"
+      }
+      RigidBody "{6A12A79931F14BF2}" {
+       Static 1
+      }
+      Hierarchy "{6A12A799338F1CF6}" {
+       PivotID "v_root"
+      }
+     }
+    }
+   }
+  }
+ }
+ vaz2 {
+  components {
+   MeshObject "{6A12A798421809F0}" {
+    Object "{200E9280DF53E3A8}Assets/Vehicles/Wheeled/vaz_2109_car/mesh/vaz_2109.xob"
+    Materials {
+     MaterialAssignClass "{6A12A7994CEC4ADE}" {
+      SourceMaterial "1st"
+      AssignedMaterial "{40C37ECB9A99661A}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_01_Ash.emat"
+     }
+     MaterialAssignClass "{6A12A7994CEC4ACD}" {
+      SourceMaterial "2nd"
+      AssignedMaterial "{00335FEE2C85E45D}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_02_Ash.emat"
+     }
+    }
+   }
+   RigidBody "{6A12A798D2DE9A04}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3686.315 65.156 1085.477
+  angles 0 -63.69 0
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_l01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_r01"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_l02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_r02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79885C2D73A}" {
+       Object "{4EC91F9E1BFE0334}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/bumper_front.xob"
+      }
+      RigidBody "{6A12A79882C58C40}" {
+      }
+      Hierarchy "{6A12A79889B9D6F0}" {
+       PivotID "bumper_f"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A798DE5A0E08}" {
+       Object "{4E188E3FAB7502D7}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Fender_L.xob"
+       Materials {
+        MaterialAssignClass "{6A12A79951DDBF5C}" {
+         SourceMaterial "1st"
+         AssignedMaterial "{40C37ECB9A99661A}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_01_Ash.emat"
+        }
+       }
+      }
+      RigidBody "{6A12A798E2A4FA4D}" {
+       Static 1
+      }
+      Hierarchy "{6A12A798F7BB703A}" {
+       PivotID "Fender_L"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A798FDEE29C7}" {
+       Object "{BF13B66BD82A373B}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Fender_R.xob"
+       Materials {
+        MaterialAssignClass "{6A12A7995054674D}" {
+         SourceMaterial "1st"
+         AssignedMaterial "{40C37ECB9A99661A}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_01_Ash.emat"
+        }
+       }
+      }
+      RigidBody "{6A12A798FEE25FE5}" {
+       Static 1
+      }
+      Hierarchy "{6A12A798FBE5F7AC}" {
+       PivotID "Fender_R"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A799028D9A69}" {
+       Object "{85A60A8F0973AA7B}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/bumper_back.xob"
+      }
+      RigidBody "{6A12A7990FD5C2A1}" {
+       Static 1
+      }
+      Hierarchy "{6A12A799090280C4}" {
+       PivotID "bumper_b"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A7991316EFB2}" {
+       Object "{5C6A3C07A785E9AD}Assets/Vehicles/Wheeled/vaz_2109_car/lights/headlight_L_vaz_2109.xob"
+      }
+      RigidBody "{6A12A79918051F21}" {
+       Static 1
+      }
+      Hierarchy "{6A12A7991A616F5A}" {
+       PivotID "v_root"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A7993517B7B4}" {
+       Object "{B1A9771B5E7CCF3E}Assets/Vehicles/Wheeled/vaz_2109_car/lights/headlight_R_vaz_2109.xob"
+      }
+      RigidBody "{6A12A79931F14BF2}" {
+       Static 1
+      }
+      Hierarchy "{6A12A799338F1CF6}" {
+       PivotID "v_root"
+      }
+     }
+    }
+   }
+  }
+ }
+ vaz3 {
+  components {
+   MeshObject "{6A12A798421809F0}" {
+    Object "{200E9280DF53E3A8}Assets/Vehicles/Wheeled/vaz_2109_car/mesh/vaz_2109.xob"
+    Materials {
+     MaterialAssignClass "{6A12A7995BC6DBB6}" {
+      SourceMaterial "1st"
+      AssignedMaterial "{8045444C091613CC}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_01_breeze.emat"
+     }
+     MaterialAssignClass "{6A12A7995BC6DBA7}" {
+      SourceMaterial "2nd"
+      AssignedMaterial "{C0E4F6EA3303E0CB}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_02_breeze.emat"
+     }
+    }
+   }
+   RigidBody "{6A12A798D2DE9A04}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3618.068 65.156 1021.73
+  angles 0 -33.091 0
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_l01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_r01"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_l02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_r02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79885C2D73A}" {
+       Object "{4EC91F9E1BFE0334}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/bumper_front.xob"
+      }
+      RigidBody "{6A12A79882C58C40}" {
+      }
+      Hierarchy "{6A12A79889B9D6F0}" {
+       PivotID "bumper_f"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A798DE5A0E08}" {
+       Object "{4E188E3FAB7502D7}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Fender_L.xob"
+       Materials {
+        MaterialAssignClass "{6A12A79966BFA46E}" {
+         SourceMaterial "1st"
+         AssignedMaterial "{8045444C091613CC}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_01_breeze.emat"
+        }
+       }
+      }
+      RigidBody "{6A12A798E2A4FA4D}" {
+       Static 1
+      }
+      Hierarchy "{6A12A798F7BB703A}" {
+       PivotID "Fender_L"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A798FDEE29C7}" {
+       Object "{BF13B66BD82A373B}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Fender_R.xob"
+       Materials {
+        MaterialAssignClass "{6A12A7996481B75D}" {
+         SourceMaterial "1st"
+         AssignedMaterial "{8045444C091613CC}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_01_breeze.emat"
+        }
+       }
+      }
+      RigidBody "{6A12A798FEE25FE5}" {
+       Static 1
+      }
+      Hierarchy "{6A12A798FBE5F7AC}" {
+       PivotID "Fender_R"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A799028D9A69}" {
+       Object "{85A60A8F0973AA7B}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/bumper_back.xob"
+      }
+      RigidBody "{6A12A7990FD5C2A1}" {
+       Static 1
+      }
+      Hierarchy "{6A12A799090280C4}" {
+       PivotID "bumper_b"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A7991316EFB2}" {
+       Object "{5C6A3C07A785E9AD}Assets/Vehicles/Wheeled/vaz_2109_car/lights/headlight_L_vaz_2109.xob"
+      }
+      RigidBody "{6A12A79918051F21}" {
+       Static 1
+      }
+      Hierarchy "{6A12A7991A616F5A}" {
+       PivotID "v_root"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A7993517B7B4}" {
+       Object "{B1A9771B5E7CCF3E}Assets/Vehicles/Wheeled/vaz_2109_car/lights/headlight_R_vaz_2109.xob"
+      }
+      RigidBody "{6A12A79931F14BF2}" {
+       Static 1
+      }
+      Hierarchy "{6A12A799338F1CF6}" {
+       PivotID "v_root"
+      }
+     }
+    }
+   }
+  }
+ }
+ vaz4 {
+  components {
+   MeshObject "{6A12A798421809F0}" {
+    Object "{200E9280DF53E3A8}Assets/Vehicles/Wheeled/vaz_2109_car/mesh/vaz_2109.xob"
+    Materials {
+     MaterialAssignClass "{6A12A79974A203DF}" {
+      SourceMaterial "1st"
+      AssignedMaterial "{C4064B1D8948DA61}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_01_cherry.emat"
+     }
+     MaterialAssignClass "{6A12A79974A203CC}" {
+      SourceMaterial "2nd"
+      AssignedMaterial "{DACF24A19759B23D}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_02_cherry.emat"
+     }
+    }
+   }
+   RigidBody "{6A12A798D2DE9A04}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3666.382 65.156 1033.914
+  angles 0 -22.535 0
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_l01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_r01"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_l02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_r02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79885C2D73A}" {
+       Object "{4EC91F9E1BFE0334}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/bumper_front.xob"
+      }
+      RigidBody "{6A12A79882C58C40}" {
+      }
+      Hierarchy "{6A12A79889B9D6F0}" {
+       PivotID "bumper_f"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A798DE5A0E08}" {
+       Object "{4E188E3FAB7502D7}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Fender_L.xob"
+       Materials {
+        MaterialAssignClass "{6A12A7996F59F500}" {
+         SourceMaterial "1st"
+         AssignedMaterial "{C4064B1D8948DA61}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_01_cherry.emat"
+        }
+       }
+      }
+      RigidBody "{6A12A798E2A4FA4D}" {
+       Static 1
+      }
+      Hierarchy "{6A12A798F7BB703A}" {
+       PivotID "Fender_L"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A798FDEE29C7}" {
+       Object "{BF13B66BD82A373B}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Fender_R.xob"
+       Materials {
+        MaterialAssignClass "{6A12A79969DE9FB9}" {
+         SourceMaterial "1st"
+         AssignedMaterial "{C4064B1D8948DA61}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_01_cherry.emat"
+        }
+       }
+      }
+      RigidBody "{6A12A798FEE25FE5}" {
+       Static 1
+      }
+      Hierarchy "{6A12A798FBE5F7AC}" {
+       PivotID "Fender_R"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A799028D9A69}" {
+       Object "{85A60A8F0973AA7B}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/bumper_back.xob"
+      }
+      RigidBody "{6A12A7990FD5C2A1}" {
+       Static 1
+      }
+      Hierarchy "{6A12A799090280C4}" {
+       PivotID "bumper_b"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A7991316EFB2}" {
+       Object "{5C6A3C07A785E9AD}Assets/Vehicles/Wheeled/vaz_2109_car/lights/headlight_L_vaz_2109.xob"
+      }
+      RigidBody "{6A12A79918051F21}" {
+       Static 1
+      }
+      Hierarchy "{6A12A7991A616F5A}" {
+       PivotID "v_root"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A7993517B7B4}" {
+       Object "{B1A9771B5E7CCF3E}Assets/Vehicles/Wheeled/vaz_2109_car/lights/headlight_R_vaz_2109.xob"
+      }
+      RigidBody "{6A12A79931F14BF2}" {
+       Static 1
+      }
+      Hierarchy "{6A12A799338F1CF6}" {
+       PivotID "v_root"
+      }
+     }
+    }
+   }
+  }
+ }
+ vaz5 {
+  components {
+   MeshObject "{6A12A798421809F0}" {
+    Object "{200E9280DF53E3A8}Assets/Vehicles/Wheeled/vaz_2109_car/mesh/vaz_2109.xob"
+    Materials {
+     MaterialAssignClass "{6A12A7997CBB4510}" {
+      SourceMaterial "1st"
+      AssignedMaterial "{D5A78C49DFF54523}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_01_coral.emat"
+     }
+     MaterialAssignClass "{6A12A7997CBB4501}" {
+      SourceMaterial "2nd"
+      AssignedMaterial "{2A7DD11D5F01D565}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_02_coral.emat"
+     }
+    }
+   }
+   RigidBody "{6A12A798D2DE9A04}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3659.07 65.156 1014.136
+  angles 0 76.503 0
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_l01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_r01"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_l02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_r02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79885C2D73A}" {
+       Object "{4EC91F9E1BFE0334}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/bumper_front.xob"
+      }
+      RigidBody "{6A12A79882C58C40}" {
+      }
+      Hierarchy "{6A12A79889B9D6F0}" {
+       PivotID "bumper_f"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A798DE5A0E08}" {
+       Object "{4E188E3FAB7502D7}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Fender_L.xob"
+       Materials {
+        MaterialAssignClass "{6A12A79973FF319F}" {
+         SourceMaterial "1st"
+         AssignedMaterial "{D5A78C49DFF54523}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_01_coral.emat"
+        }
+       }
+      }
+      RigidBody "{6A12A798E2A4FA4D}" {
+       Static 1
+      }
+      Hierarchy "{6A12A798F7BB703A}" {
+       PivotID "Fender_L"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A798FDEE29C7}" {
+       Object "{BF13B66BD82A373B}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Fender_R.xob"
+       Materials {
+        MaterialAssignClass "{6A12A799720B363E}" {
+         SourceMaterial "1st"
+         AssignedMaterial "{D5A78C49DFF54523}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_01_coral.emat"
+        }
+       }
+      }
+      RigidBody "{6A12A798FEE25FE5}" {
+       Static 1
+      }
+      Hierarchy "{6A12A798FBE5F7AC}" {
+       PivotID "Fender_R"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A799028D9A69}" {
+       Object "{85A60A8F0973AA7B}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/bumper_back.xob"
+      }
+      RigidBody "{6A12A7990FD5C2A1}" {
+       Static 1
+      }
+      Hierarchy "{6A12A799090280C4}" {
+       PivotID "bumper_b"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A7991316EFB2}" {
+       Object "{5C6A3C07A785E9AD}Assets/Vehicles/Wheeled/vaz_2109_car/lights/headlight_L_vaz_2109.xob"
+      }
+      RigidBody "{6A12A79918051F21}" {
+       Static 1
+      }
+      Hierarchy "{6A12A7991A616F5A}" {
+       PivotID "v_root"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A7993517B7B4}" {
+       Object "{B1A9771B5E7CCF3E}Assets/Vehicles/Wheeled/vaz_2109_car/lights/headlight_R_vaz_2109.xob"
+      }
+      RigidBody "{6A12A79931F14BF2}" {
+       Static 1
+      }
+      Hierarchy "{6A12A799338F1CF6}" {
+       PivotID "v_root"
+      }
+     }
+    }
+   }
+  }
+ }
+ vaz6 {
+  components {
+   MeshObject "{6A12A798421809F0}" {
+    Object "{200E9280DF53E3A8}Assets/Vehicles/Wheeled/vaz_2109_car/mesh/vaz_2109.xob"
+    Materials {
+     MaterialAssignClass "{6A12A7997AB73B71}" {
+      SourceMaterial "1st"
+      AssignedMaterial "{E24856CA71A7EA44}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_01_eggplant.emat"
+     }
+     MaterialAssignClass "{6A12A7997AB73B5E}" {
+      SourceMaterial "2nd"
+      AssignedMaterial "{70D91C965374E851}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_02_eggplant.emat"
+     }
+    }
+   }
+   RigidBody "{6A12A798D2DE9A04}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3668.004 65.156 1050.921
+  angles 0 -40.506 0
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_l01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_r01"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_l02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_r02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79885C2D73A}" {
+       Object "{4EC91F9E1BFE0334}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/bumper_front.xob"
+      }
+      RigidBody "{6A12A79882C58C40}" {
+      }
+      Hierarchy "{6A12A79889B9D6F0}" {
+       PivotID "bumper_f"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A798DE5A0E08}" {
+       Object "{4E188E3FAB7502D7}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Fender_L.xob"
+       Materials {
+        MaterialAssignClass "{6A12A79985245DA5}" {
+         SourceMaterial "1st"
+         AssignedMaterial "{E24856CA71A7EA44}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_01_eggplant.emat"
+        }
+       }
+      }
+      RigidBody "{6A12A798E2A4FA4D}" {
+       Static 1
+      }
+      Hierarchy "{6A12A798F7BB703A}" {
+       PivotID "Fender_L"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A798FDEE29C7}" {
+       Object "{BF13B66BD82A373B}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Fender_R.xob"
+       Materials {
+        MaterialAssignClass "{6A12A79987A22D4C}" {
+         SourceMaterial "1st"
+         AssignedMaterial "{E24856CA71A7EA44}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_01_eggplant.emat"
+        }
+       }
+      }
+      RigidBody "{6A12A798FEE25FE5}" {
+       Static 1
+      }
+      Hierarchy "{6A12A798FBE5F7AC}" {
+       PivotID "Fender_R"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A799028D9A69}" {
+       Object "{85A60A8F0973AA7B}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/bumper_back.xob"
+      }
+      RigidBody "{6A12A7990FD5C2A1}" {
+       Static 1
+      }
+      Hierarchy "{6A12A799090280C4}" {
+       PivotID "bumper_b"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A7991316EFB2}" {
+       Object "{5C6A3C07A785E9AD}Assets/Vehicles/Wheeled/vaz_2109_car/lights/headlight_L_vaz_2109.xob"
+      }
+      RigidBody "{6A12A79918051F21}" {
+       Static 1
+      }
+      Hierarchy "{6A12A7991A616F5A}" {
+       PivotID "v_root"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A7993517B7B4}" {
+       Object "{B1A9771B5E7CCF3E}Assets/Vehicles/Wheeled/vaz_2109_car/lights/headlight_R_vaz_2109.xob"
+      }
+      RigidBody "{6A12A79931F14BF2}" {
+       Static 1
+      }
+      Hierarchy "{6A12A799338F1CF6}" {
+       PivotID "v_root"
+      }
+     }
+    }
+   }
+  }
+ }
+ vaz7 {
+  components {
+   MeshObject "{6A12A798421809F0}" {
+    Object "{200E9280DF53E3A8}Assets/Vehicles/Wheeled/vaz_2109_car/mesh/vaz_2109.xob"
+    Materials {
+     MaterialAssignClass "{6A12A7998FFA8CE0}" {
+      SourceMaterial "1st"
+      AssignedMaterial "{5FF3894D10989267}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_01_emerald.emat"
+     }
+     MaterialAssignClass "{6A12A7998FFA8CCD}" {
+      SourceMaterial "2nd"
+      AssignedMaterial "{24442D62EF07B448}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_02_emerald.emat"
+     }
+    }
+   }
+   RigidBody "{6A12A798D2DE9A04}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3685.215 65.156 1018.577
+  angles 0 -177.3 0
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_l01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_r01"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_l02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_r02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79885C2D73A}" {
+       Object "{4EC91F9E1BFE0334}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/bumper_front.xob"
+      }
+      RigidBody "{6A12A79882C58C40}" {
+      }
+      Hierarchy "{6A12A79889B9D6F0}" {
+       PivotID "bumper_f"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A798DE5A0E08}" {
+       Object "{4E188E3FAB7502D7}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Fender_L.xob"
+       Materials {
+        MaterialAssignClass "{6A12A7998316F024}" {
+         SourceMaterial "1st"
+         AssignedMaterial "{5FF3894D10989267}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_01_emerald.emat"
+        }
+       }
+      }
+      RigidBody "{6A12A798E2A4FA4D}" {
+       Static 1
+      }
+      Hierarchy "{6A12A798F7BB703A}" {
+       PivotID "Fender_L"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A798FDEE29C7}" {
+       Object "{BF13B66BD82A373B}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Fender_R.xob"
+       Materials {
+        MaterialAssignClass "{6A12A7998D822BEC}" {
+         SourceMaterial "1st"
+         AssignedMaterial "{5FF3894D10989267}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_01_emerald.emat"
+        }
+       }
+      }
+      RigidBody "{6A12A798FEE25FE5}" {
+       Static 1
+      }
+      Hierarchy "{6A12A798FBE5F7AC}" {
+       PivotID "Fender_R"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A799028D9A69}" {
+       Object "{85A60A8F0973AA7B}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/bumper_back.xob"
+      }
+      RigidBody "{6A12A7990FD5C2A1}" {
+       Static 1
+      }
+      Hierarchy "{6A12A799090280C4}" {
+       PivotID "bumper_b"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A7991316EFB2}" {
+       Object "{5C6A3C07A785E9AD}Assets/Vehicles/Wheeled/vaz_2109_car/lights/headlight_L_vaz_2109.xob"
+      }
+      RigidBody "{6A12A79918051F21}" {
+       Static 1
+      }
+      Hierarchy "{6A12A7991A616F5A}" {
+       PivotID "v_root"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A7993517B7B4}" {
+       Object "{B1A9771B5E7CCF3E}Assets/Vehicles/Wheeled/vaz_2109_car/lights/headlight_R_vaz_2109.xob"
+      }
+      RigidBody "{6A12A79931F14BF2}" {
+       Static 1
+      }
+      Hierarchy "{6A12A799338F1CF6}" {
+       PivotID "v_root"
+      }
+     }
+    }
+   }
+  }
+ }
+ vaz8 {
+  components {
+   MeshObject "{6A12A798421809F0}" {
+    Object "{200E9280DF53E3A8}Assets/Vehicles/Wheeled/vaz_2109_car/mesh/vaz_2109.xob"
+    Materials {
+     MaterialAssignClass "{6A12A799913CF46E}" {
+      SourceMaterial "1st"
+      AssignedMaterial "{5596E38801472BF5}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_01_iguana.emat"
+     }
+     MaterialAssignClass "{6A12A799913CF45D}" {
+      SourceMaterial "2nd"
+      AssignedMaterial "{1537512E3B52D8F2}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_02_iguana.emat"
+     }
+    }
+   }
+   RigidBody "{6A12A798D2DE9A04}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3726.916 65.156 1068.152
+  angles 0 -104.998 0
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_l01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_r01"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_l02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_r02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79885C2D73A}" {
+       Object "{4EC91F9E1BFE0334}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/bumper_front.xob"
+      }
+      RigidBody "{6A12A79882C58C40}" {
+      }
+      Hierarchy "{6A12A79889B9D6F0}" {
+       PivotID "bumper_f"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A798DE5A0E08}" {
+       Object "{4E188E3FAB7502D7}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Fender_L.xob"
+       Materials {
+        MaterialAssignClass "{6A12A7998A036482}" {
+         SourceMaterial "1st"
+         AssignedMaterial "{5596E38801472BF5}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_01_iguana.emat"
+        }
+       }
+      }
+      RigidBody "{6A12A798E2A4FA4D}" {
+       Static 1
+      }
+      Hierarchy "{6A12A798F7BB703A}" {
+       PivotID "Fender_L"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A798FDEE29C7}" {
+       Object "{BF13B66BD82A373B}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Fender_R.xob"
+       Materials {
+        MaterialAssignClass "{6A12A79994B690E8}" {
+         SourceMaterial "1st"
+         AssignedMaterial "{5596E38801472BF5}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_01_iguana.emat"
+        }
+       }
+      }
+      RigidBody "{6A12A798FEE25FE5}" {
+       Static 1
+      }
+      Hierarchy "{6A12A798FBE5F7AC}" {
+       PivotID "Fender_R"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A799028D9A69}" {
+       Object "{85A60A8F0973AA7B}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/bumper_back.xob"
+      }
+      RigidBody "{6A12A7990FD5C2A1}" {
+       Static 1
+      }
+      Hierarchy "{6A12A799090280C4}" {
+       PivotID "bumper_b"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A7991316EFB2}" {
+       Object "{5C6A3C07A785E9AD}Assets/Vehicles/Wheeled/vaz_2109_car/lights/headlight_L_vaz_2109.xob"
+      }
+      RigidBody "{6A12A79918051F21}" {
+       Static 1
+      }
+      Hierarchy "{6A12A7991A616F5A}" {
+       PivotID "v_root"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A7993517B7B4}" {
+       Object "{B1A9771B5E7CCF3E}Assets/Vehicles/Wheeled/vaz_2109_car/lights/headlight_R_vaz_2109.xob"
+      }
+      RigidBody "{6A12A79931F14BF2}" {
+       Static 1
+      }
+      Hierarchy "{6A12A799338F1CF6}" {
+       PivotID "v_root"
+      }
+     }
+    }
+   }
+  }
+ }
+ vaz9 {
+  components {
+   MeshObject "{6A12A798421809F0}" {
+    Object "{200E9280DF53E3A8}Assets/Vehicles/Wheeled/vaz_2109_car/mesh/vaz_2109.xob"
+    Materials {
+     MaterialAssignClass "{6A12A7999B9FAA1B}" {
+      SourceMaterial "1st"
+      AssignedMaterial "{A40310D39DE0B986}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_01_macaroon.emat"
+     }
+     MaterialAssignClass "{6A12A7999B9FAAEF}" {
+      SourceMaterial "2nd"
+      AssignedMaterial "{36925A8FBF33BB93}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_02_macaroon.emat"
+     }
+    }
+   }
+   RigidBody "{6A12A798D2DE9A04}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3729.291 65.156 1064.929
+  angles 0 -108.82 0
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_l01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_r01"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_l02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_r02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79885C2D73A}" {
+       Object "{4EC91F9E1BFE0334}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/bumper_front.xob"
+      }
+      RigidBody "{6A12A79882C58C40}" {
+      }
+      Hierarchy "{6A12A79889B9D6F0}" {
+       PivotID "bumper_f"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A798DE5A0E08}" {
+       Object "{4E188E3FAB7502D7}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Fender_L.xob"
+       Materials {
+        MaterialAssignClass "{6A12A7999CAAD9BF}" {
+         SourceMaterial "1st"
+         AssignedMaterial "{A40310D39DE0B986}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_01_macaroon.emat"
+        }
+       }
+      }
+      RigidBody "{6A12A798E2A4FA4D}" {
+       Static 1
+      }
+      Hierarchy "{6A12A798F7BB703A}" {
+       PivotID "Fender_L"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A798FDEE29C7}" {
+       Object "{BF13B66BD82A373B}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Fender_R.xob"
+       Materials {
+        MaterialAssignClass "{6A12A7999F0C9A60}" {
+         SourceMaterial "1st"
+         AssignedMaterial "{A40310D39DE0B986}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_01_macaroon.emat"
+        }
+       }
+      }
+      RigidBody "{6A12A798FEE25FE5}" {
+       Static 1
+      }
+      Hierarchy "{6A12A798FBE5F7AC}" {
+       PivotID "Fender_R"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A799028D9A69}" {
+       Object "{85A60A8F0973AA7B}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/bumper_back.xob"
+      }
+      RigidBody "{6A12A7990FD5C2A1}" {
+       Static 1
+      }
+      Hierarchy "{6A12A799090280C4}" {
+       PivotID "bumper_b"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A7991316EFB2}" {
+       Object "{5C6A3C07A785E9AD}Assets/Vehicles/Wheeled/vaz_2109_car/lights/headlight_L_vaz_2109.xob"
+      }
+      RigidBody "{6A12A79918051F21}" {
+       Static 1
+      }
+      Hierarchy "{6A12A7991A616F5A}" {
+       PivotID "v_root"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A7993517B7B4}" {
+       Object "{B1A9771B5E7CCF3E}Assets/Vehicles/Wheeled/vaz_2109_car/lights/headlight_R_vaz_2109.xob"
+      }
+      RigidBody "{6A12A79931F14BF2}" {
+       Static 1
+      }
+      Hierarchy "{6A12A799338F1CF6}" {
+       PivotID "v_root"
+      }
+     }
+    }
+   }
+  }
+ }
+ vaz10 {
+  components {
+   MeshObject "{6A12A798421809F0}" {
+    Object "{200E9280DF53E3A8}Assets/Vehicles/Wheeled/vaz_2109_car/mesh/vaz_2109.xob"
+    Materials {
+     MaterialAssignClass "{6A12A799A24B8657}" {
+      SourceMaterial "1st"
+      AssignedMaterial "{393F4E97B7C2DE2F}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_01_Niagara.emat"
+     }
+     MaterialAssignClass "{6A12A799A24B8645}" {
+      SourceMaterial "2nd"
+      AssignedMaterial "{4288EAB8485DF800}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_02_Niagara.emat"
+     }
+    }
+   }
+   RigidBody "{6A12A798D2DE9A04}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3672.058 65.156 1054.802
+  angles 0 -59.995 0
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_l01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_r01"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_l02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_r02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79885C2D73A}" {
+       Object "{4EC91F9E1BFE0334}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/bumper_front.xob"
+      }
+      RigidBody "{6A12A79882C58C40}" {
+      }
+      Hierarchy "{6A12A79889B9D6F0}" {
+       PivotID "bumper_f"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A798DE5A0E08}" {
+       Object "{4E188E3FAB7502D7}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Fender_L.xob"
+       Materials {
+        MaterialAssignClass "{6A12A799A6444840}" {
+         SourceMaterial "1st"
+         AssignedMaterial "{393F4E97B7C2DE2F}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_01_Niagara.emat"
+        }
+       }
+      }
+      RigidBody "{6A12A798E2A4FA4D}" {
+       Static 1
+      }
+      Hierarchy "{6A12A798F7BB703A}" {
+       PivotID "Fender_L"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A798FDEE29C7}" {
+       Object "{BF13B66BD82A373B}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Fender_R.xob"
+       Materials {
+        MaterialAssignClass "{6A12A799A0FFE124}" {
+         SourceMaterial "1st"
+         AssignedMaterial "{393F4E97B7C2DE2F}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_01_Niagara.emat"
+        }
+       }
+      }
+      RigidBody "{6A12A798FEE25FE5}" {
+       Static 1
+      }
+      Hierarchy "{6A12A798FBE5F7AC}" {
+       PivotID "Fender_R"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A799028D9A69}" {
+       Object "{85A60A8F0973AA7B}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/bumper_back.xob"
+      }
+      RigidBody "{6A12A7990FD5C2A1}" {
+       Static 1
+      }
+      Hierarchy "{6A12A799090280C4}" {
+       PivotID "bumper_b"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A7991316EFB2}" {
+       Object "{5C6A3C07A785E9AD}Assets/Vehicles/Wheeled/vaz_2109_car/lights/headlight_L_vaz_2109.xob"
+      }
+      RigidBody "{6A12A79918051F21}" {
+       Static 1
+      }
+      Hierarchy "{6A12A7991A616F5A}" {
+       PivotID "v_root"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A7993517B7B4}" {
+       Object "{B1A9771B5E7CCF3E}Assets/Vehicles/Wheeled/vaz_2109_car/lights/headlight_R_vaz_2109.xob"
+      }
+      RigidBody "{6A12A79931F14BF2}" {
+       Static 1
+      }
+      Hierarchy "{6A12A799338F1CF6}" {
+       PivotID "v_root"
+      }
+     }
+    }
+   }
+  }
+ }
+ vaz12 {
+  components {
+   MeshObject "{6A12A798421809F0}" {
+    Object "{200E9280DF53E3A8}Assets/Vehicles/Wheeled/vaz_2109_car/mesh/vaz_2109.xob"
+    Materials {
+     MaterialAssignClass "{6A12A799B9ED72ED}" {
+      SourceMaterial "1st"
+      AssignedMaterial "{7ABD49C7FD9DE16B}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_01_Pearl.emat"
+     }
+     MaterialAssignClass "{6A12A799B9ED72D9}" {
+      SourceMaterial "2nd"
+      AssignedMaterial "{856714937D69712D}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_02_Pearl.emat"
+     }
+    }
+   }
+   RigidBody "{6A12A798D2DE9A04}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3573.596 65.156 1007.126
+  angles 0 108.988 0
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_l01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_r01"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_l02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_r02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79885C2D73A}" {
+       Object "{4EC91F9E1BFE0334}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/bumper_front.xob"
+      }
+      RigidBody "{6A12A79882C58C40}" {
+      }
+      Hierarchy "{6A12A79889B9D6F0}" {
+       PivotID "bumper_f"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A798DE5A0E08}" {
+       Object "{4E188E3FAB7502D7}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Fender_L.xob"
+       Materials {
+        MaterialAssignClass "{6A12A799B2711D26}" {
+         SourceMaterial "1st"
+         AssignedMaterial "{7ABD49C7FD9DE16B}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_01_Pearl.emat"
+        }
+       }
+      }
+      RigidBody "{6A12A798E2A4FA4D}" {
+       Static 1
+      }
+      Hierarchy "{6A12A798F7BB703A}" {
+       PivotID "Fender_L"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A798FDEE29C7}" {
+       Object "{BF13B66BD82A373B}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Fender_R.xob"
+       Materials {
+        MaterialAssignClass "{6A12A799BCCB6464}" {
+         SourceMaterial "1st"
+         AssignedMaterial "{7ABD49C7FD9DE16B}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_01_Pearl.emat"
+        }
+       }
+      }
+      RigidBody "{6A12A798FEE25FE5}" {
+       Static 1
+      }
+      Hierarchy "{6A12A798FBE5F7AC}" {
+       PivotID "Fender_R"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A799028D9A69}" {
+       Object "{85A60A8F0973AA7B}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/bumper_back.xob"
+      }
+      RigidBody "{6A12A7990FD5C2A1}" {
+       Static 1
+      }
+      Hierarchy "{6A12A799090280C4}" {
+       PivotID "bumper_b"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A7991316EFB2}" {
+       Object "{5C6A3C07A785E9AD}Assets/Vehicles/Wheeled/vaz_2109_car/lights/headlight_L_vaz_2109.xob"
+      }
+      RigidBody "{6A12A79918051F21}" {
+       Static 1
+      }
+      Hierarchy "{6A12A7991A616F5A}" {
+       PivotID "v_root"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A7993517B7B4}" {
+       Object "{B1A9771B5E7CCF3E}Assets/Vehicles/Wheeled/vaz_2109_car/lights/headlight_R_vaz_2109.xob"
+      }
+      RigidBody "{6A12A79931F14BF2}" {
+       Static 1
+      }
+      Hierarchy "{6A12A799338F1CF6}" {
+       PivotID "v_root"
+      }
+     }
+    }
+   }
+  }
+ }
+ vaz13 {
+  components {
+   MeshObject "{6A12A798421809F0}" {
+    Object "{200E9280DF53E3A8}Assets/Vehicles/Wheeled/vaz_2109_car/mesh/vaz_2109.xob"
+    Materials {
+     MaterialAssignClass "{6A12A799CD784337}" {
+      SourceMaterial "1st"
+      AssignedMaterial "{6C5D4B7C121DFBAF}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_01_valut.emat"
+     }
+     MaterialAssignClass "{6A12A799CD784325}" {
+      SourceMaterial "2nd"
+      AssignedMaterial "{9387162892E96BE9}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_02_valut.emat"
+     }
+    }
+   }
+   RigidBody "{6A12A798D2DE9A04}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3582.799 65.156 980.321
+  angles -0.728 -54.357 -0.522
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_l01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_r01"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_l02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_r02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79885C2D73A}" {
+       Object "{4EC91F9E1BFE0334}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/bumper_front.xob"
+      }
+      RigidBody "{6A12A79882C58C40}" {
+      }
+      Hierarchy "{6A12A79889B9D6F0}" {
+       PivotID "bumper_f"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A798DE5A0E08}" {
+       Object "{4E188E3FAB7502D7}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Fender_L.xob"
+       Materials {
+        MaterialAssignClass "{6A12A799C551833C}" {
+         SourceMaterial "1st"
+         AssignedMaterial "{6C5D4B7C121DFBAF}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_01_valut.emat"
+        }
+       }
+      }
+      RigidBody "{6A12A798E2A4FA4D}" {
+       Static 1
+      }
+      Hierarchy "{6A12A798F7BB703A}" {
+       PivotID "Fender_L"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A798FDEE29C7}" {
+       Object "{BF13B66BD82A373B}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Fender_R.xob"
+       Materials {
+        MaterialAssignClass "{6A12A799C70608DA}" {
+         SourceMaterial "1st"
+         AssignedMaterial "{6C5D4B7C121DFBAF}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_01_valut.emat"
+        }
+       }
+      }
+      RigidBody "{6A12A798FEE25FE5}" {
+       Static 1
+      }
+      Hierarchy "{6A12A798FBE5F7AC}" {
+       PivotID "Fender_R"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A799028D9A69}" {
+       Object "{85A60A8F0973AA7B}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/bumper_back.xob"
+      }
+      RigidBody "{6A12A7990FD5C2A1}" {
+       Static 1
+      }
+      Hierarchy "{6A12A799090280C4}" {
+       PivotID "bumper_b"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A7991316EFB2}" {
+       Object "{5C6A3C07A785E9AD}Assets/Vehicles/Wheeled/vaz_2109_car/lights/headlight_L_vaz_2109.xob"
+      }
+      RigidBody "{6A12A79918051F21}" {
+       Static 1
+      }
+      Hierarchy "{6A12A7991A616F5A}" {
+       PivotID "v_root"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A7993517B7B4}" {
+       Object "{B1A9771B5E7CCF3E}Assets/Vehicles/Wheeled/vaz_2109_car/lights/headlight_R_vaz_2109.xob"
+      }
+      RigidBody "{6A12A79931F14BF2}" {
+       Static 1
+      }
+      Hierarchy "{6A12A799338F1CF6}" {
+       PivotID "v_root"
+      }
+     }
+    }
+   }
+  }
+ }
+ vaz14 {
+  components {
+   MeshObject "{6A12A798421809F0}" {
+    Object "{200E9280DF53E3A8}Assets/Vehicles/Wheeled/vaz_2109_car/mesh/vaz_2109.xob"
+    Materials {
+     MaterialAssignClass "{6A12A799D4FDF1D9}" {
+      SourceMaterial "1st"
+      AssignedMaterial "{9EE550EA63614EEA}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_01_Willow.emat"
+     }
+     MaterialAssignClass "{6A12A799D4FDF1C7}" {
+      SourceMaterial "2nd"
+      AssignedMaterial "{DE44E24C5974BDED}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_02_Willow.emat"
+     }
+    }
+   }
+   RigidBody "{6A12A798D2DE9A04}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3602.135 65.157 1026.697
+  angles -0.548 -104.997 -0.317
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_l01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_r01"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_l02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_r02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79885C2D73A}" {
+       Object "{4EC91F9E1BFE0334}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/bumper_front.xob"
+      }
+      RigidBody "{6A12A79882C58C40}" {
+      }
+      Hierarchy "{6A12A79889B9D6F0}" {
+       PivotID "bumper_f"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A798DE5A0E08}" {
+       Object "{4E188E3FAB7502D7}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Fender_L.xob"
+       Materials {
+        MaterialAssignClass "{6A12A799C847233B}" {
+         SourceMaterial "1st"
+         AssignedMaterial "{9EE550EA63614EEA}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_01_Willow.emat"
+        }
+       }
+      }
+      RigidBody "{6A12A798E2A4FA4D}" {
+       Static 1
+      }
+      Hierarchy "{6A12A798F7BB703A}" {
+       PivotID "Fender_L"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A798FDEE29C7}" {
+       Object "{BF13B66BD82A373B}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Fender_R.xob"
+       Materials {
+        MaterialAssignClass "{6A12A799CA07EBB0}" {
+         SourceMaterial "1st"
+         AssignedMaterial "{9EE550EA63614EEA}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_01_Willow.emat"
+        }
+       }
+      }
+      RigidBody "{6A12A798FEE25FE5}" {
+       Static 1
+      }
+      Hierarchy "{6A12A798FBE5F7AC}" {
+       PivotID "Fender_R"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A799028D9A69}" {
+       Object "{85A60A8F0973AA7B}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/bumper_back.xob"
+      }
+      RigidBody "{6A12A7990FD5C2A1}" {
+       Static 1
+      }
+      Hierarchy "{6A12A799090280C4}" {
+       PivotID "bumper_b"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A7991316EFB2}" {
+       Object "{5C6A3C07A785E9AD}Assets/Vehicles/Wheeled/vaz_2109_car/lights/headlight_L_vaz_2109.xob"
+      }
+      RigidBody "{6A12A79918051F21}" {
+       Static 1
+      }
+      Hierarchy "{6A12A7991A616F5A}" {
+       PivotID "v_root"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A7993517B7B4}" {
+       Object "{B1A9771B5E7CCF3E}Assets/Vehicles/Wheeled/vaz_2109_car/lights/headlight_R_vaz_2109.xob"
+      }
+      RigidBody "{6A12A79931F14BF2}" {
+       Static 1
+      }
+      Hierarchy "{6A12A799338F1CF6}" {
+       PivotID "v_root"
+      }
+     }
+    }
+   }
+  }
+ }
+ uaz10 {
+  components {
+   MeshObject "{6A12A79A394FC0ED}" {
+    Object "{B80903BACFCDCCB6}Assets/Vehicles/Wheeled/UAZ469/UAZ469_base.xob"
+    Materials {
+     MaterialAssignClass "{6A12A79B0EFB7EF0}" {
+      SourceMaterial "UAZ469_Body"
+      AssignedMaterial "{D1F1DD9AE3DC919D}Assets/Vehicles/Wheeled/UAZ469/Data/UAZ469_Body_CIV_BLUE.emat"
+     }
+     MaterialAssignClass "{6A12A79B0EFB7EE2}" {
+      SourceMaterial "UAZ469_Body_int_B4485C596220781A"
+      AssignedMaterial "{8EAD81E99ADC4CF0}Assets/Vehicles/Wheeled/UAZ469/Data/UAZ469_Body_CIV_TEAL_int.emat"
+     }
+    }
+   }
+   RigidBody "{6A12A79AA8498529}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3715.887 65.156 1075.276
+  angles 0 -83.987 0
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79A4C834745}" {
+       Object "{407536B3D8A85E53}Assets/Vehicles/Wheeled/UAZ469/VehParts/UAZ469_roof_canvas.xob"
+      }
+      RigidBody "{6A12A79A4865140F}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79A49E3D077}" {
+       PivotID "v_root"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79A58414035}" {
+       Object "{33D5687713BC5740}Assets/Vehicles/Wheeled/UAZ469/VehParts/Wheels/UAZ469_wheel.xob"
+      }
+      RigidBody "{6A12A79AB77F8ED9}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79A6180D991}" {
+       PivotID "v_wheel_L01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79A58414035}" {
+       Object "{33D5687713BC5740}Assets/Vehicles/Wheeled/UAZ469/VehParts/Wheels/UAZ469_wheel.xob"
+      }
+      RigidBody "{6A12A79ABCA6F250}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79A6D7C982F}" {
+       PivotID "v_wheel_L02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79A58414035}" {
+       Object "{33D5687713BC5740}Assets/Vehicles/Wheeled/UAZ469/VehParts/Wheels/UAZ469_wheel.xob"
+      }
+      RigidBody "{6A12A79ABE1EF96F}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79A63FC9370}" {
+       PivotID "v_wheel_R02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79A58414035}" {
+       Object "{33D5687713BC5740}Assets/Vehicles/Wheeled/UAZ469/VehParts/Wheels/UAZ469_wheel.xob"
+      }
+      RigidBody "{6A12A79AB0451A6B}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79A6E0816F4}" {
+       PivotID "v_wheel_R01"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79A81C70C87}" {
+       Object "{0B573BEEAFB3BB05}Assets/Vehicles/Wheeled/UAZ469/VehParts/Doors/UAZ469_door_L02_1.xob"
+       Materials {
+        MaterialAssignClass "{6A12A79B03B0CDFB}" {
+         SourceMaterial "UAZ469_Body"
+         AssignedMaterial "{D1F1DD9AE3DC919D}Assets/Vehicles/Wheeled/UAZ469/Data/UAZ469_Body_CIV_BLUE.emat"
+        }
+       }
+      }
+      RigidBody "{6A12A79ACD83ED0B}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79A8EE30152}" {
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79A80A14B7C}" {
+       Object "{6D3CC1728DF529E6}Assets/Vehicles/Wheeled/UAZ469/VehParts/Doors/UAZ469_door_R01_1.xob"
+       Materials {
+        MaterialAssignClass "{6A12A79B0A872F69}" {
+         SourceMaterial "UAZ469_Body"
+         AssignedMaterial "{D1F1DD9AE3DC919D}Assets/Vehicles/Wheeled/UAZ469/Data/UAZ469_Body_CIV_BLUE.emat"
+        }
+       }
+      }
+      RigidBody "{6A12A79ACEBE0301}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79A88930454}" {
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79A80F9B9D6}" {
+       Object "{6799913F3BE5DA61}Assets/Vehicles/Wheeled/UAZ469/VehParts/Doors/UAZ469_door_R02_1.xob"
+       Materials {
+        MaterialAssignClass "{6A12A79B15E545F5}" {
+         SourceMaterial "UAZ469_Body"
+         AssignedMaterial "{D1F1DD9AE3DC919D}Assets/Vehicles/Wheeled/UAZ469/Data/UAZ469_Body_CIV_BLUE.emat"
+        }
+       }
+      }
+      RigidBody "{6A12A79ACBD3641B}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79A8B7F4FA8}" {
+       PivotID "v_root"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79A87120195}" {
+       Object "{01F26BA319A34882}Assets/Vehicles/Wheeled/UAZ469/VehParts/Doors/UAZ469_door_L01_1.xob"
+       Materials {
+        MaterialAssignClass "{6A12A79B0DBB1CF5}" {
+         SourceMaterial "UAZ469_Body"
+         AssignedMaterial "{D1F1DD9AE3DC919D}Assets/Vehicles/Wheeled/UAZ469/Data/UAZ469_Body_CIV_BLUE.emat"
+        }
+       }
+      }
+      RigidBody "{6A12A79AC3A8BEEC}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79A8D436FC3}" {
+       PivotID "v_root"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79A9CD18020}" {
+       Object "{98ECD23A04447912}Assets/Vehicles/Wheeled/UAZ469/VehParts/Doors/UAZ469_door_L01_2.xob"
+       Materials {
+        MaterialAssignClass "{6A12A79B0C8D42ED}" {
+         SourceMaterial "UAZ469_Body"
+         AssignedMaterial "{D1F1DD9AE3DC919D}Assets/Vehicles/Wheeled/UAZ469/Data/UAZ469_Body_CIV_BLUE.emat"
+        }
+       }
+      }
+      Hierarchy "{6A12A79A98847A5A}" {
+       PivotID "v_root"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79A9CD183A5}" {
+       Object "{92498277B2548A95}Assets/Vehicles/Wheeled/UAZ469/VehParts/Doors/UAZ469_door_L02_2.xob"
+       Materials {
+        MaterialAssignClass "{6A12A79B0F8FFA41}" {
+         SourceMaterial "UAZ469_Body"
+         AssignedMaterial "{D1F1DD9AE3DC919D}Assets/Vehicles/Wheeled/UAZ469/Data/UAZ469_Body_CIV_BLUE.emat"
+        }
+       }
+      }
+      Hierarchy "{6A12A79A9A9D060E}" {
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79A9CD18215}" {
+       Object "{F42278EB90121876}Assets/Vehicles/Wheeled/UAZ469/VehParts/Doors/UAZ469_door_R01_2.xob"
+       Materials {
+        MaterialAssignClass "{6A12A79B08B15CF4}" {
+         SourceMaterial "UAZ469_Body"
+         AssignedMaterial "{D1F1DD9AE3DC919D}Assets/Vehicles/Wheeled/UAZ469/Data/UAZ469_Body_CIV_BLUE.emat"
+        }
+       }
+      }
+      Hierarchy "{6A12A79AA4890CA7}" {
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79A9CD182A3}" {
+       Object "{FE8728A62602EBF1}Assets/Vehicles/Wheeled/UAZ469/VehParts/Doors/UAZ469_door_R02_2.xob"
+       Materials {
+        MaterialAssignClass "{6A12A79B149B7E99}" {
+         SourceMaterial "UAZ469_Body"
+         AssignedMaterial "{D1F1DD9AE3DC919D}Assets/Vehicles/Wheeled/UAZ469/Data/UAZ469_Body_CIV_BLUE.emat"
+        }
+       }
+      }
+      Hierarchy "{6A12A79AA74848B3}" {
+      }
+     }
+    }
+   }
+  }
+ }
+ uaz11 {
+  components {
+   MeshObject "{6A12A79A394FC0ED}" {
+    Object "{B80903BACFCDCCB6}Assets/Vehicles/Wheeled/UAZ469/UAZ469_base.xob"
+    Materials {
+     MaterialAssignClass "{6A12A79B1B14DFAB}" {
+      SourceMaterial "UAZ469_Body"
+      AssignedMaterial "{BC4053685C7CAF5E}Assets/Vehicles/Wheeled/UAZ469/Data/UAZ469_Body_CIV_RED.emat"
+     }
+     MaterialAssignClass "{6A12A79B1B14DF97}" {
+      SourceMaterial "UAZ469_Body_int_B4485C596220781A"
+      AssignedMaterial "{8EAD81E99ADC4CF0}Assets/Vehicles/Wheeled/UAZ469/Data/UAZ469_Body_CIV_TEAL_int.emat"
+     }
+    }
+   }
+   RigidBody "{6A12A79AA8498529}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3645.755 65.156 1108.167
+  angles 0 150.577 0
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79A58414035}" {
+       Object "{33D5687713BC5740}Assets/Vehicles/Wheeled/UAZ469/VehParts/Wheels/UAZ469_wheel.xob"
+      }
+      RigidBody "{6A12A79AB77F8ED9}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79A6180D991}" {
+       PivotID "v_wheel_L01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79A58414035}" {
+       Object "{33D5687713BC5740}Assets/Vehicles/Wheeled/UAZ469/VehParts/Wheels/UAZ469_wheel.xob"
+      }
+      RigidBody "{6A12A79ABCA6F250}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79A6D7C982F}" {
+       PivotID "v_wheel_L02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79A58414035}" {
+       Object "{33D5687713BC5740}Assets/Vehicles/Wheeled/UAZ469/VehParts/Wheels/UAZ469_wheel.xob"
+      }
+      RigidBody "{6A12A79ABE1EF96F}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79A63FC9370}" {
+       PivotID "v_wheel_R02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79A58414035}" {
+       Object "{33D5687713BC5740}Assets/Vehicles/Wheeled/UAZ469/VehParts/Wheels/UAZ469_wheel.xob"
+      }
+      RigidBody "{6A12A79AB0451A6B}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79A6E0816F4}" {
+       PivotID "v_wheel_R01"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79A81C70C87}" {
+       Object "{0B573BEEAFB3BB05}Assets/Vehicles/Wheeled/UAZ469/VehParts/Doors/UAZ469_door_L02_1.xob"
+       Materials {
+        MaterialAssignClass "{6A12A79B24632639}" {
+         SourceMaterial "UAZ469_Body"
+         AssignedMaterial "{BC4053685C7CAF5E}Assets/Vehicles/Wheeled/UAZ469/Data/UAZ469_Body_CIV_RED.emat"
+        }
+       }
+      }
+      RigidBody "{6A12A79ACD83ED0B}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79A8EE30152}" {
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79A80A14B7C}" {
+       Object "{6D3CC1728DF529E6}Assets/Vehicles/Wheeled/UAZ469/VehParts/Doors/UAZ469_door_R01_1.xob"
+       Materials {
+        MaterialAssignClass "{6A12A79B26D38BBC}" {
+         SourceMaterial "UAZ469_Body"
+         AssignedMaterial "{BC4053685C7CAF5E}Assets/Vehicles/Wheeled/UAZ469/Data/UAZ469_Body_CIV_RED.emat"
+        }
+       }
+      }
+      RigidBody "{6A12A79ACEBE0301}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79A88930454}" {
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79A80F9B9D6}" {
+       Object "{6799913F3BE5DA61}Assets/Vehicles/Wheeled/UAZ469/VehParts/Doors/UAZ469_door_R02_1.xob"
+       Materials {
+        MaterialAssignClass "{6A12A79B21ED834C}" {
+         SourceMaterial "UAZ469_Body"
+         AssignedMaterial "{BC4053685C7CAF5E}Assets/Vehicles/Wheeled/UAZ469/Data/UAZ469_Body_CIV_RED.emat"
+        }
+       }
+      }
+      RigidBody "{6A12A79ACBD3641B}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79A8B7F4FA8}" {
+       PivotID "v_root"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79A87120195}" {
+       Object "{01F26BA319A34882}Assets/Vehicles/Wheeled/UAZ469/VehParts/Doors/UAZ469_door_L01_1.xob"
+       Materials {
+        MaterialAssignClass "{6A12A79B25048C9E}" {
+         SourceMaterial "UAZ469_Body"
+         AssignedMaterial "{BC4053685C7CAF5E}Assets/Vehicles/Wheeled/UAZ469/Data/UAZ469_Body_CIV_RED.emat"
+        }
+       }
+      }
+      RigidBody "{6A12A79AC3A8BEEC}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79A8D436FC3}" {
+       PivotID "v_root"
+      }
+     }
+    }
+   }
+  }
+ }
+ uazik {
+  components {
+   MeshObject "{6A12A79BC326169A}" {
+    Object "{C984590B625B3528}Assets/Vehicles/Wheeled/UAZ452/UAZ452_base.xob"
+   }
+   RigidBody "{6A12A79BEEC6505C}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3675.782 65.156 1133.063
+  angles 0 -134.843 0
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79BCFE238BF}" {
+       Object "{EB4435FDB42A042F}Assets/Vehicles/Wheeled/UAZ452/VehParts/Wheels/UAZ_452A_Wheel_01.xob"
+      }
+      RigidBody "{6A12A79BD7CD999A}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79BC9973038}" {
+       PivotID "v_wheel_L01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79BCFE238BF}" {
+       Object "{EB4435FDB42A042F}Assets/Vehicles/Wheeled/UAZ452/VehParts/Wheels/UAZ_452A_Wheel_01.xob"
+      }
+      RigidBody "{6A12A79BD7CD999A}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79BC9973038}" {
+       PivotID "v_wheel_R01"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79BCFE238BF}" {
+       Object "{EB4435FDB42A042F}Assets/Vehicles/Wheeled/UAZ452/VehParts/Wheels/UAZ_452A_Wheel_01.xob"
+      }
+      RigidBody "{6A12A79BD7CD999A}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79BC9973038}" {
+       PivotID "v_wheel_L02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79BCFE238BF}" {
+       Object "{EB4435FDB42A042F}Assets/Vehicles/Wheeled/UAZ452/VehParts/Wheels/UAZ_452A_Wheel_01.xob"
+      }
+      RigidBody "{6A12A79BD7CD999A}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79BC9973038}" {
+       PivotID "v_wheel_R02"
+      }
+     }
+     angles 0 180 0
+    }
+   }
+  }
+ }
+ uazik2 {
+  components {
+   MeshObject "{6A12A79BC326169A}" {
+    Object "{C984590B625B3528}Assets/Vehicles/Wheeled/UAZ452/UAZ452_base.xob"
+    Materials {
+     MaterialAssignClass "{6A12A79BFAAA6302}" {
+      SourceMaterial "uaz452_body"
+      AssignedMaterial "{618E20B04013C690}Assets/Vehicles/Wheeled/UAZ452/Data/uaz452_body_blue.emat"
+     }
+    }
+   }
+   RigidBody "{6A12A79BEEC6505C}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3638.391 65.156 1023.877
+  angles 0 -42.673 0
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79BCFE238BF}" {
+       Object "{EB4435FDB42A042F}Assets/Vehicles/Wheeled/UAZ452/VehParts/Wheels/UAZ_452A_Wheel_01.xob"
+      }
+      RigidBody "{6A12A79BD7CD999A}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79BC9973038}" {
+       PivotID "v_wheel_L01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79BCFE238BF}" {
+       Object "{EB4435FDB42A042F}Assets/Vehicles/Wheeled/UAZ452/VehParts/Wheels/UAZ_452A_Wheel_01.xob"
+      }
+      RigidBody "{6A12A79BD7CD999A}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79BC9973038}" {
+       PivotID "v_wheel_L02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79BCFE238BF}" {
+       Object "{EB4435FDB42A042F}Assets/Vehicles/Wheeled/UAZ452/VehParts/Wheels/UAZ_452A_Wheel_01.xob"
+      }
+      RigidBody "{6A12A79BD7CD999A}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79BC9973038}" {
+       PivotID "v_wheel_R02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79BCFE238BF}" {
+       Object "{EB4435FDB42A042F}Assets/Vehicles/Wheeled/UAZ452/VehParts/Wheels/UAZ_452A_Wheel_01.xob"
+      }
+      RigidBody "{6A12A79BD7CD999A}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79BC9973038}" {
+       PivotID "v_wheel_R01"
+      }
+     }
+     angles 0 180 0
+    }
+   }
+  }
+ }
+ uazik3 {
+  components {
+   MeshObject "{6A12A79BC326169A}" {
+    Object "{C984590B625B3528}Assets/Vehicles/Wheeled/UAZ452/UAZ452_base.xob"
+    Materials {
+     MaterialAssignClass "{6A12A79C0E176431}" {
+      SourceMaterial "uaz452_body"
+      AssignedMaterial "{0B870E276F4D234B}Assets/Vehicles/Wheeled/UAZ452/Data/uaz452_body_grey.emat"
+     }
+    }
+   }
+   RigidBody "{6A12A79BEEC6505C}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3677.87 65.156 1080.503
+  angles 0 -17.192 0
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79BCFE238BF}" {
+       Object "{EB4435FDB42A042F}Assets/Vehicles/Wheeled/UAZ452/VehParts/Wheels/UAZ_452A_Wheel_01.xob"
+      }
+      RigidBody "{6A12A79BD7CD999A}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79BC9973038}" {
+       PivotID "v_wheel_L01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79BCFE238BF}" {
+       Object "{EB4435FDB42A042F}Assets/Vehicles/Wheeled/UAZ452/VehParts/Wheels/UAZ_452A_Wheel_01.xob"
+      }
+      RigidBody "{6A12A79BD7CD999A}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79BC9973038}" {
+       PivotID "v_wheel_L02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79BCFE238BF}" {
+       Object "{EB4435FDB42A042F}Assets/Vehicles/Wheeled/UAZ452/VehParts/Wheels/UAZ_452A_Wheel_01.xob"
+      }
+      RigidBody "{6A12A79BD7CD999A}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79BC9973038}" {
+       PivotID "v_wheel_R02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79BCFE238BF}" {
+       Object "{EB4435FDB42A042F}Assets/Vehicles/Wheeled/UAZ452/VehParts/Wheels/UAZ_452A_Wheel_01.xob"
+      }
+      RigidBody "{6A12A79BD7CD999A}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79BC9973038}" {
+       PivotID "v_wheel_R01"
+      }
+     }
+     angles 0 180 0
+    }
+   }
+  }
+ }
+ uazik4 {
+  components {
+   MeshObject "{6A12A79BC326169A}" {
+    Object "{C984590B625B3528}Assets/Vehicles/Wheeled/UAZ452/UAZ452_base.xob"
+    Materials {
+     MaterialAssignClass "{6A12A79C13C20C5D}" {
+      SourceMaterial "uaz452_body"
+      AssignedMaterial "{814E4D1986CAED36}Assets/Vehicles/Wheeled/UAZ452/Data/uaz452_body_orange.emat"
+     }
+    }
+   }
+   RigidBody "{6A12A79BEEC6505C}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3665.447 65.156 1048.704
+  angles 0 -52.734 0
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79BCFE238BF}" {
+       Object "{EB4435FDB42A042F}Assets/Vehicles/Wheeled/UAZ452/VehParts/Wheels/UAZ_452A_Wheel_01.xob"
+      }
+      RigidBody "{6A12A79BD7CD999A}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79BC9973038}" {
+       PivotID "v_wheel_L01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79BCFE238BF}" {
+       Object "{EB4435FDB42A042F}Assets/Vehicles/Wheeled/UAZ452/VehParts/Wheels/UAZ_452A_Wheel_01.xob"
+      }
+      RigidBody "{6A12A79BD7CD999A}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79BC9973038}" {
+       PivotID "v_wheel_L02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79BCFE238BF}" {
+       Object "{EB4435FDB42A042F}Assets/Vehicles/Wheeled/UAZ452/VehParts/Wheels/UAZ_452A_Wheel_01.xob"
+      }
+      RigidBody "{6A12A79BD7CD999A}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79BC9973038}" {
+       PivotID "v_wheel_R02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79BCFE238BF}" {
+       Object "{EB4435FDB42A042F}Assets/Vehicles/Wheeled/UAZ452/VehParts/Wheels/UAZ_452A_Wheel_01.xob"
+      }
+      RigidBody "{6A12A79BD7CD999A}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79BC9973038}" {
+       PivotID "v_wheel_R01"
+      }
+     }
+     angles 0 180 0
+    }
+   }
+  }
+ }
+ sar {
+  components {
+   MeshObject "{6A12A79C20A223FE}" {
+    Object "{C60D4F567F0A950D}Assets/Vehicles/Wheeled/S105/S105_base.xob"
+   }
+   RigidBody "{6A12A79C33070FFE}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3646.067 65.156 1031.047
+  angles 0 -40.427 0
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79C290D0236}" {
+       Object "{5CD2566862CF89CF}Assets/Vehicles/Wheeled/S105/VehParts/Wheels/S105_wheel.xob"
+      }
+      RigidBody "{6A12A79C2BD23815}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79C35ED2BA7}" {
+       PivotID "v_wheel_L01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79C290D0236}" {
+       Object "{5CD2566862CF89CF}Assets/Vehicles/Wheeled/S105/VehParts/Wheels/S105_wheel.xob"
+      }
+      RigidBody "{6A12A79C2BD23815}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79C35ED2BA7}" {
+       PivotID "v_wheel_R01"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79C290D0236}" {
+       Object "{5CD2566862CF89CF}Assets/Vehicles/Wheeled/S105/VehParts/Wheels/S105_wheel.xob"
+      }
+      RigidBody "{6A12A79C2BD23815}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79C35ED2BA7}" {
+       PivotID "v_wheel_L02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79C290D0236}" {
+       Object "{5CD2566862CF89CF}Assets/Vehicles/Wheeled/S105/VehParts/Wheels/S105_wheel.xob"
+      }
+      RigidBody "{6A12A79C2BD23815}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79C35ED2BA7}" {
+       PivotID "v_wheel_R02"
+      }
+     }
+     angles 0 180 0
+    }
+   }
+  }
+ }
+ sar2 {
+  components {
+   MeshObject "{6A12A79C20A223FE}" {
+    Object "{C60D4F567F0A950D}Assets/Vehicles/Wheeled/S105/S105_base.xob"
+    Materials {
+     MaterialAssignClass "{6A12A79C5B45B9F2}" {
+      SourceMaterial "S105Body_mat"
+      AssignedMaterial "{6A5E5A0B4C4B52A1}Assets/Vehicles/Wheeled/S105/Data/S105Body_mat_beige.emat"
+     }
+    }
+   }
+   RigidBody "{6A12A79C33070FFE}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3692.381 65.458 1112.442
+  angles 0 -131.503 0
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79C290D0236}" {
+       Object "{5CD2566862CF89CF}Assets/Vehicles/Wheeled/S105/VehParts/Wheels/S105_wheel.xob"
+      }
+      RigidBody "{6A12A79C2BD23815}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79C35ED2BA7}" {
+       PivotID "v_wheel_L01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79C290D0236}" {
+       Object "{5CD2566862CF89CF}Assets/Vehicles/Wheeled/S105/VehParts/Wheels/S105_wheel.xob"
+      }
+      RigidBody "{6A12A79C2BD23815}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79C35ED2BA7}" {
+       PivotID "v_wheel_L02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79C290D0236}" {
+       Object "{5CD2566862CF89CF}Assets/Vehicles/Wheeled/S105/VehParts/Wheels/S105_wheel.xob"
+      }
+      RigidBody "{6A12A79C2BD23815}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79C35ED2BA7}" {
+       PivotID "v_wheel_R02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79C290D0236}" {
+       Object "{5CD2566862CF89CF}Assets/Vehicles/Wheeled/S105/VehParts/Wheels/S105_wheel.xob"
+      }
+      RigidBody "{6A12A79C2BD23815}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79C35ED2BA7}" {
+       PivotID "v_wheel_R01"
+      }
+     }
+     angles 0 180 0
+    }
+   }
+  }
+ }
+ sar3 {
+  components {
+   MeshObject "{6A12A79C20A223FE}" {
+    Object "{C60D4F567F0A950D}Assets/Vehicles/Wheeled/S105/S105_base.xob"
+    Materials {
+     MaterialAssignClass "{6A12A79C7DBC6481}" {
+      SourceMaterial "S105Body_mat"
+      AssignedMaterial "{1E86171CF8FDF302}Assets/Vehicles/Wheeled/S105/Data/S105Body_mat_green.emat"
+     }
+    }
+   }
+   RigidBody "{6A12A79C33070FFE}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3594.062 65.156 1060.604
+  angles 0 135.004 0
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79C290D0236}" {
+       Object "{5CD2566862CF89CF}Assets/Vehicles/Wheeled/S105/VehParts/Wheels/S105_wheel.xob"
+      }
+      RigidBody "{6A12A79C2BD23815}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79C35ED2BA7}" {
+       PivotID "v_wheel_L01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79C290D0236}" {
+       Object "{5CD2566862CF89CF}Assets/Vehicles/Wheeled/S105/VehParts/Wheels/S105_wheel.xob"
+      }
+      RigidBody "{6A12A79C2BD23815}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79C35ED2BA7}" {
+       PivotID "v_wheel_L02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79C290D0236}" {
+       Object "{5CD2566862CF89CF}Assets/Vehicles/Wheeled/S105/VehParts/Wheels/S105_wheel.xob"
+      }
+      RigidBody "{6A12A79C2BD23815}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79C35ED2BA7}" {
+       PivotID "v_wheel_R02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79C290D0236}" {
+       Object "{5CD2566862CF89CF}Assets/Vehicles/Wheeled/S105/VehParts/Wheels/S105_wheel.xob"
+      }
+      RigidBody "{6A12A79C2BD23815}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79C35ED2BA7}" {
+       PivotID "v_wheel_R01"
+      }
+     }
+     angles 0 180 0
+    }
+   }
+  }
+ }
+ sar4 {
+  components {
+   MeshObject "{6A12A79C20A223FE}" {
+    Object "{C60D4F567F0A950D}Assets/Vehicles/Wheeled/S105/S105_base.xob"
+    Materials {
+     MaterialAssignClass "{6A12A79C87AC05EC}" {
+      SourceMaterial "S105Body_mat"
+      AssignedMaterial "{FA024052F804C11B}Assets/Vehicles/Wheeled/S105/Data/S105Body_mat_green_agave.emat"
+     }
+    }
+   }
+   RigidBody "{6A12A79C33070FFE}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3552.557 65.156 1011.809
+  angles 0 -179.995 0
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79C290D0236}" {
+       Object "{5CD2566862CF89CF}Assets/Vehicles/Wheeled/S105/VehParts/Wheels/S105_wheel.xob"
+      }
+      RigidBody "{6A12A79C2BD23815}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79C35ED2BA7}" {
+       PivotID "v_wheel_L01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79C290D0236}" {
+       Object "{5CD2566862CF89CF}Assets/Vehicles/Wheeled/S105/VehParts/Wheels/S105_wheel.xob"
+      }
+      RigidBody "{6A12A79C2BD23815}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79C35ED2BA7}" {
+       PivotID "v_wheel_L02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79C290D0236}" {
+       Object "{5CD2566862CF89CF}Assets/Vehicles/Wheeled/S105/VehParts/Wheels/S105_wheel.xob"
+      }
+      RigidBody "{6A12A79C2BD23815}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79C35ED2BA7}" {
+       PivotID "v_wheel_R02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79C290D0236}" {
+       Object "{5CD2566862CF89CF}Assets/Vehicles/Wheeled/S105/VehParts/Wheels/S105_wheel.xob"
+      }
+      RigidBody "{6A12A79C2BD23815}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79C35ED2BA7}" {
+       PivotID "v_wheel_R01"
+      }
+     }
+     angles 0 180 0
+    }
+   }
+  }
+ }
+ sar5 {
+  components {
+   MeshObject "{6A12A79C20A223FE}" {
+    Object "{C60D4F567F0A950D}Assets/Vehicles/Wheeled/S105/S105_base.xob"
+    Materials {
+     MaterialAssignClass "{6A12A79C8E8DD14E}" {
+      SourceMaterial "S105Body_mat"
+      AssignedMaterial "{77FD5EE007711B63}Assets/Vehicles/Wheeled/S105/Data/S105Body_mat_red.emat"
+     }
+    }
+   }
+   RigidBody "{6A12A79C33070FFE}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3589.972 65.156 996.294
+  angles 0 138.537 0
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79C290D0236}" {
+       Object "{5CD2566862CF89CF}Assets/Vehicles/Wheeled/S105/VehParts/Wheels/S105_wheel.xob"
+      }
+      RigidBody "{6A12A79C2BD23815}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79C35ED2BA7}" {
+       PivotID "v_wheel_L01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79C290D0236}" {
+       Object "{5CD2566862CF89CF}Assets/Vehicles/Wheeled/S105/VehParts/Wheels/S105_wheel.xob"
+      }
+      RigidBody "{6A12A79C2BD23815}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79C35ED2BA7}" {
+       PivotID "v_wheel_L02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79C290D0236}" {
+       Object "{5CD2566862CF89CF}Assets/Vehicles/Wheeled/S105/VehParts/Wheels/S105_wheel.xob"
+      }
+      RigidBody "{6A12A79C2BD23815}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79C35ED2BA7}" {
+       PivotID "v_wheel_R02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79C290D0236}" {
+       Object "{5CD2566862CF89CF}Assets/Vehicles/Wheeled/S105/VehParts/Wheels/S105_wheel.xob"
+      }
+      RigidBody "{6A12A79C2BD23815}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79C35ED2BA7}" {
+       PivotID "v_wheel_R01"
+      }
+     }
+     angles 0 180 0
+    }
+   }
+  }
+ }
+ sar6 {
+  components {
+   MeshObject "{6A12A79C20A223FE}" {
+    Object "{C60D4F567F0A950D}Assets/Vehicles/Wheeled/S105/S105_base.xob"
+    Materials {
+     MaterialAssignClass "{6A12A79C9E52829C}" {
+      SourceMaterial "S105Body_mat"
+      AssignedMaterial "{C7BB9473C68C4D84}Assets/Vehicles/Wheeled/S105/Data/S105Body_mat_white.emat"
+     }
+    }
+   }
+   RigidBody "{6A12A79C33070FFE}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3601.834 65.156 1005.377
+  angles 0 137.402 0
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79C290D0236}" {
+       Object "{5CD2566862CF89CF}Assets/Vehicles/Wheeled/S105/VehParts/Wheels/S105_wheel.xob"
+      }
+      RigidBody "{6A12A79C2BD23815}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79C35ED2BA7}" {
+       PivotID "v_wheel_L01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79C290D0236}" {
+       Object "{5CD2566862CF89CF}Assets/Vehicles/Wheeled/S105/VehParts/Wheels/S105_wheel.xob"
+      }
+      RigidBody "{6A12A79C2BD23815}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79C35ED2BA7}" {
+       PivotID "v_wheel_L02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79C290D0236}" {
+       Object "{5CD2566862CF89CF}Assets/Vehicles/Wheeled/S105/VehParts/Wheels/S105_wheel.xob"
+      }
+      RigidBody "{6A12A79C2BD23815}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79C35ED2BA7}" {
+       PivotID "v_wheel_R02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79C290D0236}" {
+       Object "{5CD2566862CF89CF}Assets/Vehicles/Wheeled/S105/VehParts/Wheels/S105_wheel.xob"
+      }
+      RigidBody "{6A12A79C2BD23815}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79C35ED2BA7}" {
+       PivotID "v_wheel_R01"
+      }
+     }
+     angles 0 180 0
+    }
+   }
+  }
+ }
+ sar7 {
+  components {
+   MeshObject "{6A12A79C20A223FE}" {
+    Object "{C60D4F567F0A950D}Assets/Vehicles/Wheeled/S105/S105_base.xob"
+    Materials {
+     MaterialAssignClass "{6A12A79CA5FACA00}" {
+      SourceMaterial "S105Body_mat"
+      AssignedMaterial "{4856BEF97E6258E3}Assets/Vehicles/Wheeled/S105/Data/S105Body_mat_yellow.emat"
+     }
+    }
+   }
+   RigidBody "{6A12A79C33070FFE}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3633.075 65.156 980.513
+  angles 0 47.402 0
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79C290D0236}" {
+       Object "{5CD2566862CF89CF}Assets/Vehicles/Wheeled/S105/VehParts/Wheels/S105_wheel.xob"
+      }
+      RigidBody "{6A12A79C2BD23815}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79C35ED2BA7}" {
+       PivotID "v_wheel_L01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79C290D0236}" {
+       Object "{5CD2566862CF89CF}Assets/Vehicles/Wheeled/S105/VehParts/Wheels/S105_wheel.xob"
+      }
+      RigidBody "{6A12A79C2BD23815}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79C35ED2BA7}" {
+       PivotID "v_wheel_L02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79C290D0236}" {
+       Object "{5CD2566862CF89CF}Assets/Vehicles/Wheeled/S105/VehParts/Wheels/S105_wheel.xob"
+      }
+      RigidBody "{6A12A79C2BD23815}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79C35ED2BA7}" {
+       PivotID "v_wheel_R02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79C290D0236}" {
+       Object "{5CD2566862CF89CF}Assets/Vehicles/Wheeled/S105/VehParts/Wheels/S105_wheel.xob"
+      }
+      RigidBody "{6A12A79C2BD23815}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79C35ED2BA7}" {
+       PivotID "v_wheel_R01"
+      }
+     }
+     angles 0 180 0
+    }
+   }
+  }
+ }
+ sar8 {
+  components {
+   MeshObject "{6A12A79C20A223FE}" {
+    Object "{C60D4F567F0A950D}Assets/Vehicles/Wheeled/S105/S105_base.xob"
+    Materials {
+     MaterialAssignClass "{6A12A79CA16D1E9C}" {
+      SourceMaterial "S105Body_mat"
+      AssignedMaterial "{F4A476FC46B986BC}Assets/Vehicles/Wheeled/S105/Data/S105Body_mat_darkred.emat"
+     }
+    }
+   }
+   RigidBody "{6A12A79C33070FFE}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3676.981 65.156 1059.656
+  angles 0 137.401 0
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79C290D0236}" {
+       Object "{5CD2566862CF89CF}Assets/Vehicles/Wheeled/S105/VehParts/Wheels/S105_wheel.xob"
+      }
+      RigidBody "{6A12A79C2BD23815}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79C35ED2BA7}" {
+       PivotID "v_wheel_L01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79C290D0236}" {
+       Object "{5CD2566862CF89CF}Assets/Vehicles/Wheeled/S105/VehParts/Wheels/S105_wheel.xob"
+      }
+      RigidBody "{6A12A79C2BD23815}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79C35ED2BA7}" {
+       PivotID "v_wheel_L02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79C290D0236}" {
+       Object "{5CD2566862CF89CF}Assets/Vehicles/Wheeled/S105/VehParts/Wheels/S105_wheel.xob"
+      }
+      RigidBody "{6A12A79C2BD23815}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79C35ED2BA7}" {
+       PivotID "v_wheel_R02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79C290D0236}" {
+       Object "{5CD2566862CF89CF}Assets/Vehicles/Wheeled/S105/VehParts/Wheels/S105_wheel.xob"
+      }
+      RigidBody "{6A12A79C2BD23815}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79C35ED2BA7}" {
+       PivotID "v_wheel_R01"
+      }
+     }
+     angles 0 180 0
+    }
+   }
+  }
+ }
+ sar9 {
+  components {
+   MeshObject "{6A12A79C20A223FE}" {
+    Object "{C60D4F567F0A950D}Assets/Vehicles/Wheeled/S105/S105_base.xob"
+    Materials {
+     MaterialAssignClass "{6A12A79CBF497990}" {
+      SourceMaterial "S105Body_mat"
+      AssignedMaterial "{922DF7DFE9943C0D}Assets/Vehicles/Wheeled/S105/Data/S105Body_mat_darkbrown.emat"
+     }
+    }
+   }
+   RigidBody "{6A12A79C33070FFE}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3691.713 65.156 1028.112
+  angles 0 -72.993 0
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79C290D0236}" {
+       Object "{5CD2566862CF89CF}Assets/Vehicles/Wheeled/S105/VehParts/Wheels/S105_wheel.xob"
+      }
+      RigidBody "{6A12A79C2BD23815}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79C35ED2BA7}" {
+       PivotID "v_wheel_L01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79C290D0236}" {
+       Object "{5CD2566862CF89CF}Assets/Vehicles/Wheeled/S105/VehParts/Wheels/S105_wheel.xob"
+      }
+      RigidBody "{6A12A79C2BD23815}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79C35ED2BA7}" {
+       PivotID "v_wheel_L02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79C290D0236}" {
+       Object "{5CD2566862CF89CF}Assets/Vehicles/Wheeled/S105/VehParts/Wheels/S105_wheel.xob"
+      }
+      RigidBody "{6A12A79C2BD23815}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79C35ED2BA7}" {
+       PivotID "v_wheel_R02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79C290D0236}" {
+       Object "{5CD2566862CF89CF}Assets/Vehicles/Wheeled/S105/VehParts/Wheels/S105_wheel.xob"
+      }
+      RigidBody "{6A12A79C2BD23815}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79C35ED2BA7}" {
+       PivotID "v_wheel_R01"
+      }
+     }
+     angles 0 180 0
+    }
+   }
+  }
+ }
+ vaz15 {
+  components {
+   MeshObject "{6A12A798421809F0}" {
+    Object "{200E9280DF53E3A8}Assets/Vehicles/Wheeled/vaz_2109_car/mesh/vaz_2109.xob"
+    Materials {
+     MaterialAssignClass "{6A12A799A24B8657}" {
+      SourceMaterial "1st"
+      AssignedMaterial "{393F4E97B7C2DE2F}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_01_Niagara.emat"
+     }
+     MaterialAssignClass "{6A12A799A24B8645}" {
+      SourceMaterial "2nd"
+      AssignedMaterial "{4288EAB8485DF800}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_02_Niagara.emat"
+     }
+    }
+   }
+   RigidBody "{6A12A798D2DE9A04}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3689.715 65.156 1047.438
+  angles 0 91.829 0
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_l01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_r01"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_l02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79854911F09}" {
+       Object "{FF167AD14F7035B0}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Wheels/vaz_2109_wheel.xob"
+      }
+      RigidBody "{6A12A7985685FDC3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79858E1883D}" {
+       PivotID "v_wheel_r02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79885C2D73A}" {
+       Object "{4EC91F9E1BFE0334}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/bumper_front.xob"
+      }
+      RigidBody "{6A12A79882C58C40}" {
+      }
+      Hierarchy "{6A12A79889B9D6F0}" {
+       PivotID "bumper_f"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A798DE5A0E08}" {
+       Object "{4E188E3FAB7502D7}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Fender_L.xob"
+       Materials {
+        MaterialAssignClass "{6A12A799A6444840}" {
+         SourceMaterial "1st"
+         AssignedMaterial "{393F4E97B7C2DE2F}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_01_Niagara.emat"
+        }
+       }
+      }
+      RigidBody "{6A12A798E2A4FA4D}" {
+       Static 1
+      }
+      Hierarchy "{6A12A798F7BB703A}" {
+       PivotID "Fender_L"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A798FDEE29C7}" {
+       Object "{BF13B66BD82A373B}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/Fender_R.xob"
+       Materials {
+        MaterialAssignClass "{6A12A799A0FFE124}" {
+         SourceMaterial "1st"
+         AssignedMaterial "{393F4E97B7C2DE2F}Assets/Vehicles/Wheeled/vaz_2109_car/Data/paint/vaz_2109Body_01_Niagara.emat"
+        }
+       }
+      }
+      RigidBody "{6A12A798FEE25FE5}" {
+       Static 1
+      }
+      Hierarchy "{6A12A798FBE5F7AC}" {
+       PivotID "Fender_R"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A799028D9A69}" {
+       Object "{85A60A8F0973AA7B}Assets/Vehicles/Wheeled/vaz_2109_car/VehParts/bumper_back.xob"
+      }
+      RigidBody "{6A12A7990FD5C2A1}" {
+       Static 1
+      }
+      Hierarchy "{6A12A799090280C4}" {
+       PivotID "bumper_b"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A7991316EFB2}" {
+       Object "{5C6A3C07A785E9AD}Assets/Vehicles/Wheeled/vaz_2109_car/lights/headlight_L_vaz_2109.xob"
+      }
+      RigidBody "{6A12A79918051F21}" {
+       Static 1
+      }
+      Hierarchy "{6A12A7991A616F5A}" {
+       PivotID "v_root"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A7993517B7B4}" {
+       Object "{B1A9771B5E7CCF3E}Assets/Vehicles/Wheeled/vaz_2109_car/lights/headlight_R_vaz_2109.xob"
+      }
+      RigidBody "{6A12A79931F14BF2}" {
+       Static 1
+      }
+      Hierarchy "{6A12A799338F1CF6}" {
+       PivotID "v_root"
+      }
+     }
+    }
+   }
+  }
+ }
+ land {
+  components {
+   MeshObject "{6A12A79CD4D3A9F2}" {
+    Object "{A584BB3398BAFAFA}Assets/Vehicles/Wheeled/LR3Series/3Series_LWB_Civvie.xob"
+   }
+   RigidBody "{6A12A79CE362471E}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3635.918 65.036 1021.539
+  angles -0.308 -43.539 -0.324
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79CDB0D937C}" {
+       Object "{33D5687713BC5740}Assets/Vehicles/Wheeled/UAZ469/VehParts/Wheels/UAZ469_wheel.xob"
+      }
+      RigidBody "{6A12A79CE1302AE3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79CE738A220}" {
+       PivotID "v_wheel_L01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79CDB0D937C}" {
+       Object "{33D5687713BC5740}Assets/Vehicles/Wheeled/UAZ469/VehParts/Wheels/UAZ469_wheel.xob"
+      }
+      RigidBody "{6A12A79CE1302AE3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79CE738A220}" {
+       PivotID "v_wheel_R01"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79CDB0D937C}" {
+       Object "{33D5687713BC5740}Assets/Vehicles/Wheeled/UAZ469/VehParts/Wheels/UAZ469_wheel.xob"
+      }
+      RigidBody "{6A12A79CE1302AE3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79CE738A220}" {
+       PivotID "v_wheel_L02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79CDB0D937C}" {
+       Object "{33D5687713BC5740}Assets/Vehicles/Wheeled/UAZ469/VehParts/Wheels/UAZ469_wheel.xob"
+      }
+      RigidBody "{6A12A79CE1302AE3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79CE738A220}" {
+       PivotID "v_wheel_R02"
+      }
+     }
+     angles 0 180 0
+    }
+   }
+  }
+ }
+ land2 {
+  components {
+   MeshObject "{6A12A79CD4D3A9F2}" {
+    Object "{A584BB3398BAFAFA}Assets/Vehicles/Wheeled/LR3Series/3Series_LWB_Civvie.xob"
+    Materials {
+     MaterialAssignClass "{6A12A79D03601C96}" {
+      SourceMaterial "lr_3series_body"
+      AssignedMaterial "{A3D2925DF75C4DCB}Assets/Vehicles/Wheeled/LR3Series/Data/Civvie/lr_3series_body_civvie_BronzeGreen.emat"
+     }
+    }
+   }
+   RigidBody "{6A12A79CE362471E}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3682.381 65.055 1064.783
+  angles 0 136.658 0
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79CDB0D937C}" {
+       Object "{33D5687713BC5740}Assets/Vehicles/Wheeled/UAZ469/VehParts/Wheels/UAZ469_wheel.xob"
+      }
+      RigidBody "{6A12A79CE1302AE3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79CE738A220}" {
+       PivotID "v_wheel_L01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79CDB0D937C}" {
+       Object "{33D5687713BC5740}Assets/Vehicles/Wheeled/UAZ469/VehParts/Wheels/UAZ469_wheel.xob"
+      }
+      RigidBody "{6A12A79CE1302AE3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79CE738A220}" {
+       PivotID "v_wheel_L02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79CDB0D937C}" {
+       Object "{33D5687713BC5740}Assets/Vehicles/Wheeled/UAZ469/VehParts/Wheels/UAZ469_wheel.xob"
+      }
+      RigidBody "{6A12A79CE1302AE3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79CE738A220}" {
+       PivotID "v_wheel_R02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79CDB0D937C}" {
+       Object "{33D5687713BC5740}Assets/Vehicles/Wheeled/UAZ469/VehParts/Wheels/UAZ469_wheel.xob"
+      }
+      RigidBody "{6A12A79CE1302AE3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79CE738A220}" {
+       PivotID "v_wheel_R01"
+      }
+     }
+     angles 0 180 0
+    }
+   }
+  }
+ }
+ land3 {
+  components {
+   MeshObject "{6A12A79CD4D3A9F2}" {
+    Object "{A584BB3398BAFAFA}Assets/Vehicles/Wheeled/LR3Series/3Series_LWB_Civvie.xob"
+    Materials {
+     MaterialAssignClass "{6A12A79D0A22A652}" {
+      SourceMaterial "lr_3series_body"
+      AssignedMaterial "{FEB199354DB35845}Assets/Vehicles/Wheeled/LR3Series/Data/Civvie/lr_3series_body_civvie_LightGreen.emat"
+     }
+    }
+   }
+   RigidBody "{6A12A79CE362471E}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3679.833 65.074 1061.575
+  angles -0.354 -52.272 -0.274
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79CDB0D937C}" {
+       Object "{33D5687713BC5740}Assets/Vehicles/Wheeled/UAZ469/VehParts/Wheels/UAZ469_wheel.xob"
+      }
+      RigidBody "{6A12A79CE1302AE3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79CE738A220}" {
+       PivotID "v_wheel_L01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79CDB0D937C}" {
+       Object "{33D5687713BC5740}Assets/Vehicles/Wheeled/UAZ469/VehParts/Wheels/UAZ469_wheel.xob"
+      }
+      RigidBody "{6A12A79CE1302AE3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79CE738A220}" {
+       PivotID "v_wheel_L02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79CDB0D937C}" {
+       Object "{33D5687713BC5740}Assets/Vehicles/Wheeled/UAZ469/VehParts/Wheels/UAZ469_wheel.xob"
+      }
+      RigidBody "{6A12A79CE1302AE3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79CE738A220}" {
+       PivotID "v_wheel_R02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79CDB0D937C}" {
+       Object "{33D5687713BC5740}Assets/Vehicles/Wheeled/UAZ469/VehParts/Wheels/UAZ469_wheel.xob"
+      }
+      RigidBody "{6A12A79CE1302AE3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79CE738A220}" {
+       PivotID "v_wheel_R01"
+      }
+     }
+     angles 0 180 0
+    }
+   }
+  }
+ }
+ land4 {
+  components {
+   MeshObject "{6A12A79CD4D3A9F2}" {
+    Object "{A584BB3398BAFAFA}Assets/Vehicles/Wheeled/LR3Series/3Series_LWB_Civvie.xob"
+    Materials {
+     MaterialAssignClass "{6A12A79D261732E8}" {
+      SourceMaterial "lr_3series_body"
+      AssignedMaterial "{E172DE6A4F83E9F0}Assets/Vehicles/Wheeled/LR3Series/Data/Civvie/lr_3series_body_civvie_MarineBlue.emat"
+     }
+    }
+   }
+   RigidBody "{6A12A79CE362471E}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3597.709 65.156 987.152
+  angles 0 141.489 0
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79CDB0D937C}" {
+       Object "{33D5687713BC5740}Assets/Vehicles/Wheeled/UAZ469/VehParts/Wheels/UAZ469_wheel.xob"
+      }
+      RigidBody "{6A12A79CE1302AE3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79CE738A220}" {
+       PivotID "v_wheel_L01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79CDB0D937C}" {
+       Object "{33D5687713BC5740}Assets/Vehicles/Wheeled/UAZ469/VehParts/Wheels/UAZ469_wheel.xob"
+      }
+      RigidBody "{6A12A79CE1302AE3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79CE738A220}" {
+       PivotID "v_wheel_L02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79CDB0D937C}" {
+       Object "{33D5687713BC5740}Assets/Vehicles/Wheeled/UAZ469/VehParts/Wheels/UAZ469_wheel.xob"
+      }
+      RigidBody "{6A12A79CE1302AE3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79CE738A220}" {
+       PivotID "v_wheel_R02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79CDB0D937C}" {
+       Object "{33D5687713BC5740}Assets/Vehicles/Wheeled/UAZ469/VehParts/Wheels/UAZ469_wheel.xob"
+      }
+      RigidBody "{6A12A79CE1302AE3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79CE738A220}" {
+       PivotID "v_wheel_R01"
+      }
+     }
+     angles 0 180 0
+    }
+   }
+  }
+ }
+ land5 {
+  components {
+   MeshObject "{6A12A79CD4D3A9F2}" {
+    Object "{A584BB3398BAFAFA}Assets/Vehicles/Wheeled/LR3Series/3Series_LWB_Civvie.xob"
+    Materials {
+     MaterialAssignClass "{6A12A79D1CD118BC}" {
+      SourceMaterial "lr_3series_body"
+      AssignedMaterial "{3FF229F51FB3FD2C}Assets/Vehicles/Wheeled/LR3Series/Data/Civvie/lr_3series_body_civvie_Limestone.emat"
+     }
+    }
+   }
+   RigidBody "{6A12A79CE362471E}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3602.292 65.156 956.399
+  angles 0 170.044 0
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79CDB0D937C}" {
+       Object "{33D5687713BC5740}Assets/Vehicles/Wheeled/UAZ469/VehParts/Wheels/UAZ469_wheel.xob"
+      }
+      RigidBody "{6A12A79CE1302AE3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79CE738A220}" {
+       PivotID "v_wheel_L01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79CDB0D937C}" {
+       Object "{33D5687713BC5740}Assets/Vehicles/Wheeled/UAZ469/VehParts/Wheels/UAZ469_wheel.xob"
+      }
+      RigidBody "{6A12A79CE1302AE3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79CE738A220}" {
+       PivotID "v_wheel_L02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79CDB0D937C}" {
+       Object "{33D5687713BC5740}Assets/Vehicles/Wheeled/UAZ469/VehParts/Wheels/UAZ469_wheel.xob"
+      }
+      RigidBody "{6A12A79CE1302AE3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79CE738A220}" {
+       PivotID "v_wheel_R02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79CDB0D937C}" {
+       Object "{33D5687713BC5740}Assets/Vehicles/Wheeled/UAZ469/VehParts/Wheels/UAZ469_wheel.xob"
+      }
+      RigidBody "{6A12A79CE1302AE3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79CE738A220}" {
+       PivotID "v_wheel_R01"
+      }
+     }
+     angles 0 180 0
+    }
+   }
+  }
+ }
+ land6 {
+  components {
+   MeshObject "{6A12A79CD4D3A9F2}" {
+    Object "{A584BB3398BAFAFA}Assets/Vehicles/Wheeled/LR3Series/3Series_LWB_Civvie.xob"
+    Materials {
+     MaterialAssignClass "{6A12A79D232A4005}" {
+      SourceMaterial "lr_3series_body"
+      AssignedMaterial "{A58D8B376A4151D5}Assets/Vehicles/Wheeled/LR3Series/Data/Civvie/lr_3series_body_civvie_MidGrey.emat"
+     }
+    }
+   }
+   RigidBody "{6A12A79CE362471E}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3640.667 65.063 1026.303
+  angles 0 138.195 0
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79CDB0D937C}" {
+       Object "{33D5687713BC5740}Assets/Vehicles/Wheeled/UAZ469/VehParts/Wheels/UAZ469_wheel.xob"
+      }
+      RigidBody "{6A12A79CE1302AE3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79CE738A220}" {
+       PivotID "v_wheel_L01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79CDB0D937C}" {
+       Object "{33D5687713BC5740}Assets/Vehicles/Wheeled/UAZ469/VehParts/Wheels/UAZ469_wheel.xob"
+      }
+      RigidBody "{6A12A79CE1302AE3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79CE738A220}" {
+       PivotID "v_wheel_L02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79CDB0D937C}" {
+       Object "{33D5687713BC5740}Assets/Vehicles/Wheeled/UAZ469/VehParts/Wheels/UAZ469_wheel.xob"
+      }
+      RigidBody "{6A12A79CE1302AE3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79CE738A220}" {
+       PivotID "v_wheel_R02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79CDB0D937C}" {
+       Object "{33D5687713BC5740}Assets/Vehicles/Wheeled/UAZ469/VehParts/Wheels/UAZ469_wheel.xob"
+      }
+      RigidBody "{6A12A79CE1302AE3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79CE738A220}" {
+       PivotID "v_wheel_R01"
+      }
+     }
+     angles 0 180 0
+    }
+   }
+  }
+ }
+ land7 {
+  components {
+   MeshObject "{6A12A79CD4D3A9F2}" {
+    Object "{A584BB3398BAFAFA}Assets/Vehicles/Wheeled/LR3Series/3Series_LWB_Civvie.xob"
+    Materials {
+     MaterialAssignClass "{6A12A79D2BBC8361}" {
+      SourceMaterial "lr_3series_body"
+      AssignedMaterial "{1D196D6B3825E237}Assets/Vehicles/Wheeled/LR3Series/Data/Civvie/lr_3series_body_civvie_Sand.emat"
+     }
+    }
+   }
+   RigidBody "{6A12A79CE362471E}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3609.254 65.156 997.12
+  angles 0 138.807 0
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79CDB0D937C}" {
+       Object "{33D5687713BC5740}Assets/Vehicles/Wheeled/UAZ469/VehParts/Wheels/UAZ469_wheel.xob"
+      }
+      RigidBody "{6A12A79CE1302AE3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79CE738A220}" {
+       PivotID "v_wheel_L01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79CDB0D937C}" {
+       Object "{33D5687713BC5740}Assets/Vehicles/Wheeled/UAZ469/VehParts/Wheels/UAZ469_wheel.xob"
+      }
+      RigidBody "{6A12A79CE1302AE3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79CE738A220}" {
+       PivotID "v_wheel_L02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79CDB0D937C}" {
+       Object "{33D5687713BC5740}Assets/Vehicles/Wheeled/UAZ469/VehParts/Wheels/UAZ469_wheel.xob"
+      }
+      RigidBody "{6A12A79CE1302AE3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79CE738A220}" {
+       PivotID "v_wheel_R02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79CDB0D937C}" {
+       Object "{33D5687713BC5740}Assets/Vehicles/Wheeled/UAZ469/VehParts/Wheels/UAZ469_wheel.xob"
+      }
+      RigidBody "{6A12A79CE1302AE3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79CE738A220}" {
+       PivotID "v_wheel_R01"
+      }
+     }
+     angles 0 180 0
+    }
+   }
+  }
+ }
+ uazik5 {
+  components {
+   MeshObject "{6A12A79BC326169A}" {
+    Object "{C984590B625B3528}Assets/Vehicles/Wheeled/UAZ452/UAZ452_base.xob"
+    Materials {
+     MaterialAssignClass "{6A12A79C0E176431}" {
+      SourceMaterial "uaz452_body"
+      AssignedMaterial "{0B870E276F4D234B}Assets/Vehicles/Wheeled/UAZ452/Data/uaz452_body_grey.emat"
+     }
+    }
+   }
+   RigidBody "{6A12A79BEEC6505C}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3666.889 65.156 1036.956
+  angles 0 -68.479 0
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79BCFE238BF}" {
+       Object "{EB4435FDB42A042F}Assets/Vehicles/Wheeled/UAZ452/VehParts/Wheels/UAZ_452A_Wheel_01.xob"
+      }
+      RigidBody "{6A12A79BD7CD999A}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79BC9973038}" {
+       PivotID "v_wheel_L01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79BCFE238BF}" {
+       Object "{EB4435FDB42A042F}Assets/Vehicles/Wheeled/UAZ452/VehParts/Wheels/UAZ_452A_Wheel_01.xob"
+      }
+      RigidBody "{6A12A79BD7CD999A}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79BC9973038}" {
+       PivotID "v_wheel_L02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79BCFE238BF}" {
+       Object "{EB4435FDB42A042F}Assets/Vehicles/Wheeled/UAZ452/VehParts/Wheels/UAZ_452A_Wheel_01.xob"
+      }
+      RigidBody "{6A12A79BD7CD999A}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79BC9973038}" {
+       PivotID "v_wheel_R02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79BCFE238BF}" {
+       Object "{EB4435FDB42A042F}Assets/Vehicles/Wheeled/UAZ452/VehParts/Wheels/UAZ_452A_Wheel_01.xob"
+      }
+      RigidBody "{6A12A79BD7CD999A}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79BC9973038}" {
+       PivotID "v_wheel_R01"
+      }
+     }
+     angles 0 180 0
+    }
+   }
+  }
+ }
+ land8 {
+  components {
+   MeshObject "{6A12A79CD4D3A9F2}" {
+    Object "{A584BB3398BAFAFA}Assets/Vehicles/Wheeled/LR3Series/3Series_LWB_Civvie.xob"
+    Materials {
+     MaterialAssignClass "{6A12A79D4633F0B1}" {
+      SourceMaterial "lr_3series_body"
+      AssignedMaterial "{61CE35F0A925DE1E}Assets/Vehicles/Wheeled/LR3Series/Data/Civvie/lr_3series_body_civvie_v8_black.emat"
+     }
+    }
+   }
+   RigidBody "{6A12A79CE362471E}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3598.537 65.156 998.327
+  angles 0 151.567 0
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79CDB0D937C}" {
+       Object "{33D5687713BC5740}Assets/Vehicles/Wheeled/UAZ469/VehParts/Wheels/UAZ469_wheel.xob"
+      }
+      RigidBody "{6A12A79CE1302AE3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79CE738A220}" {
+       PivotID "v_wheel_L01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79CDB0D937C}" {
+       Object "{33D5687713BC5740}Assets/Vehicles/Wheeled/UAZ469/VehParts/Wheels/UAZ469_wheel.xob"
+      }
+      RigidBody "{6A12A79CE1302AE3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79CE738A220}" {
+       PivotID "v_wheel_L02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79CDB0D937C}" {
+       Object "{33D5687713BC5740}Assets/Vehicles/Wheeled/UAZ469/VehParts/Wheels/UAZ469_wheel.xob"
+      }
+      RigidBody "{6A12A79CE1302AE3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79CE738A220}" {
+       PivotID "v_wheel_R02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79CDB0D937C}" {
+       Object "{33D5687713BC5740}Assets/Vehicles/Wheeled/UAZ469/VehParts/Wheels/UAZ469_wheel.xob"
+      }
+      RigidBody "{6A12A79CE1302AE3}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79CE738A220}" {
+       PivotID "v_wheel_R01"
+      }
+     }
+     angles 0 180 0
+    }
+   }
+  }
+ }
+ sarkaa {
+  components {
+   MeshObject "{6A12A79D561CDAD2}" {
+    Object "{A2621F5605582BB6}Assets/Vehicles/Wheeled/S1203/S1203_base.xob"
+   }
+   RigidBody "{6A12A79D5357DEE6}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3653.826 65.156 998.199
+  angles 0 10.46 0
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79D5FE79992}" {
+       Object "{2973F31F59EB6637}Assets/Vehicles/Wheeled/S1203/VehParts/Wheels/S1203_wheel.xob"
+      }
+      RigidBody "{6A12A79D5E6BFE2C}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79D58697B39}" {
+       PivotID "v_wheel_L01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79D5FE79992}" {
+       Object "{2973F31F59EB6637}Assets/Vehicles/Wheeled/S1203/VehParts/Wheels/S1203_wheel.xob"
+      }
+      RigidBody "{6A12A79D5E6BFE2C}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79D58697B39}" {
+       PivotID "v_wheel_L02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79D5FE79992}" {
+       Object "{2973F31F59EB6637}Assets/Vehicles/Wheeled/S1203/VehParts/Wheels/S1203_wheel.xob"
+      }
+      RigidBody "{6A12A79D5E6BFE2C}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79D58697B39}" {
+       PivotID "v_wheel_R01"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79D5FE79992}" {
+       Object "{2973F31F59EB6637}Assets/Vehicles/Wheeled/S1203/VehParts/Wheels/S1203_wheel.xob"
+      }
+      RigidBody "{6A12A79D5E6BFE2C}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79D58697B39}" {
+       PivotID "v_wheel_R02"
+      }
+     }
+     angles 0 180 0
+    }
+   }
+  }
+ }
+ sarkaa2 {
+  components {
+   MeshObject "{6A12A79D561CDAD2}" {
+    Object "{A2621F5605582BB6}Assets/Vehicles/Wheeled/S1203/S1203_base.xob"
+    Materials {
+     MaterialAssignClass "{6A12A79D79C04A9F}" {
+      SourceMaterial "S1203_body"
+      AssignedMaterial "{E8BC432D06D2BC25}Assets/Vehicles/Wheeled/S1203/Data/S1203_body_beige.emat"
+     }
+    }
+   }
+   RigidBody "{6A12A79D5357DEE6}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3649.555 65.156 996.165
+  angles 0 10.46 0
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79D5FE79992}" {
+       Object "{2973F31F59EB6637}Assets/Vehicles/Wheeled/S1203/VehParts/Wheels/S1203_wheel.xob"
+      }
+      RigidBody "{6A12A79D5E6BFE2C}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79D58697B39}" {
+       PivotID "v_wheel_L02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79D5FE79992}" {
+       Object "{2973F31F59EB6637}Assets/Vehicles/Wheeled/S1203/VehParts/Wheels/S1203_wheel.xob"
+      }
+      RigidBody "{6A12A79D5E6BFE2C}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79D58697B39}" {
+       PivotID "v_wheel_R01"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79D5FE79992}" {
+       Object "{2973F31F59EB6637}Assets/Vehicles/Wheeled/S1203/VehParts/Wheels/S1203_wheel.xob"
+      }
+      RigidBody "{6A12A79D5E6BFE2C}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79D58697B39}" {
+       PivotID "v_wheel_R02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79D5FE79992}" {
+       Object "{2973F31F59EB6637}Assets/Vehicles/Wheeled/S1203/VehParts/Wheels/S1203_wheel.xob"
+      }
+      RigidBody "{6A12A79D5E6BFE2C}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79D58697B39}" {
+       PivotID "v_wheel_L01"
+      }
+     }
+    }
+   }
+  }
+ }
+ sarkaa3 {
+  components {
+   MeshObject "{6A12A79D561CDAD2}" {
+    Object "{A2621F5605582BB6}Assets/Vehicles/Wheeled/S1203/S1203_base.xob"
+    Materials {
+     MaterialAssignClass "{6A12A79D8D2D55B0}" {
+      SourceMaterial "S1203_body"
+      AssignedMaterial "{269BE810858CFE4F}Assets/Vehicles/Wheeled/S1203/Data/S1203_body_blue.emat"
+     }
+    }
+   }
+   RigidBody "{6A12A79D5357DEE6}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3645.671 65.156 993.797
+  angles 0 10.46 0
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79D5FE79992}" {
+       Object "{2973F31F59EB6637}Assets/Vehicles/Wheeled/S1203/VehParts/Wheels/S1203_wheel.xob"
+      }
+      RigidBody "{6A12A79D5E6BFE2C}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79D58697B39}" {
+       PivotID "v_wheel_L02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79D5FE79992}" {
+       Object "{2973F31F59EB6637}Assets/Vehicles/Wheeled/S1203/VehParts/Wheels/S1203_wheel.xob"
+      }
+      RigidBody "{6A12A79D5E6BFE2C}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79D58697B39}" {
+       PivotID "v_wheel_R01"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79D5FE79992}" {
+       Object "{2973F31F59EB6637}Assets/Vehicles/Wheeled/S1203/VehParts/Wheels/S1203_wheel.xob"
+      }
+      RigidBody "{6A12A79D5E6BFE2C}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79D58697B39}" {
+       PivotID "v_wheel_R02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79D5FE79992}" {
+       Object "{2973F31F59EB6637}Assets/Vehicles/Wheeled/S1203/VehParts/Wheels/S1203_wheel.xob"
+      }
+      RigidBody "{6A12A79D5E6BFE2C}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79D58697B39}" {
+       PivotID "v_wheel_L01"
+      }
+     }
+    }
+   }
+  }
+ }
+ sarkaa4 {
+  components {
+   MeshObject "{6A12A79D561CDAD2}" {
+    Object "{A2621F5605582BB6}Assets/Vehicles/Wheeled/S1203/S1203_base.xob"
+    Materials {
+     MaterialAssignClass "{6A12A79D93F92496}" {
+      SourceMaterial "S1203_body"
+      AssignedMaterial "{D954BEA4C96AC508}Assets/Vehicles/Wheeled/S1203/Data/S1203_body_yellow.emat"
+     }
+    }
+   }
+   RigidBody "{6A12A79D5357DEE6}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3700.459 65.156 1037.049
+  angles 0 -133.593 0
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79D5FE79992}" {
+       Object "{2973F31F59EB6637}Assets/Vehicles/Wheeled/S1203/VehParts/Wheels/S1203_wheel.xob"
+      }
+      RigidBody "{6A12A79D5E6BFE2C}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79D58697B39}" {
+       PivotID "v_wheel_L02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79D5FE79992}" {
+       Object "{2973F31F59EB6637}Assets/Vehicles/Wheeled/S1203/VehParts/Wheels/S1203_wheel.xob"
+      }
+      RigidBody "{6A12A79D5E6BFE2C}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79D58697B39}" {
+       PivotID "v_wheel_R01"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79D5FE79992}" {
+       Object "{2973F31F59EB6637}Assets/Vehicles/Wheeled/S1203/VehParts/Wheels/S1203_wheel.xob"
+      }
+      RigidBody "{6A12A79D5E6BFE2C}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79D58697B39}" {
+       PivotID "v_wheel_R02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79D5FE79992}" {
+       Object "{2973F31F59EB6637}Assets/Vehicles/Wheeled/S1203/VehParts/Wheels/S1203_wheel.xob"
+      }
+      RigidBody "{6A12A79D5E6BFE2C}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79D58697B39}" {
+       PivotID "v_wheel_L01"
+      }
+     }
+    }
+   }
+  }
+ }
+ sarkaa5 {
+  components {
+   MeshObject "{6A12A79D561CDAD2}" {
+    Object "{A2621F5605582BB6}Assets/Vehicles/Wheeled/S1203/S1203_base.xob"
+    Materials {
+     MaterialAssignClass "{6A12A79D990C62E2}" {
+      SourceMaterial "S1203_body"
+      AssignedMaterial "{45598D558C15A300}Assets/Vehicles/Wheeled/S1203/Data/S1203_body_white.emat"
+     }
+    }
+   }
+   RigidBody "{6A12A79D5357DEE6}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3643.175 65.134 1028.678
+  angles 0.299 137.967 0.333
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79D5FE79992}" {
+       Object "{2973F31F59EB6637}Assets/Vehicles/Wheeled/S1203/VehParts/Wheels/S1203_wheel.xob"
+      }
+      RigidBody "{6A12A79D5E6BFE2C}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79D58697B39}" {
+       PivotID "v_wheel_L02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79D5FE79992}" {
+       Object "{2973F31F59EB6637}Assets/Vehicles/Wheeled/S1203/VehParts/Wheels/S1203_wheel.xob"
+      }
+      RigidBody "{6A12A79D5E6BFE2C}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79D58697B39}" {
+       PivotID "v_wheel_R01"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79D5FE79992}" {
+       Object "{2973F31F59EB6637}Assets/Vehicles/Wheeled/S1203/VehParts/Wheels/S1203_wheel.xob"
+      }
+      RigidBody "{6A12A79D5E6BFE2C}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79D58697B39}" {
+       PivotID "v_wheel_R02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79D5FE79992}" {
+       Object "{2973F31F59EB6637}Assets/Vehicles/Wheeled/S1203/VehParts/Wheels/S1203_wheel.xob"
+      }
+      RigidBody "{6A12A79D5E6BFE2C}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79D58697B39}" {
+       PivotID "v_wheel_L01"
+      }
+     }
+    }
+   }
+  }
+ }
+ sarkaa6 {
+  components {
+   MeshObject "{6A12A79D561CDAD2}" {
+    Object "{A2621F5605582BB6}Assets/Vehicles/Wheeled/S1203/S1203_base.xob"
+   }
+   RigidBody "{6A12A79D5357DEE6}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3674.442 65.156 1057.351
+  angles 0 -42.033 0
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79D5FE79992}" {
+       Object "{2973F31F59EB6637}Assets/Vehicles/Wheeled/S1203/VehParts/Wheels/S1203_wheel.xob"
+      }
+      RigidBody "{6A12A79D5E6BFE2C}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79D58697B39}" {
+       PivotID "v_wheel_L02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79D5FE79992}" {
+       Object "{2973F31F59EB6637}Assets/Vehicles/Wheeled/S1203/VehParts/Wheels/S1203_wheel.xob"
+      }
+      RigidBody "{6A12A79D5E6BFE2C}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79D58697B39}" {
+       PivotID "v_wheel_R01"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79D5FE79992}" {
+       Object "{2973F31F59EB6637}Assets/Vehicles/Wheeled/S1203/VehParts/Wheels/S1203_wheel.xob"
+      }
+      RigidBody "{6A12A79D5E6BFE2C}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79D58697B39}" {
+       PivotID "v_wheel_R02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79D5FE79992}" {
+       Object "{2973F31F59EB6637}Assets/Vehicles/Wheeled/S1203/VehParts/Wheels/S1203_wheel.xob"
+      }
+      RigidBody "{6A12A79D5E6BFE2C}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79D58697B39}" {
+       PivotID "v_wheel_L01"
+      }
+     }
+    }
+   }
+  }
+ }
+ sarkaa7 {
+  components {
+   MeshObject "{6A12A79D561CDAD2}" {
+    Object "{A2621F5605582BB6}Assets/Vehicles/Wheeled/S1203/S1203_base.xob"
+   }
+   RigidBody "{6A12A79D5357DEE6}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3678.344 65.156 1108.089
+  angles 0 -45.065 0
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79D5FE79992}" {
+       Object "{2973F31F59EB6637}Assets/Vehicles/Wheeled/S1203/VehParts/Wheels/S1203_wheel.xob"
+      }
+      RigidBody "{6A12A79D5E6BFE2C}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79D58697B39}" {
+       PivotID "v_wheel_L02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79D5FE79992}" {
+       Object "{2973F31F59EB6637}Assets/Vehicles/Wheeled/S1203/VehParts/Wheels/S1203_wheel.xob"
+      }
+      RigidBody "{6A12A79D5E6BFE2C}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79D58697B39}" {
+       PivotID "v_wheel_R01"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79D5FE79992}" {
+       Object "{2973F31F59EB6637}Assets/Vehicles/Wheeled/S1203/VehParts/Wheels/S1203_wheel.xob"
+      }
+      RigidBody "{6A12A79D5E6BFE2C}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79D58697B39}" {
+       PivotID "v_wheel_R02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79D5FE79992}" {
+       Object "{2973F31F59EB6637}Assets/Vehicles/Wheeled/S1203/VehParts/Wheels/S1203_wheel.xob"
+      }
+      RigidBody "{6A12A79D5E6BFE2C}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79D58697B39}" {
+       PivotID "v_wheel_L01"
+      }
+     }
+    }
+   }
+  }
+ }
+ ural {
+  components {
+   MeshObject "{6A12A79DB31AEA48}" {
+    Object "{06C865EC0B9277E5}Assets/Vehicles/Wheeled/Ural4320/Ural_4320_base.xob"
+    Materials {
+     MaterialAssignClass "{6A12A79DFEA794A3}" {
+      SourceMaterial "Ural_Body"
+      AssignedMaterial "{0BE45D85009BE504}Assets/Vehicles/Wheeled/Ural4320/Data/Ural_4320_Body_CIV_FUEL_Pohona.emat"
+     }
+    }
+   }
+   RigidBody "{6A12A79E99695EEE}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3613.793 65.156 1002.18
+  angles 0 139.692 0
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_L01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_R01"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_L02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_R02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_L03"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_R03"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79DEDF90F2D}" {
+       Object "{BBA1B25A5AEC386B}Assets/Vehicles/Wheeled/Ural4320/Ural_4320_fuel_tank.xob"
+       Materials {
+        MaterialAssignClass "{6A12A79DFA4F0E1F}" {
+         SourceMaterial "Ural_4320_Cistern"
+         AssignedMaterial "{B6B859EA03894FE0}Assets/Vehicles/Wheeled/Ural4320/Data/Ural_4320_Cistern_CIV_FUEL_Orange.emat"
+        }
+       }
+      }
+      RigidBody "{6A12A79DEBABDBC8}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79DEF7F86C6}" {
+       PivotID "v_root"
+      }
+     }
+    }
+   }
+  }
+ }
+ ural2 {
+  components {
+   MeshObject "{6A12A79DB31AEA48}" {
+    Object "{06C865EC0B9277E5}Assets/Vehicles/Wheeled/Ural4320/Ural_4320_base.xob"
+    Materials {
+     MaterialAssignClass "{6A12A79DFEA794A3}" {
+      SourceMaterial "Ural_Body"
+      AssignedMaterial "{0BE45D85009BE504}Assets/Vehicles/Wheeled/Ural4320/Data/Ural_4320_Body_CIV_FUEL_Pohona.emat"
+     }
+    }
+   }
+   RigidBody "{6A12A79EAFF5D07E}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3619.875 65.156 1026.722
+  angles 0 21.959 0
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_L01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_L02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_R02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_L03"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_R03"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_R01"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79DEDF90F2D}" {
+       Object "{BBA1B25A5AEC386B}Assets/Vehicles/Wheeled/Ural4320/Ural_4320_fuel_tank.xob"
+       Materials {
+        MaterialAssignClass "{6A12A79DFA4F0E1F}" {
+         SourceMaterial "Ural_4320_Cistern"
+         AssignedMaterial "{B6B859EA03894FE0}Assets/Vehicles/Wheeled/Ural4320/Data/Ural_4320_Cistern_CIV_FUEL_Orange.emat"
+        }
+       }
+      }
+      RigidBody "{6A12A79DEBABDBC8}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79DEF7F86C6}" {
+       PivotID "v_root"
+      }
+     }
+    }
+   }
+  }
+ }
+ ural7 {
+  components {
+   MeshObject "{6A12A79DB31AEA48}" {
+    Object "{06C865EC0B9277E5}Assets/Vehicles/Wheeled/Ural4320/Ural_4320_base.xob"
+    Materials {
+     MaterialAssignClass "{6A12A79E4BAA5095}" {
+      SourceMaterial "Ural_Body"
+      AssignedMaterial "{05922B5C28D0D2E6}Assets/Vehicles/Wheeled/Ural4320/Data/Ural_4320_Body_CIV_Blue.emat"
+     }
+    }
+   }
+   RigidBody "{6A12A79E5275E34A}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3661.318 65.156 1035.551
+  angles 0 91.74 0
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_L01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_L02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_R02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_L03"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_R03"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_R01"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79E188ADC49}" {
+       Object "{909ED62EDD5B9EBC}Assets/Vehicles/Wheeled/Ural4320/Ural_4320_canvas_closed.xob"
+      }
+      RigidBody "{6A12A79E24408FC6}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79E1AD8B1A6}" {
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79E2CAE12C3}" {
+       Object "{25E0A2F2CC535076}Assets/Vehicles/Wheeled/Ural4320/Ural_4320_cargo.xob"
+      }
+      RigidBody "{6A12A79E285F33D2}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79E29F712F7}" {
+       PivotID "v_root"
+      }
+     }
+    }
+   }
+  }
+ }
+ ural8 {
+  components {
+   MeshObject "{6A12A79DB31AEA48}" {
+    Object "{06C865EC0B9277E5}Assets/Vehicles/Wheeled/Ural4320/Ural_4320_base.xob"
+    Materials {
+     MaterialAssignClass "{6A12A79E3D2155BE}" {
+      SourceMaterial "Ural_Body"
+      AssignedMaterial "{B11D4B87B455F98C}Assets/Vehicles/Wheeled/Ural4320/Data/Ural_4320_Body_CIV_FUEL_Orange.emat"
+     }
+    }
+   }
+   RigidBody "{6A12B7C1D1A68BAE}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3662.243 65.156 1012.123
+  angles 0 -3.379 0
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_L01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_L02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_R02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_L03"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_R03"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_R01"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79E188ADC49}" {
+       Object "{909ED62EDD5B9EBC}Assets/Vehicles/Wheeled/Ural4320/Ural_4320_canvas_closed.xob"
+      }
+      RigidBody "{6A12A79E24408FC6}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79E1AD8B1A6}" {
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79E2CAE12C3}" {
+       Object "{25E0A2F2CC535076}Assets/Vehicles/Wheeled/Ural4320/Ural_4320_cargo.xob"
+      }
+      RigidBody "{6A12A79E285F33D2}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79E29F712F7}" {
+       PivotID "v_root"
+      }
+     }
+    }
+   }
+  }
+ }
+ ural9 {
+  components {
+   MeshObject "{6A12A79DB31AEA48}" {
+    Object "{06C865EC0B9277E5}Assets/Vehicles/Wheeled/Ural4320/Ural_4320_base.xob"
+    Materials {
+     MaterialAssignClass "{6A12A79E442B8902}" {
+      SourceMaterial "Ural_Body"
+      AssignedMaterial "{48FF237EDB0953AD}Assets/Vehicles/Wheeled/Ural4320/Data/Ural_4320_Body_CIV_JZD.emat"
+     }
+    }
+   }
+   RigidBody "{6A12B7C1D5E89036}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3649.814 65.156 1033.729
+  angles 0.771 120.468 0.454
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_L01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_L02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_R02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_L03"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_R03"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_R01"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79E188ADC49}" {
+       Object "{909ED62EDD5B9EBC}Assets/Vehicles/Wheeled/Ural4320/Ural_4320_canvas_closed.xob"
+      }
+      RigidBody "{6A12A79E24408FC6}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79E1AD8B1A6}" {
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79E2CAE12C3}" {
+       Object "{25E0A2F2CC535076}Assets/Vehicles/Wheeled/Ural4320/Ural_4320_cargo.xob"
+      }
+      RigidBody "{6A12A79E285F33D2}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79E29F712F7}" {
+       PivotID "v_root"
+      }
+     }
+    }
+   }
+  }
+ }
+ ural10 {
+  components {
+   MeshObject "{6A12A79DB31AEA48}" {
+    Object "{06C865EC0B9277E5}Assets/Vehicles/Wheeled/Ural4320/Ural_4320_base.xob"
+    Materials {
+     MaterialAssignClass "{6A12A79E3D2155BE}" {
+      SourceMaterial "Ural_Body"
+      AssignedMaterial "{B11D4B87B455F98C}Assets/Vehicles/Wheeled/Ural4320/Data/Ural_4320_Body_CIV_FUEL_Orange.emat"
+     }
+    }
+   }
+   RigidBody "{6A12A79E9A9C5AE3}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3606.626 65.156 1010.635
+  angles 0 137.162 0
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_L01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_L02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_R02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_L03"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_R03"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_R01"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79E188ADC49}" {
+       Object "{909ED62EDD5B9EBC}Assets/Vehicles/Wheeled/Ural4320/Ural_4320_canvas_closed.xob"
+      }
+      RigidBody "{6A12A79E24408FC6}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79E1AD8B1A6}" {
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79E2CAE12C3}" {
+       Object "{25E0A2F2CC535076}Assets/Vehicles/Wheeled/Ural4320/Ural_4320_cargo.xob"
+      }
+      RigidBody "{6A12A79E285F33D2}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79E29F712F7}" {
+       PivotID "v_root"
+      }
+     }
+    }
+   }
+  }
+ }
+ ural11 {
+  components {
+   MeshObject "{6A12A79DB31AEA48}" {
+    Object "{06C865EC0B9277E5}Assets/Vehicles/Wheeled/Ural4320/Ural_4320_base.xob"
+    Materials {
+     MaterialAssignClass "{6A12A79E8E0C3B11}" {
+      SourceMaterial "Ural_Body"
+      AssignedMaterial "{48FF237EDB0953AD}Assets/Vehicles/Wheeled/Ural4320/Data/Ural_4320_Body_CIV_JZD.emat"
+     }
+    }
+   }
+   RigidBody "{6A12A79EA40CF46C}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3629.08 65.156 1088.357
+  angles 0 -134.442 0
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_L01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_L02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_R02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_L03"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_R03"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_R01"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79E188ADC49}" {
+       Object "{909ED62EDD5B9EBC}Assets/Vehicles/Wheeled/Ural4320/Ural_4320_canvas_closed.xob"
+      }
+      RigidBody "{6A12A79E24408FC6}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79E1AD8B1A6}" {
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79E2CAE12C3}" {
+       Object "{25E0A2F2CC535076}Assets/Vehicles/Wheeled/Ural4320/Ural_4320_cargo.xob"
+      }
+      RigidBody "{6A12A79E285F33D2}" {
+       Static 1
+      }
+      Hierarchy "{6A12A79E29F712F7}" {
+       PivotID "v_root"
+      }
+     }
+    }
+   }
+  }
+ }
+ ural12 {
+  components {
+   MeshObject "{6A12A79DB31AEA48}" {
+    Object "{06C865EC0B9277E5}Assets/Vehicles/Wheeled/Ural4320/Ural_4320_base.xob"
+    Materials {
+     MaterialAssignClass "{6A12A79E945DFFC8}" {
+      SourceMaterial "Ural_Body"
+      AssignedMaterial "{05922B5C28D0D2E6}Assets/Vehicles/Wheeled/Ural4320/Data/Ural_4320_Body_CIV_Blue.emat"
+     }
+    }
+   }
+   RigidBody "{6A12A79EA104072A}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3687.977 65.17 999.101
+  angles -0.491 -56.767 0.749
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_L01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_L02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_R02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_L03"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_R03"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_R01"
+      }
+     }
+     angles 0 180 0
+    }
+   }
+  }
+ }
+ ural13 {
+  components {
+   MeshObject "{6A12A79DB31AEA48}" {
+    Object "{06C865EC0B9277E5}Assets/Vehicles/Wheeled/Ural4320/Ural_4320_base.xob"
+   }
+   RigidBody "{6A12A79EA20A2F4E}" {
+    LayerPreset "PropFireView"
+    ModelGeometry 1
+    Static 1
+   }
+  }
+  coords 3693.652 65.145 1074.547
+  angles 0.25 145.985 0.371
+  {
+   $grp GenericEntity {
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_L01"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_L02"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_R02"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_L03"
+      }
+     }
+    }
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_R03"
+      }
+     }
+     angles 0 180 0
+    }
+    {
+     components {
+      MeshObject "{6A12A79DBB2549F9}" {
+       Object "{A1F7E8C56EB79D42}Assets/Vehicles/Wheeled/Ural4320/VehParts/Wheels/Ural_4320_wheel_left_01.xob"
+      }
+      RigidBody "{6A12A79DC6A3E2A1}" {
+      }
+      Hierarchy "{6A12A79DC54B00E9}" {
+       PivotID "v_wheel_R01"
+      }
+     }
+     angles 0 180 0
+    }
+   }
+  }
+ }
+}
+$grp GenericEntity : "{6D518F289805B8A1}Prefabs/Weapons/Magazines/NSV/Box_127x108_KORD_50rnd_4AP_1APIT.et" {
+ {
+  coords 7247.89 54.156 6303.539
+ }
+ {
+  coords 7247.728 54.156 6303.892
+ }
+ {
+  coords 7236.248 54.156 6308.621
+  angles 0 90 0
+ }
+ {
+  coords 7235.895 54.156 6308.459
+  angles 0 90 0
+ }
+}
+PolylineShapeEntity : "{7019844BAD5C4DD8}Prefabs/PolyZone/PolyZone_Border.et" {
+ components {
+  PS_PolyZone "{60E90266F25533F6}" {
+   m_mPolygonTexture ""
+   m_cPolygonColor 1 1 1 0
+   m_mPolygonTextureBorder ""
+   m_cPolygonBorderColor 1 1 1 0
+   m_aVisibleForFactions {
+    ""
+   }
+  }
+ }
+ coords 7003.762 49.906 6261.482
+ Points {
+  ShapePoint "{60E90266E922A02A}" {
+   Position -5.551 -1.569 -0.027
+  }
+  ShapePoint "{6A1308943880DE07}" {
+   Position 43.316 -0.805 0.21
+  }
+  ShapePoint "{6A13089448BA0B96}" {
+   Position 54.711 0.038 -1.642
+  }
+  ShapePoint "{6A1308944BCA4927}" {
+   Position 80.248 1.649 29.808
+  }
+  ShapePoint "{6A130894559759A6}" {
+   Position 110.87 2.876 61.333
+  }
+  ShapePoint "{6A13089454A0772D}" {
+   Position 122.142 3.732 60.021
+  }
+  ShapePoint "{6A1308945D1D4C25}" {
+   Position 127.957 3.94 54.155
+  }
+  ShapePoint "{6A1308945CCF852E}" {
+   Position 145.735 3.84 73.042
+  }
+  ShapePoint "{6A1308945F887459}" {
+   Position 161.7 3.567 86.748
+  }
+  ShapePoint "{6A1308945FC6EDB8}" {
+   Position 170.291 2.926 91.732
+  }
+  ShapePoint "{6A1308945F5F5C20}" {
+   Position 177.594 3.085 93.036
+  }
+  ShapePoint "{6A1308945EEBE055}" {
+   Position 185.176 2.746 93.373
+  }
+  ShapePoint "{6A13089459D2C45B}" {
+   Position 258.683 2.094 105.644
+  }
+  ShapePoint "{6A13089458CC23DE}" {
+   Position 283.288 2.395 120.834
+  }
+  ShapePoint "{6A1308945B89F85E}" {
+   Position 295.572 2.375 127.123
+  }
+  ShapePoint "{6A1308945BC9FC7C}" {
+   Position 302.652 2.374 128.568
+  }
+  ShapePoint "{6A1308945A90379D}" {
+   Position 329.289 2.214 133.364
+  }
+  ShapePoint "{6A1308945A284631}" {
+   Position 339.468 2.246 134.775
+  }
+  ShapePoint "{6A1308945A4561EC}" {
+   Position 349.483 2.336 134.024
+  }
+  ShapePoint "{6A130894653C4322}" {
+   Position 377.865 2.613 137.875
+  }
+  ShapePoint "{6A130894657D71D1}" {
+   Position 390.889 2.523 144.834
+  }
+  ShapePoint "{6A130894642AFB31}" {
+   Position 406.233 2.655 146.904
+  }
+  ShapePoint "{6A13089464424766}" {
+   Position 421.441 2.675 146.234
+  }
+  ShapePoint "{6A1308946782A5D2}" {
+   Position 428.261 3.112 142.675
+  }
+  ShapePoint "{6A1308946CA081C1}" {
+   Position 431.695 3.278 140.001
+  }
+  ShapePoint "{6A1308946C696A8B}" {
+   Position 439.856 3.655 137.757
+  }
+  ShapePoint "{6A1308946FA808F7}" {
+   Position 448.185 4.014 134.842
+  }
+  ShapePoint "{6A1308946F09DE18}" {
+   Position 452.896 4.573 129.174
+  }
+  ShapePoint "{6A1308946EE7CAA8}" {
+   Position 469.985 5.648 118.366
+  }
+  ShapePoint "{6A1308946E51361C}" {
+   Position 494.092 6.389 102.552
+  }
+  ShapePoint "{6A13089469F257E3}" {
+   Position 501.979 6.483 96.35
+  }
+  ShapePoint "{6A130894691BE9C9}" {
+   Position 514.064 6.434 89.429
+  }
+  ShapePoint "{6A130894683CBDFE}" {
+   Position 531.046 6.192 92.507
+  }
+  ShapePoint "{6A1308946AEF5A11}" {
+   Position 549.027 5.28 97.88
+  }
+  ShapePoint "{6A1308946A46D68E}" {
+   Position 575.793 2.965 91.084
+  }
+  ShapePoint "{6A130894753DAD9B}" {
+   Position 608.119 2.797 84.16
+  }
+  ShapePoint "{6A13089474F0DE9F}" {
+   Position 620.505 5.202 41.931
+  }
+  ShapePoint "{6A130894735A0823}" {
+   Position 528.437 6.967 19.109
+  }
+  ShapePoint "{6A1308947D88F312}" {
+   Position 419.389 6.352 -4.732
+  }
+  ShapePoint "{6A1308947D7F1E29}" {
+   Position 404.002 4.707 -9.796
+  }
+  ShapePoint "{6A1308947C932D7A}" {
+   Position 370.043 5.55 -14.544
+  }
+  ShapePoint "{6A1308947C7A3CE3}" {
+   Position 323.111 2.601 -29.762
+  }
+  ShapePoint "{6A1308947FDFF723}" {
+   Position 274.112 3.244 -40.52
+  }
+  ShapePoint "{6A1308947E85AE7A}" {
+   Position 255.652 3.277 -53.989
+  }
+  ShapePoint "{6A1308947EC20B54}" {
+   Position 238.415 2.974 -64.792
+  }
+  ShapePoint "{6A13089479A7810A}" {
+   Position 223.007 1.23 -76.391
+  }
+  ShapePoint "{6A13089479C376BB}" {
+   Position 186.551 3.282 -79.679
+  }
+  ShapePoint "{6A130894794E85BE}" {
+   Position 159.323 1.549 -75.009
+  }
+  ShapePoint "{6A130894783D93CB}" {
+   Position 114.062 0.782 -81.199
+  }
+  ShapePoint "{6A1308947843D473}" {
+   Position 92.256 0.019 -92.814
+  }
+  ShapePoint "{6A1308947B3E60F9}" {
+   Position 78.185 -1.304 -97.852
+  }
+  ShapePoint "{6A1308947AC0A119}" {
+   Position 4.285 -0.36 -97.618
+  }
+  ShapePoint "{6A13089487118446}" {
+   Position -4.405 0.25 -94.021
+  }
+ }
+ {
+  PS_PolyZoneTrigger {
+   ID "60FD050E1E83544C"
+   m_sGroupKey "KEK_"
+  }
+ }
+}
+$grp Turret : "{72E37D5D152864A1}Prefabs/Weapons/Tripods/6T7/Deployable_Tripod_6T7_KORD.et" {
+ {
+  coords 7246.771 54.156 6303.602
+  angles 0 -15 0
+ }
+ {
+  coords 7235.958 54.156 6309.577
+  angles 0 75 0
+ }
+}
