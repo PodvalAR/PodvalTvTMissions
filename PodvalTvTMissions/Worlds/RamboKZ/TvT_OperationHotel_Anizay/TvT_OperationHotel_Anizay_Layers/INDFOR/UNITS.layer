@@ -1,0 +1,125 @@
+SCR_AIGroup TKR_000 : "{0217FB6BBEC0F7E1}Prefabs/Groups/INDFOR/TKR/Group_Ses_TKR_PL_1.et" {
+ coords 1669.147 141.631 3825.64
+ angles 0 -177.822 0
+ m_aUnitPrefabSlots {
+  "{767AB5AA5496D70D}Worlds/RamboKZ/Development/TvT_Hotel_Anizay/Prefabs/Hasan.et"
+ }
+ m_bSnapToTerrain 0
+ m_sCustomNameSet "#PDVL_Squad_PL"
+}
+SCR_AIGroup TKR_200 : "{2CBFFCF743B1C229}Prefabs/Groups/INDFOR/TKR/Group_Ses_TKR_Recon7.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
+   m_iCompanyCallsign 2
+  }
+ }
+ coords 1719.557 139.821 3788.548
+ angles 0 -88.478 0
+ m_sCustomNameSet "#PDVL_Squad_Recon"
+}
+SCR_AIGroup TKR_100 : "{37618FC5134599CE}Prefabs/Groups/INDFOR/TKR/Group_Ses_TKR_Motor.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
+   m_iCompanyCallsign 1
+  }
+ }
+ coords 1721.438 140.723 3823.396
+ angles 0 -86.217 0
+ m_sCustomNameSet "#PDVL_Squad_Motorized"
+}
+SCR_AIGroup TKR_201 : "{3D1CD4754C0AF059}Prefabs/Groups/INDFOR/TKR/Group_Ses_TKR_Recon.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
+   m_iCompanyCallsign 2
+   m_iSquadCallsign 1
+  }
+ }
+ coords 1718.957 139.396 3767.375
+ angles 0 -90.335 0
+ m_aUnitPrefabSlots {
+  "{88886FC274202013}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_SL_Random.et"
+  "{C00096717E140FE4}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_GL_Random.et"
+  "{C472228F83886D43}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Sapper_Random.et"
+  "{73C9E814A210268E}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Marksman_Random.et"
+ }
+ m_sCustomNameSet "#PDVL_Squad_Recon (ПТУР)"
+}
+$grp SCR_AIGroup : "{A33B404F66AC1ED8}Prefabs/Groups/INDFOR/TKR/Group_Ses_TKR_Rifle.et" {
+ TKR_010 {
+  components {
+   PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 1654.181 141.038 3811.352
+  angles 0 93.533 0
+ }
+ TKR_011 {
+  components {
+   PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 1669.561 140.875 3789.521
+  angles 0 0.765 0
+  m_aUnitPrefabSlots {
+   "{88886FC274202013}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_SL_Random.et"
+   "{C00096717E140FE4}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_GL_Random.et"
+   "{6E9511C7C88E1E10}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_AT_Random.et"
+   "{AAA88BB9DF1D6B4D}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_AAT_Random.et"
+   "{61A809AD2C9D9820}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_MG_Random.et"
+   "{A59593D33B0EED7D}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_AMG_Random.et"
+   "{C472228F83886D43}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Sapper_Random.et"
+   "{8E68A198939D2E8D}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Rifleman_Random.et"
+   "{AA86E2D22A717D0C}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Sniper_Random.et"
+  }
+ }
+ TKR_012 {
+  components {
+   PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 1688.212 140.875 3812.881
+  angles 0 -88.403 0
+ }
+}
+$grp SCR_AIGroup : "{F29F1ED486C470C2}Prefabs/Groups/INDFOR/TKR/Group_Ses_TKR_Motor2.et" {
+ TKR_111 {
+  components {
+   PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 1727.154 140.798 3870.944
+  angles 0 -80 0
+  m_sCustomNameSet "#PDVL_Squad_Mechanized"
+ }
+ TKR_110 {
+  components {
+   PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 1725.699 140.996 3862.247
+  angles 0 -80 0
+  m_sCustomNameSet "#PDVL_Squad_Mechanized"
+ }
+ TKR_112 {
+  components {
+   PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 1723.169 140.942 3842.292
+  angles 0 -80 0
+  m_sCustomNameSet "#PDVL_Squad_Mechanized (ZU-23)"
+ }
+}
