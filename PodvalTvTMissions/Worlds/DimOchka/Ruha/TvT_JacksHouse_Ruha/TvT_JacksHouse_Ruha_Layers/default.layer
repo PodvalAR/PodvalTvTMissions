@@ -1,0 +1,39 @@
+SCR_AIWorld : "{65DEC16960498027}Prefabs/AI/SCR_AIWorld_Ruha.et" {
+ coords 221.582 72.419 7995.907
+}
+PerceptionManager PerceptionManager2 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 176.659 74.072 8062.87
+}
+PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
+ components {
+  SCR_TimeAndWeatherHandlerComponent "{5EE3229927D4D2F5}" {
+   m_bUsePredefineStartingTimeAndWeather 1
+   m_aStartingWeatherAndTime {
+    SCR_TimeAndWeatherState "{6A2CCA0CC5BE7100}" {
+     m_sWeatherPresetName "Cloudy"
+     m_iStartingHour 18
+     m_iStartingMinutes 15
+    }
+   }
+  }
+ }
+ coords 118.79 80.491 8083.633
+ m_iFreezeTime 360000
+}
+GenericEntity : "{14C6F846207A0DC8}Prefabs/Props/Civilian/Notebook_01/Notebook_01_open_Huey.et" {
+ coords 1764.865 59.88 5892.174
+ angles 0 90 0
+}
+Vehicle MH_6J1 : "{8797559E53DA0E7B}Prefabs/Vehicles/Helicopters/MH-6J/MH-6J.et" {
+ coords 1651.799 62.979 768.428
+ angles 0.232 14.998 -0.865
+ m_sAttachmentGroupName "pilot"
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 445.343 76.667 7648.775
+}
