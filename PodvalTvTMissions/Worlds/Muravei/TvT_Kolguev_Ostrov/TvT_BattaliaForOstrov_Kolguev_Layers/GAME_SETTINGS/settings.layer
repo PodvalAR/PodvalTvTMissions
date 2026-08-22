@@ -1,0 +1,99 @@
+SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
+ coords 13191.335 206.752 1192.942
+}
+PerceptionManager PerceptionManager2 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 13191.472 206.602 1189.86
+}
+SCR_BaseGameMode GameMode_Base1 : "{0F307326459A1395}Prefabs/MP/Modes/GameMode_Base.et" {
+ coords 13271.117 45.514 1198.304
+}
+PolylineShapeEntity : "{7019844BAD5C4DD8}Prefabs/PolyZone/PolyZone_Border.et" {
+ components {
+  PS_PolyZone "{60E90266F25533F6}" {
+   m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
+   m_cPolygonColor 0.686 0.259 0.259 1
+   m_fPolygonUVScale 0.89
+   m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+   m_cPolygonBorderColor 0.502 0 0 1
+   m_fPolygonBorderWidth 5
+   m_bReversed 0
+   m_aVisibleForFactions {
+    "RHS_AFRF"
+    "RHS_USAF"
+    ""
+   }
+  }
+ }
+ coords 11151.284 25.486 1535.12
+ Points {
+  ShapePoint "{6A2ACEB3B6195145}" {
+   Position -13.465 -0.634 -5.25
+  }
+  ShapePoint "{6A2ACEB3B3266AE6}" {
+   Position -77.183 -1.232 -23.895
+  }
+  ShapePoint "{6A2ACEB3B2AEA1B4}" {
+   Position -138.394 -0.928 -27.286
+  }
+  ShapePoint "{6A2ACEB3B07523B2}" {
+   Position -173.449 -3.882 -26.038
+  }
+  ShapePoint "{6A2ACEB34EF7F1F0}" {
+   Position -195.933 9.123 72.677
+  }
+  ShapePoint "{6A2ACEB34C7E8414}" {
+   Position -206.639 12.393 117.837
+  }
+  ShapePoint "{6A2ACEB35A837455}" {
+   Position -212.67 12.233 142.866
+  }
+  ShapePoint "{6A2ACEB3583D304B}" {
+   Position -182.008 12.326 154.341
+  }
+  ShapePoint "{6A2ACEB35733AE88}" {
+   Position -120.147 10.961 176.031
+  }
+  ShapePoint "{6A2ACEB3567CD8E9}" {
+   Position -96.874 10.413 187.02
+  }
+  ShapePoint "{6A2ACEB356DB3662}" {
+   Position -60.51 9.671 204.052
+  }
+  ShapePoint "{6A2ACEB355BDC144}" {
+   Position -37.239 9.545 219.387
+  }
+  ShapePoint "{6A2ACEB35103A60E}" {
+   Position -22.732 9.749 231.387
+  }
+  ShapePoint "{6A2ACEB350E17638}" {
+   Position -7.458 10.146 245.696
+  }
+  ShapePoint "{6A2ACEB36F4A7DD2}" {
+   Position 2.925 10.453 254.78
+  }
+  ShapePoint "{6A2ACEB36E1C0587}" {
+   Position 18.181 11.084 270.673
+  }
+  ShapePoint "{6A2ACEB3696E121E}" {
+   Position 22.638 11.272 275.221
+  }
+  ShapePoint "{6A2ACEB3685A35F4}" {
+   Position 33.226 10.202 252.934
+  }
+  ShapePoint "{6A2ACEB3653E2002}" {
+   Position 70.051 9.937 182.646
+  }
+  ShapePoint "{6A2ACEB36430671B}" {
+   Position 86.729 4.159 138.564
+  }
+  ShapePoint "{6A2ACEB360215A71}" {
+   Position 65.438 2.749 55.223
+  }
+ }
+ {
+  PS_PolyZoneTrigger {
+   ID "60FD050E1E83544C"
+   m_sFactionKey "RHS_AFRF"
+  }
+ }
+}

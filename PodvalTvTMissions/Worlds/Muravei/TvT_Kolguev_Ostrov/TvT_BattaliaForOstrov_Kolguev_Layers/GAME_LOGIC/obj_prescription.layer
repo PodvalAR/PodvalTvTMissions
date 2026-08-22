@@ -1,0 +1,27 @@
+PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ coords 10878.436 77.418 1224.618
+ m_sTitle "Задачи"
+ m_sTextData "ВС РФ запрещено покидать красный триггер"\
+ ""\
+ "Для захвата базы необходимо двухкратное преимущество в синем триггере на протяжении трёх минут."\
+ ""\
+ "Играйте честно!"
+ m_aVisibleForFactions {
+  "RHS_AFRF"
+  "RHS_USAF"
+ }
+ m_bEmptyFactionVisibility 1
+ m_bShowForAnyFaction 1
+}
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ {
+  coords 10944.142 78.682 1293.926
+  m_sTitle "База захвачена!"
+  m_sFactionKey "RHS_USAF"
+ }
+ {
+  coords 10943.098 78.343 1294.865
+  m_sTitle "База удержана!"
+  m_sFactionKey "RHS_AFRF"
+ }
+}
