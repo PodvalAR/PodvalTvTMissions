@@ -5,5 +5,14 @@ PerceptionManager PerceptionManager2 : "{028DAEAD63E056BE}Prefabs/World/Game/Per
  coords 142.695 67.334 3815.535
 }
 PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
+ components {
+  SCR_TimeAndWeatherHandlerComponent "{5EE3229927D4D2F5}" {
+   m_aStartingWeatherAndTime {
+    SCR_TimeAndWeatherState "{6A2D5D9D3A6F25D0}" {
+     m_sWeatherPresetName "Cloudy"
+    }
+   }
+  }
+ }
  coords 140.337 66.646 3828.677
 }
