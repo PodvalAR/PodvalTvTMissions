@@ -1,0 +1,47 @@
+SCR_ChimeraCharacter : "{C0ECE070D7C9E79F}Prefabs/Characters/Factions/INDFOR/CIV/General (FIA)/FIA_CIV_Businessman_3_dimkii.et" {
+ ID "520EC961A090B1EE"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Президент США"
+    Icon "{235763A94E6463A0}UI/Icons/diplomat.edds"
+   }
+  }
+  SCR_CharacterIdentityComponent "{5584CBC63E092DBC}" {
+   Override 1
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+    }
+    LoadoutSlotInfo Hair {
+     Enabled 1
+     Prefab "{1EE181082BA8C087}Prefabs/Characters/HeadGear/Disguise/Hair/3/Hair_3_2.et"
+    }
+   }
+  }
+  ActionsManagerComponent "{520EA1D2F659CE02}" {
+   additionalActions {
+    DRG_DeathConfirmAction "{6A2D6870035AB4C6}" {
+     ParentContextList {
+      "LowerTorso"
+     }
+     UIInfo UIInfo "{6A2D68700C7B99E6}" {
+      Name "Подтвердить смерть"
+     }
+     ActionTitle "#drg_ConfirmDeathAction"
+     Duration 3
+     m_sEventMessage "Президент мертв"
+     m_aObjectivesToDone {
+      "WIN"
+     }
+     m_aObjectivesToFail {
+      "FAIL"
+     }
+     m_vFactionKey "RHS_AFRF"
+    }
+   }
+  }
+ }
+ coords 6486.472 85.59 3361.246
+}
