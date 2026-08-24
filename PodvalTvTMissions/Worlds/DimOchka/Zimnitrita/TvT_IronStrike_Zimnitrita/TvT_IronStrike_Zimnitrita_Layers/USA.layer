@@ -1,0 +1,358 @@
+$grp Vehicle : "{3312ADBF53A16DD9}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS.et" {
+ LAV25_RHS2 {
+  coords 9155.563 71.375 11495.563
+  angles 0 54.167 0
+  m_sAttachmentGroupName "DEF_marsoc"
+ }
+ LAV25_RHS1 {
+  coords 9167.11 71.29 11503.762
+  angles -0.624 54.456 -0.104
+  m_sAttachmentGroupName "DEF_marsoc2"
+ }
+}
+$grp SCR_AIGroup : "{39C6183A810AE059}Prefabs/Groups/BLUFOR/RHS_USAF/USMC/Summer/dim_USMC_HQ.et" {
+ DEF_amer {
+  coords 12271.541 32.063 10983.686
+  angles 0 -164.613 0
+  m_aUnitPrefabSlots {
+   "{7C4B16B47872D17C}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/USMC_2017/dim_USMC_2017_Officer.et"
+  }
+  m_sCustomNameSet "Командир сил КМП США"
+ }
+ HOWIT {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4378FC6401}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 13121.97 49.344 10459.295
+  angles 0 -15.906 0
+  m_aUnitPrefabSlots {
+   "{2D734FC672584FD6}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/USMC_2017/dim_USMC_2017_SL.et"
+   "{075C0F5D64797907}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/USMC_2017/dim_USMC_2017_Rfl_1.et"
+   "{6B083BBDD8BDF629}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/USMC_2017/dim_USMC_2017_Rfl_2.et"
+   "{2AB4B59714DEF515}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/USMC_2017/dim_USMC_2017_TL.et"
+   "{6B083BBDD8BDF629}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/USMC_2017/dim_USMC_2017_Rfl_2.et"
+  }
+  m_sCustomNameSet "Гаубичная секция М777 \"Howitzer\""
+ }
+ DEF_amer3 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4378FC6401}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 12266.712 32.062 10984.921
+  angles 0 -155.204 0
+  m_aUnitPrefabSlots {
+   "{2D734FC672584FD6}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/USMC_2017/dim_USMC_2017_SL.et"
+   "{46C469F3FFC7F966}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/USMC_2017/dim_USMC_2017_TL_2.et"
+   "{40FBBED940DCEDC5}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/USMC_2017/dim_USMC_2017_AR.et"
+   "{EBFD9AAE0E740F40}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/USMC_2017/dim_USMC_2017_GL_2.et"
+   "{075C0F5D64797907}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/USMC_2017/dim_USMC_2017_Rfl_1.et"
+   "{A358250AF3226E0D}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/USMC_2017/dim_USMC_2017_TL_3.et"
+   "{4D2EC0F8B76B84EF}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/USMC_2017/dim_USMC_2017_GL.et"
+   "{6B083BBDD8BDF629}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/USMC_2017/dim_USMC_2017_Rfl_2.et"
+  }
+  m_sCustomNameSet "Отряд USMC"
+ }
+ DEF_amer4 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4378FC6401}" {
+    m_iCompanyCallsign 5
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 15972.634 64.18 14198.009
+  angles 0 -107.976 0
+  m_aUnitPrefabSlots {
+   "{2D734FC672584FD6}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/USMC_2017/dim_USMC_2017_SL.et"
+   "{6A088E8CC98E7C23}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/USMC_2017/dim_USMC_2017_HMG.et"
+   "{B060B1AD5EC4E09D}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/USMC_2017/dim_USMC_2017_AMG.et"
+   "{6A088E8CC98E7C23}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/USMC_2017/dim_USMC_2017_HMG.et"
+   "{B060B1AD5EC4E09D}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/USMC_2017/dim_USMC_2017_AMG.et"
+   "{369EAC2BFEC377BC}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/USMC_2017/dim_USMC_2017_SMAW.et"
+   "{3ADF06764902EA22}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/USMC_2017/dim_USMC_2017_AAT.et"
+  }
+  m_sCustomNameSet "Отряд поддержки USMC"
+ }
+ DEF_amer2 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4378FC6401}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 12257.359 32.062 10989.396
+  angles 0 -142.329 0
+  m_aUnitPrefabSlots {
+   "{2D734FC672584FD6}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/USMC_2017/dim_USMC_2017_SL.et"
+   "{46C469F3FFC7F966}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/USMC_2017/dim_USMC_2017_TL_2.et"
+   "{40FBBED940DCEDC5}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/USMC_2017/dim_USMC_2017_AR.et"
+   "{EBFD9AAE0E740F40}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/USMC_2017/dim_USMC_2017_GL_2.et"
+   "{075C0F5D64797907}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/USMC_2017/dim_USMC_2017_Rfl_1.et"
+   "{A358250AF3226E0D}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/USMC_2017/dim_USMC_2017_TL_3.et"
+   "{4D2EC0F8B76B84EF}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/USMC_2017/dim_USMC_2017_GL.et"
+   "{6B083BBDD8BDF629}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/USMC_2017/dim_USMC_2017_Rfl_2.et"
+  }
+  m_sCustomNameSet "Отряд USMC"
+ }
+ DEF_amer5 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4378FC6401}" {
+    m_iCompanyCallsign 5
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 15977.163 64.256 14182.814
+  angles 0 -105.153 0
+  m_aUnitPrefabSlots {
+   "{2D734FC672584FD6}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/USMC_2017/dim_USMC_2017_SL.et"
+   "{46C469F3FFC7F966}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/USMC_2017/dim_USMC_2017_TL_2.et"
+   "{40FBBED940DCEDC5}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/USMC_2017/dim_USMC_2017_AR.et"
+   "{4D2EC0F8B76B84EF}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/USMC_2017/dim_USMC_2017_GL.et"
+   "{075C0F5D64797907}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/USMC_2017/dim_USMC_2017_Rfl_1.et"
+   "{A358250AF3226E0D}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/USMC_2017/dim_USMC_2017_TL_3.et"
+   "{4D2EC0F8B76B84EF}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/USMC_2017/dim_USMC_2017_GL.et"
+   "{6B083BBDD8BDF629}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/USMC_2017/dim_USMC_2017_Rfl_2.et"
+  }
+  m_sCustomNameSet "Отряд USMC"
+ }
+ DEF_amer6 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4378FC6401}" {
+    m_iCompanyCallsign 4
+   }
+  }
+  coords 14316.81 50.907 12128.322
+  angles 0 147.058 0
+  m_aUnitPrefabSlots {
+   "{E2C35369F43FD755}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/Char_RHS_USAF_Regular_HeliPilot.et"
+  }
+  m_sCustomNameSet "Пилот MH6J"
+ }
+ DEF_amer7 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4378FC6401}" {
+    m_iCompanyCallsign 4
+    m_iSquadCallsign 1
+   }
+  }
+  coords 14277.919 50.907 12103.123
+  angles 0 147.058 0
+  m_aUnitPrefabSlots {
+   "{E2C35369F43FD755}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/Char_RHS_USAF_Regular_HeliPilot.et"
+  }
+  m_sCustomNameSet "Пилот MH6J"
+ }
+ DEF_amer8 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4378FC6401}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 9179.54 71.157 11509.122
+  angles 0 -38.158 0
+  m_aUnitPrefabSlots {
+   "{2D734FC672584FD6}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/USMC_2017/dim_USMC_2017_SL.et"
+   "{46C469F3FFC7F966}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/USMC_2017/dim_USMC_2017_TL_2.et"
+   "{40FBBED940DCEDC5}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/USMC_2017/dim_USMC_2017_AR.et"
+   "{4D2EC0F8B76B84EF}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/USMC_2017/dim_USMC_2017_GL.et"
+   "{075C0F5D64797907}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/USMC_2017/dim_USMC_2017_Rfl_1.et"
+   "{A358250AF3226E0D}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/USMC_2017/dim_USMC_2017_TL_3.et"
+   "{4D2EC0F8B76B84EF}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/USMC_2017/dim_USMC_2017_GL.et"
+   "{6B083BBDD8BDF629}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/USMC_2017/dim_USMC_2017_Rfl_2.et"
+  }
+  m_sCustomNameSet "Отряд USMC"
+ }
+}
+Vehicle M151A2_transport1 : "{47D94E1193A88497}Prefabs/Vehicles/Wheeled/M151A2/M151A2_transport.et" {
+ coords 15971.865 64.53 14172.937
+ angles -0.106 -166.248 0.435
+ m_sAttachmentGroupName "DEF_marsoc3"
+}
+$grp Vehicle : "{4ED7C573CCD46482}Prefabs/Vehicles/Helicopters/MH-6J/AH-6J_Doors_Base_M134.et" {
+ AH_6J_Doors_Base_M1 {
+  coords 14444.88 51.237 12049.805
+  angles 0 -30 0
+  m_sAttachmentGroupName "DEF_amer7"
+ }
+ AH_6J_Doors_Base_M2 {
+  coords 14474.663 51.237 12067.571
+  angles 0 -30 0
+  m_sAttachmentGroupName "DEF_amer6"
+ }
+}
+$grp Vehicle : "{87636E665CBF5E8A}Prefabs/Vehicles/M777/M777_transport.et" {
+ M777_transport1 {
+  coords 13126.242 49.961 10467.025
+  angles 0 -105.89 0
+ }
+ M777_transport2 {
+  coords 13149.335 50.063 10473.904
+  angles 0.43 -106.177 -0.125
+ }
+}
+$grp Vehicle : "{92264FF932676C13}Prefabs/Vehicles/Wheeled/M923A1/M923A1_ammo.et" {
+ M923A1_ammo1 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{5916C580F1DA28BB}" {
+    MultiSlots {
+     MultiSlotConfiguration "{5A60CECA66163838}" {
+      SlotTemplate InventoryStorageSlot Bandages {
+       Prefab "{B570855ECA503B21}Prefabs/Items/Equipment/Tablets/FDC_Tablet.et"
+      }
+     }
+    }
+   }
+   SCR_VehicleDustPerWheel "{5476BC43E4910F64}" {
+    m_fDustTopSpeed 60
+   }
+  }
+  coords 13113.987 49.422 10463.328
+  angles 2.147 -106.277 -0.627
+  m_bEnableMoveOnFreeze 1
+ }
+ M923A1_ammo2 {
+  coords 13136.677 49.408 10470.146
+  angles -0.252 -106.354 -0.859
+  m_bEnableMoveOnFreeze 1
+ }
+}
+$grp Vehicle : "{9C5C813B65D932F6}Prefabs/Vehicles/Helicopters/MH-6J/MH-6J_Doors.et" {
+ MH_6J_Doors1 {
+  coords 14385.854 51.237 12021.655
+  angles 0 -33.029 0
+  m_sAttachmentGroupName "DEF_amer6"
+ }
+ MH_6J_Doors2 {
+  coords 14346.396 51.237 11997.453
+  angles 0 -33.029 0
+  m_sAttachmentGroupName "DEF_amer7"
+ }
+}
+Vehicle dim_M1025_armed_M2HB1 : "{B995CA2A76E7924A}Prefabs/Vehicles/Wheeled/M998/dim_M1025_armed_M2HB1.et" {
+ coords 9176.55 71.191 11510.936
+ angles -0.626 53.322 -0.092
+ m_sAttachmentGroupName "DEF_amer8"
+}
+$grp Vehicle : "{D574C943C9F8C9DF}Prefabs/Vehicles/Wheeled/M998/M1151_armed_M2HB_AP.et" {
+ M1151_armed_M2HB_AP1 {
+  coords 9183.815 71.095 11516.63
+  angles -0.347 50.842 0.283
+  m_sAttachmentGroupName "DEF_amer8"
+ }
+ M1151_armed_M2HB_AP2 {
+  coords 15970.236 64.473 14179.727
+  angles 0.865 164.997 -0.232
+  m_sAttachmentGroupName "DEF_amer5"
+ }
+ M1151_armed_M2HB_AP3 {
+  coords 15967.925 64.337 14188.404
+  angles 0.98 165.003 0.201
+  m_sAttachmentGroupName "DEF_amer5"
+ }
+}
+$grp Vehicle : "{D8FD77F7A4CC7ED6}Prefabs/Vehicles/Wheeled/M1083/Armed/M1083_Transport_Covered_Armed_Woodland.et" {
+ M1083_Transport_Covered_Armed_Woodland1 {
+  coords 12258.681 32.063 10977.74
+  angles 0 113.216 0
+  m_sAttachmentGroupName "DEF_amer3"
+ }
+ M1083_Transport_Covered_Armed_Woodland2 {
+  coords 12247.633 32.063 10984.876
+  angles 0 132.442 0
+  m_sAttachmentGroupName "DEF_amer2"
+ }
+ M1083_Transport_Covered_Armed_Woodland3 {
+  coords 15964.995 64.134 14198.294
+  angles 1.267 160.619 -0.445
+  m_sAttachmentGroupName "DEF_amer4"
+ }
+}
+Vehicle M1083_Command_Woodland1 : "{E5D66B1A14745C24}Prefabs/Vehicles/Wheeled/M1083/M1083_Command_Woodland.et" {
+ coords 12271.532 32.062 10973.39
+ angles 0 99.433 0
+ m_sAttachmentGroupName "DEF_amer"
+}
+$grp SCR_AIGroup : "{F77D5F8E4E2A70A7}Prefabs/Groups/BLUFOR/RHS_USAF/Group_RHS_USAF_Base.et" {
+ DEF_marsoc {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 9155.076 71.373 11490.458
+  angles 0 -35.36 0
+  m_aUnitPrefabSlots {
+   "{153D8A03EC90E6C1}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USAF_MARSOC_SL.et"
+   "{12FA70528A165C02}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USAF_MARSOC_TL.et"
+   "{78B57B1CDE1444D2}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USAF_MARSOC_AR.et"
+   "{7EDD1022ABACA804}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USAF_MARSOC_Rifleman.et"
+   "{A22DA08BDD375054}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USAF_MARSOC_Sapper.et"
+   "{DA45EEDCFF80D8CA}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USAF_MARSOC_Medic.et"
+   "{679559350B518AEE}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_USMC_Crew_CC.et"
+   "{E89E4CEF9F16785C}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_USMC_Crew_Driver.et"
+  }
+  m_sCustomNameSet "MARSOC на LAV-25"
+ }
+ DEF_marsoc3 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 5
+   }
+  }
+  coords 15979.271 64.531 14174.855
+  angles 0 -102.099 0
+  m_aUnitPrefabSlots {
+   "{88A039FDB1A0B5DD}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USAF_MARSOC_Observer.et"
+   "{66EBC59DF91C18F0}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USAF_MARSOC_Sniper_Barret.et"
+  }
+  m_sCustomNameSet "MARSOC (Sniper Team)"
+ }
+ DEF_marsoc2 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 9165.562 71.304 11498.227
+  angles 0 -36.587 0
+  m_aUnitPrefabSlots {
+   "{153D8A03EC90E6C1}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USAF_MARSOC_SL.et"
+   "{12FA70528A165C02}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USAF_MARSOC_TL.et"
+   "{78B57B1CDE1444D2}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USAF_MARSOC_AR.et"
+   "{7EDD1022ABACA804}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USAF_MARSOC_Rifleman.et"
+   "{A22DA08BDD375054}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USAF_MARSOC_Sapper.et"
+   "{DA45EEDCFF80D8CA}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USAF_MARSOC_Medic.et"
+   "{679559350B518AEE}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_USMC_Crew_CC.et"
+   "{E89E4CEF9F16785C}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_USMC_Crew_Driver.et"
+  }
+  m_sCustomNameSet "MARSOC на LAV-25"
+ }
+ DEF_marsoc5 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 4
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 15812.492 138.625 8743.95
+  angles 0 15.519 0
+  m_aUnitPrefabSlots {
+   "{153D8A03EC90E6C1}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USAF_MARSOC_SL.et"
+   "{12FA70528A165C02}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USAF_MARSOC_TL.et"
+   "{78B57B1CDE1444D2}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USAF_MARSOC_AR.et"
+   "{7EDD1022ABACA804}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USAF_MARSOC_Rifleman.et"
+   "{6E8E96C9F65BD65B}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USAF_MARSOC_SMAW.et"
+   "{A22DA08BDD375054}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USAF_MARSOC_Sapper.et"
+   "{DA45EEDCFF80D8CA}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USAF_MARSOC_Medic.et"
+   "{2C66ED71232C6513}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USAF_MARSOC_Marksman.et"
+  }
+  m_sCustomNameSet "MARSOC"
+ }
+}
