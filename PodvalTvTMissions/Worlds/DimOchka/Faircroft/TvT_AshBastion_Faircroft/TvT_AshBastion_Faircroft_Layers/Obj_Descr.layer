@@ -1,0 +1,72 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ {
+  coords 11569.529 184.677 7190.966
+  m_sTitle "Правила и задачи"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "ПРАВИЛА:"\
+  "1. Запрещено строить командный пункт;"\
+  "2. В триггере должен находиться как минимум 1 отряд пехоты (КС, медики не в счет);"\
+  "3. Строительные грузовики запрещено вывозить за пределы триггера;"\
+  "4. Вертолетом могут управлять только пилоты;"\
+  "5. США запрещено пересекать красный триггер (кроме пилотов)."\
+  ""\
+  "ЗАДАЧИ:"\
+  "• РФ: "\
+  " 1. Захватить руины."\
+  ""\
+  "• США:"\
+  " 1. Удержать руины."\
+  ""\
+  "ДОПОЛНИТЕЛЬНО:"\
+  "1. У США есть 2 строительных грузовика и 4000 ресурсов. Можете строить что угодно (хоть миномет, но см. пункт 1). На них и на хаммере можно ездить во время фриз-тайма. Также в одном из них лежит 40 шт. колючки;"\
+  "2. США имеют 2 пулемета М2, 1 ПТУР (для разбора и сбора пулемета требуется саперная лопата, которую вы можете взять из строительных грузовиков)."
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "CIV"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+ {
+  coords 11569.529 184.677 6791.432
+  m_sTitle "Сюжет"
+  m_sTextData "После тяжёлых боёв за Ogden войска США и РФ были вынуждены отойти на перегруппировку."\
+  ""\
+  "Американцы закрепились в руинах на окраине города, разместив там полевой госпиталь и командный пункт. На помощь гарнизону прибыло резервное подразделение MARSOC на бронемашинах LAV-25, готовое усилить оборону."\
+  ""\
+  "Однако и у российских сил есть козырь в рукаве в виде свежих резервов с К17 \"Бумеранг\" и Т-14 \"Армата\"."\
+  ""
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "CIV"
+   ""
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+ {
+  coords 11569.529 184.677 7190.966
+  m_sTitle "Совет"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "Советую как можно скорее пилотам добраться до вертолета. Его могут уничтожить если РФ прорвутся к нему."
+  m_aVisibleForFactions {
+   "RHS_USAF"
+  }
+ }
+}
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ USAF_WIN {
+  coords 13366.94 0 10459.761
+  m_sTitle "Руины удержаны"
+  m_sFactionKey "RHS_USAF"
+ }
+ AFRF_WIN {
+  coords 13366.94 0 10434.35
+  m_sTitle "Руины захвачены"
+  m_sFactionKey "RHS_AFRF"
+ }
+}
