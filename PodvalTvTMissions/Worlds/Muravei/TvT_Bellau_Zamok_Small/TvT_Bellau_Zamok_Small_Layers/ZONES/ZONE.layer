@@ -1,0 +1,244 @@
+PolylineShapeEntity CAPTURE {
+ components {
+  PS_PolyZone "{6A32069A89BDBAE2}" {
+   m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
+   m_cPolygonColor 0.624 0.157 0.157 1
+   m_fPolygonUVScale 0.44
+   m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+   m_cPolygonBorderColor 0.502 0 0 1
+   m_fPolygonBorderWidth 4
+   m_aVisibleForFactions {
+    "RHS_AFRF"
+    "Ses_NAPA"
+    ""
+   }
+  }
+ }
+ coords 1230.82 127.031 6872.514
+ Points {
+  ShapePoint "{6A300E16C45372CE}" {
+   Position 0 0 0
+  }
+  ShapePoint "{6A300E16C453A798}" {
+   Position 71.269 0 56.676
+  }
+  ShapePoint "{6A300E16D2D26D92}" {
+   Position 26.47 0 109.877
+  }
+  ShapePoint "{6A300E16EC37DB89}" {
+   Position -43.554 0 53.675
+  }
+  ShapePoint "{6A300E16E8440F52}" {
+   Position 0 0 0.007
+  }
+ }
+ IsClosed 1
+}
+$grp GenericEntity : "{3D78D7D606FF9818}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_NoCapture.et" {
+ FLAG1 {
+  coords 1224.089 139.999 6912.448
+ }
+ FLAG2 {
+  coords 1268.866 151.193 6940.722
+  angles 0 -108.904 0
+ }
+}
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{6A320699065558FE}" {
+     m_Timer GUB_ZoneControlTimer "{6A320699028FC455}" {
+      timeToComplete 1800
+     }
+     m_ZoneController GUB_ZoneController "{6A3206992ACDC891}" {
+      m_sZoneEntityName "CAPTURE"
+     }
+     m_FlagController GUB_FlagController "{6A32069921F4515E}" {
+      m_aFlagNames {
+       "FLAG1"
+       "FLAG2"
+      }
+      m_fStartFactionKey "Ses_NAPA"
+      m_fEndFactionKey "RHS_AFRF"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{6A32069EE0CF83C4}" {
+       m_sFirstFactionKey "RHS_AFRF"
+       m_sSecondFactionKey "Ses_NAPA"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 493.371 94.427 6375.974
+}
+$grp SCR_EditorRestrictionZoneEntity : "{6144B0BE2EAC6897}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneMedium.et" {
+ {
+  coords 2181.881 151.529 6321.078
+ }
+ {
+  coords 525.794 77.848 7134.079
+ }
+ {
+  coords 1934.573 109.236 7194.291
+ }
+ {
+  coords 772.294 112.61 6517.477
+ }
+ {
+  coords 1722.108 102.189 6822.969
+  angles 0 0 -6.686
+ }
+}
+$grp PolylineShapeEntity : "{7019844BAD5C4DD8}Prefabs/PolyZone/PolyZone_Border.et" {
+ {
+  components {
+   PS_PolyZone "{60E90266F25533F6}" {
+    m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
+    m_cPolygonColor 0.157 0.275 0.624 1
+    m_fPolygonUVScale 0.44
+    m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+    m_cPolygonBorderColor 0 0.125 0.502 1
+    m_fPolygonBorderWidth 5
+    m_aVisibleForFactions {
+     ""
+     "RHS_AFRF"
+     "Ses_NAPA"
+    }
+   }
+  }
+  coords 564.146 85.024 6558.412
+  Points {
+   ShapePoint "{60E90266E922A02A}" {
+    Position -2.81 29.987 -661.122
+   }
+   ShapePoint "{6A300E1F88FE20D3}" {
+    Position -177.343 26.247 1094.129
+   }
+   ShapePoint "{6A300E1F85CA902E}" {
+    Position 1883.137 23.803 1385.317
+   }
+   ShapePoint "{6A300E1F82CAE9A1}" {
+    Position 1860.918 72.973 -471.72
+   }
+  }
+ }
+ {
+  components {
+   PS_PolyZone "{60E90266F25533F6}" {
+    m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
+    m_cPolygonColor 0.392 0.624 0.157 1
+    m_fPolygonUVScale 0.44
+    m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+    m_cPolygonBorderColor 0.251 0.502 0 1
+    m_fPolygonBorderWidth 5
+    m_bReversed 0
+    m_aVisibleForFactions {
+     ""
+     "RHS_AFRF"
+     "Ses_NAPA"
+    }
+   }
+  }
+  coords 1314.003 125.901 6881.947
+  Points {
+   ShapePoint "{60E90266E922A02A}" {
+    Position -69.223 -0.708 -82.536
+   }
+   ShapePoint "{6A300E17B97F7B4D}" {
+    Position -130.234 -2.54 -95.236
+   }
+   ShapePoint "{6A300E17B753D192}" {
+    Position -235.009 -6.167 -101.077
+   }
+   ShapePoint "{6A300E17B5C0BE8E}" {
+    Position -304.884 -22.026 -103.899
+   }
+   ShapePoint "{6A300E17B326F472}" {
+    Position -322.396 -14.599 -19.273
+   }
+   ShapePoint "{6A300E17B2A1E966}" {
+    Position -369.389 -17.166 27.104
+   }
+   ShapePoint "{6A300E17B02344A0}" {
+    Position -422.46 -30.812 43.113
+   }
+   ShapePoint "{6A300E174FB4CDFA}" {
+    Position -402.87 -28.188 90.65
+   }
+   ShapePoint "{6A300E174E7534BF}" {
+    Position -384.232 -32.737 126.132
+   }
+   ShapePoint "{6A300E174EDD09CC}" {
+    Position -385.854 -39.771 170.985
+   }
+   ShapePoint "{6A300E174CA5942B}" {
+    Position -416.996 -41.887 175.836
+   }
+   ShapePoint "{6A300E174AFC3DFE}" {
+    Position -412.683 -44.23 219.066
+   }
+   ShapePoint "{6A300E17499CCB33}" {
+    Position -385.292 -43.963 223.378
+   }
+   ShapePoint "{6A300E1748C560F8}" {
+    Position -372.679 -43.738 219.954
+   }
+   ShapePoint "{6A300E1745DF2261}" {
+    Position -366.645 -42.488 204.538
+   }
+   ShapePoint "{6A300E1744D4EC39}" {
+    Position -331.976 -29.013 149.027
+   }
+   ShapePoint "{6A300E1742930E9E}" {
+    Position -156.294 -20.461 218.912
+   }
+   ShapePoint "{6A300E1F88FE20D3}" {
+    Position -185.975 -40.192 296.284
+   }
+   ShapePoint "{6A300E1795B8C0FB}" {
+    Position -93.715 -35.41 305.4
+   }
+   ShapePoint "{6A300E179318FB7F}" {
+    Position -75.047 -18.943 238.494
+   }
+   ShapePoint "{6A300E179232CFF6}" {
+    Position 13.379 -24.916 257.805
+   }
+   ShapePoint "{6A300E1791A2E820}" {
+    Position 10.29 -41.94 317.583
+   }
+   ShapePoint "{6A300E179018550C}" {
+    Position 72.576 -42.73 321.597
+   }
+   ShapePoint "{6A300E1790CF31C0}" {
+    Position 68.302 -28.557 273.6
+   }
+   ShapePoint "{6A300E17AE103002}" {
+    Position 141.506 -31.9 227.205
+   }
+   ShapePoint "{6A300E17AD7CDB33}" {
+    Position 179.405 -33.604 106.914
+   }
+   ShapePoint "{6A300E17A9882253}" {
+    Position 235.064 -30.339 -60.927
+   }
+   ShapePoint "{6A300E1F82CAE9A1}" {
+    Position -66.476 -0.162 -156.654
+   }
+  }
+  {
+   PS_PolyZoneTrigger {
+    ID "60FD050E1E83544C"
+    m_sFactionKey "Ses_NAPA"
+   }
+  }
+ }
+}
+SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+ coords 1283.719 127.031 6957.306
+}
