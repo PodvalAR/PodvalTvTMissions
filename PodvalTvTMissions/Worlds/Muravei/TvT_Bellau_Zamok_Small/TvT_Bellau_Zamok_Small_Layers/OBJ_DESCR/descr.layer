@@ -1,0 +1,32 @@
+PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ coords 131.983 114.409 6550.181
+ m_sTitle "Правила и задачи"
+ m_sTextData "Всем запрещено покидать СИНИЙ триггер"\
+ "НАПА запрещено покидать ЗЕЛЕНЫЙ триггер"\
+ ""\
+ "Для захвата базы необходимо двукратное преимущество в КРАСНОМ триггере на протяжении трёх минут."\
+ ""\
+ "КС НАПА - Командир Рацек-11"\
+ ""\
+ "Играйте честно!"\
+ ""
+ m_aVisibleForFactions {
+  "RHS_AFRF"
+  "Ses_NAPA"
+  ""
+ }
+ m_bEmptyFactionVisibility 1
+ m_bShowForAnyFaction 1
+}
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ {
+  coords 312.21 114.02 6534.283
+  m_sTitle "База Захвачена"
+  m_sFactionKey "RHS_AFRF"
+ }
+ {
+  coords 327.73 113.149 6601.041
+  m_sTitle "База Удержана"
+  m_sFactionKey "Ses_NAPA"
+ }
+}
