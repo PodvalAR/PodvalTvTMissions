@@ -6,6 +6,7 @@ PolylineShapeEntity Capture {
    m_fPolygonUVScale 0.44
    m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
    m_cPolygonBorderColor 0 0.125 0.502 1
+   m_fPolygonBorderWidth 10
    m_aVisibleForFactions {
     "RHS_AFRF"
     "RHS_USAF"
@@ -71,7 +72,7 @@ PolylineShapeEntity Capture {
 }
 $grp GenericEntity : "{3D78D7D606FF9818}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_NoCapture.et" {
  FLAG1 {
-  coords 11091.016 41.716 1681.71
+  coords 11091.054 41.716 1681.766
  }
  FLAG2 {
   coords 11110.321 46.03 1714.702
@@ -101,9 +102,38 @@ GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactions
       m_fStartFactionKey "RHS_AFRF"
       m_fEndFactionKey "RHS_USAF"
      }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{6A3245E8FCED284E}" {
+       m_sFirstFactionKey "RHS_USAF"
+       m_sSecondFactionKey "RHS_AFRF"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
     }
    }
   }
  }
  coords 11468.851 155.682 1624.092
+}
+SCR_EditorRestrictionZoneEntity : "{6144B0BE2EAC6897}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneMedium.et" {
+ coords 10082.959 26 1832.886
+}
+$grp SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+ {
+  coords 11072.472 35.479 1650.846
+  angles 2.536 0 0
+ }
+ {
+  coords 11489.411 11.221 2537.806
+  angles -6.265 0 0
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 11354.521 63.962 2760.847
 }
