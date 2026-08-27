@@ -1,6 +1,7 @@
 Vehicle AH1S_Marines_x3_Opt1 : "{016DEB59D539D387}Prefabs/Vehicles/Helicopters/AH1S/AH1S_Marines_x3_Opt.et" {
  coords 3820.256 1.445 1639.003
  angles 0 -27.968 0
+ m_sAttachmentGroupName "amer5"
 }
 Vehicle M1167_armed_TOW1 : "{08DC83258B558A9F}Prefabs/Vehicles/Wheeled/M998/M1167_armed_TOW.et" {
  coords 4497.503 27.357 1633.67
@@ -11,10 +12,12 @@ $grp Vehicle : "{3312ADBF53A16DD9}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS.et" {
  LAV25_RHS2 {
   coords 3800.778 0.781 1623.229
   angles 0 -22.284 0
+  m_sAttachmentGroupName "DEF_marsoc2"
  }
  LAV25_RHS1 {
   coords 3788.844 0.781 1618.556
   angles 0 -22.077 0
+  m_sAttachmentGroupName "DEF_marsoc"
  }
 }
 $grp SCR_AIGroup : "{39C6183A810AE059}Prefabs/Groups/BLUFOR/RHS_USAF/USMC/Summer/dim_USMC_HQ.et" {
@@ -100,8 +103,8 @@ $grp SCR_AIGroup : "{39C6183A810AE059}Prefabs/Groups/BLUFOR/RHS_USAF/USMC/Summer
   coords 4978.805 53.555 3731.532
   angles 0 95.744 0
   m_aUnitPrefabSlots {
-   "{338CA9AD8187BEA6}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/MARSOC/Char_RHS_TF_USAF_MarpatWD_HeliPilot.et"
-   "{49954C9CE0EA8E4A}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/MARSOC/Char_RHS_TF_USAF_MarpatWD_CoPilot.et"
+   "{9954121045CD84B5}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USMC_HeliPilot.et"
+   "{FCEC57426C3422FF}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USMC_HeliCoPilot.et"
   }
   m_sCustomNameSet "Экипаж упавшего вертолета"
  }
@@ -125,7 +128,7 @@ $grp SCR_AIGroup : "{39C6183A810AE059}Prefabs/Groups/BLUFOR/RHS_USAF/USMC/Summer
 Vehicle M151A2_transport1 : "{47D94E1193A88497}Prefabs/Vehicles/Wheeled/M151A2/M151A2_transport.et" {
  coords 4135.371 6.193 2137.508
  angles -3.878 -53.961 3.802
- m_sAttachmentGroupName "marsoc3"
+ m_sAttachmentGroupName "DEF_marsoc3"
 }
 Vehicle M1151_armed_CROWS_M1 : "{7D9668EDADFCD7E1}Prefabs/Vehicles/Wheeled/M998/M1151_armed_CROWS_M2.et" {
  coords 4499.392 27.602 1641.253
