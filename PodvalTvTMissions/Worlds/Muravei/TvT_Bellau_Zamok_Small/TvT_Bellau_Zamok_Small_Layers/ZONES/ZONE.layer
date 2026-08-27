@@ -3,7 +3,7 @@ PolylineShapeEntity CAPTURE {
   PS_PolyZone "{6A32069A89BDBAE2}" {
    m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
    m_cPolygonColor 0.624 0.157 0.157 1
-   m_fPolygonUVScale 0.44
+   m_fPolygonUVScale 0.02
    m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
    m_cPolygonBorderColor 0.502 0 0 1
    m_fPolygonBorderWidth 4
@@ -20,10 +20,103 @@ PolylineShapeEntity CAPTURE {
    Position 0 0 0
   }
   ShapePoint "{6A300E16C453A798}" {
-   Position 71.269 0 56.676
+   Position 13.468 0 -17.79
+  }
+  ShapePoint "{6A367B72B0EEF9D4}" {
+   Position 37.922 0 3.396
+  }
+  ShapePoint "{6A367B72470F54A5}" {
+   Position 30.795 0 12.789
+  }
+  ShapePoint "{6A367B7246EFDC67}" {
+   Position 44.829 0.517 24.554
+  }
+  ShapePoint "{6A367B725D23411F}" {
+   Position 39.643 0 31.208
+  }
+  ShapePoint "{6A367B725AB8ADC9}" {
+   Position 41.781 -0.028 32.693
+  }
+  ShapePoint "{6A367B7258CD18F1}" {
+   Position 53.851 -0.042 42.365
+  }
+  ShapePoint "{6A367B7255640074}" {
+   Position 71.679 0 56.652
+  }
+  ShapePoint "{6A367B7251717396}" {
+   Position 72.272 0 57.024
+  }
+  ShapePoint "{6A367B7250315F83}" {
+   Position 73.323 0 55.609
+  }
+  ShapePoint "{6A367B72619AA19D}" {
+   Position 75.449 -1.121 50.315
+  }
+  ShapePoint "{6A367B727CEA8283}" {
+   Position 80.82 0 54.763
+  }
+  ShapePoint "{6A367B7273CB3062}" {
+   Position 91.172 0 63.023
+  }
+  ShapePoint "{6A367B720E2F64CD}" {
+   Position 92.961 0 60.935
+  }
+  ShapePoint "{6A367B720ECF68DB}" {
+   Position 94.286 0 61.849
+  }
+  ShapePoint "{6A367B720A43B105}" {
+   Position 97.662 0 57.261
+  }
+  ShapePoint "{6A367B72062B98D7}" {
+   Position 117.151 0 71.83
+  }
+  ShapePoint "{6A367B721F94F7BE}" {
+   Position 86.266 -0.048 113.748
   }
   ShapePoint "{6A300E16D2D26D92}" {
-   Position 26.47 0 109.877
+   Position 60.277 0 149.379
+  }
+  ShapePoint "{6A367B72152849F4}" {
+   Position 48.999 0 140.875
+  }
+  ShapePoint "{6A367B7212FACF5D}" {
+   Position 31.523 0 128.186
+  }
+  ShapePoint "{6A367B722F6A0A89}" {
+   Position 16.971 0 117.369
+  }
+  ShapePoint "{6A367B722DC037A9}" {
+   Position 22.74 0 110.217
+  }
+  ShapePoint "{6A367B72273E273B}" {
+   Position 24.587 0 108.068
+  }
+  ShapePoint "{6A367B7223657685}" {
+   Position 9.909 0 95.75
+  }
+  ShapePoint "{6A367B723DAA7D79}" {
+   Position 7.918 0 98.152
+  }
+  ShapePoint "{6A367B723A1433D2}" {
+   Position 6.873 0 97.317
+  }
+  ShapePoint "{6A367B72395C974A}" {
+   Position 1.744 0 103.307
+  }
+  ShapePoint "{6A367B7238E57253}" {
+   Position -7.223 0 95.475
+  }
+  ShapePoint "{6A367B72332077AC}" {
+   Position -5.031 0 93.392
+  }
+  ShapePoint "{6A367B723172E2EE}" {
+   Position -16.854 0 83.245
+  }
+  ShapePoint "{6A367B73CFE3EE3F}" {
+   Position -37.193 0 65.838
+  }
+  ShapePoint "{6A367B73CEC228EC}" {
+   Position -46.731 0 57.5
   }
   ShapePoint "{6A300E16EC37DB89}" {
    Position -43.554 0 53.675
@@ -48,8 +141,16 @@ GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactions
   GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
    m_aControlLogics {
     GUB_ZoneControlLogic "{6A320699065558FE}" {
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "AFRF_WIN"
+     }
+     m_sFailedObjectiveNames {
+      "NAPA_WIN"
+     }
+     m_sMessage "База захвачена!"
      m_Timer GUB_ZoneControlTimer "{6A320699028FC455}" {
-      timeToComplete 1800
+      timeToComplete 180
      }
      m_ZoneController GUB_ZoneController "{6A3206992ACDC891}" {
       m_sZoneEntityName "CAPTURE"
