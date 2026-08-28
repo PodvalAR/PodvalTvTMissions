@@ -7,49 +7,6 @@ SCR_AIGroup KS1 : "{24F2959712AFFC89}Prefabs/Groups/OPFOR/Ses_ChDKZ/RandomSpawn/
  }
 }
 $grp SCR_AIGroup : "{2A4221C4E72701D0}Prefabs/Groups/OPFOR/Ses_ChDKZ/RandomSpawn/Defend/Group_ChDKZ_PL_9_Defend.et" {
- bomji2 {
-  components {
-   PS_GroupCallsignAssigner "{68A3601C92B4A58B}" {
-    m_iCompanyCallsign 1
-   }
-  }
-  coords 6797.446 5.75 2467.861
-  angles 0 -46.963 0
-  m_aUnitPrefabSlots {
-   "{A7C99EAA24EC8048}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_SL_Random.et"
-   "{E0500D19D7A94BFD}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_SR_Random.et"
-   "{41D4E0AF9842BE4B}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_AT_Random.et"
-   "{87714ABCCFCB07C3}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_Medic_Random.et"
-   "{4EE9F8C57C51387B}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_MG_Random.et"
-   "{345A828F3E94D377}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_AMG_Random.et"
-   "{448EDFF48D360135}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_LAT_Random.et"
-   "{432739FBF5773868}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_Rifleman_SD_Random.et"
-   "{E7117041B898A159}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_Sharpshooter_Random.et"
-  }
-  m_sCustomNameSet "Пехотное отделение"
- }
- bomji3 {
-  components {
-   PS_GroupCallsignAssigner "{68A3601C92B4A58B}" {
-    m_iCompanyCallsign 1
-    m_iSquadCallsign 2
-   }
-  }
-  coords 6828.395 5.75 2501.574
-  angles 0 -47.19 0
-  m_aUnitPrefabSlots {
-   "{A7C99EAA24EC8048}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_SL_Random.et"
-   "{E0500D19D7A94BFD}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_SR_Random.et"
-   "{41D4E0AF9842BE4B}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_AT_Random.et"
-   "{87714ABCCFCB07C3}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_Medic_Random.et"
-   "{4EE9F8C57C51387B}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_MG_Random.et"
-   "{345A828F3E94D377}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_AMG_Random.et"
-   "{448EDFF48D360135}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_LAT_Random.et"
-   "{432739FBF5773868}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_Rifleman_SD_Random.et"
-   "{E7117041B898A159}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_Sharpshooter_Random.et"
-  }
-  m_sCustomNameSet "Пехотное отделение"
- }
  bomji1 {
   components {
    PS_GroupCallsignAssigner "{68A3601C92B4A58B}" {
@@ -72,11 +29,10 @@ $grp SCR_AIGroup : "{2A4221C4E72701D0}Prefabs/Groups/OPFOR/Ses_ChDKZ/RandomSpawn
   }
   m_sCustomNameSet "Пехотное отделение"
  }
- bomji4 {
+ bomji2 {
   components {
    PS_GroupCallsignAssigner "{68A3601C92B4A58B}" {
     m_iCompanyCallsign 1
-    m_iSquadCallsign 3
    }
   }
   coords 6791.042 5.75 2428.857
@@ -95,26 +51,71 @@ $grp SCR_AIGroup : "{2A4221C4E72701D0}Prefabs/Groups/OPFOR/Ses_ChDKZ/RandomSpawn
   m_sCustomNameSet "Пехотное отделение"
  }
 }
-$grp SCR_AIGroup : "{5FDBEB941E76EF1E}Prefabs/Groups/OPFOR/Ses_ChDKZ/RandomSpawn/Attack/Group_ChDKZ_Mechanized_Attack.et" {
- BRDM1 {
+$grp SCR_AIGroup : "{45C4A9C03900631E}Prefabs/Groups/OPFOR/Ses_ChDKZ/Group_ChDKZ_Motorized.et" {
+ Zu1 {
   components {
    PS_GroupCallsignAssigner "{68A3601C92B4A58B}" {
     m_iCompanyCallsign 2
    }
   }
-  coords 6866.5 5.75 2530.938
-  angles 0 -141.078 0
-  m_sCustomNameSet "Экипаж БРДМ"
+  coords 6828.167 5.75 2501.064
+  angles 0 -46.663 0
+  m_aUnitPrefabSlots {
+   "{A7C99EAA24EC8048}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_SL_Random.et"
+   "{AB42C807F3B5FD1F}Prefabs/Characters/Factions/OPFOR/ChDKZ/Char_ChDKZ_SR.et"
+   "{4EE9F8C57C51387B}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_MG_Random.et"
+   "{345A828F3E94D377}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_AMG_Random.et"
+   "{41D4E0AF9842BE4B}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_AT_Random.et"
+   "{448EDFF48D360135}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_LAT_Random.et"
+   "{379AE05E0647D8D3}Prefabs/Characters/Factions/OPFOR/ChDKZ/Char_ChDKZ_Rifleman.et"
+   "{E7117041B898A159}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_Sharpshooter_Random.et"
+   "{BB8DB3B6338D4AC6}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_CC_Random.et"
+   "{3F18AFBEC79443AC}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_Crew_Random.et"
+  }
  }
- BRDM2 {
+ Zu2 {
   components {
    PS_GroupCallsignAssigner "{68A3601C92B4A58B}" {
     m_iCompanyCallsign 2
     m_iSquadCallsign 1
    }
   }
-  coords 6878.434 5.75 2519.41
-  angles 0 -137.367 0
+  coords 6810.13 5.75 2480.927
+  angles 0 -46.663 0
+  m_aUnitPrefabSlots {
+   "{A7C99EAA24EC8048}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_SL_Random.et"
+   "{AB42C807F3B5FD1F}Prefabs/Characters/Factions/OPFOR/ChDKZ/Char_ChDKZ_SR.et"
+   "{4EE9F8C57C51387B}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_MG_Random.et"
+   "{345A828F3E94D377}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_AMG_Random.et"
+   "{41D4E0AF9842BE4B}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_AT_Random.et"
+   "{448EDFF48D360135}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_LAT_Random.et"
+   "{379AE05E0647D8D3}Prefabs/Characters/Factions/OPFOR/ChDKZ/Char_ChDKZ_Rifleman.et"
+   "{E7117041B898A159}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_Sharpshooter_Random.et"
+   "{BB8DB3B6338D4AC6}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_CC_Random.et"
+   "{3F18AFBEC79443AC}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_Crew_Random.et"
+  }
+ }
+}
+$grp SCR_AIGroup : "{5FDBEB941E76EF1E}Prefabs/Groups/OPFOR/Ses_ChDKZ/RandomSpawn/Attack/Group_ChDKZ_Mechanized_Attack.et" {
+ BRDM1 {
+  components {
+   PS_GroupCallsignAssigner "{68A3601C92B4A58B}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 6860.939 5.75 2525.866
+  angles 0 43.146 0
+  m_sCustomNameSet "Экипаж БРДМ"
+ }
+ BRDM2 {
+  components {
+   PS_GroupCallsignAssigner "{68A3601C92B4A58B}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 1
+   }
+  }
+  coords 6872.812 5.75 2514.819
+  angles 0 45.029 0
   m_sCustomNameSet "Экипаж БРДМ"
  }
 }
@@ -122,11 +123,11 @@ $grp SCR_AIGroup : "{82D2BF4B3C9E996C}Prefabs/Groups/OPFOR/Ses_ChDKZ/RandomSpawn
  DRG1 {
   components {
    PS_GroupCallsignAssigner "{68A3601C92B4A58B}" {
-    m_iCompanyCallsign 3
+    m_iCompanyCallsign 4
    }
   }
-  coords 6546.797 5.75 2403.378
-  angles 0 40.552 0
+  coords 6578.148 5.75 2438.221
+  angles 0 45.076 0
   m_aUnitPrefabSlots {
    "{A7C99EAA24EC8048}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_SL_Random.et"
    "{E0500D19D7A94BFD}Prefabs/Characters/Factions/OPFOR/ChDKZ/Random/Char_ChDKZ_SR_Random.et"
@@ -136,10 +137,10 @@ $grp SCR_AIGroup : "{82D2BF4B3C9E996C}Prefabs/Groups/OPFOR/Ses_ChDKZ/RandomSpawn
   }
   m_sCustomNameSet "Диверсионно-разведывательная группа"
  }
- DRG3 {
+ DRG2 {
   components {
    PS_GroupCallsignAssigner "{68A3601C92B4A58B}" {
-    m_iCompanyCallsign 3
+    m_iCompanyCallsign 4
     m_iSquadCallsign 1
    }
   }
