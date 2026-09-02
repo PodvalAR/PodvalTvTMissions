@@ -1,0 +1,71 @@
+SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
+ coords 2815.944 242.367 14363.124
+}
+PerceptionManager PerceptionManager1 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 2879.808 243.45 14306.872
+}
+PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
+ coords 2944.688 237.183 14326.842
+}
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{6A3E9113B8543C1C}" {
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "ION_WIN"
+     }
+     m_sFailedObjectiveNames {
+      "AFRF_WIN"
+     }
+     m_sMessage "База Захвачена!"
+     m_Timer GUB_ZoneControlTimer "{6A3E911359A3A0BF}" {
+      timeToComplete 150
+     }
+     m_ZoneController GUB_ZoneController "{6A3E911353B33DBF}" {
+      m_sZoneEntityName "CAPTURE"
+     }
+     m_FlagController GUB_FlagController "{6A3E91136C7A81A0}" {
+      m_aFlagNames {
+       "FLAG1"
+       "FLAG2"
+       "FLAG3"
+      }
+      m_fStartFactionKey "RHS_AFRF"
+      m_fEndFactionKey "RHS_ION"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{6A3E911376964F26}" {
+       m_sFirstFactionKey "RHS_ION"
+       m_sSecondFactionKey "RHS_AFRF"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 5139.971 217.533 11545.415
+}
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ AFRF_WIN {
+  coords 5023.154 214.17 11629.005
+  m_sTitle "БАЗА УДЕРЖАНА"
+  m_sFactionKey "RHS_AFRF"
+ }
+ ION_WIN {
+  coords 5011.304 214.331 11605.774
+  m_sTitle "БАЗА ЗАХВАЧЕНА"
+  m_sFactionKey "RHS_ION"
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 851.463 484.662 12613.068
+}

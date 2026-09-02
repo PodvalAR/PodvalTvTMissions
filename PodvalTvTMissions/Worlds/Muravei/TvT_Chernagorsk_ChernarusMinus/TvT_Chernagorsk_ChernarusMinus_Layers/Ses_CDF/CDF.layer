@@ -112,50 +112,65 @@ $grp SCR_AIGroup : "{3F29EA2D79388D65}Prefabs/Groups/BLUFOR/Ses_CDF/Group_A2F_CD
  }
 }
 $grp SCR_AIGroup : "{6449AAD99869C0D5}Prefabs/Groups/BLUFOR/Ses_CDF/Group_A2F_CDF_Squad.et" {
- peh1 {
+ Desant1 {
+  components {
+   PS_GroupCallsignAssigner "{68A30C9A9E8D83F4}" {
+    m_iCompanyCallsign 4
+   }
+  }
+  coords 4237.884 327.406 10839.23
+  angles 0 -119.448 0
+  m_aUnitPrefabSlots {
+   "{98918C4F8902542E}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_SL_Random.et"
+   "{DF081FFC7A479F9B}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_SR_Random.et"
+   "{7E8CF24A35AC6A2D}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_AT_Random.et"
+   "{71B1EA20D1BFEC1D}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_MG_Random.et"
+   "{DF081FFC7A479F9B}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_SR_Random.et"
+   "{D01975FC83367BD9}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_GL_Random.et"
+   "{50C53F58D3742548}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_Rifle_SD_Random.et"
+  }
+  m_sCustomNameSet "Десантное отделение"
+ }
+ Desant2 {
   components {
    PS_GroupCallsignAssigner "{68A30C9A9E8D83F4}" {
     m_iCompanyCallsign 4
     m_iSquadCallsign 1
    }
   }
-  coords 6777.053 324.709 5715.269
-  angles 0 131.203 0
+  coords 4219.811 327.406 10870.702
+  angles 0 -119.47 0
   m_aUnitPrefabSlots {
    "{98918C4F8902542E}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_SL_Random.et"
    "{DF081FFC7A479F9B}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_SR_Random.et"
    "{7E8CF24A35AC6A2D}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_AT_Random.et"
-   "{B2AAD7B334EC1507}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_AAT_Random.et"
    "{71B1EA20D1BFEC1D}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_MG_Random.et"
    "{DF081FFC7A479F9B}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_SR_Random.et"
-   "{50C53F58D3742548}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_Rifle_SD_Random.et"
    "{D01975FC83367BD9}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_GL_Random.et"
-   "{7AB6CF75D8A31BEB}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_Rifle_Random.et"
-   "{2C802DE0AEBE184A}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_Sniper_Random.et"
+   "{50C53F58D3742548}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_Rifle_SD_Random.et"
   }
-  m_sCustomNameSet "Пехотное отделение"
+  m_sCustomNameSet "Десантное отделение"
  }
- peh2 {
+}
+$grp SCR_AIGroup : "{6BF534002C76924B}Prefabs/Groups/BLUFOR/Ses_CDF/Group_A2F_CDF_Heli.et" {
+ Heli2 {
   components {
    PS_GroupCallsignAssigner "{68A30C9A9E8D83F4}" {
-    m_iCompanyCallsign 4
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 1
    }
   }
-  coords 6764.504 327.418 5700.451
-  angles 0 126.919 0
-  m_aUnitPrefabSlots {
-   "{98918C4F8902542E}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_SL_Random.et"
-   "{DF081FFC7A479F9B}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_SR_Random.et"
-   "{7E8CF24A35AC6A2D}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_AT_Random.et"
-   "{B2AAD7B334EC1507}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_AAT_Random.et"
-   "{71B1EA20D1BFEC1D}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_MG_Random.et"
-   "{DF081FFC7A479F9B}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_SR_Random.et"
-   "{D01975FC83367BD9}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_GL_Random.et"
-   "{7AB6CF75D8A31BEB}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_Rifle_Random.et"
-   "{50C53F58D3742548}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_Rifle_SD_Random.et"
-   "{2C802DE0AEBE184A}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Random/Char_A2F_CDF_Sniper_Random.et"
+  coords 4211.087 327.419 10862.842
+  angles 0 -121.456 0
+ }
+ Heli1 {
+  components {
+   PS_GroupCallsignAssigner "{68A30C9A9E8D83F4}" {
+    m_iCompanyCallsign 3
+   }
   }
-  m_sCustomNameSet "Пехотное отделение"
+  coords 4228.483 327.406 10832.336
+  angles 0 -124.798 0
  }
 }
 SCR_AIGroup KScdf : "{97AF8D3CEBA87BBE}Prefabs/Groups/BLUFOR/Ses_CDF/RandomSpawn/Attack/Group_A2F_CDF_PL_3_Attack.et" {
