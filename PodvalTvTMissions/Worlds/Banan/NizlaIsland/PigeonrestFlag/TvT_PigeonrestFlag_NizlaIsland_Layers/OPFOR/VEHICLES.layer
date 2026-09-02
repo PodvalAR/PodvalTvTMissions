@@ -1,39 +1,35 @@
-$grp Vehicle : "{0B4DEA8078B78A9B}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_PKM.et" {
- UAZ469_PKM1 {
-  coords 6012.625 18.341 7645.714
-  angles 0 86.724 0
-  m_sAttachmentGroupName "AFRF_300_SPN"
- }
- UAZ469_PKM2 {
-  coords 6132.964 15.553 7681.215
-  angles -2.195 9.567 -0.123
-  m_sAttachmentGroupName "AFRF_301_SPN"
- }
+GenericEntity : "{144AA3DABB80974C}Prefabs/Weapons/Tripods/9K135/Part_9K135TB_Launcher.et" {
+ coords 5953.712 19.14 7658.005
+ angles 0.067 9.373 -89.082
 }
-$grp Vehicle : "{16A674FE31B0921C}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_uncovered.et" {
- UAZ469_uncovered1 {
-  coords 6018.961 18.309 7646.112
-  angles 0 85.617 0
-  m_sAttachmentGroupName "AFRF_300_SPN"
- }
- UAZ469_uncovered2 {
-  coords 6133.94 15.296 7689.52
-  angles 0 5.928 0
-  m_sAttachmentGroupName "AFRF_301_SPN"
- }
-}
-Vehicle GAZ_TIGR_v2_KORD_SSP_ARMOR_CAMO1 : "{5C38170BFBE9F966}Prefabs/Vehicles/Wheeled/TIGR/KORD/GAZ_TIGR_v2_KORD_SSP_ARMOR_CAMO.et" {
- coords 5956.128 18.807 7659.196
- angles -1.063 119.908 0
- m_sAttachmentGroupName "AFRF_200_Moto"
-}
-Vehicle GAZ_TIGR_v2_Arbalet_KORD1 : "{7A21F47E09038E58}Prefabs/Vehicles/Wheeled/TIGR/ArbaletDM/GAZ_TIGR_v2_Arbalet_KORD.et" {
- coords 5948.518 18.911 7664.333
- angles 0 124.59 0
- m_sAttachmentGroupName "AFRF_200_Moto"
-}
-Vehicle BTR72a_camo1 : "{C95038CAE8C8DB1B}Prefabs/Vehicles/Wheeled/BTR70/BTR72a_camo.et" {
- coords 6083.353 17.856 7656.972
- angles 0 78.798 0
+Vehicle BTR70_AFRF_camo1 : "{447CFE8D73F95C3F}Prefabs/Vehicles/Wheeled/BTR70/BTR70_AFRF_camo.et" {
+ coords 6085.121 17.845 7657.414
+ angles 0 76.27 0
  m_sAttachmentGroupName "AFRF_201_CREW"
+}
+$grp Vehicle : "{5C38170BFBE9F966}Prefabs/Vehicles/Wheeled/TIGR/KORD/GAZ_TIGR_v2_KORD_SSP_ARMOR_CAMO.et" {
+ GAZ_TIGR_v2_KORD_SSP_ARMOR_CAMO1 {
+  coords 6015.65 18.325 7645.883
+  angles -0.882 85.987 0.593
+  m_sAttachmentGroupName "AFRF_300_SPN"
+ }
+ GAZ_TIGR_v2_KORD_SSP_ARMOR_CAMO2 {
+  coords 6133.476 15.402 7685.522
+  angles 0 6.044 0
+  m_sAttachmentGroupName "AFRF_301_SPN"
+ }
+}
+$grp GenericEntity : "{B0A890995104A02D}Prefabs/Weapons/Tripods/9K135/Part_9K135_Launcher.et" {
+ {
+  coords 5954.461 19.13 7657.693
+  angles -0.146 9.373 -89.117
+ }
+ {
+  coords 5954.061 19.137 7657.872
+  angles -0.146 9.373 -90
+ }
+}
+Turret : "{F30D7FB86B0543A6}Prefabs/Weapons/Tripods/9K135/Deployable_Tripod_9K135_v2.et" {
+ coords 5955.157 18.836 7656.692
+ angles 0 27.101 0
 }
