@@ -3,11 +3,13 @@ $grp Vehicle : "{208FEE0BF258449B}Prefabs/Scenarios/SP01/SP01_UAZ469_USSR.et" {
   coords 6650.757 25.67 3896.662
   angles 0.182 -40.87 -2.524
   m_sAttachmentGroupName "DEF_PTUR1"
+  m_bEnableMoveOnFreeze 1
  }
  SP01_UAZ469_USSR2 {
   coords 6641.513 25.175 3888.833
   angles 0.724 -42.244 -1.866
   m_sAttachmentGroupName "DEF_PTUR2"
+  m_bEnableMoveOnFreeze 1
  }
 }
 $grp Vehicle : "{7009ED8FBA7A1E7E}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_engineer_sand.et" {
@@ -19,6 +21,13 @@ $grp Vehicle : "{7009ED8FBA7A1E7E}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_eng
       NumSlots 300
      }
     }
+   }
+   SCR_VehicleDustPerWheel "{5476BC43E4910F64}" {
+    m_aWheels +{
+     4
+     5
+    }
+    m_fDustTopSpeed 60
    }
    SCR_VehicleDustPerWheel "{5476BC43E4910F64}" {
     m_aWheels +{
@@ -40,6 +49,13 @@ $grp Vehicle : "{7009ED8FBA7A1E7E}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_eng
       NumSlots 300
      }
     }
+   }
+   SCR_VehicleDustPerWheel "{5476BC43E4910F64}" {
+    m_aWheels +{
+     4
+     5
+    }
+    m_fDustTopSpeed 60
    }
    SCR_VehicleDustPerWheel "{5476BC43E4910F64}" {
     m_aWheels +{
