@@ -1,12 +1,29 @@
 $grp Vehicle : "{24C2DDAB6129F316}Prefabs/Vehicles/Wheeled/M151A2/M151A2.et" {
+ M151A2 {
+  coords 1739.623 214.231 13107.064
+  angles -6.662 94.628 -0.538
+  m_sAttachmentGroupName "SPN_ION2"
+ }
  M151A1 {
-  coords 1969.115 185.055 13088.786
-  angles -1.446 94.598 1.23
+  coords 1719.437 216.572 13108.713
+  angles -6.692 91.297 0.294
   m_sAttachmentGroupName "SPN_ION1"
  }
- M151A2 {
-  coords 1976.201 184.839 13088.195
-  angles -2.301 94.587 0.713
+}
+Vehicle dim_LWB_Mk1 : "{6EADB67E99CA3D04}Prefabs/Vehicles/Wheeled/LR_3Series/dim_LWB_Mk19.et" {
+ coords 1653.143 262.671 9588.414
+ angles 1 24.38 -0.038
+ m_sAttachmentGroupName "SQUAD1"
+}
+$grp Vehicle : "{6F01946EE0B0A8B8}Prefabs/Vehicles/Wheeled/M151A2/M151A2_M2HB.et" {
+ M151A2_M2HB1 {
+  coords 1731.893 215.133 13107.505
+  angles -6.699 93.818 -0.001
+  m_sAttachmentGroupName "SPN_ION2"
+ }
+ M151A2_M2HB2 {
+  coords 1713.238 217.299 13108.848
+  angles -6.692 91.164 0.309
   m_sAttachmentGroupName "SPN_ION1"
  }
 }
@@ -51,34 +68,33 @@ $grp Vehicle : "{9C5C813B65D932F7}Prefabs/Vehicles/Helicopters/MH-6J/MH-6J_Doors
   angles 0 28.495 0
   m_sAttachmentGroupName "PILOTS4"
  }
- MH_6J_Doors9 {
-  coords 4964.472 238.906 14546.081
-  angles 0 28.495 0
-  m_sAttachmentGroupName "PILOTS5"
+}
+$grp Vehicle : "{A0D149E9551D0A2B}Prefabs/Vehicles/Wheeled/Conflict_Variants/BF_BRDM2_Conflict_UK_rarden.et" {
+ BF_BRDM2_Conflict_UK_rarden1 {
+  coords 1672.667 263.325 9624.482
+  angles 0.998 22.133 -0.077
+  m_sAttachmentGroupName "SQUAD2"
  }
- MH_6J_Doors10 {
-  coords 4930.252 238.906 14566.556
-  angles 0 28.495 0
-  m_sAttachmentGroupName "PILOTS5"
+ BF_BRDM2_Conflict_UK_rarden2 {
+  coords 1677.9 263.807 9654.711
+  angles 0.993 19.282 -0.127
+  m_sAttachmentGroupName "SQUAD3"
  }
- MH_6J_Doors12 {
-  coords 4761.874 238.906 14664.471
-  angles 0 28.495 0
-  m_sAttachmentGroupName "PILOTS7"
+}
+$grp Vehicle : "{D8FD77F7A4CC7ED6}Prefabs/Vehicles/Wheeled/M1083/Armed/M1083_Transport_Covered_Armed_Woodland.et" {
+ M1083_Transport_Covered_Armed_Woodland1 {
+  coords 1673.105 263.578 9641.977
+  angles 0.412 23.103 0.176
+  m_sAttachmentGroupName "SQUAD3"
  }
- MH_6J_Doors11 {
-  coords 4800.911 238.906 14643.027
-  angles 0 28.495 0
-  m_sAttachmentGroupName "PILOTS7"
+ M1083_Transport_Covered_Armed_Woodland2 {
+  coords 1668.147 263.125 9613.988
+  angles 0.997 21.688 -0.085
+  m_sAttachmentGroupName "SQUAD2"
  }
- MH_6J_Doors14 {
-  coords 4887.399 238.906 14589.619
-  angles 0 30.612 0
-  m_sAttachmentGroupName "PILOTS6"
- }
- MH_6J_Doors13 {
-  coords 4849.611 238.906 14612.377
-  angles 0 30.612 0
-  m_sAttachmentGroupName "PILOTS6"
- }
+}
+Vehicle _Series_LWB_Transport_tow1 : "{E250883F6CAC0DF6}Prefabs/Vehicles/Wheeled/LR_3Series/3Series_LWB_Transport_tow.et" {
+ coords 1656.751 262.823 9596.294
+ angles 1.001 25.316 -0.022
+ m_sAttachmentGroupName "SQUAD1"
 }
