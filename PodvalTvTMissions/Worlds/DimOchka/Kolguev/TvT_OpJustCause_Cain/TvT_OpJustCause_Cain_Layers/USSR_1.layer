@@ -1,0 +1,286 @@
+$grp Vehicle : "{208FEE0BF258449B}Prefabs/Scenarios/SP01/SP01_UAZ469_USSR.et" {
+ SP01_UAZ469_USSR1 {
+  coords 6650.757 25.67 3896.662
+  angles 0.182 -40.87 -2.524
+  m_sAttachmentGroupName "DEF_PTUR1"
+ }
+ SP01_UAZ469_USSR2 {
+  coords 6641.513 25.175 3888.833
+  angles 0.724 -42.244 -1.866
+  m_sAttachmentGroupName "DEF_PTUR2"
+ }
+}
+$grp Vehicle : "{7009ED8FBA7A1E7E}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_engineer_sand.et" {
+ Ural4320_engineer_sand1 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{5916C58171230A92}" {
+    MultiSlots {
+     MultiSlotConfiguration "{65C300964ED41EAF}" {
+      NumSlots 300
+     }
+    }
+   }
+   SCR_VehicleDustPerWheel "{5476BC43E4910F64}" {
+    m_aWheels +{
+     4
+     5
+    }
+    m_fDustTopSpeed 60
+   }
+  }
+  coords 6621.09 25.202 3903.808
+  angles -0.118 140.333 1.26
+  m_bEnableMoveOnFreeze 1
+ }
+ Ural4320_engineer_sand2 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{5916C58171230A92}" {
+    MultiSlots {
+     MultiSlotConfiguration "{65C300964ED41EAF}" {
+      NumSlots 300
+     }
+    }
+   }
+   SCR_VehicleDustPerWheel "{5476BC43E4910F64}" {
+    m_aWheels +{
+     4
+     5
+    }
+    m_fDustTopSpeed 60
+   }
+  }
+  coords 6626.924 25.493 3908.858
+  angles -0.068 136.54 2.53
+  m_bEnableMoveOnFreeze 1
+ }
+}
+$grp SCR_AIGroup : "{84AF92E239A71FCE}Prefabs/Groups/OPFOR/USSR/Group_USSR_Rifle_SQ.et" {
+ AT_RUS1 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 3
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 6663.281 26.146 3903.489
+  angles 0 53.512 0
+  m_aUnitPrefabSlots {
+   "{B047735D9E2CDB80}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/KLMK/dim_VDV_Vanilla_KLMK_SL.et"
+   "{118FE9C91F5CE369}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/KLMK/dim_VDV_Vanilla_KLMK_Rifleman.et"
+  }
+  m_sCustomNameSet "Экипаж ЗУ-23"
+ }
+ AT_HQ1 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 6650.579 26.37 3933.669
+  angles 0 138.814 0
+  m_aUnitPrefabSlots {
+   "{2959CAC483CBEA10}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/KLMK/dim_VDV_Vanilla_KLMK_PL.et"
+  }
+  m_sCustomNameSet "Командир 5 роты 420-й МРП СФ"
+ }
+ AT_IGLA {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 6657.643 26.076 3898.642
+  angles 0 -43.129 0
+  m_aUnitPrefabSlots {
+   "{B047735D9E2CDB80}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/KLMK/dim_VDV_Vanilla_KLMK_SL.et"
+   "{0EBB4F80634760C0}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/KLMK/dim_VDV_Vanilla_KLMK_IGLA.et"
+   "{0EBB4F80634760C0}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/KLMK/dim_VDV_Vanilla_KLMK_IGLA.et"
+  }
+  m_sCustomNameSet "Расчет ПЗРК"
+ }
+ AT_RUS3 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 6647.692 26.332 3931.228
+  angles 0 140.335 0
+  m_aUnitPrefabSlots {
+   "{B047735D9E2CDB80}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/KLMK/dim_VDV_Vanilla_KLMK_SL.et"
+   "{CD5F9FA5FBBFE719}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/KLMK/dim_VDV_Vanilla_KLMK_SR.et"
+   "{0567EB83D52167CF}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/KLMK/dim_VDV_Vanilla_KLMK_AT.et"
+   "{07814B816B684EF2}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/KLMK/dim_VDV_Vanilla_KLMK_AAT.et"
+   "{CD5F9FA5FBBFE719}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/KLMK/dim_VDV_Vanilla_KLMK_SR.et"
+   "{118FE9C91F5CE369}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/KLMK/dim_VDV_Vanilla_KLMK_Rifleman.et"
+   "{114E77497AB5F0FC}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/KLMK/dim_VDV_Vanilla_KLMK_Sapper.et"
+  }
+  m_sCustomNameSet "СпН (Морская пехота)"
+ }
+ AT_GRU1 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 4
+   }
+  }
+  coords 5931.86 14.188 3144.706
+  angles 0 171.876 0
+  m_aUnitPrefabSlots {
+   "{52834B2D20366D46}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/KLMK/dim_GRU_KLMK_SL.et"
+   "{2F9BA7D545A551DF}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/KLMK/dim_GRU_KLMK_SR.et"
+   "{E7A3D3F36B3BD109}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/KLMK/dim_GRU_KLMK_AT.et"
+   "{F726136B56BF178B}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/KLMK/dim_GRU_KLMK_RPO_2.et"
+   "{52CABD62D25F553C}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/KLMK/dim_GRU_KLMK_Sapper.et"
+   "{9431B8AA1B24CFB6}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/KLMK/dim_GRU_KLMK_Medic.et"
+   "{3C472503E5701AD6}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/KLMK/dim_GRU_KLMK_Sniper.et"
+  }
+  m_sCustomNameSet "СпН (Разведка)"
+ }
+ AT_GRU2 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 4
+    m_iSquadCallsign 1
+   }
+  }
+  coords 6050.055 181.325 4545.176
+  angles 0 146.005 0
+  m_aUnitPrefabSlots {
+   "{52834B2D20366D46}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/KLMK/dim_GRU_KLMK_SL.et"
+   "{2F9BA7D545A551DF}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/KLMK/dim_GRU_KLMK_SR.et"
+   "{E7A3D3F36B3BD109}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/KLMK/dim_GRU_KLMK_AT.et"
+   "{F726136B56BF178B}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/KLMK/dim_GRU_KLMK_RPO_2.et"
+   "{52CABD62D25F553C}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/KLMK/dim_GRU_KLMK_Sapper.et"
+   "{9431B8AA1B24CFB6}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/KLMK/dim_GRU_KLMK_Medic.et"
+   "{3C472503E5701AD6}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/KLMK/dim_GRU_KLMK_Sniper.et"
+  }
+  m_sCustomNameSet "СпН (Разведка)"
+ }
+ AT_RUS2 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 3
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 6671.029 26.146 3911.044
+  angles 0 49.753 0
+  m_aUnitPrefabSlots {
+   "{B047735D9E2CDB80}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/KLMK/dim_VDV_Vanilla_KLMK_SL.et"
+   "{118FE9C91F5CE369}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/KLMK/dim_VDV_Vanilla_KLMK_Rifleman.et"
+  }
+  m_sCustomNameSet "Экипаж ЗУ-23"
+ }
+ AT_RUS4 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 6616.453 24.883 3891.564
+  angles 0 48.336 0
+  m_aUnitPrefabSlots {
+   "{B199DDF22D5E3806}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_SL.et"
+   "{CC81310A48CD049F}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_SR.et"
+   "{04B9452C66538449}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_AT.et"
+   "{9BDF05D9B061FE61}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_AAT.et"
+   "{CC81310A48CD049F}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_SR.et"
+   "{DC112CED1FDA9A15}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_AR.et"
+   "{9ED75DF101539F93}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_Sapper.et"
+  }
+  m_sCustomNameSet "Морская пехота"
+ }
+ AT_HQ2 {
+  coords 6613.675 24.92 3894.586
+  angles 0 47.138 0
+  m_aUnitPrefabSlots {
+   "{F4F6BDE125BEE666}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/dim_USSR_Marine_PL.et"
+  }
+  m_sCustomNameSet "Командир гарнизона г. Угольдар"
+ }
+ AT_RUS5 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 6623.556 24.829 3883.329
+  angles 0 48.717 0
+  m_aUnitPrefabSlots {
+   "{B199DDF22D5E3806}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_SL.et"
+   "{CC81310A48CD049F}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_SR.et"
+   "{8E06F2F771958EF6}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_MG.et"
+   "{1160B202A7A7F4DE}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_AMG.et"
+   "{CC81310A48CD049F}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_SR.et"
+   "{320908931A590EC2}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_Rifleman.et"
+   "{568706A4EA6098BA}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_LAT.et"
+  }
+  m_sCustomNameSet "Морская пехота"
+ }
+ AT_RUS6 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 6631.073 24.829 3874.766
+  angles 0 48.717 0
+  m_aUnitPrefabSlots {
+   "{B199DDF22D5E3806}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_SL.et"
+   "{CC81310A48CD049F}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_SR.et"
+   "{8E06F2F771958EF6}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_MG.et"
+   "{1160B202A7A7F4DE}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_AMG.et"
+   "{CC81310A48CD049F}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_SR.et"
+   "{320908931A590EC2}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_Rifleman.et"
+   "{568706A4EA6098BA}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/dim_VDV_Vanilla_LAT.et"
+  }
+  m_sCustomNameSet "Морская пехота"
+ }
+ AT_PTUR1 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 6649.104 25.391 3890.643
+  angles 0 -43.129 0
+  m_aUnitPrefabSlots {
+   "{B047735D9E2CDB80}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/KLMK/dim_VDV_Vanilla_KLMK_SL.et"
+   "{118FE9C91F5CE369}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/KLMK/dim_VDV_Vanilla_KLMK_Rifleman.et"
+  }
+  m_sCustomNameSet "Расчет 9К135 \"Корнет\""
+ }
+ AT_PTUR2 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 2
+   }
+  }
+  coords 6639.841 26.499 3881.966
+  angles 0 -43.129 0
+  m_aUnitPrefabSlots {
+   "{B047735D9E2CDB80}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/KLMK/dim_VDV_Vanilla_KLMK_SL.et"
+   "{118FE9C91F5CE369}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/USSR_Marines/VDV/KLMK/dim_VDV_Vanilla_KLMK_Rifleman.et"
+  }
+  m_sCustomNameSet "Расчет 9К135 \"Корнет\""
+ }
+}
+$grp Vehicle : "{FD109F3702AAB393}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_ZU23.et" {
+ Ural4320_ZU2 {
+  coords 6669.213 26.272 3906.169
+  angles 0.098 -40.571 -1.262
+  m_sAttachmentGroupName "DEF_RUS1"
+ }
+ Ural4320_ZU1 {
+  coords 6676.074 26.344 3911.954
+  angles 0 -39.775 0
+  m_sAttachmentGroupName "DEF_RUS2"
+ }
+}

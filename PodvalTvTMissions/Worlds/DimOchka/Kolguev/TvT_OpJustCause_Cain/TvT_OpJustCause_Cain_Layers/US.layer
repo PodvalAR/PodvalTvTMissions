@@ -1,0 +1,315 @@
+$grp Vehicle : "{016DEB59D539D387}Prefabs/Vehicles/Helicopters/AH1S/AH1S_Marines_x3_Opt.et" {
+ AH1S_Marines_x3_Opt1 {
+  coords 11056.925 35.673 1665.188
+  angles -0.894 86.804 0.05
+  m_sAttachmentGroupName "AT_PIL2"
+ }
+ AH1S_Marines_x3_Opt2 {
+  coords 11059.115 35.556 1625.959
+  angles -3.571 86.794 0.2
+  m_sAttachmentGroupName "AT_PIL"
+ }
+}
+$grp SCR_AIGroup : "{15062749E6AB45DE}Prefabs/Groups/BLUFOR/US/Regular/Group_US_Regular_PL.et" {
+ AT_HQ {
+  coords 8282.913 49.298 6757.54
+  angles 0 -41.357 0
+  m_sCustomNameSet "Ком. 1-го батальона 2 дивизии КМП США"
+ }
+ PIL {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 4
+   }
+  }
+  coords 11113.467 35.688 1651.215
+  angles 0 178.005 0
+  m_aUnitPrefabSlots {
+   "{D4ABE04C7E1B6F59}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_HeliPilot.et"
+   "{29119BCA182D3062}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_HeliCoPilot.et"
+  }
+  m_sCustomNameSet "Экипаж вертолета"
+ }
+ PIL2 {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 4
+    m_iSquadCallsign 1
+   }
+  }
+  coords 11088.971 35.688 1650.361
+  angles 0 178.005 0
+  m_aUnitPrefabSlots {
+   "{D4ABE04C7E1B6F59}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_HeliPilot.et"
+   "{29119BCA182D3062}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_HeliCoPilot.et"
+  }
+  m_sCustomNameSet "Экипаж вертолета"
+ }
+}
+$grp Vehicle : "{3312ADBF53A16DD9}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS.et" {
+ LAV25_RHS2 {
+  coords 4015.306 31.269 3882.723
+  angles 2.738 122.981 0.71
+  m_sAttachmentGroupName "AT_LAV"
+ }
+ LAV25_RHS3 {
+  coords 4003.302 30.729 3889.963
+  angles 1.994 121.254 0.163
+  m_sAttachmentGroupName "AT_LAV2"
+ }
+ LAV25_RHS4 {
+  coords 8265.299 48.549 6731.284
+  angles 2.82 14 -0.219
+  m_sAttachmentGroupName "AT_LAV3"
+ }
+}
+$grp Vehicle : "{47D94E1193A88497}Prefabs/Vehicles/Wheeled/M151A2/M151A2_transport.et" {
+ M151A2_transport3 {
+  coords 8280.279 49.339 6760.539
+  angles -0.633 45.04 0.632
+  m_sAttachmentGroupName "AT_HQ"
+ }
+ M151A2_transport1 {
+  coords 8262.182 47.872 6719.97
+  angles 4.467 0 0
+  m_sAttachmentGroupName "AT_SQ2"
+ }
+}
+Vehicle M923A1_transport_covered1 : "{81FDAD5EB644CC3D}Prefabs/Vehicles/Wheeled/M923A1/M923A1_transport_covered.et" {
+ coords 8263.525 47.346 6711.917
+ angles 3.686 -14.036 0
+ m_sAttachmentGroupName "AT_SQ2"
+}
+$grp Vehicle : "{999FC99369291EA4}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed_AP.et" {
+ UH1H_armed_AP1 {
+  coords 11089.008 35.576 1638.828
+  angles 0.893 -3.998 -0.062
+  m_sAttachmentGroupName "AT_PIL2"
+ }
+ UH1H_armed_AP2 {
+  coords 11113.408 35.688 1640.533
+  angles 0 -3.998 0
+  m_sAttachmentGroupName "AT_PIL"
+ }
+}
+$grp Vehicle : "{B995CA2A76E7924A}Prefabs/Vehicles/Wheeled/M998/dim_M1025_armed_M2HB1.et" {
+ dim_M1025_armed_M2HB1 {
+  coords 4024.217 31.773 3876.618
+  angles 3.224 124.584 0.05
+  m_sAttachmentGroupName "AT_SQ"
+ }
+ dim_M1025_armed_M2HB2 {
+  coords 4030.903 32.202 3871.768
+  angles 2.761 121.043 0.617
+  m_sAttachmentGroupName "AT_SQ"
+ }
+ dim_M1025_armed_M2HB5 {
+  coords 8272.999 49.262 6751.875
+  angles 1.993 31.672 0.178
+  m_sAttachmentGroupName "AT_SQ3"
+ }
+ dim_M1025_armed_M2HB6 {
+  coords 8268.896 49.001 6743.58
+  angles 1.994 21.622 -0.172
+  m_sAttachmentGroupName "AT_SQ3"
+ }
+}
+$grp SCR_AIGroup : "{EE2BCF5671083A76}Prefabs/Groups/BLUFOR/US/Regular/Group_US_Regular_Squad.et" {
+ AT_BL1 {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 5
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 6769.37 157.177 5054.631
+  angles 0 178.743 0
+  m_aUnitPrefabSlots {
+   "{3B04A8A248B584BE}Prefabs/Characters/Factions/BLUFOR/US/SPN/BlackOps/dim_US_BlackOps_SL.et"
+   "{FFA2C66FE2243A06}Prefabs/Characters/Factions/BLUFOR/US/SPN/BlackOps/dim_US_BlackOps_Rifleman.et"
+   "{DF37375037233FCA}Prefabs/Characters/Factions/BLUFOR/US/SPN/BlackOps/dim_US_BlackOps_SPN_Sniper.et"
+  }
+  m_sCustomNameSet "Black ops"
+ }
+ AT_LAV {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 4021.852 31.333 3887.104
+  angles 0 -147.384 0
+  m_aUnitPrefabSlots {
+   "{BF6034039839323E}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_SL.et"
+   "{B8A7CE52FEBF88FD}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_TL.et"
+   "{5C7D45C7E961BB47}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_AR.et"
+   "{51A83BE61ED6D26D}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_GL.et"
+   "{CC14C9922C73BE77}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_LAT.et"
+   "{B8A7CE52FEBF88FD}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_TL.et"
+   "{C1EA5E8B4B295153}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_Rifle_2.et"
+   "{DE10FE7CC057F751}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_CC.et"
+   "{A5EA776B389D1583}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_Crew.et"
+  }
+  m_sCustomNameSet "#PDVL_Squad_Motorized"
+ }
+ AT_LAV2 {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 4009.878 30.758 3895.042
+  angles 0 -149.57 0
+  m_aUnitPrefabSlots {
+   "{BF6034039839323E}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_SL.et"
+   "{B8A7CE52FEBF88FD}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_TL.et"
+   "{5C7D45C7E961BB47}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_AR.et"
+   "{51A83BE61ED6D26D}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_GL.et"
+   "{CC14C9922C73BE77}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_LAT.et"
+   "{B8A7CE52FEBF88FD}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_TL.et"
+   "{CC14C9922C73BE77}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_LAT.et"
+   "{DE10FE7CC057F751}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_CC.et"
+   "{A5EA776B389D1583}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_Crew.et"
+  }
+  m_sCustomNameSet "#PDVL_Squad_Motorized"
+ }
+ AT_SQ {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 4032.896 31.953 3879.79
+  angles 0 -145.785 0
+  m_aUnitPrefabSlots {
+   "{BF6034039839323E}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_SL.et"
+   "{B8A7CE52FEBF88FD}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_TL.et"
+   "{5C7D45C7E961BB47}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_AR.et"
+   "{51A83BE61ED6D26D}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_GL.et"
+   "{670BA84233CA3A0B}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_Sapper.et"
+   "{B8A7CE52FEBF88FD}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_TL.et"
+   "{51A83BE61ED6D26D}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_GL.et"
+   "{C1EA5E8B4B295153}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_Rifle_2.et"
+  }
+  m_sCustomNameSet "Стрелковое отделение на М2"
+ }
+ AT_SQ3 {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 8272.035 48.938 6739.936
+  angles 0 -64.499 0
+  m_aUnitPrefabSlots {
+   "{BF6034039839323E}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_SL.et"
+   "{B8A7CE52FEBF88FD}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_TL.et"
+   "{5C7D45C7E961BB47}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_AR.et"
+   "{51A83BE61ED6D26D}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_GL.et"
+   "{670BA84233CA3A0B}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_Sapper.et"
+   "{B8A7CE52FEBF88FD}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_TL.et"
+   "{51A83BE61ED6D26D}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_GL.et"
+   "{ADBE6A6BF7EDDE7D}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_Rifle_1.et"
+  }
+  m_sCustomNameSet "Стрелковое отделение на М2"
+ }
+ AT_BL2 {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 5
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 7212.317 46.556 4779.863
+  angles -8.327 166.545 -7.982
+  m_aUnitPrefabSlots {
+   "{4F9CDADB664E989B}Prefabs/Characters/Factions/BLUFOR/US/SPN/BlackOps/dim_US_BlackOps_SL_2.et"
+   "{063E253AA92FABCC}Prefabs/Characters/Factions/BLUFOR/US/SPN/BlackOps/dim_US_BlackOps_Rifleman_2.et"
+   "{6ADAB24C7B859D53}Prefabs/Characters/Factions/BLUFOR/US/SPN/BlackOps/dim_US_BlackOps_Sapper.et"
+  }
+  m_sCustomNameSet "Black ops"
+ }
+ BL3 {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 5
+   }
+  }
+  coords 11106.444 35.688 1642.83
+  angles 0 86.083 0
+  m_aUnitPrefabSlots {
+   "{B3FF14E5B81D4876}Prefabs/Characters/Factions/BLUFOR/US/SPN/LR/dim_US_Reg_SPN_SL.et"
+   "{A46C5FC4BB280D7E}Prefabs/Characters/Factions/BLUFOR/US/SPN/LR/dim_US_Reg_SPN_RTO.et"
+   "{D3A29BDB7D2E834F}Prefabs/Characters/Factions/BLUFOR/US/SPN/LR/dim_US_Reg_SPN_GL.et"
+   "{3F10653DED028F23}Prefabs/Characters/Factions/BLUFOR/US/SPN/LR/dim_US_Reg_SPN_LMG.et"
+   "{F78CE24C0E49CADD}Prefabs/Characters/Factions/BLUFOR/US/SPN/LR/dim_US_Reg_SPN_Rifleman.et"
+   "{CB349682B3FEDA32}Prefabs/Characters/Factions/BLUFOR/US/SPN/LR/dim_US_Reg_SPN_Sapper.et"
+   "{296D5EA61F3253C0}Prefabs/Characters/Factions/BLUFOR/US/SPN/LR/dim_US_Reg_SPN_Medic.et"
+   "{2D7A983A16F10930}Prefabs/Characters/Factions/BLUFOR/US/SPN/LR/dim_US_Reg_SPN_Sniper_2.et"
+  }
+  m_sCustomNameSet "СпН КМП США"
+ }
+ AT_LAV3 {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 8267.443 48.239 6725.826
+  angles 0.965 -74.359 -3.444
+  m_aUnitPrefabSlots {
+   "{BF6034039839323E}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_SL.et"
+   "{B8A7CE52FEBF88FD}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_TL.et"
+   "{5C7D45C7E961BB47}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_AR.et"
+   "{51A83BE61ED6D26D}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_GL.et"
+   "{CC14C9922C73BE77}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_LAT.et"
+   "{B8A7CE52FEBF88FD}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_TL.et"
+   "{CC14C9922C73BE77}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_LAT.et"
+   "{DE10FE7CC057F751}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_CC.et"
+   "{A5EA776B389D1583}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_Crew.et"
+  }
+  m_sCustomNameSet "#PDVL_Squad_Motorized"
+ }
+ BL4 {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 5
+    m_iSquadCallsign 1
+   }
+  }
+  coords 11096.755 35.688 1635.409
+  angles 0 -92.408 0
+  m_aUnitPrefabSlots {
+   "{B3FF14E5B81D4876}Prefabs/Characters/Factions/BLUFOR/US/SPN/LR/dim_US_Reg_SPN_SL.et"
+   "{A46C5FC4BB280D7E}Prefabs/Characters/Factions/BLUFOR/US/SPN/LR/dim_US_Reg_SPN_RTO.et"
+   "{D3A29BDB7D2E834F}Prefabs/Characters/Factions/BLUFOR/US/SPN/LR/dim_US_Reg_SPN_GL.et"
+   "{3F10653DED028F23}Prefabs/Characters/Factions/BLUFOR/US/SPN/LR/dim_US_Reg_SPN_LMG.et"
+   "{F78CE24C0E49CADD}Prefabs/Characters/Factions/BLUFOR/US/SPN/LR/dim_US_Reg_SPN_Rifleman.et"
+   "{CB349682B3FEDA32}Prefabs/Characters/Factions/BLUFOR/US/SPN/LR/dim_US_Reg_SPN_Sapper.et"
+   "{296D5EA61F3253C0}Prefabs/Characters/Factions/BLUFOR/US/SPN/LR/dim_US_Reg_SPN_Medic.et"
+   "{2D7A983A16F10930}Prefabs/Characters/Factions/BLUFOR/US/SPN/LR/dim_US_Reg_SPN_Sniper_2.et"
+  }
+  m_sCustomNameSet "СпН КМП США"
+ }
+ AT_SQ2 {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 2
+   }
+  }
+  coords 8269.209 48.938 6712.562
+  angles 0 -99.907 0
+  m_aUnitPrefabSlots {
+   "{BF6034039839323E}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_SL.et"
+   "{ADBE6A6BF7EDDE7D}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_Rifle_1.et"
+   "{C1EA5E8B4B295153}Prefabs/Characters/Factions/BLUFOR/US/Regular/NoRadio/Char_US_Regular_NoRadio_Rifle_2.et"
+  }
+  m_sCustomNameSet "Расчет миномета М252"
+ }
+}
