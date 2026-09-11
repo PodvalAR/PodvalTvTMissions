@@ -76,6 +76,20 @@ $grp Vehicle : "{47D94E1193A88497}Prefabs/Vehicles/Wheeled/M151A2/M151A2_transpo
  }
 }
 Vehicle M923A1_transport_covered1 : "{81FDAD5EB644CC3D}Prefabs/Vehicles/Wheeled/M923A1/M923A1_transport_covered.et" {
+ components {
+  SCR_UniversalInventoryStorageComponent "{5916C580F1DA28BB}" {
+   MultiSlots {
+    MultiSlotConfiguration "{5A60CECA66163838}" {
+     SlotTemplate InventoryStorageSlot Bandages {
+      Prefab "{6113990D163E5249}Prefabs/Items/Equipment/BallisticTable/BallisticTable_US.et"
+     }
+    }
+   }
+  }
+  SCR_VehicleDustPerWheel "{5476BC43E4910F64}" {
+   m_fDustTopSpeed 60
+  }
+ }
  coords 8263.525 47.346 6711.917
  angles 3.686 -14.036 0
  m_sAttachmentGroupName "AT_SQ2"
