@@ -1,0 +1,182 @@
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{68D9057073F448A9}" {
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "USSR_WIN"
+     }
+     m_sFailedObjectiveNames {
+      "UK_WIN"
+     }
+     m_sMessage "Премьер-министр захвачен"
+     m_Timer GUB_ZoneControlTimer "{68D905707997A51E}" {
+      timeToComplete 150
+     }
+     m_ZoneController GUB_ZoneController "{68D90570783D3672}" {
+      m_sZoneEntityName "capture"
+     }
+     m_FlagController GUB_FlagController "{68D905707A66A379}" {
+      m_aFlagNames {
+       "flag1"
+      }
+      m_fStartFactionKey "UK"
+      m_fEndFactionKey "USSR"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{68D905708679E657}" {
+       m_sSecondFactionKey "UK"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 1897.566 0 2139.09
+}
+$grp PolylineShapeEntity : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
+ capture {
+  components {
+   PS_PolyZone "{60E90266F25533F6}" {
+    m_mPolygonTexture "{62F4404928D33DB5}UI/layouts/Textures/Grid1b.edds"
+    m_cPolygonColor 0 0.502 0.018 1
+    m_fPolygonUVScale 0.44
+    m_cPolygonBorderColor 0 0.125 0.502 1
+    m_aVisibleForFactions {
+     "USSR"
+     "UK"
+     ""
+    }
+   }
+  }
+  coords 5352.531 68.089 11338.831
+  Points {
+   ShapePoint "{6A6F00F14C3DD9E8}" {
+    Position -3.092 0.863 3.43
+   }
+   ShapePoint "{6A6F00F14C4068C9}" {
+    Position -3.447 0.787 17.454
+   }
+   ShapePoint "{6A6F00F14F35C8B3}" {
+    Position 0.809 2.477 28.385
+   }
+   ShapePoint "{6A6F00F14F42C47F}" {
+    Position 19.959 5.211 42.276
+   }
+   ShapePoint "{6A6F00F14E393590}" {
+    Position 42.042 7.531 48.838
+   }
+   ShapePoint "{6A6F00F14E79B8EF}" {
+    Position 59.756 7.395 51.091
+   }
+   ShapePoint "{6A6F00F1499628E9}" {
+    Position 69.873 5.65 46.449
+   }
+   ShapePoint "{6A6F00F1491F5B91}" {
+    Position 66.76 2.216 13.952
+   }
+   ShapePoint "{6A6F00F1485571DC}" {
+    Position 42.49 2.811 5.111
+   }
+   ShapePoint "{6A6F00F14BF6BAF4}" {
+    Position 26.501 -0.079 -4.126
+   }
+  }
+ }
+ {
+  components {
+   PS_PolyZone "{60E90266F25533F6}" {
+    m_mPolygonTexture ""
+    m_cPolygonColor 1 1 1 0
+    m_cPolygonBorderColor 0.502 0 0 1
+    m_bLineMode 1
+    m_aVisibleForFactions {
+     "USSR"
+     "UK"
+     ""
+    }
+   }
+  }
+  coords 4259.189 12.46 9950.25
+  Points {
+   ShapePoint "{60E90266E922A02A}" {
+    Position -71.607 -19.446 56.37
+   }
+   ShapePoint "{6A6F00F876253C7C}" {
+    Position 0.842 -1.022 6.68
+   }
+   ShapePoint "{6A6F00F82EC36411}" {
+    Position 79.051 3.718 -34.129
+   }
+   ShapePoint "{6A6F00F82E778A65}" {
+    Position 134.572 3.364 -49.904
+   }
+   ShapePoint "{6A6F00F829219C88}" {
+    Position 189.586 5.922 -79.812
+   }
+   ShapePoint "{6A6F00F8297575ED}" {
+    Position 197.937 6.652 -114.009
+   }
+   ShapePoint "{6A6F00F828859318}" {
+    Position 244.344 3.492 -138.636
+   }
+   ShapePoint "{6A6F00F828474BF4}" {
+    Position 281.986 -2.787 -167.308
+   }
+   ShapePoint "{6A6F00F82B8C3083}" {
+    Position 331.467 -0.851 -179.73
+   }
+   ShapePoint "{6A6F00F82A3D2982}" {
+    Position 421.937 3.898 -211.64
+   }
+   ShapePoint "{6A6F00F835C17B49}" {
+    Position 469.175 -0.08 -211.282
+   }
+   ShapePoint "{6A6F00F8350CD652}" {
+    Position 520.721 -4.836 -189.74
+   }
+   ShapePoint "{6A6F00F834FE6AC6}" {
+    Position 756.195 -11.744 -244.727
+   }
+   ShapePoint "{6A6F00F837D8DF92}" {
+    Position 913.635 -13.141 -322.713
+   }
+   ShapePoint "{6A6F00F8371E3BD3}" {
+    Position 982.274 -13.461 -367.021
+   }
+   ShapePoint "{6A6F00F83662D390}" {
+    Position 1052.286 -13.464 -420.398
+   }
+   ShapePoint "{6A6F00F8365CE889}" {
+    Position 1135.422 -13.464 -456.414
+   }
+   ShapePoint "{6A6F00F8319016EE}" {
+    Position 1235.937 -13.489 -520.312
+   }
+   ShapePoint "{6A6F00F83134AC36}" {
+    Position 1328.074 -13.459 -586.769
+   }
+   ShapePoint "{6A6F00F8316101C0}" {
+    Position 1396.737 -14.11 -596.161
+   }
+   ShapePoint "{6A6F00F83002E8A9}" {
+    Position 1575.536 -20.439 -856.338
+   }
+   ShapePoint "{6A6F00F833A8FDDF}" {
+    Position 1614.937 -15.7 -994.13
+   }
+  }
+  IsClosed 0
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 2653.313 0 6316.014
+}

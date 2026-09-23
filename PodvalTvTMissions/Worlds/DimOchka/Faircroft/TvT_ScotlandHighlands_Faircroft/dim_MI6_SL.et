@@ -1,0 +1,89 @@
+SCR_ChimeraCharacter : "{F44D719A9873F889}Prefabs/Characters/Factions/BLUFOR/UK/UK1/SPN/dim_UK1_SPN_SL.et" {
+ ID "520EC961A090B1EE"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Старший агент МИ-6"
+    Icon "{8212EA1EC0F5C2D5}UI/Icons/agent.edds"
+   }
+  }
+  SCR_CharacterIdentityComponent "{5584CBC63E092DBC}" {
+   Identity Identity "{5584CBC6363C648B}" {
+    VisualIdentity VisualIdentity "{56E6D9456009D1C4}" {
+     Head "{EAF055495BA85CA1}Prefabs/Characters/Heads/Head_White_02.et"
+    }
+   }
+   Camouflaged 0
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{39405394B3C2BEEC}Prefabs/Characters/HeadGear/Hat_Hard_01/dim_BF_Hat_Headset_Crew_Hair.et"
+    }
+    LoadoutSlotInfo ArmoredVest {
+     Prefab ""
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{91D84F0E37E17441}Prefabs/Characters/Uniforms/Pants_Trousers_01/GD_Pants_Trousers_01_Black_Dirty.et"
+    }
+    LoadoutSlotInfo Back {
+     Prefab "{2DEE1C3D93F591CE}Prefabs/Items/Equipment/Radios/Radio_PRC320_Brit.et"
+    }
+    LoadoutSlotInfo Vest {
+     Prefab "{7A230F5B5EFE18E0}Prefabs/Characters/Vests/Vest_58Pattern/Variants/dim_Vest_P58_urban_patrol_Holster.et"
+    }
+    LoadoutSlotInfo Hair {
+     Enabled 0
+     Prefab ""
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{69F6F60D0E37B815}" {
+     TargetStorage "Pants/GD_Pants_Trousers_01_Black_Dirty.et"
+     PrefabsToSpawn {
+      "{E67E7932C86FBB96}Prefabs/Items/Medicine/FieldDressing_UK_01.et" "{E67E7932C86FBB96}Prefabs/Items/Medicine/FieldDressing_UK_01.et" "{E67E7932C86FBB96}Prefabs/Items/Medicine/FieldDressing_UK_01.et" "{E67E7932C86FBB96}Prefabs/Items/Medicine/FieldDressing_UK_01.et" "{0D9A5DCF89AE7AA9}Prefabs/Items/Medicine/MorphineInjection_01/MorphineInjection_01.et" "{0D9A5DCF89AE7AA9}Prefabs/Items/Medicine/MorphineInjection_01/MorphineInjection_01.et" "{D70216B1B2889129}Prefabs/Items/Medicine/Tourniquet_01/Tourniquet_US_01.et" "{D70216B1B2889129}Prefabs/Items/Medicine/Tourniquet_01/Tourniquet_US_01.et"
+     }
+    }
+    ItemsInitConfigurationItem "{69F6F60D0E10A2C7}" {
+     TargetStorage "Pants/GD_Pants_Trousers_01_Black_Dirty.et"
+    }
+    ItemsInitConfigurationItem "{69F6F60D0E67AA98}" {
+     TargetStorage "Jacket/GD_BWS_DPM.et"
+    }
+    ItemsInitConfigurationItem "{69F6F60D0E7A3472}" {
+     TargetStorage "Vest/dim_Vest_P58_urban_patrol_Holster.et/MagPouch/Pouch_P58_20rnd_L1A1_Left.et"
+     PrefabsToSpawn + {
+      "{DEDC311A2B0F9236}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_30rnd_M855A1_Last_5Tracer.et"
+     }
+    }
+    ItemsInitConfigurationItem "{69F6F60FD859E834}" {
+     TargetStorage "Vest/dim_Vest_P58_urban_patrol_Holster.et/Buttpack/Vest_ALICE_buttpack.et"
+     PrefabsToSpawn + {
+      "{DEDC311A2B0F9236}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_30rnd_M855A1_Last_5Tracer.et" "{DEDC311A2B0F9236}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_30rnd_M855A1_Last_5Tracer.et" "{DEDC311A2B0F9236}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_30rnd_M855A1_Last_5Tracer.et"
+     }
+    }
+    ItemsInitConfigurationItem "{69F6F60FDBB1882F}" {
+     Enabled 0
+    }
+    ItemsInitConfigurationItem "{69F6F60FDB8AF0BC}" {
+     Enabled 0
+    }
+    ItemsInitConfigurationItem "{69F6F608558E3C96}" {
+     Enabled 0
+    }
+    ItemsInitConfigurationItem "{69F6F6085D86D836}" {
+     TargetStorage "Vest/dim_Vest_P58_urban_patrol_Holster.et"
+    }
+    ItemsInitConfigurationItem "{69F6F6087FDB13CF}" {
+     TargetStorage "Vest/dim_Vest_P58_urban_patrol_Holster.et/Holster/GD_Holster_SLS_RLeg.et"
+    }
+    ItemsInitConfigurationItem "{69F6F60B70B9C4C0}" {
+     Enabled 0
+    }
+   }
+  }
+ }
+ coords 5389.805 72.573 11370.672
+}

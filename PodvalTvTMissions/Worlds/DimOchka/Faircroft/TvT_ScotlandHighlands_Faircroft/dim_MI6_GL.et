@@ -1,0 +1,96 @@
+SCR_ChimeraCharacter : "{FBCABEC8645D2353}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_GL.et" {
+ ID "520EC961A090B1EE"
+ components {
+  FactionAffiliationComponent "{604D1A6A24CA52EF}" {
+   "faction affiliation" "UK"
+  }
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Агент-гренадер МИ-6"
+    Icon "{8212EA1EC0F5C2D5}UI/Icons/agent.edds"
+    m_sFaction "US"
+    m_aAuthoredLabels {
+     GROUPSIZE_SMALL ENTITYTYPE_CHARACTER FACTION_BRITISH
+    }
+   }
+  }
+  SCR_CharacterIdentityComponent "{5584CBC63E092DBC}" {
+   Override 1
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{3277E97F3493155E}Prefabs/Characters/HeadGear/Hat_M70_01/Hat_M70_DPM_01.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{1A9466B2F39E7A9F}Prefabs/Characters/Uniforms/Suit_Tanker_US_01/Suit_Tanker_US_01_tucked_Black.et"
+    }
+    LoadoutSlotInfo ArmoredVest {
+     Prefab ""
+    }
+    LoadoutSlotInfo Pants {
+     Prefab ""
+    }
+    LoadoutSlotInfo Boots {
+     Prefab "{F05A35BCC44BE9FC}Prefabs/Characters/Footwear/TankerBoots_US_01/TankerBoots_US_01.et"
+    }
+    LoadoutSlotInfo Back {
+     Prefab "{0960A1A0B891F243}Prefabs/Items/Equipment/Backpacks/Rucksack_P58_Large_Pack.et"
+    }
+    LoadoutSlotInfo Vest {
+     Prefab "{2CBF6C876586A8CC}Prefabs/Characters/Vests/Vest_58Pattern/Variants/Vest_P58_GL.et"
+    }
+    LoadoutSlotInfo HandWear {
+     Prefab "{8266820FFDE17477}Prefabs/Characters/Handwear/Gloves_Wool_01/Gloves_Wool_01.et"
+    }
+    LoadoutSlotInfo Hair {
+     Enabled 1
+     Prefab "{E9E59F393B49FC1E}Prefabs/Characters/HeadGear/Disguise/Hair/4/Hair_4_2.et"
+    }
+    LoadoutSlotInfo Mustache {
+     Offset 0.0045 0 0.004
+     Enabled 1
+     Prefab "{8CDD59F2DC2FF030}Prefabs/Characters/HeadGear/Disguise/Mustache/3/Mustache_3_1.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{693B0449DFBBAE29}" {
+     TargetStorage "Jacket/Suit_Tanker_US_01_tucked_Black.et"
+    }
+    ItemsInitConfigurationItem "{693B0449DFBBAE1E}" {
+     Enabled 0
+    }
+    ItemsInitConfigurationItem "{693B0449DFBBAE1F}" {
+     Enabled 0
+    }
+    ItemsInitConfigurationItem "{693B0449DFBBAE18}" {
+     TargetStorage "Jacket/Suit_Tanker_US_01_tucked_Black.et"
+     PrefabsToSpawn {
+      "{F4AE1135B6A78993}Prefabs/Items/Equipment/Radios/Radio_ANPRC152A_UK_Singl.et"
+     }
+    }
+    ItemsInitConfigurationItem "{696976A5EAA7156E}" {
+     TargetStorage "Vest/Vest_P58_GL.et/MagPouch/Pouch_P58_20rnd_L1A1_Left.et"
+    }
+    ItemsInitConfigurationItem "{696976A5FB19057E}" {
+     TargetStorage "Vest/Vest_P58_GL.et/MagPouch2/Pouch_P58_20rnd_L1A1_Right.et"
+    }
+    ItemsInitConfigurationItem "{696976A6020BFF73}" {
+     TargetStorage "Vest/Vest_P58_GL.et/FirstAid/Vest_M79GrenadeCarrier.et"
+    }
+    ItemsInitConfigurationItem "{696976AEEE8E0585}" {
+     TargetStorage "Back/Rucksack_P58_Large_Pack.et"
+    }
+    ItemsInitConfigurationItem "{6A6D444F55BFC656}" {
+     TargetStorage "Back/Rucksack_P58_Large_Pack.et"
+     PrefabsToSpawn {
+      "{66410ECE9E686298}Prefabs/Weapons/Magazines/ARY_G3/20Rnd_Alu/dim_ARY_Magazine_762x51_G3_20Rnd_Alu_DM151_AP.et" "{66410ECE9E686298}Prefabs/Weapons/Magazines/ARY_G3/20Rnd_Alu/dim_ARY_Magazine_762x51_G3_20Rnd_Alu_DM151_AP.et" "{66410ECE9E686298}Prefabs/Weapons/Magazines/ARY_G3/20Rnd_Alu/dim_ARY_Magazine_762x51_G3_20Rnd_Alu_DM151_AP.et"
+     }
+    }
+   }
+  }
+ }
+ coords 5393.879 72.437 11367.729
+}

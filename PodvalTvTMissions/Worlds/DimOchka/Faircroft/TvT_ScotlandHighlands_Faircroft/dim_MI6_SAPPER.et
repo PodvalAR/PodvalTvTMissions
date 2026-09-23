@@ -1,0 +1,111 @@
+SCR_ChimeraCharacter : "{C4501323DEA6C9D6}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_Sapper.et" {
+ ID "520EC961A090B1EE"
+ components {
+  SCR_CharacterFactionAffiliationComponent "{6239642BBB275066}" {
+   "faction affiliation" "UK"
+  }
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Агент-сапер МИ-6"
+    Icon "{8212EA1EC0F5C2D5}UI/Icons/agent.edds"
+    m_sFaction "US"
+    m_aAuthoredLabels {
+     GROUPSIZE_SMALL ENTITYTYPE_CHARACTER FACTION_BRITISH
+    }
+   }
+  }
+  SCR_CharacterIdentityComponent "{5584CBC63E092DBC}" {
+   Override 1
+   Identity Identity "{5584CBC6363C648B}" {
+    VisualIdentity VisualIdentity "{56E6D9456009D1C4}" {
+     Head "{C1F80EE178D948D6}Prefabs/Characters/Heads/Head_White_08.et"
+    }
+   }
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{3277E97F3493155E}Prefabs/Characters/HeadGear/Hat_M70_01/Hat_M70_DPM_01.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{C45F61180CB26EFF}Prefabs/Characters/Uniforms/VKPO/dim_Undershirt_VKPO_Black.et"
+    }
+    LoadoutSlotInfo ArmoredVest {
+     Prefab ""
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{4DC4FD2F6D353B12}Prefabs/Characters/Uniforms/Pants_M70_Dirty.et"
+    }
+    LoadoutSlotInfo Back {
+     Prefab "{0960A1A0B891F243}Prefabs/Items/Equipment/Backpacks/Rucksack_P58_Large_Pack.et"
+    }
+    LoadoutSlotInfo Vest {
+     Prefab "{791461BC7CF3133F}Prefabs/Characters/Vests/Vest_58Pattern/Variants/Vest_P58_rifleman_2_L85.et"
+    }
+    LoadoutSlotInfo Hair {
+     Enabled 1
+     Prefab "{E9E59F393B49FC1E}Prefabs/Characters/HeadGear/Disguise/Hair/4/Hair_4_2.et"
+    }
+    LoadoutSlotInfo Beard {
+     Enabled 1
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{689B2D43EA87EF4F}" {
+     TargetStorage "Pants/Pants_M70_Dirty.et"
+    }
+    ItemsInitConfigurationItem "{689B2D43EAE0FA83}" {
+     TargetStorage "Pants/Pants_M70_Dirty.et"
+    }
+    ItemsInitConfigurationItem "{689B2D43EAF841F3}" {
+     TargetStorage "Back/Rucksack_P58_Large_Pack.et"
+     PrefabsToSpawn {
+      "{F4AE1135B6A78993}Prefabs/Items/Equipment/Radios/Radio_ANPRC152A_UK_Singl.et"
+     }
+    }
+    ItemsInitConfigurationItem "{689E6D83F89602AF}" {
+     TargetStorage "Vest/Vest_P58_rifleman_2_L85.et/MagPouch2/Pouch_P58_20rnd_L1A1_Right.et"
+     PrefabsToSpawn {
+      "{F6C7545F627D567F}Prefabs/Weapons/Magazines/Magazine_762x51_FAL_Commonwealth_20rnd_Ball_AP.et" "{F6C7545F627D567F}Prefabs/Weapons/Magazines/Magazine_762x51_FAL_Commonwealth_20rnd_Ball_AP.et" "{F6C7545F627D567F}Prefabs/Weapons/Magazines/Magazine_762x51_FAL_Commonwealth_20rnd_Ball_AP.et" "{F6C7545F627D567F}Prefabs/Weapons/Magazines/Magazine_762x51_FAL_Commonwealth_20rnd_Ball_AP.et"
+     }
+    }
+    ItemsInitConfigurationItem "{689E6D8237974471}" {
+     TargetStorage "Vest/Vest_P58_rifleman_2_L85.et/MagPouch/Pouch_P58_20rnd_L1A1_Left_L3A1.et"
+     PrefabsToSpawn {
+      "{F6C7545F627D567F}Prefabs/Weapons/Magazines/Magazine_762x51_FAL_Commonwealth_20rnd_Ball_AP.et" "{F6C7545F627D567F}Prefabs/Weapons/Magazines/Magazine_762x51_FAL_Commonwealth_20rnd_Ball_AP.et" "{F6C7545F627D567F}Prefabs/Weapons/Magazines/Magazine_762x51_FAL_Commonwealth_20rnd_Ball_AP.et" "{F6C7545F627D567F}Prefabs/Weapons/Magazines/Magazine_762x51_FAL_Commonwealth_20rnd_Ball_AP.et"
+     }
+    }
+    ItemsInitConfigurationItem "{689E6D826BD04590}" {
+     Enabled 0
+    }
+    ItemsInitConfigurationItem "{689E6D8233474F95}" {
+     Enabled 0
+    }
+    ItemsInitConfigurationItem "{689E6D823E1CA47C}" {
+     Enabled 0
+    }
+    ItemsInitConfigurationItem "{689E6D8241C8AB1F}" {
+     Enabled 0
+    }
+    ItemsInitConfigurationItem "{689E6D8266124935}" {
+     TargetStorage "Back/Rucksack_P58_Large_Pack.et"
+    }
+    ItemsInitConfigurationItem "{689E6D827A21D340}" {
+     TargetStorage "Back/Rucksack_P58_Large_Pack.et"
+    }
+    ItemsInitConfigurationItem "{689E8075453DC1B7}" {
+     TargetStorage "Back/Rucksack_P58_Large_Pack.et"
+    }
+    ItemsInitConfigurationItem "{689E807542DED578}" {
+     TargetStorage "Back/Rucksack_P58_Large_Pack.et"
+    }
+    ItemsInitConfigurationItem "{689E8077809E609E}" {
+     TargetStorage "Back/Rucksack_P58_Large_Pack.et"
+    }
+   }
+  }
+ }
+ coords 5394.563 72.629 11371.016
+}

@@ -1,0 +1,66 @@
+SCR_ChimeraCharacter : "{AADD8B42E989863C}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_Sniper.et" {
+ ID "520EC961A090B1EE"
+ components {
+  FactionAffiliationComponent "{604D1A6A24CA52EF}" {
+   "faction affiliation" "UK"
+  }
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Агент-снайпер МИ-6"
+    Icon "{8212EA1EC0F5C2D5}UI/Icons/agent.edds"
+    m_sFaction "US"
+    m_aAuthoredLabels {
+     GROUPSIZE_SMALL ENTITYTYPE_CHARACTER FACTION_BRITISH
+    }
+   }
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab ""
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{C45F61180CB26EFF}Prefabs/Characters/Uniforms/VKPO/dim_Undershirt_VKPO_Black.et"
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{CCC050D559C23616}Prefabs/Characters/Uniforms/ACU_pants/GD_ACU_pants_DPM.et"
+    }
+    LoadoutSlotInfo Back {
+     Prefab "{0960A1A0B891F243}Prefabs/Items/Equipment/Backpacks/Rucksack_P58_Large_Pack.et"
+    }
+    LoadoutSlotInfo Hair {
+     Enabled 1
+     Prefab "{72B5B5E8976C4FA9}Prefabs/Characters/HeadGear/Disguise/Hair/3/Hair_3_1.et"
+    }
+    LoadoutSlotInfo Beard {
+     Enabled 1
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{693B0449DFBBAE29}" {
+     TargetStorage "Pants/GD_ACU_pants_DPM.et"
+    }
+    ItemsInitConfigurationItem "{693B0449DFBBAE1E}" {
+     Enabled 0
+    }
+    ItemsInitConfigurationItem "{693B0449DFBBAE1F}" {
+     Enabled 0
+    }
+    ItemsInitConfigurationItem "{693B0449DFBBAE18}" {
+     PrefabsToSpawn {
+      "{F4AE1135B6A78993}Prefabs/Items/Equipment/Radios/Radio_ANPRC152A_UK_Singl.et"
+     }
+    }
+    ItemsInitConfigurationItem "{696A24CC6F559355}" {
+     TargetStorage "Pants/GD_ACU_pants_DPM.et"
+    }
+    ItemsInitConfigurationItem "{696EE2397E19F55D}" {
+     TargetStorage "Pants/GD_ACU_pants_DPM.et"
+    }
+   }
+  }
+ }
+ coords 5395.577 72.622 11370.941
+}
