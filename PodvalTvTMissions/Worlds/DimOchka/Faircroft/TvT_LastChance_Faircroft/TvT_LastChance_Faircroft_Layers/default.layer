@@ -1,6 +1,10 @@
 SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
  coords 4659.633 66.639 10799.45
 }
+GenericWorldFogEntity : "{78D9BBF0F423FEB4}Prefabs/World/DefaultWorld/FogHaze_Default.et" {
+ coords 3243.22 -61.164 6556.862
+ FogHeightStart entity
+}
 PerceptionManager PerceptionManager1 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
  coords 5499.515 50.564 10793.642
 }
@@ -10,8 +14,9 @@ PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_Game
    m_bUsePredefineStartingTimeAndWeather 1
    m_aStartingWeatherAndTime {
     SCR_TimeAndWeatherState "{68E562678055DB1F}" {
-     m_sWeatherPresetName "Rainy"
-     m_iStartingHour 12
+     m_sWeatherPresetName "Cloudy"
+     m_iStartingHour 17
+     m_iStartingMinutes 15
     }
    }
   }
