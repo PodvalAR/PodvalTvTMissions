@@ -1,0 +1,261 @@
+$grp GenericEntity : "{3D78D7D606FF9818}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_NoCapture.et" {
+ flag1 {
+  coords 5278.794 48.297 2578.854
+ }
+ flag3 {
+  coords 5213.219 48.829 2692.795
+ }
+ flag2 {
+  coords 5216.767 44.873 2609.732
+ }
+}
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{6A2F1C19A2649ED9}" {
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "AFRF_WIN"
+     }
+     m_sFailedObjectiveNames {
+      "USAF_WIN"
+     }
+     m_sMessage "Руины захвачены"
+     m_Timer GUB_ZoneControlTimer "{6A2F1C19B7515997}" {
+      timeToComplete 180
+     }
+     m_ZoneController GUB_ZoneController "{6A2F1C19B172BC5C}" {
+      m_sZoneEntityName "capture"
+     }
+     m_FlagController GUB_FlagController "{6A2F1C19B2A82E61}" {
+      m_aFlagNames {
+       "flag1"
+       "flag2"
+       "flag3"
+      }
+      m_fStartFactionKey "RHS_USAF"
+      m_fEndFactionKey "RHS_AFRF"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{6A2F1C19C48E2C47}" {
+       m_sFirstFactionKey "RHS_AFRF"
+       m_sSecondFactionKey "RHS_USAF"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 4989.905 3.062 1358.458
+}
+PolylineShapeEntity : "{7019844BAD5C4DD8}Prefabs/PolyZone/PolyZone_Border.et" {
+ components {
+  PS_PolyZone "{60E90266F25533F6}" {
+   m_mPolygonTexture "{62F4404928D33DB5}UI/layouts/Textures/Grid1b.edds"
+   m_cPolygonColor 1 1 1 0.35
+   m_fPolygonUVScale 0.44
+   m_cPolygonBorderColor 0.502 0 0 1
+   m_bReversed 0
+   m_aVisibleForFactions {
+    ""
+    "RHS_AFRF"
+    "RHS_USAF"
+   }
+  }
+ }
+ coords 1459.432 0 3282.833
+ Points {
+  ShapePoint "{6A2F1C1A289AC8B6}" {
+   Position -33.589 -2.597 451.569
+  }
+  ShapePoint "{6A2F1C1A28D159C5}" {
+   Position -148.389 -10.648 495.237
+  }
+  ShapePoint "{6A2F1C1A28049DDF}" {
+   Position -353.943 -13.625 441.811
+  }
+  ShapePoint "{6A2F1C1A2BE3F4C6}" {
+   Position -321.332 -13.625 1000.603
+  }
+  ShapePoint "{6A2F1C1A2BD2E801}" {
+   Position -315.257 -13.625 1164.677
+  }
+  ShapePoint "{6A2F1C1A2B13A08B}" {
+   Position 12.01 -9.965 1182.802
+  }
+  ShapePoint "{6A2F1C1A2AD5AE99}" {
+   Position -120.606 -13.625 1490.809
+  }
+  ShapePoint "{6A2F1C1A2A060009}" {
+   Position -131.657 -13.625 1922.256
+  }
+  ShapePoint "{6A2F1C1A35E4008E}" {
+   Position 241.71 -13.625 2271.169
+  }
+  ShapePoint "{6A2F1C1A35D6C683}" {
+   Position 221.801 -13.625 2988.865
+  }
+  ShapePoint "{6A2F1C1A34F399FF}" {
+   Position 282.383 -13.625 3776.061
+  }
+  ShapePoint "{6A2F1C1A3467400A}" {
+   Position 364.307 -13.625 4692.287
+  }
+  ShapePoint "{6A2F1C1A3617F8B8}" {
+   Position 927.734 -118.375 8987.967
+  }
+  ShapePoint "{6A2F1C1A315A07C9}" {
+   Position 3943.344 -116.296 9288.298
+  }
+  ShapePoint "{6A2F1C1A33243E20}" {
+   Position 6585.608 -14.731 8373.075
+  }
+  ShapePoint "{6A2F1C1A3C0A28E1}" {
+   Position 9664.047 -13.625 4303.376
+  }
+  ShapePoint "{6A2F1C1A3F868431}" {
+   Position 9980.768 -10.21 3787.908
+  }
+  ShapePoint "{6A2F1C1A3FD1F34D}" {
+   Position 9679.423 -13.625 3308.706
+  }
+  ShapePoint "{6A2F1C1A3AE0B598}" {
+   Position 9226.428 -13.625 2261.188
+  }
+  ShapePoint "{6A2F1C1A3A1B6FFF}" {
+   Position 8930.955 -13.625 1660.513
+  }
+  ShapePoint "{6A2F1C1A447BA70B}" {
+   Position 7254.061 -12.362 458.069
+  }
+  ShapePoint "{6A2F1C1A49BC9ECC}" {
+   Position 5833.801 49.083 889.731
+  }
+  ShapePoint "{6A2F1C1A4931E32B}" {
+   Position 5016.405 23.503 891.29
+  }
+  ShapePoint "{6A2F1C1A497316A9}" {
+   Position 4716.97 51.916 972.562
+  }
+  ShapePoint "{6A2F1C1A488DB56D}" {
+   Position 4545.612 66.578 1142.134
+  }
+  ShapePoint "{6A2F1C1A4B706F2F}" {
+   Position 3897.808 9.68 1122.568
+  }
+  ShapePoint "{6A2F1C1A4A8ABB9C}" {
+   Position 3464.09 21.955 971.729
+  }
+  ShapePoint "{6A2F1C1A4A55D25A}" {
+   Position 3101.005 18.268 774.039
+  }
+  ShapePoint "{6A2F1C1A5466F0C7}" {
+   Position 2863.14 3.51 791.209
+  }
+  ShapePoint "{6A2F1C1A57B0E5E4}" {
+   Position 2726.979 21.556 810.918
+  }
+  ShapePoint "{6A2F1C1A575BD5EB}" {
+   Position 2418.418 27.278 763.688
+  }
+  ShapePoint "{6A2F1C1A51CFF4EA}" {
+   Position 2272.429 18.328 750.147
+  }
+  ShapePoint "{6A2F1C1A5141131D}" {
+   Position 2074.007 7.094 736.96
+  }
+  ShapePoint "{6A2F1C1A5CDBBFFE}" {
+   Position 1146.239 5.537 470.15
+  }
+  ShapePoint "{6A2F1C1A5E240455}" {
+   Position 764.273 8.439 417.377
+  }
+  ShapePoint "{6A2F1C1A5E4A2518}" {
+   Position 454.849 3.771 284.51
+  }
+ }
+ {
+  PS_PolyZoneTrigger {
+   ID "60FD050E1E83544C"
+   m_polyZoneEffect PS_PolyZoneEffectRestricted "{60FD050E0DC2A2AB}" {
+    m_fKillTime 15
+   }
+   m_bAliveOnly 1
+   m_sGroupKey "DEF_"
+  }
+ }
+}
+PolylineShapeEntity capture : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
+ components {
+  PS_PolyZone "{60E90266F25533F6}" {
+   m_mPolygonTexture "{62F4404928D33DB5}UI/layouts/Textures/Grid1b.edds"
+   m_cPolygonColor 1 1 1 0.431
+   m_fPolygonUVScale 0.44
+   m_cPolygonBorderColor 0 0.502 0.013 1
+   m_aVisibleForFactions {
+    "RHS_AFRF"
+    "RHS_USAF"
+    ""
+   }
+  }
+ }
+ coords 5183.07 35.777 2619.011
+ Points {
+  ShapePoint "{6A2F1C198580BB75}" {
+   Position -4.863 1.855 21.512
+  }
+  ShapePoint "{6A2F1C19856792CA}" {
+   Position 5.562 1.002 69.424
+  }
+  ShapePoint "{6A2F1C1984B51497}" {
+   Position 23.104 0.034 88.882
+  }
+  ShapePoint "{6A2F1C1987295D1B}" {
+   Position 109.728 3.433 89.269
+  }
+  ShapePoint "{6A2F1C1986D14467}" {
+   Position 125.337 1.551 69.526
+  }
+  ShapePoint "{6A2F1C198124C798}" {
+   Position 141.904 0.933 20.622
+  }
+  ShapePoint "{6A2F1C198274E97E}" {
+   Position 136.129 0.076 -38.379
+  }
+  ShapePoint "{6A2F1C198C849AAC}" {
+   Position 117.572 -0.651 -54.476
+  }
+  ShapePoint "{6A2F1C198CC35759}" {
+   Position 110.932 -0.07 -58.251
+  }
+  ShapePoint "{6A2F1C198E69DEFB}" {
+   Position 101.915 -0.058 -63.307
+  }
+  ShapePoint "{6A2F1C198924EAB1}" {
+   Position 87.563 -0.649 -67.433
+  }
+  ShapePoint "{6A2F1C199467962A}" {
+   Position 54.072 -2.012 -60.116
+  }
+  ShapePoint "{6A2F1C19945FD1E1}" {
+   Position 45.034 -2.303 -57.521
+  }
+  ShapePoint "{6A2F1C1997F1EDCB}" {
+   Position 37.664 -2.191 -50.03
+  }
+  ShapePoint "{6A2F1C1996B75BEA}" {
+   Position 28.483 -0.068 -31.793
+  }
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 4798.521 0 1542.068
+}

@@ -1,0 +1,172 @@
+PolylineShapeEntity CAPTURE {
+ components {
+  PS_PolyZone "{6A329D6B06945598}" {
+   m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
+   m_cPolygonColor 0.624 0.157 0.157 1
+   m_fPolygonUVScale 0.1
+   m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+   m_cPolygonBorderColor 0.502 0 0 1
+   m_fPolygonBorderWidth 5
+   m_aVisibleForFactions {
+    "RHS_AFRF"
+    "RHS_USAF"
+    ""
+   }
+  }
+ }
+ coords 493.771 16.299 1841.628
+ Points {
+  ShapePoint "{6A329D6B6FF60751}" {
+   Position 53.19 -5.589 -11.651
+  }
+  ShapePoint "{6A3666C8DE946008}" {
+   Position 50.621 -5.054 -22.114
+  }
+  ShapePoint "{6A3666C8DC7D20E0}" {
+   Position 46.702 -4.639 -38.13
+  }
+  ShapePoint "{6A3666C8DBAECBF1}" {
+   Position 43.047 -4.707 -52.602
+  }
+  ShapePoint "{6A3666C8DA5CBA26}" {
+   Position 39.655 -5.059 -65.704
+  }
+  ShapePoint "{6A3666C8D81E984C}" {
+   Position 35.748 -5.914 -82.574
+  }
+  ShapePoint "{6A329D6B6FF627E9}" {
+   Position 31.004 -7.865 -105.628
+  }
+  ShapePoint "{6A3666CD6973F6A5}" {
+   Position 8.729 -4.754 -101.578
+  }
+  ShapePoint "{6A3666CD7FB9971F}" {
+   Position -22 -1.355 -94.607
+  }
+  ShapePoint "{6A3666CD7D14F596}" {
+   Position -55.195 -1.146 -85.501
+  }
+  ShapePoint "{6A3666CD7C9E32D1}" {
+   Position -77.945 -2.831 -78.34
+  }
+  ShapePoint "{6A329D6B603ABCE1}" {
+   Position -106.222 -5.82 -69.495
+  }
+  ShapePoint "{6A329D6B7DAD7115}" {
+   Position -79.348 -2.625 -21.48
+  }
+  ShapePoint "{6A329D6B7A9260B2}" {
+   Position -51.701 -3.042 18.693
+  }
+  ShapePoint "{6A329D6B78E8829E}" {
+   Position 10.2 -0.565 -2.98
+  }
+ }
+ IsClosed 1
+}
+$grp GenericEntity : "{3D78D7D606FF9818}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_NoCapture.et" {
+ FLAG1 {
+  coords 449.06 38.741 1844.257
+  angles 0 27.26 0
+ }
+ FLAG2 {
+  coords 473.652 31.798 1760.723
+ }
+}
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{6A3666CCCBD78642}" {
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "AFRF_WIN"
+     }
+     m_sFailedObjectiveNames {
+      "USAF_WIN"
+     }
+     m_sMessage "Город Захвачен!"
+     m_Timer GUB_ZoneControlTimer "{6A3666CCC049C721}" {
+      timeToComplete 180
+     }
+     m_ZoneController GUB_ZoneController "{6A3666CCDA9ECE45}" {
+      m_sZoneEntityName "CAPTURE"
+     }
+     m_FlagController GUB_FlagController "{6A3666CCD51379B1}" {
+      m_aFlagNames {
+       "FLAG1"
+       "FLAG2"
+      }
+      m_fStartFactionKey "RHS_USAF"
+      m_fEndFactionKey "RHS_AFRF"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{6A3666CCEE453F2D}" {
+       m_sFirstFactionKey "RHS_AFRF"
+       m_sSecondFactionKey "RHS_USAF"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 151.444 45.201 1913.769
+}
+SCR_EditorRestrictionZoneEntity : "{6144B0BE2EAC6897}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneMedium.et" {
+ coords 780.688 12.306 966.771
+}
+PolylineShapeEntity : "{7019844BAD5C4DD8}Prefabs/PolyZone/PolyZone_Border.et" {
+ components {
+  PS_PolyZone "{60E90266F25533F6}" {
+   m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
+   m_cPolygonColor 0.259 0.365 0.686 1
+   m_fPolygonUVScale 0.44
+   m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+   m_cPolygonBorderColor 0 0.125 0.502 1
+   m_fPolygonBorderWidth 5
+   m_bReversed 0
+   m_aVisibleForFactions {
+    ""
+    "RHS_AFRF"
+    "RHS_USAF"
+   }
+  }
+ }
+ coords 257.74 0.715 1660.656
+ Points {
+  ShapePoint "{60E90266E922A02A}" {
+   Position -98.447 -1.663 -70.746
+  }
+  ShapePoint "{6A329D6A3A23A318}" {
+   Position 332.924 -1.715 -159.623
+  }
+  ShapePoint "{6A329D6A3517F76B}" {
+   Position 512.31 -2.116 453.518
+  }
+  ShapePoint "{6A329D6A3382AA26}" {
+   Position 40.026 -9.715 615.803
+  }
+ }
+ {
+  PS_PolyZoneTrigger {
+   ID "60FD050E1E83544C"
+   m_sFactionKey "RHS_USAF"
+  }
+ }
+}
+SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+ coords 473.98 11.31 1845.005
+}
+$grp SCR_EditorRestrictionZoneEntity : "{EF72FA7CD87618D5}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneSmall.et" {
+ {
+  coords 587.913 2.545 1050.859
+ }
+ {
+  coords 667.52 9.715 1184.731
+ }
+ {
+  coords 264.69 4.22 1315.823
+ }
+}

@@ -55,20 +55,6 @@ $grp SCR_AIGroup : "{00D3FF50F52DF3CB}Prefabs/Groups/INDFOR/FIA/drg_FIA_RifleSqu
    "{2697C48CA75CED17}Prefabs/Characters/Factions/INDFOR/FIA/Dev/drg_Character_FIA_Sniper.et"
   }
  }
- squadmortat4 {
-  components {
-   PS_GroupCallsignAssigner "{65154C1E6C2E8928}" {
-    m_iPlatoonCallsign 3
-   }
-  }
-  coords 4790.286 167.337 7028.057
-  angles 4.882 151.991 3.464
-  m_aUnitPrefabSlots {
-   "{5A9F0761A0691A40}Prefabs/Characters/Factions/INDFOR/FIA/Dev/drg_Character_FIA_MortarLeader.et"
-   "{5D01D74C6BF3C409}Worlds/sean/sean_prefabs/FIA/Characters/sean_FIA_MortarGunner.et"
-   "{D996D3BE8CC3377B}Worlds/sean/sean_prefabs/FIA/Characters/sean_FIA_MortarShooter.et"
-  }
- }
 }
 GenericEntity : "{039F825B8B83B86D}Prefabs/Props/Military/AmmoBoxes/drg_AmmoBox_81mm_mortar_10rnd_HE.et" {
  coords 4791.953 167.488 7028.386
@@ -126,7 +112,7 @@ $grp SCR_AIGroup : "{A9E44D0CFCADB12D}Worlds/sean/sean_prefabs/FIA/Groups/sean_F
     m_iCompanyCallsign 2
    }
   }
-  coords 5761.16 86.038 5084.157
+  coords 5761.463 86.068 5084.057
   angles -3.641 -161.933 5.376
   m_aUnitPrefabSlots {
    "{F3631E4FDE620D53}Prefabs/Characters/Factions/INDFOR/FIA/Dev/drg_Character_FIA_SL.et"
@@ -135,9 +121,25 @@ $grp SCR_AIGroup : "{A9E44D0CFCADB12D}Worlds/sean/sean_prefabs/FIA/Groups/sean_F
    "{46438691956FB11C}Prefabs/Characters/Factions/INDFOR/FIA/Dev/drg_Character_FIA_AT.et"
    "{CE2C005A0F9D7E23}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_AAT_P.et"
    "{F93D2B11566D65A9}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Medic_P.et"
+   "{066644E57BA1E26E}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Sapper.et"
    "{2697C48CA75CED17}Prefabs/Characters/Factions/INDFOR/FIA/Dev/drg_Character_FIA_Sniper.et"
   }
   m_sCustomNameSet "Патрульный отряд"
+ }
+ squad4 {
+  components {
+   PS_GroupCallsignAssigner "{65154C1E6C2E8928}" {
+    m_iPlatoonCallsign 3
+   }
+  }
+  coords 4791.075 167.213 7028.502
+  angles -1.227 154.395 1.58
+  m_aUnitPrefabSlots {
+   "{5A9F0761A0691A40}Prefabs/Characters/Factions/INDFOR/FIA/Dev/drg_Character_FIA_MortarLeader.et"
+   "{5D01D74C6BF3C409}Worlds/sean/sean_prefabs/FIA/Characters/sean_FIA_MortarGunner.et"
+   "{D996D3BE8CC3377B}Worlds/sean/sean_prefabs/FIA/Characters/sean_FIA_MortarShooter.et"
+  }
+  m_sCustomNameSet "Минометный расчет"
  }
 }
 $grp SCR_AIGroup : "{BA38C0B7D64C3D13}Worlds/sean/sean_prefabs/FIA/Groups/sean_FIA_MotorizedSquad.et" {

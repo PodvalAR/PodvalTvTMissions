@@ -1,0 +1,28 @@
+PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ coords 702.148 302.361 3897.109
+ m_sTitle "Правила и задачи"
+ m_sTextData "РФ запрещено покидать КРАСНЫЙ триггер"\
+ ""\
+ "Для захвата базы необходимо двукратное преимущество в ЗЕЛЁНОМ триггере на протяжении трёх минут."\
+ ""\
+ "Играйте честно!"
+ m_aVisibleForFactions {
+  "RHS_AFRF"
+  "Ses_TKR"
+  ""
+ }
+ m_bEmptyFactionVisibility 1
+ m_bShowForAnyFaction 1
+}
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ TKR_WIN {
+  coords 715.179 302.262 3895.712
+  m_sTitle "База Захвачена"
+  m_sFactionKey "Ses_TKR"
+ }
+ AFRF_WIN {
+  coords 745.084 299.253 3895.961
+  m_sTitle "База удержана"
+  m_sFactionKey "RHS_AFRF"
+ }
+}

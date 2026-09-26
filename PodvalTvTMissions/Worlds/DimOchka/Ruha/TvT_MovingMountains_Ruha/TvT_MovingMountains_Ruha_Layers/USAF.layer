@@ -1,0 +1,235 @@
+$grp Vehicle : "{08DC83258B558A9F}Prefabs/Vehicles/Wheeled/M998/M1167_armed_TOW.et" {
+ M1167_armed_TOW1 {
+  coords 6598.367 96.719 1124.9
+  angles 0 90 0
+  m_sAttachmentGroupName "marsoc"
+ }
+ M1167_armed_TOW2 {
+  coords 6598.367 96.719 1144.033
+  angles 0 90 0
+  m_sAttachmentGroupName "marsoc2"
+ }
+}
+$grp Vehicle : "{2401DC427B9B8CFB}Prefabs/Vehicles/Wheeled/M998/M1151_armed_M2HB_MBO.et" {
+ M1151_armed_M2HB_MBO1 {
+  coords 6606.256 96.719 1124.922
+  angles 0 90 0
+  m_sAttachmentGroupName "marsoc"
+ }
+ M1151_armed_M2HB_MBO2 {
+  coords 6606.256 96.719 1144.055
+  angles 0 90 0
+  m_sAttachmentGroupName "marsoc2"
+ }
+}
+Vehicle M151A2_transport1 : "{47D94E1193A88497}Prefabs/Vehicles/Wheeled/M151A2/M151A2_transport.et" {
+ coords 4804.886 60.889 2104.884
+ angles 0.596 138.248 0.668
+ m_sAttachmentGroupName "marsoc3"
+}
+Vehicle M998_covered_long1 : "{9B1BF9644E0378D6}Prefabs/Vehicles/Wheeled/M998/M998_covered_long.et" {
+ coords 6440.525 79.906 3382.818
+ angles 0 34.446 0
+ m_sAttachmentGroupName "cat"
+ m_bEnableMoveOnFreeze 1
+}
+$grp Vehicle : "{C7280E4991A510A5}Prefabs/Vehicles/Wheeled/M1083/M1083_Construction_Tan_eng.et" {
+ M1083_Construction_Tan_eng1 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{65B6498665024F6E}" {
+    MultiSlots {
+     MultiSlotConfiguration "{6A2ECE27F947DFF4}" {
+      SlotTemplate InventoryStorageSlot REP {
+       Prefab "{2997FA6F521B519C}Prefabs/Items/Misc/BarbedTape/Barbed_Tape.et"
+      }
+      NumSlots 40
+     }
+    }
+   }
+  }
+  coords 6425.77 79.813 3400.066
+  angles 0 150 0
+  m_bEnableMoveOnFreeze 1
+ }
+ M1083_Construction_Tan_eng2 {
+  coords 6429.111 79.813 3402.11
+  angles 0 150 0
+  m_bEnableMoveOnFreeze 1
+ }
+}
+$grp SCR_AIGroup : "{F77D5F8E4E2A70A7}Prefabs/Groups/BLUFOR/RHS_USAF/Group_RHS_USAF_Base.et" {
+ cat {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 6430.722 79.875 3388.057
+  angles 0 72.72 0
+  m_aUnitPrefabSlots {
+   "{F788D85316320AEA}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/CAT/dim_US_CAT_SL.et"
+   "{F04F220270B4B029}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/CAT/dim_US_CAT_TL.et"
+   "{97D5576DD301C1D3}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/CAT/dim_US_CAT_GL.et"
+   "{9A00294C24B6A8F9}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/CAT/dim_US_CAT_AR.et"
+   "{12B0BA8C25BA10E4}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/CAT/dim_US_CAT_Rifleman.et"
+   "{16B164803AFA4409}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/CAT/dim_US_CAT_Sapper.et"
+   "{BE9FAD65B273F61F}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/CAT/dim_US_CAT_Medic_1.et"
+  }
+  m_sCustomNameSet "Counter Assault Team (CAT)"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 6455.52 79.803 3398.325
+  angles 0 -122.28 0
+  m_aUnitPrefabSlots {
+   "{B015FB7ACC8F368E}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/CAT/dim_US_CAT_SL_2.et"
+   "{6293CB7C55F8928C}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/CAT/dim_US_CAT_TL_2.et"
+   "{9A00294C24B6A8F9}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/CAT/dim_US_CAT_AR.et"
+   "{1988F1F51E84CD36}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/CAT/dim_US_CAT_Rifleman_2.et"
+   "{5155001831A8D46C}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/CAT/dim_US_CAT_LAT.et"
+   "{D2CB99850EB77931}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/CAT/dim_US_CAT_Medic_2.et"
+   "{12C90EA454FC1C56}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/CAT/dim_US_CAT_SMAW.et"
+   "{C846C0FA3D02D309}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/CAT/dim_US_CAT_Sniper_2.et"
+  }
+  m_sCustomNameSet "Counter Assault Team (CAT)"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 6492.787 85.688 3359.377
+  angles 0 -107.28 0
+  m_aUnitPrefabSlots {
+   "{DBAACEF64639B92A}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/CAT/dim_US_CAT_SL_Jacket.et"
+   "{9B036F103829DD83}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/CAT/dim_US_CAT_Rifleman_2_Jacket.et"
+   "{AB3B0BA0F1553FB7}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/CAT/dim_US_CAT_Rifleman_Jacket.et"
+  }
+  m_sCustomNameSet "Охрана президента"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 6438.003 79.813 3408.514
+  angles 0 147.72 0
+  m_aUnitPrefabSlots {
+   "{F788D85316320AEA}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/CAT/dim_US_CAT_SL.et"
+   "{6293CB7C55F8928C}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/CAT/dim_US_CAT_TL_2.et"
+   "{CFAA3821A44B64AA}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/CAT/dim_US_CAT_GL_2.et"
+   "{9A00294C24B6A8F9}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/CAT/dim_US_CAT_AR.et"
+   "{12B0BA8C25BA10E4}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/CAT/dim_US_CAT_Rifleman.et"
+   "{16B164803AFA4409}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/CAT/dim_US_CAT_Sapper.et"
+   "{BE9FAD65B273F61F}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/CAT/dim_US_CAT_Medic_1.et"
+  }
+  m_sCustomNameSet "Counter Assault Team (CAT)"
+ }
+ marsoc {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 1
+   }
+  }
+  coords 6599.536 96.719 1121.462
+  angles 0 -2.28 0
+  m_aUnitPrefabSlots {
+   "{153D8A03EC90E6C1}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USAF_MARSOC_SL.et"
+   "{12FA70528A165C02}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USAF_MARSOC_TL.et"
+   "{78B57B1CDE1444D2}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USAF_MARSOC_AR.et"
+   "{7EDD1022ABACA804}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USAF_MARSOC_Rifleman.et"
+   "{6E8E96C9F65BD65B}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USAF_MARSOC_SMAW.et"
+   "{A22DA08BDD375054}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USAF_MARSOC_Sapper.et"
+   "{DA45EEDCFF80D8CA}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USAF_MARSOC_Medic.et"
+   "{2C66ED71232C6513}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USAF_MARSOC_Marksman.et"
+  }
+  m_sCustomNameSet "MARSOC"
+ }
+ marsoc2 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 6604.717 96.719 1147.952
+  angles 0 177.72 0
+  m_aUnitPrefabSlots {
+   "{153D8A03EC90E6C1}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USAF_MARSOC_SL.et"
+   "{12FA70528A165C02}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USAF_MARSOC_TL.et"
+   "{78B57B1CDE1444D2}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USAF_MARSOC_AR.et"
+   "{7EDD1022ABACA804}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USAF_MARSOC_Rifleman.et"
+   "{6E8E96C9F65BD65B}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USAF_MARSOC_SMAW.et"
+   "{A22DA08BDD375054}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USAF_MARSOC_Sapper.et"
+   "{DA45EEDCFF80D8CA}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USAF_MARSOC_Medic.et"
+   "{2C66ED71232C6513}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USAF_MARSOC_Marksman.et"
+  }
+  m_sCustomNameSet "MARSOC"
+ }
+ {
+  coords 6480.118 85.687 3357.718
+  angles 0 72.72 0
+  m_aUnitPrefabSlots {
+   "{EECAD2DF9E3FC147}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/CAT/dim_US_CAT_KS.et"
+  }
+  m_sCustomNameSet "Counter Assault Team (CAT) HQ"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 6480.624 86.73 3294.632
+  angles 0 -17.28 0
+  m_aUnitPrefabSlots {
+   "{F788D85316320AEA}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/CAT/dim_US_CAT_SL.et"
+   "{F04F220270B4B029}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/CAT/dim_US_CAT_TL.et"
+   "{97D5576DD301C1D3}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/CAT/dim_US_CAT_GL.et"
+   "{9A00294C24B6A8F9}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/CAT/dim_US_CAT_AR.et"
+   "{12B0BA8C25BA10E4}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/CAT/dim_US_CAT_Rifleman.et"
+   "{16B164803AFA4409}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/CAT/dim_US_CAT_Sapper.et"
+   "{BE9FAD65B273F61F}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/CAT/dim_US_CAT_Medic_1.et"
+   "{12C90EA454FC1C56}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/CAT/dim_US_CAT_SMAW.et"
+  }
+  m_sCustomNameSet "Counter Assault Team (CAT)"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 6467.554 85.688 3338.21
+  angles 0 -107.28 0
+  m_aUnitPrefabSlots {
+   "{B015FB7ACC8F368E}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/CAT/dim_US_CAT_SL_2.et"
+   "{C846C0FA3D02D309}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/CAT/dim_US_CAT_Sniper_2.et"
+  }
+  m_sCustomNameSet "Counter Assault Team (CAT) (Sniper team)"
+ }
+ marsoc3 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 3
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 4802.196 60.875 2102.957
+  angles 0 45.386 0
+  m_aUnitPrefabSlots {
+   "{88A039FDB1A0B5DD}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USAF_MARSOC_Observer.et"
+   "{66EBC59DF91C18F0}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USAF_MARSOC_Sniper_Barret.et"
+  }
+  m_sCustomNameSet "MARSOC (Sniper Team)"
+ }
+}

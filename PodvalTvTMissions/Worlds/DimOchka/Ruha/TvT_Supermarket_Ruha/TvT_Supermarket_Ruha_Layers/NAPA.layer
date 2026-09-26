@@ -1,0 +1,215 @@
+$grp Vehicle : "{2D74C39A650A3031}Prefabs/Vehicles/Wheeled/M923A1/M923A1_engineer.et" {
+ M923A1_engineer1 {
+  coords 3616.093 65.156 977.089
+  angles 0 47.072 0
+  m_bEnableMoveOnFreeze 1
+ }
+ M923A1_engineer2 {
+  coords 3612.168 65.156 981.307
+  angles 0 47.072 0
+  m_bEnableMoveOnFreeze 1
+ }
+}
+Vehicle _Series_LWB_Civvie_V8_Red1 : "{6ACFF3931490C448}Prefabs/Vehicles/Wheeled/LR_3Series/Civvie/3Series_LWB_Civvie_V8_Red.et" {
+ coords 3572.061 65.156 990.925
+ angles 0 90 0
+ m_sAttachmentGroupName "DEF_NAPA3"
+}
+Vehicle _Series_LWB_Civvie_V8_Black1 : "{CFE1F4103795068B}Prefabs/Vehicles/Wheeled/LR_3Series/Civvie/3Series_LWB_Civvie_V8_Black.et" {
+ components {
+  SCR_UniversalInventoryStorageComponent "{648B4DF41C28F11F}" {
+   MultiSlots {
+    MultiSlotConfiguration "{669132EE1B4D07C0}" {
+     SlotTemplate InventoryStorageSlot "{669132EE1373BC8D}" {
+      Prefab "{6113990D163E5249}Prefabs/Items/Equipment/BallisticTable/BallisticTable_US.et"
+     }
+    }
+   }
+  }
+ }
+ coords 3587.402 65.078 971.506
+ angles 0 45.833 0
+ m_sAttachmentGroupName "DEF_NAPA9"
+}
+SCR_AIGroup DEF_KS : "{D5D0C33728F89BC6}Prefabs/Groups/INDFOR/Ses_NAPA/dim_Group_NAPA_KS.et" {
+ coords 3645.363 65.738 1059.574
+ angles 0 136.654 0
+ m_aUnitPrefabSlots {
+  "{EC1A93A939A97F56}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_Officer.et"
+ }
+ m_bSnapToTerrain 0
+ m_sCustomNameSet "Главный командир террористов"
+}
+$grp SCR_AIGroup : "{EB059CC44716B326}Prefabs/Groups/INDFOR/Ses_NAPA/dim_Group_NAPA_Squad.et" {
+ DEF_NAPA1 {
+  components {
+   PS_GroupCallsignAssigner "{696976B34DD51700}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 3679.11 65.156 1054.411
+  angles 0 138.751 0
+  m_aUnitPrefabSlots {
+   "{D09E01E2AEBF948B}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_SL_1.et"
+   "{9C50CBA7C7E852A9}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_TL.et"
+   "{2EB7A928EA635425}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_AT.et"
+   "{FBCABEC8645D2353}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_GL.et"
+   "{65D0987D5734FB15}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_Rfl_4.et"
+   "{804CD4845BD16C7E}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_Rfl_5.et"
+   "{325170B5F72951D4}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_Medic.et"
+   "{863AC6302B88A56A}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_Marksman.et"
+  }
+  m_sCustomNameSet "Боевики с М2"
+ }
+ DEF_NAPA2 {
+  components {
+   PS_GroupCallsignAssigner "{696976B34DD51700}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 3647.152 65.156 1026.163
+  angles 0 138.601 0
+  m_aUnitPrefabSlots {
+   "{BCCA3502127B1BA5}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_SL_2.et"
+   "{6E4C05048B0CBFA7}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_TL_2.et"
+   "{2EB7A928EA635425}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_AT.et"
+   "{FBCABEC8645D2353}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_GL.et"
+   "{58E4BD4522587222}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_Rfl_3.et"
+   "{D12CC55C92796A67}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_Rfl_1.et"
+   "{C4501323DEA6C9D6}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_Sapper.et"
+   "{AADD8B42E989863C}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_Sniper.et"
+  }
+  m_sCustomNameSet "Боевики с М2"
+ }
+ DEF_NAPA3 {
+  components {
+   PS_GroupCallsignAssigner "{696976B34DD51700}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 3568.555 65.156 985.265
+  angles 0 43.137 0
+  m_aUnitPrefabSlots {
+   "{D09E01E2AEBF948B}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_SL_1.et"
+   "{9C50CBA7C7E852A9}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_TL.et"
+   "{2EB7A928EA635425}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_AT.et"
+   "{FBCABEC8645D2353}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_GL.et"
+   "{65D0987D5734FB15}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_Rfl_4.et"
+   "{804CD4845BD16C7E}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_Rfl_5.et"
+   "{325170B5F72951D4}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_Medic.et"
+   "{863AC6302B88A56A}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_Marksman.et"
+  }
+  m_sCustomNameSet "Боевики с BGM-71 TOW"
+ }
+ DEF_NAPA4 {
+  components {
+   PS_GroupCallsignAssigner "{696976B34DD51700}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 3718.68 65.156 1064.888
+  angles 0 -130.333 0
+  m_aUnitPrefabSlots {
+   "{BCCA3502127B1BA5}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_SL_2.et"
+   "{6E4C05048B0CBFA7}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_TL_2.et"
+   "{2EB7A928EA635425}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_AT.et"
+   "{FBCABEC8645D2353}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_GL.et"
+   "{58E4BD4522587222}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_Rfl_3.et"
+   "{D12CC55C92796A67}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_Rfl_1.et"
+   "{C4501323DEA6C9D6}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_Sapper.et"
+   "{AADD8B42E989863C}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_Sniper.et"
+  }
+  m_sCustomNameSet "Боевики"
+ }
+ DEF_NAPA5 {
+  components {
+   PS_GroupCallsignAssigner "{696976B34DD51700}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 3663.243 65.156 1123.106
+  angles 0 138.114 0
+  m_aUnitPrefabSlots {
+   "{BCCA3502127B1BA5}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_SL_2.et"
+   "{6E4C05048B0CBFA7}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_TL_2.et"
+   "{2EB7A928EA635425}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_AT.et"
+   "{FBCABEC8645D2353}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_GL.et"
+   "{58E4BD4522587222}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_Rfl_3.et"
+   "{D12CC55C92796A67}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_Rfl_1.et"
+   "{C4501323DEA6C9D6}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_Sapper.et"
+   "{AADD8B42E989863C}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_Sniper.et"
+  }
+  m_sCustomNameSet "Боевики"
+ }
+ DEF_NAPA6 {
+  components {
+   PS_GroupCallsignAssigner "{696976B34DD51700}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 2
+   }
+  }
+  coords 3581.594 65.156 1022.27
+  angles 0 97.154 0
+  m_aUnitPrefabSlots {
+   "{D09E01E2AEBF948B}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_SL_1.et"
+   "{9C50CBA7C7E852A9}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_TL.et"
+   "{2EB7A928EA635425}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_AT.et"
+   "{FBCABEC8645D2353}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_GL.et"
+   "{65D0987D5734FB15}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_Rfl_4.et"
+   "{804CD4845BD16C7E}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_Rfl_5.et"
+   "{325170B5F72951D4}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_Medic.et"
+   "{863AC6302B88A56A}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_Marksman.et"
+  }
+  m_sCustomNameSet "Боевики"
+ }
+ DEF_NAPA7 {
+  components {
+   PS_GroupCallsignAssigner "{696976B34DD51700}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 4159.581 67.375 1032.384
+  angles 0 16.787 0
+  m_aUnitPrefabSlots {
+   "{D09E01E2AEBF948B}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_SL_1.et"
+   "{C4501323DEA6C9D6}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_Sapper.et"
+   "{863AC6302B88A56A}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_Marksman.et"
+  }
+  m_sCustomNameSet "Разведка боевиков"
+ }
+ DEF_NAPA8 {
+  components {
+   PS_GroupCallsignAssigner "{696976B34DD51700}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 1
+   }
+  }
+  coords 3857.725 59.641 1484.925
+  angles 0 16.787 0
+  m_aUnitPrefabSlots {
+   "{595679FB1E9E8CCE}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_SL_3.et"
+   "{C4501323DEA6C9D6}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_Sapper.et"
+   "{863AC6302B88A56A}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_Marksman.et"
+  }
+  m_sCustomNameSet "Разведка боевиков"
+ }
+ DEF_NAPA9 {
+  components {
+   PS_GroupCallsignAssigner "{696976B34DD51700}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 2
+   }
+  }
+  coords 3588.096 65.156 967.78
+  angles 0 38.792 0
+  m_aUnitPrefabSlots {
+   "{BCCA3502127B1BA5}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_SL_2.et"
+   "{BD78F1BC2EBDE549}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_Rfl_2.et"
+   "{804CD4845BD16C7E}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_Rfl_5.et"
+  }
+  m_sCustomNameSet "Расчет миномета М252"
+ }
+}
