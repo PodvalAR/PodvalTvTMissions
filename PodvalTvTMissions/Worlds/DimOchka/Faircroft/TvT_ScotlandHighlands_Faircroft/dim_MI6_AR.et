@@ -1,0 +1,100 @@
+SCR_ChimeraCharacter : "{65D0987D5734FB15}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_Rfl_4.et" {
+ ID "520EC961A090B1EE"
+ components {
+  SCR_CharacterFactionAffiliationComponent "{6239642BBB275066}" {
+   "faction affiliation" "UK"
+  }
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Агент-пулеметчик МИ-6"
+    Icon "{8212EA1EC0F5C2D5}UI/Icons/agent.edds"
+    m_sFaction "US"
+    m_aAuthoredLabels {
+     GROUPSIZE_SMALL ENTITYTYPE_CHARACTER FACTION_BRITISH
+    }
+   }
+  }
+  SCR_CharacterIdentityComponent "{5584CBC63E092DBC}" {
+   Override 1
+   Identity Identity "{5584CBC6363C648B}" {
+    VisualIdentity VisualIdentity "{56E6D9456009D1C4}" {
+     Head "{D7C470712EC4D596}Prefabs/Characters/Heads/Head_White_05.et"
+    }
+   }
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{709EA8530C2E5F7D}Prefabs/Characters/HeadGear/Hat_ECW/Hat_ECW_EarsDown_DPM_01.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{3C44AF5729CA80AB}Prefabs/Characters/Uniforms/Shirt_Turtleneck_01/Shirt_Turtleneck_01_beige_Dirty.et"
+    }
+    LoadoutSlotInfo ArmoredVest {
+     Prefab ""
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{4DC4FD2F6D353B12}Prefabs/Characters/Uniforms/Pants_M70_Dirty.et"
+    }
+    LoadoutSlotInfo Back {
+     Prefab "{0960A1A0B891F243}Prefabs/Items/Equipment/Backpacks/Rucksack_P58_Large_Pack.et"
+    }
+    LoadoutSlotInfo Vest {
+     Prefab "{9AB0215B78B3F7CA}Prefabs/Characters/Vests/Vest_58Pattern/Variants/Vest_P58_rifleman_L85.et"
+    }
+    LoadoutSlotInfo HandWear {
+     Prefab "{8266820FFDE17477}Prefabs/Characters/Handwear/Gloves_Wool_01/Gloves_Wool_01.et"
+    }
+    LoadoutSlotInfo Beard {
+     Offset 0 -0.003 -0.004
+     Enabled 1
+     Prefab "{0341BE3BC36FBBC2}Prefabs/Characters/HeadGear/Disguise/Beard/4/Beard_4_2.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{689B2D43EA87EF4F}" {
+     TargetStorage "Pants/Pants_M70_Dirty.et"
+    }
+    ItemsInitConfigurationItem "{689B2D43EAE0FA83}" {
+     TargetStorage "Pants/Pants_M70_Dirty.et"
+    }
+    ItemsInitConfigurationItem "{689B2D43EAF841F3}" {
+     TargetStorage "Back/Rucksack_P58_Large_Pack.et"
+     PrefabsToSpawn {
+      "{F4AE1135B6A78993}Prefabs/Items/Equipment/Radios/Radio_ANPRC152A_UK_Singl.et"
+     }
+    }
+    ItemsInitConfigurationItem "{689E6D83F89602AF}" {
+     TargetStorage "Back/Rucksack_P58_Large_Pack.et"
+    }
+    ItemsInitConfigurationItem "{689E6D8237974471}" {
+     Enabled 0
+    }
+    ItemsInitConfigurationItem "{689E6D826BD04590}" {
+     Enabled 0
+    }
+    ItemsInitConfigurationItem "{689E6D8233474F95}" {
+     Enabled 0
+    }
+    ItemsInitConfigurationItem "{689E6D823E1CA47C}" {
+     Enabled 0
+    }
+    ItemsInitConfigurationItem "{689E6D8241C8AB1F}" {
+     Enabled 0
+    }
+    ItemsInitConfigurationItem "{689E6D8254999773}" {
+     Enabled 0
+    }
+    ItemsInitConfigurationItem "{689E6D8266124935}" {
+     TargetStorage "Back/Rucksack_P58_Large_Pack.et"
+    }
+    ItemsInitConfigurationItem "{689E6D827A21D340}" {
+     TargetStorage "Back/Rucksack_P58_Large_Pack.et"
+    }
+   }
+  }
+ }
+ coords 5393.52 72.602 11370.85
+}

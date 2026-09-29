@@ -1,0 +1,162 @@
+$grp SCR_EditorRestrictionZoneEntity : "{6144B0BE2EAC6897}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneMedium.et" {
+ {
+  coords 5020.951 8.706 2380.442
+  angles -0.895 0 0
+  scale 2.012
+  m_fWarnRadius 100
+  m_fZoneRadius 140
+  m_fZoneTeleportedRadius 150
+  {
+   GenericEntity {
+    ID "59D673B36B893D84"
+    components {
+     SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+      m_fRadius 100
+     }
+    }
+    coords -0.508 -0.041 -0.513
+   }
+  }
+ }
+ {
+  coords 1878.761 5.056 2124.325
+  m_fWarnRadius 44
+  m_fZoneRadius 84
+  m_fZoneTeleportedRadius 94
+  {
+   GenericEntity {
+    ID "59D673B36B893D84"
+    components {
+     SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+      m_fRadius 44
+     }
+    }
+    coords -0.508 -0.041 -0.513
+   }
+  }
+ }
+ {
+  coords 7866.43 5.751 3166.246
+  scale 1.65
+  m_fWarnRadius 60
+  m_fZoneRadius 100
+  m_fZoneTeleportedRadius 110
+  {
+   GenericEntity {
+    ID "59D673B36B893D84"
+    components {
+     SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+      m_fRadius 70
+     }
+    }
+    coords -0.508 -0.041 -0.513
+   }
+  }
+ }
+}
+PolylineShapeEntity : "{7019844BAD5C4DD8}Prefabs/PolyZone/PolyZone_Border.et" {
+ components {
+  PS_PolyZone "{60E90266F25533F6}" {
+   m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
+   m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+   m_cPolygonBorderColor 0.561 0.071 0.071 1
+   m_bLineMode 1
+   m_bReversed 0
+   m_aVisibleForFactions {
+    ""
+    ""
+    ""
+   }
+  }
+ }
+ coords 4929.474 9.25 2426.692
+ Points {
+  ShapePoint "{60E90266E922A02A}" {
+   Position 42.902 1.406 69.266
+  }
+  ShapePoint "{6A70B334702A2092}" {
+   Position -231.462 -0.342 247.347
+  }
+  ShapePoint "{6A70B3347317BFC4}" {
+   Position -333.602 -1.809 27.058
+  }
+  ShapePoint "{6A70B334727DC92F}" {
+   Position -94.805 -0 -43.469
+  }
+  ShapePoint "{6A70B3347286EDB1}" {
+   Position 158.83 -0.152 -204.774
+  }
+  ShapePoint "{6A70B3347416E3AF}" {
+   Position 275.39 -1.527 -276.106
+  }
+  ShapePoint "{6A70B33477019908}" {
+   Position 316.105 -2.539 -294.875
+  }
+  ShapePoint "{6A70B3347655F482}" {
+   Position 368.051 -3.106 -206.454
+  }
+  ShapePoint "{6A70B33526F123E0}" {
+   Position 337.881 -1.428 -180.082
+  }
+  ShapePoint "{6A70B33539A122B4}" {
+   Position 254.3 0.002 -122.358
+  }
+  ShapePoint "{6A70B335389F70E3}" {
+   Position 289.714 -2.679 -84.106
+  }
+  ShapePoint "{6A70B33476E22830}" {
+   Position 260.407 -1.965 -50.225
+  }
+  ShapePoint "{6A70B3352F99348F}" {
+   Position 43.182 1.453 69.488
+  }
+ }
+ IsClosed 0
+ {
+  PS_PolyZoneTrigger {
+   ID "60FD050E1E83544C"
+   m_polyZoneEffect PS_PolyZoneEffectRestricted "{60FD050E0DC2A2AB}" {
+    m_fKillTime 10
+   }
+   m_sGroupKey "kom"
+  }
+ }
+}
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ AFRF_WIN {
+  coords 4155.424 83.161 901.564
+  m_sTitle "Командир стороны выжил"
+  m_iScore 50
+  m_sFactionKey "RHS_AFRF"
+ }
+ USAF_WIN {
+  coords 4154.259 82.91 902.266
+  m_sTitle "Командир красных нейтрализован"
+  m_iScore 50
+  m_sFactionKey "RHS_USAF"
+ }
+ AFRF_WIN2 {
+  coords 4915.81 9.358 2439.162
+  m_sTitle "Бензовоз 1 не уничтожен"
+  m_iScore 25
+  m_sFactionKey "RHS_AFRF"
+ }
+ AFRF_WIN3 {
+  coords 4916.083 9.25 2434.788
+  m_sTitle "Бензовоз 2 не уничтожен"
+  m_iScore 25
+  m_sFactionKey "RHS_AFRF"
+ }
+ USAF_WIN2 {
+  coords 4916.357 9.25 2432.238
+  m_sTitle "Бензовоз 1 уничтожен"
+  m_iScore 25
+  m_sFactionKey "RHS_USAF"
+ }
+ USAF_WIN3 {
+  coords 4916.357 9.25 2432.238
+  m_sTitle "Бензовоз 2 уничтожен"
+  m_iScore 25
+  m_sFactionKey "RHS_USAF"
+ }
+}

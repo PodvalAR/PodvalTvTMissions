@@ -9,7 +9,7 @@ $grp SCR_AIGroup : "{0FF932BB77AEA2F6}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/MTV
   angles 0 90 0
   m_aUnitPrefabSlots {
    "{319F0CA648C01715}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/Char_RHS_USAF_Regular_SL_Mortor.et"
-   "{219C105A978FC810}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/Char_RHS_USAF_Regular_1Morter.et"
+   "{0A00AE60313837C1}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/Char_RHS_USAF_Regular_Observer.et"
    "{9CAA68B4D0AFFCB7}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/Char_RHS_USAF_Regular_2Mortor.et"
   }
   m_bSnapToTerrain 0
@@ -68,6 +68,16 @@ Vehicle M1151_armed_Green3 : "{36CFD2EC7644EFF2}Prefabs/Vehicles/Wheeled/M998/M1
  coords 2575.888 218.522 10514.576
  angles 0.928 -85.422 -0.375
  m_sAttachmentGroupName "US_HQ"
+}
+$grp GenericEntity : "{4A93B3F0B33FF104}Prefabs/Items/Equipment/Backpacks/backpack_511_rush12/Backpack_511_rush12_MC.et" {
+ {
+  coords 2636.89 216.489 10515.154
+  angles 0 -90 0
+ }
+ {
+  coords 2636.89 216.489 10515.551
+  angles 0 -90 0
+ }
 }
 $grp Vehicle : "{7F0CE77CBE1A1F65}Prefabs/Vehicles/Wheeled/M1240A1_MATV/M1240A1_MATV_Turret_Camo.et" {
  M1240A1_MATV_Turret_Camo1 {
@@ -157,7 +167,7 @@ $grp SCR_AIGroup : "{BC3F32868941B97A}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/MTV
     m_iCompanyCallsign 3
    }
   }
-  coords 2722.801 236.428 9299.583
+  coords 2722.801 236.738 9299.583
   angles 0 174.123 0
   m_aUnitPrefabSlots {
    "{C61B0C8C59F0CA4E}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/Recon/dim_USAF_Recon_SL.et"

@@ -1,0 +1,85 @@
+SCR_ChimeraCharacter : "{325170B5F72951D4}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_Medic.et" {
+ ID "520EC961A090B1EE"
+ components {
+  SCR_CharacterFactionAffiliationComponent "{6239642BBB275066}" {
+   "faction affiliation" "UK"
+  }
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Агент-медик МИ-6"
+    Icon "{8212EA1EC0F5C2D5}UI/Icons/agent.edds"
+    m_sFaction "US"
+    m_aAuthoredLabels {
+     GROUPSIZE_SMALL ENTITYTYPE_CHARACTER FACTION_BRITISH
+    }
+   }
+  }
+  SCR_CharacterIdentityComponent "{5584CBC63E092DBC}" {
+   Override 1
+   Identity Identity "{5584CBC6363C648B}" {
+    VisualIdentity VisualIdentity "{56E6D9456009D1C4}" {
+     Head "{143245D81F2BAB94}Prefabs/Characters/Heads/Head_White_10.et"
+    }
+   }
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{6907D4784D39423E}Prefabs/Characters/HeadGear/Hat_ZmijovkaCap_01/dim_Hat_ZmijovkaCap_01_black_Headset.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{5BEE8146EAA1893B}Prefabs/Characters/Uniforms/Shirt_Turtleneck_01/Shirt_Turtleneck_01_DarkBlue_Dirty.et"
+    }
+    LoadoutSlotInfo ArmoredVest {
+     Prefab ""
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{CCC050D559C23616}Prefabs/Characters/Uniforms/ACU_pants/GD_ACU_pants_DPM.et"
+    }
+    LoadoutSlotInfo Vest {
+     Prefab "{1033EBAF2CD0FD52}Prefabs/Characters/Vests/Vest_58Pattern/Variants/Vest_P58_rifleman_2.et"
+    }
+    LoadoutSlotInfo HandWear {
+     Prefab "{8266820FFDE17477}Prefabs/Characters/Handwear/Gloves_Wool_01/Gloves_Wool_01.et"
+    }
+    LoadoutSlotInfo Beard {
+     Enabled 1
+    }
+    LoadoutSlotInfo Mustache {
+     Offset 0 0.003 0
+     Enabled 1
+     Prefab "{5A38122DBF616364}Prefabs/Characters/HeadGear/Disguise/Mustache/2/Mustache_2_2.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{689B2D43EA87EF4F}" {
+     TargetStorage "Pants/GD_ACU_pants_DPM.et"
+    }
+    ItemsInitConfigurationItem "{689B2D43EAE0FA83}" {
+     TargetStorage "Pants/GD_ACU_pants_DPM.et"
+    }
+    ItemsInitConfigurationItem "{689B2D43EAF841F3}" {
+     TargetStorage "Pants/GD_ACU_pants_DPM.et"
+     PrefabsToSpawn {
+      "{F4AE1135B6A78993}Prefabs/Items/Equipment/Radios/Radio_ANPRC152A_UK_Singl.et"
+     }
+    }
+    ItemsInitConfigurationItem "{689E6D83F89602AF}" {
+     TargetStorage "Vest/Vest_P58_rifleman_2.et/MagPouch/Pouch_P58_20rnd_L1A1_Left.et"
+     PrefabsToSpawn {
+      "{01F56F6D9A15D96A}Prefabs/Weapons/Magazines/Magazine_9x19_L2A3_34rnd_BattleMix.et" "{01F56F6D9A15D96A}Prefabs/Weapons/Magazines/Magazine_9x19_L2A3_34rnd_BattleMix.et" "{01F56F6D9A15D96A}Prefabs/Weapons/Magazines/Magazine_9x19_L2A3_34rnd_BattleMix.et" "{01F56F6D9A15D96A}Prefabs/Weapons/Magazines/Magazine_9x19_L2A3_34rnd_BattleMix.et" "{01F56F6D9A15D96A}Prefabs/Weapons/Magazines/Magazine_9x19_L2A3_34rnd_BattleMix.et"
+     }
+    }
+    ItemsInitConfigurationItem "{689E6D8237974471}" {
+     TargetStorage "Vest/Vest_P58_rifleman_2.et/MagPouch2/Pouch_P58_20rnd_L1A1_Right.et"
+     PrefabsToSpawn {
+      "{01F56F6D9A15D96A}Prefabs/Weapons/Magazines/Magazine_9x19_L2A3_34rnd_BattleMix.et" "{01F56F6D9A15D96A}Prefabs/Weapons/Magazines/Magazine_9x19_L2A3_34rnd_BattleMix.et" "{01F56F6D9A15D96A}Prefabs/Weapons/Magazines/Magazine_9x19_L2A3_34rnd_BattleMix.et" "{01F56F6D9A15D96A}Prefabs/Weapons/Magazines/Magazine_9x19_L2A3_34rnd_BattleMix.et" "{01F56F6D9A15D96A}Prefabs/Weapons/Magazines/Magazine_9x19_L2A3_34rnd_BattleMix.et"
+     }
+    }
+   }
+  }
+ }
+ coords 5391.341 72.522 11369.524
+}

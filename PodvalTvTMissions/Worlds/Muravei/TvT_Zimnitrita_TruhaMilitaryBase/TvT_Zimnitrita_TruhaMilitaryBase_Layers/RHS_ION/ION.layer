@@ -1,23 +1,43 @@
-SCR_AIGroup SPN_ION1 : "{1CF5EFE6FE5047FB}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_Elite_Force.et" {
- components {
-  PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
-   m_iCompanyCallsign 7
+$grp SCR_AIGroup : "{1CF5EFE6FE5047FB}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_Elite_Force.et" {
+ SPN_ION2 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 1
+   }
+  }
+  coords 1738.196 214.411 13109.572
+  angles 0.155 -174.869 -6.697
+  m_aUnitPrefabSlots {
+   "{7190C1CBD3007C3E}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_SL.et"
+   "{76573B9AB586C6FD}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_TL.et"
+   "{1C1830D4E184DE2D}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_AR.et"
+   "{1F19F6D64338C82F}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Rifleman.et"
+   "{6A8AAB9EF4CA4EAE}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_SMAW.et"
+   "{B73805E442B03186}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Marksman.et"
   }
  }
- coords 1977.042 184.849 13090.921
- angles 0 -174.297 0
- m_aUnitPrefabSlots {
-  "{7190C1CBD3007C3E}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_SL.et"
-  "{76573B9AB586C6FD}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_TL.et"
-  "{1C1830D4E184DE2D}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_AR.et"
-  "{1F19F6D64338C82F}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Rifleman.et"
-  "{6A8AAB9EF4CA4EAE}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_SMAW.et"
-  "{B73805E442B03186}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Marksman.et"
+ SPN_ION1 {
+  components {
+   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 1718.265 216.728 13111.123
+  angles 0.168 -174.759 -6.696
+  m_aUnitPrefabSlots {
+   "{7190C1CBD3007C3E}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_SL.et"
+   "{76573B9AB586C6FD}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_TL.et"
+   "{1C1830D4E184DE2D}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_AR.et"
+   "{1F19F6D64338C82F}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Rifleman.et"
+   "{6A8AAB9EF4CA4EAE}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_SMAW.et"
+   "{B73805E442B03186}Prefabs/Characters/Factions/INDFOR/RHS_ION/Elite_ION/dim_ION_Elite_Marksman.et"
+  }
  }
 }
 SCR_AIGroup SQUAD1 : "{A5F4624C7FB02537}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_rtvt_PL_9.et" {
- coords 5211.426 238.906 14395.917
- angles 0 30.22 0
+ coords 1654.173 262.834 9598.28
+ angles 0.086 111.606 0.997
  m_aUnitPrefabSlots {
   "{428D3323BE5B424B}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_Officer.et"
   "{2A8DD0DBEA7BE9E2}Prefabs/Characters/Factions/INDFOR/RHS_ION/PMC/Random/Char_RHS_ION_PMC_SR_Optic_Random.et"
@@ -31,66 +51,89 @@ SCR_AIGroup SQUAD1 : "{A5F4624C7FB02537}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_rt
  }
 }
 $grp SCR_AIGroup : "{CD4A8C98E6B2357B}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_STK_1.et" {
- SQUAD2 {
-  components {
-   PS_GroupCallsignAssigner "{68B17A477D63A783}" {
-    m_iCompanyCallsign 3
-   }
-  }
-  coords 5085.296 238.906 14467.968
-  angles 0 29.158 0
- }
- SQUAD3 {
+ SQUAD6_heli {
   components {
    PS_GroupCallsignAssigner "{68B17A477D63A783}" {
     m_iCompanyCallsign 2
    }
   }
+  coords 5085.296 238.906 14467.968
+  angles 0 29.158 0
+ }
+ SQUAD5_heli {
+  components {
+   PS_GroupCallsignAssigner "{68B17A477D63A783}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
   coords 5149.337 238.906 14432.227
   angles 0 29.549 0
  }
- SQUAD4 {
+ SQUAD7_heli {
   components {
    PS_GroupCallsignAssigner "{68B17A477D63A783}" {
-    m_iCompanyCallsign 4
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
    }
   }
   coords 5008.62 238.906 14511.146
   angles 0 29.158 0
  }
- SQUAD5 {
+ SQUAD3 {
   components {
    PS_GroupCallsignAssigner "{68B17A477D63A783}" {
-    m_iCompanyCallsign 5
+    m_iPlatoonCallsign 2
    }
   }
-  coords 4940.609 238.906 14549.601
-  angles 0 29.158 0
+  coords 1674.859 263.922 9653.868
+  angles -6.996 110.185 -1.618
+  m_aUnitPrefabSlots {
+   "{93FDA136D2E298D0}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_SL_4.et"
+   "{A8288D670C2B80B3}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_TL.et"
+   "{07C9CD08A7D257B8}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Rifleman_3.et"
+   "{3AFDE830D2BEDE8F}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Rifleman_4.et"
+   "{2B951DA165375A8B}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_M72.et"
+   "{E5D286AD0454E484}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Sapper_2.et"
+   "{9A253DEEA8423780}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_Crew.et"
+   "{9A253DEEA8423780}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_Crew.et"
+  }
  }
- SQUAD6 {
+ SQUAD2 {
   components {
    PS_GroupCallsignAssigner "{68B17A477D63A783}" {
-    m_iCompanyCallsign 7
+    m_iPlatoonCallsign 1
    }
   }
-  coords 4774.068 238.906 14648.26
-  angles 0 29.158 0
+  coords 1671.874 263.154 9613.891
+  angles -0.062 -66.967 -0.999
+  m_aUnitPrefabSlots {
+   "{93FDA136D2E298D0}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_SL_4.et"
+   "{A8288D670C2B80B3}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_TL.et"
+   "{07C9CD08A7D257B8}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Rifleman_3.et"
+   "{3AFDE830D2BEDE8F}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Rifleman_4.et"
+   "{2B951DA165375A8B}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_M72.et"
+   "{E5D286AD0454E484}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_STK_Sapper_2.et"
+   "{9A253DEEA8423780}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_Crew.et"
+   "{9A253DEEA8423780}Prefabs/Characters/Factions/INDFOR/RHS_ION/Semi-Elite/dim_ION_Crew.et"
+  }
  }
- SQUAD7 {
+ SQUAD4_heli {
   components {
    PS_GroupCallsignAssigner "{68B17A477D63A783}" {
-    m_iCompanyCallsign 6
+    m_iCompanyCallsign 1
    }
   }
-  coords 4863.094 238.906 14597.129
-  angles 0 31.275 0
+  coords 5210.993 238.906 14395.1
+  angles 0 29.549 0
  }
 }
 $grp SCR_AIGroup : "{E1F03F7213D8B57D}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_HeliCrew.et" {
  PILOTS1 {
   components {
    PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
-    m_iSquadCallsign 1
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
    }
   }
   coords 5221.968 238.906 14407.818
@@ -99,7 +142,8 @@ $grp SCR_AIGroup : "{E1F03F7213D8B57D}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_Heli
  PILOTS2 {
   components {
    PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
-    m_iCompanyCallsign 2
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
     m_iSquadCallsign 1
    }
   }
@@ -109,8 +153,8 @@ $grp SCR_AIGroup : "{E1F03F7213D8B57D}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_Heli
  PILOTS3 {
   components {
    PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
-    m_iCompanyCallsign 3
-    m_iSquadCallsign 1
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
    }
   }
   coords 5095.702 238.906 14478.679
@@ -119,41 +163,12 @@ $grp SCR_AIGroup : "{E1F03F7213D8B57D}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_Heli
  PILOTS4 {
   components {
    PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
-    m_iCompanyCallsign 4
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
     m_iSquadCallsign 1
    }
   }
   coords 5019.263 238.906 14521.592
   angles 0 -150.398 0
- }
- PILOTS5 {
-  components {
-   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
-    m_iCompanyCallsign 5
-    m_iSquadCallsign 1
-   }
-  }
-  coords 4952.412 238.906 14561.223
-  angles 0 -150.398 0
- }
- PILOTS7 {
-  components {
-   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
-    m_iCompanyCallsign 7
-    m_iSquadCallsign 1
-   }
-  }
-  coords 4784.008 238.906 14658.275
-  angles 0 -150.398 0
- }
- PILOTS6 {
-  components {
-   PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
-    m_iCompanyCallsign 6
-    m_iSquadCallsign 1
-   }
-  }
-  coords 4871.547 238.906 14604.644
-  angles 0 -149.926 0
  }
 }
