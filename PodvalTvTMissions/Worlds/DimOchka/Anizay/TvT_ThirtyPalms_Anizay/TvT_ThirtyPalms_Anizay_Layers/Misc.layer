@@ -1,0 +1,337 @@
+GenericEntity {
+ components {
+  MeshObject "{688A16CB084C124B}" {
+   Object "{19105A1130EFBEC3}Prefabs/Misc/Abrams_Wreck/Abrams1.xob"
+  }
+  RigidBody "{688A7317D167EB9D}" {
+   ModelGeometry 1
+   Static 1
+  }
+  RplComponent "{688A7317F5BA2CA3}" {
+  }
+ }
+ coords 5163.173 206.828 1784.652
+ angles 1.377 -174.3 3.172
+}
+SCR_IndestructibleEnvironmentalEntity : "{03C38049F4587133}Prefabs/Models/Rocks/tem_rock1v.et" {
+ components {
+  MeshObject "{62867E96EB2E3E2D}" {
+   Materials {
+    MaterialAssignClass "{6737517192508BDE}" {
+     SourceMaterial "MI_Rock_18"
+     AssignedMaterial "{003244BB00581E05}Common/Materials/default_MatTerrainObj_TerrShadows.emat"
+    }
+   }
+  }
+ }
+ coords 9602.598 -13.073 8996.124
+ angles 9.192 91.395 0
+}
+GenericEntity : "{04AE547AA0125738}Prefabs/Props/Recreation/Camp/TentSmall_03/Dst/TentSmall_03_Dst_base.et" {
+ coords 9625.978 88.042 8980.021
+}
+$grp StaticModelEntity : "{07D6AED5B385571A}PrefabsEditable/Auto/Structures/Military/Fortifications/E_DirtCover_01_long_v1_DIMKII.et" {
+ {
+  coords 9596.765 -0.905 8988.912
+  angles -28.148 85.894 0
+  scale 2.401
+ }
+ {
+  coords 5154.087 0.041 1777.248
+  angles 17.773 -123.839 0.675
+  scale 1.16
+ }
+ {
+  coords 5150.315 -0.253 1735.39
+  angles -23.574 36.099 12.364
+ }
+ {
+  coords 5151.342 -0.219 1734.699
+  angles -29.295 -4.554 1.455
+  scale 0.872
+ }
+ {
+  coords 5153.051 -0.846 1790.178
+  angles -26.222 0 0
+  scale 1.97
+ }
+ {
+  coords 5155.414 -0.78 1791.244
+  angles 18.221 80.986 0
+  scale 1.57
+ }
+ {
+  coords 5148.31 -0.697 1793.94
+  angles -17.198 80.461 -0.011
+  scale 1.97
+ }
+ {
+  coords 5145.518 -0.597 1764.276
+  angles -29.606 58.655 -0.122
+  scale 2.8
+ }
+ {
+  coords 5118.068 -1.217 1788.701
+  angles -15.787 101.125 -2.327
+  scale 2.8
+ }
+ {
+  coords 9603.017 -0.809 9027.522
+  angles -22.321 94.71 1.547
+  scale 2.8
+ }
+}
+$grp Vehicle : "{1395C9E664E4C792}Prefabs/Vehicles/Wheeled/M998/M1151_armed_M2HB_Tan_NOGUN_DIMKII.et" {
+ M1151_armed_M2HB_Tan_NOGUN_DIMKII1 {
+  coords 5153.168 206.922 1791.654
+  angles 1.737 -93.228 -0.994
+ }
+ M1151_armed_M2HB_Tan_NOGUN_DIMKII2 {
+  coords 5149.583 207.078 1794.466
+  angles -1.213 169.276 -1.592
+ }
+ M1151_armed_M2HB_Tan_NOGUN_DIMKII3 {
+  coords 5153.193 207.011 1797.399
+  angles 1.997 -59.737 0.129
+ }
+}
+$grp StaticModelEntity : "{17EC093A1F982C16}PrefabsEditable/Auto/Structures/Military/Fortifications/E_DirtPile_01_large_DIMKII.et" {
+ {
+  coords 5150.469 -0.467 1792.112
+  angles -29.851 20.494 -10.539
+  scale 2.49
+ }
+ {
+  coords 9624.986 -0.382 9049.628
+  angles 0 0 -30.291
+  scale 2.91
+ }
+}
+$grp GenericEntity : "{20759E1CA7F808BE}Prefabs/Props/Garbage/Military/Food/GarbageFoodMilitaryUS_01.et" {
+ {
+  coords 5152.748 207.081 1793.562
+ }
+ {
+  coords 5153.533 207.293 1794.208
+ }
+}
+GenericEntity : "{2424EBB806A690D4}Prefabs/Props/Garbage/Medical/GarbageMedicalUS_02.et" {
+ coords 5153.041 207.218 1794.68
+}
+GenericEntity : "{52D00BCAC3D201B9}Prefabs/Compositions/Misc/SubCompositions/Furniture/Chair_Garbage_US_01.et" {
+ coords 5152.232 207.064 1795.802
+ angles 0 0 0
+}
+GenericEntity : "{62EA4C95DE960369}PrefabsEditable/Auto/Compositions/Misc/SubCompositions/E_Sandbag_Barricade_USSR_01.et" {
+ coords 9597.438 89.147 9090.696
+ angles 0.734 34.891 4.78
+}
+GenericEntity : "{9292E7FF79B24834}Prefabs/Props/Recreation/Camp/TentSmall_03/Dst/TentSmall_03_Dst_white.et" {
+ coords 5152.202 208.849 1795.002
+ angles 1.473 -29.241 1.07
+ scale 1.645
+}
+GenericEntity : "{B898D2A1F45058F6}Prefabs/Props/Garbage/Military/Food/GarbageFoodMilitaryUSSR_01.et" {
+ coords 5153.483 207.148 1793.841
+}
+$grp Vehicle : "{D26E78556481B9CB}Prefabs/Vehicles/Wheeled/M998/M1151_armed_M2HB_Tan_Static_Turrel.et" {
+ M1151_armed_M2HB_Tan_DIMKII1 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{5916C587FC993363}" {
+    MultiSlots {
+     MultiSlotConfiguration "{66F2D69AD3FC9116}" {
+      SlotTemplate InventoryStorageSlot M2Ammo {
+       Prefab "{C820846B0521423B}Prefabs/Weapons/Magazines/Box_127x99_M2_100rnd_4AP_1APIT.et"
+      }
+     }
+    }
+   }
+  }
+  coords 5153.085 206.735 1775.659
+  angles -0.572 -22.657 0.583
+ }
+ M1151_armed_M2HB_Tan_DIMKII2 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{5916C587FC993363}" {
+    MultiSlots {
+     MultiSlotConfiguration "{66F2D69AD3FC9116}" {
+      SlotTemplate InventoryStorageSlot M2Ammo {
+       Prefab "{C820846B0521423B}Prefabs/Weapons/Magazines/Box_127x99_M2_100rnd_4AP_1APIT.et"
+      }
+     }
+    }
+   }
+  }
+  coords 5151.993 206.832 1736.905
+  angles -2.627 -130.386 -9.353
+ }
+}
+$grp StaticModelEntity : "{F5BECB4E7068FEA1}PrefabsEditable/Auto/Structures/Military/Fortifications/E_DirtCover_01_long_v3_DIMKII.et" {
+ {
+  coords 5151.922 -0.004 1777.657
+  angles 7.084 136.924 7.339
+  scale 0.61
+ }
+ {
+  coords 5151.036 -0.205 1737.495
+  angles 0.637 144.9 3.932
+  scale 1.7
+ }
+ {
+  coords 5151.973 -1.121 1792.919
+  angles 42.681 0 0
+  scale 1.99
+ }
+ {
+  coords 5148.164 -1.019 1766.278
+  angles -48.424 52.496 -0.245
+  scale 1.955
+ }
+ {
+  coords 5150.787 -1.066 1758.826
+  angles 39.325 -11.057 -0.683
+  scale 2.5
+ }
+ {
+  coords 5118.551 -1.437 1781.469
+  angles 40.7 18.808 -6.987
+  scale 2.5
+ }
+ {
+  coords 5120.258 -0.96 1788.85
+  angles 32.174 -90.014 1.712
+  scale 2.5
+ }
+ {
+  coords 5122.094 -0.488 1765.261
+  angles -9.425 92.688 -3.788
+  scale 2.51
+ }
+ {
+  coords 5127.458 -0.616 1747.928
+  angles 15.668 34.097 -5.087
+  scale 2.51
+ }
+ {
+  coords 5124.414 -1.22 1741.111
+  angles 41.86 76.542 0.405
+  scale 2.51
+ }
+ {
+  coords 5124.944 -1.024 1750.429
+  angles 39.862 71.336 -0.4
+  scale 2.51
+ }
+ {
+  coords 9604.937 -1.207 8998.779
+  angles 38.292 82.203 -0.266
+  scale 2.886
+ }
+ {
+  coords 9604.896 -1.348 8990.956
+  angles 35.898 93.099 -1.028
+  scale 2.886
+ }
+ {
+  coords 9604.326 -1.165 8983.118
+  angles 34.845 93.1 -0.078
+  scale 2.886
+ }
+ {
+  coords 5132.923 -1.047 1745.217
+  angles 37.089 -97.986 1.722
+  scale 2.5
+ }
+ {
+  coords 5159.385 -0.673 1787.363
+  angles -2.348 -1.35 -12.679
+  scale 2.51
+ }
+ {
+  coords 5157.848 -0.697 1782.598
+  angles 23.904 2.94 -8.503
+  scale 2.51
+ }
+}
+$grp Vehicle : "{F5F5DADC67FD2F14}Prefabs/Vehicles/Wheeled/M923A1/M923A1_engineer_DIMKII.et" {
+ M923A1_engineer_DIMKII1 {
+  components {
+   SCR_VehicleDustPerWheel "{5476BC43E4910F64}" {
+    m_fDustTopSpeed 60
+   }
+   SlotManagerComponent "{55BCE45E438E4CFF}" {
+    Slots {
+     RegisteringComponentSlotInfo Flag {
+      Enabled 0
+     }
+    }
+   }
+  }
+  coords 5146.829 206.189 1764.758
+  angles -1.667 145.316 -8.181
+ }
+ M923A1_engineer_DIMKII2 {
+  components {
+   SCR_VehicleDustPerWheel "{5476BC43E4910F64}" {
+    m_fDustTopSpeed 60
+   }
+   SlotManagerComponent "{55BCE45E438E4CFF}" {
+    Slots {
+     RegisteringComponentSlotInfo Flag {
+      Enabled 0
+     }
+    }
+   }
+  }
+  coords 5119.392 206.297 1788.183
+  angles -5.077 -173.727 5.491
+ }
+ M923A1_engineer_DIMKII3 {
+  components {
+   SCR_VehicleDustPerWheel "{5476BC43E4910F64}" {
+    m_fDustTopSpeed 60
+   }
+   SlotManagerComponent "{55BCE45E438E4CFF}" {
+    Slots {
+     RegisteringComponentSlotInfo Flag {
+      Enabled 0
+     }
+    }
+   }
+  }
+  coords 5128.114 206.771 1742.698
+  angles -2.876 171.168 -0.295
+ }
+}
+$grp SCR_IndestructibleEnvironmentalEntity : "{FA52ABB5DECC3046}Prefabs/Models/Rocks/tem_small_rock1.et" {
+ {
+  components {
+   MeshObject "{645C86C2A4B57817}" {
+    Materials {
+     MaterialAssignClass "{67375171C49C89C7}" {
+      SourceMaterial "MI_Rock_18"
+      AssignedMaterial "{003244BB00581E05}Common/Materials/default_MatTerrainObj_TerrShadows.emat"
+     }
+    }
+   }
+  }
+  coords 9612.26 -0.128 8999.372
+  angles 0 0 9.462
+  scale 0.7
+ }
+ {
+  components {
+   MeshObject "{645C86C2A4B57817}" {
+    Materials {
+     MaterialAssignClass "{67375171C49C89C7}" {
+      SourceMaterial "MI_Rock_18"
+      AssignedMaterial "{003244BB00581E05}Common/Materials/default_MatTerrainObj_TerrShadows.emat"
+     }
+    }
+   }
+  }
+  coords 9610.733 -0.107 8992.093
+  angles 0 0 9.462
+  scale 0.7
+ }
+}

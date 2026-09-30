@@ -1,0 +1,235 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ {
+  coords 736.284 137.096 5024.601
+  m_sTitle "Правила и задачи"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "ПРАВИЛА:"\
+  "1. 2 отряда USMC должно обязательно находиться в триггере (КС не в счет);"\
+  "2. США Запрещено строить миномет, ПТУРы, Командный пункт;"\
+  "3. Строительные грузовики запрещено вывозить за пределы триггера."\
+  ""\
+  "ЗАДАЧИ:"\
+  "• США: "\
+  " 1. Не допустить захват базы."\
+  ""\
+  "• ТКР:"\
+  " 1. Захватить базу."\
+  ""\
+  "Дополнительно:"\
+  "1. Черные триггеры - ПП мины;"\
+  "2. У США есть 2 ПТУРа;"\
+  "3. У ТКР есть миномет с софламом (калькулятор и софлам в грузовиках)."
+  m_aVisibleForFactions {
+   "RHS_USAF"
+   "Ses_TKR"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+ }
+ {
+  coords 736.284 137.096 5024.601
+  m_sTitle "Обстановка"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "После масштабного наступления радикальных формирований ТКР американские войска начали срочную эвакуацию из страны. Часть подразделений не успела попасть на аэродром и двинулась на юг по суше. Однако песчаная буря вынудила их укрыться на FOB Thirty Palms."\
+  ""\
+  "К утру почти вся техника оказалась погребена в песке — удалось откопать лишь два «Хаммера». "\
+  ""\
+  "Захватив брошенную технику, ТКР готовятся атаковать FOB и уничтожить оставшихся там американских военнослужащих."
+  m_aVisibleForFactions {
+   "RHS_USAF"
+   "Ses_TKR"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+ }
+}
+$grp GenericEntity : "{3D78D7D606FF9818}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_NoCapture.et" {
+ flag1 {
+  coords 5238.361 218.403 1945.157
+ }
+ flag2 {
+  coords 5078.206 218.416 1921.332
+ }
+ flag3 {
+  coords 5289.533 218.447 1808.434
+ }
+ flag4 {
+  coords 5226.91 218.089 1686.442
+ }
+ flag5 {
+  coords 5149.087 214.753 1686.461
+ }
+ flag6 {
+  coords 5078.131 217.532 1774.529
+ }
+}
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{6A78E321824E3B6E}" {
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "TKR_WIN"
+     }
+     m_sFailedObjectiveNames {
+      "USAF_WIN"
+     }
+     m_sMessage "База захвачена"
+     m_Timer GUB_ZoneControlTimer "{6A78E3218C62278A}" {
+      timeToComplete 180
+     }
+     m_ZoneController GUB_ZoneController "{6A78E3218E0A5611}" {
+      m_sZoneEntityName "capture"
+     }
+     m_FlagController GUB_FlagController "{6A78E32189B16AD3}" {
+      m_aFlagNames {
+       "flag1"
+       "flag2"
+       "flag3"
+       "flag4"
+       "flag5"
+       "flag6"
+      }
+      m_fStartFactionKey "RHS_USAF"
+      m_fEndFactionKey "Ses_TKR"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{6A78E32199B47786}" {
+       m_sFirstFactionKey "Ses_TKR"
+       m_sSecondFactionKey "RHS_USAF"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 4995.569 261.645 1467.845
+}
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ USAF_WIN {
+  coords 4448.621 133.538 6688.524
+  m_sTitle "База удержана"
+  m_sFactionKey "RHS_USAF"
+ }
+ TKR_WIN {
+  coords 4446.063 133.538 6666.788
+  m_sTitle "База захвачена"
+  m_sFactionKey "Ses_TKR"
+ }
+}
+PolylineShapeEntity capture : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
+ components {
+  PS_PolyZone "{60E90266F25533F6}" {
+   m_mPolygonTexture "{62F4404928D33DB5}UI/layouts/Textures/Grid1b.edds"
+   m_cPolygonColor 0.506 0.584 0.812 1
+   m_fPolygonUVScale 0.44
+   m_cPolygonBorderColor 0 0.125 0.502 1
+   m_aVisibleForFactions {
+    "RHS_USAF"
+    "Ses_TKR"
+    ""
+   }
+  }
+ }
+ coords 5215.243 213.833 1949.767
+ Points {
+  ShapePoint "{6A78E32120DC60F8}" {
+   Position 8.582 -0.384 -3.412
+  }
+  ShapePoint "{6A78E3212065967D}" {
+   Position 16.598 -0.395 -3.841
+  }
+  ShapePoint "{6A78E32123672E0B}" {
+   Position 32.755 -0.697 -13.698
+  }
+  ShapePoint "{6A78E32122BD9574}" {
+   Position 42.674 -0.158 -17.424
+  }
+  ShapePoint "{6A78E321223E8419}" {
+   Position 53.605 0.5 -27.393
+  }
+  ShapePoint "{6A78E3212DC93067}" {
+   Position 71.609 -0.578 -47.867
+  }
+  ShapePoint "{6A78E3212D751CCF}" {
+   Position 84.873 -0.952 -75.514
+  }
+  ShapePoint "{6A78E3212C713482}" {
+   Position 72.401 -0.279 -151.885
+  }
+  ShapePoint "{6A78E3212F757C8E}" {
+   Position 65.651 1.218 -170.304
+  }
+  ShapePoint "{6A78E3212E0BD318}" {
+   Position 53.356 0.338 -222.308
+  }
+  ShapePoint "{6A78E3212E5B51F0}" {
+   Position 34.982 -0.78 -248.678
+  }
+  ShapePoint "{6A78E32129EB7083}" {
+   Position 14.421 -0.393 -258.277
+  }
+  ShapePoint "{6A78E32128AE81CE}" {
+   Position -47.483 -1.722 -264.397
+  }
+  ShapePoint "{6A78E32128FF06E7}" {
+   Position -74.381 -6.272 -263.852
+  }
+  ShapePoint "{6A78E3212BFFE744}" {
+   Position -108.975 -2.693 -265.532
+  }
+  ShapePoint "{6A78E3212B732912}" {
+   Position -125.147 -0.479 -256.092
+  }
+  ShapePoint "{6A78E3212A357F8A}" {
+   Position -131.289 -0.089 -222.625
+  }
+  ShapePoint "{6A78E321359C99E4}" {
+   Position -134.791 0.015 -189.174
+  }
+  ShapePoint "{6A78E32134AC454F}" {
+   Position -135.541 -0.088 -160.335
+  }
+  ShapePoint "{6A78E3213412802E}" {
+   Position -152.143 -0.375 -118.308
+  }
+  ShapePoint "{6A78E32137C91762}" {
+   Position -159.217 1.96 -93.914
+  }
+  ShapePoint "{6A78E3213713A953}" {
+   Position -158.385 2.636 -73.924
+  }
+  ShapePoint "{6A78E3213754089A}" {
+   Position -151.33 2.455 -53.213
+  }
+  ShapePoint "{6A78E32131B4C507}" {
+   Position -129.78 -0.352 -24.889
+  }
+  ShapePoint "{6A78E32131C28F08}" {
+   Position -117.569 0.428 -17.521
+  }
+  ShapePoint "{6A78E3213087C674}" {
+   Position -95.273 1.763 3.272
+  }
+  ShapePoint "{6A78E32130091E48}" {
+   Position -70.806 2.058 8.503
+  }
+  ShapePoint "{6A78E32133BEDC99}" {
+   Position -46.583 1.136 8.341
+  }
+  ShapePoint "{6A78E32132A79978}" {
+   Position -22.591 1.223 7.341
+  }
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 4971.273 263.323 1431.384
+}

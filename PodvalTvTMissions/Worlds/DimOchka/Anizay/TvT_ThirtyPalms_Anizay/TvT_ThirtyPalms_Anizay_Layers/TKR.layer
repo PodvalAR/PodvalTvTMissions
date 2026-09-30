@@ -1,0 +1,286 @@
+$grp Vehicle : "{123595894023C474}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS_D.et" {
+ LAV25_RHS_D1 {
+  coords 4530.688 134.875 5852.943
+  angles 0 176.189 0
+  m_sAttachmentGroupName "lav2"
+ }
+ LAV25_RHS_D2 {
+  coords 4528.618 134.875 5820.021
+  angles 0 -165.239 0
+  m_sAttachmentGroupName "lav"
+ }
+}
+$grp SCR_AIGroup : "{13DBB5C9728E6DE1}Prefabs/Groups/INDFOR/TKR/Group_Ses_TKR_Random_motor.et" {
+ tkr1 {
+  components {
+   PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 1712.734 140.504 3817.757
+  angles 0 92.78 0
+  m_aUnitPrefabSlots {
+   "{88886FC274202013}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_SL_Random.et"
+   "{C00096717E140FE4}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_GL_Random.et"
+   "{8E68A198939D2E8D}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Rifleman_Random.et"
+   "{3ADD5E802552D24E}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_AR_Random.et"
+   "{8E68A198939D2E8D}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Rifleman_Random.et"
+   "{C472228F83886D43}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Sapper_Random.et"
+  }
+  m_sCustomNameSet "Боевики ТКР на Лэнд-Роверах"
+ }
+ tkr2 {
+  components {
+   PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 1714.781 140.926 3841.64
+  angles 0 95.982 0
+  m_aUnitPrefabSlots {
+   "{88886FC274202013}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_SL_Random.et"
+   "{C00096717E140FE4}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_GL_Random.et"
+   "{8E68A198939D2E8D}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Rifleman_Random.et"
+   "{3ADD5E802552D24E}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_AR_Random.et"
+   "{8E68A198939D2E8D}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Rifleman_Random.et"
+   "{C472228F83886D43}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Sapper_Random.et"
+  }
+  m_sCustomNameSet "Боевики ТКР на Лэнд-Роверах"
+ }
+}
+$grp Vehicle : "{57AA372F852C1CD5}Prefabs/Vehicles/Wheeled/LR_3Series/dim_LWB_M1_Desert.et" {
+ dim_LWB_M1_Desert1 {
+  coords 1718.619 140.869 3835.594
+  angles -0.892 -175.279 -0.074
+  m_sAttachmentGroupName "tkr2"
+ }
+ dim_LWB_M1_Desert2 {
+  coords 1719.242 140.956 3843.134
+  angles -0.892 -175.279 -0.074
+  m_sAttachmentGroupName "tkr2"
+ }
+ dim_LWB_M1_Desert3 {
+  coords 1715.755 140.236 3807.085
+  angles -0.893 -175.954 -0.063
+  m_sAttachmentGroupName "tkr1"
+ }
+ dim_LWB_M1_Desert4 {
+  coords 1716.384 140.469 3815.983
+  angles -0.893 -175.954 -0.063
+  m_sAttachmentGroupName "tkr1"
+ }
+}
+$grp Vehicle : "{5C1D77700F472328}Prefabs/Vehicles/Wheeled/BRDM2/BRDM2_TKA.et" {
+ BRDM2_TKA1 {
+  coords 1720.611 141.099 3854.29
+  angles -0.887 -172.105 -0.123
+  m_sAttachmentGroupName "crew1"
+ }
+ BRDM2_TKA2 {
+  coords 1721.925 140.973 3863.764
+  angles 0.887 -172.102 0.123
+  m_sAttachmentGroupName "crew2"
+ }
+}
+$grp Vehicle : "{601E2E6A55E48406}Prefabs/Vehicles/Wheeled/M1083/M1083_Transport_Covered_Tan.et" {
+ M1083_Transport_Covered_Tan1 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{65B6498665024F6E}" {
+    MultiSlots {
+     MultiSlotConfiguration "{65B6498600000101}" {
+      SlotTemplate InventoryStorageSlot Jerrycan {
+       Prefab "{95DC7FA72AE32F0E}Prefabs/Items/Equipment/Programmer/MMS_Programmer.et"
+      }
+     }
+     MultiSlotConfiguration "{65B6498600000102}" {
+      SlotTemplate InventoryStorageSlot Jerrycan {
+       Prefab "{FD315CB1803037F1}Prefabs/Items/Equipment/Binoculars/SOFLAM/SOFLAM_Binoculars.et"
+      }
+     }
+    }
+   }
+  }
+  coords 4530.314 134.875 5867.918
+  angles 0 -180 0
+  m_sAttachmentGroupName "min"
+ }
+ M1083_Transport_Covered_Tan2 {
+  coords 4530.043 134.875 5880.211
+  angles 0 180 0
+  m_sAttachmentGroupName "min"
+ }
+}
+$grp SCR_AIGroup : "{A0D7D8DA2D90FBD3}Prefabs/Groups/INDFOR/TKR/Group_Ses_TKR_PL_9.et" {
+ lav {
+  components {
+   PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 4524.724 134.875 5825.001
+  angles 0 101.388 0
+  m_aUnitPrefabSlots {
+   "{88886FC274202013}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_SL_Random.et"
+   "{C00096717E140FE4}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_GL_Random.et"
+   "{6E9511C7C88E1E10}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_AT_Random.et"
+   "{AAA88BB9DF1D6B4D}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_AAT_Random.et"
+   "{61A809AD2C9D9820}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_MG_Random.et"
+   "{A59593D33B0EED7D}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_AMG_Random.et"
+   "{8E68A198939D2E8D}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Rifleman_Random.et"
+   "{8E68A198939D2E8D}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Rifleman_Random.et"
+   "{73C9E814A210268E}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Marksman_Random.et"
+  }
+  m_sCustomNameSet "Боевики ТКР на LAV-25"
+ }
+ gl {
+  coords 1713.354 140.844 3826.509
+  angles 0 94.697 0
+  m_aUnitPrefabSlots {
+   "{44F829A0BCF2F1DA}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_PL.et"
+  }
+  m_sCustomNameSet "Главарь боевиков Ахмед Валиб"
+ }
+}
+$grp SCR_AIGroup : "{A33B404F66AC1ED8}Prefabs/Groups/INDFOR/TKR/Group_Ses_TKR_Rifle.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 5243.621 228.277 3514.017
+  angles 0 -30 0
+  m_sCustomNameSet "Боевики ТКР"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 3705.667 168.47 2777.802
+  angles -0.267 57.159 1.237
+  m_sCustomNameSet "Боевики ТКР"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 3697.737 168.339 2788.474
+  angles 0 54.86 0
+  m_sCustomNameSet "Боевики ТКР"
+ }
+ lav2 {
+  components {
+   PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 2
+   }
+  }
+  coords 4525.612 134.875 5854.19
+  angles 0 86.422 0
+  m_aUnitPrefabSlots {
+   "{88886FC274202013}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_SL_Random.et"
+   "{C00096717E140FE4}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_GL_Random.et"
+   "{6E9511C7C88E1E10}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_AT_Random.et"
+   "{AAA88BB9DF1D6B4D}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_AAT_Random.et"
+   "{61A809AD2C9D9820}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_MG_Random.et"
+   "{A59593D33B0EED7D}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_AMG_Random.et"
+   "{8E68A198939D2E8D}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Rifleman_Random.et"
+   "{8E68A198939D2E8D}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Rifleman_Random.et"
+   "{AA86E2D22A717D0C}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Sniper_Random.et"
+  }
+  m_sCustomNameSet "Боевики ТКР на LAV-25"
+ }
+ matv {
+  components {
+   PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 1
+   }
+  }
+  coords 4526.2 134.875 5840.379
+  angles 0 95.558 0
+  m_aUnitPrefabSlots {
+   "{88886FC274202013}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_SL_Random.et"
+   "{C00096717E140FE4}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_GL_Random.et"
+   "{6E9511C7C88E1E10}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_AT_Random.et"
+   "{AAA88BB9DF1D6B4D}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_AAT_Random.et"
+   "{61A809AD2C9D9820}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_MG_Random.et"
+   "{A59593D33B0EED7D}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_AMG_Random.et"
+   "{8E68A198939D2E8D}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Rifleman_Random.et"
+   "{8E68A198939D2E8D}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Rifleman_Random.et"
+   "{AA86E2D22A717D0C}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Sniper_Random.et"
+  }
+  m_sCustomNameSet "Боевики ТКР на MATV"
+ }
+ min {
+  components {
+   PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
+    m_iCompanyCallsign 3
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 4525.409 134.875 5871.09
+  angles 0 90.938 0
+  m_aUnitPrefabSlots {
+   "{88886FC274202013}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_SL_Random.et"
+   "{8E68A198939D2E8D}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Rifleman_Random.et"
+   "{8E68A198939D2E8D}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Rifleman_Random.et"
+  }
+  m_sCustomNameSet "Боевики с коррект. минометом М252 (SOFLAM)"
+ }
+}
+Vehicle M1240A1_MATV_Turret_optic_mdo_black_Tan1 : "{B09234F026EF8582}Prefabs/Vehicles/Wheeled/M1240A1_MATV/M1240A1_MATV_Turret_optic_mdo_black_Tan.et" {
+ coords 4530.571 134.875 5830.944
+ angles 0 -176.531 0
+ m_sAttachmentGroupName "matv"
+}
+Vehicle dim_3Series_SWB_Transport_Desert1 : "{CDA1D0DF04A21EC5}Prefabs/Vehicles/Wheeled/LR_3Series/dim_3Series_SWB_Transport_Desert.et" {
+ coords 1717.175 140.726 3826.425
+ angles -0.89 -173.641 -0.099
+ m_sAttachmentGroupName "gl"
+}
+Vehicle M1240A1_MATV_Turret_Tan1 : "{DE32642254476DD5}Prefabs/Vehicles/Wheeled/M1240A1_MATV/M1240A1_MATV_Turret_Tan.et" {
+ coords 4531.049 134.875 5841.786
+ angles 0 -179.767 0
+ m_sAttachmentGroupName "matv"
+}
+$grp SCR_AIGroup : "{F29F1ED486C470C2}Prefabs/Groups/INDFOR/TKR/Group_Ses_TKR_Motor2.et" {
+ crew1 {
+  components {
+   PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 1716.634 141.087 3854.318
+  angles 0.023 96.644 0.003
+  m_aUnitPrefabSlots {
+   "{88886FC274202013}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_SL_Random.et"
+   "{02DCF906B5727DC8}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Crew_Random.et"
+  }
+  m_sCustomNameSet "Экипаж БРДМ"
+ }
+ crew2 {
+  components {
+   PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 1718.129 141.165 3865.679
+  angles 0.022 100.175 0.004
+  m_aUnitPrefabSlots {
+   "{88886FC274202013}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_SL_Random.et"
+   "{02DCF906B5727DC8}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Crew_Random.et"
+  }
+  m_sCustomNameSet "Экипаж БРДМ"
+ }
+}
