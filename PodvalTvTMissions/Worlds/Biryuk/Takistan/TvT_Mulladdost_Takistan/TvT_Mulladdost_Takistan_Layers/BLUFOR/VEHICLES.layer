@@ -2,22 +2,22 @@ $grp Vehicle : "{1ACE0D91D7E2BD0C}Prefabs/Vehicles/Wheeled/M1083/Armed/M1083_Tra
  M1083_Transport_Covered_Armed_TF1 {
   coords 6159.8 109.305 11622.279
   angles 0 -45.399 0
-  m_sAttachmentGroupName "SQ200"
+  m_sAttachmentGroupName "USAF_200_SQ"
  }
  M1083_Transport_Covered_Armed_TF2 {
   coords 6170.206 109.313 11588.118
   angles 0 -45.739 0
-  m_sAttachmentGroupName "SQ201"
+  m_sAttachmentGroupName "USAF_201_SQ"
  }
  M1083_Transport_Covered_Armed_TF3 {
   coords 6126.55 109.28 11598.123
   angles 0 -45.399 0
-  m_sAttachmentGroupName "SQ202"
+  m_sAttachmentGroupName "USAF_202_SQ"
  }
  M1083_Transport_Covered_Armed_TF4 {
   coords 6143.296 109.125 11581.017
   angles 0 -45.399 0
-  m_sAttachmentGroupName "SQ203"
+  m_sAttachmentGroupName "USAF_203_SQ"
  }
 }
 Vehicle M1083_Command_Tan1 : "{41519CD94B352CD9}Prefabs/Vehicles/Wheeled/M1083/M1083_Command_Tan.et" {
@@ -25,28 +25,16 @@ Vehicle M1083_Command_Tan1 : "{41519CD94B352CD9}Prefabs/Vehicles/Wheeled/M1083/M
  angles 0 -137.897 0
  m_sAttachmentGroupName "HQ_000"
 }
-$grp Vehicle : "{D0FCCFA8848F277A}Prefabs/Vehicles/Wheeled/M998/M1151_armed_M2HB_Tan_MBO.et" {
- M1151_armed_M2HB_Tan_MBO2 {
-  coords 4146.196 61.46 11002.399
-  angles 0 -152.742 0
-  m_sAttachmentGroupName "SPN300"
- }
- M1151_armed_M2HB_Tan_MBO1 {
-  coords 5651.332 100.696 9934.048
-  angles 0 -75.021 0
-  m_sAttachmentGroupName "SPN301"
- }
-}
 $grp Vehicle : "{7D9A9AD859069D0A}Prefabs/Vehicles/Wheeled/M998/M998_covered_long_USAF_D.et" {
  M998_covered_long_USAF_D1 {
   coords 6125.308 109.305 11619.369
   angles 0 -136.264 0
-  m_sAttachmentGroupName "SQ002"
+  m_sAttachmentGroupName "USAF_002_SQ"
  }
  M998_covered_long_USAF_D2 {
   coords 6071.349 109.312 11565.46
   angles 0 -135.256 0
-  m_sAttachmentGroupName "SQ001"
+  m_sAttachmentGroupName "USAF_001_SQ"
  }
  M998_covered_long_USAF_D4 {
   coords 6159.523 109.313 11654.621
@@ -63,11 +51,23 @@ $grp Vehicle : "{9C07B4B8CF07B8A1}Prefabs/Vehicles/Wheeled/M998/M1151_armed_M2HB
  M1151_armed_M2HB_Tan_AP2 {
   coords 6112.907 109.312 11606.33
   angles 0.508 -135.764 2.343
-  m_sAttachmentGroupName "SQ002"
+  m_sAttachmentGroupName "USAF_002_SQ"
  }
  M1151_armed_M2HB_Tan_AP1 {
   coords 6061.516 109.312 11555.791
   angles 1.01 -133.624 2.174
-  m_sAttachmentGroupName "SQ001"
+  m_sAttachmentGroupName "USAF_001_SQ"
+ }
+}
+$grp Vehicle : "{D0FCCFA8848F277A}Prefabs/Vehicles/Wheeled/M998/M1151_armed_M2HB_Tan_MBO.et" {
+ M1151_armed_M2HB_Tan_MBO2 {
+  coords 4146.196 61.46 11002.399
+  angles 0 -152.742 0
+  m_sAttachmentGroupName "USAF_300_SPN"
+ }
+ M1151_armed_M2HB_Tan_MBO1 {
+  coords 5651.332 100.696 9934.048
+  angles 0 -75.021 0
+  m_sAttachmentGroupName "USAF_301_SPN"
  }
 }
