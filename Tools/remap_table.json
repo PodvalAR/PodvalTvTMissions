@@ -1,0 +1,165 @@
+{
+  "_meta": {
+    "description": "Remap of removed DRG-mod prefab refs -> current equivalents. Grouped Category > Faction > FactionKey > Type for manual reading. Key = OLD full ref {GUID}Path.et, value = NEW full ref. Empty value = stub awaiting a replacement; the restore script applies only filled entries and skips/flags stubs. Grouping keys (Characters, OPFOR, RHS_AFRF, ...) are ignored by the script.",
+    "status": "all 99 entries validated against the actual PodvalTvTPrefabs mod index (GUID present AND path matches). Earlier revision had 22 values pointing to non-existent prefabs and 14 with stale paths; both fixed. CDF roles map to Char_A2F_CDF_* (there are no drg_Character_CDF_*). AFRF 'Army' roles map to RHS_AFRF/Regular (no Army folder in mod); mortar roles -> Regular Rifle_mortar1/2 + SL_Mortar; USAF/USMC heli crew -> Regular HeliPilot/Crew and MARSOC dim_USMC_HeliPilot/HeliCoPilot. REVIEW (low-confidence role substitutions, resolvable but not exact): TKR AT/CarlGustav -> dim_Ses_TKR_AAT_2; all 4 drg_AmmoBox_* -> the only live box (81mm mortar HE) so 545/Explosive/Illum are placeholders."
+  },
+  "Characters": {
+    "BLUFOR": {
+      "CDF_Army": {
+        "{18E6EF765272F8AA}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_MG_opt.et": "{71B1EA20D1BFEC1D}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Char_A2F_CDF_MG_Random.et",
+        "{2F086D65105128A9}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_SL2.et": "{98918C4F8902542E}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Char_A2F_CDF_SL_Random.et",
+        "{58A98F5B061C7507}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_RTO.et": "{7AB6CF75D8A31BEB}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Char_A2F_CDF_Rifle_Random.et",
+        "{603FD375309404CC}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_Officer.et": "{1CA3533D910F8C24}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Char_A2F_CDF_Officer_1.et",
+        "{793F827A538C53D5}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_AR.et": "{2AC4BD0DD870A673}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Char_A2F_CDF_AR_Random.et",
+        "{7E232C91920E7FA7}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_MGA.et": "{DA4B66D1899B5592}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Char_A2F_CDF_AMG_Random.et",
+        "{DE035531630E1D45}Prefabs/Characters/Factions/BLUFOR/CDF_Army/drg_Character_CDF_SR2.et": "{DF081FFC7A479F9B}Prefabs/Characters/Factions/BLUFOR/CDF_Army/Char_A2F_CDF_SR_Random.et"
+      },
+      "RHS_USAF": {
+        "Recon": {
+          "{4EC1980E2A39CD7D}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Recon/drg_Role_RHS_USAF_Recon_AR_2.et": "{02302EC00BF114A9}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Recon/Char_RHS_USAF_AR.et",
+          "{6E5F12796E167C92}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Recon/drg_Role_RHS_USAF_Recon_RTO.et": "{0E12ACF1B2CE68EA}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Recon/Char_RHS_USAF_Rifle.et",
+          "{A354317706ACB7B8}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Recon/drg_Role_RHS_USAF_Recon_AR.et": "{02302EC00BF114A9}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Recon/Char_RHS_USAF_AR.et",
+          "{F69D6E1FFDB1603F}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Recon/drg_Role_RHS_USAF_Recon_RER.et": "{12A033275CE68A23}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Recon/Char_RHS_USAF_SR.et"
+        },
+        "SOCOM": {
+          "{57CDCD5C503ABF3E}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/SOCOM/drg_Role_RHS_USAF_SOCOM_Scout_Medic.et": "{70AF3FED12E4E361}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/SFOD-D/Role_Character_USAF_SFOD_ScoutMedic.et",
+          "{6135ECC9CA1BB4E7}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/SOCOM/drg_Role_RHS_USAF_SOCOM_Marksman.et": "{63849351D71B1B01}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/SFOD-D/Role_Character_USAF_SFOD_Marksman.et",
+          "{9B04B586930EFE2D}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/SOCOM/drg_Role_RHS_USAF_SOCOM_SL.et": "{86EF34026626BB19}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/SFOD-D/Role_Character_USAF_SFOD_SL.et",
+          "{9FBBBCD632861C8A}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/SOCOM/drg_Role_RHS_USAF_SOCOM_Scout.et": "{3C14547A38D2B48C}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/SFOD-D/Role_Character_USAF_SFOD_Scout.et",
+          "{AD01286E7C3D0078}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/SOCOM/drg_Role_RHS_USAF_SOCOM_ScoutRTO.et": "{3C14547A38D2B48C}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/SFOD-D/Role_Character_USAF_SFOD_Scout.et",
+          "{D1FC452D48AB3333}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/SOCOM/drg_Role_RHS_USAF_SOCOM_ScoutSapper.et": "{F09089191DBB8EDA}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/SFOD-D/Role_Character_USAF_SFOD_Sapper.et"
+        },
+        "USAF": {
+          "{4612D50C1FEF9520}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_Mortar_Spotter.et": "{26AD8B80E8C02793}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_Marksman.et",
+          "{604FADEAA6112C7A}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_SMAW_Gunner.et": "{2AE224F0249BAF16}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_SMAW_Gunner_opt.et",
+          "{908EF30550BE5428}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_Spotter.et": "{26AD8B80E8C02793}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_Marksman.et",
+          "{9594A3E1D353897B}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_HeliCrew.et": "{E2C35369F43FD755}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/Char_RHS_USAF_Regular_HeliPilot.et",
+          "{C8DD9F6ECC3F3EC1}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_Sniper_cap.et": "{C7543DBFCFDB9ACB}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_Sniper.et",
+          "{D82203FB9DC2F6C6}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_RTO.et": "{0D86781BA3428115}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_AR.et",
+          "{E462BAA5D17E2736}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF_CrewCommander.et": "{8C844FA2A8030344}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/Char_RHS_USAF_Regular_Crew.et"
+        },
+        "USMC": {
+          "{0C74145A5DC38592}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/drg_Role_RHS_USAF_USMC_HeliPilot_Radio.et": "{9954121045CD84B5}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USMC_HeliPilot.et",
+          "{5BA7DBFCA8C25378}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/drg_Role_RHS_USAF_USMC_CoHeliPilot.et": "{FCEC57426C3422FF}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USMC_HeliCoPilot.et"
+        }
+      }
+    },
+    "INDFOR": {
+      "TKR": {
+        "AT": {
+          "{88E375C65D4C77C2}Prefabs/Characters/Factions/INDFOR/TKR/AT/drg_Character_Ses_TKR_AT_v2.et": "{0C896A45E89D9B8F}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AAT_2.et",
+          "{E4B74126E188F8EC}Prefabs/Characters/Factions/INDFOR/TKR/AT/drg_Character_Ses_TKR_AT_v1.et": "{0C896A45E89D9B8F}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AAT_2.et"
+        },
+        "CarlGustav": {
+          "{3B4CEC9892E19BC6}Prefabs/Characters/Factions/INDFOR/TKR/CarlGustav/drg_Character_Ses_TKR_ACG_v1.et": "{0C896A45E89D9B8F}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AAT_2.et",
+          "{B0ACDA85E08EEBFB}Prefabs/Characters/Factions/INDFOR/TKR/CarlGustav/drg_Character_Ses_TKR_Rifleman_v2_CarlGustav.et": "{DCB95034932A16B8}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman_1.et"
+        },
+        "MG": {
+          "{484932313C989315}Prefabs/Characters/Factions/INDFOR/TKR/MG/drg_Character_Ses_TKR_MG_V4.et": "{E279BF3CFDDE76BA}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_MG.et",
+          "{757D170949F41A22}Prefabs/Characters/Factions/INDFOR/TKR/MG/drg_Character_Ses_TKR_MG_V3.et": "{E279BF3CFDDE76BA}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_MG.et"
+        },
+        "Req": {
+          "{2C1395240CF21493}Prefabs/Characters/Factions/INDFOR/TKR/Req/drg_Character_Ses_TKR_Recruit_L_v4.et": "{DCB95034932A16B8}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman_1.et",
+          "{C98FD9DD001783F8}Prefabs/Characters/Factions/INDFOR/TKR/Req/drg_Character_Ses_TKR_Recruit_L_v5.et": "{DCB95034932A16B8}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman_1.et",
+          "{F4BBFCE5757B0ACF}Prefabs/Characters/Factions/INDFOR/TKR/Req/drg_Character_Ses_TKR_Recruit_L_v2.et": "{DCB95034932A16B8}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman_1.et"
+        },
+        "Rifleman": {
+          "{03EF0BAB2185BAD2}Prefabs/Characters/Factions/INDFOR/TKR/Rifleman/drg_Character_Ses_TKR_Rifleman_v1.et": "{DCB95034932A16B8}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman_1.et",
+          "{3EDB2E9354E933E5}Prefabs/Characters/Factions/INDFOR/TKR/Rifleman/drg_Character_Ses_TKR_Rifleman_v6.et": "{DCB95034932A16B8}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman_1.et",
+          "{528F1A73E82DBCCB}Prefabs/Characters/Factions/INDFOR/TKR/Rifleman/drg_Character_Ses_TKR_Rifleman_v5.et": "{DCB95034932A16B8}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman_1.et",
+          "{8A2773B291A4A297}Prefabs/Characters/Factions/INDFOR/TKR/Rifleman/drg_Character_Ses_TKR_Rifleman_v3.et": "{DCB95034932A16B8}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman_1.et",
+          "{A12F281AB2D5B6E0}Prefabs/Characters/Factions/INDFOR/TKR/Rifleman/drg_Character_Ses_TKR_Rifleman_v9.et": "{DCB95034932A16B8}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman_1.et",
+          "{B713568AE4C82BA0}Prefabs/Characters/Factions/INDFOR/TKR/Rifleman/drg_Character_Ses_TKR_Rifleman_v4.et": "{DCB95034932A16B8}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman_1.et",
+          "{DB47626A580CA48E}Prefabs/Characters/Factions/INDFOR/TKR/Rifleman/drg_Character_Ses_TKR_Rifleman_v7.et": "{DCB95034932A16B8}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman_1.et"
+        },
+        "Rookie": {
+          "{12DFF1D8E5918CBA}Prefabs/Characters/Factions/INDFOR/TKR/Rookie/drg_Character_Ses_TKR_Recruit_v4.et": "{DCB95034932A16B8}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman_1.et",
+          "{2FEBD4E090FD058D}Prefabs/Characters/Factions/INDFOR/TKR/Rookie/drg_Character_Ses_TKR_Recruit_v3.et": "{DCB95034932A16B8}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman_1.et"
+        },
+        "SR": {
+          "{301C0BE405B950D8}Prefabs/Characters/Factions/INDFOR/TKR/SR/drg_Character_Ses_TKR_SR_V1.et": "{276CC1DCB17A9A07}Prefabs/Characters/Factions/INDFOR/TKR/Character_TKR_SR_random.et"
+        },
+        "{3BACBFFF3D0BF9F3}Prefabs/Characters/Factions/INDFOR/TKR/drg_Character_Ses_TKR_Sniper_V3.et": "{08705F90B79D0BFA}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Sniper.et",
+        "{6A80724B342F7D93}Prefabs/Characters/Factions/INDFOR/TKR/drg_Character_Ses_TKR_SL2.et": "{3EAB31BD43ECDF10}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_SL_1.et",
+        "{9EA16D734949CC6E}Prefabs/Characters/Factions/INDFOR/TKR/drg_Character_Ses_TKR_Sapper.et": "{2C69E9F8133F4FF7}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Sapper_2.et",
+        "{B6137284E49C270F}Prefabs/Characters/Factions/INDFOR/TKR/drg_Character_Ses_TKR_PL.et": "{44F829A0BCF2F1DA}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_PL.et"
+      }
+    },
+    "OPFOR": {
+      "RHS_AFRF": {
+        "Army": {
+          "{2836211FE98BA458}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_Rifleman.et": "{78410A549262E06D}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Rifle.et",
+          "{3AE4204A39304CE2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_MGA.et": "{53B49D34137DE9BE}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_AMG.et",
+          "{4E57F707357C7311}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_MortarLoader.et": "{66A62CDBE9AB814C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Rifle_mortar2.et",
+          "{53A7932FD6BDDF63}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_SL.et": "{998515E06ED7A4C9}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_SL.et",
+          "{69C71036037A2398}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_SeniorSapper.et": "{60B377AF7386AADC}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Sapper.et",
+          "{83EC1FC85CC0AADE}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_Officer.et": "{009BAC7973309559}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_PL.et",
+          "{879A9BC397F68573}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_MortarSpotter.et": "{0AF2183B556F0E62}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Rifle_mortar1.et",
+          "{8AB4462F24F21DCD}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_MortarGunner.et": "{F1DD12A8D0E461B6}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_SL_Mortar.et",
+          "{E8648BA131EF3DF1}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_SL_v3.et": "{94F58255908E89A8}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_SL_Opt.et",
+          "{F5376E1B65C3BE7A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Army/drg_Role_RHS_AFRF_Army_MortarBearer.et": "{0AF2183B556F0E62}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Rifle_mortar1.et"
+        },
+        "Desert": {
+          "{585C783191900F1B}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_Sapper.et": "{E8C470C171B6AC50}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_AAT.et",
+          "{7983C2C66F11BD38}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_Rifleman.et": "{FC586DF650BDF143}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_SR.et",
+          "{8140810E352ECDDA}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_SL.et": "{AC1A8DCB72982C6F}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_SL_opt.et",
+          "{95A788D3A0886E95}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_MGA.et": "{95A788D3A0886E96}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_MGAB.et",
+          "{D1ED2D9916E44751}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_PLD.et": "{7FC44DF88B7C8DB0}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_CL.et",
+          "{E11D0E30F01D06E3}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_GL.et": "{E8C470C171B6AC50}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Desert/drg_Role_RHS_AFRF_Desert_AAT.et"
+        },
+        "Recon": {
+          "{1EE1253262037F41}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/drg_Role_RHS_AFRF_Recon_RER.et": "{2504B4EAB8F9B6D6}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_SR.et",
+          "{453B61A702E0B161}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/drg_Role_RHS_AFRF_Recon_Sapper.et": "{B80041ECF565397A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_Sapper.et",
+          "{A985CD90251A1939}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/drg_Role_RHS_AFRF_Recon_MG.et": "{6783771781A13CBF}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_MG.et"
+        },
+        "Sabotage": {
+          "{097657DF49BC3594}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Sabotage/drg_Role_RHS_AFRF_Sabotage_AT.et": "{7BAD8DF7468D7216}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_LAT.et",
+          "{7F6DBCE3E5DB83AA}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Sabotage/drg_Role_RHS_AFRF_Sabotage_Sniper.et": "{9B7078FF37FEA321}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_Sharpshooter.et",
+          "{8F2A7045847145F9}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Sabotage/drg_Role_RHS_AFRF_Sabotage_RPO.et": "{87927E73B0E976C2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_RPO.et",
+          "{B8608D7D947C984A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Sabotage/drg_Role_RHS_AFRF_Sabotage_Debolition.et": "{B80041ECF565397A}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_Sapper.et",
+          "{BB91355064373318}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Sabotage/drg_Role_RHS_AFRF_Sabotage_TL.et": "{4C46B416166D1A0E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_SL_Opt.et",
+          "{BC56CF0102B189DB}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Sabotage/drg_Role_RHS_AFRF_Sabotage_SL.et": "{581C5812DD6A8A4F}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_SL.et",
+          "{C24587D5FF9E994E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Sabotage/drg_Role_RHS_AFRF_Sabotage_Rifleman.et": "{DB642854D242CCDA}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_Rifle.et",
+          "{DC0B403FC78242E2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Sabotage/drg_Role_RHS_AFRF_Sabotage_GL.et": "{3841D72C18594176}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Recon/Char_RHS_AFRF_Recon_GL.et"
+        }
+      }
+    }
+  },
+  "Groups": {
+    "BLUFOR": {
+      "{065EAFDA470DFA2B}Prefabs/Groups/BLUFOR/drg_Group_RHS_USAF_ShowCase.et": "{955623450C88D6F3}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_Squad.et",
+      "{12488ED8CAB8DCDC}Prefabs/Groups/BLUFOR/DRG_Group_RHS_USAF_Squad.et": "{955623450C88D6F3}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_Squad.et",
+      "{2A6110DE7C0BAD65}Prefabs/Groups/BLUFOR/drg_SOCOM_Team.et": "{3EECAF1E0650D775}Prefabs/Groups/BLUFOR/RHS_USAF/Recon/Group_RHS_USAF_Recon_Squad.et",
+      "{2FBB6A87C9E9FC4D}Prefabs/Groups/BLUFOR/drg_USAF_WeaponSquad.et": "{6C6C802EBED215BF}Prefabs/Groups/BLUFOR/RHS_USAF/Group_RHS_USAF_Regular_All.et",
+      "{4A02B745F553821E}Prefabs/Groups/BLUFOR/drg_USAF_CompanyHQ.et": "{8BE5C4D411C5E59C}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_PL.et",
+      "{582AA92CC9105E2F}Prefabs/Groups/BLUFOR/drg_USAF_LAV25.et": "{17491F97A5C9BBDF}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_Mechanized.et",
+      "{88BE84A3E78CF73E}Prefabs/Groups/BLUFOR/drg_USAF_SniperTeam.et": "{3CB180F292A52F34}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_SniperGroup.et",
+      "{8DFCA2C620B8AD03}Prefabs/Groups/BLUFOR/drg_SOCOM_SniperTeam.et": "{3CB180F292A52F34}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_SniperGroup.et",
+      "{CB79DA5FE5AC31AB}Prefabs/Groups/BLUFOR/drg_USAF_RifleSquad.et": "{955623450C88D6F3}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_Squad.et",
+      "{D9B32FE6DF696BE5}Prefabs/Groups/BLUFOR/drg_USAF_PlatoonHQ.et": "{8BE5C4D411C5E59C}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_PL.et",
+      "{E9AC7352CED18EA4}Prefabs/Groups/BLUFOR/drg_USMC_SniperTeam.et": "{3CB180F292A52F34}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_SniperGroup.et",
+      "{FE3EB0683DD1C6DD}Prefabs/Groups/BLUFOR/drg_Group_RHS_SOCOM_Team.et": "{3EECAF1E0650D775}Prefabs/Groups/BLUFOR/RHS_USAF/Recon/Group_RHS_USAF_Recon_Squad.et"
+    },
+    "INDFOR": {
+      "{BC7ADDF2E64D7FDF}Prefabs/Groups/INDFOR/drg_TA_RifleSquad.et": "{BC7ADDF2E64D7FDF}Prefabs/Groups/INDFOR/TGK/drg_TA_RifleSquad.et"
+    },
+    "OPFOR": {
+      "{13508F514A2A2CA6}Prefabs/Groups/OPFOR/drg_RHS_Army_HQ.et": "{496070641528229D}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_PL.et",
+      "{3EDA372443FD105F}Prefabs/Groups/OPFOR/drg_AFRF_RifleSquad.et": "{EB131DDF464F90FD}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Squad.et",
+      "{9520E7AB1B4FED25}Prefabs/Groups/OPFOR/drg_Group_RHS_AFRF_Sabotage_Showcase.et": "{B851352F042E4F0B}Prefabs/Groups/OPFOR/RHS_AFRF/Recon/Group_RHS_AFRF_Recon_Squad.et",
+      "{9C4C758203A42706}Prefabs/Groups/OPFOR/drg_AFRF_GRU.et": "{2F436E8AF9EBEAA2}Prefabs/Groups/OPFOR/RHS_AFRF/Group_RHS_AFRF_GRU.et",
+      "{A2B2BA4E83C87880}Prefabs/Groups/OPFOR/drg_Group_RHS_AFRF_Shtom_Showcase.et": "{B851352F042E4F0B}Prefabs/Groups/OPFOR/RHS_AFRF/Recon/Group_RHS_AFRF_Recon_Squad.et",
+      "{FB6E7CB4014BE2C8}Prefabs/Groups/OPFOR/drg_RHS_Army_RifleSquad.et": "{EB131DDF464F90FD}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Squad.et"
+    }
+  },
+  "Props": {
+    "Military": {
+      "AmmoBoxes": {
+        "{05F1B1FF9F0CE167}Prefabs/Props/Military/AmmoBoxes/drg_AmmoBox_82mm_mortar_3rnd_Illum.et": "{039F825B8B83B86D}Prefabs/Props/Military/AmmoBoxes/drg_AmmoBox_81mm_mortar_10rnd_HE.et",
+        "{3BFC0E1A2D0062CA}Prefabs/Props/Military/AmmoBoxes/drg_AmmoBox_82mm_mortar_3rnd_HE.et": "{039F825B8B83B86D}Prefabs/Props/Military/AmmoBoxes/drg_AmmoBox_81mm_mortar_10rnd_HE.et",
+        "{C910458D7E66D662}Prefabs/Props/Military/AmmoBoxes/drg_AmmoBox_Explosive.et": "{039F825B8B83B86D}Prefabs/Props/Military/AmmoBoxes/drg_AmmoBox_81mm_mortar_10rnd_HE.et",
+        "{F1FDD5669F4C26B2}Prefabs/Props/Military/AmmoBoxes/drg_AmmoBox_545.et": "{039F825B8B83B86D}Prefabs/Props/Military/AmmoBoxes/drg_AmmoBox_81mm_mortar_10rnd_HE.et"
+      }
+    }
+  }
+}
