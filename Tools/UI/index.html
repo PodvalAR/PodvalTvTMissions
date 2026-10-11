@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
 <meta charset="utf-8" />
@@ -183,6 +183,7 @@
 <header>
   <div class="logo"><span class="dot"></span>Восстановление миссий</div>
   <div class="stats">
+    <a href="/editor" class="chip" style="text-decoration:none;color:var(--accent);font-weight:600" title="Открыть редактор базы ремапа">Редактор базы →</a>
     <span class="chip">префабов в моде: <b id="mMod">…</b></span>
     <span class="chip" id="mAi">ИИ: …</span>
     <button class="sm ghost" id="bReindex" title="Пересканировать префабы мода">Пересканировать мод</button>
@@ -477,9 +478,10 @@ function drawRows(){
 
   tb.innerHTML = refs.map(r => {
     const [label] = NAMES[r.Status] || [r.Status];
+    const editorLink = `<a href="/editor?q=${encodeURIComponent(r.Guid)}" target="_blank" class="sm ghost" style="text-decoration:none;display:inline-block;padding:4px 7px;font-size:11.5px;color:var(--accent)" title="Открыть в редакторе базы">В базу ↗</a>`;
     const act = r.Status === 'broken'
-      ? `<button class="sm" data-sg="${esc(r.Ref)}">Подобрать</button>`
-      : '';
+      ? `<button class="sm" data-sg="${esc(r.Ref)}">Подобрать</button> ${editorLink}`
+      : (r.Status === 'mapped' ? editorLink : '');
     return `<tr data-ref="${esc(r.Ref)}">
       <td><span class="tag ${r.Status}">${label}</span></td>
       <td class="path">${esc(r.Path)}<span class="g mono">${r.Guid}</span></td>

@@ -1,0 +1,1520 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Редактор базы ремапа и каталог префабов — PodvalTvT</title>
+<style>
+  :root {
+    --bg:#0f1216; --panel:#181c22; --panel2:#20252d; --panel3:#272d37;
+    --line:#2e353f; --line2:#3c4553;
+    --fg:#e8ecf2; --mut:#96a1b0; --mut2:#6f7a89;
+    --green:#4ec98a; --greenbg:rgba(78,201,138,.12);
+    --blue:#5aa9f0; --bluebg:rgba(90,169,240,.12);
+    --red:#f0736f; --redbg:rgba(240,115,111,.13);
+    --yellow:#e0b95a; --yellowbg:rgba(224,185,90,.12);
+    --orange:#e88544; --orangebg:rgba(232,133,68,.14);
+    --gray:#8b96a5; --graybg:rgba(139,150,165,.1);
+    --accent:#4c8dff;
+  }
+  * { box-sizing:border-box }
+  html, body { margin:0; height:100% }
+  body {
+    background:var(--bg); color:var(--fg);
+    font:14px/1.5 -apple-system,"Segoe UI",Roboto,system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    display:flex; flex-direction:column;
+  }
+  code, .mono { font-family:"Cascadia Mono",Consolas,"SF Mono",Menlo,monospace }
+
+  /* ---------- шапка ---------- */
+  header {
+    display:flex; align-items:center; gap:16px;
+    padding:0 20px; height:56px;
+    background:var(--panel); border-bottom:1px solid var(--line);
+    position:sticky; top:0; z-index:30; flex:none;
+  }
+  header .logo { display:flex; align-items:center; gap:10px; font-size:15px; font-weight:600; text-decoration:none; color:inherit }
+  header .logo .dot { width:9px; height:9px; border-radius:50%; background:var(--accent); box-shadow:0 0 10px var(--accent) }
+  
+  .tab-bar { display:flex; gap:4px; margin-left:14px }
+  .tab-btn {
+    background:transparent; border:1px solid transparent; color:var(--mut);
+    padding:6px 14px; border-radius:7px; font-size:13px; font-weight:500;
+    cursor:pointer; transition:.12s; display:inline-flex; align-items:center; gap:8px;
+  }
+  .tab-btn:hover { background:var(--panel2); color:var(--fg) }
+  .tab-btn.active {
+    background:var(--panel2); border-color:var(--line2); color:#fff; font-weight:600;
+  }
+  .badge {
+    font-size:11px; padding:1px 6px; border-radius:10px; background:var(--panel3); color:var(--mut);
+    font-variant-numeric:tabular-nums; font-weight:600;
+  }
+  .badge.warn { background:var(--orangebg); color:var(--orange); border:1px solid rgba(232,133,68,.3) }
+
+  .header-actions { display:flex; gap:8px; margin-left:auto; align-items:center }
+  .chip {
+    display:inline-flex; align-items:center; gap:6px;
+    padding:4px 10px; border-radius:7px; font-size:12px;
+    background:var(--panel2); border:1px solid var(--line); color:var(--mut);
+    white-space:nowrap; cursor:pointer; user-select:none;
+  }
+  .chip b { color:var(--fg); font-weight:600 }
+  .chip.active { border-color:var(--accent); background:rgba(76,141,255,.15); color:#fff }
+  .chip.on { background:var(--greenbg); border-color:rgba(78,201,138,.35); color:var(--green) }
+  .chip.warn { background:var(--yellowbg); border-color:rgba(224,185,90,.35); color:var(--yellow) }
+  .chip.err { background:var(--redbg); border-color:rgba(240,115,111,.35); color:var(--red) }
+  .chip.notice { background:var(--orangebg); border-color:rgba(232,133,68,.35); color:var(--orange) }
+
+  /* ---------- панель управления ---------- */
+  .toolbar {
+    display:flex; align-items:center; gap:12px;
+    padding:10px 20px; background:var(--panel); border-bottom:1px solid var(--line);
+    flex-wrap:wrap; flex:none;
+  }
+  .seg { display:flex; background:var(--panel2); border:1px solid var(--line2); border-radius:7px; padding:2px }
+  .seg button {
+    background:transparent; border:none; color:var(--mut); font-size:12px;
+    padding:4px 11px; border-radius:5px; cursor:pointer; font-weight:500;
+  }
+  .seg button.active { background:var(--accent); color:#fff; font-weight:600 }
+  .search-wrap { position:relative; flex:1; min-width:240px; max-width:480px }
+  .search-wrap input {
+    width:100%; background:var(--panel2); border:1px solid var(--line2); color:var(--fg);
+    border-radius:7px; padding:7px 11px 7px 30px; font-size:13px; outline:none;
+  }
+  .search-wrap input:focus { border-color:var(--accent); box-shadow:0 0 0 3px rgba(76,141,255,.16) }
+  .search-wrap svg {
+    position:absolute; left:9px; top:50%; transform:translateY(-50%);
+    width:14px; height:14px; fill:var(--mut2);
+  }
+
+  /* ---------- кнопки ---------- */
+  .btns { display:flex; gap:8px; align-items:center }
+  button {
+    background:var(--panel2); border:1px solid var(--line2); color:var(--fg);
+    border-radius:7px; padding:7px 13px; font-size:12.5px; cursor:pointer;
+    transition:.12s; font-family:inherit; display:inline-flex; align-items:center; gap:6px;
+  }
+  button:hover:not(:disabled) { background:var(--panel3); border-color:#4a5462 }
+  button:active:not(:disabled) { transform:translateY(1px) }
+  button:disabled { opacity:.45; cursor:not-allowed }
+  button.primary { background:var(--accent); border-color:var(--accent); color:#fff; font-weight:600 }
+  button.primary:hover:not(:disabled) { background:#3f7ff0 }
+  button.success { background:#2a8050; border-color:#369b62; color:#fff; font-weight:600 }
+  button.success:hover:not(:disabled) { background:#2f925b }
+  button.sm { padding:4px 8px; font-size:11.5px; border-radius:5px }
+  button.ghost { background:transparent; border-color:transparent }
+  button.ghost:hover:not(:disabled) { background:var(--panel2); border-color:var(--line2) }
+  button.danger { border-color:rgba(240,115,111,.4); color:var(--red) }
+  button.danger:hover:not(:disabled) { background:var(--redbg) }
+
+  /* ---------- основной контейнер ---------- */
+  main { flex:1; overflow:hidden; display:flex; flex-direction:column; position:relative }
+
+  /* ---------- таблица ---------- */
+  .table-container { flex:1; overflow:auto; padding:0 20px 20px }
+  table { width:100%; border-collapse:collapse; margin-top:12px; border:1px solid var(--line); border-radius:8px; overflow:hidden }
+  th {
+    position:sticky; top:0; z-index:10; background:var(--panel2);
+    text-align:left; padding:9px 12px; font-size:11px; font-weight:600; color:var(--mut);
+    text-transform:uppercase; letter-spacing:.4px; border-bottom:1px solid var(--line2);
+  }
+  td { padding:8px 12px; border-bottom:1px solid var(--line); font-size:12.5px; vertical-align:middle }
+  tr:last-child td { border-bottom:none }
+  tbody tr:hover { background:rgba(255,255,255,.02) }
+  tbody tr.highlight { animation: flash-highlight 3s ease-out }
+  @keyframes flash-highlight {
+    0% { background:rgba(76,141,255,.35) }
+    100% { background:transparent }
+  }
+
+  td.chk { width:32px; text-align:center; padding-left:10px; padding-right:4px }
+  td.grp { font-size:11.5px; color:var(--mut); white-space:nowrap; max-width:180px; overflow:hidden; text-overflow:ellipsis }
+  td.ref-col { font-family:"Cascadia Mono",Consolas,monospace; font-size:12px; word-break:break-all; line-height:1.45 }
+  td.ref-col .g { color:var(--mut2); font-size:11px; display:inline-block; margin-right:4px }
+  td.ref-col .p { color:var(--fg) }
+  td.status-col { width:130px; text-align:center }
+  td.act-col { width:180px; text-align:right; white-space:nowrap }
+
+  .tag {
+    display:inline-block; padding:2px 8px; border-radius:5px;
+    font-size:11px; font-weight:600; white-space:nowrap;
+  }
+  .tag.ok, .tag.mapped { background:var(--greenbg); color:var(--green) }
+  .tag.stub { background:var(--yellowbg); color:var(--yellow) }
+  .tag.unmapped { background:var(--redbg); color:var(--red) }
+  .tag.target-missing { background:var(--redbg); color:var(--red) }
+  .tag.path-mismatch { background:var(--redbg); color:var(--red) }
+  .tag.malformed { background:var(--redbg); color:var(--red) }
+  .tag.dup { background:var(--redbg); color:var(--red) }
+  .tag.source-alive, .tag.alive { background:var(--orangebg); color:var(--orange) }
+  .tag.self-mapping { background:var(--orangebg); color:var(--orange) }
+  .tag.system { background:var(--graybg); color:var(--mut) }
+  .tag.external { background:rgba(139,150,165,.08); color:var(--mut2) }
+
+  .input-ref {
+    width:100%; background:var(--panel2); border:1px solid var(--line2); color:var(--fg);
+    border-radius:6px; padding:6px 9px; font-family:"Cascadia Mono",Consolas,monospace;
+    font-size:11.5px; outline:none; transition:border-color .15s;
+  }
+  .input-ref:focus { border-color:var(--accent); box-shadow:0 0 0 2px rgba(76,141,255,.15) }
+  .input-ref.dirty { border-color:var(--yellow); background:rgba(224,185,90,.05) }
+
+  /* ---------- режим дерева ---------- */
+  .tree-container { flex:1; overflow:auto; padding:16px 24px 30px; display:none }
+  .tree-node { margin-left:18px; border-left:1px dashed var(--line2); padding-left:14px; margin-bottom:8px }
+  .tree-root > .tree-node { margin-left:0; border-left:none; padding-left:0 }
+  .tree-header {
+    display:flex; align-items:center; gap:8px; padding:6px 8px;
+    border-radius:6px; cursor:pointer; user-select:none; font-weight:600; font-size:13px;
+  }
+  .tree-header:hover { background:var(--panel2) }
+  .tree-header .toggle { width:16px; height:16px; display:grid; place-items:center; color:var(--mut2); transition:transform .12s }
+  .tree-header.collapsed .toggle { transform:rotate(-90deg) }
+  .tree-header .folder-name { color:var(--fg) }
+  .tree-header .count { font-size:11px; color:var(--mut2); font-weight:400; margin-left:auto }
+  .tree-body { margin-top:4px }
+  .tree-body.collapsed { display:none }
+  .group-note {
+    font-size:12px; color:var(--yellow); background:var(--yellowbg);
+    border:1px solid rgba(224,185,90,.25); border-radius:6px;
+    padding:6px 10px; margin:4px 0 8px 12px; display:flex; align-items:center; gap:8px;
+  }
+  .group-note span { flex:1 }
+
+  /* ---------- модальные окна ---------- */
+  .modal-backdrop {
+    position:fixed; inset:0; background:rgba(0,0,0,.65); z-index:100;
+    display:grid; place-items:center; padding:20px; opacity:0; pointer-events:none; transition:opacity .15s;
+  }
+  .modal-backdrop.open { opacity:1; pointer-events:auto }
+  .modal {
+    background:var(--panel); border:1px solid var(--line2); border-radius:10px;
+    width:100%; max-width:680px; max-height:85vh; display:flex; flex-direction:column;
+    box-shadow:0 12px 36px rgba(0,0,0,.6); overflow:hidden;
+  }
+  .modal-head {
+    padding:14px 18px; border-bottom:1px solid var(--line); display:flex;
+    align-items:center; justify-content:space-between; font-weight:600; font-size:14px;
+  }
+  .modal-body { padding:18px; overflow:auto; flex:1 }
+  .modal-foot {
+    padding:12px 18px; border-top:1px solid var(--line); display:flex;
+    justify-content:flex-end; gap:10px; background:var(--panel2);
+  }
+  .form-group { margin-bottom:14px }
+  .form-group label { display:block; font-size:12px; color:var(--mut); margin-bottom:5px; font-weight:500 }
+  .form-group input, .form-group textarea, .form-group select {
+    width:100%; background:var(--panel2); border:1px solid var(--line2); color:var(--fg);
+    border-radius:6px; padding:8px 10px; font-size:13px; outline:none; font-family:inherit;
+  }
+  .form-group textarea { resize:vertical; min-height:80px }
+  .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+    border-color:var(--accent); box-shadow:0 0 0 3px rgba(76,141,255,.16);
+  }
+
+  /* ---------- плашка диффа правок ---------- */
+  .diff-item {
+    display:flex; align-items:center; gap:10px; padding:8px 10px;
+    border:1px solid var(--line); border-radius:6px; margin-bottom:6px; background:var(--panel2); font-size:12.5px;
+  }
+  .diff-type { font-size:11px; font-weight:700; padding:2px 6px; border-radius:4px; text-transform:uppercase }
+  .diff-type.set { background:var(--yellowbg); color:var(--yellow) }
+  .diff-type.add { background:var(--greenbg); color:var(--green) }
+  .diff-type.delete { background:var(--redbg); color:var(--red) }
+  .diff-type.move { background:var(--bluebg); color:var(--blue) }
+  .diff-type.meta { background:var(--orangebg); color:var(--orange) }
+  .diff-type.note { background:var(--orangebg); color:var(--orange) }
+  .diff-details { flex:1; font-family:"Cascadia Mono",Consolas,monospace; font-size:11.5px; word-break:break-all }
+  .diff-details .arrow { color:var(--mut2); margin:0 4px }
+
+  /* ---------- индикатор загрузки ---------- */
+  .spinner {
+    display:inline-block; width:14px; height:14px; border:2px solid rgba(255,255,255,.2);
+    border-top-color:#fff; border-radius:50%; animation:spin .6s linear infinite;
+  }
+  @keyframes spin { to { transform:rotate(360deg) } }
+
+  .empty-state { text-align:center; padding:40px 20px; color:var(--mut2); font-size:13px }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="/" class="logo" title="На главную страницу восстановления">
+    <div class="dot"></div>
+    <span>Редактор базы ремапа</span>
+  </a>
+
+  <div class="tab-bar">
+    <button id="tabRemap" class="tab-btn active" onclick="switchMainTab('remap')">
+      <span>База ремапа</span>
+      <span class="badge" id="badgeRemapCount">0</span>
+    </button>
+    <button id="tabLegacy" class="tab-btn" onclick="switchMainTab('legacy')">
+      <span>Старые префабы (Legacy)</span>
+      <span class="badge warn" id="badgeLegacyUnmapped">0 unmapped</span>
+    </button>
+    <button id="tabTruth" class="tab-btn" onclick="switchMainTab('truth')">
+      <span>Каталог мода (Истина)</span>
+      <span class="badge" id="badgeTruthCount">0</span>
+    </button>
+  </div>
+
+  <div class="header-actions">
+    <button id="btnRebuildCatalogs" class="sm ghost" onclick="rebuildCatalogs()" title="Пересобрать каталоги старых и новых префабов">
+      <span>↻ Обновить каталоги</span>
+    </button>
+    <button id="btnReviewDiff" class="sm ghost" style="display:none" onclick="openReviewModal()">
+      <span>Правки: <b id="pendingCount">0</b></span>
+    </button>
+    <button id="btnSaveBatch" class="sm success" style="display:none" onclick="saveBatch()">
+      <span>Сохранить на диск</span>
+    </button>
+    <button class="sm ghost" onclick="location.href='/'">
+      <span>← Восстановление</span>
+    </button>
+  </div>
+</header>
+
+<!-- Панель инструментов: База ремапа -->
+<div class="toolbar" id="toolbarRemap">
+  <div class="seg">
+    <button id="btnModeTable" class="active" onclick="setRemapMode('table')">Таблица</button>
+    <button id="btnModeTree" onclick="setRemapMode('tree')">Дерево</button>
+  </div>
+
+  <div class="search-wrap">
+    <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 14z"/></svg>
+    <input type="text" id="searchRemap" placeholder="Поиск в базе ремапа по GUID или пути..." oninput="renderRemap()" />
+  </div>
+
+  <div class="stats" style="display:flex;gap:6px">
+    <div class="chip" id="chipTotal" onclick="setRemapFilter('all')">Всего: <b id="statTotal">0</b></div>
+    <div class="chip on" id="chipFilled" onclick="setRemapFilter('filled')">Заполнено: <b id="statFilled">0</b></div>
+    <div class="chip warn" id="chipStubs" onclick="setRemapFilter('stubs')">Заглушки: <b id="statStubs">0</b></div>
+    <div class="chip notice" id="chipWarnings" onclick="setRemapFilter('warnings')">В моде жив: <b id="statWarnings">0</b></div>
+    <div class="chip err" id="chipErrors" onclick="setRemapFilter('errors')">Ошибки: <b id="statErrors">0</b></div>
+  </div>
+
+  <div class="btns">
+    <button class="sm" onclick="openAddModal()">+ Добавить</button>
+    <button class="sm" onclick="openMetaModal()">✎ Описание</button>
+    <button id="btnBulkMove" class="sm ghost" style="display:none" onclick="openBulkMoveModal()">Переместить (<span id="selectedCount">0</span>)</button>
+    <button id="btnBulkDelete" class="sm danger sm" style="display:none" onclick="bulkDeleteSelected()">Удалить (<span id="selectedDelCount">0</span>)</button>
+  </div>
+</div>
+
+<!-- Панель инструментов: Старые префабы (Legacy) -->
+<div class="toolbar" id="toolbarLegacy" style="display:none">
+  <div class="search-wrap">
+    <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 14z"/></svg>
+    <input type="text" id="searchLegacy" placeholder="Поиск старых префабов по пути, GUID или миссии..." oninput="renderLegacy()" />
+  </div>
+
+  <div class="stats" style="display:flex;gap:6px">
+    <div class="chip active" id="chipLegacyUnmapped" onclick="setLegacyFilter('unmapped')">Только несмапленные: <b id="statLegacyUnmapped">0</b></div>
+    <div class="chip" id="chipLegacyAll" onclick="setLegacyFilter('all')">Все: <b id="statLegacyAll">0</b></div>
+    <div class="chip on" id="chipLegacyMapped" onclick="setLegacyFilter('mapped')">Замаплены: <b id="statLegacyMapped">0</b></div>
+    <div class="chip warn" id="chipLegacyStubs" onclick="setLegacyFilter('stub')">Заглушки: <b id="statLegacyStubs">0</b></div>
+    <div class="chip notice" id="chipLegacyAlive" onclick="setLegacyFilter('alive')">Живы в моде: <b id="statLegacyAlive">0</b></div>
+  </div>
+</div>
+
+<!-- Панель инструментов: Каталог мода (Истина) -->
+<div class="toolbar" id="toolbarTruth" style="display:none">
+  <div class="search-wrap">
+    <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 14z"/></svg>
+    <input type="text" id="searchTruth" placeholder="Поиск в эталонном каталоге по имени, пути, роли..." oninput="renderTruth()" />
+  </div>
+
+  <div class="seg" id="segTruthCategory">
+    <button class="active" onclick="setTruthCategory('all')">Все</button>
+    <button onclick="setTruthCategory('Characters')">Персонажи</button>
+    <button onclick="setTruthCategory('Groups')">Группы</button>
+    <button onclick="setTruthCategory('Vehicles')">Техника</button>
+    <button onclick="setTruthCategory('Props')">Пропсы/Ящики</button>
+    <button onclick="setTruthCategory('Weapons')">Оружие</button>
+  </div>
+</div>
+
+<main>
+  <!-- 1. Контейнер: База ремапа -->
+  <div id="viewRemap" style="display:flex;flex-direction:column;flex:1;overflow:hidden">
+    <div class="table-container" id="remapTableView">
+      <table>
+        <thead>
+          <tr>
+            <th class="chk"><input type="checkbox" id="chkAll" onchange="toggleSelectAll(this.checked)" /></th>
+            <th style="width:160px">Группа</th>
+            <th style="width:40%">Старый префаб (исходный)</th>
+            <th style="width:110px;text-align:center">Статус</th>
+            <th>Новый префаб (замена)</th>
+            <th style="width:170px;text-align:right">Действия</th>
+          </tr>
+        </thead>
+        <tbody id="remapTableBody">
+          <tr><td colspan="6" class="empty-state">Загрузка базы ремапа...</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tree-container" id="remapTreeView">
+      <div id="treeRoot" class="tree-root"></div>
+    </div>
+  </div>
+
+  <!-- 2. Контейнер: Старые префабы (Legacy) -->
+  <div id="viewLegacy" class="table-container" style="display:none">
+    <table>
+      <thead>
+        <tr>
+          <th style="width:80px;text-align:center">В миссиях</th>
+          <th style="width:200px">Миссии</th>
+          <th style="width:38%">Старый префаб</th>
+          <th style="width:110px;text-align:center">Статус</th>
+          <th>Текущая цель в ремапе</th>
+          <th style="width:140px;text-align:right">Действие</th>
+        </tr>
+      </thead>
+      <tbody id="legacyTableBody">
+        <tr><td colspan="6" class="empty-state">Загрузка каталога старых префабов...</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 3. Контейнер: Каталог мода (Истина) -->
+  <div id="viewTruth" class="table-container" style="display:none">
+    <table>
+      <thead>
+        <tr>
+          <th style="width:150px">GUID</th>
+          <th style="width:45%">Относительный путь префаба</th>
+          <th style="width:130px">Категория</th>
+          <th style="width:140px">Фракция / Ветка</th>
+          <th style="width:110px;text-align:center">В ремапе</th>
+          <th style="width:150px;text-align:right">Действие</th>
+        </tr>
+      </thead>
+      <tbody id="truthTableBody">
+        <tr><td colspan="6" class="empty-state">Загрузка эталонного каталога мода...</td></tr>
+      </tbody>
+    </table>
+  </div>
+</main>
+
+<!-- Модальное окно: Добавить запись -->
+<div class="modal-backdrop" id="modalAdd">
+  <div class="modal">
+    <div class="modal-head">
+      <span>Добавить префаб в таблицу</span>
+      <button class="ghost sm" onclick="closeModal('modalAdd')">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="form-group">
+        <label>Целевая группа:</label>
+        <input type="text" id="addInputGroup" list="groupDatalist" placeholder="Например: Characters/BLUFOR/CDF_Army" />
+        <datalist id="groupDatalist"></datalist>
+      </div>
+      <div class="form-group">
+        <label>Старый префаб ({GUID}Path.et):</label>
+        <input type="text" id="addInputOld" placeholder="{16-HEX-GUID}Prefabs/.../drg_Old.et" />
+      </div>
+      <div class="form-group">
+        <label>Новый префаб (пусто = заглушка):</label>
+        <div style="display:flex;gap:6px">
+          <input type="text" id="addInputNew" placeholder="{16-HEX-GUID}Prefabs/.../New.et" />
+          <button class="sm" onclick="openTruthPicker('addInputNew')">Из Истины</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal-foot">
+      <button onclick="closeModal('modalAdd')">Отмена</button>
+      <button class="primary" onclick="confirmAdd()">Добавить</button>
+    </div>
+  </div>
+</div>
+
+<!-- Модальное окно: Редактирование _meta -->
+<div class="modal-backdrop" id="modalMeta">
+  <div class="modal">
+    <div class="modal-head">
+      <span>Описание базы данных (_meta)</span>
+      <button class="ghost sm" onclick="closeModal('modalMeta')">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="form-group">
+        <label>Описание (description):</label>
+        <textarea id="metaInputDesc" rows="4"></textarea>
+      </div>
+      <div class="form-group">
+        <label>Статус верификации (status):</label>
+        <textarea id="metaInputStatus" rows="4"></textarea>
+      </div>
+    </div>
+    <div class="modal-foot">
+      <button onclick="closeModal('modalMeta')">Отмена</button>
+      <button class="primary" onclick="confirmMeta()">Применить</button>
+    </div>
+  </div>
+</div>
+
+<!-- Модальное окно: Переместить в группу -->
+<div class="modal-backdrop" id="modalMove">
+  <div class="modal">
+    <div class="modal-head">
+      <span>Переместить префаб(ы) в другую группу</span>
+      <button class="ghost sm" onclick="closeModal('modalMove')">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="form-group">
+        <label>Выберите или введите новую группу:</label>
+        <input type="text" id="moveInputGroup" list="groupDatalist" placeholder="Например: Groups/OPFOR/RHS_AFRF" />
+      </div>
+    </div>
+    <div class="modal-foot">
+      <button onclick="closeModal('modalMove')">Отмена</button>
+      <button class="primary" onclick="confirmMove()">Переместить</button>
+    </div>
+  </div>
+</div>
+
+<!-- Модальное окно: Подбор замены (с двумя вкладками: Ранкер и Истина) -->
+<div class="modal-backdrop" id="modalSuggest">
+  <div class="modal" style="max-width:850px">
+    <div class="modal-head">
+      <span>Подбор замены для префаба</span>
+      <button class="ghost sm" onclick="closeModal('modalSuggest')">✕</button>
+    </div>
+    <div class="modal-body">
+      <div style="margin-bottom:12px;font-size:12px;color:var(--mut)">
+        Исходный: <code id="suggestSourceRef" style="color:var(--fg);font-size:12px;word-break:break-all"></code>
+      </div>
+      <div class="seg" style="margin-bottom:12px">
+        <button id="btnSuggestRanker" class="active" onclick="switchSuggestMode('ranker')">Автоподбор (Ранкер / ИИ)</button>
+        <button id="btnSuggestTruth" onclick="switchSuggestMode('truth')">Каталог Истины (Все 4735 шт.)</button>
+      </div>
+      <div id="suggestRankerPanel">
+        <div id="suggestCandidatesList">Загрузка кандидатов...</div>
+      </div>
+      <div id="suggestTruthPanel" style="display:none">
+        <div style="margin-bottom:10px">
+          <input type="text" id="suggestTruthSearch" placeholder="Фильтр префабов Истины по имени или пути..." oninput="renderSuggestTruthList()" style="width:100%;padding:7px 10px;background:var(--panel2);border:1px solid var(--line2);color:var(--fg);border-radius:6px" />
+        </div>
+        <div id="suggestTruthList" style="max-height:360px;overflow:auto"></div>
+      </div>
+    </div>
+    <div class="modal-foot">
+      <button id="btnAiSuggest" class="ghost" onclick="requestAiSuggest()">Спросить ИИ</button>
+      <button onclick="closeModal('modalSuggest')">Закрыть</button>
+    </div>
+  </div>
+</div>
+
+<!-- Модальное окно: Просмотр и откат диффа -->
+<div class="modal-backdrop" id="modalReview">
+  <div class="modal" style="max-width:760px">
+    <div class="modal-head">
+      <span>Несохранённые изменения (<span id="reviewCount">0</span>)</span>
+      <button class="ghost sm" onclick="closeModal('modalReview')">✕</button>
+    </div>
+    <div class="modal-body" id="reviewBody"></div>
+    <div class="modal-foot">
+      <button class="danger" onclick="revertAllChanges()">Отменить все правки</button>
+      <button onclick="closeModal('modalReview')">Продолжить редактирование</button>
+      <button class="success" onclick="saveBatch()">Сохранить на диск</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ---------- Состояние приложения ----------
+let gModel = null;
+let gModIndex = {};
+let gNewCatalog = [];
+let gOldCatalog = [];
+
+let gActiveMainTab = 'remap'; // remap | legacy | truth
+let gRemapMode = 'table'; // table | tree
+let gRemapFilter = 'all'; // all | filled | stubs | warnings | errors
+
+let gLegacyFilter = 'unmapped'; // unmapped | all | mapped | stub | alive
+let gTruthCategory = 'all'; // all | Characters | Groups | Vehicles | Props | Weapons
+
+let gPendingOps = [];
+let gSelectedKeys = new Set();
+let gSuggestTarget = null;
+let gMoveTarget = null;
+
+// ---------- Загрузка данных ----------
+window.addEventListener('DOMContentLoaded', async () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const q = urlParams.get('q');
+  if (q) {
+    document.getElementById('searchRemap').value = q;
+  }
+  await loadAllData();
+});
+
+async function loadAllData() {
+  try {
+    const [tableRes, modRes, newCatRes, oldCatRes] = await Promise.all([
+      fetch('/api/table'),
+      fetch('/api/modindex'),
+      fetch('/api/catalog/new'),
+      fetch('/api/catalog/old')
+    ]);
+
+    if (!tableRes.ok) throw new Error('Ошибка /api/table');
+    if (!modRes.ok) throw new Error('Ошибка /api/modindex');
+
+    gModel = await tableRes.json();
+    gModIndex = await modRes.json();
+    if (newCatRes.ok) gNewCatalog = await newCatRes.json();
+    if (oldCatRes.ok) gOldCatalog = await oldCatRes.json();
+
+    updateDatalist();
+    updateBadges();
+    renderAll();
+  } catch (err) {
+    alert('Не удалось загрузить данные: ' + err.message);
+  }
+}
+
+function updateBadges() {
+  if (gModel && gModel.stats) {
+    document.getElementById('badgeRemapCount').textContent = gModel.stats.total;
+  }
+  if (gOldCatalog) {
+    const unmapped = gOldCatalog.filter(x => x.status === 'unmapped').length;
+    document.getElementById('badgeLegacyUnmapped').textContent = unmapped + ' unmapped';
+  }
+  if (gNewCatalog) {
+    document.getElementById('badgeTruthCount').textContent = gNewCatalog.length;
+  }
+}
+
+function updateDatalist() {
+  const dl = document.getElementById('groupDatalist');
+  dl.innerHTML = '';
+  if (gModel && gModel.groups) {
+    gModel.groups.forEach(g => {
+      const opt = document.createElement('option');
+      opt.value = g;
+      dl.appendChild(opt);
+    });
+  }
+}
+
+// ---------- Переключение вкладок верхнего уровня ----------
+function switchMainTab(tab) {
+  gActiveMainTab = tab;
+  document.getElementById('tabRemap').classList.toggle('active', tab === 'remap');
+  document.getElementById('tabLegacy').classList.toggle('active', tab === 'legacy');
+  document.getElementById('tabTruth').classList.toggle('active', tab === 'truth');
+
+  document.getElementById('toolbarRemap').style.display = tab === 'remap' ? 'flex' : 'none';
+  document.getElementById('toolbarLegacy').style.display = tab === 'legacy' ? 'flex' : 'none';
+  document.getElementById('toolbarTruth').style.display = tab === 'truth' ? 'flex' : 'none';
+
+  document.getElementById('viewRemap').style.display = tab === 'remap' ? 'flex' : 'none';
+  document.getElementById('viewLegacy').style.display = tab === 'legacy' ? 'block' : 'none';
+  document.getElementById('viewTruth').style.display = tab === 'truth' ? 'block' : 'none';
+
+  renderAll();
+}
+
+function renderAll() {
+  if (gActiveMainTab === 'remap') {
+    renderRemap();
+  } else if (gActiveMainTab === 'legacy') {
+    renderLegacy();
+  } else if (gActiveMainTab === 'truth') {
+    renderTruth();
+  }
+}
+
+// ==========================================
+// 1. ВКЛАДКА: БАЗА РЕМАПА
+// ==========================================
+function setRemapMode(mode) {
+  gRemapMode = mode;
+  document.getElementById('btnModeTable').classList.toggle('active', mode === 'table');
+  document.getElementById('btnModeTree').classList.toggle('active', mode === 'tree');
+  document.getElementById('remapTableView').style.display = mode === 'table' ? 'block' : 'none';
+  document.getElementById('remapTreeView').style.display = mode === 'tree' ? 'block' : 'none';
+  renderRemap();
+}
+
+function setRemapFilter(f) {
+  gRemapFilter = f;
+  document.querySelectorAll('#toolbarRemap .chip').forEach(c => c.classList.remove('active'));
+  if (f === 'filled') document.getElementById('chipFilled').classList.add('active');
+  else if (f === 'stubs') document.getElementById('chipStubs').classList.add('active');
+  else if (f === 'warnings') document.getElementById('chipWarnings').classList.add('active');
+  else if (f === 'errors') document.getElementById('chipErrors').classList.add('active');
+  else document.getElementById('chipTotal').classList.add('active');
+  renderRemap();
+}
+
+function getFilteredRemapEntries() {
+  if (!gModel || !gModel.entries) return [];
+  const q = document.getElementById('searchRemap').value.trim().toLowerCase();
+
+  return gModel.entries.filter(e => {
+    if (q) {
+      const matchOld = e.oldRef.toLowerCase().includes(q);
+      const matchNew = (e.newRef || '').toLowerCase().includes(q);
+      const matchGrp = (e.group || '').toLowerCase().includes(q);
+      if (!matchOld && !matchNew && !matchGrp) return false;
+    }
+    if (gRemapFilter === 'filled') return e.status === 'ok' || e.status === 'source-alive';
+    if (gRemapFilter === 'stubs') return e.status === 'stub';
+    if (gRemapFilter === 'warnings') return e.status === 'source-alive' || e.status === 'self-mapping';
+    if (gRemapFilter === 'errors') return ['target-missing', 'path-mismatch', 'malformed', 'dup'].includes(e.status);
+    return true;
+  });
+}
+
+function renderRemap() {
+  if (!gModel) return;
+  const s = gModel.stats;
+  document.getElementById('statTotal').textContent = s.total;
+  document.getElementById('statFilled').textContent = s.filled;
+  document.getElementById('statStubs').textContent = s.stubs;
+  document.getElementById('statWarnings').textContent = s.warnings;
+  document.getElementById('statErrors').textContent = s.errors;
+
+  const pCount = gPendingOps.length;
+  document.getElementById('pendingCount').textContent = pCount;
+  document.getElementById('btnReviewDiff').style.display = pCount > 0 ? 'inline-flex' : 'none';
+  document.getElementById('btnSaveBatch').style.display = pCount > 0 ? 'inline-flex' : 'none';
+
+  if (gRemapMode === 'table') {
+    renderRemapTable();
+  } else {
+    renderRemapTree();
+  }
+}
+
+function renderRemapTable() {
+  const tbody = document.getElementById('remapTableBody');
+  const list = getFilteredRemapEntries();
+
+  if (list.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="6" class="empty-state">Нет записей, удовлетворяющих фильтру.</td></tr>';
+    return;
+  }
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const highlightQuery = (urlParams.get('q') || '').toLowerCase();
+
+  tbody.innerHTML = list.map(e => {
+    const isSelected = gSelectedKeys.has(e.oldRef);
+    const isHigh = highlightQuery && e.oldRef.toLowerCase().includes(highlightQuery);
+    const statusTag = getStatusTagHtml(e.status, e.statusMsg);
+    const oldDisplay = formatRefDisplay(e.oldRef);
+
+    return `
+      <tr class="${isHigh ? 'highlight' : ''}" data-key="${escapeHtml(e.oldRef)}">
+        <td class="chk">
+          <input type="checkbox" ${isSelected ? 'checked' : ''} onchange="toggleSelectKey('${escapeHtml(e.oldRef)}', this.checked)" />
+        </td>
+        <td class="grp" title="${escapeHtml(e.group)}">${escapeHtml(e.group)}</td>
+        <td class="ref-col" title="${escapeHtml(e.oldRef)}">
+          <span class="g">${oldDisplay.guid}</span><span class="p">${oldDisplay.path}</span>
+        </td>
+        <td class="status-col">${statusTag}</td>
+        <td>
+          <input type="text" class="input-ref" value="${escapeHtml(e.newRef)}"
+                 placeholder="Пусто (заглушка)"
+                 onchange="onLeafValueChange('${escapeHtml(e.oldRef)}', this.value)" />
+        </td>
+        <td class="act-col">
+          <button class="sm" onclick="openSuggestModal('${escapeHtml(e.oldRef)}')">Подобрать</button>
+          <button class="sm ghost" onclick="openMoveModal('${escapeHtml(e.oldRef)}')">Перенести</button>
+          <button class="sm danger sm" onclick="deleteLeaf('${escapeHtml(e.oldRef)}')">✕</button>
+        </td>
+      </tr>
+    `;
+  }).join('');
+}
+
+function renderRemapTree() {
+  const rootEl = document.getElementById('treeRoot');
+  if (!gModel || !gModel.tree) {
+    rootEl.innerHTML = '<div class="empty-state">Дерево недоступно</div>';
+    return;
+  }
+  rootEl.innerHTML = buildTreeNodeHtml(gModel.tree, [], 'Корень базы');
+}
+
+function buildTreeNodeHtml(node, trail, title) {
+  if (!node || typeof node !== 'object') return '';
+  const leafKeys = Object.keys(node).filter(k => !k.startsWith('_') && typeof node[k] === 'string');
+  const groupKeys = Object.keys(node).filter(k => (k === '_Unresolved_Pending' || !k.startsWith('_')) && typeof node[k] === 'object' && node[k] !== null);
+
+  let html = '';
+  const currentPath = trail.join('/');
+
+  if (trail.length > 0) {
+    const noteText = node._note || '';
+    const childCount = leafKeys.length + groupKeys.length;
+
+    html += `
+      <div class="tree-node">
+        <div class="tree-header" onclick="toggleTreeHeader(this)">
+          <span class="toggle">▼</span>
+          <span class="folder-name">${escapeHtml(title)}</span>
+          <span class="count">${childCount} элементов</span>
+          <button class="sm ghost" style="margin-left:6px" onclick="event.stopPropagation(); openAddModalToGroup('${escapeHtml(currentPath)}')">+ Добавить</button>
+        </div>
+        <div class="tree-body">
+          ${noteText ? `
+            <div class="group-note">
+              <span>Примечание: ${escapeHtml(noteText)}</span>
+              <button class="sm ghost" onclick="openEditNoteModal('${escapeHtml(currentPath)}', '${escapeHtml(noteText)}')">✎</button>
+            </div>
+          ` : ''}
+    `;
+  }
+
+  if (leafKeys.length > 0) {
+    html += `<div style="margin-left:14px;margin-bottom:8px">`;
+    for (const lk of leafKeys) {
+      const val = node[lk];
+      const entry = gModel.entries.find(e => e.oldRef === lk);
+      const statusTag = entry ? getStatusTagHtml(entry.status, entry.statusMsg) : '';
+      const oldDisp = formatRefDisplay(lk);
+
+      html += `
+        <div style="display:flex;align-items:center;gap:10px;padding:4px 0;font-size:12px;border-bottom:1px solid rgba(255,255,255,.03)">
+          <div style="flex:1;font-family:monospace;word-break:break-all">
+            <span style="color:var(--mut2)">${oldDisp.guid}</span> <span>${oldDisp.path}</span>
+          </div>
+          <div>${statusTag}</div>
+          <div style="width:260px">
+            <input type="text" class="input-ref" value="${escapeHtml(val)}"
+                   placeholder="Заглушка"
+                   onchange="onLeafValueChange('${escapeHtml(lk)}', this.value)" />
+          </div>
+          <div>
+            <button class="sm" onclick="openSuggestModal('${escapeHtml(lk)}')">Подобрать</button>
+            <button class="sm danger sm" onclick="deleteLeaf('${escapeHtml(lk)}')">✕</button>
+          </div>
+        </div>
+      `;
+    }
+    html += `</div>`;
+  }
+
+  for (const gk of groupKeys) {
+    html += buildTreeNodeHtml(node[gk], [...trail, gk], gk);
+  }
+
+  if (trail.length > 0) html += `</div></div>`;
+  return html;
+}
+
+function toggleTreeHeader(el) {
+  el.classList.toggle('collapsed');
+  const body = el.nextElementSibling;
+  if (body) body.classList.toggle('collapsed');
+}
+
+// ==========================================
+// 2. ВКЛАДКА: СТАРЫЕ ПРЕФАБЫ (LEGACY)
+// ==========================================
+function setLegacyFilter(f) {
+  gLegacyFilter = f;
+  document.querySelectorAll('#toolbarLegacy .chip').forEach(c => c.classList.remove('active'));
+  if (f === 'unmapped') document.getElementById('chipLegacyUnmapped').classList.add('active');
+  else if (f === 'mapped') document.getElementById('chipLegacyMapped').classList.add('active');
+  else if (f === 'stub') document.getElementById('chipLegacyStubs').classList.add('active');
+  else if (f === 'alive') document.getElementById('chipLegacyAlive').classList.add('active');
+  else document.getElementById('chipLegacyAll').classList.add('active');
+  renderLegacy();
+}
+
+function renderLegacy() {
+  const tbody = document.getElementById('legacyTableBody');
+  if (!gOldCatalog || gOldCatalog.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="6" class="empty-state">Каталог старых префабов пуст. Нажмите «↻ Обновить каталоги».</td></tr>';
+    return;
+  }
+
+  // Счётчики
+  document.getElementById('statLegacyAll').textContent = gOldCatalog.length;
+  document.getElementById('statLegacyUnmapped').textContent = gOldCatalog.filter(x => x.status === 'unmapped').length;
+  document.getElementById('statLegacyMapped').textContent = gOldCatalog.filter(x => x.status === 'mapped').length;
+  document.getElementById('statLegacyStubs').textContent = gOldCatalog.filter(x => x.status === 'stub').length;
+  document.getElementById('statLegacyAlive').textContent = gOldCatalog.filter(x => x.status === 'alive').length;
+
+  const q = document.getElementById('searchLegacy').value.trim().toLowerCase();
+
+  const filtered = gOldCatalog.filter(item => {
+    if (q) {
+      const m1 = item.fullRef.toLowerCase().includes(q);
+      const m2 = (item.missions || '').toLowerCase().includes(q);
+      if (!m1 && !m2) return false;
+    }
+    if (gLegacyFilter === 'unmapped') return item.status === 'unmapped';
+    if (gLegacyFilter === 'mapped') return item.status === 'mapped';
+    if (gLegacyFilter === 'stub') return item.status === 'stub';
+    if (gLegacyFilter === 'alive') return item.status === 'alive';
+    return true;
+  });
+
+  if (filtered.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="6" class="empty-state">Нет старых префабов, подходящих под фильтр.</td></tr>';
+    return;
+  }
+
+  tbody.innerHTML = filtered.slice(0, 300).map(item => {
+    const disp = formatRefDisplay(item.fullRef);
+    const tag = getStatusTagHtml(item.status);
+    const isUnmapped = item.status === 'unmapped' || item.status === 'stub';
+
+    return `
+      <tr>
+        <td style="text-align:center;font-weight:700;color:${item.usageCount > 0 ? 'var(--fg)' : 'var(--mut2)'}">${item.usageCount}</td>
+        <td style="font-size:11.5px;color:var(--mut)" title="${escapeHtml(item.missions)}">${escapeHtml(item.missions || '—')}</td>
+        <td class="ref-col" title="${escapeHtml(item.fullRef)}">
+          <span class="g">${disp.guid}</span><span class="p">${disp.path}</span>
+        </td>
+        <td class="status-col">${tag}</td>
+        <td style="font-family:monospace;font-size:11.5px;color:var(--mut)">
+          ${item.targetRef ? escapeHtml(item.targetRef) : '<i style="color:var(--mut2)">нет</i>'}
+        </td>
+        <td style="text-align:right">
+          ${isUnmapped ? `
+            <button class="sm primary" onclick="mapLegacyItem('${escapeHtml(item.fullRef)}')">Замапить</button>
+          ` : `
+            <button class="sm ghost" onclick="openSuggestModal('${escapeHtml(item.fullRef)}')">Изменить</button>
+          `}
+        </td>
+      </tr>
+    `;
+  }).join('');
+}
+
+function mapLegacyItem(oldRef) {
+  openSuggestModal(oldRef);
+}
+
+// ==========================================
+// 3. ВКЛАДКА: КАТАЛОГ МОДА (ИСТИНА)
+// ==========================================
+function setTruthCategory(cat) {
+  gTruthCategory = cat;
+  document.querySelectorAll('#segTruthCategory button').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+  renderTruth();
+}
+
+function renderTruth() {
+  const tbody = document.getElementById('truthTableBody');
+  if (!gNewCatalog || gNewCatalog.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="6" class="empty-state">Каталог мода пуст. Нажмите «↻ Обновить каталоги».</td></tr>';
+    return;
+  }
+
+  const q = document.getElementById('searchTruth').value.trim().toLowerCase();
+
+  const filtered = gNewCatalog.filter(item => {
+    if (gTruthCategory !== 'all' && item.category !== gTruthCategory) return false;
+    if (q) {
+      const m1 = item.path.toLowerCase().includes(q);
+      const m2 = item.guid.toLowerCase().includes(q);
+      if (!m1 && !m2) return false;
+    }
+    return true;
+  });
+
+  if (filtered.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="6" class="empty-state">Префабов не найдено.</td></tr>';
+    return;
+  }
+
+  tbody.innerHTML = filtered.slice(0, 300).map(item => {
+    const isMapped = item.mappedCount > 0;
+    return `
+      <tr>
+        <td style="font-family:monospace;font-size:11px;color:var(--mut2)">{${item.guid}}</td>
+        <td class="ref-col" title="${escapeHtml(item.fullRef)}">
+          <span class="p">${escapeHtml(item.path)}</span>
+        </td>
+        <td><span class="tag" style="background:var(--panel2)">${escapeHtml(item.category)}</span></td>
+        <td style="font-size:11.5px;color:var(--mut)">${escapeHtml(item.faction || '')} ${item.subCategory ? '› ' + escapeHtml(item.subCategory) : ''}</td>
+        <td style="text-align:center">
+          ${isMapped ? `<span class="badge" style="background:var(--greenbg);color:var(--green)">x${item.mappedCount}</span>` : '<span style="color:var(--mut2);font-size:11px">0</span>'}
+        </td>
+        <td style="text-align:right">
+          <button class="sm ghost" onclick="copyToClipboard('${escapeHtml(item.fullRef)}')">Копировать</button>
+        </td>
+      </tr>
+    `;
+  }).join('');
+}
+
+function copyToClipboard(text) {
+  navigator.clipboard.writeText(text);
+  alert('Ссылка скопирована в буфер обмена:\n' + text);
+}
+
+// ==========================================
+// 4. ПОДБОР И ПИКЕР ИЗ ИСТИНЫ
+// ==========================================
+function switchSuggestMode(mode) {
+  document.getElementById('btnSuggestRanker').classList.toggle('active', mode === 'ranker');
+  document.getElementById('btnSuggestTruth').classList.toggle('active', mode === 'truth');
+  document.getElementById('suggestRankerPanel').style.display = mode === 'ranker' ? 'block' : 'none';
+  document.getElementById('suggestTruthPanel').style.display = mode === 'truth' ? 'block' : 'none';
+  if (mode === 'truth') {
+    renderSuggestTruthList();
+  }
+}
+
+async function openSuggestModal(oldRef) {
+  gSuggestTarget = { oldRef };
+  document.getElementById('suggestSourceRef').textContent = oldRef;
+  switchSuggestMode('ranker');
+
+  const listEl = document.getElementById('suggestCandidatesList');
+  listEl.innerHTML = '<div style="padding:16px;text-align:center"><span class="spinner"></span> Ищем похожие префабы...</div>';
+  document.getElementById('modalSuggest').classList.add('open');
+
+  try {
+    const res = await fetch('/api/suggest', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ path: oldRef, top: 8 })
+    });
+    if (!res.ok) throw new Error('Ошибка /api/suggest');
+    const candidates = await res.json();
+    renderCandidates(candidates);
+  } catch (err) {
+    listEl.innerHTML = `<div style="color:var(--red);padding:10px">Ошибка подбора: ${escapeHtml(err.message)}</div>`;
+  }
+}
+
+function renderCandidates(candidates) {
+  const listEl = document.getElementById('suggestCandidatesList');
+  if (!candidates || candidates.length === 0) {
+    listEl.innerHTML = '<div class="empty-state">Ранкер не нашёл похожих префабов.<br>Переключитесь на вкладку «Каталог Истины» для ручного выбора.</div>';
+    return;
+  }
+
+  listEl.innerHTML = candidates.map((c, i) => `
+    <div style="display:flex;align-items:center;gap:10px;padding:8px 10px;background:var(--panel2);border:1px solid var(--line);border-radius:6px;margin-bottom:6px">
+      <div style="font-weight:700;color:var(--mut2);font-size:11px;width:18px">${i + 1}</div>
+      <div style="flex:1;font-family:monospace;font-size:11.5px;word-break:break-all">
+        <span style="color:var(--mut2)">{${c.guid}}</span> <span>${c.path}</span>
+        ${c.warning ? `<span style="display:block;color:var(--orange);font-size:10.5px">${c.warning}</span>` : ''}
+      </div>
+      <div style="font-size:11px;color:var(--mut2);font-variant-numeric:tabular-nums">${c.score}</div>
+      <button class="sm primary" onclick="pickCandidate('{${c.guid}}${c.path}')">Выбрать</button>
+    </div>
+  `).join('');
+}
+
+function renderSuggestTruthList() {
+  const container = document.getElementById('suggestTruthList');
+  if (!gNewCatalog || gNewCatalog.length === 0) {
+    container.innerHTML = '<div class="empty-state">Каталог истины пуст.</div>';
+    return;
+  }
+
+  const q = (document.getElementById('suggestTruthSearch').value || '').trim().toLowerCase();
+
+  const filtered = gNewCatalog.filter(x => {
+    if (!q) return true;
+    return x.path.toLowerCase().includes(q) || x.guid.toLowerCase().includes(q);
+  }).slice(0, 50);
+
+  container.innerHTML = filtered.map(item => `
+    <div style="display:flex;align-items:center;gap:8px;padding:6px 8px;background:var(--panel2);border:1px solid var(--line);border-radius:6px;margin-bottom:4px">
+      <div style="flex:1;font-family:monospace;font-size:11px;word-break:break-all">
+        <span style="color:var(--mut2)">{${item.guid}}</span> <span>${item.path}</span>
+      </div>
+      <button class="sm primary" onclick="pickCandidate('${escapeHtml(item.fullRef)}')">Выбрать</button>
+    </div>
+  `).join('');
+}
+
+function pickCandidate(newRef) {
+  if (!gSuggestTarget) return;
+  const oldRef = gSuggestTarget.oldRef;
+
+  // Проверяем, есть ли запись в remap_table
+  const exists = gModel.entries.find(e => e.oldRef === oldRef);
+  if (exists) {
+    onLeafValueChange(oldRef, newRef);
+  } else {
+    // Добавляем новое правило в основную базу
+    gPendingOps.push({ op: 'add', group: '_Unresolved_Pending', oldRef, newRef });
+    gModel.entries.unshift({
+      oldRef,
+      newRef,
+      group: '_Unresolved_Pending',
+      groupPath: ['_Unresolved_Pending'],
+      status: validateLocalRef(oldRef, newRef),
+      statusMsg: '',
+      oldGuid: extractGuid(oldRef),
+      newGuid: extractGuid(newRef)
+    });
+  }
+
+  // Обновляем статус в старом каталоге локально
+  const oldItem = gOldCatalog.find(x => x.fullRef === oldRef);
+  if (oldItem) {
+    oldItem.status = 'mapped';
+    oldItem.targetRef = newRef;
+  }
+
+  closeModal('modalSuggest');
+  recomputeStats();
+  updateBadges();
+  renderAll();
+}
+
+async function requestAiSuggest() {
+  if (!gSuggestTarget) return;
+  const btn = document.getElementById('btnAiSuggest');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner"></span> Думает...';
+
+  try {
+    const res = await fetch('/api/ai-suggest', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ path: gSuggestTarget.oldRef, ref: gSuggestTarget.oldRef })
+    });
+    const data = await res.json();
+    if (data.ok && data.ai) {
+      alert(`Рекомендация ИИ:\n\n${data.ai.reasoning || ''}\n\nВыбранный префаб: ${data.ai.chosenRef || 'не указан'}`);
+      if (data.ai.chosenRef) {
+        pickCandidate(data.ai.chosenRef);
+      }
+    } else {
+      alert('ИИ не вернул рекомендацию: ' + (data.error || 'неизвестная ошибка'));
+    }
+  } catch (err) {
+    alert('Сбой запроса к ИИ: ' + err.message);
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'Спросить ИИ';
+  }
+}
+
+// ==========================================
+// 5. ОПЕРАЦИИ, ДИФФ И СОХРАНЕНИЕ
+// ==========================================
+function onLeafValueChange(oldRef, newVal) {
+  const trimmed = newVal.trim();
+  const existingIdx = gPendingOps.findIndex(o => o.op === 'set' && o.oldRef === oldRef);
+  if (existingIdx >= 0) {
+    gPendingOps[existingIdx].newRef = trimmed;
+  } else {
+    gPendingOps.push({ op: 'set', oldRef, newRef: trimmed });
+  }
+
+  const e = gModel.entries.find(x => x.oldRef === oldRef);
+  if (e) {
+    e.newRef = trimmed;
+    e.status = validateLocalRef(oldRef, trimmed);
+  }
+
+  const oldItem = gOldCatalog.find(x => x.fullRef === oldRef);
+  if (oldItem) {
+    oldItem.status = trimmed ? 'mapped' : 'stub';
+    oldItem.targetRef = trimmed;
+  }
+
+  recomputeStats();
+  updateBadges();
+  renderAll();
+}
+
+function deleteLeaf(oldRef) {
+  if (!confirm(`Удалить префаб из базы?\n${oldRef}`)) return;
+  gPendingOps.push({ op: 'delete', oldRef });
+  gModel.entries = gModel.entries.filter(e => e.oldRef !== oldRef);
+  gSelectedKeys.delete(oldRef);
+
+  const oldItem = gOldCatalog.find(x => x.fullRef === oldRef);
+  if (oldItem) {
+    oldItem.status = 'unmapped';
+    oldItem.targetRef = '';
+  }
+
+  recomputeStats();
+  updateBadges();
+  renderAll();
+}
+
+function bulkDeleteSelected() {
+  const count = gSelectedKeys.size;
+  if (!confirm(`Удалить выбранные ${count} префабов из базы?`)) return;
+  for (const k of gSelectedKeys) {
+    gPendingOps.push({ op: 'delete', oldRef: k });
+    gModel.entries = gModel.entries.filter(e => e.oldRef !== k);
+    const oldItem = gOldCatalog.find(x => x.fullRef === k);
+    if (oldItem) {
+      oldItem.status = 'unmapped';
+      oldItem.targetRef = '';
+    }
+  }
+  gSelectedKeys.clear();
+  updateBulkButtons();
+  recomputeStats();
+  updateBadges();
+  renderAll();
+}
+
+function toggleSelectKey(key, checked) {
+  if (checked) gSelectedKeys.add(key);
+  else gSelectedKeys.delete(key);
+  updateBulkButtons();
+}
+
+function toggleSelectAll(checked) {
+  const list = getFilteredRemapEntries();
+  if (checked) {
+    list.forEach(e => gSelectedKeys.add(e.oldRef));
+  } else {
+    gSelectedKeys.clear();
+  }
+  updateBulkButtons();
+  renderRemapTable();
+}
+
+function updateBulkButtons() {
+  const count = gSelectedKeys.size;
+  document.getElementById('selectedCount').textContent = count;
+  document.getElementById('selectedDelCount').textContent = count;
+  document.getElementById('btnBulkMove').style.display = count > 0 ? 'inline-flex' : 'none';
+  document.getElementById('btnBulkDelete').style.display = count > 0 ? 'inline-flex' : 'none';
+}
+
+function openAddModal() {
+  document.getElementById('addInputGroup').value = '_Unresolved_Pending';
+  document.getElementById('addInputOld').value = '';
+  document.getElementById('addInputNew').value = '';
+  document.getElementById('modalAdd').classList.add('open');
+}
+
+function openAddModalToGroup(group) {
+  document.getElementById('addInputGroup').value = group;
+  document.getElementById('addInputOld').value = '';
+  document.getElementById('addInputNew').value = '';
+  document.getElementById('modalAdd').classList.add('open');
+}
+
+function confirmAdd() {
+  const grp = document.getElementById('addInputGroup').value.trim() || '_Unresolved_Pending';
+  const oldRef = document.getElementById('addInputOld').value.trim();
+  const newRef = document.getElementById('addInputNew').value.trim();
+
+  if (!oldRef) {
+    alert('Поле старого префаба обязательно.');
+    return;
+  }
+
+  gPendingOps.push({ op: 'add', group: grp, oldRef, newRef });
+  closeModal('modalAdd');
+
+  gModel.entries.unshift({
+    oldRef,
+    newRef,
+    group: grp,
+    groupPath: grp.split('/'),
+    status: validateLocalRef(oldRef, newRef),
+    statusMsg: '',
+    oldGuid: extractGuid(oldRef),
+    newGuid: extractGuid(newRef)
+  });
+
+  recomputeStats();
+  updateBadges();
+  renderAll();
+}
+
+function openMoveModal(oldRef) {
+  gMoveTarget = oldRef;
+  document.getElementById('moveInputGroup').value = '';
+  document.getElementById('modalMove').classList.add('open');
+}
+
+function openBulkMoveModal() {
+  gMoveTarget = null;
+  document.getElementById('moveInputGroup').value = '';
+  document.getElementById('modalMove').classList.add('open');
+}
+
+function confirmMove() {
+  const targetGroup = document.getElementById('moveInputGroup').value.trim();
+  if (!targetGroup) {
+    alert('Укажите целевую группу.');
+    return;
+  }
+
+  if (gMoveTarget) {
+    gPendingOps.push({ op: 'move', oldRef: gMoveTarget, targetGroup });
+    const e = gModel.entries.find(x => x.oldRef === gMoveTarget);
+    if (e) {
+      e.group = targetGroup;
+      e.groupPath = targetGroup.split('/');
+    }
+  } else {
+    for (const k of gSelectedKeys) {
+      gPendingOps.push({ op: 'move', oldRef: k, targetGroup });
+      const e = gModel.entries.find(x => x.oldRef === k);
+      if (e) {
+        e.group = targetGroup;
+        e.groupPath = targetGroup.split('/');
+      }
+    }
+    gSelectedKeys.clear();
+    updateBulkButtons();
+  }
+
+  closeModal('modalMove');
+  renderAll();
+}
+
+function openMetaModal() {
+  if (gModel && gModel.meta) {
+    document.getElementById('metaInputDesc').value = gModel.meta.description || '';
+    document.getElementById('metaInputStatus').value = gModel.meta.status || '';
+  }
+  document.getElementById('modalMeta').classList.add('open');
+}
+
+function confirmMeta() {
+  const desc = document.getElementById('metaInputDesc').value;
+  const status = document.getElementById('metaInputStatus').value;
+
+  gPendingOps.push({ op: 'meta', description: desc, status });
+  if (gModel && gModel.meta) {
+    gModel.meta.description = desc;
+    gModel.meta.status = status;
+  }
+  closeModal('modalMeta');
+  renderRemap();
+}
+
+function openEditNoteModal(group, currentNote) {
+  const newNote = prompt(`Примечание для группы ${group}:`, currentNote);
+  if (newNote === null) return;
+  gPendingOps.push({ op: 'note', group, note: newNote });
+  renderRemap();
+}
+
+function openReviewModal() {
+  document.getElementById('reviewCount').textContent = gPendingOps.length;
+  const body = document.getElementById('reviewBody');
+
+  if (gPendingOps.length === 0) {
+    body.innerHTML = '<div class="empty-state">Нет несохранённых изменений.</div>';
+  } else {
+    body.innerHTML = gPendingOps.map((op, idx) => {
+      let desc = '';
+      if (op.op === 'set') desc = `<span>${formatRefDisplay(op.oldRef).path}</span> <span class="arrow">→</span> <b style="color:var(--fg)">${op.newRef || '"" (заглушка)'}</b>`;
+      else if (op.op === 'add') desc = `<span>${op.group}:</span> <b>${formatRefDisplay(op.oldRef).path}</b> <span class="arrow">→</span> ${op.newRef || '""'}`;
+      else if (op.op === 'delete') desc = `<span style="color:var(--red)">${formatRefDisplay(op.oldRef).path}</span>`;
+      else if (op.op === 'move') desc = `<span>${formatRefDisplay(op.oldRef).path}</span> <span class="arrow">перенесён в</span> <b>${op.targetGroup}</b>`;
+      else if (op.op === 'meta') desc = `<span>Правка описания/статуса _meta</span>`;
+      else if (op.op === 'note') desc = `<span>Группа ${op.group}: примечание обновлено</span>`;
+
+      return `
+        <div class="diff-item">
+          <span class="diff-type ${op.op}">${op.op}</span>
+          <div class="diff-details">${desc}</div>
+          <button class="sm ghost danger" onclick="revertOp(${idx})">Отменить</button>
+        </div>
+      `;
+    }).join('');
+  }
+
+  document.getElementById('modalReview').classList.add('open');
+}
+
+function revertOp(idx) {
+  gPendingOps.splice(idx, 1);
+  if (gPendingOps.length === 0) {
+    closeModal('modalReview');
+    loadAllData();
+  } else {
+    openReviewModal();
+  }
+  recomputeStats();
+  renderAll();
+}
+
+function revertAllChanges() {
+  if (!confirm('Отменить все несохранённые изменения и перезагрузить данные?')) return;
+  gPendingOps = [];
+  closeModal('modalReview');
+  loadAllData();
+}
+
+async function saveBatch() {
+  if (gPendingOps.length === 0) {
+    alert('Нет изменений для сохранения.');
+    return;
+  }
+
+  const btn = document.getElementById('btnSaveBatch');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner"></span> Сохраняем...';
+
+  try {
+    const res = await fetch('/api/table/save', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        operations: gPendingOps,
+        versionHash: gModel ? gModel.versionHash : ''
+      })
+    });
+
+    const data = await res.json();
+    if (!res.ok || !data.ok) {
+      throw new Error(data.error || 'Ошибка при сохранении базы');
+    }
+
+    gPendingOps = [];
+    gModel = data.model;
+    closeModal('modalReview');
+    updateDatalist();
+    updateBadges();
+    renderAll();
+    alert(`Изменения успешно сохранены!\nПрименено операций: ${data.applied}\nСоздана резервная копия.`);
+  } catch (err) {
+    alert('Ошибка сохранения: ' + err.message);
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'Сохранить на диск';
+  }
+}
+
+async function rebuildCatalogs() {
+  const btn = document.getElementById('btnRebuildCatalogs');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner"></span> Пересборка...';
+
+  try {
+    const res = await fetch('/api/catalog/rebuild', { method: 'POST' });
+    const data = await res.json();
+    if (!res.ok || !data.ok) throw new Error(data.error || 'Ошибка пересборки');
+
+    await loadAllData();
+    alert(`Каталоги успешно пересобраны!\nНовые префабы (Истина): ${data.newCount}\nСтарые префабы (Legacy): ${data.oldCount}`);
+  } catch (err) {
+    alert('Ошибка: ' + err.message);
+  } finally {
+    btn.disabled = false;
+    btn.innerHTML = '↻ Обновить каталоги';
+  }
+}
+
+function openTruthPicker(targetInputId) {
+  const val = prompt('Введите часть пути или GUID префаба из Истины:');
+  if (!val) return;
+  const match = gNewCatalog.find(x => x.path.toLowerCase().includes(val.toLowerCase()) || x.guid.toLowerCase().includes(val.toLowerCase()));
+  if (match) {
+    document.getElementById(targetInputId).value = match.fullRef;
+  } else {
+    alert('Префаб не найден в каталоге мода.');
+  }
+}
+
+function closeModal(modalId) {
+  document.getElementById(modalId).classList.remove('open');
+}
+
+// ---------- Локальная валидация и утилиты ----------
+function validateLocalRef(oldRef, newRef) {
+  if (!oldRef || !oldRef.match(/^\{[0-9A-Fa-f]{16}\}.+\.et$/)) return 'malformed';
+  if (!newRef) return 'stub';
+  if (!newRef.match(/^\{[0-9A-Fa-f]{16}\}.+\.et$/)) return 'malformed';
+  if (oldRef === newRef) return 'self-mapping';
+
+  const newGuid = extractGuid(newRef);
+  if (!newGuid || !gModIndex[newGuid]) return 'target-missing';
+
+  const actualPath = gModIndex[newGuid];
+  const newRel = newRef.replace(/^\{[0-9A-Fa-f]{16}\}/, '');
+  if (newRel !== actualPath) return 'path-mismatch';
+
+  const oldGuid = extractGuid(oldRef);
+  if (oldGuid && gModIndex[oldGuid]) return 'source-alive';
+
+  return 'ok';
+}
+
+function extractGuid(fullRef) {
+  const m = (fullRef || '').match(/^\{([0-9A-Fa-f]{16})\}/);
+  return m ? m[1].toUpperCase() : null;
+}
+
+function recomputeStats() {
+  const s = { total: gModel.entries.length, filled: 0, stubs: 0, warnings: 0, errors: 0 };
+  for (const e of gModel.entries) {
+    if (e.status === 'ok') s.filled++;
+    else if (e.status === 'stub') s.stubs++;
+    else if (e.status === 'source-alive' || e.status === 'self-mapping') {
+      s.warnings++;
+      if (e.newRef) s.filled++;
+    } else {
+      s.errors++;
+      if (e.newRef) s.filled++;
+    }
+  }
+  gModel.stats = s;
+}
+
+function getStatusTagHtml(status, msg) {
+  const titles = {
+    'ok': 'Корректный маппинг',
+    'mapped': 'Замаплен в базе',
+    'stub': 'Заглушка (требует замены)',
+    'unmapped': 'Не замаплен в базе',
+    'target-missing': 'Целевой префаб не найден в моде',
+    'path-mismatch': 'Путь отличается от мода',
+    'malformed': 'Некорректная ссылка',
+    'dup': 'Дубликат в базе',
+    'source-alive': 'Исходный префаб жив в моде',
+    'alive': 'Префаб жив в моде',
+    'self-mapping': 'Старый и новый реф совпадают',
+    'system': 'Системный/логика',
+    'external': 'Внешний/ваниль'
+  };
+  const title = msg || titles[status] || status;
+  return `<span class="tag ${status}" title="${escapeHtml(title)}">${status}</span>`;
+}
+
+function formatRefDisplay(fullRef) {
+  const m = fullRef.match(/^(\{([0-9A-Fa-f]{16})\})(.+)$/);
+  if (m) {
+    return { guid: m[1], path: m[3] };
+  }
+  return { guid: '', path: fullRef };
+}
+
+function escapeHtml(s) {
+  if (!s) return '';
+  return String(s)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+</script>
+
+</body>
+</html>

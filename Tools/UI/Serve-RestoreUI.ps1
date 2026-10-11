@@ -193,6 +193,50 @@ function Handle-Api($ctx) {
             Send-Json $ctx $res
             return
         }
+        'GET /api/table' {
+            $model = Get-RemapModel -Path $cfg.RemapTable
+            Send-Json $ctx $model
+            return
+        }
+        'GET /api/modindex' {
+            $idx = Build-ModIndex
+            Send-Json $ctx $idx
+            return
+        }
+        'POST /api/table/save' {
+            $b = Read-Body $ctx
+            $ops = @($b.operations)
+            $expectedHash = [string]$b.versionHash
+            try {
+                $res = Save-RemapOperations -Operations $ops -ExpectedVersionHash $expectedHash -Path $cfg.RemapTable
+                $updatedModel = Get-RemapModel -Path $cfg.RemapTable
+                Send-Json $ctx ([pscustomobject]@{
+                    ok         = $true
+                    applied    = $res.applied
+                    backupFile = $res.backupFile
+                    model      = $updatedModel
+                })
+            } catch {
+                Send-Json $ctx ([pscustomobject]@{ ok = $false; error = $_.Exception.Message }) 400
+            }
+            return
+        }
+        'GET /api/catalog/new' {
+            $cat = Get-NewPrefabsCatalog
+            Send-Json $ctx $cat
+            return
+        }
+        'GET /api/catalog/old' {
+            $cat = Get-OldPrefabsCatalog
+            Send-Json $ctx $cat
+            return
+        }
+        'POST /api/catalog/rebuild' {
+            $n = Build-NewPrefabsCatalog -Refresh
+            $o = Build-OldPrefabsCatalog -Refresh
+            Send-Json $ctx ([pscustomobject]@{ ok=$true; newCount=$n.Count; oldCount=$o.Count })
+            return
+        }
         default {
             Send-Json $ctx ([pscustomobject]@{ error = "no route: $method $path" }) 404
         }
@@ -217,6 +261,7 @@ Write-Host ""
 if (-not $NoBrowser) { Start-Process $prefix }
 
 $indexPath = Join-Path $ScriptDir 'index.html'
+$editorPath = Join-Path $ScriptDir 'editor.html'
 while ($listener.IsListening) {
     $ctx = $listener.GetContext()
     try {
@@ -226,6 +271,14 @@ while ($listener.IsListening) {
             # codepage, which would mangle the Cyrillic/UTF-8 bytes into mojibake.
             $html = [System.IO.File]::ReadAllText($indexPath, [System.Text.Encoding]::UTF8)
             Send-Text $ctx $html
+        }
+        elseif ($p -eq '/editor' -or $p -eq '/editor.html') {
+            if (-not (Test-Path -LiteralPath $editorPath)) {
+                Send-Text $ctx 'editor.html не найден' 'text/plain; charset=utf-8' 404
+            } else {
+                $html = [System.IO.File]::ReadAllText($editorPath, [System.Text.Encoding]::UTF8)
+                Send-Text $ctx $html
+            }
         }
         elseif ($p -like '/api/*') {
             Handle-Api $ctx

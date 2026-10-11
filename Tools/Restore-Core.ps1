@@ -42,6 +42,9 @@ $script:RMC = @{
     AddonRoot      = 'C:\Users\armen\Documents\GitHub\PodvalTvTMissions\PodvalTvTMissions'
     PrefabsModRoot = 'C:\Users\armen\Documents\GitHub\PodvalTvTPrefabs\PodvalTvTPrefabs'
     RemapTable     = (Join-Path $PSScriptRoot 'remap_table.json')
+    CatalogNew     = (Join-Path $PSScriptRoot 'catalog_new_prefabs.json')
+    CatalogOld     = (Join-Path $PSScriptRoot 'catalog_old_prefabs.json')
+    DefaultSourceRoot = 'C:\Users\armen\Desktop\PodvalCommunityEvent\Worlds'
     IndexCache     = (Join-Path $env:TEMP 'podval_mod_index.tsv')
 }
 function Get-RMConfig { return $script:RMC }
@@ -92,6 +95,189 @@ function Build-ModIndex {
     return $idx
 }
 
+# ------------------------------------------------------------------ catalogs (truth & legacy)
+
+function Build-NewPrefabsCatalog {
+    [CmdletBinding()]
+    param(
+        [string]$Path = $script:RMC.CatalogNew,
+        [switch]$Refresh
+    )
+
+    $modIndex = Build-ModIndex -Refresh:$Refresh
+    $remap = Load-RemapTable
+
+    $mappedCounts = @{}
+    foreach ($old in $remap.Map.Keys) {
+        $target = $remap.Map[$old]
+        $tGuid = Guid-Of $target
+        if ($tGuid) {
+            $mappedCounts[$tGuid] = [int]$mappedCounts[$tGuid] + 1
+        }
+    }
+
+    $items = New-Object System.Collections.Generic.List[object]
+    foreach ($guid in ($modIndex.Keys | Sort-Object)) {
+        $relPath = $modIndex[$guid]
+        $name = Split-Path $relPath -Leaf
+        $parts = $relPath.Split('/')
+        
+        $category = 'Other'
+        $faction = ''
+        $sub = ''
+        
+        if ($parts[0] -eq 'Prefabs' -and $parts.Length -gt 1) {
+            $category = $parts[1]
+            if ($parts.Length -gt 3 -and $parts[2] -eq 'Factions') {
+                $faction = $parts[3]
+                if ($parts.Length -gt 4) { $sub = ($parts[4..($parts.Length - 2)] -join '/') }
+            } elseif ($parts.Length -gt 2) {
+                $faction = $parts[2]
+                if ($parts.Length -gt 3) { $sub = ($parts[3..($parts.Length - 2)] -join '/') }
+            }
+        }
+
+        $items.Add([pscustomobject]@{
+            guid        = $guid
+            path        = $relPath
+            fullRef     = "{$guid}$relPath"
+            name        = $name
+            category    = $category
+            faction     = $faction
+            subCategory = $sub
+            mappedCount = if ($mappedCounts.ContainsKey($guid)) { $mappedCounts[$guid] } else { 0 }
+        })
+    }
+
+    $json = ConvertTo-Json -InputObject $items -Depth 5
+    Write-Text $Path $json
+    return $items
+}
+
+function Build-OldPrefabsCatalog {
+    [CmdletBinding()]
+    param(
+        [string]$Path = $script:RMC.CatalogOld,
+        [string]$SourceRoot = $script:RMC.DefaultSourceRoot,
+        [switch]$Refresh
+    )
+
+    $modIndex = Build-ModIndex
+    $remap = Load-RemapTable
+
+    $rx = [regex]'\{([0-9A-Fa-f]{16})\}([^"]+?\.et)'
+    $refMap = @{}
+
+    if (Test-Path -LiteralPath $SourceRoot) {
+        Get-ChildItem -LiteralPath $SourceRoot -Recurse -File -Include *.layer,*.ent -ErrorAction SilentlyContinue | ForEach-Object {
+            $t = [System.IO.File]::ReadAllText($_.FullName)
+            $mc = $rx.Matches($t)
+            if ($mc.Count -gt 0) {
+                $rel = $_.FullName.Substring($SourceRoot.Length).TrimStart('\', '/')
+                $p = $rel.Split([char[]]@('\', '/'))
+                $mName = if ($p.Length -gt 1) { $p[0] + '/' + $p[1] } else { $p[0] }
+                
+                foreach ($m in $mc) {
+                    $ref = $m.Value
+                    if (-not $refMap.ContainsKey($ref)) {
+                        $refMap[$ref] = [pscustomobject]@{ Count = 1; Missions = (New-Object System.Collections.Generic.HashSet[string]) }
+                        [void]$refMap[$ref].Missions.Add($mName)
+                    } else {
+                        $refMap[$ref].Count++
+                        [void]$refMap[$ref].Missions.Add($mName)
+                    }
+                }
+            }
+        }
+    }
+
+    # Ensure any keys already declared in remap_table are included
+    foreach ($r in $remap.Map.Keys) {
+        if (-not $refMap.ContainsKey($r)) {
+            $refMap[$r] = [pscustomobject]@{ Count = 0; Missions = (New-Object System.Collections.Generic.HashSet[string]) }
+        }
+    }
+    foreach ($r in $remap.Stubs.Keys) {
+        if (-not $refMap.ContainsKey($r)) {
+            $refMap[$r] = [pscustomobject]@{ Count = 0; Missions = (New-Object System.Collections.Generic.HashSet[string]) }
+        }
+    }
+
+    $oldItems = New-Object System.Collections.Generic.List[object]
+    foreach ($ref in $refMap.Keys) {
+        $guid = Guid-Of $ref
+        $ref -match '^\{[0-9A-Fa-f]{16}\}(.+)$' | Out-Null
+        $relPath = if ($Matches) { $Matches[1] } else { $ref }
+        $name = Split-Path $relPath -Leaf
+        
+        $parts = $relPath.Split('/')
+        $category = 'Other'
+        $faction = ''
+        if ($parts[0] -eq 'Prefabs' -and $parts.Length -gt 1) {
+            $category = $parts[1]
+            if ($parts.Length -gt 3 -and $parts[2] -eq 'Factions') { $faction = $parts[3] }
+            elseif ($parts.Length -gt 2) { $faction = $parts[2] }
+        }
+
+        $isMod = [bool]($ref -match $script:SuspectRx)
+        $isIgnored = [bool]($ref -match $script:IgnoreRx)
+        
+        $status = 'other'
+        $targetRef = ''
+        
+        if ($remap.Map.Contains($ref) -or ($guid -and $remap.MappedGuids.ContainsKey($guid))) {
+            $status = 'mapped'
+            $targetRef = if ($remap.Map.Contains($ref)) { $remap.Map[$ref] } else { '' }
+        } elseif ($remap.Stubs.Contains($ref)) {
+            $status = 'stub'
+        } elseif ($guid -and $modIndex.ContainsKey($guid)) {
+            $status = 'alive'
+        } elseif ($isIgnored) {
+            $status = 'system'
+        } elseif ($isMod) {
+            $status = 'unmapped'
+        } else {
+            $status = 'external'
+        }
+
+        $mList = [string[]]($refMap[$ref].Missions)
+        $missionsStr = if ($mList.Length -le 3) { $mList -join ', ' } else { ($mList[0..2] -join ', ') + " (+$($mList.Length - 3))" }
+
+        $oldItems.Add([pscustomobject]@{
+            guid        = $guid
+            path        = $relPath
+            fullRef     = $ref
+            name        = $name
+            category    = $category
+            faction     = $faction
+            usageCount  = $refMap[$ref].Count
+            missions    = $missionsStr
+            status      = $status
+            targetRef   = $targetRef
+            isModPrefab = $isMod
+        })
+    }
+
+    $sortedOld = [object[]]@($oldItems | Sort-Object @{ Expression = { $_.isModPrefab }; Descending = $true }, @{ Expression = { $_.usageCount }; Descending = $true })
+    $json = ConvertTo-Json -InputObject $sortedOld -Depth 5
+    Write-Text $Path $json
+    return $sortedOld
+}
+
+function Get-NewPrefabsCatalog([string]$Path = $script:RMC.CatalogNew) {
+    if (-not (Test-Path -LiteralPath $Path)) {
+        return (Build-NewPrefabsCatalog -Path $Path)
+    }
+    return (Read-Text $Path | ConvertFrom-Json)
+}
+
+function Get-OldPrefabsCatalog([string]$Path = $script:RMC.CatalogOld) {
+    if (-not (Test-Path -LiteralPath $Path)) {
+        return (Build-OldPrefabsCatalog -Path $Path)
+    }
+    return (Read-Text $Path | ConvertFrom-Json)
+}
+
 # ------------------------------------------------------------------ remap table
 # Walk the (nested, human-grouped) remap JSON. Any property whose NAME is a full ref is
 # an entry; a filled value (also a ref) is an active mapping, an empty/invalid value is
@@ -135,6 +321,158 @@ function Guid-Of([string]$fullRef) {
     if ($fullRef -match '^\{([0-9A-Fa-f]{16})\}') { return $Matches[1].ToUpper() }
     return $null
 }
+
+function Get-RemapFileHash([string]$Path = $script:RMC.RemapTable) {
+    if (-not (Test-Path -LiteralPath $Path)) { return $null }
+    $bytes = [System.IO.File]::ReadAllBytes($Path)
+    $sha = [System.Security.Cryptography.SHA1]::Create()
+    $hash = $sha.ComputeHash($bytes)
+    return [System.BitConverter]::ToString($hash).Replace('-', '').ToLower()
+}
+
+function Validate-RemapEntry {
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory)][string]$OldRef,
+        [Parameter()][string]$NewRef,
+        [Parameter(Mandatory)][hashtable]$ModIndex,
+        [Parameter()][hashtable]$OldRefCounts
+    )
+
+    if ($OldRef -notmatch $script:RefShape) {
+        return [pscustomobject]@{ Status = 'malformed'; Message = 'Старый реф имеет некорректный формат (ожидается {16-HEX-GUID}Path.et)' }
+    }
+    if ($OldRefCounts -and $OldRefCounts[$OldRef] -gt 1) {
+        return [pscustomobject]@{ Status = 'dup'; Message = 'Дубликат: префаб присутствует в нескольких группах базы' }
+    }
+    if ([string]::IsNullOrWhiteSpace($NewRef)) {
+        return [pscustomobject]@{ Status = 'stub'; Message = 'Заглушка (ожидает подбора замены)' }
+    }
+    if ($NewRef -notmatch $script:RefShape) {
+        return [pscustomobject]@{ Status = 'malformed'; Message = 'Новый реф имеет некорректный формат (ожидается {16-HEX-GUID}Path.et)' }
+    }
+    if ($OldRef -eq $NewRef) {
+        return [pscustomobject]@{ Status = 'self-mapping'; Message = 'Старый и новый реф совпадают' }
+    }
+
+    $newGuid = Guid-Of $NewRef
+    $NewRef -match '^\{[0-9A-Fa-f]{16}\}(.+)$' | Out-Null
+    $newRelPath = $Matches[1]
+
+    if (-not $ModIndex.ContainsKey($newGuid)) {
+        return [pscustomobject]@{ Status = 'target-missing'; Message = "Целевой префаб {$newGuid} отсутствует в моде" }
+    }
+
+    $actualPath = $ModIndex[$newGuid]
+    if ($newRelPath -ne $actualPath) {
+        return [pscustomobject]@{ Status = 'path-mismatch'; Message = "Путь не совпадает с модом (в моде: $actualPath)" }
+    }
+
+    $oldGuid = Guid-Of $OldRef
+    if ($ModIndex.ContainsKey($oldGuid)) {
+        return [pscustomobject]@{ Status = 'source-alive'; Message = "Исходный префаб найден в текущем моде ($($ModIndex[$oldGuid]))" }
+    }
+
+    return [pscustomobject]@{ Status = 'ok'; Message = 'Корректный маппинг' }
+}
+
+function Get-RemapModel {
+    [CmdletBinding()]
+    param([string]$Path = $script:RMC.RemapTable)
+
+    if (-not (Test-Path -LiteralPath $Path)) {
+        return [pscustomobject]@{
+            meta        = [pscustomobject]@{ description = ''; status = '' }
+            versionHash = ''
+            groups      = @()
+            tree        = [pscustomobject]@{}
+            entries     = @()
+            stats       = [pscustomobject]@{ total = 0; filled = 0; stubs = 0; errors = 0; warnings = 0 }
+        }
+    }
+
+    $raw = Read-Text $Path
+    $hash = Get-RemapFileHash $Path
+    $json = $raw | ConvertFrom-Json
+    $modIndex = Build-ModIndex
+
+    # Count occurrences of old refs to detect dups
+    $oldRefCounts = @{}
+    $countWalk = {
+        param($node)
+        foreach ($p in $node.PSObject.Properties) {
+            if ($p.Value -is [string] -and $p.Name -match $script:RefShape) {
+                $oldRefCounts[$p.Name] = [int]$oldRefCounts[$p.Name] + 1
+            } elseif ($null -ne $p.Value -and $p.Value.PSObject -and $p.Value.PSObject.Properties.Count -gt 0 -and $p.Name -notmatch $script:RefShape) {
+                & $countWalk $p.Value
+            }
+        }
+    }
+    & $countWalk $json
+
+    $entries = New-Object System.Collections.Generic.List[object]
+    $groupSet = New-Object System.Collections.Generic.HashSet[string]
+
+    $walk = {
+        param($node, [string[]]$trail)
+        foreach ($p in $node.PSObject.Properties) {
+            if ($p.Name -eq '_meta' -and $trail.Length -eq 0) { continue }
+            if ($p.Value -is [string]) {
+                if ($p.Name -match $script:RefShape) {
+                    $grpStr = $trail -join '/'
+                    if ($grpStr) { [void]$groupSet.Add($grpStr) }
+                    $v = Validate-RemapEntry -OldRef $p.Name -NewRef $p.Value -ModIndex $modIndex -OldRefCounts $oldRefCounts
+                    $entries.Add([pscustomobject]@{
+                        oldRef    = $p.Name
+                        newRef    = [string]$p.Value
+                        group     = $grpStr
+                        groupPath = $trail
+                        status    = $v.Status
+                        statusMsg = $v.Message
+                        oldGuid   = (Guid-Of $p.Name)
+                        newGuid   = (Guid-Of $p.Value)
+                    })
+                }
+            } elseif ($null -ne $p.Value -and $p.Value.PSObject -and $p.Value.PSObject.Properties.Count -gt 0) {
+                $subTrail = $trail + @($p.Name)
+                [void]$groupSet.Add(($subTrail -join '/'))
+                & $walk $p.Value $subTrail
+            }
+        }
+    }
+    & $walk $json @()
+
+    $metaObj = [pscustomobject]@{
+        description = if ($json._meta -and $json._meta.description) { [string]$json._meta.description } else { '' }
+        status      = if ($json._meta -and $json._meta.status) { [string]$json._meta.status } else { '' }
+    }
+
+    $st = @{ total = $entries.Count; filled = 0; stubs = 0; errors = 0; warnings = 0 }
+    foreach ($e in $entries) {
+        if ($e.status -eq 'stub') { $st.stubs++ }
+        elseif ($e.status -eq 'ok') { $st.filled++ }
+        elseif ($e.status -in @('target-missing', 'path-mismatch', 'malformed', 'dup')) {
+            $st.errors++
+            if ($e.newRef) { $st.filled++ }
+        }
+        elseif ($e.status -in @('source-alive', 'self-mapping')) {
+            $st.warnings++
+            if ($e.newRef) { $st.filled++ }
+        }
+    }
+
+    $sortedGroups = @($groupSet) | Sort-Object
+
+    return [pscustomobject]@{
+        meta        = $metaObj
+        versionHash = $hash
+        groups      = $sortedGroups
+        tree        = $json
+        entries     = $entries.ToArray()
+        stats       = [pscustomobject]$st
+    }
+}
+
 
 # ------------------------------------------------------------------ ref scan
 # Collect unique {GUID}path refs from a mission folder's .layer/.ent files.
@@ -357,11 +695,156 @@ function Rank-Candidates {
 }
 
 # ------------------------------------------------------------------ remap table writes
+function Escape-JsonString([string]$str) {
+    if ($null -eq $str) { return '""' }
+    $sb = [System.Text.StringBuilder]::new()
+    $chars = $str.ToCharArray()
+    for ($i = 0; $i -lt $chars.Length; $i++) {
+        $c = $chars[$i]
+        switch ($c) {
+            '"'  { [void]$sb.Append('\"'); break }
+            '\' { [void]$sb.Append('\\'); break }
+            "`r" { [void]$sb.Append('\r'); break }
+            "`n" { [void]$sb.Append('\n'); break }
+            "`t" { [void]$sb.Append('\t'); break }
+            "`b" { [void]$sb.Append('\b'); break }
+            "`f" { [void]$sb.Append('\f'); break }
+            default {
+                $code = [int]$c
+                if ($code -lt 32) {
+                    [void]$sb.Append([string]::Format('\u{0:x4}', $code))
+                } else {
+                    [void]$sb.Append($c)
+                }
+            }
+        }
+    }
+    return '"' + $sb.ToString() + '"'
+}
+
+function Format-RemapJson {
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory)]$InputObject,
+        [int]$Indent = 4
+    )
+
+    $sb = [System.Text.StringBuilder]::new()
+
+    function Serialize-Node($node, [int]$depth) {
+        $indentStr = ' ' * ($depth * $Indent)
+        $nextIndentStr = ' ' * (($depth + 1) * $Indent)
+
+        if ($null -eq $node) {
+            [void]$sb.Append("null")
+            return
+        }
+
+        if ($node -is [System.Collections.IDictionary] -or $node -is [System.Management.Automation.PSCustomObject]) {
+            $props = @()
+            if ($node -is [System.Collections.IDictionary]) {
+                foreach ($k in $node.Keys) {
+                    $props += [pscustomobject]@{ Name = [string]$k; Value = $node[$k] }
+                }
+            } else {
+                foreach ($p in $node.PSObject.Properties) {
+                    $props += [pscustomobject]@{ Name = [string]$p.Name; Value = $p.Value }
+                }
+            }
+
+            if ($props.Count -eq 0) {
+                [void]$sb.Append("{}")
+                return
+            }
+
+            $orderedProps = @()
+            if ($depth -eq 0) {
+                $meta = $props | Where-Object { $_.Name -eq '_meta' }
+                $nonMeta = $props | Where-Object { $_.Name -ne '_meta' }
+                if ($meta) { $orderedProps += $meta }
+                $groups = $nonMeta | Where-Object { $_.Name -ne '_Unresolved_Pending' }
+                $orderedProps += $groups
+                $pending = $nonMeta | Where-Object { $_.Name -eq '_Unresolved_Pending' }
+                if ($pending) { $orderedProps += $pending }
+            } else {
+                $metaProps = @($props | Where-Object { $_.Name -like '_*' } | Sort-Object Name)
+                $leafProps = @($props | Where-Object { $_.Name -notlike '_*' -and ($_.Value -is [string] -or $null -eq $_.Value -or $_.Value.GetType().IsPrimitive) } | Sort-Object Name)
+                $subGroups  = @($props | Where-Object { $_.Name -notlike '_*' -and ($_.Value -isnot [string] -and $null -ne $_.Value -and -not $_.Value.GetType().IsPrimitive) } | Sort-Object Name)
+                $orderedProps = $metaProps + $leafProps + $subGroups
+            }
+
+            [void]$sb.AppendLine("{")
+            for ($i = 0; $i -lt $orderedProps.Count; $i++) {
+                $p = $orderedProps[$i]
+                $isLast = ($i -eq ($orderedProps.Count - 1))
+                $keyEscaped = Escape-JsonString $p.Name
+                [void]$sb.Append($nextIndentStr)
+                [void]$sb.Append($keyEscaped)
+                [void]$sb.Append(": ")
+                Serialize-Node $p.Value ($depth + 1)
+                if (-not $isLast) {
+                    [void]$sb.AppendLine(",")
+                } else {
+                    [void]$sb.AppendLine()
+                }
+            }
+            [void]$sb.Append($indentStr)
+            [void]$sb.Append("}")
+            return
+        }
+
+        if ($node -is [string]) {
+            [void]$sb.Append((Escape-JsonString $node))
+            return
+        }
+
+        if ($node -is [bool]) {
+            [void]$sb.Append($(if ($node) { "true" } else { "false" }))
+            return
+        }
+
+        if ($node.GetType().IsPrimitive) {
+            [void]$sb.Append($node.ToString())
+            return
+        }
+
+        if ($node -is [System.Collections.IEnumerable]) {
+            $items = @($node)
+            if ($items.Count -eq 0) {
+                [void]$sb.Append("[]")
+                return
+            }
+            [void]$sb.AppendLine("[")
+            for ($i = 0; $i -lt $items.Count; $i++) {
+                $isLast = ($i -eq ($items.Count - 1))
+                [void]$sb.Append($nextIndentStr)
+                Serialize-Node $items[$i] ($depth + 1)
+                if (-not $isLast) {
+                    [void]$sb.AppendLine(",")
+                } else {
+                    [void]$sb.AppendLine()
+                }
+            }
+            [void]$sb.Append($indentStr)
+            [void]$sb.Append("]")
+            return
+        }
+
+        [void]$sb.Append((Escape-JsonString ($node.ToString())))
+    }
+
+    Serialize-Node $InputObject 0
+    return $sb.ToString()
+}
+
 function Backup-RemapTable([string]$Path = $script:RMC.RemapTable) {
     if (Test-Path -LiteralPath $Path) {
         $bak = "$Path.bak"
         Copy-Item -LiteralPath $Path -Destination $bak -Force
-        return $bak
+        $ts = (Get-Date).ToString('yyyyMMdd_HHmmss')
+        $bakTs = "$Path.bak.$ts"
+        Copy-Item -LiteralPath $Path -Destination $bakTs -Force
+        return $bakTs
     }
     return $null
 }
@@ -412,11 +895,155 @@ function Set-RemapEntries {
             $added++
         }
     }
-    # write back (ConvertTo-Json reformats; the engine/parser do not care about layout)
-    $text = $json | ConvertTo-Json -Depth 50
+
+    $text = Format-RemapJson $json
+    $null = $text | ConvertFrom-Json
     Write-Text $Path $text
     return [pscustomobject]@{ Added=$added; Updated=$updated }
 }
+
+function Save-RemapOperations {
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory)][object[]]$Operations,
+        [Parameter()][string]$ExpectedVersionHash,
+        [Parameter()][string]$Path = $script:RMC.RemapTable
+    )
+
+    if (-not (Test-Path -LiteralPath $Path)) {
+        throw "Таблица ремапа не найдена по пути: $Path"
+    }
+
+    $currentHash = Get-RemapFileHash $Path
+    if ($ExpectedVersionHash -and $currentHash -and ($ExpectedVersionHash -ne $currentHash)) {
+        throw "Конфликт версий: файл на диске был изменён другим процессом (актуальный хеш $currentHash, ожидался $ExpectedVersionHash). Обновите страницу."
+    }
+
+    $raw = Read-Text $Path
+    $root = $raw | ConvertFrom-Json
+
+    function Find-Leaf($node, [string]$key, $trail = @()) {
+        foreach ($p in $node.PSObject.Properties) {
+            if ($p.Name -eq $key) {
+                return [pscustomobject]@{ Parent = $node; Trail = $trail; Property = $p }
+            }
+            if ($null -ne $p.Value -and $p.Value.PSObject -and $p.Value.PSObject.Properties.Count -gt 0 -and $p.Name -notmatch '^\{[0-9A-Fa-f]{16}\}') {
+                $found = Find-Leaf $p.Value $key ($trail + @($p.Name))
+                if ($found) { return $found }
+            }
+        }
+        return $null
+    }
+
+    function Resolve-GroupNode($rootNode, $groupSpec, [bool]$create = $true) {
+        $parts = if ($groupSpec -is [System.Collections.IEnumerable] -and $groupSpec -isnot [string]) {
+            @($groupSpec)
+        } else {
+            ([string]$groupSpec).Split('/') | Where-Object { -not [string]::IsNullOrWhiteSpace($_) }
+        }
+        $cur = $rootNode
+        foreach ($part in $parts) {
+            $p = $cur.PSObject.Properties[$part]
+            if (-not $p) {
+                if (-not $create) { return $null }
+                $cur | Add-Member -NotePropertyName $part -NotePropertyValue ([pscustomobject]@{}) -Force
+                $p = $cur.PSObject.Properties[$part]
+            }
+            $cur = $p.Value
+        }
+        return $cur
+    }
+
+    $applied = 0
+    foreach ($op in $Operations) {
+        $type = [string]$op.op
+        switch ($type.ToLower()) {
+            'set' {
+                $leaf = Find-Leaf $root ([string]$op.oldRef)
+                if ($leaf) {
+                    $leaf.Property.Value = [string]$op.newRef
+                    $applied++
+                } else {
+                    $target = Resolve-GroupNode $root (if ($op.group) { $op.group } else { '_Unresolved_Pending' }) $true
+                    $target | Add-Member -NotePropertyName ([string]$op.oldRef) -NotePropertyValue ([string]$op.newRef) -Force
+                    $applied++
+                }
+            }
+            'add' {
+                $grpName = if ($op.group) { $op.group } else { '_Unresolved_Pending' }
+                $target = Resolve-GroupNode $root $grpName $true
+                $target | Add-Member -NotePropertyName ([string]$op.oldRef) -NotePropertyValue ([string]$op.newRef) -Force
+                $applied++
+            }
+            'delete' {
+                $leaf = Find-Leaf $root ([string]$op.oldRef)
+                if ($leaf) {
+                    $leaf.Parent.PSObject.Properties.Remove([string]$op.oldRef)
+                    $applied++
+                }
+            }
+            'move' {
+                $leaf = Find-Leaf $root ([string]$op.oldRef)
+                if ($leaf) {
+                    $val = $leaf.Property.Value
+                    $leaf.Parent.PSObject.Properties.Remove([string]$op.oldRef)
+                    $target = Resolve-GroupNode $root ([string]$op.targetGroup) $true
+                    $target | Add-Member -NotePropertyName ([string]$op.oldRef) -NotePropertyValue $val -Force
+                    $applied++
+                }
+            }
+            'rename' {
+                $leaf = Find-Leaf $root ([string]$op.oldRef)
+                if ($leaf) {
+                    $val = if ($op.newRef) { [string]$op.newRef } else { $leaf.Property.Value }
+                    $leaf.Parent.PSObject.Properties.Remove([string]$op.oldRef)
+                    $leaf.Parent | Add-Member -NotePropertyName ([string]$op.newOldRef) -NotePropertyValue $val -Force
+                    $applied++
+                }
+            }
+            'meta' {
+                if (-not $root._meta) {
+                    $root | Add-Member -NotePropertyName '_meta' -NotePropertyValue ([pscustomobject]@{}) -Force
+                }
+                if ($null -ne $op.description) {
+                    if ($root._meta.PSObject.Properties['description']) { $root._meta.description = [string]$op.description }
+                    else { $root._meta | Add-Member -NotePropertyName 'description' -NotePropertyValue ([string]$op.description) -Force }
+                }
+                if ($null -ne $op.status) {
+                    if ($root._meta.PSObject.Properties['status']) { $root._meta.status = [string]$op.status }
+                    else { $root._meta | Add-Member -NotePropertyName 'status' -NotePropertyValue ([string]$op.status) -Force }
+                }
+                $applied++
+            }
+            'note' {
+                $grp = Resolve-GroupNode $root ([string]$op.group) $true
+                if ([string]::IsNullOrWhiteSpace([string]$op.note)) {
+                    if ($grp.PSObject.Properties['_note']) { $grp.PSObject.Properties.Remove('_note') }
+                } else {
+                    if ($grp.PSObject.Properties['_note']) { $grp._note = [string]$op.note }
+                    else { $grp | Add-Member -NotePropertyName '_note' -NotePropertyValue ([string]$op.note) -Force }
+                }
+                $applied++
+            }
+            default {
+                Write-Warning "Неизвестная операция: $type"
+            }
+        }
+    }
+
+    $formatted = Format-RemapJson $root
+    $null = $formatted | ConvertFrom-Json
+    $bak = Backup-RemapTable $Path
+    Write-Text $Path $formatted
+
+    return [pscustomobject]@{
+        ok         = $true
+        applied    = $applied
+        newHash    = (Get-RemapFileHash $Path)
+        backupFile = $bak
+    }
+}
+
 
 # ------------------------------------------------------------------ scan (no copy)
 function Scan-Mission {
