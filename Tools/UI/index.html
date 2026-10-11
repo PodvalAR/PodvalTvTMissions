@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Восстановление миссий</title>
+<style>
+  :root{
+    --bg:#0f1216; --panel:#181c22; --panel2:#20252d; --panel3:#272d37;
+    --line:#2e353f; --line2:#3c4553;
+    --fg:#e8ecf2; --mut:#96a1b0; --mut2:#6f7a89;
+    --green:#4ec98a; --greenbg:rgba(78,201,138,.12);
+    --blue:#5aa9f0; --bluebg:rgba(90,169,240,.12);
+    --red:#f0736f; --redbg:rgba(240,115,111,.13);
+    --yellow:#e0b95a; --yellowbg:rgba(224,185,90,.12);
+    --gray:#8b96a5; --graybg:rgba(139,150,165,.1);
+    --accent:#4c8dff;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%}
+  body{
+    background:var(--bg); color:var(--fg);
+    font:14px/1.5 -apple-system,"Segoe UI",Roboto,system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  code,.mono{font-family:"Cascadia Mono",Consolas,"SF Mono",Menlo,monospace}
+
+  /* ---------- шапка ---------- */
+  header{
+    display:flex;align-items:center;gap:18px;
+    padding:0 20px;height:56px;
+    background:var(--panel);border-bottom:1px solid var(--line);
+    position:sticky;top:0;z-index:20;
+  }
+  header .logo{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:600}
+  header .logo .dot{width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent)}
+  .stats{display:flex;gap:8px;margin-left:auto;align-items:center}
+  .chip{
+    display:inline-flex;align-items:center;gap:6px;
+    padding:5px 11px;border-radius:7px;font-size:12px;
+    background:var(--panel2);border:1px solid var(--line);color:var(--mut);
+    white-space:nowrap;
+  }
+  .chip b{color:var(--fg);font-weight:600}
+  .chip.on{background:var(--greenbg);border-color:rgba(78,201,138,.35);color:var(--green)}
+  .chip.off{background:var(--graybg);color:var(--mut2)}
+
+  /* ---------- каркас ---------- */
+  .layout{display:grid;grid-template-columns:440px 1fr;gap:16px;padding:16px 20px;align-items:start;max-width:1720px;margin:0 auto}
+  @media(max-width:1080px){ .layout{grid-template-columns:1fr} }
+
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px;margin-bottom:14px}
+  .card:last-child{margin-bottom:0}
+  .card h2{
+    margin:0 0 4px;font-size:13px;font-weight:600;color:var(--fg);
+    display:flex;align-items:center;gap:9px;
+  }
+  .card h2 .num{
+    width:20px;height:20px;border-radius:6px;background:var(--accent);color:#fff;
+    font-size:11px;font-weight:700;display:grid;place-items:center;flex:none;
+  }
+  .card h2 .tail{margin-left:auto;font-weight:400;font-size:12px;color:var(--mut2)}
+  .hint{margin:0 0 12px;font-size:12px;color:var(--mut)}
+
+  /* ---------- поля ---------- */
+  .field{margin-bottom:11px}
+  .field>label{display:block;font-size:12px;color:var(--mut);margin-bottom:5px}
+  input[type=text],select{
+    width:100%;background:var(--panel2);border:1px solid var(--line2);color:var(--fg);
+    border-radius:7px;padding:9px 11px;font-size:13px;outline:none;
+  }
+  input[type=text]:focus,select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(76,141,255,.16)}
+  select{cursor:pointer}
+  select:disabled{opacity:.5;cursor:not-allowed}
+
+  .btns{display:flex;gap:8px;flex-wrap:wrap}
+  button{
+    background:var(--panel2);border:1px solid var(--line2);color:var(--fg);
+    border-radius:7px;padding:9px 14px;font-size:13px;cursor:pointer;
+    transition:.12s;font-family:inherit;
+  }
+  button:hover:not(:disabled){background:var(--panel3);border-color:#4a5462}
+  button:active:not(:disabled){transform:translateY(1px)}
+  button:disabled{opacity:.45;cursor:not-allowed}
+  button.primary{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}
+  button.primary:hover:not(:disabled){background:#3f7ff0}
+  button.ghost{background:transparent}
+  button.sm{padding:5px 10px;font-size:12px}
+  button.danger{border-color:rgba(240,115,111,.5);color:var(--red)}
+  button.danger:hover:not(:disabled){background:var(--redbg)}
+
+  .check{display:flex;align-items:flex-start;gap:8px;font-size:12.5px;color:var(--mut);cursor:pointer;padding:2px 0}
+  .check input{margin:2px 0 0;accent-color:var(--accent);cursor:pointer;flex:none}
+  .check span b{color:var(--fg);font-weight:500}
+
+  /* ---------- сводка ---------- */
+  .summary{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+  .st{
+    display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:8px;
+    border:1px solid transparent;font-size:12.5px;
+  }
+  .st .n{font-size:16px;font-weight:700;line-height:1}
+  .st .t{color:var(--mut)}
+  .st.resolved{background:var(--greenbg);border-color:rgba(78,201,138,.3)} .st.resolved .n{color:var(--green)}
+  .st.mapped{background:var(--bluebg);border-color:rgba(90,169,240,.3)} .st.mapped .n{color:var(--blue)}
+  .st.broken{background:var(--redbg);border-color:rgba(240,115,111,.35)} .st.broken .n{color:var(--red)}
+  .st.ignore{background:var(--yellowbg);border-color:rgba(224,185,90,.3)} .st.ignore .n{color:var(--yellow)}
+  .st.external{background:var(--graybg);border-color:rgba(139,150,165,.25)} .st.external .n{color:var(--gray)}
+
+  /* ---------- таблица ---------- */
+  .legend{display:flex;flex-wrap:wrap;gap:14px;font-size:11.5px;color:var(--mut2);margin-bottom:10px}
+  .legend b{font-weight:600}
+  .lg-resolved{color:var(--green)} .lg-mapped{color:var(--blue)} .lg-broken{color:var(--red)}
+  .lg-ignore{color:var(--yellow)} .lg-external{color:var(--gray)}
+
+  .tablewrap{max-height:calc(100vh - 340px);overflow:auto;border:1px solid var(--line);border-radius:9px}
+  table{width:100%;border-collapse:collapse}
+  th{
+    position:sticky;top:0;z-index:2;background:var(--panel2);
+    text-align:left;padding:9px 12px;font-size:11px;font-weight:600;color:var(--mut);
+    text-transform:uppercase;letter-spacing:.4px;border-bottom:1px solid var(--line2);
+  }
+  td{padding:9px 12px;border-bottom:1px solid var(--line);font-size:12.5px;vertical-align:top}
+  tr:last-child td{border-bottom:none}
+  tbody tr:hover{background:rgba(255,255,255,.022)}
+  td.path{font-family:"Cascadia Mono",Consolas,monospace;font-size:12px;word-break:break-all;line-height:1.45}
+  td.path .g{display:block;color:var(--mut2);font-size:11px;margin-top:2px}
+  td.cnt{color:var(--mut);text-align:center;width:52px;font-variant-numeric:tabular-nums}
+  td.act{width:104px;text-align:right}
+  .tag{display:inline-block;padding:3px 9px;border-radius:6px;font-size:11px;font-weight:600;white-space:nowrap}
+  .tag.resolved{background:var(--greenbg);color:var(--green)}
+  .tag.mapped{background:var(--bluebg);color:var(--blue)}
+  .tag.broken{background:var(--redbg);color:var(--red)}
+  .tag.ignore{background:var(--yellowbg);color:var(--yellow)}
+  .tag.external{background:var(--graybg);color:var(--gray)}
+  .done{color:var(--green);font-size:12px}
+
+  /* ---------- кандидаты ---------- */
+  tr.cand>td{background:var(--panel2);padding:0}
+  .candbox{padding:12px 14px;border-bottom:1px solid var(--line)}
+  .candbox .head{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+  .candbox .head .t{font-size:12px;color:var(--mut)}
+  .cand-row{
+    display:flex;align-items:center;gap:10px;padding:8px 10px;
+    border:1px solid var(--line);border-radius:7px;margin-bottom:6px;background:var(--panel);
+  }
+  .cand-row.pick{border-color:var(--green);background:var(--greenbg)}
+  .cand-row .rank{
+    width:20px;height:20px;border-radius:5px;background:var(--panel3);color:var(--mut);
+    font-size:11px;font-weight:700;display:grid;place-items:center;flex:none;
+  }
+  .cand-row .p{flex:1;font-family:"Cascadia Mono",Consolas,monospace;font-size:11.5px;word-break:break-all;line-height:1.4}
+  .cand-row .sc{font-size:11px;color:var(--mut2);white-space:nowrap;font-variant-numeric:tabular-nums}
+  .cand-row .lvl{
+    font-size:10.5px;padding:1px 6px;border-radius:4px;white-space:nowrap;flex:none;
+    border:1px solid var(--line);background:var(--panel3);color:var(--mut);
+  }
+  .cand-row .warn{
+    font-size:10.5px;padding:1px 6px;border-radius:4px;white-space:nowrap;flex:none;
+    border:1px solid #6b3a2a;background:rgba(220,80,50,.14);color:#e08a5f;
+  }
+
+  .empty{padding:26px;text-align:center;color:var(--mut2);font-size:13px}
+  .empty .big{font-size:26px;display:block;margin-bottom:8px;opacity:.55}
+
+  /* ---------- лог ---------- */
+  #log{
+    font-family:"Cascadia Mono",Consolas,monospace;font-size:11.5px;line-height:1.65;
+    background:#0b0e12;border:1px solid var(--line);border-radius:8px;padding:11px 13px;
+    max-height:170px;overflow:auto;white-space:pre-wrap;word-break:break-word;
+  }
+  .lg-ok{color:var(--green)} .lg-warn{color:var(--yellow)} .lg-err{color:var(--red)} .lg-dim{color:var(--mut2)}
+  .spin{opacity:.55;pointer-events:none}
+  details>summary{color:var(--fg)}
+  details[open]>summary{margin-bottom:8px}
+  #chatBox .u{color:var(--accent);font-weight:600}
+  #chatBox .a{color:var(--fg);white-space:pre-wrap}
+  #chatBox .q{margin-bottom:9px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo"><span class="dot"></span>Восстановление миссий</div>
+  <div class="stats">
+    <span class="chip">префабов в моде: <b id="mMod">…</b></span>
+    <span class="chip" id="mAi">ИИ: …</span>
+    <button class="sm ghost" id="bReindex" title="Пересканировать префабы мода">Пересканировать мод</button>
+    <button class="sm ghost" id="bHelp" title="Показать справку">Справка</button>
+    <button class="sm danger" id="bStop" title="Остановить сервер">Остановить сервер</button>
+  </div>
+</header>
+
+<div class="layout">
+
+  <!-- ================= ЛЕВАЯ КОЛОНКА ================= -->
+  <div>
+    <div class="card">
+      <h2><span class="num">1</span>Найти миссию</h2>
+      <p class="hint">Укажите папку со старыми миссиями — найдём их и покажем в списке.</p>
+      <div class="field">
+        <label for="srcRoot">Папка с миссиями</label>
+        <input type="text" id="srcRoot" spellcheck="false" />
+      </div>
+      <div class="btns"><button id="bList" class="primary">Найти миссии</button></div>
+      <div class="field" style="margin-top:12px">
+        <label for="missionSel">Миссия</label>
+        <select id="missionSel" disabled><option value="">Сначала нажмите «Найти миссии»</option></select>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">2</span>Куда сохранять</h2>
+      <p class="hint">Готовая миссия будет скопирована сюда с исправленными ссылками.</p>
+      <div class="field">
+        <label for="destDir">Папка назначения</label>
+        <input type="text" id="destDir" spellcheck="false" />
+      </div>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">3</span>Проверить</h2>
+      <p class="hint">Сканируем миссию и ищем префабы, которых больше нет в моде.</p>
+      <label class="check" style="margin-bottom:11px">
+        <input type="checkbox" id="writeStubs" checked />
+        <span><b>Записывать заглушки</b><br>Добавлять ненайденные ссылки в таблицу замен с пустым значением, чтобы они не терялись.</span>
+      </label>
+      <div class="btns">
+        <button id="bScan" class="primary" disabled>Проверить миссию</button>
+        <button id="bRestore" class="danger" disabled>Скопировать и исправить</button>
+      </div>
+      <p class="hint" style="margin:11px 0 0">
+        «Скопировать и исправить» — это финальное действие: копирует миссию и подставляет все готовые замены.
+      </p>
+    </div>
+  </div>
+
+  <!-- ================= ПРАВАЯ КОЛОНКА ================= -->
+  <div>
+    <div class="card" id="helpCard" style="display:none;border-color:var(--accent)">
+      <h2><span class="num">?</span>Справка<span class="tail"><button class="sm ghost" id="bHelpClose">Свернуть</button></span></h2>
+
+      <details open style="margin-bottom:10px">
+        <summary style="cursor:pointer;font-weight:600;font-size:13px;margin-bottom:6px">Что вообще делает этот инструмент</summary>
+        <p class="hint" style="margin:0">
+          Старые миссии (из эпохи мода DRG) ссылаются на префабы, которых больше нет в моде — персонажи, группы, техника с
+          прежними именами. Движок Arma Reforger находит префаб по внутреннему GUID, поэтому простое «переименование» папки
+          проблему не решает. Инструмент копирует миссию и подставляет на место старой ссылки — существующую, того же персонажа/группу.
+        </p>
+      </details>
+
+      <details style="margin-bottom:10px">
+        <summary style="cursor:pointer;font-weight:600;font-size:13px;margin-bottom:6px">Статусы ссылок (легенда)</summary>
+        <div style="font-size:12.5px;line-height:1.7;color:var(--mut)">
+          <div style="margin-bottom:6px"><span class="tag resolved">есть в моде</span> — префаб найден в индексе мода по его GUID. Ссылка рабочая, <b style="color:var(--fg)">ничего делать не нужно</b>.</div>
+          <div style="margin-bottom:6px"><span class="tag broken">сломано</span> — префаба нет в моде и нет готовой замены. <b style="color:var(--fg)">Нужно подобрать замену</b> — это единственный статус, требующий работы.</div>
+          <div style="margin-bottom:6px"><span class="tag mapped">есть замена</span> — для этого префаба в таблице уже прописана замена. Ничего делать не нужно, при копировании подставится автоматически.</div>
+          <div style="margin-bottom:6px"><span class="tag ignore">служебное</span> — это не персонажи/техника, а служебные сущности (таймеры, менеджеры, триггеры). По вашему правилу восстанавливаем только пехоту и технику, поэтому такие ссылки <b style="color:var(--fg)">намеренно не трогаем</b>.</div>
+          <div><span class="tag external">внешнее</span> — ссылка ведёт на объект из базы игры или другого мода. Это нормально, оставляем как есть.</div>
+        </div>
+      </details>
+
+      <details style="margin-bottom:10px">
+        <summary style="cursor:pointer;font-weight:600;font-size:13px;margin-bottom:6px">Порядок работы (4 шага)</summary>
+        <p class="hint" style="margin:0 0 6px"><b style="color:var(--fg)">1. Найти миссию</b> — укажите папку со старыми миссиями, нажмите «Найти миссии», выберите нужную из списка.</p>
+        <p class="hint" style="margin:0 0 6px"><b style="color:var(--fg)">2. Проверить</b> — сканируем миссию, показываем, что сломано.</p>
+        <p class="hint" style="margin:0 0 6px"><b style="color:var(--fg)">3. Подобрать замены</b> — у каждой «сломанной» строки кнопка «Подобрать»: покажет похожие префабы из мода (с оценкой совпадения). Выберите лучший → «Назначить». Для спорных случаев есть «Спросить ИИ».</p>
+        <p class="hint" style="margin:0"><b style="color:var(--fg)">4. Скопировать и исправить</b> — финальная кнопка: копирует миссию в папку назначения и подставляет все готовые замены.</p>
+      </details>
+
+      <details style="margin-bottom:10px">
+        <summary style="cursor:pointer;font-weight:600;font-size:13px;margin-bottom:6px">Что значит «оценка совпадения» у кандидатов</summary>
+        <p class="hint" style="margin:0">
+          Инструмент сравнивает имя старого префаба с именами существующих и даёт оценку: совпадает роль (MG, SR, SL…),
+          фракция и подсистема. Чем выше процент — тем ближе кандидат. Но <b style="color:var(--fg)">это подсказка, а не истина</b>:
+          например старый «Sniper» может соответствовать и «Sharpshooter», и обычному «SR» — выбирайте по смыслу роли.
+        </p>
+      </details>
+
+      <details style="margin-bottom:10px">
+        <summary style="cursor:pointer;font-weight:600;font-size:13px;margin-bottom:6px">Куда всё записывается и можно ли откатить</summary>
+        <p class="hint" style="margin:0">
+          Все замены хранятся в одной таблице <code>Tools/remap_table.json</code> — она общая для всех миссий, поэтому одну
+          настроенную замену переиспользуют другие миссии. Перед каждой записью автоматически создаётся резервная копия
+          <code>remap_table.json.bak</code>. Копирование миссии можно повторять сколько угодно — оно каждый раз перезаписывает
+          папку назначения из исходника, так что всегда можно «начать заново».
+        </p>
+      </details>
+
+      <details>
+        <summary style="cursor:pointer;font-weight:600;font-size:13px;margin-bottom:6px">Кнопка «Спросить ИИ»</summary>
+        <p class="hint" style="margin:0">
+          ИИ получает список найденных кандидатов и выбирает лучший. Он <b style="color:var(--fg)">не может выдумать новый GUID</b> —
+          ответ ограничен уже найденными вариантами. Это подсказка: всегда бегло проверяйте глазами, что выбрано осмысленно.
+        </p>
+      </details>
+    </div>
+
+    <div class="card" id="resCard" style="display:none">
+      <h2>Результат проверки<span class="tail" id="resTitle"></span></h2>
+
+      <div class="summary" id="summary"></div>
+
+      <div class="legend">
+        <span><b class="lg-resolved">есть в моде</b> — префаб найден, ничего делать не надо</span>
+        <span><b class="lg-broken">сломано</b> — префаба нет, нужна замена</span>
+        <span><b class="lg-mapped">есть замена</b> — подмена уже настроена</span>
+        <span><b class="lg-ignore">не трогаем</b> — служебное (таймеры, менеджеры)</span>
+        <span><b class="lg-external">внешнее</b> — из базы игры или другого мода</span>
+      </div>
+
+      <label class="check" style="margin-bottom:10px">
+        <input type="checkbox" id="showAll" />
+        <span>Показывать все ссылки, а не только сломанные</span>
+      </label>
+
+      <div class="tablewrap">
+        <table>
+          <thead>
+            <tr><th style="width:120px">Статус</th><th>Ссылка на префаб</th><th style="width:52px">Кол-во</th><th style="width:104px"></th></tr>
+          </thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Журнал<span class="tail"><button class="sm ghost" id="bClear">Очистить</button></span></h2>
+      <div id="log"></div>
+    </div>
+
+    <div class="card" id="chatCard" style="display:none">
+      <h2>Спросить ИИ<span class="tail"><button class="sm ghost" id="bChatToggle">Свернуть</button></span></h2>
+      <p class="hint" style="margin-bottom:9px">Просто объяснить что-то про инструмент, статусы или подбор замен.</p>
+      <div id="chatBox" style="max-height:230px;overflow:auto;background:#0b0e12;border:1px solid var(--line);border-radius:8px;padding:11px 13px;margin-bottom:9px;font-size:12.5px;line-height:1.6;display:none"></div>
+      <div style="display:flex;gap:8px">
+        <input type="text" id="chatInput" placeholder="Например: почему ссылка считается служебной?" />
+        <button id="bChatSend" class="primary">Спросить</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+
+const api = async (path, opts={}) => {
+  const r = await fetch(path, {headers:{'content-type':'application/json'}, ...opts});
+  if(!r.ok) throw new Error((await r.text()).slice(0,300) || ('HTTP '+r.status));
+  return r.json();
+};
+const esc = s => String(s).replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+
+let CFG = {}, lastScan = null, busy = false;
+
+function log(msg, kind){
+  const el = $('#log');
+  const t = new Date().toLocaleTimeString('ru-RU');
+  el.insertAdjacentHTML('beforeend', `<span class="lg-dim">[${t}]</span> ${esc(msg)}\n`);
+  el.scrollTop = el.scrollHeight;
+}
+function setBusy(on){
+  busy = on;
+  const hasMission = !!$('#missionSel').value;
+  $('#bScan').disabled = on || !hasMission;
+  $('#bRestore').disabled = on || !hasMission;
+  $('#bList').disabled = on;
+  document.querySelectorAll('body *').forEach(()=>{});
+  document.body.classList.toggle('spin-busy', on);
+  if(on){ $('#resCard').style.opacity='.6'; } else { $('#resCard').style.opacity='1'; }
+}
+
+const NAMES = {
+  resolved:['есть в моде','resolved'], mapped:['есть замена','mapped'], broken:['сломано','broken'],
+  ignore:['не трогаем','ignore'], external:['внешнее','external']
+};
+
+/* ---------- загрузка ---------- */
+async function boot(){
+  try{
+    CFG = await api('/api/config');
+    $('#mMod').textContent = CFG.modIndexCount;
+    const ai = $('#mAi');
+    if(CFG.aiEnabled){
+      ai.className = 'chip on';
+      ai.innerHTML = 'ИИ-подсказки: <b>вкл</b> · ' + esc(CFG.aiModel);
+    } else {
+      ai.className = 'chip off';
+      ai.innerHTML = 'ИИ-подсказки: <b>выкл</b>';
+      ai.title = 'Задайте переменную окружения JUSTWOKER_API_KEY и перезапустите сервер';
+    }
+    if(CFG.aiEnabled) $('#chatCard').style.display = '';
+    $('#srcRoot').value = CFG.defaultSourceRoot || '';
+    $('#destDir').value = CFG.defaultDestDir || '';
+    log('Готово к работе. Таблица замен: ' + CFG.remapTable, 'dim');
+  }catch(e){ log('Не удалось загрузить настройки: ' + e.message, 'err'); }
+}
+
+/* ---------- список миссий ---------- */
+$('#bList').onclick = async () => {
+  const root = $('#srcRoot').value.trim();
+  if(!root) return log('Укажите папку с миссиями.', 'warn');
+  setBusy(true);
+  try{
+    const list = await api('/api/missions?root=' + encodeURIComponent(root));
+    const sel = $('#missionSel');
+    sel.innerHTML = '';
+    if(!list.length){
+      sel.innerHTML = '<option value="">Миссии не найдены</option>';
+      sel.disabled = true;
+      log('В папке не найдено ни одной миссии: ' + root, 'warn');
+    } else {
+      list.forEach(m => {
+        const o = document.createElement('option');
+        o.value = m.Dir; o.textContent = m.Name;
+        sel.appendChild(o);
+      });
+      sel.disabled = false;
+      log('Найдено миссий: ' + list.length, 'ok');
+    }
+    setBusy(false);
+  }catch(e){ setBusy(false); log('Ошибка: ' + e.message, 'err'); }
+};
+$('#missionSel').onchange = () => setBusy(busy);
+
+/* ---------- сканирование ---------- */
+$('#bScan').onclick = async () => {
+  const dir = $('#missionSel').value;
+  if(!dir) return;
+  setBusy(true);
+  try{
+    const s = await api('/api/scan', {method:'POST', body:JSON.stringify({sourceDir:dir, writeStubs:$('#writeStubs').checked})});
+    render(s);
+    const msg = `Проверка «${s.Mission}»: сломано ${s.Broken}, есть в моде ${s.Resolved}, служебных ${s.Ignore}, внешних ${s.External}`;
+    log(msg, s.Broken ? 'warn' : 'ok');
+    if($('#writeStubs').checked && s.Broken) log(`Заглушки записаны в таблицу замен: ${s.Broken}. Заполните их ниже.`, 'dim');
+  }catch(e){ log('Ошибка проверки: ' + e.message, 'err'); }
+  setBusy(false);
+};
+
+/* ---------- отрисовка ---------- */
+function render(s){
+  lastScan = s;
+  $('#resCard').style.display = '';
+  $('#resTitle').textContent = s.Mission;
+
+  const cells = [
+    ['resolved','Есть в моде', s.Resolved],
+    ['broken','Сломано',      s.Broken],
+    ['mapped','Есть замена',  s.Mapped],
+    ['ignore','Служебные',    s.Ignore],
+    ['external','Внешние',    s.External],
+  ];
+  $('#summary').innerHTML = cells.map(([k,t,n]) =>
+    `<div class="st ${k}"><span class="n">${n}</span><span class="t">${t}</span></div>`).join('');
+
+  drawRows();
+}
+
+function drawRows(){
+  if(!lastScan) return;
+  const all = $('#showAll').checked;
+  const refs = lastScan.Refs.filter(r => all || r.Status === 'broken');
+  const tb = $('#rows');
+
+  if(!refs.length){
+    tb.innerHTML = `<tr><td colspan="4"><div class="empty">
+      <span class="big">✓</span>
+      ${all ? 'В миссии нет ссылок на префабы.' : 'Сломанных ссылок нет — миссия готова к копированию.<br>Включите «показывать все ссылки», чтобы увидеть полный список.'}
+    </div></td></tr>`;
+    return;
+  }
+
+  const order = {broken:0, mapped:1, resolved:2, ignore:3, external:4};
+  refs.sort((a,b) => (order[a.Status]-order[b.Status]) || a.Path.localeCompare(b.Path));
+
+  tb.innerHTML = refs.map(r => {
+    const [label] = NAMES[r.Status] || [r.Status];
+    const act = r.Status === 'broken'
+      ? `<button class="sm" data-sg="${esc(r.Ref)}">Подобрать</button>`
+      : '';
+    return `<tr data-ref="${esc(r.Ref)}">
+      <td><span class="tag ${r.Status}">${label}</span></td>
+      <td class="path">${esc(r.Path)}<span class="g mono">${r.Guid}</span></td>
+      <td class="cnt">${r.Count}</td>
+      <td class="act">${act}</td>
+    </tr>`;
+  }).join('');
+
+  $$('#rows [data-sg]').forEach(b => b.onclick = () => suggest(b.dataset.sg, b.closest('tr')));
+}
+$('#showAll').onchange = drawRows;
+
+/* ---------- подбор кандидатов ---------- */
+async function suggest(ref, tr){
+  const existing = tr.nextElementSibling;
+  if(existing && existing.classList.contains('cand')){ existing.remove(); return; }
+
+  const row = document.createElement('tr');
+  row.className = 'cand';
+  row.innerHTML = '<td colspan="4"><div class="candbox"><div class="t">Ищу похожие префабы…</div></div></td>';
+  tr.after(row);
+
+  const refPath = lastScan.Refs.find(r => r.Ref === ref)?.Path;
+  try{
+    const cands = await api('/api/suggest', {method:'POST', body:JSON.stringify({path: refPath})});
+    renderCands(row.querySelector('.candbox'), ref, refPath, cands, null, tr);
+  }catch(e){
+    row.querySelector('.candbox').innerHTML = `<div class="lg-err">Ошибка: ${esc(e.message)}</div>`;
+  }
+}
+
+function renderCands(box, ref, refPath, cands, bestRef, tr){
+  box.innerHTML = '';
+  const head = document.createElement('div');
+  head.className = 'head';
+  head.innerHTML = `<span class="t">Кандидаты на замену${cands.length?'':' — не найдено'}</span>`;
+  if(CFG.aiEnabled){
+    const b = document.createElement('button');
+    b.className = 'sm'; b.textContent = 'Спросить ИИ';
+    b.onclick = () => aiPick(box, ref, refPath, tr);
+    head.appendChild(b);
+  }
+  box.appendChild(head);
+
+  if(!cands.length){
+    box.insertAdjacentHTML('beforeend',
+      '<div class="t">Подходящих префабов в моде нет. Добавьте замену вручную в Tools/remap_table.json.</div>');
+    return;
+  }
+
+  cands.forEach((c,i) => {
+    const isBest = bestRef && c.Ref === bestRef;
+    const d = document.createElement('div');
+    d.className = 'cand-row' + (isBest ? ' pick' : '');
+    d.innerHTML = `<span class="rank">${i+1}</span>
+      <span class="p">${esc(c.Path)}</span>
+      ${c.ScopeRu ? `<span class="lvl">${esc(c.ScopeRu)}</span>` : ''}
+      ${c.Warn ? `<span class="warn">${esc(c.Warn)}</span>` : ''}
+      <span class="sc">${c.Score} · ${Math.round((c.Confidence||0)*100)}%</span>`;
+    const b = document.createElement('button');
+    b.className = 'sm primary'; b.textContent = 'Назначить';
+    b.onclick = () => assign(ref, c.Ref, c.Path, tr);
+    d.appendChild(b);
+    box.appendChild(d);
+  });
+}
+
+async function aiPick(box, ref, refPath, tr){
+  const t = box.querySelector('.head .t');
+  if(t) t.textContent = 'ИИ выбирает…';
+  box.classList.add('spin');
+  try{
+    const res = await api('/api/ai-suggest', {method:'POST', body:JSON.stringify({ref, path:refPath})});
+    box.classList.remove('spin');
+    if(res.ok){
+      log(`ИИ: ${res.ai.Ref.split('}')[1]} — ${res.ai.Reason}`, 'ok');
+      renderCands(box, ref, refPath, res.candidates, res.ai.Ref, tr);
+    } else {
+      log('ИИ не ответил: ' + res.error, 'warn');
+      renderCands(box, ref, refPath, res.candidates, null, tr);
+    }
+  }catch(e){
+    box.classList.remove('spin');
+    log('Ошибка ИИ: ' + e.message, 'err');
+  }
+}
+
+async function assign(ref, newRef, path, tr){
+  try{
+    await api('/api/map', {method:'POST', body:JSON.stringify({oldRef:ref, newRef})});
+    log('Замена назначена → ' + path, 'ok');
+    const tr2 = tr || document.querySelector(`tr[data-ref="${CSS.escape(ref)}"]`);
+    const cand = tr2?.nextElementSibling;
+    if(cand && cand.classList.contains('cand')) cand.remove();
+    const cell = tr2?.querySelector('td:first-child');
+    if(cell) cell.innerHTML = '<span class="tag mapped">есть замена</span>';
+    const act = tr2?.querySelector('td.act');
+    if(act) act.innerHTML = '<span class="done">готово</span>';
+    if(lastScan){
+      const r = lastScan.Refs.find(x => x.Ref === ref);
+      if(r) r.Status = 'mapped';
+      // recompute every counter from Refs so the summary stays consistent
+      const cnt = st => lastScan.Refs.filter(x => x.Status === st).length;
+      lastScan.Broken    = cnt('broken');
+      lastScan.Resolved  = cnt('resolved');
+      lastScan.Mapped    = cnt('mapped');
+      lastScan.Ignore    = cnt('ignore');
+      lastScan.External  = cnt('external');
+      render(lastScan);
+    }
+  }catch(e){ log('Не удалось записать замену: ' + e.message, 'err'); }
+}
+
+/* ---------- восстановление ---------- */
+$('#bRestore').onclick = async () => {
+  const dir = $('#missionSel').value;
+  if(!dir) return;
+  if(!confirm('Скопировать миссию в папку назначения и применить все готовые замены?\n\nСуществующая копия будет перезаписана.')) return;
+  setBusy(true);
+  try{
+    const res = await api('/api/restore', {method:'POST', body:JSON.stringify({
+      sourceDir:dir, destDir:$('#destDir').value.trim(), force:true
+    })});
+    const n = Object.keys(res.Replacements || {}).length;
+    log('Скопировано: ' + res.DestMission, 'ok');
+    log(`Применено замен: ${n} · в моде ${res.Resolved} · служебных ${res.Ignore} · внешних ${res.External}`, 'dim');
+    if(res.BrokenCount){
+      log('Не удалось подставить: ' + res.BrokenCount + ' — их нужно назначить вручную.', 'warn');
+      res.Broken.forEach(b => log('   ' + b.Ref, 'err'));
+    } else {
+      log('Готово — все ссылки разрешаются.', 'ok');
+    }
+  }catch(e){ log('Ошибка копирования: ' + e.message, 'err'); }
+  setBusy(false);
+};
+
+$('#bReindex').onclick = async () => {
+  setBusy(true);
+  try{
+    const r = await api('/api/reindex', {method:'POST', body:'{}'});
+    $('#mMod').textContent = r.count;
+    log('Индекс мода пересобран: ' + r.count + ' префабов', 'ok');
+  }catch(e){ log('Ошибка: ' + e.message, 'err'); }
+  setBusy(false);
+};
+$('#bClear').onclick = () => $('#log').innerHTML = '';
+
+/* ---------- справка ---------- */
+$('#bHelp').onclick     = () => { $('#helpCard').style.display = $('#helpCard').style.display === 'none' ? '' : 'none'; };
+$('#bHelpClose').onclick = () => $('#helpCard').style.display = 'none';
+
+/* ---------- остановка сервера ---------- */
+$('#bStop').onclick = async () => {
+  if(!confirm('Остановить сервер?\n\nСтраница перестанет работать. Чтобы открыть снова — запустите Start-RestoreUI.bat.')) return;
+  $('#bStop').disabled = true; $('#bStop').textContent = 'Останавливаю…';
+  try{
+    await fetch('/api/shutdown', {method:'POST', headers:{'content-type':'application/json'}, body:'{}'});
+  }catch(e){ /* сервер уже мог закрыть соединение — это ожидаемо */ }
+  setTimeout(()=>{
+    document.body.innerHTML =
+      '<div style="display:grid;place-items:center;height:100vh;text-align:center;color:#96a1b0;font:14px/1.6 \'Segoe UI\',system-ui,sans-serif;padding:24px">' +
+      '<div><div style="font-size:40px;margin-bottom:12px;opacity:.6">■</div>' +
+      '<div style="color:#e8ecf2;font-size:16px;font-weight:600;margin-bottom:6px">Сервер остановлен</div>' +
+      'Чтобы запустить снова — откройте Tools\\UI\\Start-RestoreUI.bat</div></div>';
+  }, 600);
+};
+
+/* ---------- ИИ-чат ---------- */
+function chatAppend(who, text){
+  const box = $('#chatBox');
+  box.style.display = 'block';
+  const cls = who === 'u' ? 'u' : 'a';
+  box.insertAdjacentHTML('beforeend', `<div class="q"><span class="${cls}">${who==='u'?'Вы':'ИИ'}:</span> <span class="a">${esc(text)}</span></div>`);
+  box.scrollTop = box.scrollHeight;
+}
+async function sendChat(){
+  const inp = $('#chatInput');
+  const msg = inp.value.trim();
+  if(!msg) return;
+  chatAppend('u', msg); inp.value = ''; $('#bChatSend').disabled = true;
+  chatAppend('a', 'думаю…');
+  const box = $('#chatBox');
+  const last = box.lastElementChild; last.classList.add('spin');
+  try{
+    const r = await api('/api/chat', {method:'POST', body:JSON.stringify({message:msg})});
+    last.classList.remove('spin');
+    if(r.ok){ last.innerHTML = `<span class="a">${esc(r.reply)}</span>`; }
+    else   { last.innerHTML = `<span class="lg-err">Ошибка: ${esc(r.error)}</span>`; }
+  }catch(e){
+    last.classList.remove('spin');
+    last.innerHTML = `<span class="lg-err">Ошибка: ${esc(e.message)}</span>`;
+  }
+  $('#bChatSend').disabled = false;
+  box.scrollTop = box.scrollHeight;
+}
+$('#bChatSend').onclick = sendChat;
+$('#chatInput').addEventListener('keydown', e => { if(e.key === 'Enter'){ e.preventDefault(); sendChat(); } });
+$('#bChatToggle').onclick = () => {
+  const b = $('#chatBox'), open = b.style.display === 'none';
+  b.style.display = open ? 'block' : 'none';
+  $('#bChatToggle').textContent = open ? 'Свернуть' : 'Развернуть';
+};
+
+boot();
+</script>
+</body>
+</html>
