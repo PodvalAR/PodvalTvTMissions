@@ -850,7 +850,7 @@ function Rank-Candidates {
         # Confidence is not part of the original object -> must be added explicitly
         $r | Add-Member -NotePropertyName Confidence -NotePropertyValue ($conf.ToString('0.##', $inv)) -Force
     }
-    return ,$topN
+    return $topN
 }
 
 # ------------------------------------------------------------------ remap table writes

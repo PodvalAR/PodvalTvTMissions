@@ -576,6 +576,10 @@ async function aiPick(box, ref, refPath, tr){
 }
 
 async function assign(ref, newRef, path, tr){
+  if (typeof newRef !== 'string' || !/^\{[0-9a-f]{16}\}.+\.et$/i.test(newRef)) {
+    log('Ранкер вернул ссылку в неверном формате; замена не записана.', 'err');
+    return;
+  }
   try{
     await api('/api/map', {method:'POST', body:JSON.stringify({oldRef:ref, newRef})});
     log('Замена назначена → ' + path, 'ok');

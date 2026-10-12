@@ -217,6 +217,10 @@ function Handle-Api($ctx) {
         }
         'POST /api/map' {
             $b = Read-Body $ctx
+            if ([string]$b.oldRef -notmatch '^\{[0-9A-Fa-f]{16}\}.+\.et$' -or [string]$b.newRef -notmatch '^\{[0-9A-Fa-f]{16}\}.+\.et$') {
+                Send-Json $ctx ([pscustomobject]@{ ok=$false; error='Ссылки на исходный и целевой префабы должны быть указаны полностью.' }) 400
+                return
+            }
             $w = Set-RemapEntries -Entries @{ "$($b.oldRef)" = "$($b.newRef)" } -Path $cfg.RemapTable
             Send-Json $ctx ([pscustomobject]@{ ok=$true; added=$w.Added; updated=$w.Updated })
             return
