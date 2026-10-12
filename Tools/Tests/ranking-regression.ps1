@@ -86,6 +86,20 @@ Assert ($wrongRole.Warnings.Count -gt 0 -and -not [string]::IsNullOrWhiteSpace($
 $unknown = Find-Candidate $ranked 'Unclassified.et'
 Assert ($unknown.Compatibility -eq 'unknown' -and $unknown.MatchLevel -eq 'low') 'Unknown roles remain candidates with explicit uncertainty.'
 Assert ($ranked[0].MatchLevel -in @('high','medium')) 'Known compatible roles can earn useful correspondence levels.'
+
+# A broken role with no suitable counterpart still has to produce something, so the ranker
+# offers the plain rifleman as a last resort. That reserve must be advertised as such:
+# neither the UI label nor the AI may read it as a real correspondence. The stem is built
+# from code points so the assertion survives any source-file encoding.
+$reserveWord = -join ([char]0x0440, [char]0x0435, [char]0x0437, [char]0x0435, [char]0x0440, [char]0x0432)
+$noMatchChar = @(Rank-Candidates -BrokenPath 'Prefabs/Characters/Factions/BLUFOR/RHS_USAF/drg_CompletelyOdd_Thing.et' -ModIndex (New-Index @($riflePath,'Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Char_RHS_USAF_Sniper.et')) -Top 20)
+$reserveMan = Find-Candidate $noMatchChar 'Char_RHS_USAF_Rifleman.et'
+$otherMan = Find-Candidate $noMatchChar 'Char_RHS_USAF_Sniper.et'
+Assert ($reserveMan.FallbackType -eq 'rifleman') 'An unmatched character role falls back to the plain rifleman.'
+Assert ($reserveMan.Compatibility -eq 'unknown' -and $reserveMan.MatchLevel -eq 'low') 'A reserve character stays unknown and low confidence.'
+Assert ($reserveMan.MatchLabel -match $reserveWord) 'A reserve character gets a user-facing reserve label.'
+Assert (@($reserveMan.Warnings | Where-Object { $_ -match $reserveWord }).Count -gt 0) 'A reserve character explains why the fallback was used.'
+Assert ([string]::IsNullOrEmpty([string]$otherMan.FallbackType)) 'Only the rifleman is a reserve; another role offered for an unknown role is not.'
 foreach ($candidate in $ranked) {
     Assert ($candidate.Score -isnot [string] -and $candidate.Score -is [ValueType]) 'Scores are JSON-compatible numbers rather than formatted strings.'
     Assert ($candidate.Reasons -is [array] -and $candidate.Warnings -is [array]) 'Explanation fields remain arrays at every cardinality.'
@@ -109,8 +123,20 @@ Assert ($sapperRanked[0].Path.EndsWith('Sapper.et') -and $sapperRanked[0].Compat
 $groupRanked = @(Rank-Candidates -BrokenPath 'Prefabs/Groups/BLUFOR/RHS_USAF/Group_RHS_USAF_FireTeam.et' -ModIndex (New-Index @('Prefabs/Groups/BLUFOR/RHS_USAF/Group_RHS_USAF_RifleSquad_Base.et','Prefabs/Groups/BLUFOR/RHS_USAF/Group_RHS_USAF_PL_Base.et')) -Top 20)
 Assert ($groupRanked.Count -eq 2) 'Scale mismatches remain explicit manual alternatives.'
 foreach ($candidate in $groupRanked) {
-    Assert ($candidate.Compatibility -eq 'approximate' -and $candidate.MatchLevel -eq 'low' -and $candidate.Warnings.Count -gt 0) 'Team to squad or platoon is an approximate low correspondence with warning.'
+    Assert ($candidate.MatchLevel -eq 'low' -and $candidate.Warnings.Count -gt 0) 'Team to squad or platoon is a low correspondence with an explicit warning.'
 }
+
+# The plain rifle squad is the reserve default for a fire team. It is reported as
+# "unknown" rather than "approximate" on purpose: the scale still does not match and the
+# operator has to confirm the substitution. The platoon keeps "approximate" because it is
+# a worse, purely scale-driven manual choice rather than the default.
+$reserveGroup = Find-Candidate $groupRanked 'RifleSquad_Base.et'
+$platoon = Find-Candidate $groupRanked 'PL_Base.et'
+Assert ($reserveGroup.FallbackType -eq 'rifle_group') 'The plain rifle squad is flagged as the reserve group.'
+Assert ($reserveGroup.Compatibility -eq 'unknown') 'A reserve group is unknown, never presented as an approximate match.'
+Assert ($reserveGroup.MatchLabel -match $reserveWord) 'A reserve group gets a user-facing reserve label.'
+Assert (@($reserveGroup.Warnings | Where-Object { $_ -match $reserveWord }).Count -gt 0) 'A reserve group explains why the fallback was used.'
+Assert ([string]::IsNullOrEmpty([string]$platoon.FallbackType) -and $platoon.Compatibility -eq 'approximate') 'A platoon stays an approximate scale mismatch rather than a reserve.'
 $unknownGroupRanked = @(Rank-Candidates -BrokenPath 'Prefabs/Groups/BLUFOR/RHS_USAF/Group_RHS_USAF_CustomSquad_Base.et' -ModIndex (New-Index @('Prefabs/Groups/BLUFOR/RHS_USAF/Group_RHS_USAF_OtherSquad_Base.et')))
 Assert ($unknownGroupRanked[0].Compatibility -eq 'unknown' -and $unknownGroupRanked[0].MatchLevel -eq 'low' -and $unknownGroupRanked[0].Warnings.Count -gt 0) 'Scale alone cannot fabricate confidence in groups with unknown roles.'
 $missingGroupRole = @(Rank-Candidates -BrokenPath 'Prefabs/Groups/BLUFOR/RHS_USAF/Group_RHS_USAF_RifleSquad_Base.et' -ModIndex (New-Index @('Prefabs/Groups/BLUFOR/RHS_USAF/Group_RHS_USAF_OtherSquad_Base.et')))
