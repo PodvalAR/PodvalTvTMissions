@@ -170,9 +170,10 @@ function Handle-Api($ctx) {
                 Send-Json $ctx ([pscustomobject]@{ error = 'Не передана ссылка на префаб (пустое поле path).' }) 400
                 return
             }
-            $idx = Build-ModIndex
-            $top = if ($b.top) { [int]$b.top } else { 6 }
-            Send-Json $ctx (@(Rank-Candidates -BrokenPath $p -ModIndex $idx -Top $top))
+            $idx = Get-NewCatalogModIndex
+            $features = Get-NewCatalogCandidateFeatures
+            $top = if ($b.top) { [Math]::Min(100,[Math]::Max(1,[int]$b.top)) } else { 6 }
+            Send-Json $ctx (@(Rank-Candidates -BrokenPath $p -ModIndex $idx -CandidateFeatures $features -Top $top))
             return
         }
         'POST /api/shutdown' {
@@ -190,10 +191,17 @@ function Handle-Api($ctx) {
                 Send-Json $ctx ([pscustomobject]@{ ok=$false; error='Не передана ссылка на префаб.'; candidates=@() }) 200
                 return
             }
-            $idx = Build-ModIndex
-            $cands = @(Rank-Candidates -BrokenPath $b.path -ModIndex $idx -Top 8)
+            $idx = Get-NewCatalogModIndex
+            $features = Get-NewCatalogCandidateFeatures
+            $ranked = @(Rank-Candidates -BrokenPath $p -ModIndex $idx -CandidateFeatures $features -Top ([Math]::Max(1,$idx.Count)))
+            $pool = @(Get-AICandidatePool -Candidates $ranked -Top 20 -PerFamily 2)
+            # Include the normal shortlist and every AI option in the response so
+            # the user can inspect the selected candidate and manual alternatives.
+            $visibleRefs = @(@($ranked | Select-Object -First 8) + @($pool) | ForEach-Object { $_.Ref })
+            $cands = @($ranked | Where-Object { $visibleRefs -contains $_.Ref })
             try {
-                $ai = Invoke-AISuggest -BrokenRef $b.ref -Candidates $cands -ApiKeyEnv $cfg.ApiKeyEnv -BaseUrl $cfg.AiBaseUrl -Model $cfg.AiModel
+                $brokenRef = if ($b.ref) { [string]$b.ref } else { $p }
+                $ai = Invoke-AISuggest -BrokenRef $brokenRef -Candidates $pool -ApiKeyEnv $cfg.ApiKeyEnv -BaseUrl $cfg.AiBaseUrl -Model $cfg.AiModel
                 Send-Json $ctx ([pscustomobject]@{ ok=$true; ai=$ai; candidates=$cands })
             } catch {
                 Send-Json $ctx ([pscustomobject]@{ ok=$false; error=$_.Exception.Message; candidates=$cands }) 200
