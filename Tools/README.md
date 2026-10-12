@@ -98,6 +98,19 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\Tests\Run-Regression.ps1
 
 Тесты используют временные синтетические данные: рабочие `catalog_new_prefabs.json`, `catalog_old_prefabs.json` и `remap_table.json` не читаются и не изменяются. Тесты на Node.js пропускаются с предупреждением, если `node` не найден в `PATH`.
 
+### Ручная проверка первого запуска
+
+Отдельный скрипт проверяет то, что автотесты не покрывают: инструмент на машине без настроек. Он копирует `Tools` во временный каталог, запускает сервер и прогоняет HTTP-сценарии — от первого запуска без конфига до подбора свободного порта.
+
+```powershell
+cd .\Tools
+powershell -NoProfile -ExecutionPolicy Bypass -File .\Tests\firstrun-verification.ps1
+```
+
+Корень мода префабов ищется рядом (`PodvalTvTPrefabs\PodvalTvTPrefabs`), аддон — по файлу `.gproj`; при неудаче укажите `-PrefabsModRoot` и `-AddonRoot`. Скрипту нужен свободный диапазон портов и около минуты времени, в `Run-Regression.ps1` он **не** входит.
+
+Запускайте его вручную, прежде чем отдать инструмент другому оператору.
+
 ## Состав
 
 | Файл | Назначение |
