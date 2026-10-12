@@ -477,6 +477,14 @@ function Build-NewPrefabsCatalog {
             continue
         }
 
+        if ($relPath -like 'Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USAF/drg_Role_RHS_USAF*') {
+            continue
+        }
+
+        if ($faction -in @('Vests', 'HeadGear', 'Uniforms', 'HandWear', 'Headwear', 'Eyewear', 'Helmet', 'Vest')) {
+            continue
+        }
+
         $items.Add([pscustomobject]@{
             guid        = $guid
             path        = $relPath
