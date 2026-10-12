@@ -1,4 +1,4 @@
-#requires -Version 5.1
+﻿#requires -Version 5.1
 param([string]$ToolsRoot = (Split-Path -Parent $PSScriptRoot))
 
 $ErrorActionPreference = 'Stop'
@@ -27,10 +27,12 @@ $cfg = @{
 $script:ReadBodyCalls = 0
 $script:OperationCalls = 0
 $script:FixtureItems = @()
+$script:FixtureIndex = @{ '0000000000000001'='Prefabs/Test.et' }
+$script:PoolOverride = $null
 $script:RequestBody = [pscustomobject]@{
     path='Prefabs/Test.et'; ref='{0000000000000001}Prefabs/Test.et'; top=6
     sourceDir='synthetic-source'; destDir='synthetic-destination'; writeStubs=$false; force=$false
-    oldRef='{0000000000000001}Prefabs/Test.et'; newRef=''; message='synthetic'
+    oldRef='{0000000000000001}Prefabs/Test.et'; newRef='{0000000000000002}Prefabs/Replacement.et'; message='synthetic'
     operations=@([pscustomobject]@{ op='delete'; oldRef='{0000000000000001}Prefabs/Test.et' }); versionHash='synthetic'
 }
 function Read-Body($ctx) { $script:ReadBodyCalls++; return $script:RequestBody }
@@ -39,11 +41,14 @@ function Build-ModIndex { param([switch]$Refresh) $script:OperationCalls++; retu
 function Find-Missions($Root) { return $script:FixtureItems }
 function Get-NewPrefabsCatalog { return $script:FixtureItems }
 function Get-OldPrefabsCatalog { return $script:FixtureItems }
-function Rank-Candidates { param($BrokenPath,$ModIndex,$Top) return $script:FixtureItems }
+function Get-NewCatalogModIndex { $script:OperationCalls++; return $script:FixtureIndex }
+function Get-NewCatalogCandidateFeatures { return @{ '0000000000000001'=[pscustomobject]@{FeatureVersion=2;Path='Prefabs/Test.et'} } }
+function Rank-Candidates { param($BrokenPath,$ModIndex,$CandidateFeatures,$Top) $script:LastRankTop=$Top; $script:LastRankFeatures=$CandidateFeatures; return $script:FixtureItems }
+function Get-AICandidatePool { param($Candidates,$Top,$PerFamily) $script:LastPoolTop=$Top; $script:LastPerFamily=$PerFamily; if ($null -ne $script:PoolOverride) { return $script:PoolOverride }; return $Candidates }
 function Scan-Mission { param($MissionDir,$RemapTable,[switch]$WriteStubs) $script:OperationCalls++; return [pscustomobject]@{ Refs=@() } }
 function Set-RemapEntries { param($Entries,$Path) $script:OperationCalls++; return [pscustomobject]@{ Added=1; Updated=0 } }
 function Invoke-Restore { param($SourceMission,$DestDir,$RemapTable,$AddonRoot,[switch]$Force) $script:OperationCalls++; return [pscustomobject]@{ Broken=@() } }
-function Invoke-AISuggest { param($BrokenRef,$Candidates,$ApiKeyEnv,$BaseUrl,$Model) $script:OperationCalls++; return [pscustomobject]@{ Ref='synthetic'; Confidence=1; Reason='synthetic' } }
+function Invoke-AISuggest { param($BrokenRef,$Candidates,$ApiKeyEnv,$BaseUrl,$Model) $script:OperationCalls++; $script:LastAiCandidates=@($Candidates); if ($Candidates.Count) { return [pscustomobject]@{ Status='match';Ref=$Candidates[0].Ref; Confidence=1; Reason='synthetic' } }; return [pscustomobject]@{ Status='no_match';Ref='';Confidence=0;Reason='synthetic' } }
 function Invoke-AIChat { param($Message,$ApiKeyEnv,$BaseUrl,$Model) $script:OperationCalls++; return 'synthetic' }
 function Save-RemapOperations { param($Operations,$ExpectedVersionHash,$Path) $script:OperationCalls++; return [pscustomobject]@{ applied=1; backupFile='synthetic' } }
 function Get-RemapModel { param($Path) return [pscustomobject]@{ groups=@(); entries=@() } }
@@ -133,6 +138,32 @@ foreach ($headers in @(@{ 'X-Restore-Token'=$script:CsrfToken }, @{ 'X-Restore-T
 }
 
 # Exercise the actual catalog getter/server boundary, including PS 5.1 JSON arrays.
+# The AI pool may contain a result beyond the first eight. The API must return
+# that record for inspection and use the entire indexed snapshot for retrieval.
+$script:FixtureItems=@(); $script:FixtureIndex=@{}
+for ($i=1; $i -le 10; $i++) {
+    $guid=$i.ToString('X16'); $prefabPath="Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Char_Rifleman_$i.et"
+    $script:FixtureIndex[$guid]=$prefabPath
+    $script:FixtureItems += [pscustomobject]@{Ref="{$guid}$prefabPath";Path=$prefabPath;Guid=$guid}
+}
+$script:PoolOverride=@($script:FixtureItems[9])
+$ctx=New-Context -method POST -path '/api/ai-suggest' -headers @{'X-Restore-Token'=$script:CsrfToken}
+Handle-Api $ctx
+$aiBoundary=Read-Response $ctx | ConvertFrom-Json
+Assert-Equal $script:LastRankTop 10 'AI retrieval ranks the complete indexed snapshot'
+Assert-True ($script:LastRankFeatures -is [hashtable]) 'AI retrieval uses prepared catalog features'
+Assert-Equal $script:LastPoolTop 20 'AI prompt pool supports twenty candidates'
+Assert-Equal $script:LastPerFamily 2 'AI prompt pool limits repeated families'
+Assert-Equal $script:LastAiCandidates.Count 1 'AI transport receives the diverse pool rather than the UI shortlist'
+Assert-Equal $aiBoundary.ai.Ref $script:FixtureItems[9].Ref 'AI-selected item beyond first eight is returned'
+Assert-True (@($aiBoundary.candidates | Where-Object {$_.Ref -eq $aiBoundary.ai.Ref}).Count -eq 1) 'AI selection is included once in visible candidates'
+$script:PoolOverride=@()
+$ctx=New-Context -method POST -path '/api/ai-suggest' -headers @{'X-Restore-Token'=$script:CsrfToken}
+Handle-Api $ctx
+$noMatchBoundary=Read-Response $ctx | ConvertFrom-Json
+Assert-True ($noMatchBoundary.ok -and $noMatchBoundary.ai.Status -eq 'no_match' -and -not $noMatchBoundary.ai.Ref) 'Empty AI pool yields a normal no_match response'
+$script:FixtureItems=@(); $script:FixtureIndex=@{'0000000000000001'='Prefabs/Test.et'}; $script:PoolOverride=$null
+
 # Existing script paths only satisfy Test-Path; Read-Text returns synthetic JSON.
 $coreParseErrors = $null
 $coreAst = [System.Management.Automation.Language.Parser]::ParseFile((Join-Path $ToolsRoot 'Restore-Core.ps1'), [ref]$tokens, [ref]$coreParseErrors)
@@ -147,8 +178,10 @@ function Read-Text($Path) {
     if ($Path -cne $serverPath) { throw "Unexpected synthetic catalog path: $Path" }
     return (ConvertTo-Json -InputObject $script:FixtureItems -Depth 5 -Compress)
 }
+function Get-RoleTokens($path) { return [pscustomobject]@{FeatureVersion=2;Path=$path} }
 
 foreach ($count in @(0,1,2)) {
+    $script:NewCatalogCache = $null
     $script:FixtureItems = @()
     for ($i=0; $i -lt $count; $i++) { $script:FixtureItems += [pscustomobject]@{ Name="Item$i"; Ref="Item$i" } }
     foreach ($path in @('/api/missions','/api/catalog/new','/api/catalog/old','/api/suggest')) {

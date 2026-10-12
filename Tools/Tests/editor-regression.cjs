@@ -230,13 +230,95 @@ test('ranker uses uppercase backend fields, exact Ref and safe generated candida
   assert.equal(env.snapshot('gModel.tree').Alpha[oldRef], targetRef);
 });
 
-test('AI uses Ref and Reason and POST authentication', async () => {
-  const env = setup({ fetch: async () => response({ ok: true, ai: { Ref: targetRef, Reason: 'synthetic reasoning' } }) });
+test('AI renders escaped recommendation without mutating until explicit apply and uses POST authentication', async () => {
+  const env = setup({ fetch: async () => response({ ok: true, ai: { Status: 'match', Ref: targetRef, Reason: '<synthetic reasoning>' }, candidates: [] }) });
   env.evaluate(`gSuggestTarget = { key:${JSON.stringify(key(['Alpha']))}, oldRef:${JSON.stringify(oldRef)} }`);
   await env.evaluate('requestAiSuggest()');
+  assert.equal(env.snapshot('gModel.tree').Alpha[oldRef], '');
+  assert.equal(env.snapshot('gPendingOps').length, 0);
+  assert.equal(env.alerts.length, 0);
+  const markup = env.document.getElementById('suggestAiRecommendation').innerHTML;
+  assert.match(markup, /&lt;synthetic reasoning&gt;/);
+  assert.match(markup, /New&#39;s\.et/);
+  const apply = decodeAttribute(markup.match(/onclick="([^"]+)"/)[1]);
+  env.evaluate(apply);
   assert.equal(env.snapshot('gModel.tree').Alpha[oldRef], targetRef);
-  assert.match(env.alerts[0], /synthetic reasoning/);
+  assert.equal(env.snapshot('gPendingOps').length, 1);
   assert.equal(env.requests[0].options.headers['X-Restore-Token'], 'synthetic-token');
+});
+
+test('AI no_match with empty Ref is normal and exposes manual catalog without an apply action', async () => {
+  const env = setup({ fetch: async () => response({ ok: true, ai: { Status: 'no_match', Ref: '', Reason: 'Роль сапёра не найдена' }, candidates: [] }) });
+  env.evaluate(`gSuggestTarget = { key:${JSON.stringify(key(['Alpha']))}, oldRef:${JSON.stringify(oldRef)} }`);
+  await env.evaluate('requestAiSuggest()');
+  const markup = env.document.getElementById('suggestAiRecommendation').innerHTML;
+  assert.match(markup, /Надёжная замена не найдена/);
+  assert.match(markup, /switchSuggestMode/);
+  assert.doesNotMatch(markup, /applyAiRecommendation/);
+  assert.equal(env.snapshot('gAiRecommendation'), null);
+  assert.equal(env.snapshot('gPendingOps').length, 0);
+  assert.equal(env.alerts.length, 0);
+});
+
+test('uncertain AI recommendation is visibly marked and requires manual apply', async () => {
+  const env = setup({ fetch: async () => response({ ok: true, ai: { Status: 'uncertain', Ref: targetRef, Reason: 'Неизвестная экипировка' }, candidates: [] }) });
+  env.evaluate(`gSuggestTarget = { key:${JSON.stringify(key(['Alpha']))}, oldRef:${JSON.stringify(oldRef)} }`);
+  await env.evaluate('requestAiSuggest()');
+  const markup = env.document.getElementById('suggestAiRecommendation').innerHTML;
+  assert.match(markup, /ai-recommendation uncertain/);
+  assert.match(markup, /Применить вручную/);
+  assert.equal(env.snapshot('gPendingOps').length, 0);
+});
+
+test('ranker separates approximate replacements and escapes structured explanations without confidence percentages', () => {
+  const env = setup();
+  const candidates = [
+    { Ref: targetRef, Path: "Prefabs/New's.et", Score: 9, Confidence: 1, Compatibility: 'compatible', MatchLevel: 'high', MatchLabel: 'Высокое <соответствие>', Reasons: ['Совпала <роль>', 'Строка "с кавычками"'], Warnings: [] },
+    { Ref: secondTarget, Score: 8, Compatibility: 'approximate', MatchLevel: 'low', Reasons: ['Совпала сторона'], Warnings: ['Масштаб <отличается>'] },
+    null,
+    { Ref: 'invalid', Path: '<invalid>' }
+  ];
+  env.evaluate(`renderCandidates(${JSON.stringify(candidates)})`);
+  const markup = env.document.getElementById('suggestCandidatesList').innerHTML;
+  assert.match(markup, /Высокое &lt;соответствие&gt;/);
+  assert.match(markup, /Совпала &lt;роль&gt;/);
+  assert.match(markup, /&quot;с кавычками&quot;/);
+  assert.match(markup, /Масштаб &lt;отличается&gt;/);
+  assert.match(markup, /Приблизительные замены — ручной выбор/);
+  assert(markup.indexOf('Приблизительные замены') < markup.indexOf('Prefabs\/Second.et'));
+  assert.doesNotMatch(markup, /100%|undefined|<invalid>|<роль>/);
+});
+
+test('late AI response cannot overwrite another picker or unlock its pending request', async () => {
+  const aiResponses = [];
+  const env = setup({ fetch: url => url === '/api/suggest' ? Promise.resolve(response([])) : new Promise(resolve => aiResponses.push(resolve)) });
+  await env.evaluate(`openSuggestModal(${JSON.stringify(key(['Alpha']))})`);
+  const oldRequest = env.evaluate('requestAiSuggest()');
+  env.evaluate("closeModal('modalSuggest')");
+  await env.evaluate(`openSuggestModal(${JSON.stringify(key([], otherRef))})`);
+  const newRequest = env.evaluate('requestAiSuggest()');
+  aiResponses[0](response({ ok: true, ai: { Status: 'match', Ref: targetRef, Reason: 'stale reason' }, candidates: [] }));
+  await oldRequest;
+  assert.equal(env.document.getElementById('btnAiSuggest').disabled, true);
+  assert.doesNotMatch(env.document.getElementById('suggestAiRecommendation').innerHTML, /stale reason/);
+  aiResponses[1](response({ ok: true, ai: { Status: 'match', Ref: secondTarget, Reason: 'fresh reason' }, candidates: [] }));
+  await newRequest;
+  assert.equal(env.document.getElementById('btnAiSuggest').disabled, false);
+  assert.match(env.document.getElementById('suggestAiRecommendation').innerHTML, /fresh reason/);
+  assert.equal(env.snapshot('gPendingOps').length, 0);
+  env.evaluate('applyAiRecommendation()');
+  assert.equal(env.snapshot('gModel.tree')[otherRef], secondTarget);
+  assert.equal(env.snapshot('gModel.tree').Alpha[oldRef], '');
+});
+
+test('AI cannot apply a stored recommendation while editor is busy or after picker closes', async () => {
+  const env = setup({ fetch: async () => response({ ok: true, ai: { Status: 'match', Ref: targetRef, Reason: 'test' }, candidates: [] }) });
+  env.evaluate(`gSuggestTarget = { key:${JSON.stringify(key(['Alpha']))}, oldRef:${JSON.stringify(oldRef)} }`);
+  await env.evaluate('requestAiSuggest()');
+  env.evaluate('gLoading = true; applyAiRecommendation(); gLoading = false;');
+  assert.equal(env.snapshot('gPendingOps').length, 0);
+  env.evaluate("closeModal('modalSuggest'); applyAiRecommendation()");
+  assert.equal(env.snapshot('gPendingOps').length, 0);
 });
 
 test('Legacy edits expose pending controls and ambiguous legacy refs require row selection', async () => {
