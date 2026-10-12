@@ -9,19 +9,25 @@
     local web UI). Validation source of truth is the MOD PREFAB INDEX built from the
     PodvalTvTPrefabs *.et.meta files - NOT a self-referential scan of sibling missions.
 
+    Machine-specific paths come from the local, git-ignored tool config
+    (Tools\tool.config.json, or the legacy Tools\UI\ui.config.json). Command-line
+    parameters override the config. Copy Tools\tool.config.example.json to
+    Tools\tool.config.json and fill in PrefabsModRoot on first use.
+
 .EXAMPLE
     .\Restore-Mission.ps1 `
-        -SourceMission "C:\Users\armen\Desktop\PodvalCommunityEvent\Worlds\Peroi\Arland\Bastovich_Arland" `
-        -DestDir "C:\Users\armen\Documents\GitHub\PodvalTvTMissions\PodvalTvTMissions\Worlds\RamboKZ\Peroi" `
+        -SourceMission "D:\PodvalCommunityEvent\Worlds\Peroi\Arland\Bastovich_Arland" `
+        -DestDir "D:\Work\PodvalTvTMissions\PodvalTvTMissions\Worlds\RamboKZ\Peroi" `
         -Force
 #>
 [CmdletBinding()]
 param(
     [Parameter(Mandatory)][string]$SourceMission,
     [Parameter(Mandatory)][string]$DestDir,
-    [string]$RemapTable = (Join-Path $PSScriptRoot 'remap_table.json'),
-    [string]$AddonRoot  = 'C:\Users\armen\Documents\GitHub\PodvalTvTMissions\PodvalTvTMissions',
+    [string]$RemapTable,
+    [string]$AddonRoot,
     [string]$PrefabsModRoot,
+    [string]$ConfigPath,
     [switch]$RefreshIndex,
     [switch]$WriteStubs,
     [switch]$Force
@@ -30,18 +36,34 @@ param(
 $ErrorActionPreference = 'Stop'
 . (Join-Path $PSScriptRoot 'Restore-Core.ps1')
 
-$cfg = @{ AddonRoot = $AddonRoot; RemapTable = $RemapTable }
-if ($PrefabsModRoot) { $cfg.PrefabsModRoot = $PrefabsModRoot }
-Set-RMConfig $cfg | Out-Null
+# Config first, explicit parameters last so they win.
+$cfgImport = Import-RMUserConfig -Path $ConfigPath
+foreach ($w in $cfgImport.Warnings) { Write-Host "config: $w" -ForegroundColor DarkYellow }
+$overrides = @{}
+foreach ($name in @('AddonRoot','PrefabsModRoot','RemapTable')) {
+    if ($PSBoundParameters.ContainsKey($name) -and $PSBoundParameters[$name]) { $overrides[$name] = $PSBoundParameters[$name] }
+}
+if ($overrides.Count -gt 0) { Set-RMConfig $overrides | Out-Null }
+
+$resolved = Get-RMConfig
+if ($PSBoundParameters.ContainsKey('RemapTable') -or -not $resolved.RemapTable) {
+    if (-not $resolved.RemapTable) { $resolved.RemapTable = (Join-Path $PSScriptRoot 'remap_table.json') }
+}
+if (-not $resolved.AddonRoot) {
+    throw 'AddonRoot is not configured. Set it in the local tool config (Tools\tool.config.json).'
+}
+if (-not $resolved.PrefabsModRoot) {
+    throw ("Prefab mod is not configured. Set PrefabsModRoot in {0}." -f $resolved.UserConfig)
+}
 
 Write-Host 'Building mod prefab index...' -ForegroundColor Cyan
 $idx = Build-ModIndex -Refresh:$RefreshIndex
 Write-Host ("  mod prefab GUIDs: {0}" -f $idx.Count)
 
-$remap = Load-RemapTable -Path $RemapTable
+$remap = Load-RemapTable -Path $resolved.RemapTable
 Write-Host ("  remap entries (filled): {0}   stubs (need value): {1}" -f $remap.Map.Count, $remap.Stubs.Count)
 
-$res = Invoke-Restore -SourceMission $SourceMission -DestDir $DestDir -RemapTable $RemapTable -AddonRoot $AddonRoot -Force:$Force
+$res = Invoke-Restore -SourceMission $SourceMission -DestDir $DestDir -RemapTable $resolved.RemapTable -AddonRoot $resolved.AddonRoot -Force:$Force
 Write-Host ("Copied mission -> {0}" -f $res.DestMission) -ForegroundColor Green
 if ($res.ResourcePath) { Write-Host ("Updated .ent.meta resource path -> {0}" -f $res.ResourcePath) -ForegroundColor Green }
 
@@ -65,7 +87,7 @@ if ($res.BrokenCount -gt 0) {
         foreach ($b in $res.Broken) {
             if (-not $remap.Map.Contains($b.Ref) -and -not $remap.Stubs.Contains($b.Ref)) { $stubEntries[$b.Ref] = '' }
         }
-        $w = Set-RemapEntries -Entries $stubEntries -Path $RemapTable
+        $w = Set-RemapEntries -Entries $stubEntries -Path $resolved.RemapTable
         Write-Host ("   -> wrote {0} stub(s) to remap_table.json ({1}); fill them and re-run." -f $w.Added, '_Unresolved_Pending') -ForegroundColor Yellow
     } else {
         Write-Host '   -> add these to remap_table.json and re-run (or use -WriteStubs).' -ForegroundColor Red

@@ -14,24 +14,26 @@
 
 ### Схема изоляции:
 1. **Источник (`SourceMission`)**:  
-   Например: `C:\Users\armen\Desktop\PodvalCommunityEvent\Worlds\Peroi\Zarichne\Zavod_Zarichne`.  
+   Например: `<ПАПКА_СТАРЫХ_МИССИЙ>\Worlds\Peroi\Zarichne\Zavod_Zarichne`.  
    *Статус:* Неприкосновенный эталонный архив. Из него данные **только считываются/копируются**.
 2. **Копирование в аддон (`DestDir`)**:  
    Миссия первоначально целиком копируется в репозиторий рабочего мода:  
-   `C:\Users\armen\Documents\GitHub\PodvalTvTMissions\PodvalTvTMissions\Worlds\Peroi\Zarichne\Zavod_Zarichne`.
+   `<РЕПОЗИТОРИЙ>\PodvalTvTMissions\Worlds\Peroi\Zarichne\Zavod_Zarichne`.
 3. **Все правки — только в копии**:  
    Все последующие шаги (ремаппинг префабов, создание папок `BLUFOR`/`OPFOR`, перенос объектов в `UNITS.layer`/`VEHICLES.layer` и последующее удаление опустевших старых файлов `rus.layer`, `us.layer`, `log.layer`) выполняются **ИСКЛЮЧИТЕЛЬНО внутри скопированной рабочей папки в репозитории `PodvalTvTMissions`**.
 4. **Гарантия сохранности**:  
-   Оригинальная миссия на Рабочем столе всегда остаётся нетронутой. В случае любых непредвиденных ошибок рабочую папку в репозитории можно просто удалить и скопировать заново с Рабочего стола.
+   Оригинальная миссия в архиве всегда остаётся нетронутой. В случае любых непредвиденных ошибок рабочую папку в репозитории можно просто удалить и скопировать заново из архива.
 
 ### Входные параметры от оператора (Operator Inputs):
 Для запуска процедуры ИИ-агенту требуются два пути:
 * **`SourceMission`**: Полный путь к папке исходной старой миссии.  
-  *Пример:* `C:\Users\armen\Desktop\PodvalCommunityEvent\Worlds\Peroi\Zarichne\Zavod_Zarichne`
+  *Пример:* `<ПАПКА_СТАРЫХ_МИССИЙ>\Worlds\Peroi\Zarichne\Zavod_Zarichne`
 * **`DestDir`**: Полный путь к целевой папке в репозитории мода (куда миссия должна быть скопирована и развёрнута).  
-  *Пример:* `C:\Users\armen\Documents\GitHub\PodvalTvTMissions\PodvalTvTMissions\Worlds\Peroi\Zarichne`
+  *Пример:* `<РЕПОЗИТОРИЙ>\PodvalTvTMissions\Worlds\Peroi\Zarichne`
 
 > **Правило для ИИ-Агента:** Если оператор не предоставил один или оба пути, агент обязан запросить их перед началом любых манипуляций.
+
+> **Важно:** конкретные пути конкретного компьютера **никогда** не записываются в репозиторий. Инструмент хранит их в локальном файле `Tools/tool.config.json`, который находится в `.gitignore`. См. раздел «Установка инструмента» в [`README.md`](README.md).
 
 ---
 
@@ -273,10 +275,11 @@ flowchart TD
 Запустить скрипт `Tools/Restore-Mission.ps1`:
 ```powershell
 .\Restore-Mission.ps1 `
-    -SourceMission "C:\Users\armen\Desktop\PodvalCommunityEvent\Worlds\Peroi\Zarichne\Zavod_Zarichne" `
-    -DestDir "C:\Users\armen\Documents\GitHub\PodvalTvTMissions\PodvalTvTMissions\Worlds\Peroi\Zarichne" `
+    -SourceMission "<ПАПКА_СТАРЫХ_МИССИЙ>\Worlds\Peroi\Zarichne\Zavod_Zarichne" `
+    -DestDir "<РЕПОЗИТОРИЙ>\PodvalTvTMissions\Worlds\Peroi\Zarichne" `
     -Force
 ```
+> Пути `AddonRoot` и `PrefabsModRoot` скрипт берёт из локального файла настроек (см. [`README.md`](README.md)). Параметры командной строки имеют приоритет над настройками.
 1. Скрипт физически копирует миссию из архива в каталог аддона.
 2. Автоматически выполняет ремаппинг устаревших префабов старого DRG-мода по таблице `Tools/remap_table.json` **внутри рабочей копии**.
 3. Обновляет внутренний путь ресурса в `.ent.meta`.

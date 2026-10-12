@@ -9,7 +9,7 @@ $ast = [System.Management.Automation.Language.Parser]::ParseFile($serverPath, [r
 if ($parseErrors.Count) { throw ($parseErrors | Out-String) }
 
 # Load function definitions only: never execute configuration or listener startup.
-foreach ($name in @('Send-Json', 'Send-Text', 'New-RestoreToken', 'Test-PostRequest', 'Handle-Api')) {
+foreach ($name in @('Send-Json', 'Send-Text', 'New-RestoreToken', 'Test-PostRequest', 'Handle-Api', 'Get-RMSettingsView')) {
     $functionAst = $ast.Find({ param($node) $node -is [System.Management.Automation.Language.FunctionDefinitionAst] -and $node.Name -eq $name }, $true)
     if (-not $functionAst) { throw "Function not found: $name" }
     . ([scriptblock]::Create($functionAst.Extent.Text))
@@ -18,11 +18,37 @@ foreach ($name in @('Send-Json', 'Send-Text', 'New-RestoreToken', 'Test-PostRequ
 $script:Utf8 = [System.Text.UTF8Encoding]::new($false)
 $script:CsrfToken = 'synthetic-server-token'
 $script:ServerOrigin = 'http://localhost:8787'
+$script:ModIndexEmpty = $false
 $cfg = @{
     DefaultSourceRoot='synthetic-source'; DefaultDestDir='synthetic-destination'
     RemapTable='synthetic-remap'; PrefabsModRoot='synthetic-mod'
     ApiKeyEnv='synthetic-key'; AiModel='synthetic-model'; AiBaseUrl='https://synthetic.invalid'
-    AddonRoot='synthetic-addon'
+    AddonRoot='synthetic-addon'; Port=8787; UserConfig='synthetic-config'
+}
+# Configuration layer: the server reads the resolved paths from the core config object
+# and persists changes through the core helpers, so both are stubbed here.
+$script:RMPathKeys  = @('AddonRoot','PrefabsModRoot','RemapTable','CatalogNew','CatalogOld','DefaultSourceRoot','DefaultDestDir','IndexCache')
+$script:RMValueKeys = @('ApiKeyEnv','AiBaseUrl','AiModel')
+$script:RMC = @{
+    AddonRoot='synthetic-addon'; PrefabsModRoot='synthetic-mod'
+    RemapTable='synthetic-remap'; DefaultSourceRoot='synthetic-source'
+    DefaultDestDir='synthetic-destination'; UserConfig='synthetic-config'
+}
+$script:MissingSettings = @()
+$script:SavedValues = $null
+$script:SaveShouldThrow = $false
+function Get-RMConfig { return $script:RMC }
+function Get-RMConfigurationState { return [pscustomobject]@{ Configured=(@($script:MissingSettings).Count -eq 0); Missing=@($script:MissingSettings) } }
+function Import-RMUserConfig { param([string]$Path) $script:OperationCalls++; return [pscustomobject]@{ Path='synthetic-config'; Exists=$true; Applied=@{}; Warnings=@() } }
+function Save-RMUserConfig {
+    param([Parameter(Mandatory)][hashtable]$Values, [string]$Path)
+    $script:OperationCalls++
+    if ($script:SaveShouldThrow) { throw 'Настройки не сохранены: PrefabsModRoot : каталог не найден: synthetic-missing' }
+    $script:SavedValues = $Values
+    foreach ($k in @('AddonRoot','PrefabsModRoot','DefaultSourceRoot','DefaultDestDir')) {
+        if ($Values.ContainsKey($k) -and $Values[$k]) { $script:RMC[$k] = $Values[$k] }
+    }
+    return [pscustomobject]@{ ok=$true; path='synthetic-config'; backupFile='synthetic-config.bak' }
 }
 $script:ReadBodyCalls = 0
 $script:OperationCalls = 0
@@ -37,7 +63,7 @@ $script:RequestBody = [pscustomobject]@{
 }
 function Read-Body($ctx) { $script:ReadBodyCalls++; return $script:RequestBody }
 function Get-ApiKey($name) { return $null }
-function Build-ModIndex { param([switch]$Refresh) $script:OperationCalls++; return @{ '0000000000000001'='Prefabs/Test.et' } }
+function Build-ModIndex { param([switch]$Refresh) $script:OperationCalls++; if ($script:ModIndexEmpty) { return @{} }; return @{ '0000000000000001'='Prefabs/Test.et' } }
 function Find-Missions($Root) { return $script:FixtureItems }
 function Get-NewPrefabsCatalog { return $script:FixtureItems }
 function Get-OldPrefabsCatalog { return $script:FixtureItems }
@@ -109,7 +135,7 @@ $ctx = New-Context
 Send-Text $ctx '<html>synthetic</html>'
 Assert-Equal $ctx.Response.Headers['Cache-Control'] 'no-store' 'HTML must not be cached'
 
-$postPaths = @('/api/reindex','/api/scan','/api/suggest','/api/shutdown','/api/ai-suggest','/api/chat','/api/map','/api/restore','/api/table/save','/api/catalog/rebuild','/')
+$postPaths = @('/api/reindex','/api/scan','/api/suggest','/api/shutdown','/api/ai-suggest','/api/chat','/api/map','/api/restore','/api/table/save','/api/catalog/rebuild','/api/settings','/')
 foreach ($path in $postPaths) {
     Assert-Blocked $path @{} 'application/json' 403
     Assert-Blocked $path @{ 'X-Restore-Token'='previous-run-token'; Origin=$script:ServerOrigin } 'application/json' 403
@@ -163,6 +189,73 @@ Handle-Api $ctx
 $noMatchBoundary=Read-Response $ctx | ConvertFrom-Json
 Assert-True ($noMatchBoundary.ok -and $noMatchBoundary.ai.Status -eq 'no_match' -and -not $noMatchBoundary.ai.Ref) 'Empty AI pool yields a normal no_match response'
 $script:FixtureItems=@(); $script:FixtureIndex=@{'0000000000000001'='Prefabs/Test.et'}; $script:PoolOverride=$null
+
+# --- configuration surface: first run without a configured prefab mod ---------------
+# The UI must load on a fresh clone, so /api/config may not fail when the prefab mod is
+# absent; it reports the state instead.
+$script:MissingSettings = @()
+$script:ModIndexEmpty = $false
+$ctx = New-Context -method GET -path '/api/config'
+Handle-Api $ctx
+$readyConfig = Read-Response $ctx | ConvertFrom-Json
+Assert-Equal $ctx.Response.StatusCode 200 'Config responds when the prefab mod is available'
+Assert-True $readyConfig.prefabsAvailable 'Config reports the prefab mod as available'
+Assert-Equal $readyConfig.modIndexCount 1 'Config reports the prefab count'
+Assert-True $readyConfig.pathsConfigured 'Config reports a fully configured tool'
+Assert-Equal @($readyConfig.missingSettings).Count 0 'Configured tool lists no missing settings'
+
+$script:ModIndexEmpty = $true
+$ctx = New-Context -method GET -path '/api/config'
+Handle-Api $ctx
+$emptyConfig = Read-Response $ctx | ConvertFrom-Json
+Assert-Equal $ctx.Response.StatusCode 200 'Config still responds without the prefab mod'
+Assert-True (-not $emptyConfig.prefabsAvailable) 'Config reports the prefab mod as unavailable'
+Assert-Equal $emptyConfig.modIndexCount 0 'Config reports zero prefabs when the mod is absent'
+
+$script:ModIndexEmpty = $false
+$script:MissingSettings = @('PrefabsModRoot')
+$ctx = New-Context -method GET -path '/api/config'
+Handle-Api $ctx
+$unconfigured = Read-Response $ctx | ConvertFrom-Json
+Assert-True (-not $unconfigured.pathsConfigured) 'Config reports an unconfigured tool'
+Assert-True (@($unconfigured.missingSettings) -contains 'PrefabsModRoot') 'Config names the missing setting'
+Assert-Equal @($unconfigured.missingSettings).Count 1 'Config lists exactly the missing settings'
+$script:MissingSettings = @()
+
+# --- settings: read, save, and reject an invalid path ------------------------------
+$ctx = New-Context -method GET -path '/api/settings'
+Handle-Api $ctx
+$settings = Read-Response $ctx | ConvertFrom-Json
+Assert-Equal $ctx.Response.StatusCode 200 'Settings view responds'
+Assert-Equal $settings.addonRoot 'synthetic-addon' 'Settings view exposes the addon root'
+Assert-Equal $settings.prefabsModRoot 'synthetic-mod' 'Settings view exposes the prefab mod root'
+Assert-Equal $settings.configPath 'synthetic-config' 'Settings view exposes the config file path'
+Assert-True (-not $settings.PSObject.Properties['apiKey']) 'Settings view never exposes the API key'
+Assert-True (-not $settings.PSObject.Properties['apiKeyPresentValue']) 'Settings view exposes no key material'
+
+$savedRequest = $script:RequestBody
+$script:RequestBody = [pscustomobject]@{
+    prefabsModRoot='synthetic-new-mod'; defaultSourceRoot='synthetic-new-source'; port='8787'
+}
+$script:OperationCalls = 0
+$ctx = New-Context -method POST -path '/api/settings' -headers @{ 'X-Restore-Token'=$script:CsrfToken }
+Handle-Api $ctx
+$saveResponse = Read-Response $ctx | ConvertFrom-Json
+Assert-Equal $ctx.Response.StatusCode 200 'Valid settings are accepted'
+Assert-True $saveResponse.ok 'Valid settings report success'
+Assert-True ($null -ne $script:SavedValues) 'Valid settings reach the persistence helper'
+Assert-Equal $script:SavedValues['prefabsModRoot'] 'synthetic-new-mod' 'New prefab mod root is forwarded'
+Assert-Equal $script:RMC.PrefabsModRoot 'synthetic-new-mod' 'Saving updates the live configuration'
+
+$script:SaveShouldThrow = $true
+$ctx = New-Context -method POST -path '/api/settings' -headers @{ 'X-Restore-Token'=$script:CsrfToken }
+Handle-Api $ctx
+$rejected = Read-Response $ctx | ConvertFrom-Json
+Assert-Equal $ctx.Response.StatusCode 400 'An invalid path is rejected instead of being stored'
+Assert-True (-not $rejected.ok) 'A rejected save reports failure'
+Assert-True ($rejected.error -match 'PrefabsModRoot') 'A rejected save explains which setting is wrong'
+$script:SaveShouldThrow = $false
+$script:RequestBody = $savedRequest
 
 # Existing script paths only satisfy Test-Path; Read-Text returns synthetic JSON.
 $coreParseErrors = $null

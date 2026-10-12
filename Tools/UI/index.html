@@ -44,6 +44,20 @@
   .chip b{color:var(--fg);font-weight:600}
   .chip.on{background:var(--greenbg);border-color:rgba(78,201,138,.35);color:var(--green)}
   .chip.off{background:var(--graybg);color:var(--mut2)}
+  .chip.warn{background:var(--yellowbg);border-color:rgba(224,185,90,.35);color:var(--yellow)}
+
+  /* ---------- баннер первого запуска ---------- */
+  .setupBanner{
+    display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+    margin:0 20px 4px;padding:12px 16px;max-width:1720px;margin-left:auto;margin-right:auto;
+    background:var(--yellowbg);border:1px solid rgba(224,185,90,.35);border-radius:10px;
+    color:var(--yellow);font-size:13px;
+  }
+  .setupBanner b{color:var(--fg)}
+  .setupBanner .setupBannerText{flex:1;min-width:260px}
+  #settingsCard{max-width:1720px;margin:12px auto 14px}
+  #settingsCard .field{margin-bottom:12px}
+  #settingsCard code{font-size:11px;background:var(--panel2);padding:1px 5px;border-radius:4px;color:var(--mut)}
 
   /* ---------- каркас ---------- */
   .layout{display:grid;grid-template-columns:440px 1fr;gap:16px;padding:16px 20px;align-items:start;max-width:1720px;margin:0 auto}
@@ -194,13 +208,72 @@
   <div class="logo"><span class="dot"></span>Восстановление миссий</div>
   <div class="stats">
     <a href="/editor" class="chip" style="text-decoration:none;color:var(--accent);font-weight:600" title="Открыть редактор базы ремапа">Редактор базы →</a>
-    <span class="chip">префабов в моде: <b id="mMod">…</b></span>
+    <span class="chip" id="chipMod">префабов в моде: <b id="mMod">…</b></span>
     <span class="chip" id="mAi">ИИ: …</span>
+    <button class="sm ghost" id="bSettings" title="Пути и параметры инструмента">Настройки</button>
     <button class="sm ghost" id="bReindex" title="Пересканировать префабы мода">Пересканировать мод</button>
     <button class="sm ghost" id="bHelp" title="Показать справку">Справка</button>
     <button class="sm danger" id="bStop" title="Остановить сервер">Остановить сервер</button>
   </div>
 </header>
+
+<div class="setupBanner" id="setupBanner" style="display:none">
+  <div class="setupBannerText">
+    <b>Инструмент не настроен.</b>
+    <span id="setupBannerMsg">Укажите обязательные пути — они сохранятся в локальный файл, который не попадает в git.</span>
+  </div>
+  <button class="sm primary" id="bSetup">Настроить</button>
+</div>
+
+<div class="card" id="settingsCard" style="display:none">
+  <h2>Настройки</h2>
+  <p class="hint" id="settingsPathHint">Пути сохраняются в локальный файл настроек, который находится в <code>.gitignore</code> и не попадает в репозиторий.</p>
+  <div class="field">
+    <label for="setAddon">Корень аддона (обязательно)</label>
+    <input type="text" id="setAddon" spellcheck="false" />
+    <span class="hint">Папка с файлом <code>.gproj</code>. Обычно определяется автоматически.</span>
+  </div>
+  <div class="field">
+    <label for="setPrefabs">Папка мода префабов (обязательно)</label>
+    <input type="text" id="setPrefabs" spellcheck="false" />
+    <span class="hint">Корень аддона <code>PodvalTvTPrefabs</code> — отдельного репозитория рядом с этим. Поддерживаются <code>%ПЕРЕМЕННЫЕ%</code> и <code>~</code>.</span>
+  </div>
+  <div class="field">
+    <label for="setSource">Папка со старыми миссиями</label>
+    <input type="text" id="setSource" spellcheck="false" />
+    <span class="hint">Необязательно: подставляется в поле поиска миссий.</span>
+  </div>
+  <div class="field">
+    <label for="setDest">Папка назначения по умолчанию</label>
+    <input type="text" id="setDest" spellcheck="false" />
+  </div>
+  <div class="field">
+    <label for="setRemap">Файл таблицы замен</label>
+    <input type="text" id="setRemap" spellcheck="false" />
+  </div>
+  <div class="field">
+    <label for="setPort">Порт сервера</label>
+    <input type="text" id="setPort" spellcheck="false" />
+    <span class="hint">Применяется после перезапуска сервера.</span>
+  </div>
+  <div class="field">
+    <label for="setAiBase">Адрес ИИ-сервиса</label>
+    <input type="text" id="setAiBase" spellcheck="false" />
+  </div>
+  <div class="field">
+    <label for="setAiModel">Модель ИИ</label>
+    <input type="text" id="setAiModel" spellcheck="false" />
+  </div>
+  <div class="field">
+    <label for="setKeyEnv">Переменная окружения с ключом ИИ</label>
+    <input type="text" id="setKeyEnv" spellcheck="false" />
+    <span class="hint" id="setKeyHint">Ключ хранится только в переменной окружения и никогда не записывается в файл настроек.</span>
+  </div>
+  <div class="btns">
+    <button id="bSaveSettings" class="primary">Сохранить настройки</button>
+    <button id="bCloseSettings" class="ghost">Скрыть</button>
+  </div>
+</div>
 
 <div class="layout">
 
@@ -364,7 +437,14 @@ const api = async (path, opts={}) => {
     headers.set('X-Restore-Token', CFG.csrfToken);
   }
   const r = await fetch(path, {...opts, headers});
-  if(!r.ok) throw new Error((await r.text()).slice(0,300) || ('HTTP '+r.status));
+  if(!r.ok) {
+    // Error bodies are JSON ({error: ...}) for most routes; surface the message itself
+    // instead of dumping raw JSON into the log.
+    const txt = (await r.text()).slice(0,300);
+    let msg = txt || ('HTTP '+r.status);
+    try{ const j = JSON.parse(txt); if(j && j.error) msg = j.error; }catch(_){}
+    throw new Error(msg);
+  }
   return r.json();
 };
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -397,10 +477,36 @@ const NAMES = {
 };
 
 /* ---------- загрузка ---------- */
+function applySetupState(cfg){
+  const banner = $('#setupBanner');
+  if(!cfg.pathsConfigured){
+    banner.style.display = '';
+    $('#setupBannerMsg').textContent =
+      'Не заданы пути: ' + (cfg.missingSettings || []).join(', ') +
+      '. Они сохранятся в локальный файл, который не попадает в git.';
+  } else if(!cfg.prefabsAvailable){
+    banner.style.display = '';
+    $('#setupBannerMsg').textContent =
+      'Мод префабов недоступен (' + (cfg.prefabsModRoot || 'путь не задан') + '). ' +
+      'Проверка и восстановление отключены, подсказки работают по сохранённому каталогу.';
+  } else {
+    banner.style.display = 'none';
+  }
+  const chip = $('#chipMod');
+  if(cfg.prefabsAvailable){
+    chip.className = 'chip';
+    chip.removeAttribute('title');
+  } else {
+    chip.className = 'chip warn';
+    chip.title = 'Мод префабов недоступен: ' + (cfg.prefabsModRoot || 'путь не задан');
+  }
+  $('#mMod').textContent = cfg.prefabsAvailable ? cfg.modIndexCount : '—';
+}
+
 async function boot(){
   try{
     CFG = await api('/api/config');
-    $('#mMod').textContent = CFG.modIndexCount;
+    applySetupState(CFG);
     const ai = $('#mAi');
     if(CFG.aiEnabled){
       ai.className = 'chip on';
@@ -408,7 +514,7 @@ async function boot(){
     } else {
       ai.className = 'chip off';
       ai.innerHTML = 'ИИ-подсказки: <b>выкл</b>';
-      ai.title = 'Задайте переменную окружения JUSTWOKER_API_KEY и перезапустите сервер';
+      ai.title = 'Задайте переменную окружения ' + (CFG.aiKeyEnv || 'JUSTWOKER_API_KEY') + ' и перезапустите сервер';
     }
     if(CFG.aiEnabled) $('#chatCard').style.display = '';
     $('#srcRoot').value = CFG.defaultSourceRoot || '';
@@ -416,6 +522,63 @@ async function boot(){
     log('Готово к работе. Таблица замен: ' + CFG.remapTable, 'dim');
   }catch(e){ log('Не удалось загрузить настройки: ' + e.message, 'err'); }
 }
+
+/* ---------- настройки ---------- */
+function toggleSettings(force){
+  const card = $('#settingsCard');
+  const show = (force === undefined) ? (!card.style.display || card.style.display === 'none') : force;
+  card.style.display = show ? '' : 'none';
+  if(show) loadSettings();
+}
+async function loadSettings(){
+  try{
+    const s = await api('/api/settings');
+    $('#setAddon').value   = s.addonRoot || '';
+    $('#setPrefabs').value = s.prefabsModRoot || '';
+    $('#setSource').value  = s.defaultSourceRoot || '';
+    $('#setDest').value    = s.defaultDestDir || '';
+    $('#setRemap').value   = s.remapTable || '';
+    $('#setPort').value    = s.port || '';
+    $('#setAiBase').value  = s.aiBaseUrl || '';
+    $('#setAiModel').value = s.aiModel || '';
+    $('#setKeyEnv').value  = s.apiKeyEnv || '';
+    $('#settingsPathHint').textContent =
+      'Пути сохраняются в локальный файл ' + (s.configPath || '') + '. Он находится в .gitignore и не попадает в репозиторий.';
+    $('#setKeyHint').textContent = s.apiKeyPresent
+      ? 'Ключ найден в переменной окружения ' + (s.apiKeyEnv || '') + '. В файл он никогда не записывается.'
+      : 'Ключ не найден. Задайте переменную окружения ' + (s.apiKeyEnv || '') + ' и перезапустите сервер.';
+  }catch(e){ log('Не удалось загрузить настройки: ' + e.message, 'err'); }
+}
+$('#bSettings').onclick = () => toggleSettings();
+$('#bSetup').onclick    = () => toggleSettings(true);
+$('#bCloseSettings').onclick = () => toggleSettings(false);
+$('#bSaveSettings').onclick = async () => {
+  setBusy(true);
+  try{
+    const r = await api('/api/settings', {
+      method:'POST',
+      body: JSON.stringify({
+        addonRoot:         $('#setAddon').value.trim(),
+        prefabsModRoot:    $('#setPrefabs').value.trim(),
+        defaultSourceRoot: $('#setSource').value.trim(),
+        defaultDestDir:    $('#setDest').value.trim(),
+        remapTable:        $('#setRemap').value.trim(),
+        port:              $('#setPort').value.trim(),
+        aiBaseUrl:         $('#setAiBase').value.trim(),
+        aiModel:           $('#setAiModel').value.trim(),
+        apiKeyEnv:         $('#setKeyEnv').value.trim()
+      })
+    });
+    log('Настройки сохранены: ' + r.path, 'ok');
+    for(const w of (r.warnings || [])) log('settings: ' + w, 'warn');
+    CFG = await api('/api/config');
+    applySetupState(CFG);
+    if(!$('#srcRoot').value) $('#srcRoot').value = CFG.defaultSourceRoot || '';
+    if(!$('#destDir').value) $('#destDir').value = CFG.defaultDestDir || '';
+    await loadSettings();
+  }catch(e){ log('Не удалось сохранить настройки: ' + e.message, 'err'); }
+  finally{ setBusy(false); }
+};
 
 /* ---------- список миссий ---------- */
 $('#bList').onclick = async () => {
@@ -698,7 +861,8 @@ $('#bReindex').onclick = async () => {
   setBusy(true);
   try{
     const r = await api('/api/reindex', {method:'POST', body:'{}'});
-    $('#mMod').textContent = r.count;
+    CFG = await api('/api/config');
+    applySetupState(CFG);
     log('Индекс мода пересобран: ' + r.count + ' префабов', 'ok');
   }catch(e){ log('Ошибка: ' + e.message, 'err'); }
   setBusy(false);

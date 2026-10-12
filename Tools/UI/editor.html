@@ -303,6 +303,11 @@
   </div>
 </header>
 
+<div id="snapshotNotice" style="display:none;margin:0 20px 12px;max-width:1720px;margin-left:auto;margin-right:auto;padding:11px 15px;border-radius:10px;background:var(--orangebg);border:1px solid rgba(232,133,68,.35);color:var(--orange);font-size:12.5px">
+  Мод префабов недоступен — статусы ссылок проверяются по сохранённому каталогу, а не по живым файлам мода.
+  Укажите <code>PrefabsModRoot</code> в настройках на главной странице и пересоберите каталог.
+</div>
+
 <!-- Панель инструментов: База ремапа -->
 <div class="toolbar" id="toolbarRemap">
   <div class="seg">
@@ -844,6 +849,9 @@ async function loadAllData() {
     gCsrfToken = config.csrfToken;
     gBaseline = { tree: cloneJson(model.tree), versionHash: model.versionHash || '' };
     gModIndex = index;
+    // Without the prefab mod the server validates against the persisted catalog
+    // snapshot; the operator must be told that statuses may lag behind the real mod.
+    document.getElementById('snapshotNotice').style.display = model.modIndexLive ? 'none' : '';
     gCatalogBaseline = { old: cloneJson(oldCatalog), new: cloneJson(newCatalog) };
     adoptReplay(replayOperations(gBaseline.tree, []));
     return true;

@@ -38,15 +38,39 @@ $script:SuspectRx = '(?i)(drg_|dim_|Char_A2F|Char_RHS|Role_Character|/Group_RHS|
 $script:IgnoreRx  = '(?i)(/System/|MissionEndTimer|/Logic/|GameMode|/Modes/|Manager\.et$|Trigger|PerceptionManager|AIWorld)'
 
 # ------------------------------------------------------------------ config
+# Every path here is machine-specific, so nothing may hardcode a user profile or a
+# drive. The addon root is auto-detected from the repository layout; the prefab mod
+# root and the legacy source root stay EMPTY until the operator supplies them in a
+# local, git-ignored config file (see the "user config" section below).
+$script:RMRepoRoot = if ($PSScriptRoot) { Split-Path -Parent $PSScriptRoot } else { (Get-Location).Path }
+
+# The addon is the only directory in the repository that holds a .gproj file. Finding
+# it keeps this portable even if the repository or addon folder is renamed.
+function Get-RMAutoAddonRoot([string]$RepoRoot) {
+    if ([string]::IsNullOrWhiteSpace($RepoRoot) -or -not (Test-Path -LiteralPath $RepoRoot -PathType Container)) { return '' }
+    $hits = @(Get-ChildItem -LiteralPath $RepoRoot -Recurse -Depth 2 -File -Filter *.gproj -ErrorAction SilentlyContinue |
+              Select-Object -ExpandProperty DirectoryName -Unique)
+    if ($hits.Count -eq 1) { return $hits[0] }
+    $fallback = Join-Path $RepoRoot (Split-Path -Leaf $RepoRoot)
+    if (Test-Path -LiteralPath $fallback -PathType Container) { return $fallback }
+    return ''
+}
+
 $script:RMC = @{
-    AddonRoot      = 'C:\Users\armen\Documents\GitHub\PodvalTvTMissions\PodvalTvTMissions'
-    PrefabsModRoot = 'C:\Users\armen\Documents\GitHub\PodvalTvTPrefabs\PodvalTvTPrefabs'
+    AddonRoot      = (Get-RMAutoAddonRoot $script:RMRepoRoot)
+    PrefabsModRoot = ''
     RemapTable     = (Join-Path $PSScriptRoot 'remap_table.json')
     CatalogNew     = (Join-Path $PSScriptRoot 'catalog_new_prefabs.json')
     CatalogOld     = (Join-Path $PSScriptRoot 'catalog_old_prefabs.json')
-    DefaultSourceRoot = 'C:\Users\armen\Desktop\PodvalCommunityEvent\Worlds'
+    DefaultSourceRoot = ''
+    DefaultDestDir    = ''
     IndexCache     = (Join-Path $env:TEMP 'podval_mod_index.tsv')
+    UserConfig     = ''
 }
+# DefaultDestDir is derived from AddonRoot until the operator sets it explicitly.
+$script:RMDestDirIsAuto = $true
+if ($script:RMC.AddonRoot) { $script:RMC.DefaultDestDir = (Join-Path $script:RMC.AddonRoot 'Worlds') }
+
 function Get-RMConfig { return $script:RMC }
 function Set-RMConfig([hashtable]$Overrides) {
     if ($Overrides.ContainsKey('CatalogNew') -or $Overrides.ContainsKey('PrefabsModRoot')) {
@@ -54,9 +78,169 @@ function Set-RMConfig([hashtable]$Overrides) {
     }
     if ($Overrides.ContainsKey('PrefabsModRoot') -or $Overrides.ContainsKey('IndexCache')) {
         $script:ModIndexCache = @{}
+        $script:ModIndexWarned = $false
+        $script:ModIndexUnavailable = $false
+    }
+    if ($Overrides.ContainsKey('AddonRoot') -and $script:RMDestDirIsAuto -and -not $Overrides.ContainsKey('DefaultDestDir')) {
+        $newAddon = [string]$Overrides['AddonRoot']
+        if (-not [string]::IsNullOrWhiteSpace($newAddon)) { $Overrides['DefaultDestDir'] = (Join-Path $newAddon 'Worlds') }
     }
     foreach ($k in $Overrides.Keys) { $script:RMC[$k] = $Overrides[$k] }
+    if ($Overrides.ContainsKey('DefaultDestDir')) { $script:RMDestDirIsAuto = $false }
     return $script:RMC
+}
+
+# ------------------------------------------------------------------ user config
+# Machine-specific settings live in a local JSON file that is deliberately NOT tracked
+# by git, so every operator keeps their own paths. The accepted keys are an explicit
+# whitelist: a stray key in the file must never silently become configuration.
+$script:RMPathKeys = @('AddonRoot','PrefabsModRoot','RemapTable','CatalogNew','CatalogOld',
+                       'DefaultSourceRoot','DefaultDestDir','IndexCache')
+# 'Port' is written by the local web UI and consumed by UI\Serve-RestoreUI.ps1; the core
+# only has to carry it through import/export without treating it as an unknown key.
+$script:RMValueKeys = @('ApiKeyEnv','AiBaseUrl','AiModel','Port')
+
+function Expand-RMPathValue([string]$Value) {
+    if ([string]::IsNullOrWhiteSpace($Value)) { return '' }
+    $expanded = [System.Environment]::ExpandEnvironmentVariables($Value.Trim())
+    if ($expanded.StartsWith('~')) { $expanded = Join-Path $HOME $expanded.Substring(1).TrimStart('\', '/') }
+    return $expanded.Trim()
+}
+
+# Returns $null when the value is acceptable, otherwise a message explaining the problem.
+function Test-RMPathSetting([string]$Kind, [string]$Value) {
+    if ([string]::IsNullOrWhiteSpace($Value)) {
+        if ($Kind -eq 'source') { return $null }   # optional: legacy missions may not be present yet
+        return 'путь не задан'
+    }
+    if (-not (Test-Path -LiteralPath $Value -PathType Container)) { return "каталог не найден: $Value" }
+    if ($Kind -eq 'addon') {
+        $gproj = @(Get-ChildItem -LiteralPath $Value -File -Filter *.gproj -ErrorAction SilentlyContinue)
+        if ($gproj.Count -eq 0) { return "в каталоге нет файла .gproj аддона: $Value" }
+    }
+    return $null
+}
+
+function Get-RMUserConfigPath([string]$ExplicitPath) {
+    if ($ExplicitPath) { return (Get-RMAbsolutePath $ExplicitPath) }
+    if ($script:RMC.UserConfig) { return (Get-RMAbsolutePath $script:RMC.UserConfig) }
+    $preferred = Join-Path $PSScriptRoot 'tool.config.json'
+    $legacy    = Join-Path $PSScriptRoot 'UI\ui.config.json'
+    if (Test-Path -LiteralPath $preferred -PathType Leaf) { return (Get-RMAbsolutePath $preferred) }
+    if (Test-Path -LiteralPath $legacy -PathType Leaf) { return (Get-RMAbsolutePath $legacy) }
+    return (Get-RMAbsolutePath $preferred)
+}
+
+function Import-RMUserConfig {
+    [CmdletBinding()]
+    param([string]$Path)
+
+    $resolved = Get-RMUserConfigPath $Path
+    $script:RMC.UserConfig = $resolved
+    $warnings = New-Object System.Collections.Generic.List[string]
+    $applied  = @{}
+    if (-not (Test-Path -LiteralPath $resolved -PathType Leaf)) {
+        $warnings.Add("Файл локальных настроек не найден: $resolved")
+        return [pscustomobject]@{ Path=$resolved; Exists=$false; Applied=$applied; Warnings=@($warnings) }
+    }
+
+    try { $fileCfg = Get-Content -LiteralPath $resolved -Raw | ConvertFrom-Json }
+    catch { throw "Не удалось прочитать файл настроек $resolved : $($_.Exception.Message)" }
+    if ($null -eq $fileCfg) {
+        $warnings.Add("Файл настроек пуст: $resolved")
+        return [pscustomobject]@{ Path=$resolved; Exists=$false; Applied=$applied; Warnings=@($warnings) }
+    }
+
+    $set = @{}
+    foreach ($p in $fileCfg.PSObject.Properties) {
+        # Keys starting with "_" are treated as comments: the shipped example file is
+        # self-documenting, so its annotations must not be reported as unknown settings.
+        if ($p.Name.StartsWith('_')) { continue }
+        if (($script:RMPathKeys + $script:RMValueKeys) -notcontains $p.Name) {
+            $warnings.Add("Игнорируется неизвестный ключ настроек: $($p.Name)")
+            continue
+        }
+        $value = if ($script:RMPathKeys -contains $p.Name) { Expand-RMPathValue ([string]$p.Value) } else { ([string]$p.Value).Trim() }
+        # An empty value means "not configured" and must never erase a usable default.
+        if ([string]::IsNullOrWhiteSpace($value)) { continue }
+        $set[$p.Name] = $value
+    }
+
+    # A stored path that no longer exists (drive letter changed, repo moved) must not
+    # break the rest of the tool: drop it and report, so the UI can ask for it again.
+    foreach ($pair in @(@('AddonRoot','addon'), @('PrefabsModRoot','prefabs'), @('DefaultSourceRoot','source'))) {
+        $key = $pair[0]
+        if (-not $set.ContainsKey($key)) { continue }
+        $problem = Test-RMPathSetting $pair[1] $set[$key]
+        if ($problem) { $warnings.Add("$key : $problem"); $set.Remove($key) }
+    }
+
+    if ($set.Count -gt 0) {
+        Set-RMConfig $set | Out-Null
+        foreach ($k in $set.Keys) { $applied[$k] = $set[$k] }
+    }
+    return [pscustomobject]@{ Path=$resolved; Exists=$true; Applied=$applied; Warnings=@($warnings) }
+}
+
+function Save-RMUserConfig {
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory)][hashtable]$Values,
+        [string]$Path
+    )
+    $resolved = Get-RMUserConfigPath $Path
+
+    # Reject the whole save when a path is wrong, so the operator never ends up with a
+    # stored configuration that cannot work.
+    $rejected = New-Object System.Collections.Generic.List[string]
+    foreach ($pair in @(@('AddonRoot','addon'), @('PrefabsModRoot','prefabs'), @('DefaultSourceRoot','source'))) {
+        $key = $pair[0]
+        if (-not $Values.ContainsKey($key)) { continue }
+        $problem = Test-RMPathSetting $pair[1] (Expand-RMPathValue ([string]$Values[$key]))
+        if ($problem) { $rejected.Add("$key : $problem") }
+    }
+    if ($rejected.Count -gt 0) { throw ("Настройки не сохранены: " + ($rejected -join '; ')) }
+
+    $doc = [ordered]@{}
+    if (Test-Path -LiteralPath $resolved -PathType Leaf) {
+        try { $existing = Get-Content -LiteralPath $resolved -Raw | ConvertFrom-Json } catch { $existing = $null }
+        if ($existing) { foreach ($p in $existing.PSObject.Properties) { $doc[$p.Name] = $p.Value } }
+    }
+    foreach ($k in $Values.Keys) {
+        $v = $Values[$k]
+        if ($null -eq $v) { $doc[$k] = '' }
+        elseif ($script:RMPathKeys -contains $k) { $doc[$k] = Expand-RMPathValue ([string]$v) }
+        else { $doc[$k] = ([string]$v).Trim() }
+    }
+
+    $dir = Split-Path -Parent $resolved
+    if (-not (Test-Path -LiteralPath $dir -PathType Container)) { $null = New-Item -ItemType Directory -Path $dir -Force }
+    $backup = ''
+    if (Test-Path -LiteralPath $resolved -PathType Leaf) {
+        $backup = $resolved + '.bak'
+        Copy-Item -LiteralPath $resolved -Destination $backup -Force
+    }
+    Write-Text $resolved (($doc | ConvertTo-Json -Depth 6) + "`n")
+    $script:RMC.UserConfig = $resolved
+    return [pscustomobject]@{ ok=$true; path=$resolved; backupFile=$backup }
+}
+
+# Which required paths are still unset. The UI turns this into a "configure me" banner.
+function Get-RMConfigurationState {
+    $missing = New-Object System.Collections.Generic.List[string]
+    if ([string]::IsNullOrWhiteSpace($script:RMC.AddonRoot)) { $missing.Add('AddonRoot') }
+    if ([string]::IsNullOrWhiteSpace($script:RMC.PrefabsModRoot)) { $missing.Add('PrefabsModRoot') }
+    return [pscustomobject]@{ Configured=($missing.Count -eq 0); Missing=@($missing) }
+}
+
+# Prefab-dependent operations must fail with an actionable message instead of a stack
+# trace when the prefab mod is not configured or not present on this machine.
+function Assert-RMModIndex($Index, [string]$Operation) {
+    if ($Index -and @($Index.Keys).Count -gt 0) { return }
+    $root = [string]$script:RMC.PrefabsModRoot
+    $shown = if ([string]::IsNullOrWhiteSpace($root)) { 'не задан' } else { $root }
+    throw ("Префабы мода недоступны ($Operation): PrefabsModRoot = $shown. " +
+           "Укажите его в локальном файле настроек $($script:RMC.UserConfig) и перезапустите инструмент.")
 }
 
 # ------------------------------------------------------------------ io helpers
@@ -176,6 +360,8 @@ function Get-RMRestorePaths([string]$SourceMission, [string]$DestDir, [string]$A
 # ------------------------------------------------------------------ mod index
 # Build GUID(upper) -> relative resource path from all *.et.meta in the prefabs mod.
 $script:ModIndexCache = @{}
+$script:ModIndexWarned = $false
+$script:ModIndexUnavailable = $false
 function Build-ModIndex {
     [CmdletBinding()]
     param(
@@ -184,7 +370,20 @@ function Build-ModIndex {
     )
     if (-not $ModRoots) { $ModRoots = @($script:RMC.PrefabsModRoot) }
 
-    $roots = @($ModRoots | ForEach-Object { Get-RMCanonicalPath $_ } | Sort-Object -Unique)
+    # An unconfigured prefab mod is a normal first-run state, not a crash: the UI still
+    # starts, the persisted catalog still answers suggestions, and the operations that
+    # genuinely need the prefab mod report an actionable error.
+    $requested = @($ModRoots | Where-Object { -not [string]::IsNullOrWhiteSpace($_) })
+    if ($requested.Count -eq 0) {
+        if (-not $script:ModIndexWarned) {
+            Write-Verbose 'Prefab mod root is not configured. Set PrefabsModRoot in the local tool config.'
+            $script:ModIndexWarned = $true
+        }
+        $script:ModIndexUnavailable = $true
+        return @{}
+    }
+
+    $roots = @($requested | ForEach-Object { Get-RMCanonicalPath $_ } | Sort-Object -Unique)
     $sha = [System.Security.Cryptography.SHA256]::Create()
     try {
         $key = [System.BitConverter]::ToString($sha.ComputeHash($script:Utf8NoBom.GetBytes(
@@ -207,13 +406,21 @@ function Build-ModIndex {
 
     $idx = @{}
     foreach ($root in $roots) {
-        if (-not (Test-Path -LiteralPath $root -PathType Container)) { throw "Prefab mod directory not found: $root" }
+        if (-not (Test-Path -LiteralPath $root -PathType Container)) {
+            if (-not $script:ModIndexWarned) {
+                Write-Warning ("Prefab mod directory not found: {0}" -f $root)
+                $script:ModIndexWarned = $true
+            }
+            $script:ModIndexUnavailable = $true
+            continue
+        }
         Get-ChildItem -LiteralPath $root -Recurse -File -Filter *.et.meta -ErrorAction Stop | ForEach-Object {
             $t = Read-Text $_.FullName
             $m = [regex]::Match($t, $script:MetaRefRx)
             if ($m.Success) { $idx[$m.Groups[1].Value.ToUpper()] = $m.Groups[2].Value }
         }
     }
+    if ($idx.Count -gt 0) { $script:ModIndexUnavailable = $false }
     # persist cache
     $lines = foreach ($k in $idx.Keys) { $k + "`t" + $idx[$k] }
     try { Write-Text $cacheFile (($lines -join "`n") + "`n") }
@@ -233,6 +440,7 @@ function Build-NewPrefabsCatalog {
 
     $script:NewCatalogCache = $null
     $modIndex = Build-ModIndex -Refresh:$Refresh
+    Assert-RMModIndex $modIndex 'build prefab catalog'
     $remap = Load-RemapTable
 
     $mappedCounts = @{}
@@ -296,6 +504,7 @@ function Build-OldPrefabsCatalog {
     )
 
     $modIndex = Build-ModIndex
+    Assert-RMModIndex $modIndex 'build legacy prefab catalog'
     $remap = Load-RemapTable
 
     $rx = [regex]'\{([0-9A-Fa-f]{16})\}([^"]+?\.et)'
@@ -447,6 +656,25 @@ function Get-NewCatalogCandidateFeatures([string]$Path = $script:RMC.CatalogNew)
         }
     }
     return $features
+}
+
+# The read-only remap table must stay usable when the prefab mod is absent. Validating
+# against an EMPTY index would report every filled entry as "target missing", which is
+# a false alarm, so fall back to the persisted catalog snapshot and report that the
+# result came from a snapshot rather than from the live mod.
+function Get-RMEffectiveModIndex {
+    $live = Build-ModIndex
+    if ($live -and @($live.Keys).Count -gt 0) {
+        return [pscustomobject]@{ Index=$live; Source='mod'; Live=$true }
+    }
+    $catalogPath = [string]$script:RMC.CatalogNew
+    if (-not [string]::IsNullOrWhiteSpace($catalogPath) -and (Test-Path -LiteralPath $catalogPath -PathType Leaf)) {
+        try {
+            $snapshot = Get-NewCatalogModIndex -Path $catalogPath
+            return [pscustomobject]@{ Index=$snapshot; Source='catalog'; Live=$false }
+        } catch { }
+    }
+    return [pscustomobject]@{ Index=@{}; Source='none'; Live=$false }
 }
 
 function Get-OldPrefabsCatalog([string]$Path = $script:RMC.CatalogOld) {
@@ -602,7 +830,10 @@ function Get-RemapModel {
     $raw = Read-Text $Path
     $hash = Get-RemapFileHash $Path
     $json = $raw | ConvertFrom-Json
-    $modIndex = Build-ModIndex
+    # Read-only view: tolerate a missing prefab mod by validating against the catalog
+    # snapshot instead of an empty index (which would flag every entry as broken).
+    $effective = Get-RMEffectiveModIndex
+    $modIndex = $effective.Index
 
     # Count occurrences of old refs to detect dups
     $oldRefCounts = @{}
@@ -678,6 +909,10 @@ function Get-RemapModel {
         tree        = $json
         entries     = $entries.ToArray()
         stats       = [pscustomobject]$st
+        # Tells the UI whether target validation ran against the live prefab mod or
+        # against the persisted catalog snapshot (prefab mod not configured).
+        modIndexSource = $effective.Source
+        modIndexLive   = $effective.Live
     }
 }
 
@@ -1405,6 +1640,7 @@ function Scan-Mission {
         [switch]$WriteStubs
     )
     $modIndex = Build-ModIndex
+    Assert-RMModIndex $modIndex 'scan mission'
     $remap    = Load-RemapTable -Path $RemapTable
     $refs     = Get-MissionRefs -MissionDir $MissionDir
     $classified = Classify-Refs -Refs $refs -ModIndex $modIndex -Remap $remap
@@ -1441,6 +1677,7 @@ function Invoke-Restore {
     )
     $paths = Get-RMRestorePaths -SourceMission $SourceMission -DestDir $DestDir -AddonRoot $AddonRoot -Force:$Force
     $modIndex = Build-ModIndex
+    Assert-RMModIndex $modIndex 'restore mission'
     $remap    = Load-RemapTable -Path $RemapTable
     $lookup   = Get-RMReplacementIndex $remap $modIndex
     # Read the source files before replacing an existing destination.

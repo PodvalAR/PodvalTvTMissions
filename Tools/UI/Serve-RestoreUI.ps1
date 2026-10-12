@@ -22,28 +22,41 @@ param(
 $ErrorActionPreference = 'Stop'
 $ScriptDir = $PSScriptRoot
 if (-not $ScriptDir) { $ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path }
-if (-not $ConfigPath) { $ConfigPath = Join-Path $ScriptDir 'ui.config.json' }
 . (Join-Path (Split-Path $ScriptDir -Parent) 'Restore-Core.ps1')
 
 # ------------------------------------------------------------------ config
+# Paths are machine-specific and come from the local, git-ignored tool config. The
+# server-specific keys keep their built-in defaults and are overridden by the same file.
 $cfg = @{
     Port           = 8787
-    AddonRoot      = 'C:\Users\armen\Documents\GitHub\PodvalTvTMissions\PodvalTvTMissions'
-    PrefabsModRoot = 'C:\Users\armen\Documents\GitHub\PodvalTvTPrefabs\PodvalTvTPrefabs'
-    RemapTable     = (Join-Path (Split-Path $ScriptDir -Parent) 'remap_table.json')
-    DefaultSourceRoot = 'C:\Users\armen\Desktop\PodvalCommunityEvent\Worlds'
-    DefaultDestDir    = 'C:\Users\armen\Documents\GitHub\PodvalTvTMissions\PodvalTvTMissions\Worlds\RamboKZ\Peroi'
     ApiKeyEnv      = 'JUSTWOKER_API_KEY'
     AiBaseUrl      = 'https://api.justwoker.icu/v1'
     AiModel        = 'claude-opus-4-8'
 }
-if (Test-Path -LiteralPath $ConfigPath) {
-    $fileCfg = Get-Content -LiteralPath $ConfigPath -Raw | ConvertFrom-Json
-    foreach ($p in $fileCfg.PSObject.Properties) { $cfg[$p.Name] = $p.Value }
+if ($Port) { $cfg.Port = $Port }
+if ($ConfigPath) {
+    $cfgImport = Import-RMUserConfig -Path $ConfigPath
+} else {
+    # Precedence: Tools\tool.config.json, then the legacy Tools\UI\ui.config.json.
+    $cfgImport = Import-RMUserConfig
 }
+foreach ($w in $cfgImport.Warnings) { Write-Host "Настройки: $w" -ForegroundColor DarkYellow }
+foreach ($key in @('ApiKeyEnv','AiBaseUrl','AiModel')) {
+    $value = [string]$cfgImport.Applied[$key]
+    if ($value) { $cfg[$key] = $value }
+}
+if ($cfgImport.Applied.ContainsKey('Port')) { $cfg.Port = [int]$cfgImport.Applied['Port'] }
 if ($Port) { $cfg.Port = $Port }
 
-Set-RMConfig @{ AddonRoot=$cfg.AddonRoot; PrefabsModRoot=$cfg.PrefabsModRoot; RemapTable=$cfg.RemapTable } | Out-Null
+$state = Get-RMConfigurationState
+$cfg.MissingSettings = $state.Missing
+$cfg.PathsConfigured = $state.Configured
+$cfg.DefaultSourceRoot = [string]$script:RMC.DefaultSourceRoot
+$cfg.DefaultDestDir    = [string]$script:RMC.DefaultDestDir
+$cfg.PrefabsModRoot    = [string]$script:RMC.PrefabsModRoot
+$cfg.AddonRoot         = [string]$script:RMC.AddonRoot
+$cfg.RemapTable        = [string]$script:RMC.RemapTable
+$cfg.UserConfig        = [string]$script:RMC.UserConfig
 
 # resolve the API key across process/user/machine scopes (so a freshly setx-ed key
 # works without needing to restart the shell/session)
@@ -113,6 +126,25 @@ function Test-PostRequest($ctx) {
 $script:CsrfToken = New-RestoreToken
 $script:ServerOrigin = ([uri]"http://localhost:$($cfg.Port)/").GetLeftPart([System.UriPartial]::Authority)
 
+# Values shown in the settings panel. The API key itself is never exposed: only the
+# NAME of the environment variable that holds it.
+function Get-RMSettingsView {
+    $rm = Get-RMConfig
+    return [pscustomobject]@{
+        addonRoot         = [string]$rm.AddonRoot
+        prefabsModRoot    = [string]$rm.PrefabsModRoot
+        remapTable        = [string]$rm.RemapTable
+        defaultSourceRoot = [string]$rm.DefaultSourceRoot
+        defaultDestDir    = [string]$rm.DefaultDestDir
+        apiKeyEnv         = [string]$cfg.ApiKeyEnv
+        aiBaseUrl         = [string]$cfg.AiBaseUrl
+        aiModel           = [string]$cfg.AiModel
+        port              = [int]$cfg.Port
+        configPath        = [string]$rm.UserConfig
+        apiKeyPresent     = [bool](Get-ApiKey $cfg.ApiKeyEnv)
+    }
+}
+
 # find mission folders (a dir that directly contains a *.ent file)
 function Find-Missions([string]$Root) {
     $out = New-Object System.Collections.Generic.List[object]
@@ -134,16 +166,64 @@ function Handle-Api($ctx) {
     switch ("$method $path") {
         'GET /api/config' {
             $ctx.Response.Headers['Cache-Control'] = 'no-store'
+            # A missing prefab mod is a first-run state, not a failure: the UI must still
+            # load so the operator can enter the paths and save them.
+            $modIndex = @{}
+            $modIndexError = ''
+            try { $modIndex = Build-ModIndex }
+            catch { $modIndexError = $_.Exception.Message }
+            $state = Get-RMConfigurationState
             Send-Json $ctx ([pscustomobject]@{
                 csrfToken         = $script:CsrfToken
-                defaultSourceRoot = $cfg.DefaultSourceRoot
-                defaultDestDir    = $cfg.DefaultDestDir
-                remapTable        = $cfg.RemapTable
-                prefabsModRoot    = $cfg.PrefabsModRoot
+                defaultSourceRoot = $script:RMC.DefaultSourceRoot
+                defaultDestDir    = $script:RMC.DefaultDestDir
+                remapTable        = $script:RMC.RemapTable
+                addonRoot         = $script:RMC.AddonRoot
+                prefabsModRoot    = $script:RMC.PrefabsModRoot
+                userConfig        = $script:RMC.UserConfig
+                pathsConfigured   = $state.Configured
+                missingSettings   = @($state.Missing)
+                prefabsAvailable  = ($modIndex.Count -gt 0)
+                prefabsError      = $modIndexError
                 aiEnabled         = [bool](Get-ApiKey $cfg.ApiKeyEnv)
                 aiModel           = $cfg.AiModel
-                modIndexCount     = (Build-ModIndex).Count
+                aiKeyEnv          = $cfg.ApiKeyEnv
+                modIndexCount     = $modIndex.Count
             })
+            return
+        }
+        'GET /api/settings' {
+            $ctx.Response.Headers['Cache-Control'] = 'no-store'
+            Send-Json $ctx (Get-RMSettingsView)
+            return
+        }
+        'POST /api/settings' {
+            $b = Read-Body $ctx
+            $values = @{}
+            foreach ($key in @($script:RMPathKeys) + @($script:RMValueKeys)) {
+                if ($b -and $null -ne $b.PSObject.Properties[$key]) { $values[$key] = [string]$b.PSObject.Properties[$key].Value }
+            }
+            try {
+                $saved = Save-RMUserConfig -Values $values
+                $reimport = Import-RMUserConfig -Path $saved.path
+                foreach ($key in @('ApiKeyEnv','AiBaseUrl','AiModel')) {
+                    $value = [string]$reimport.Applied[$key]
+                    if ($value) { $cfg[$key] = $value }
+                }
+                $cfg.DefaultSourceRoot = [string]$script:RMC.DefaultSourceRoot
+                $cfg.DefaultDestDir    = [string]$script:RMC.DefaultDestDir
+                $cfg.PrefabsModRoot    = [string]$script:RMC.PrefabsModRoot
+                $cfg.AddonRoot         = [string]$script:RMC.AddonRoot
+                $cfg.RemapTable        = [string]$script:RMC.RemapTable
+                $cfg.UserConfig        = [string]$script:RMC.UserConfig
+                $state = Get-RMConfigurationState
+                Send-Json $ctx ([pscustomobject]@{
+                    ok=$true; path=$saved.path; backupFile=$saved.backupFile
+                    settings=(Get-RMSettingsView); warnings=@($reimport.Warnings)
+                })
+            } catch {
+                Send-Json $ctx ([pscustomobject]@{ ok=$false; error=$_.Exception.Message }) 400
+            }
             return
         }
         'GET /api/missions' {
@@ -291,17 +371,56 @@ function Handle-Api($ctx) {
 }
 
 # ------------------------------------------------------------------ listener
-$prefix = "http://localhost:$($cfg.Port)/"
-$listener = [System.Net.HttpListener]::new()
+# Another tool already holding the default port must not be fatal: try the configured
+# port first, then a short range of neighbours, and report only if all of them fail.
+# Each attempt needs its OWN HttpListener: once Start() has failed, the instance can no
+# longer accept or release prefixes, it throws an argument error instead.
+$prefix = $null
+$listener = $null
+$lastError = ''
+foreach ($candidate in ($cfg.Port..($cfg.Port + 9))) {
+    $attempt = "http://localhost:$candidate/"
+    $attemptListener = [System.Net.HttpListener]::new()
+    $script:Listener = $attemptListener
+    try {
+        $attemptListener.Prefixes.Add($attempt)
+        $attemptListener.Start()
+        $listener = $attemptListener
+        $prefix = $attempt
+        break
+    } catch {
+        $lastError = $_.Exception.Message
+        try { if ($attemptListener.IsListening) { $attemptListener.Stop() } } catch {}
+        try { $attemptListener.Close() } catch {}
+    }
+}
+if (-not $prefix) {
+    Write-Host "Не удалось занять порты $($cfg.Port)-$($cfg.Port + 9): $lastError" -ForegroundColor Red
+    Write-Host 'Укажите свободный порт в настройках (Port) или передайте -Port.' -ForegroundColor Red
+    exit 1
+}
 $script:Listener = $listener
-$listener.Prefixes.Add($prefix)
-try { $listener.Start() }
-catch { Write-Host "Не удалось занять порт $prefix : $($_.Exception.Message)" -ForegroundColor Red; exit 1 }
+if ($cfg.Port -ne ([uri]$prefix).Port) {
+    $cfg.Port = ([uri]$prefix).Port
+    $script:ServerOrigin = ([uri]$prefix).GetLeftPart([System.UriPartial]::Authority)
+    Write-Host "Порт $($cfg.Port) занят другим приложением, сервер запущен на свободном порту $($cfg.Port)." -ForegroundColor Yellow
+}
 
+$modIndexCount = (Build-ModIndex).Count
 Write-Host ""
 Write-Host "  Восстановление миссий  ->  $prefix" -ForegroundColor Green
-Write-Host "  Префабов в моде: $((Build-ModIndex).Count)" -ForegroundColor DarkGray
+Write-Host "  Префабов в моде: $modIndexCount" -ForegroundColor DarkGray
 Write-Host "  ИИ-подсказки: $(if (Get-ApiKey $cfg.ApiKeyEnv) {'вкл ('+$cfg.AiModel+')'} else {'выкл ('+$cfg.ApiKeyEnv+' не задан)'})" -ForegroundColor DarkGray
+Write-Host "  Настройки: $($cfg.UserConfig)" -ForegroundColor DarkGray
+if (-not $state.Configured) {
+    Write-Host ''
+    Write-Host "  Не заданы обязательные пути: $($state.Missing -join ', ')" -ForegroundColor Yellow
+    Write-Host "  Откройте панель «Настройки» в интерфейсе и сохраните их." -ForegroundColor Yellow
+} elseif ($modIndexCount -eq 0) {
+    Write-Host ''
+    Write-Host "  Каталог префабов мода недоступен: $($cfg.PrefabsModRoot)" -ForegroundColor Yellow
+    Write-Host "  Подсказки и таблица замен работают по сохранённому каталогу, проверка и восстановление — нет." -ForegroundColor Yellow
+}
 Write-Host "  Остановить: кнопка в интерфейсе или Ctrl+C в этом окне" -ForegroundColor DarkGray
 Write-Host ""
 
