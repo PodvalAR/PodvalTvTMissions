@@ -156,9 +156,19 @@
     border:1px solid var(--line);background:var(--panel3);color:var(--mut);
   }
   .cand-row .warn{
-    font-size:10.5px;padding:1px 6px;border-radius:4px;white-space:nowrap;flex:none;
+    font-size:10.5px;padding:1px 6px;border-radius:4px;display:block;margin-top:4px;
     border:1px solid #6b3a2a;background:rgba(220,80,50,.14);color:#e08a5f;
   }
+  .candidate-info{flex:1;min-width:0}
+  .candidate-info .p{display:block}
+  .candidate-reasons{margin:5px 0 0;padding-left:18px;color:var(--mut);font-size:11px;line-height:1.5}
+  .candidate-level{color:var(--mut2);font-size:11px;margin-top:4px}
+  .candidate-fallback{border-top:1px solid var(--line);margin-top:14px;padding-top:10px}
+  .candidate-section-title{font-size:12px;font-weight:600;margin-bottom:8px}
+  .ai-recommendation{border:1px solid var(--green);border-radius:7px;padding:12px;margin:10px 0;background:var(--panel);font-size:12px}
+  .ai-recommendation.uncertain,.ai-recommendation.no-match{border-color:#e08a5f}
+  .ai-recommendation p{margin:6px 0;line-height:1.5}
+  .ai-recommendation .p{font-family:monospace;word-break:break-all;margin:8px 0}
 
   .empty{padding:26px;text-align:center;color:var(--mut2);font-size:13px}
   .empty .big{font-size:26px;display:block;margin-bottom:8px;opacity:.55}
@@ -357,9 +367,12 @@ const api = async (path, opts={}) => {
   if(!r.ok) throw new Error((await r.text()).slice(0,300) || ('HTTP '+r.status));
   return r.json();
 };
-const esc = s => String(s).replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
 let CFG = {}, lastScan = null, busy = false;
+const candidateSessions = new WeakMap();
+const validCandidateRef = ref => typeof ref === 'string' && /^\{[0-9a-f]{16}\}.+\.et$/i.test(ref);
+const candidateSessionCurrent = (box, session) => candidateSessions.get(box) === session && session.scan === lastScan && box.isConnected !== false && !busy;
 
 function log(msg, kind){
   const el = $('#log');
@@ -502,6 +515,7 @@ $('#showAll').onchange = drawRows;
 
 /* ---------- подбор кандидатов ---------- */
 async function suggest(ref, tr){
+  if(busy) return;
   const existing = tr.nextElementSibling;
   if(existing && existing.classList.contains('cand')){ existing.remove(); return; }
 
@@ -511,15 +525,20 @@ async function suggest(ref, tr){
   tr.after(row);
 
   const refPath = lastScan.Refs.find(r => r.Ref === ref)?.Path;
+  const scan = lastScan;
   try{
     const cands = await api('/api/suggest', {method:'POST', body:JSON.stringify({path: refPath})});
+    if(lastScan !== scan || busy || row.isConnected === false) return;
     renderCands(row.querySelector('.candbox'), ref, refPath, cands, null, tr);
   }catch(e){
-    row.querySelector('.candbox').innerHTML = `<div class="lg-err">Ошибка: ${esc(e.message)}</div>`;
+    if(lastScan === scan && row.isConnected !== false) row.querySelector('.candbox').innerHTML = `<div class="lg-err">Ошибка: ${esc(e.message)}</div>`;
   }
 }
 
-function renderCands(box, ref, refPath, cands, bestRef, tr){
+function renderCands(box, ref, refPath, rawCandidates, bestRef, tr, ai=null, session=null){
+  const cands = Array.isArray(rawCandidates) ? rawCandidates.filter(candidate => candidate && validCandidateRef(candidate.Ref)) : [];
+  if(!session) session = {scan:lastScan, aiPending:false};
+  candidateSessions.set(box, session);
   box.innerHTML = '';
   const head = document.createElement('div');
   head.className = 'head';
@@ -527,55 +546,102 @@ function renderCands(box, ref, refPath, cands, bestRef, tr){
   if(CFG.aiEnabled){
     const b = document.createElement('button');
     b.className = 'sm'; b.textContent = 'Спросить ИИ';
+    b.disabled = session.aiPending;
     b.onclick = () => aiPick(box, ref, refPath, tr);
     head.appendChild(b);
   }
   box.appendChild(head);
 
+  if(ai){
+    const status = ai.Status || (ai.Ref ? 'match' : 'no_match');
+    const recommendation = document.createElement('div');
+    recommendation.className = 'ai-recommendation' + (status === 'uncertain' ? ' uncertain' : status === 'no_match' ? ' no-match' : '');
+    const title = status === 'no_match' ? 'Надёжная замена не найдена' : status === 'uncertain' ? 'ИИ не уверен — проверьте замену вручную' : 'Рекомендация ИИ';
+    recommendation.innerHTML = `<strong>${title}</strong><p>${esc(ai.Reason || '')}</p>${status !== 'no_match' ? `<div class="p">${esc(ai.Ref)}</div>` : ''}`;
+    if(status !== 'no_match'){
+      const apply = document.createElement('button');
+      apply.className = 'sm ' + (status === 'uncertain' ? 'ghost' : 'primary');
+      apply.textContent = status === 'uncertain' ? 'Применить вручную' : 'Применить рекомендацию';
+      apply.onclick = () => { if(candidateSessionCurrent(box, session)) return assign(ref, ai.Ref, ai.Ref.split('}').slice(1).join('}'), tr); };
+      recommendation.appendChild(apply);
+    }
+    recommendation.insertAdjacentHTML('beforeend', ` <a href="/editor?q=${encodeURIComponent(ref.slice(1,17))}" target="_blank">Выбрать в каталоге ↗</a>`);
+    box.appendChild(recommendation);
+  }
+
   if(!cands.length){
     box.insertAdjacentHTML('beforeend',
-      '<div class="t">Подходящих префабов в моде нет. Добавьте замену вручную в Tools/remap_table.json.</div>');
+      `<div class="t">Кандидаты не найдены. <a href="/editor?q=${encodeURIComponent(ref.slice(1,17))}" target="_blank">Открыть каталог для ручного выбора ↗</a></div>`);
     return;
   }
 
-  cands.forEach((c,i) => {
+  const main = cands.filter(candidate => candidate.Compatibility !== 'approximate');
+  const approximate = cands.filter(candidate => candidate.Compatibility === 'approximate');
+  if(!main.length) box.insertAdjacentHTML('beforeend', '<div class="t">Совместимых вариантов не найдено.</div>');
+  function addCandidate(parent, c, i){
     const isBest = bestRef && c.Ref === bestRef;
     const d = document.createElement('div');
     d.className = 'cand-row' + (isBest ? ' pick' : '');
+    const reasons = Array.isArray(c.Reasons) ? c.Reasons.filter(value => typeof value === 'string') : [];
+    const warnings = Array.isArray(c.Warnings) ? c.Warnings.filter(value => typeof value === 'string') : [];
+    if(!warnings.length && c.Warn) warnings.push(String(c.Warn));
+    if(c.Compatibility === 'unknown' && !warnings.length) warnings.push('Назначение определено не полностью — проверьте замену.');
+    const label = c.MatchLabel || ({high:'Высокое соответствие',medium:'Среднее соответствие',low:'Слабое соответствие'}[c.MatchLevel]) || 'Соответствие не определено';
     d.innerHTML = `<span class="rank">${i+1}</span>
-      <span class="p">${esc(c.Path)}</span>
-      ${c.ScopeRu ? `<span class="lvl">${esc(c.ScopeRu)}</span>` : ''}
-      ${c.Warn ? `<span class="warn">${esc(c.Warn)}</span>` : ''}
-      <span class="sc">${c.Score} · ${Math.round((c.Confidence||0)*100)}%</span>`;
+      <div class="candidate-info"><span class="p">${esc(c.Path || c.Ref.split('}').slice(1).join('}'))}</span>
+      <div class="candidate-level">${esc(label)}${c.ScopeRu ? ' · ' + esc(c.ScopeRu) : ''}${Number.isFinite(c.Score) ? ' · балл ' + esc(c.Score) : ''}</div>
+      ${reasons.length ? `<ul class="candidate-reasons">${reasons.map(reason => `<li>${esc(reason)}</li>`).join('')}</ul>` : ''}
+      ${warnings.map(warning => `<span class="warn">${esc(warning)}</span>`).join('')}</div>`;
     const b = document.createElement('button');
-    b.className = 'sm primary'; b.textContent = 'Назначить';
-    b.onclick = () => assign(ref, c.Ref, c.Path, tr);
+    b.className = 'sm ' + (c.Compatibility === 'approximate' ? 'ghost' : 'primary');
+    b.textContent = c.Compatibility === 'approximate' ? 'Выбрать вручную' : 'Назначить';
+    b.onclick = () => { if(candidateSessionCurrent(box, session)) return assign(ref, c.Ref, c.Path || c.Ref, tr); };
     d.appendChild(b);
-    box.appendChild(d);
-  });
+    parent.appendChild(d);
+  }
+  main.forEach((candidate,i) => addCandidate(box,candidate,i));
+  if(approximate.length){
+    const section = document.createElement('section');
+    section.className = 'candidate-fallback';
+    section.innerHTML = '<div class="candidate-section-title">Приблизительные замены — ручной выбор</div><p class="t">Эти варианты отличаются по назначению. Проверьте предупреждения перед выбором.</p>';
+    approximate.forEach((candidate,i) => addCandidate(section,candidate,i));
+    box.appendChild(section);
+  }
 }
 
 async function aiPick(box, ref, refPath, tr){
+  const session = candidateSessions.get(box);
+  if(!session || !candidateSessionCurrent(box,session) || session.aiPending) return;
+  session.aiPending = true;
+  const button = box.querySelector('.head button');
+  if(button) button.disabled = true;
   const t = box.querySelector('.head .t');
   if(t) t.textContent = 'ИИ выбирает…';
   box.classList.add('spin');
   try{
     const res = await api('/api/ai-suggest', {method:'POST', body:JSON.stringify({ref, path:refPath})});
-    box.classList.remove('spin');
-    if(res.ok){
-      log(`ИИ: ${res.ai.Ref.split('}')[1]} — ${res.ai.Reason}`, 'ok');
-      renderCands(box, ref, refPath, res.candidates, res.ai.Ref, tr);
-    } else {
-      log('ИИ не ответил: ' + res.error, 'warn');
-      renderCands(box, ref, refPath, res.candidates, null, tr);
-    }
+    if(!candidateSessionCurrent(box,session)) return;
+    if(!res.ok || !res.ai) throw new Error(res.error || 'ИИ не вернул рекомендацию');
+    const status = res.ai.Status || (res.ai.Ref ? 'match' : 'no_match');
+    if(!['match','uncertain','no_match'].includes(status) || (status !== 'no_match' && !validCandidateRef(res.ai.Ref))) throw new Error('ИИ вернул рекомендацию в неверном формате');
+    session.aiPending = false;
+    renderCands(box, ref, refPath, res.candidates, status === 'no_match' ? null : res.ai.Ref, tr, {...res.ai,Status:status}, session);
   }catch(e){
-    box.classList.remove('spin');
-    log('Ошибка ИИ: ' + e.message, 'err');
+    if(candidateSessionCurrent(box,session)) log('Ошибка ИИ: ' + e.message, 'err');
+  }finally{
+    session.aiPending = false;
+    if(candidateSessions.get(box) === session) box.classList.remove('spin');
+    if(candidateSessionCurrent(box,session)){
+      const currentButton = box.querySelector('.head button');
+      if(currentButton) currentButton.disabled = false;
+      const currentTitle = box.querySelector('.head .t');
+      if(currentTitle) currentTitle.textContent = 'Кандидаты на замену';
+    }
   }
 }
 
 async function assign(ref, newRef, path, tr){
+  if(busy) return;
   if (typeof newRef !== 'string' || !/^\{[0-9a-f]{16}\}.+\.et$/i.test(newRef)) {
     log('Ранкер вернул ссылку в неверном формате; замена не записана.', 'err');
     return;

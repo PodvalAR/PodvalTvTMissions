@@ -184,6 +184,17 @@
   }
   .group-note span { flex:1 }
 
+  /* строка листа в дереве */
+  .tree-leaf-list { margin-left:14px; margin-bottom:8px }
+  .tree-leaf-row {
+    display:flex; align-items:center; gap:10px; padding:4px 0;
+    font-size:12px; border-bottom:1px solid rgba(255,255,255,.03);
+  }
+  .tree-leaf-path { flex:0 1 40%; min-width:0; font-family:monospace; word-break:break-all }
+  .tree-leaf-status { flex:0 0 auto; margin-left:auto; display:flex; align-items:center }
+  .tree-leaf-input { display:flex; flex:0 1 38%; min-width:240px }
+  .tree-leaf-actions { flex:0 0 auto; white-space:nowrap; display:flex; gap:6px }
+
   /* ---------- модальные окна ---------- */
   .modal-backdrop {
     position:fixed; inset:0; background:rgba(0,0,0,.65); z-index:100;
@@ -238,6 +249,19 @@
   @keyframes spin { to { transform:rotate(360deg) } }
 
   .empty-state { text-align:center; padding:40px 20px; color:var(--mut2); font-size:13px }
+  .suggest-card { display:flex; align-items:center; gap:10px; padding:10px; background:var(--panel2); border:1px solid var(--line); border-radius:6px; margin-bottom:6px }
+  .suggest-card .candidate-info { flex:1; min-width:0; font-size:11.5px }
+  .candidate-path { font-family:monospace; word-break:break-all }
+  .candidate-reasons { margin:5px 0 0; padding-left:18px; color:var(--mut); line-height:1.5 }
+  .candidate-warning { color:var(--orange); margin-top:4px; font-size:11px }
+  .candidate-level { color:var(--mut); font-size:11px; margin-top:4px }
+  .suggest-fallback { border-top:1px solid var(--line); margin-top:16px; padding-top:12px }
+  .suggest-section-title { font-size:12px; font-weight:600; margin-bottom:8px }
+  .ai-recommendation { padding:12px; border:1px solid var(--green); border-radius:6px; background:var(--panel2); margin-bottom:12px; font-size:12px }
+  .ai-recommendation.uncertain, .ai-recommendation.no-match { border-color:var(--orange) }
+  .ai-recommendation p { margin:6px 0; line-height:1.5 }
+  .ai-recommendation .candidate-path { margin:8px 0 }
+  .ai-recommendation button { margin-top:6px }
 </style>
 </head>
 <body>
@@ -264,8 +288,8 @@
   </div>
 
   <div class="header-actions">
-    <button id="btnRebuildCatalogs" class="sm ghost" onclick="rebuildCatalogs()" title="Пересобрать каталоги старых и новых префабов">
-      <span>↻ Обновить каталоги</span>
+    <button id="btnRebuildCatalogs" class="sm ghost" onclick="rebuildCatalogs()" title="Обновить список доступных префабов для каталога и автоподбора">
+      <span>↻ Обновить каталог префабов</span>
     </button>
     <button id="btnReviewDiff" class="sm ghost" style="display:none" onclick="openReviewModal()">
       <span>Правки: <b id="pendingCount">0</b></span>
@@ -497,6 +521,7 @@
         <button id="btnSuggestTruth" onclick="switchSuggestMode('truth')">Каталог Истины (Все 4735 шт.)</button>
       </div>
       <div id="suggestRankerPanel">
+        <div id="suggestAiRecommendation" aria-live="polite"></div>
         <div id="suggestCandidatesList">Загрузка кандидатов...</div>
       </div>
       <div id="suggestTruthPanel" style="display:none">
@@ -546,6 +571,8 @@ let gTruthCategory = 'all'; // all | Characters | Groups | Vehicles | Props | We
 let gPendingOps = [];
 let gSelectedKeys = new Set();
 let gSuggestTarget = null;
+let gAiSuggestRequest = 0;
+let gAiRecommendation = null;
 let gMoveTarget = null;
 let gBaseline = null;
 let gCatalogBaseline = { old: [], new: [] };
@@ -1024,7 +1051,7 @@ function buildTreeNodeHtml(node, trail, title) {
   }
 
   if (leafKeys.length > 0) {
-    html += `<div style="margin-left:14px;margin-bottom:8px">`;
+    html += `<div class="tree-leaf-list">`;
     for (const lk of leafKeys) {
       const val = node[lk];
       const key = rowKey(trail, lk);
@@ -1033,17 +1060,17 @@ function buildTreeNodeHtml(node, trail, title) {
       const oldDisp = formatRefDisplay(lk);
 
       html += `
-        <div style="display:flex;align-items:center;gap:10px;padding:4px 0;font-size:12px;border-bottom:1px solid rgba(255,255,255,.03)">
-          <div style="flex:1;font-family:monospace;word-break:break-all">
+        <div class="tree-leaf-row">
+          <div class="tree-leaf-path">
             <span style="color:var(--mut2)">${escapeHtml(oldDisp.guid)}</span> <span>${escapeHtml(oldDisp.path)}</span>
           </div>
-          <div>${statusTag}</div>
-          <div style="width:260px">
+          <div class="tree-leaf-status">${statusTag}</div>
+          <div class="tree-leaf-input">
             <input type="text" class="input-ref" value="${escapeHtml(val)}"
                    placeholder="Заглушка"
                    onchange="onLeafValueChange(${jsArg(key)}, this.value)" />
           </div>
-          <div>
+          <div class="tree-leaf-actions">
             <button class="sm" onclick="openSuggestModal(${jsArg(key)})">Подобрать</button>
             <button class="sm danger sm" onclick="deleteLeaf(${jsArg(key)})">✕</button>
           </div>
@@ -1237,6 +1264,11 @@ async function openSuggestModal(keyOrRef) {
   }
   const target = { key: entry?.key || null, oldRef };
   gSuggestTarget = target;
+  gAiSuggestRequest++;
+  gAiRecommendation = null;
+  document.getElementById('suggestAiRecommendation').innerHTML = '';
+  document.getElementById('btnAiSuggest').disabled = false;
+  document.getElementById('btnAiSuggest').textContent = 'Спросить ИИ';
   document.getElementById('suggestSourceRef').textContent = oldRef;
   switchSuggestMode('ranker');
   const list = document.getElementById('suggestCandidatesList');
@@ -1254,24 +1286,35 @@ async function openSuggestModal(keyOrRef) {
 
 function renderCandidates(rawCandidates) {
   const list = document.getElementById('suggestCandidatesList');
-  const candidates = Array.isArray(rawCandidates) ? rawCandidates.filter(candidate => REF_SHAPE.test(candidate.Ref)).map(candidate => ({
-    ref: candidate.Ref, guid: candidate.Guid, path: candidate.Path, score: candidate.Score, warning: candidate.Warn
-  })) : [];
+  const candidates = Array.isArray(rawCandidates) ? rawCandidates.filter(candidate => candidate && typeof candidate.Ref === 'string' && REF_SHAPE.test(candidate.Ref)) : [];
   if (!candidates.length) {
     list.innerHTML = '<div class="empty-state">Ранкер не нашёл похожих префабов.<br>Переключитесь на вкладку «Каталог Истины» для ручного выбора.</div>';
     return;
   }
-  list.innerHTML = candidates.map((candidate, index) => `
-    <div style="display:flex;align-items:center;gap:10px;padding:8px 10px;background:var(--panel2);border:1px solid var(--line);border-radius:6px;margin-bottom:6px">
-      <div style="font-weight:700;color:var(--mut2);font-size:11px;width:18px">${index + 1}</div>
-      <div style="flex:1;font-family:monospace;font-size:11.5px;word-break:break-all">
-        <span style="color:var(--mut2)">{${escapeHtml(candidate.guid)}}</span> <span>${escapeHtml(candidate.path)}</span>
-        ${candidate.warning ? `<span style="display:block;color:var(--orange);font-size:10.5px">${escapeHtml(candidate.warning)}</span>` : ''}
-      </div>
-      <div style="font-size:11px;color:var(--mut2);font-variant-numeric:tabular-nums">${escapeHtml(candidate.score)}</div>
-      <button class="sm primary" onclick="pickCandidate(${jsArg(candidate.ref)})">Выбрать</button>
+  const main = candidates.filter(candidate => candidate.Compatibility !== 'approximate');
+  const approximate = candidates.filter(candidate => candidate.Compatibility === 'approximate');
+  list.innerHTML = (main.length ? `<div class="suggest-section-title">Кандидаты на замену</div>${main.map(candidateCardHtml).join('')}`
+    : '<div style="padding:12px;color:var(--mut)">Совместимых вариантов не найдено. Можно выбрать префаб вручную в «Каталоге Истины».</div>')
+    + (approximate.length ? `<section class="suggest-fallback"><div class="suggest-section-title">Приблизительные замены — ручной выбор</div><p class="candidate-warning">Эти варианты отличаются по назначению. Проверьте предупреждения перед выбором.</p>${approximate.map(candidateCardHtml).join('')}</section>` : '');
+}
+
+function candidateCardHtml(candidate, index) {
+  const display = formatRefDisplay(candidate.Ref);
+  const reasons = Array.isArray(candidate.Reasons) ? candidate.Reasons.filter(value => typeof value === 'string') : [];
+  const warnings = Array.isArray(candidate.Warnings) ? candidate.Warnings.filter(value => typeof value === 'string') : [];
+  if (!warnings.length && candidate.Warn) warnings.push(String(candidate.Warn));
+  if (candidate.Compatibility === 'unknown' && !warnings.length) warnings.push('Назначение определено не полностью — проверьте замену.');
+  const label = candidate.MatchLabel || ({ high: 'Высокое соответствие', medium: 'Среднее соответствие', low: 'Слабое соответствие' }[candidate.MatchLevel]) || 'Соответствие не определено';
+  return `<div class="suggest-card">
+    <div style="font-weight:700;color:var(--mut2);font-size:11px;width:18px">${index + 1}</div>
+    <div class="candidate-info">
+      <div class="candidate-path"><span style="color:var(--mut2)">${escapeHtml(display.guid)}</span> ${escapeHtml(candidate.Path || display.path)}</div>
+      <div class="candidate-level">${escapeHtml(label)}${candidate.ScopeRu ? ' · ' + escapeHtml(candidate.ScopeRu) : ''}${Number.isFinite(candidate.Score) ? ' · балл ' + escapeHtml(candidate.Score) : ''}</div>
+      ${reasons.length ? `<ul class="candidate-reasons">${reasons.map(reason => `<li>${escapeHtml(reason)}</li>`).join('')}</ul>` : ''}
+      ${warnings.map(warning => `<div class="candidate-warning">${escapeHtml(warning)}</div>`).join('')}
     </div>
-  `).join('');
+    <button class="sm ${candidate.Compatibility === 'approximate' ? 'ghost' : 'primary'}" onclick="pickCandidate(${jsArg(candidate.Ref)})">${candidate.Compatibility === 'approximate' ? 'Выбрать вручную' : 'Выбрать'}</button>
+  </div>`;
 }
 
 function renderSuggestTruthList() {
@@ -1318,21 +1361,43 @@ async function requestAiSuggest() {
   const target = gSuggestTarget;
   const button = document.getElementById('btnAiSuggest');
   if (button.disabled) return;
+  const requestId = ++gAiSuggestRequest;
+  gAiRecommendation = null;
+  const panel = document.getElementById('suggestAiRecommendation');
+  panel.innerHTML = '<div class="ai-recommendation">ИИ сравнивает кандидатов...</div>';
   button.disabled = true;
   button.innerHTML = '<span class="spinner"></span> Думает...';
   try {
     const response = await postJson('/api/ai-suggest', { path: target.oldRef, ref: target.oldRef });
     const data = await response.json();
-    if (!response.ok || !data.ok || !data.ai?.Ref) throw new Error(data.error || 'ИИ не вернул рекомендацию');
-    if (gSuggestTarget !== target || editorBusy()) return;
-    alert(`Рекомендация ИИ:\n\n${data.ai.Reason || ''}\n\nВыбранный префаб: ${data.ai.Ref}`);
-    pickCandidate(data.ai.Ref);
+    if (!response.ok || !data.ok || !data.ai) throw new Error(data.error || 'ИИ не вернул рекомендацию');
+    if (gSuggestTarget !== target || requestId !== gAiSuggestRequest || editorBusy()) return;
+    const ai = data.ai;
+    const status = ai.Status || (ai.Ref ? 'match' : 'no_match');
+    if (!['match', 'uncertain', 'no_match'].includes(status) || (status !== 'no_match' && (typeof ai.Ref !== 'string' || !REF_SHAPE.test(ai.Ref)))) {
+      throw new Error('ИИ вернул рекомендацию в неверном формате');
+    }
+    if (Array.isArray(data.candidates)) renderCandidates(data.candidates);
+    const title = status === 'no_match' ? 'Надёжная замена не найдена' : status === 'uncertain' ? 'ИИ не уверен — проверьте замену вручную' : 'Рекомендация ИИ';
+    gAiRecommendation = status === 'no_match' ? null : { target, ref: ai.Ref };
+    panel.innerHTML = `<div class="ai-recommendation ${status === 'no_match' ? 'no-match' : status === 'uncertain' ? 'uncertain' : ''}">
+      <strong>${title}</strong><p>${escapeHtml(ai.Reason || '')}</p>
+      ${status !== 'no_match' ? `<div class="candidate-path">${escapeHtml(ai.Ref)}</div><button class="sm ${status === 'uncertain' ? 'ghost' : 'primary'}" onclick="applyAiRecommendation()">${status === 'uncertain' ? 'Применить вручную' : 'Применить рекомендацию'}</button>` : ''}
+      <button class="sm ghost" onclick="switchSuggestMode('truth')">Выбрать в каталоге</button>
+    </div>`;
   } catch (err) {
-    if (gSuggestTarget === target) alert('Сбой запроса к ИИ: ' + err.message);
+    if (gSuggestTarget === target && requestId === gAiSuggestRequest && !editorBusy()) panel.innerHTML = `<div class="candidate-warning">Сбой запроса к ИИ: ${escapeHtml(err.message)}</div>`;
   } finally {
-    button.disabled = false;
-    button.textContent = 'Спросить ИИ';
+    if (requestId === gAiSuggestRequest) {
+      button.disabled = false;
+      button.textContent = 'Спросить ИИ';
+    }
   }
+}
+
+function applyAiRecommendation() {
+  if (!gAiRecommendation || gAiRecommendation.target !== gSuggestTarget || editorBusy()) return;
+  pickCandidate(gAiRecommendation.ref);
 }
 
 function onLeafValueChange(key, newVal) {
@@ -1550,7 +1615,7 @@ async function rebuildCatalogs() {
     gLoading = false;
     setEditorLock();
     button.disabled = false;
-    button.innerHTML = '↻ Обновить каталоги';
+    button.innerHTML = '↻ Обновить каталог префабов';
   }
 }
 
@@ -1567,7 +1632,7 @@ function openTruthPicker(targetInputId) {
 }
 
 function closeModal(modalId) {
-  if (modalId === 'modalSuggest') gSuggestTarget = null;
+  if (modalId === 'modalSuggest') { gSuggestTarget = null; gAiRecommendation = null; gAiSuggestRequest++; }
   document.getElementById(modalId).classList.remove('open');
 }
 
