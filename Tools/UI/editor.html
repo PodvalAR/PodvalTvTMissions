@@ -331,12 +331,12 @@
   </div>
 
   <div class="seg" id="segTruthCategory">
-    <button class="active" onclick="setTruthCategory('all')">Все</button>
-    <button onclick="setTruthCategory('Characters')">Персонажи</button>
-    <button onclick="setTruthCategory('Groups')">Группы</button>
-    <button onclick="setTruthCategory('Vehicles')">Техника</button>
-    <button onclick="setTruthCategory('Props')">Пропсы/Ящики</button>
-    <button onclick="setTruthCategory('Weapons')">Оружие</button>
+    <button class="active" onclick="setTruthCategory('all', this)">Все</button>
+    <button onclick="setTruthCategory('Characters', this)">Персонажи</button>
+    <button onclick="setTruthCategory('Groups', this)">Группы</button>
+    <button onclick="setTruthCategory('Vehicles', this)">Техника</button>
+    <button onclick="setTruthCategory('Props', this)">Пропсы/Ящики</button>
+    <button onclick="setTruthCategory('Weapons', this)">Оружие</button>
   </div>
 </div>
 
@@ -547,6 +547,247 @@ let gPendingOps = [];
 let gSelectedKeys = new Set();
 let gSuggestTarget = null;
 let gMoveTarget = null;
+let gBaseline = null;
+let gCatalogBaseline = { old: [], new: [] };
+let gNextOperationId = 1;
+let gSaving = false;
+let gLoading = false;
+let gCsrfToken = '';
+let gAddGroupPath = null;
+
+const REF_SHAPE = /^\{[0-9A-Fa-f]{16}\}.+\.et$/i;
+const IGNORE_REF = /\/System\/|MissionEndTimer|\/Logic\/|GameMode|\/Modes\/|Manager\.et$|Trigger|PerceptionManager|AIWorld/i;
+const cloneJson = value => JSON.parse(JSON.stringify(value));
+const rowKey = (groupPath, oldRef) => JSON.stringify([groupPath, oldRef]);
+const dependencyKey = (groupPath, oldRef) => rowKey(groupPath.map(part => part.toLowerCase()), oldRef.toLowerCase());
+const jsArg = value => escapeHtml(JSON.stringify(value));
+const editorBusy = () => gSaving || gLoading;
+const unionIds = (...sets) => [...new Set(sets.flat())];
+
+function setEditorLock() {
+  document.querySelectorAll('header, .toolbar, main, .modal-backdrop').forEach(el => { el.inert = editorBusy(); });
+  document.body.setAttribute('aria-busy', String(editorBusy()));
+}
+
+async function postJson(url, body = {}) {
+  if (!gCsrfToken) throw new Error('Сначала загрузите конфигурацию сервера.');
+  return fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'X-Restore-Token': gCsrfToken },
+    body: JSON.stringify(body)
+  });
+}
+
+function ownKey(node, name) {
+  return Object.keys(node).find(key => key.toLowerCase() === String(name).toLowerCase());
+}
+
+function putProperty(node, name, value) {
+  Object.defineProperty(node, name, { value, enumerable: true, writable: true, configurable: true });
+}
+
+function groupParts(spec) {
+  if (Array.isArray(spec)) return spec.slice();
+  return String(spec || '').split('/').filter(part => part.trim().length > 0);
+}
+
+function resolveGroup(tree, spec, create = false) {
+  const parts = groupParts(spec);
+  let node = tree;
+  const path = [];
+  for (const part of parts) {
+    let key = ownKey(node, part);
+    if (key === undefined) {
+      if (!create) return null;
+      key = part;
+      putProperty(node, key, {});
+    }
+    const next = node[key];
+    if (!next || typeof next !== 'object' || Array.isArray(next)) throw new Error('Группа пересекается с записью: ' + [...path, key].join('/'));
+    node = next;
+    path.push(key);
+  }
+  return { node, path };
+}
+
+function findScopedLeaf(tree, path, oldRef) {
+  const group = resolveGroup(tree, path);
+  const key = group ? ownKey(group.node, oldRef) : undefined;
+  if (key === undefined || typeof group.node[key] !== 'string') throw new Error('Запись отсутствует: ' + groupParts(path).join('/') + ': ' + oldRef);
+  return { node: group.node, path: group.path, oldRef: key, key: rowKey(group.path, key) };
+}
+
+function collectTree(tree) {
+  const entries = [];
+  const groups = [];
+  function walk(node, path) {
+    for (const name of Object.keys(node)) {
+      if (path.length === 0 && name === '_meta') continue;
+      const value = node[name];
+      if (typeof value === 'string' && REF_SHAPE.test(name)) {
+        entries.push({ oldRef: name, newRef: value, group: path.join('/'), groupPath: path.slice(), key: rowKey(path, name) });
+      } else if (value && typeof value === 'object' && !Array.isArray(value)) {
+        const nextPath = [...path, name];
+        groups.push(nextPath.join('/'));
+        walk(value, nextPath);
+      }
+    }
+  }
+  walk(tree, []);
+  return { entries, groups };
+}
+
+// Structural prerequisites track row creation/movement and the operations that
+// freed an address. They are client-only and never sent to the backend.
+function replayOperations(baseTree, operations) {
+  const tree = cloneJson(baseTree);
+  const lineage = new Map(collectTree(tree).entries.map(entry => [dependencyKey(entry.groupPath, entry.oldRef), []]));
+  const vacancies = new Map();
+  const replayed = [];
+  for (const original of operations) {
+    const op = cloneJson(original);
+    let dependencies = [];
+    if (['set', 'delete', 'move'].includes(op.op)) {
+      const source = findScopedLeaf(tree, op.groupPath, op.oldRef);
+      const sourceKey = dependencyKey(source.path, source.oldRef);
+      const previous = lineage.get(sourceKey) || [];
+      dependencies = previous.slice();
+      if (op.op === 'set') {
+        source.node[source.oldRef] = op.newRef;
+      } else if (op.op === 'delete') {
+        delete source.node[source.oldRef];
+        lineage.delete(sourceKey);
+        vacancies.set(sourceKey, unionIds(previous, [op.clientId]));
+      } else {
+        const existingGroup = resolveGroup(tree, op.targetGroup);
+        const existingKey = existingGroup ? ownKey(existingGroup.node, source.oldRef) : undefined;
+        if (existingGroup && existingGroup.node === source.node) {
+          // Moving within the same group is a successful no-op.
+        } else {
+          if (existingKey !== undefined) throw new Error('В целевой группе уже есть эта запись.');
+          const destination = resolveGroup(tree, op.targetGroup, true);
+          const destinationKey = dependencyKey(destination.path, source.oldRef);
+          dependencies = unionIds(previous, vacancies.get(destinationKey) || []);
+          const value = source.node[source.oldRef];
+          delete source.node[source.oldRef];
+          putProperty(destination.node, source.oldRef, value);
+          lineage.delete(sourceKey);
+          vacancies.set(sourceKey, unionIds(previous, [op.clientId]));
+          lineage.set(destinationKey, unionIds(dependencies, [op.clientId]));
+          vacancies.delete(destinationKey);
+        }
+      }
+    } else if (op.op === 'add') {
+      const spec = op.group === undefined ? '_Unresolved_Pending' : op.group;
+      const existingGroup = resolveGroup(tree, spec);
+      if (existingGroup && ownKey(existingGroup.node, op.oldRef) !== undefined) throw new Error('В этой группе уже есть такая запись.');
+      const destination = resolveGroup(tree, spec, true);
+      const key = dependencyKey(destination.path, op.oldRef);
+      dependencies = (vacancies.get(key) || []).slice();
+      putProperty(destination.node, op.oldRef, op.newRef);
+      lineage.set(key, unionIds(dependencies, [op.clientId]));
+      vacancies.delete(key);
+    } else if (op.op === 'meta') {
+      if (!tree._meta) putProperty(tree, '_meta', {});
+      if (typeof tree._meta !== 'object' || Array.isArray(tree._meta)) throw new Error('Некорректный объект _meta.');
+      if (op.description !== undefined) putProperty(tree._meta, 'description', op.description);
+      if (op.status !== undefined) putProperty(tree._meta, 'status', op.status);
+    } else if (op.op === 'note') {
+      const group = resolveGroup(tree, op.group, true).node;
+      if (String(op.note || '').trim()) putProperty(group, '_note', op.note);
+      else delete group._note;
+    } else {
+      throw new Error('Неизвестная операция: ' + op.op);
+    }
+    op.dependsOn = dependencies;
+    replayed.push(op);
+  }
+  return { tree, operations: replayed };
+}
+
+function deriveCatalogs(entries) {
+  const effective = new Map();
+  for (const entry of entries) effective.set(entry.oldRef.toLowerCase(), entry);
+  const mapped = new Map();
+  const stubs = new Set();
+  const mappedGuids = new Set();
+  const mappedCounts = new Map();
+  for (const [key, entry] of effective) {
+    if (REF_SHAPE.test(entry.newRef)) {
+      mapped.set(key, entry.newRef);
+      mappedGuids.add(extractGuid(entry.oldRef));
+      const targetGuid = extractGuid(entry.newRef);
+      mappedCounts.set(targetGuid, (mappedCounts.get(targetGuid) || 0) + 1);
+    } else stubs.add(key);
+  }
+  gOldCatalog = gCatalogBaseline.old.map(original => {
+    const item = { ...original, targetRef: '' };
+    const key = item.fullRef.toLowerCase();
+    const guid = extractGuid(item.fullRef);
+    if (mapped.has(key) || mappedGuids.has(guid)) {
+      item.status = 'mapped';
+      item.targetRef = mapped.get(key) || '';
+    } else if (stubs.has(key)) item.status = 'stub';
+    else if (guid && gModIndex[guid]) item.status = 'alive';
+    else if (IGNORE_REF.test(item.fullRef)) item.status = 'system';
+    else item.status = item.isModPrefab ? 'unmapped' : 'external';
+    return item;
+  });
+  gNewCatalog = gCatalogBaseline.new.map(item => ({ ...item, mappedCount: mappedCounts.get(String(item.guid).toUpperCase()) || 0 }));
+}
+
+function adoptReplay(replay) {
+  const derived = collectTree(replay.tree);
+  const counts = new Map();
+  derived.entries.forEach(entry => counts.set(entry.oldRef.toLowerCase(), (counts.get(entry.oldRef.toLowerCase()) || 0) + 1));
+  for (const entry of derived.entries) {
+    entry.status = counts.get(entry.oldRef.toLowerCase()) > 1 ? 'dup' : validateLocalRef(entry.oldRef, entry.newRef);
+    entry.statusMsg = '';
+    entry.oldGuid = extractGuid(entry.oldRef);
+    entry.newGuid = extractGuid(entry.newRef);
+  }
+  gPendingOps = replay.operations;
+  gModel = {
+    tree: replay.tree,
+    versionHash: gBaseline.versionHash,
+    meta: { description: replay.tree._meta?.description || '', status: replay.tree._meta?.status || '' },
+    entries: derived.entries,
+    groups: derived.groups.sort(),
+    stats: {}
+  };
+  recomputeStats();
+  deriveCatalogs(gModel.entries);
+  const validKeys = new Set(gModel.entries.map(entry => entry.key));
+  gSelectedKeys = new Set([...gSelectedKeys].filter(key => validKeys.has(key)));
+  updateDatalist();
+  updateBadges();
+  renderAll();
+}
+
+function getEntry(key) {
+  return gModel?.entries.find(entry => entry.key === key);
+}
+
+function enqueueOperations(operations) {
+  if (editorBusy() || !gBaseline) return false;
+  const queued = operations.map(operation => ({ ...cloneJson(operation), clientId: gNextOperationId++ }));
+  try {
+    const replay = replayOperations(gBaseline.tree, [...gPendingOps, ...queued]);
+    adoptReplay(replay);
+    return true;
+  } catch (err) {
+    alert('Не удалось применить правку: ' + err.message);
+    return false;
+  }
+}
+
+function refreshPendingControls() {
+  const count = gPendingOps.length;
+  document.getElementById('pendingCount').textContent = count;
+  document.getElementById('btnReviewDiff').style.display = count ? 'inline-flex' : 'none';
+  document.getElementById('btnSaveBatch').style.display = count ? 'inline-flex' : 'none';
+  updateBulkButtons();
+}
 
 // ---------- Загрузка данных ----------
 window.addEventListener('DOMContentLoaded', async () => {
@@ -559,27 +800,32 @@ window.addEventListener('DOMContentLoaded', async () => {
 });
 
 async function loadAllData() {
+  if (editorBusy()) return false;
+  if (gPendingOps.length) {
+    alert('Сначала сохраните или отмените несохранённые изменения.');
+    return false;
+  }
+  gLoading = true;
+  setEditorLock();
   try {
-    const [tableRes, modRes, newCatRes, oldCatRes] = await Promise.all([
-      fetch('/api/table'),
-      fetch('/api/modindex'),
-      fetch('/api/catalog/new'),
-      fetch('/api/catalog/old')
-    ]);
-
-    if (!tableRes.ok) throw new Error('Ошибка /api/table');
-    if (!modRes.ok) throw new Error('Ошибка /api/modindex');
-
-    gModel = await tableRes.json();
-    gModIndex = await modRes.json();
-    if (newCatRes.ok) gNewCatalog = await newCatRes.json();
-    if (oldCatRes.ok) gOldCatalog = await oldCatRes.json();
-
-    updateDatalist();
-    updateBadges();
-    renderAll();
+    const urls = ['/api/config', '/api/table', '/api/modindex', '/api/catalog/new', '/api/catalog/old'];
+    const responses = await Promise.all(urls.map(url => fetch(url, { cache: 'no-store' })));
+    responses.forEach((response, index) => { if (!response.ok) throw new Error('Ошибка ' + urls[index]); });
+    const [config, model, index, newCatalog, oldCatalog] = await Promise.all(responses.map(response => response.json()));
+    if (!config.csrfToken) throw new Error('Сервер не вернул токен защиты.');
+    if (!model.tree || !Array.isArray(newCatalog) || !Array.isArray(oldCatalog)) throw new Error('Некорректный формат данных сервера.');
+    gCsrfToken = config.csrfToken;
+    gBaseline = { tree: cloneJson(model.tree), versionHash: model.versionHash || '' };
+    gModIndex = index;
+    gCatalogBaseline = { old: cloneJson(oldCatalog), new: cloneJson(newCatalog) };
+    adoptReplay(replayOperations(gBaseline.tree, []));
+    return true;
   } catch (err) {
     alert('Не удалось загрузить данные: ' + err.message);
+    return false;
+  } finally {
+    gLoading = false;
+    setEditorLock();
   }
 }
 
@@ -627,6 +873,7 @@ function switchMainTab(tab) {
 }
 
 function renderAll() {
+  refreshPendingControls();
   if (gActiveMainTab === 'remap') {
     renderRemap();
   } else if (gActiveMainTab === 'legacy') {
@@ -687,11 +934,6 @@ function renderRemap() {
   document.getElementById('statWarnings').textContent = s.warnings;
   document.getElementById('statErrors').textContent = s.errors;
 
-  const pCount = gPendingOps.length;
-  document.getElementById('pendingCount').textContent = pCount;
-  document.getElementById('btnReviewDiff').style.display = pCount > 0 ? 'inline-flex' : 'none';
-  document.getElementById('btnSaveBatch').style.display = pCount > 0 ? 'inline-flex' : 'none';
-
   if (gRemapMode === 'table') {
     renderRemapTable();
   } else {
@@ -712,7 +954,7 @@ function renderRemapTable() {
   const highlightQuery = (urlParams.get('q') || '').toLowerCase();
 
   tbody.innerHTML = list.map(e => {
-    const isSelected = gSelectedKeys.has(e.oldRef);
+    const isSelected = gSelectedKeys.has(e.key);
     const isHigh = highlightQuery && e.oldRef.toLowerCase().includes(highlightQuery);
     const statusTag = getStatusTagHtml(e.status, e.statusMsg);
     const oldDisplay = formatRefDisplay(e.oldRef);
@@ -720,22 +962,22 @@ function renderRemapTable() {
     return `
       <tr class="${isHigh ? 'highlight' : ''}" data-key="${escapeHtml(e.oldRef)}">
         <td class="chk">
-          <input type="checkbox" ${isSelected ? 'checked' : ''} onchange="toggleSelectKey('${escapeHtml(e.oldRef)}', this.checked)" />
+          <input type="checkbox" ${isSelected ? 'checked' : ''} onchange="toggleSelectKey(${jsArg(e.key)}, this.checked)" />
         </td>
         <td class="grp" title="${escapeHtml(e.group)}">${escapeHtml(e.group)}</td>
         <td class="ref-col" title="${escapeHtml(e.oldRef)}">
-          <span class="g">${oldDisplay.guid}</span><span class="p">${oldDisplay.path}</span>
+          <span class="g">${escapeHtml(oldDisplay.guid)}</span><span class="p">${escapeHtml(oldDisplay.path)}</span>
         </td>
         <td class="status-col">${statusTag}</td>
         <td>
           <input type="text" class="input-ref" value="${escapeHtml(e.newRef)}"
                  placeholder="Пусто (заглушка)"
-                 onchange="onLeafValueChange('${escapeHtml(e.oldRef)}', this.value)" />
+                 onchange="onLeafValueChange(${jsArg(e.key)}, this.value)" />
         </td>
         <td class="act-col">
-          <button class="sm" onclick="openSuggestModal('${escapeHtml(e.oldRef)}')">Подобрать</button>
-          <button class="sm ghost" onclick="openMoveModal('${escapeHtml(e.oldRef)}')">Перенести</button>
-          <button class="sm danger sm" onclick="deleteLeaf('${escapeHtml(e.oldRef)}')">✕</button>
+          <button class="sm" onclick="openSuggestModal(${jsArg(e.key)})">Подобрать</button>
+          <button class="sm ghost" onclick="openMoveModal(${jsArg(e.key)})">Перенести</button>
+          <button class="sm danger sm" onclick="deleteLeaf(${jsArg(e.key)})">✕</button>
         </td>
       </tr>
     `;
@@ -753,8 +995,8 @@ function renderRemapTree() {
 
 function buildTreeNodeHtml(node, trail, title) {
   if (!node || typeof node !== 'object') return '';
-  const leafKeys = Object.keys(node).filter(k => !k.startsWith('_') && typeof node[k] === 'string');
-  const groupKeys = Object.keys(node).filter(k => (k === '_Unresolved_Pending' || !k.startsWith('_')) && typeof node[k] === 'object' && node[k] !== null);
+  const leafKeys = Object.keys(node).filter(k => REF_SHAPE.test(k) && typeof node[k] === 'string');
+  const groupKeys = Object.keys(node).filter(k => !(trail.length === 0 && k === '_meta') && node[k] && typeof node[k] === 'object' && !Array.isArray(node[k]));
 
   let html = '';
   const currentPath = trail.join('/');
@@ -769,13 +1011,13 @@ function buildTreeNodeHtml(node, trail, title) {
           <span class="toggle">▼</span>
           <span class="folder-name">${escapeHtml(title)}</span>
           <span class="count">${childCount} элементов</span>
-          <button class="sm ghost" style="margin-left:6px" onclick="event.stopPropagation(); openAddModalToGroup('${escapeHtml(currentPath)}')">+ Добавить</button>
+          <button class="sm ghost" style="margin-left:6px" onclick="event.stopPropagation(); openAddModalToGroup(${jsArg(trail)})">+ Добавить</button>
         </div>
         <div class="tree-body">
           ${noteText ? `
             <div class="group-note">
               <span>Примечание: ${escapeHtml(noteText)}</span>
-              <button class="sm ghost" onclick="openEditNoteModal('${escapeHtml(currentPath)}', '${escapeHtml(noteText)}')">✎</button>
+              <button class="sm ghost" onclick="openEditNoteModal(${jsArg(trail)}, ${jsArg(noteText)})">✎</button>
             </div>
           ` : ''}
     `;
@@ -785,24 +1027,25 @@ function buildTreeNodeHtml(node, trail, title) {
     html += `<div style="margin-left:14px;margin-bottom:8px">`;
     for (const lk of leafKeys) {
       const val = node[lk];
-      const entry = gModel.entries.find(e => e.oldRef === lk);
+      const key = rowKey(trail, lk);
+      const entry = getEntry(key);
       const statusTag = entry ? getStatusTagHtml(entry.status, entry.statusMsg) : '';
       const oldDisp = formatRefDisplay(lk);
 
       html += `
         <div style="display:flex;align-items:center;gap:10px;padding:4px 0;font-size:12px;border-bottom:1px solid rgba(255,255,255,.03)">
           <div style="flex:1;font-family:monospace;word-break:break-all">
-            <span style="color:var(--mut2)">${oldDisp.guid}</span> <span>${oldDisp.path}</span>
+            <span style="color:var(--mut2)">${escapeHtml(oldDisp.guid)}</span> <span>${escapeHtml(oldDisp.path)}</span>
           </div>
           <div>${statusTag}</div>
           <div style="width:260px">
             <input type="text" class="input-ref" value="${escapeHtml(val)}"
                    placeholder="Заглушка"
-                   onchange="onLeafValueChange('${escapeHtml(lk)}', this.value)" />
+                   onchange="onLeafValueChange(${jsArg(key)}, this.value)" />
           </div>
           <div>
-            <button class="sm" onclick="openSuggestModal('${escapeHtml(lk)}')">Подобрать</button>
-            <button class="sm danger sm" onclick="deleteLeaf('${escapeHtml(lk)}')">✕</button>
+            <button class="sm" onclick="openSuggestModal(${jsArg(key)})">Подобрать</button>
+            <button class="sm danger sm" onclick="deleteLeaf(${jsArg(key)})">✕</button>
           </div>
         </div>
       `;
@@ -882,7 +1125,7 @@ function renderLegacy() {
         <td style="text-align:center;font-weight:700;color:${item.usageCount > 0 ? 'var(--fg)' : 'var(--mut2)'}">${item.usageCount}</td>
         <td style="font-size:11.5px;color:var(--mut)" title="${escapeHtml(item.missions)}">${escapeHtml(item.missions || '—')}</td>
         <td class="ref-col" title="${escapeHtml(item.fullRef)}">
-          <span class="g">${disp.guid}</span><span class="p">${disp.path}</span>
+          <span class="g">${escapeHtml(disp.guid)}</span><span class="p">${escapeHtml(disp.path)}</span>
         </td>
         <td class="status-col">${tag}</td>
         <td style="font-family:monospace;font-size:11.5px;color:var(--mut)">
@@ -890,9 +1133,9 @@ function renderLegacy() {
         </td>
         <td style="text-align:right">
           ${isUnmapped ? `
-            <button class="sm primary" onclick="mapLegacyItem('${escapeHtml(item.fullRef)}')">Замапить</button>
+            <button class="sm primary" onclick="mapLegacyItem(${jsArg(item.fullRef)})">Замапить</button>
           ` : `
-            <button class="sm ghost" onclick="openSuggestModal('${escapeHtml(item.fullRef)}')">Изменить</button>
+            <button class="sm ghost" onclick="openSuggestModal(${jsArg(item.fullRef)})">Изменить</button>
           `}
         </td>
       </tr>
@@ -907,10 +1150,10 @@ function mapLegacyItem(oldRef) {
 // ==========================================
 // 3. ВКЛАДКА: КАТАЛОГ МОДА (ИСТИНА)
 // ==========================================
-function setTruthCategory(cat) {
+function setTruthCategory(cat, button) {
   gTruthCategory = cat;
   document.querySelectorAll('#segTruthCategory button').forEach(b => b.classList.remove('active'));
-  event.target.classList.add('active');
+  if (button) button.classList.add('active');
   renderTruth();
 }
 
@@ -952,7 +1195,7 @@ function renderTruth() {
           ${isMapped ? `<span class="badge" style="background:var(--greenbg);color:var(--green)">x${item.mappedCount}</span>` : '<span style="color:var(--mut2);font-size:11px">0</span>'}
         </td>
         <td style="text-align:right">
-          <button class="sm ghost" onclick="copyToClipboard('${escapeHtml(item.fullRef)}')">Копировать</button>
+          <button class="sm ghost" onclick="copyToClipboard(${jsArg(item.fullRef)})">Копировать</button>
         </td>
       </tr>
     `;
@@ -977,45 +1220,56 @@ function switchSuggestMode(mode) {
   }
 }
 
-async function openSuggestModal(oldRef) {
-  gSuggestTarget = { oldRef };
+async function openSuggestModal(keyOrRef) {
+  if (editorBusy()) return;
+  let entry = getEntry(keyOrRef);
+  const oldRef = entry ? entry.oldRef : keyOrRef;
+  if (!REF_SHAPE.test(oldRef)) return;
+  if (!entry) {
+    const matches = gModel.entries.filter(item => item.oldRef.toLowerCase() === oldRef.toLowerCase());
+    if (matches.length > 1) {
+      document.getElementById('searchRemap').value = oldRef;
+      switchMainTab('remap');
+      alert('Этот префаб есть в нескольких группах. Выберите конкретную запись в базе ремапа.');
+      return;
+    }
+    entry = matches[0];
+  }
+  const target = { key: entry?.key || null, oldRef };
+  gSuggestTarget = target;
   document.getElementById('suggestSourceRef').textContent = oldRef;
   switchSuggestMode('ranker');
-
-  const listEl = document.getElementById('suggestCandidatesList');
-  listEl.innerHTML = '<div style="padding:16px;text-align:center"><span class="spinner"></span> Ищем похожие префабы...</div>';
+  const list = document.getElementById('suggestCandidatesList');
+  list.innerHTML = '<div style="padding:16px;text-align:center"><span class="spinner"></span> Ищем похожие префабы...</div>';
   document.getElementById('modalSuggest').classList.add('open');
-
   try {
-    const res = await fetch('/api/suggest', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ path: oldRef, top: 8 })
-    });
-    if (!res.ok) throw new Error('Ошибка /api/suggest');
-    const candidates = await res.json();
-    renderCandidates(candidates);
+    const response = await postJson('/api/suggest', { path: oldRef, top: 8 });
+    if (!response.ok) throw new Error('Ошибка /api/suggest');
+    const candidates = await response.json();
+    if (gSuggestTarget === target && !editorBusy()) renderCandidates(candidates);
   } catch (err) {
-    listEl.innerHTML = `<div style="color:var(--red);padding:10px">Ошибка подбора: ${escapeHtml(err.message)}</div>`;
+    if (gSuggestTarget === target) list.innerHTML = `<div style="color:var(--red);padding:10px">Ошибка подбора: ${escapeHtml(err.message)}</div>`;
   }
 }
 
-function renderCandidates(candidates) {
-  const listEl = document.getElementById('suggestCandidatesList');
-  if (!candidates || candidates.length === 0) {
-    listEl.innerHTML = '<div class="empty-state">Ранкер не нашёл похожих префабов.<br>Переключитесь на вкладку «Каталог Истины» для ручного выбора.</div>';
+function renderCandidates(rawCandidates) {
+  const list = document.getElementById('suggestCandidatesList');
+  const candidates = Array.isArray(rawCandidates) ? rawCandidates.filter(candidate => REF_SHAPE.test(candidate.Ref)).map(candidate => ({
+    ref: candidate.Ref, guid: candidate.Guid, path: candidate.Path, score: candidate.Score, warning: candidate.Warn
+  })) : [];
+  if (!candidates.length) {
+    list.innerHTML = '<div class="empty-state">Ранкер не нашёл похожих префабов.<br>Переключитесь на вкладку «Каталог Истины» для ручного выбора.</div>';
     return;
   }
-
-  listEl.innerHTML = candidates.map((c, i) => `
+  list.innerHTML = candidates.map((candidate, index) => `
     <div style="display:flex;align-items:center;gap:10px;padding:8px 10px;background:var(--panel2);border:1px solid var(--line);border-radius:6px;margin-bottom:6px">
-      <div style="font-weight:700;color:var(--mut2);font-size:11px;width:18px">${i + 1}</div>
+      <div style="font-weight:700;color:var(--mut2);font-size:11px;width:18px">${index + 1}</div>
       <div style="flex:1;font-family:monospace;font-size:11.5px;word-break:break-all">
-        <span style="color:var(--mut2)">{${c.guid}}</span> <span>${c.path}</span>
-        ${c.warning ? `<span style="display:block;color:var(--orange);font-size:10.5px">${c.warning}</span>` : ''}
+        <span style="color:var(--mut2)">{${escapeHtml(candidate.guid)}}</span> <span>${escapeHtml(candidate.path)}</span>
+        ${candidate.warning ? `<span style="display:block;color:var(--orange);font-size:10.5px">${escapeHtml(candidate.warning)}</span>` : ''}
       </div>
-      <div style="font-size:11px;color:var(--mut2);font-variant-numeric:tabular-nums">${c.score}</div>
-      <button class="sm primary" onclick="pickCandidate('{${c.guid}}${c.path}')">Выбрать</button>
+      <div style="font-size:11px;color:var(--mut2);font-variant-numeric:tabular-nums">${escapeHtml(candidate.score)}</div>
+      <button class="sm primary" onclick="pickCandidate(${jsArg(candidate.ref)})">Выбрать</button>
     </div>
   `).join('');
 }
@@ -1037,156 +1291,81 @@ function renderSuggestTruthList() {
   container.innerHTML = filtered.map(item => `
     <div style="display:flex;align-items:center;gap:8px;padding:6px 8px;background:var(--panel2);border:1px solid var(--line);border-radius:6px;margin-bottom:4px">
       <div style="flex:1;font-family:monospace;font-size:11px;word-break:break-all">
-        <span style="color:var(--mut2)">{${item.guid}}</span> <span>${item.path}</span>
+        <span style="color:var(--mut2)">{${escapeHtml(item.guid)}}</span> <span>${escapeHtml(item.path)}</span>
       </div>
-      <button class="sm primary" onclick="pickCandidate('${escapeHtml(item.fullRef)}')">Выбрать</button>
+      <button class="sm primary" onclick="pickCandidate(${jsArg(item.fullRef)})">Выбрать</button>
     </div>
   `).join('');
 }
 
 function pickCandidate(newRef) {
-  if (!gSuggestTarget) return;
-  const oldRef = gSuggestTarget.oldRef;
-
-  // Проверяем, есть ли запись в remap_table
-  const exists = gModel.entries.find(e => e.oldRef === oldRef);
-  if (exists) {
-    onLeafValueChange(oldRef, newRef);
-  } else {
-    // Добавляем новое правило в основную базу
-    gPendingOps.push({ op: 'add', group: '_Unresolved_Pending', oldRef, newRef });
-    gModel.entries.unshift({
-      oldRef,
-      newRef,
-      group: '_Unresolved_Pending',
-      groupPath: ['_Unresolved_Pending'],
-      status: validateLocalRef(oldRef, newRef),
-      statusMsg: '',
-      oldGuid: extractGuid(oldRef),
-      newGuid: extractGuid(newRef)
-    });
+  if (editorBusy() || !gSuggestTarget) return;
+  const target = gSuggestTarget;
+  const entry = target.key ? getEntry(target.key) : null;
+  if (target.key && !entry) { alert('Исходная запись была изменена или удалена. Откройте подбор заново.'); return; }
+  if (!target.key && gModel.entries.some(item => item.oldRef.toLowerCase() === target.oldRef.toLowerCase())) {
+    alert('Исходная запись уже добавлена. Откройте подбор заново.');
+    return;
   }
-
-  // Обновляем статус в старом каталоге локально
-  const oldItem = gOldCatalog.find(x => x.fullRef === oldRef);
-  if (oldItem) {
-    oldItem.status = 'mapped';
-    oldItem.targetRef = newRef;
-  }
-
-  closeModal('modalSuggest');
-  recomputeStats();
-  updateBadges();
-  renderAll();
+  const operation = entry
+    ? { op: 'set', groupPath: entry.groupPath, oldRef: entry.oldRef, newRef: newRef.trim() }
+    : { op: 'add', group: '_Unresolved_Pending', oldRef: target.oldRef, newRef: newRef.trim() };
+  if (enqueueOperations([operation])) closeModal('modalSuggest');
 }
 
 async function requestAiSuggest() {
-  if (!gSuggestTarget) return;
-  const btn = document.getElementById('btnAiSuggest');
-  btn.disabled = true;
-  btn.innerHTML = '<span class="spinner"></span> Думает...';
-
+  if (editorBusy() || !gSuggestTarget) return;
+  const target = gSuggestTarget;
+  const button = document.getElementById('btnAiSuggest');
+  if (button.disabled) return;
+  button.disabled = true;
+  button.innerHTML = '<span class="spinner"></span> Думает...';
   try {
-    const res = await fetch('/api/ai-suggest', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ path: gSuggestTarget.oldRef, ref: gSuggestTarget.oldRef })
-    });
-    const data = await res.json();
-    if (data.ok && data.ai) {
-      alert(`Рекомендация ИИ:\n\n${data.ai.reasoning || ''}\n\nВыбранный префаб: ${data.ai.chosenRef || 'не указан'}`);
-      if (data.ai.chosenRef) {
-        pickCandidate(data.ai.chosenRef);
-      }
-    } else {
-      alert('ИИ не вернул рекомендацию: ' + (data.error || 'неизвестная ошибка'));
-    }
+    const response = await postJson('/api/ai-suggest', { path: target.oldRef, ref: target.oldRef });
+    const data = await response.json();
+    if (!response.ok || !data.ok || !data.ai?.Ref) throw new Error(data.error || 'ИИ не вернул рекомендацию');
+    if (gSuggestTarget !== target || editorBusy()) return;
+    alert(`Рекомендация ИИ:\n\n${data.ai.Reason || ''}\n\nВыбранный префаб: ${data.ai.Ref}`);
+    pickCandidate(data.ai.Ref);
   } catch (err) {
-    alert('Сбой запроса к ИИ: ' + err.message);
+    if (gSuggestTarget === target) alert('Сбой запроса к ИИ: ' + err.message);
   } finally {
-    btn.disabled = false;
-    btn.textContent = 'Спросить ИИ';
+    button.disabled = false;
+    button.textContent = 'Спросить ИИ';
   }
 }
 
-// ==========================================
-// 5. ОПЕРАЦИИ, ДИФФ И СОХРАНЕНИЕ
-// ==========================================
-function onLeafValueChange(oldRef, newVal) {
-  const trimmed = newVal.trim();
-  const existingIdx = gPendingOps.findIndex(o => o.op === 'set' && o.oldRef === oldRef);
-  if (existingIdx >= 0) {
-    gPendingOps[existingIdx].newRef = trimmed;
-  } else {
-    gPendingOps.push({ op: 'set', oldRef, newRef: trimmed });
-  }
-
-  const e = gModel.entries.find(x => x.oldRef === oldRef);
-  if (e) {
-    e.newRef = trimmed;
-    e.status = validateLocalRef(oldRef, trimmed);
-  }
-
-  const oldItem = gOldCatalog.find(x => x.fullRef === oldRef);
-  if (oldItem) {
-    oldItem.status = trimmed ? 'mapped' : 'stub';
-    oldItem.targetRef = trimmed;
-  }
-
-  recomputeStats();
-  updateBadges();
-  renderAll();
+function onLeafValueChange(key, newVal) {
+  const entry = getEntry(key);
+  if (!entry || editorBusy()) return;
+  enqueueOperations([{ op: 'set', groupPath: entry.groupPath, oldRef: entry.oldRef, newRef: newVal.trim() }]);
 }
 
-function deleteLeaf(oldRef) {
-  if (!confirm(`Удалить префаб из базы?\n${oldRef}`)) return;
-  gPendingOps.push({ op: 'delete', oldRef });
-  gModel.entries = gModel.entries.filter(e => e.oldRef !== oldRef);
-  gSelectedKeys.delete(oldRef);
-
-  const oldItem = gOldCatalog.find(x => x.fullRef === oldRef);
-  if (oldItem) {
-    oldItem.status = 'unmapped';
-    oldItem.targetRef = '';
-  }
-
-  recomputeStats();
-  updateBadges();
-  renderAll();
+function deleteLeaf(key) {
+  const entry = getEntry(key);
+  if (!entry || editorBusy()) return;
+  if (!confirm(`Удалить префаб из базы?\n${entry.group}: ${entry.oldRef}`)) return;
+  enqueueOperations([{ op: 'delete', groupPath: entry.groupPath, oldRef: entry.oldRef }]);
 }
 
 function bulkDeleteSelected() {
-  const count = gSelectedKeys.size;
-  if (!confirm(`Удалить выбранные ${count} префабов из базы?`)) return;
-  for (const k of gSelectedKeys) {
-    gPendingOps.push({ op: 'delete', oldRef: k });
-    gModel.entries = gModel.entries.filter(e => e.oldRef !== k);
-    const oldItem = gOldCatalog.find(x => x.fullRef === k);
-    if (oldItem) {
-      oldItem.status = 'unmapped';
-      oldItem.targetRef = '';
-    }
-  }
-  gSelectedKeys.clear();
-  updateBulkButtons();
-  recomputeStats();
-  updateBadges();
-  renderAll();
+  if (editorBusy() || !gSelectedKeys.size) return;
+  if (!confirm(`Удалить выбранные ${gSelectedKeys.size} префабов из базы?`)) return;
+  const operations = [...gSelectedKeys].map(getEntry).filter(Boolean).map(entry => ({ op: 'delete', groupPath: entry.groupPath, oldRef: entry.oldRef }));
+  if (enqueueOperations(operations)) { gSelectedKeys.clear(); refreshPendingControls(); }
 }
 
 function toggleSelectKey(key, checked) {
+  if (editorBusy()) return;
   if (checked) gSelectedKeys.add(key);
   else gSelectedKeys.delete(key);
   updateBulkButtons();
 }
 
 function toggleSelectAll(checked) {
-  const list = getFilteredRemapEntries();
-  if (checked) {
-    list.forEach(e => gSelectedKeys.add(e.oldRef));
-  } else {
-    gSelectedKeys.clear();
-  }
+  if (editorBusy()) return;
+  if (checked) getFilteredRemapEntries().forEach(entry => gSelectedKeys.add(entry.key));
+  else gSelectedKeys.clear();
   updateBulkButtons();
   renderRemapTable();
 }
@@ -1200,6 +1379,8 @@ function updateBulkButtons() {
 }
 
 function openAddModal() {
+  if (editorBusy()) return;
+  gAddGroupPath = null;
   document.getElementById('addInputGroup').value = '_Unresolved_Pending';
   document.getElementById('addInputOld').value = '';
   document.getElementById('addInputNew').value = '';
@@ -1207,221 +1388,174 @@ function openAddModal() {
 }
 
 function openAddModalToGroup(group) {
-  document.getElementById('addInputGroup').value = group;
-  document.getElementById('addInputOld').value = '';
-  document.getElementById('addInputNew').value = '';
-  document.getElementById('modalAdd').classList.add('open');
+  openAddModal();
+  if (editorBusy()) return;
+  gAddGroupPath = groupParts(group);
+  document.getElementById('addInputGroup').value = gAddGroupPath.join('/');
 }
 
 function confirmAdd() {
-  const grp = document.getElementById('addInputGroup').value.trim() || '_Unresolved_Pending';
+  if (editorBusy()) return;
+  const text = document.getElementById('addInputGroup').value.trim();
+  const group = gAddGroupPath && text === gAddGroupPath.join('/') ? gAddGroupPath : (text || '_Unresolved_Pending');
   const oldRef = document.getElementById('addInputOld').value.trim();
   const newRef = document.getElementById('addInputNew').value.trim();
-
-  if (!oldRef) {
-    alert('Поле старого префаба обязательно.');
-    return;
-  }
-
-  gPendingOps.push({ op: 'add', group: grp, oldRef, newRef });
-  closeModal('modalAdd');
-
-  gModel.entries.unshift({
-    oldRef,
-    newRef,
-    group: grp,
-    groupPath: grp.split('/'),
-    status: validateLocalRef(oldRef, newRef),
-    statusMsg: '',
-    oldGuid: extractGuid(oldRef),
-    newGuid: extractGuid(newRef)
-  });
-
-  recomputeStats();
-  updateBadges();
-  renderAll();
+  if (!REF_SHAPE.test(oldRef)) { alert('Укажите старый префаб в формате {16-HEX-GUID}Path.et.'); return; }
+  if (enqueueOperations([{ op: 'add', group, oldRef, newRef }])) closeModal('modalAdd');
 }
 
-function openMoveModal(oldRef) {
-  gMoveTarget = oldRef;
+function openMoveModal(key) {
+  if (editorBusy() || !getEntry(key)) return;
+  gMoveTarget = key;
   document.getElementById('moveInputGroup').value = '';
   document.getElementById('modalMove').classList.add('open');
 }
 
 function openBulkMoveModal() {
+  if (editorBusy()) return;
   gMoveTarget = null;
   document.getElementById('moveInputGroup').value = '';
   document.getElementById('modalMove').classList.add('open');
 }
 
 function confirmMove() {
+  if (editorBusy()) return;
   const targetGroup = document.getElementById('moveInputGroup').value.trim();
-  if (!targetGroup) {
-    alert('Укажите целевую группу.');
-    return;
-  }
-
-  if (gMoveTarget) {
-    gPendingOps.push({ op: 'move', oldRef: gMoveTarget, targetGroup });
-    const e = gModel.entries.find(x => x.oldRef === gMoveTarget);
-    if (e) {
-      e.group = targetGroup;
-      e.groupPath = targetGroup.split('/');
-    }
-  } else {
-    for (const k of gSelectedKeys) {
-      gPendingOps.push({ op: 'move', oldRef: k, targetGroup });
-      const e = gModel.entries.find(x => x.oldRef === k);
-      if (e) {
-        e.group = targetGroup;
-        e.groupPath = targetGroup.split('/');
-      }
-    }
+  if (!targetGroup) { alert('Укажите целевую группу.'); return; }
+  const keys = gMoveTarget ? [gMoveTarget] : [...gSelectedKeys];
+  const operations = keys.map(getEntry).filter(Boolean).map(entry => ({ op: 'move', groupPath: entry.groupPath, oldRef: entry.oldRef, targetGroup }));
+  if (operations.length && enqueueOperations(operations)) {
     gSelectedKeys.clear();
-    updateBulkButtons();
+    renderAll();
+    closeModal('modalMove');
   }
-
-  closeModal('modalMove');
-  renderAll();
 }
 
 function openMetaModal() {
-  if (gModel && gModel.meta) {
-    document.getElementById('metaInputDesc').value = gModel.meta.description || '';
-    document.getElementById('metaInputStatus').value = gModel.meta.status || '';
-  }
+  if (editorBusy()) return;
+  document.getElementById('metaInputDesc').value = gModel?.meta.description || '';
+  document.getElementById('metaInputStatus').value = gModel?.meta.status || '';
   document.getElementById('modalMeta').classList.add('open');
 }
 
 function confirmMeta() {
-  const desc = document.getElementById('metaInputDesc').value;
+  if (editorBusy()) return;
+  const description = document.getElementById('metaInputDesc').value;
   const status = document.getElementById('metaInputStatus').value;
-
-  gPendingOps.push({ op: 'meta', description: desc, status });
-  if (gModel && gModel.meta) {
-    gModel.meta.description = desc;
-    gModel.meta.status = status;
-  }
-  closeModal('modalMeta');
-  renderRemap();
+  if (enqueueOperations([{ op: 'meta', description, status }])) closeModal('modalMeta');
 }
 
 function openEditNoteModal(group, currentNote) {
-  const newNote = prompt(`Примечание для группы ${group}:`, currentNote);
-  if (newNote === null) return;
-  gPendingOps.push({ op: 'note', group, note: newNote });
-  renderRemap();
+  if (editorBusy()) return;
+  const note = prompt(`Примечание для группы ${groupParts(group).join('/')}:`, currentNote);
+  if (note !== null) enqueueOperations([{ op: 'note', group, note }]);
 }
 
 function openReviewModal() {
+  if (editorBusy()) return;
   document.getElementById('reviewCount').textContent = gPendingOps.length;
   const body = document.getElementById('reviewBody');
-
-  if (gPendingOps.length === 0) {
-    body.innerHTML = '<div class="empty-state">Нет несохранённых изменений.</div>';
-  } else {
-    body.innerHTML = gPendingOps.map((op, idx) => {
-      let desc = '';
-      if (op.op === 'set') desc = `<span>${formatRefDisplay(op.oldRef).path}</span> <span class="arrow">→</span> <b style="color:var(--fg)">${op.newRef || '"" (заглушка)'}</b>`;
-      else if (op.op === 'add') desc = `<span>${op.group}:</span> <b>${formatRefDisplay(op.oldRef).path}</b> <span class="arrow">→</span> ${op.newRef || '""'}`;
-      else if (op.op === 'delete') desc = `<span style="color:var(--red)">${formatRefDisplay(op.oldRef).path}</span>`;
-      else if (op.op === 'move') desc = `<span>${formatRefDisplay(op.oldRef).path}</span> <span class="arrow">перенесён в</span> <b>${op.targetGroup}</b>`;
-      else if (op.op === 'meta') desc = `<span>Правка описания/статуса _meta</span>`;
-      else if (op.op === 'note') desc = `<span>Группа ${op.group}: примечание обновлено</span>`;
-
-      return `
-        <div class="diff-item">
-          <span class="diff-type ${op.op}">${op.op}</span>
-          <div class="diff-details">${desc}</div>
-          <button class="sm ghost danger" onclick="revertOp(${idx})">Отменить</button>
-        </div>
-      `;
-    }).join('');
-  }
-
+  body.innerHTML = gPendingOps.length ? gPendingOps.map((op, index) => {
+    const ref = op.oldRef ? escapeHtml(formatRefDisplay(op.oldRef).path) : '';
+    let description = '';
+    if (op.op === 'set') description = `${ref} <span class="arrow">→</span> <b>${escapeHtml(op.newRef) || '&quot;&quot; (заглушка)'}</b>`;
+    else if (op.op === 'add') description = `${escapeHtml(groupParts(op.group).join('/'))}: <b>${ref}</b> <span class="arrow">→</span> ${escapeHtml(op.newRef) || '&quot;&quot;'}`;
+    else if (op.op === 'delete') description = `<span style="color:var(--red)">${ref}</span>`;
+    else if (op.op === 'move') description = `${ref} <span class="arrow">перенесён в</span> <b>${escapeHtml(groupParts(op.targetGroup).join('/'))}</b>`;
+    else if (op.op === 'meta') description = 'Правка описания/статуса _meta';
+    else if (op.op === 'note') description = `Группа ${escapeHtml(groupParts(op.group).join('/'))}: примечание обновлено`;
+    return `<div class="diff-item"><span class="diff-type ${op.op}">${op.op}</span><div class="diff-details">${description}</div><button class="sm ghost danger" onclick="revertOp(${index})">Отменить</button></div>`;
+  }).join('') : '<div class="empty-state">Нет несохранённых изменений.</div>';
   document.getElementById('modalReview').classList.add('open');
 }
 
-function revertOp(idx) {
-  gPendingOps.splice(idx, 1);
-  if (gPendingOps.length === 0) {
-    closeModal('modalReview');
-    loadAllData();
-  } else {
-    openReviewModal();
+function revertOp(index) {
+  if (editorBusy() || !gPendingOps[index]) return;
+  const removed = new Set([gPendingOps[index].clientId]);
+  const retained = [];
+  for (const operation of gPendingOps) {
+    if (removed.has(operation.clientId) || operation.dependsOn.some(id => removed.has(id))) removed.add(operation.clientId);
+    else retained.push(operation);
   }
-  recomputeStats();
-  renderAll();
+  try {
+    const replay = replayOperations(gBaseline.tree, retained);
+    adoptReplay(replay);
+    if (gPendingOps.length) openReviewModal();
+    else closeModal('modalReview');
+    if (removed.size > 1) alert(`Также отменены зависимые операции: ${removed.size - 1}.`);
+  } catch (err) {
+    alert('Не удалось отменить правку: ' + err.message);
+  }
 }
 
 function revertAllChanges() {
-  if (!confirm('Отменить все несохранённые изменения и перезагрузить данные?')) return;
-  gPendingOps = [];
+  if (editorBusy() || !gBaseline) return;
+  if (!confirm('Отменить все несохранённые изменения?')) return;
+  adoptReplay(replayOperations(gBaseline.tree, []));
   closeModal('modalReview');
-  loadAllData();
 }
 
 async function saveBatch() {
-  if (gPendingOps.length === 0) {
-    alert('Нет изменений для сохранения.');
-    return;
-  }
-
-  const btn = document.getElementById('btnSaveBatch');
-  btn.disabled = true;
-  btn.innerHTML = '<span class="spinner"></span> Сохраняем...';
-
+  if (editorBusy()) return;
+  if (!gPendingOps.length) { alert('Нет изменений для сохранения.'); return; }
+  const operations = cloneJson(gPendingOps).map(({ clientId, dependsOn, ...operation }) => operation);
+  const versionHash = gBaseline.versionHash;
+  const button = document.getElementById('btnSaveBatch');
+  gSaving = true;
+  setEditorLock();
+  button.disabled = true;
+  button.innerHTML = '<span class="spinner"></span> Сохраняем...';
   try {
-    const res = await fetch('/api/table/save', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        operations: gPendingOps,
-        versionHash: gModel ? gModel.versionHash : ''
-      })
-    });
-
-    const data = await res.json();
-    if (!res.ok || !data.ok) {
-      throw new Error(data.error || 'Ошибка при сохранении базы');
-    }
-
-    gPendingOps = [];
-    gModel = data.model;
+    const response = await postJson('/api/table/save', { operations, versionHash });
+    const data = await response.json();
+    if (!response.ok || !data.ok) throw new Error(data.error || 'Ошибка при сохранении базы');
+    if (!data.model?.tree || !data.model.versionHash) throw new Error('Сервер не вернул сохранённую модель.');
+    gBaseline = { tree: cloneJson(data.model.tree), versionHash: data.model.versionHash };
+    adoptReplay(replayOperations(gBaseline.tree, []));
     closeModal('modalReview');
-    updateDatalist();
-    updateBadges();
-    renderAll();
     alert(`Изменения успешно сохранены!\nПрименено операций: ${data.applied}\nСоздана резервная копия.`);
   } catch (err) {
     alert('Ошибка сохранения: ' + err.message);
   } finally {
-    btn.disabled = false;
-    btn.textContent = 'Сохранить на диск';
+    gSaving = false;
+    setEditorLock();
+    button.disabled = false;
+    button.textContent = 'Сохранить на диск';
   }
 }
 
 async function rebuildCatalogs() {
-  const btn = document.getElementById('btnRebuildCatalogs');
-  btn.disabled = true;
-  btn.innerHTML = '<span class="spinner"></span> Пересборка...';
-
+  if (editorBusy()) return;
+  const button = document.getElementById('btnRebuildCatalogs');
+  gLoading = true;
+  setEditorLock();
+  button.disabled = true;
+  button.innerHTML = '<span class="spinner"></span> Пересборка...';
   try {
-    const res = await fetch('/api/catalog/rebuild', { method: 'POST' });
-    const data = await res.json();
-    if (!res.ok || !data.ok) throw new Error(data.error || 'Ошибка пересборки');
-
-    await loadAllData();
+    const response = await postJson('/api/catalog/rebuild');
+    const data = await response.json();
+    if (!response.ok || !data.ok) throw new Error(data.error || 'Ошибка пересборки');
+    // Refresh catalog metadata without rebasing or losing unsaved operations.
+    const responses = await Promise.all(['/api/modindex', '/api/catalog/new', '/api/catalog/old'].map(url => fetch(url, { cache: 'no-store' })));
+    if (responses.some(item => !item.ok)) throw new Error('Не удалось обновить каталоги.');
+    const [index, newCatalog, oldCatalog] = await Promise.all(responses.map(item => item.json()));
+    if (!Array.isArray(newCatalog) || !Array.isArray(oldCatalog)) throw new Error('Некорректный формат каталогов.');
+    gModIndex = index;
+    gCatalogBaseline = { old: cloneJson(oldCatalog), new: cloneJson(newCatalog) };
+    adoptReplay(replayOperations(gBaseline.tree, gPendingOps));
     alert(`Каталоги успешно пересобраны!\nНовые префабы (Истина): ${data.newCount}\nСтарые префабы (Legacy): ${data.oldCount}`);
   } catch (err) {
     alert('Ошибка: ' + err.message);
   } finally {
-    btn.disabled = false;
-    btn.innerHTML = '↻ Обновить каталоги';
+    gLoading = false;
+    setEditorLock();
+    button.disabled = false;
+    button.innerHTML = '↻ Обновить каталоги';
   }
 }
 
 function openTruthPicker(targetInputId) {
+  if (editorBusy()) return;
   const val = prompt('Введите часть пути или GUID префаба из Истины:');
   if (!val) return;
   const match = gNewCatalog.find(x => x.path.toLowerCase().includes(val.toLowerCase()) || x.guid.toLowerCase().includes(val.toLowerCase()));
@@ -1433,22 +1567,23 @@ function openTruthPicker(targetInputId) {
 }
 
 function closeModal(modalId) {
+  if (modalId === 'modalSuggest') gSuggestTarget = null;
   document.getElementById(modalId).classList.remove('open');
 }
 
 // ---------- Локальная валидация и утилиты ----------
 function validateLocalRef(oldRef, newRef) {
-  if (!oldRef || !oldRef.match(/^\{[0-9A-Fa-f]{16}\}.+\.et$/)) return 'malformed';
+  if (!oldRef || !REF_SHAPE.test(oldRef)) return 'malformed';
   if (!newRef) return 'stub';
-  if (!newRef.match(/^\{[0-9A-Fa-f]{16}\}.+\.et$/)) return 'malformed';
-  if (oldRef === newRef) return 'self-mapping';
+  if (!REF_SHAPE.test(newRef)) return 'malformed';
+  if (oldRef.toLowerCase() === newRef.toLowerCase()) return 'self-mapping';
 
   const newGuid = extractGuid(newRef);
   if (!newGuid || !gModIndex[newGuid]) return 'target-missing';
 
   const actualPath = gModIndex[newGuid];
   const newRel = newRef.replace(/^\{[0-9A-Fa-f]{16}\}/, '');
-  if (newRel !== actualPath) return 'path-mismatch';
+  if (newRel.toLowerCase() !== actualPath.toLowerCase()) return 'path-mismatch';
 
   const oldGuid = extractGuid(oldRef);
   if (oldGuid && gModIndex[oldGuid]) return 'source-alive';
@@ -1506,7 +1641,7 @@ function formatRefDisplay(fullRef) {
 }
 
 function escapeHtml(s) {
-  if (!s) return '';
+  if (s === null || s === undefined) return '';
   return String(s)
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')

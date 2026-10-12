@@ -347,7 +347,13 @@ const $ = s => document.querySelector(s);
 const $$ = s => [...document.querySelectorAll(s)];
 
 const api = async (path, opts={}) => {
-  const r = await fetch(path, {headers:{'content-type':'application/json'}, ...opts});
+  const headers = new Headers(opts.headers || {});
+  if ((opts.method || 'GET').toUpperCase() === 'POST') {
+    if (!CFG.csrfToken) throw new Error('Сначала загрузите настройки сервера или обновите страницу.');
+    headers.set('Content-Type', 'application/json');
+    headers.set('X-Restore-Token', CFG.csrfToken);
+  }
+  const r = await fetch(path, {...opts, headers});
   if(!r.ok) throw new Error((await r.text()).slice(0,300) || ('HTTP '+r.status));
   return r.json();
 };
@@ -638,8 +644,12 @@ $('#bStop').onclick = async () => {
   if(!confirm('Остановить сервер?\n\nСтраница перестанет работать. Чтобы открыть снова — запустите Start-RestoreUI.bat.')) return;
   $('#bStop').disabled = true; $('#bStop').textContent = 'Останавливаю…';
   try{
-    await fetch('/api/shutdown', {method:'POST', headers:{'content-type':'application/json'}, body:'{}'});
-  }catch(e){ /* сервер уже мог закрыть соединение — это ожидаемо */ }
+    await api('/api/shutdown', {method:'POST', body:'{}'});
+  }catch(e){
+    log('Не удалось остановить сервер: ' + e.message, 'err');
+    $('#bStop').disabled = false; $('#bStop').textContent = 'Остановить сервер';
+    return;
+  }
   setTimeout(()=>{
     document.body.innerHTML =
       '<div style="display:grid;place-items:center;height:100vh;text-align:center;color:#96a1b0;font:14px/1.6 \'Segoe UI\',system-ui,sans-serif;padding:24px">' +

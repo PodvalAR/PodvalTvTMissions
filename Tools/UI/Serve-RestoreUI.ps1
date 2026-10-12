@@ -3,7 +3,7 @@
 .SYNOPSIS
     Local web backend for the mission-restore tool. Pure PowerShell + built-in
     System.Net.HttpListener (no extra runtime/module to install). Binds to loopback
-    only, so no auth is needed.
+    only. Browser POST requests require a per-run token and a matching origin.
 
 .DESCRIPTION
     Serves index.html and a small JSON API over Restore-Core.ps1. Start via
@@ -58,7 +58,7 @@ function Get-ApiKey([string]$name) {
 $script:Utf8 = [System.Text.UTF8Encoding]::new($false)
 
 function Send-Json($ctx, $obj, [int]$status = 200) {
-    $json = $obj | ConvertTo-Json -Depth 60
+    $json = ConvertTo-Json -InputObject $obj -Depth 60
     $bytes = $script:Utf8.GetBytes($json)
     $ctx.Response.StatusCode = $status
     $ctx.Response.ContentType = 'application/json; charset=utf-8'
@@ -68,6 +68,7 @@ function Send-Json($ctx, $obj, [int]$status = 200) {
 }
 function Send-Text($ctx, [string]$text, [string]$ctype = 'text/html; charset=utf-8', [int]$status = 200) {
     $bytes = $script:Utf8.GetBytes($text)
+    if ($ctype -like 'text/html*') { $ctx.Response.Headers['Cache-Control'] = 'no-store' }
     $ctx.Response.StatusCode = $status
     $ctx.Response.ContentType = $ctype
     $ctx.Response.ContentLength64 = $bytes.Length
@@ -81,6 +82,36 @@ function Read-Body($ctx) {
     if ([string]::IsNullOrWhiteSpace($t)) { return $null }
     return $t | ConvertFrom-Json
 }
+
+function New-RestoreToken {
+    $bytes = New-Object byte[] 32
+    $rng = [System.Security.Cryptography.RandomNumberGenerator]::Create()
+    try { $rng.GetBytes($bytes) }
+    finally { $rng.Dispose() }
+    return [System.BitConverter]::ToString($bytes).Replace('-', '').ToLowerInvariant()
+}
+
+function Test-PostRequest($ctx) {
+    $token = $ctx.Request.Headers['X-Restore-Token']
+    if ([string]::IsNullOrWhiteSpace($script:CsrfToken) -or $token -cne $script:CsrfToken) {
+        Send-Json $ctx ([pscustomobject]@{ ok=$false; error='Недействительный токен запроса. Обновите страницу.' }) 403
+        return $false
+    }
+    $origin = $ctx.Request.Headers['Origin']
+    if ($null -ne $origin -and $origin -cne $script:ServerOrigin) {
+        Send-Json $ctx ([pscustomobject]@{ ok=$false; error='Запрос с другого источника запрещён.' }) 403
+        return $false
+    }
+    $contentType = ([string]$ctx.Request.ContentType).Split(';')[0].Trim()
+    if ($contentType -ine 'application/json') {
+        Send-Json $ctx ([pscustomobject]@{ ok=$false; error='Ожидается Content-Type application/json.' }) 415
+        return $false
+    }
+    return $true
+}
+
+$script:CsrfToken = New-RestoreToken
+$script:ServerOrigin = ([uri]"http://localhost:$($cfg.Port)/").GetLeftPart([System.UriPartial]::Authority)
 
 # find mission folders (a dir that directly contains a *.ent file)
 function Find-Missions([string]$Root) {
@@ -98,9 +129,13 @@ function Handle-Api($ctx) {
     $path   = $ctx.Request.Url.AbsolutePath
     $method = $ctx.Request.HttpMethod
 
+    if ($method -eq 'POST' -and -not (Test-PostRequest $ctx)) { return }
+
     switch ("$method $path") {
         'GET /api/config' {
+            $ctx.Response.Headers['Cache-Control'] = 'no-store'
             Send-Json $ctx ([pscustomobject]@{
+                csrfToken         = $script:CsrfToken
                 defaultSourceRoot = $cfg.DefaultSourceRoot
                 defaultDestDir    = $cfg.DefaultDestDir
                 remapTable        = $cfg.RemapTable
@@ -266,7 +301,10 @@ while ($listener.IsListening) {
     $ctx = $listener.GetContext()
     try {
         $p = $ctx.Request.Url.AbsolutePath
-        if ($p -eq '/' -or $p -eq '/index.html') {
+        if ($ctx.Request.HttpMethod -eq 'POST' -or $p -like '/api/*') {
+            Handle-Api $ctx
+        }
+        elseif ($p -eq '/' -or $p -eq '/index.html') {
             # MUST read as UTF-8 explicitly: Get-Content in PS 5.1 defaults to the ANSI
             # codepage, which would mangle the Cyrillic/UTF-8 bytes into mojibake.
             $html = [System.IO.File]::ReadAllText($indexPath, [System.Text.Encoding]::UTF8)
@@ -279,9 +317,6 @@ while ($listener.IsListening) {
                 $html = [System.IO.File]::ReadAllText($editorPath, [System.Text.Encoding]::UTF8)
                 Send-Text $ctx $html
             }
-        }
-        elseif ($p -like '/api/*') {
-            Handle-Api $ctx
         }
         else {
             Send-Text $ctx 'Not found' 'text/plain; charset=utf-8' 404

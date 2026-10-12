@@ -22,6 +22,7 @@ param(
     [string]$RemapTable = (Join-Path $PSScriptRoot 'remap_table.json'),
     [string]$AddonRoot  = 'C:\Users\armen\Documents\GitHub\PodvalTvTMissions\PodvalTvTMissions',
     [string]$PrefabsModRoot,
+    [switch]$RefreshIndex,
     [switch]$WriteStubs,
     [switch]$Force
 )
@@ -34,7 +35,7 @@ if ($PrefabsModRoot) { $cfg.PrefabsModRoot = $PrefabsModRoot }
 Set-RMConfig $cfg | Out-Null
 
 Write-Host 'Building mod prefab index...' -ForegroundColor Cyan
-$idx = Build-ModIndex
+$idx = Build-ModIndex -Refresh:$RefreshIndex
 Write-Host ("  mod prefab GUIDs: {0}" -f $idx.Count)
 
 $remap = Load-RemapTable -Path $RemapTable
@@ -54,14 +55,16 @@ if ($res.Replacements.Count -eq 0) { Write-Host '  (none)' }
 foreach ($k in $res.Replacements.Keys) { Write-Host ("  {0} x{1}  ->  {2}" -f $k, $res.Replacements[$k], $remap.Map[$k]) }
 
 Write-Host ''
-Write-Host ("Resolved: {0}   Mapped: {1}   Ignored(logic): {2}   External(base/other mods): {3}" -f $res.Resolved, $res.Mapped, $res.Ignore, $res.External) -ForegroundColor DarkGray
+Write-Host ("Resolved: {0}   Replaced source refs: {1}   Ignored(logic): {2}   External(base/other mods): {3}" -f $res.Resolved, $res.Replacements.Count, $res.Ignore, $res.External) -ForegroundColor DarkGray
 Write-Host ''
 if ($res.BrokenCount -gt 0) {
-    Write-Host ("!! UNRESOLVED broken refs (not in mod, not mapped): {0}" -f $res.BrokenCount) -ForegroundColor Red
+    Write-Host ("!! UNRESOLVED broken refs (not resolved in mod): {0}" -f $res.BrokenCount) -ForegroundColor Red
     $res.Broken | Sort-Object Path | ForEach-Object { Write-Host ("   {0}" -f $_.Ref) -ForegroundColor Red }
     if ($WriteStubs) {
         $stubEntries = @{}
-        foreach ($b in $res.Broken) { $stubEntries[$b.Ref] = '' }
+        foreach ($b in $res.Broken) {
+            if (-not $remap.Map.Contains($b.Ref) -and -not $remap.Stubs.Contains($b.Ref)) { $stubEntries[$b.Ref] = '' }
+        }
         $w = Set-RemapEntries -Entries $stubEntries -Path $RemapTable
         Write-Host ("   -> wrote {0} stub(s) to remap_table.json ({1}); fill them and re-run." -f $w.Added, '_Unresolved_Pending') -ForegroundColor Yellow
     } else {

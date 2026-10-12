@@ -49,6 +49,9 @@ $script:RMC = @{
 }
 function Get-RMConfig { return $script:RMC }
 function Set-RMConfig([hashtable]$Overrides) {
+    if ($Overrides.ContainsKey('PrefabsModRoot') -or $Overrides.ContainsKey('IndexCache')) {
+        $script:ModIndexCache = @{}
+    }
     foreach ($k in $Overrides.Keys) { $script:RMC[$k] = $Overrides[$k] }
     return $script:RMC
 }
@@ -57,9 +60,119 @@ function Set-RMConfig([hashtable]$Overrides) {
 function Read-Text([string]$Path)  { return [System.IO.File]::ReadAllText($Path) }
 function Write-Text([string]$Path, [string]$Text) { [System.IO.File]::WriteAllText($Path, $Text, $script:Utf8NoBom) }
 
+# Resolve physical directory ancestors as well as lexical "..", junction and 8.3 aliases.
+function Get-RMAbsolutePath([string]$Path) {
+    if ([string]::IsNullOrWhiteSpace($Path)) { throw 'A filesystem path is required.' }
+    $provider = $null; $drive = $null
+    $full = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($Path, [ref]$provider, [ref]$drive)
+    if ($provider.Name -ne 'FileSystem') { throw "Not a filesystem path: $Path" }
+    $full = [System.IO.Path]::GetFullPath($full)
+    $root = [System.IO.Path]::GetPathRoot($full)
+    if ($full.Length -gt $root.Length) { $full = $full.TrimEnd([char[]]'\/') }
+    return $full
+}
+
+function Get-RMPhysicalDirectory([string]$Path) {
+    if (-not ('PodvalRestore.NativePath' -as [type])) {
+        Add-Type -TypeDefinition @'
+using System;
+using System.ComponentModel;
+using System.Runtime.InteropServices;
+using System.Text;
+using Microsoft.Win32.SafeHandles;
+namespace PodvalRestore {
+    public static class NativePath {
+        [DllImport("kernel32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
+        private static extern SafeFileHandle CreateFileW(string name, uint access,
+            uint share, IntPtr security, uint disposition, uint flags, IntPtr template);
+        [DllImport("kernel32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
+        private static extern uint GetFinalPathNameByHandleW(SafeFileHandle handle,
+            StringBuilder path, uint size, uint flags);
+        public static string Resolve(string name) {
+            using (SafeFileHandle handle = CreateFileW(name, 0, 7, IntPtr.Zero, 3, 0x02000000, IntPtr.Zero)) {
+                if (handle.IsInvalid) throw new Win32Exception(Marshal.GetLastWin32Error());
+                StringBuilder path = new StringBuilder(512);
+                uint length = GetFinalPathNameByHandleW(handle, path, (uint)path.Capacity, 0);
+                if (length == 0) throw new Win32Exception(Marshal.GetLastWin32Error());
+                if (length >= path.Capacity) {
+                    path = new StringBuilder((int)length + 1);
+                    length = GetFinalPathNameByHandleW(handle, path, (uint)path.Capacity, 0);
+                    if (length == 0) throw new Win32Exception(Marshal.GetLastWin32Error());
+                }
+                return path.ToString();
+            }
+        }
+    }
+}
+'@
+    }
+    $final = [PodvalRestore.NativePath]::Resolve($Path)
+    if ($final.StartsWith('\\?\UNC\', [StringComparison]::OrdinalIgnoreCase)) { $final = '\\' + $final.Substring(8) }
+    elseif ($final.StartsWith('\\?\', [StringComparison]::Ordinal)) { $final = $final.Substring(4) }
+    return Get-RMAbsolutePath $final
+}
+
+function Get-RMCanonicalPath([string]$Path) {
+    $cursor = Get-RMAbsolutePath $Path
+    $missing = New-Object System.Collections.Generic.List[string]
+    while (-not (Test-Path -LiteralPath $cursor)) {
+        $missing.Add([System.IO.Path]::GetFileName($cursor))
+        $parent = [System.IO.Path]::GetDirectoryName($cursor)
+        if (-not $parent -or $parent -eq $cursor) { throw "No accessible directory ancestor: $Path" }
+        $cursor = $parent
+    }
+    if (-not (Get-Item -LiteralPath $cursor -Force -ErrorAction Stop).PSIsContainer) { throw "Not a directory: $cursor" }
+    $canonical = Get-RMPhysicalDirectory $cursor
+    for ($i = $missing.Count - 1; $i -ge 0; $i--) { $canonical = Join-Path $canonical $missing[$i] }
+    return Get-RMAbsolutePath $canonical
+}
+
+function Test-RMPathWithin([string]$Path, [string]$Parent, [switch]$AllowEqual) {
+    if ([string]::Equals($Path, $Parent, [StringComparison]::OrdinalIgnoreCase)) { return [bool]$AllowEqual }
+    $prefix = $Parent.TrimEnd([char[]]'\/') + [System.IO.Path]::DirectorySeparatorChar
+    return $Path.StartsWith($prefix, [StringComparison]::OrdinalIgnoreCase)
+}
+
+function Assert-RMPlainTree([string]$Path) {
+    $pending = New-Object System.Collections.Generic.Stack[string]
+    $pending.Push($Path)
+    while ($pending.Count -gt 0) {
+        $dir = Get-Item -LiteralPath ($pending.Pop()) -Force -ErrorAction Stop
+        if (-not $dir.PSIsContainer) { throw "Not a mission directory: $($dir.FullName)" }
+        if ($dir.Attributes -band [System.IO.FileAttributes]::ReparsePoint) { throw "Reparse points are not supported inside mission trees: $($dir.FullName)" }
+        foreach ($item in (Get-ChildItem -LiteralPath $dir.FullName -Force -ErrorAction Stop)) {
+            if ($item.Attributes -band [System.IO.FileAttributes]::ReparsePoint) { throw "Reparse points are not supported inside mission trees: $($item.FullName)" }
+            if ($item.PSIsContainer) { $pending.Push($item.FullName) }
+        }
+    }
+}
+
+function Get-RMRestorePaths([string]$SourceMission, [string]$DestDir, [string]$AddonRoot, [switch]$Force) {
+    $sourcePath = Get-RMAbsolutePath $SourceMission
+    if (-not (Test-Path -LiteralPath $sourcePath -PathType Container)) { throw "Source mission directory not found: $SourceMission" }
+    if (-not (Test-Path -LiteralPath $AddonRoot -PathType Container)) { throw "Addon directory not found: $AddonRoot" }
+    Assert-RMPlainTree $sourcePath
+    $source = Get-RMCanonicalPath $sourcePath
+    $addon = Get-RMCanonicalPath $AddonRoot
+    $destinationDir = Get-RMCanonicalPath $DestDir
+    $name = [System.IO.Path]::GetFileName($source)
+    if (-not $name) { throw 'The source must be a mission directory, not a filesystem root.' }
+    $destinationPath = Join-Path (Get-RMAbsolutePath $DestDir) $name
+    if (Test-Path -LiteralPath $destinationPath) {
+        if (-not $Force) { throw "Destination already exists: $destinationPath (use -Force)" }
+        Assert-RMPlainTree $destinationPath
+    }
+    $destination = Get-RMCanonicalPath $destinationPath
+    if (-not (Test-RMPathWithin $destination $addon)) { throw "Destination must be beneath the addon directory: $destination" }
+    if ((Test-RMPathWithin $source $destination -AllowEqual) -or (Test-RMPathWithin $destination $source -AllowEqual)) {
+        throw "Source and destination mission directories must not overlap: $source -> $destination"
+    }
+    return [pscustomobject]@{ Source=$source; DestDir=$destinationDir; Destination=$destination; AddonRoot=$addon; Name=$name }
+}
+
 # ------------------------------------------------------------------ mod index
 # Build GUID(upper) -> relative resource path from all *.et.meta in the prefabs mod.
-$script:ModIndexCache = $null
+$script:ModIndexCache = @{}
 function Build-ModIndex {
     [CmdletBinding()]
     param(
@@ -68,30 +181,41 @@ function Build-ModIndex {
     )
     if (-not $ModRoots) { $ModRoots = @($script:RMC.PrefabsModRoot) }
 
-    if (-not $Refresh -and $script:ModIndexCache) { return $script:ModIndexCache }
+    $roots = @($ModRoots | ForEach-Object { Get-RMCanonicalPath $_ } | Sort-Object -Unique)
+    $sha = [System.Security.Cryptography.SHA256]::Create()
+    try {
+        $key = [System.BitConverter]::ToString($sha.ComputeHash($script:Utf8NoBom.GetBytes(
+            (($roots | ForEach-Object { $_.ToLowerInvariant() }) -join "`n")
+        ))).Replace('-', '').ToLowerInvariant()
+    } finally { $sha.Dispose() }
+    if (-not $Refresh -and $script:ModIndexCache.ContainsKey($key)) { return $script:ModIndexCache[$key] }
 
-    $cacheFile = $script:RMC.IndexCache
+    $cacheFile = $script:RMC.IndexCache + '.' + $key + '.tsv'
     if (-not $Refresh -and (Test-Path -LiteralPath $cacheFile)) {
         $idx = @{}
-        foreach ($line in [System.IO.File]::ReadAllLines($cacheFile, $script:Utf8NoBom)) {
-            if ($line) { $p = $line.Split("`t"); if ($p.Length -ge 2) { $idx[$p[0]] = $p[1] } }
+        foreach ($line in ((Read-Text $cacheFile) -split '\r?\n')) {
+            if ($line) {
+                $p = $line.Split("`t")
+                if ($p.Length -eq 2 -and $p[0] -match '^[0-9A-Fa-f]{16}$') { $idx[$p[0].ToUpperInvariant()] = $p[1] }
+            }
         }
-        if ($idx.Count -gt 0) { $script:ModIndexCache = $idx; return $idx }
+        if ($idx.Count -gt 0) { $script:ModIndexCache[$key] = $idx; return $idx }
     }
 
     $idx = @{}
-    foreach ($root in $ModRoots) {
-        if (-not (Test-Path -LiteralPath $root)) { continue }
-        Get-ChildItem -LiteralPath $root -Recurse -File -Filter *.et.meta -ErrorAction SilentlyContinue | ForEach-Object {
-            $t = [System.IO.File]::ReadAllText($_.FullName)
+    foreach ($root in $roots) {
+        if (-not (Test-Path -LiteralPath $root -PathType Container)) { throw "Prefab mod directory not found: $root" }
+        Get-ChildItem -LiteralPath $root -Recurse -File -Filter *.et.meta -ErrorAction Stop | ForEach-Object {
+            $t = Read-Text $_.FullName
             $m = [regex]::Match($t, $script:MetaRefRx)
             if ($m.Success) { $idx[$m.Groups[1].Value.ToUpper()] = $m.Groups[2].Value }
         }
     }
     # persist cache
     $lines = foreach ($k in $idx.Keys) { $k + "`t" + $idx[$k] }
-    [System.IO.File]::WriteAllLines($cacheFile, [string[]]$lines, $script:Utf8NoBom)
-    $script:ModIndexCache = $idx
+    try { Write-Text $cacheFile (($lines -join "`n") + "`n") }
+    catch { Write-Verbose "Unable to persist mod index cache: $_" }
+    $script:ModIndexCache[$key] = $idx
     return $idx
 }
 
@@ -151,7 +275,7 @@ function Build-NewPrefabsCatalog {
 
     $json = ConvertTo-Json -InputObject $items -Depth 5
     Write-Text $Path $json
-    return $items
+    return ,($items.ToArray())
 }
 
 function Build-OldPrefabsCatalog {
@@ -261,21 +385,23 @@ function Build-OldPrefabsCatalog {
     $sortedOld = [object[]]@($oldItems | Sort-Object @{ Expression = { $_.isModPrefab }; Descending = $true }, @{ Expression = { $_.usageCount }; Descending = $true })
     $json = ConvertTo-Json -InputObject $sortedOld -Depth 5
     Write-Text $Path $json
-    return $sortedOld
+    return ,$sortedOld
 }
 
 function Get-NewPrefabsCatalog([string]$Path = $script:RMC.CatalogNew) {
     if (-not (Test-Path -LiteralPath $Path)) {
-        return (Build-NewPrefabsCatalog -Path $Path)
+        return ,(Build-NewPrefabsCatalog -Path $Path)
     }
-    return (Read-Text $Path | ConvertFrom-Json)
+    $items = Read-Text $Path | ConvertFrom-Json
+    return ,@($items)
 }
 
 function Get-OldPrefabsCatalog([string]$Path = $script:RMC.CatalogOld) {
     if (-not (Test-Path -LiteralPath $Path)) {
-        return (Build-OldPrefabsCatalog -Path $Path)
+        return ,(Build-OldPrefabsCatalog -Path $Path)
     }
-    return (Read-Text $Path | ConvertFrom-Json)
+    $items = Read-Text $Path | ConvertFrom-Json
+    return ,@($items)
 }
 
 # ------------------------------------------------------------------ remap table
@@ -289,8 +415,9 @@ function Load-RemapTable {
     $map = [ordered]@{}      # full-old-ref -> full-new-ref (filled only)
     $stubs = [ordered]@{}    # full-old-ref -> '' (declared but unfilled)
     $mappedGuids = @{}
+    $occurrences = New-Object System.Collections.Generic.List[object]
     if (-not (Test-Path -LiteralPath $Path)) {
-        return [pscustomobject]@{ Map=$map; Stubs=$stubs; MappedGuids=$mappedGuids }
+        return [pscustomobject]@{ Map=$map; Stubs=$stubs; MappedGuids=$mappedGuids; Entries=$occurrences.ToArray() }
     }
     $json = Read-Text $Path | ConvertFrom-Json
     $entries = [ordered]@{}
@@ -298,7 +425,10 @@ function Load-RemapTable {
         param($node)
         foreach ($p in $node.PSObject.Properties) {
             if ($p.Value -is [string]) {
-                if ($p.Name -match $script:RefShape) { $entries[$p.Name] = [string]$p.Value }
+                if ($p.Name -match $script:RefShape) {
+                    $entries[$p.Name] = [string]$p.Value
+                    $occurrences.Add([pscustomobject]@{ OldRef=$p.Name; NewRef=[string]$p.Value })
+                }
             }
             elseif ($null -ne $p.Value -and $p.Value.PSObject -and $p.Value.PSObject.Properties.Count) {
                 & $walk $p.Value
@@ -314,7 +444,32 @@ function Load-RemapTable {
             $stubs[$k] = ''
         }
     }
-    return [pscustomobject]@{ Map=$map; Stubs=$stubs; MappedGuids=$mappedGuids }
+    return [pscustomobject]@{ Map=$map; Stubs=$stubs; MappedGuids=$mappedGuids; Entries=$occurrences.ToArray() }
+}
+
+function Get-RMReplacementIndex($Remap, [hashtable]$ModIndex) {
+    $byGuid = @{}; $invalid = @{}; $sourceGuids = @{}; $targets = @{}
+    $entries = if ($null -ne $Remap.PSObject.Properties['Entries']) { @($Remap.Entries) }
+        else { @($Remap.Map.Keys | ForEach-Object { [pscustomobject]@{ OldRef=$_; NewRef=$Remap.Map[$_] } }) }
+    foreach ($entry in $entries) {
+        $oldGuid = Guid-Of $entry.OldRef
+        if (-not $oldGuid) { continue }
+        if ([string]::IsNullOrWhiteSpace($entry.NewRef)) { continue }
+        $sourceGuids[$oldGuid] = $true
+        $newGuid = Guid-Of $entry.NewRef
+        $newPath = if ($entry.NewRef -match $script:RefShape) { $entry.NewRef.Substring(18) } else { $null }
+        if (-not $newGuid -or -not $newPath -or -not $ModIndex.ContainsKey($newGuid) -or $ModIndex[$newGuid] -ne $newPath) {
+            $invalid[$oldGuid] = $true
+            continue
+        }
+        if ($targets.ContainsKey($oldGuid) -and $targets[$oldGuid] -ne $newGuid) { $invalid[$oldGuid] = $true; continue }
+        $targets[$oldGuid] = $newGuid
+        if (-not $byGuid.ContainsKey($oldGuid)) {
+            $byGuid[$oldGuid] = [pscustomobject]@{ OldRef=$entry.OldRef; NewRef=('{' + $newGuid + '}' + $ModIndex[$newGuid]) }
+        }
+    }
+    foreach ($guid in $invalid.Keys) { $byGuid.Remove($guid) }
+    return [pscustomobject]@{ ByGuid=$byGuid; InvalidGuids=$invalid; SourceGuids=$sourceGuids }
 }
 
 function Guid-Of([string]$fullRef) {
@@ -466,7 +621,7 @@ function Get-RemapModel {
     return [pscustomobject]@{
         meta        = $metaObj
         versionHash = $hash
-        groups      = $sortedGroups
+        groups      = [string[]]@($sortedGroups)
         tree        = $json
         entries     = $entries.ToArray()
         stats       = [pscustomobject]$st
@@ -480,8 +635,9 @@ function Get-MissionRefs {
     [CmdletBinding()]
     param([Parameter(Mandatory)][string]$MissionDir)
 
+    if (-not (Test-Path -LiteralPath $MissionDir -PathType Container)) { throw "Mission directory not found: $MissionDir" }
     $refs = [ordered]@{}
-    Get-ChildItem -LiteralPath $MissionDir -Recurse -File -Include *.layer,*.ent -ErrorAction SilentlyContinue | ForEach-Object {
+    Get-ChildItem -LiteralPath $MissionDir -Recurse -File -Include *.layer,*.ent -ErrorAction Stop | ForEach-Object {
         $t = Read-Text $_.FullName
         foreach ($m in [regex]::Matches($t, $script:RefRx)) {
             $full = '{' + $m.Groups[1].Value.ToUpper() + '}' + $m.Groups[2].Value
@@ -506,29 +662,32 @@ function Classify-Refs {
     param(
         [Parameter(Mandatory)]$Refs,          # ordered map from Get-MissionRefs
         [Parameter(Mandatory)][hashtable]$ModIndex,
-        [Parameter(Mandatory)]$Remap           # object from Load-RemapTable
+        [Parameter(Mandatory)]$Remap,          # object from Load-RemapTable
+        [switch]$FinalValidation,
+        $ReplacementIndex
     )
     $out = New-Object System.Collections.Generic.List[object]
+    if (-not $ReplacementIndex) { $ReplacementIndex = Get-RMReplacementIndex $Remap $ModIndex }
     foreach ($full in $Refs.Keys) {
         $r = $Refs[$full]
         $status = 'external'
         if ($ModIndex.ContainsKey($r.Guid)) {
             $status = 'resolved'
         }
-        elseif ($Remap.MappedGuids.ContainsKey($r.Guid)) {
+        elseif (-not $FinalValidation -and $ReplacementIndex.ByGuid.ContainsKey($r.Guid)) {
             $status = 'mapped'
         }
         elseif ($r.Path -match $script:IgnoreRx -or $full -match $script:IgnoreRx) {
             $status = 'ignore'
         }
-        elseif ($full -match $script:SuspectRx) {
+        elseif ($full -match $script:SuspectRx -or $ReplacementIndex.SourceGuids.ContainsKey($r.Guid)) {
             $status = 'broken'
         }
         $out.Add([pscustomobject]@{
             Ref=$r.Ref; Guid=$r.Guid; Path=$r.Path; Count=$r.Count; Status=$status
         })
     }
-    return $out
+    return ,($out.ToArray())
 }
 
 # ------------------------------------------------------------------ role parsing + ranking
@@ -691,7 +850,7 @@ function Rank-Candidates {
         # Confidence is not part of the original object -> must be added explicitly
         $r | Add-Member -NotePropertyName Confidence -NotePropertyValue ($conf.ToString('0.##', $inv)) -Force
     }
-    return $topN
+    return ,$topN
 }
 
 # ------------------------------------------------------------------ remap table writes
@@ -851,199 +1010,195 @@ function Backup-RemapTable([string]$Path = $script:RMC.RemapTable) {
 
 # Insert key:value entries into a named top-level group (creating it if missing).
 # Used for both stubs (value '') and resolved mappings (value = new ref).
+function Get-RemapLeaves($Root, [string]$Key) {
+    $found = New-Object System.Collections.Generic.List[object]
+    $walk = {
+        param($node, [string[]]$trail)
+        if ($node -isnot [System.Management.Automation.PSCustomObject]) { return }
+        foreach ($p in $node.PSObject.Properties) {
+            if ($p.Name -match $script:RefShape -and $p.Value -is [string]) {
+                if (-not $Key -or $p.Name -eq $Key) {
+                    $found.Add([pscustomobject]@{ Parent=$node; Trail=[string[]]@($trail); Property=$p })
+                }
+            } elseif ($p.Value -is [System.Management.Automation.PSCustomObject]) {
+                & $walk $p.Value ([string[]]@($trail + @($p.Name)))
+            }
+        }
+    }
+    & $walk $Root ([string[]]@())
+    return ,($found.ToArray())
+}
+
+function Resolve-RemapGroup($Root, $GroupSpec, [bool]$Create = $true) {
+    if ($Root -isnot [System.Management.Automation.PSCustomObject]) { throw 'The remap table root must be an object.' }
+    if ($GroupSpec -is [string]) {
+        $parts = @($GroupSpec.Split('/') | Where-Object { -not [string]::IsNullOrWhiteSpace($_) })
+    } elseif ($null -ne $GroupSpec -and $GroupSpec -is [System.Collections.IEnumerable]) {
+        $parts = @($GroupSpec)
+        foreach ($part in $parts) {
+            if ($part -isnot [string] -or [string]::IsNullOrWhiteSpace($part)) { throw 'Group paths must contain nonempty string segments.' }
+        }
+    } else { throw 'A group must be a string path or an array of exact segments.' }
+    $current = $Root
+    foreach ($part in $parts) {
+        $property = $current.PSObject.Properties[[string]$part]
+        if (-not $property) {
+            if (-not $Create) { return $null }
+            $current | Add-Member -NotePropertyName ([string]$part) -NotePropertyValue ([pscustomobject]@{})
+            $property = $current.PSObject.Properties[[string]$part]
+        }
+        if ($property.Value -isnot [System.Management.Automation.PSCustomObject]) { throw "Group segment is not an object: $part" }
+        $current = $property.Value
+    }
+    return $current
+}
+
+function Get-RemapOperationSource($Root, $Operation) {
+    $key = [string]$Operation.oldRef
+    if ($key -notmatch $script:RefShape) { throw "Invalid oldRef: $key" }
+    $scope = $Operation.PSObject.Properties['groupPath']
+    if ($scope) {
+        if ($null -eq $scope.Value -or $scope.Value -is [string] -or $scope.Value -isnot [System.Collections.IEnumerable]) {
+            throw 'groupPath must be an array of exact string segments; [] addresses the root.'
+        }
+        $parent = Resolve-RemapGroup $Root $scope.Value $false
+        if (-not $parent -or -not $parent.PSObject.Properties[$key] -or $parent.PSObject.Properties[$key].Value -isnot [string]) {
+            throw "Scoped remap entry not found: $key"
+        }
+        return [pscustomobject]@{ Parent=$parent; Property=$parent.PSObject.Properties[$key] }
+    }
+    $matches = Get-RemapLeaves $Root $key
+    if ($matches.Count -gt 1) { throw "Ambiguous remap entry; specify groupPath: $key" }
+    if ($matches.Count -eq 1) { return $matches[0] }
+    return $null
+}
+
+function Get-RemapDestinationSpec($Operation, [string]$Property = 'group') {
+    $p = $Operation.PSObject.Properties[$Property]
+    if (-not $p -or $null -eq $p.Value -or ($p.Value -is [string] -and [string]::IsNullOrWhiteSpace($p.Value))) {
+        return '_Unresolved_Pending'
+    }
+    return ,$p.Value
+}
+
 function Set-RemapEntries {
     [CmdletBinding()]
     param(
-        [Parameter(Mandatory)][hashtable]$Entries,     # oldRef -> newRef ('' for stub)
+        [Parameter(Mandatory)][hashtable]$Entries,
         [string]$Path = $script:RMC.RemapTable,
         [string]$Group = '_Unresolved_Pending'
     )
     if ($Entries.Count -eq 0) { return [pscustomobject]@{ Added=0; Updated=0 } }
-    Backup-RemapTable $Path | Out-Null
-
-    $json = Read-Text $Path | ConvertFrom-Json
-    # locate existing key anywhere; if present update in place, else collect for group add
+    $version = Get-RemapFileHash $Path
+    $root = Read-Text $Path | ConvertFrom-Json
     $added = 0; $updated = 0
-    $existingProps = @{}
-    $collect = {
-        param($node)
-        foreach ($p in $node.PSObject.Properties) {
-            if ($p.Value -is [string]) {
-                if ($p.Name -match $script:RefShape) { $existingProps[$p.Name] = $p }
-            } elseif ($null -ne $p.Value -and $p.Value.PSObject -and $p.Value.PSObject.Properties.Count) {
-                & $collect $p.Value
-            }
-        }
+    $operations = New-Object System.Collections.Generic.List[object]
+    foreach ($key in $Entries.Keys) {
+        $matches = Get-RemapLeaves $root $key
+        if ($matches.Count -gt 1) { throw "Ambiguous remap entry; use scoped operations: $key" }
+        if ($matches.Count -eq 1) { $updated++ } else { $added++ }
+        $operations.Add([pscustomobject]@{ op='set'; oldRef=$key; newRef=[string]$Entries[$key]; group=$Group })
     }
-    & $collect $json
-
-    $toAdd = @{}
-    foreach ($k in $Entries.Keys) {
-        if ($existingProps.ContainsKey($k)) {
-            $existingProps[$k].Value = [string]$Entries[$k]; $updated++
-        } else {
-            $toAdd[$k] = [string]$Entries[$k]
-        }
-    }
-    if ($toAdd.Count -gt 0) {
-        $grp = $json.PSObject.Properties[$Group]
-        if (-not $grp) {
-            $json | Add-Member -NotePropertyName $Group -NotePropertyValue ([pscustomobject]@{}) -Force
-        }
-        foreach ($k in $toAdd.Keys) {
-            $json.$Group | Add-Member -NotePropertyName $k -NotePropertyValue $toAdd[$k] -Force
-            $added++
-        }
-    }
-
-    $text = Format-RemapJson $json
-    $null = $text | ConvertFrom-Json
-    Write-Text $Path $text
+    Save-RemapOperations -Operations $operations.ToArray() -ExpectedVersionHash $version -Path $Path | Out-Null
     return [pscustomobject]@{ Added=$added; Updated=$updated }
 }
 
 function Save-RemapOperations {
     [CmdletBinding()]
     param(
-        [Parameter(Mandatory)][object[]]$Operations,
-        [Parameter()][string]$ExpectedVersionHash,
-        [Parameter()][string]$Path = $script:RMC.RemapTable
+        [Parameter(Mandatory)][AllowEmptyCollection()][object[]]$Operations,
+        [string]$ExpectedVersionHash,
+        [string]$Path = $script:RMC.RemapTable
     )
-
-    if (-not (Test-Path -LiteralPath $Path)) {
-        throw "Таблица ремапа не найдена по пути: $Path"
-    }
-
+    if (-not (Test-Path -LiteralPath $Path)) { throw "Таблица ремапа не найдена по пути: $Path" }
     $currentHash = Get-RemapFileHash $Path
-    if ($ExpectedVersionHash -and $currentHash -and ($ExpectedVersionHash -ne $currentHash)) {
+    if ($ExpectedVersionHash -and $currentHash -and $ExpectedVersionHash -ne $currentHash) {
         throw "Конфликт версий: файл на диске был изменён другим процессом (актуальный хеш $currentHash, ожидался $ExpectedVersionHash). Обновите страницу."
     }
-
-    $raw = Read-Text $Path
-    $root = $raw | ConvertFrom-Json
-
-    function Find-Leaf($node, [string]$key, $trail = @()) {
-        foreach ($p in $node.PSObject.Properties) {
-            if ($p.Name -eq $key) {
-                return [pscustomobject]@{ Parent = $node; Trail = $trail; Property = $p }
-            }
-            if ($null -ne $p.Value -and $p.Value.PSObject -and $p.Value.PSObject.Properties.Count -gt 0 -and $p.Name -notmatch '^\{[0-9A-Fa-f]{16}\}') {
-                $found = Find-Leaf $p.Value $key ($trail + @($p.Name))
-                if ($found) { return $found }
-            }
-        }
-        return $null
-    }
-
-    function Resolve-GroupNode($rootNode, $groupSpec, [bool]$create = $true) {
-        $parts = if ($groupSpec -is [System.Collections.IEnumerable] -and $groupSpec -isnot [string]) {
-            @($groupSpec)
-        } else {
-            ([string]$groupSpec).Split('/') | Where-Object { -not [string]::IsNullOrWhiteSpace($_) }
-        }
-        $cur = $rootNode
-        foreach ($part in $parts) {
-            $p = $cur.PSObject.Properties[$part]
-            if (-not $p) {
-                if (-not $create) { return $null }
-                $cur | Add-Member -NotePropertyName $part -NotePropertyValue ([pscustomobject]@{}) -Force
-                $p = $cur.PSObject.Properties[$part]
-            }
-            $cur = $p.Value
-        }
-        return $cur
-    }
-
+    $root = Read-Text $Path | ConvertFrom-Json
+    if ($root -isnot [System.Management.Automation.PSCustomObject]) { throw 'The remap table root must be an object.' }
     $applied = 0
     foreach ($op in $Operations) {
-        $type = [string]$op.op
-        switch ($type.ToLower()) {
+        $type = ([string]$op.op).ToLowerInvariant()
+        switch ($type) {
             'set' {
-                $leaf = Find-Leaf $root ([string]$op.oldRef)
-                if ($leaf) {
-                    $leaf.Property.Value = [string]$op.newRef
-                    $applied++
-                } else {
-                    $target = Resolve-GroupNode $root (if ($op.group) { $op.group } else { '_Unresolved_Pending' }) $true
-                    $target | Add-Member -NotePropertyName ([string]$op.oldRef) -NotePropertyValue ([string]$op.newRef) -Force
-                    $applied++
+                $leaf = Get-RemapOperationSource $root $op
+                if ($leaf) { $leaf.Property.Value = [string]$op.newRef }
+                else {
+                    $groupSpec = Get-RemapDestinationSpec $op
+                    $target = Resolve-RemapGroup $root $groupSpec $true
+                    if ($target.PSObject.Properties[[string]$op.oldRef]) { throw "Remap key already exists: $($op.oldRef)" }
+                    $target | Add-Member -NotePropertyName ([string]$op.oldRef) -NotePropertyValue ([string]$op.newRef)
                 }
+                $applied++
             }
             'add' {
-                $grpName = if ($op.group) { $op.group } else { '_Unresolved_Pending' }
-                $target = Resolve-GroupNode $root $grpName $true
-                $target | Add-Member -NotePropertyName ([string]$op.oldRef) -NotePropertyValue ([string]$op.newRef) -Force
+                if ([string]$op.oldRef -notmatch $script:RefShape) { throw "Invalid oldRef: $($op.oldRef)" }
+                $target = Resolve-RemapGroup $root (Get-RemapDestinationSpec $op) $true
+                if ($target.PSObject.Properties[[string]$op.oldRef]) { throw "Remap key already exists: $($op.oldRef)" }
+                $target | Add-Member -NotePropertyName ([string]$op.oldRef) -NotePropertyValue ([string]$op.newRef)
                 $applied++
             }
             'delete' {
-                $leaf = Find-Leaf $root ([string]$op.oldRef)
-                if ($leaf) {
-                    $leaf.Parent.PSObject.Properties.Remove([string]$op.oldRef)
-                    $applied++
-                }
+                $leaf = Get-RemapOperationSource $root $op
+                if ($leaf) { $leaf.Parent.PSObject.Properties.Remove([string]$op.oldRef); $applied++ }
             }
             'move' {
-                $leaf = Find-Leaf $root ([string]$op.oldRef)
+                $leaf = Get-RemapOperationSource $root $op
                 if ($leaf) {
-                    $val = $leaf.Property.Value
+                    $target = Resolve-RemapGroup $root (Get-RemapDestinationSpec $op 'targetGroup') $true
+                    if ([object]::ReferenceEquals($target, $leaf.Parent)) { $applied++; break }
+                    if ($target.PSObject.Properties[[string]$op.oldRef]) { throw "Move destination already contains the key: $($op.oldRef)" }
+                    $value = $leaf.Property.Value
+                    $target | Add-Member -NotePropertyName ([string]$op.oldRef) -NotePropertyValue $value
                     $leaf.Parent.PSObject.Properties.Remove([string]$op.oldRef)
-                    $target = Resolve-GroupNode $root ([string]$op.targetGroup) $true
-                    $target | Add-Member -NotePropertyName ([string]$op.oldRef) -NotePropertyValue $val -Force
                     $applied++
                 }
             }
             'rename' {
-                $leaf = Find-Leaf $root ([string]$op.oldRef)
+                $leaf = Get-RemapOperationSource $root $op
                 if ($leaf) {
-                    $val = if ($op.newRef) { [string]$op.newRef } else { $leaf.Property.Value }
+                    $newKey = [string]$op.newOldRef
+                    if ($newKey -notmatch $script:RefShape) { throw "Invalid newOldRef: $newKey" }
+                    $collision = $leaf.Parent.PSObject.Properties[$newKey]
+                    if ($collision -and $newKey -ne [string]$op.oldRef) { throw "Rename destination already contains the key: $newKey" }
+                    $value = if ($op.PSObject.Properties['newRef']) { [string]$op.newRef } else { $leaf.Property.Value }
                     $leaf.Parent.PSObject.Properties.Remove([string]$op.oldRef)
-                    $leaf.Parent | Add-Member -NotePropertyName ([string]$op.newOldRef) -NotePropertyValue $val -Force
+                    $leaf.Parent | Add-Member -NotePropertyName $newKey -NotePropertyValue $value
                     $applied++
                 }
             }
             'meta' {
-                if (-not $root._meta) {
-                    $root | Add-Member -NotePropertyName '_meta' -NotePropertyValue ([pscustomobject]@{}) -Force
+                if (-not $root.PSObject.Properties['_meta']) {
+                    $root | Add-Member -NotePropertyName '_meta' -NotePropertyValue ([pscustomobject]@{})
                 }
-                if ($null -ne $op.description) {
-                    if ($root._meta.PSObject.Properties['description']) { $root._meta.description = [string]$op.description }
-                    else { $root._meta | Add-Member -NotePropertyName 'description' -NotePropertyValue ([string]$op.description) -Force }
-                }
-                if ($null -ne $op.status) {
-                    if ($root._meta.PSObject.Properties['status']) { $root._meta.status = [string]$op.status }
-                    else { $root._meta | Add-Member -NotePropertyName 'status' -NotePropertyValue ([string]$op.status) -Force }
+                if ($root._meta -isnot [System.Management.Automation.PSCustomObject]) { throw '_meta must be an object.' }
+                foreach ($name in @('description','status')) {
+                    if ($null -ne $op.$name) {
+                        if ($root._meta.PSObject.Properties[$name]) { $root._meta.PSObject.Properties[$name].Value = [string]$op.$name }
+                        else { $root._meta | Add-Member -NotePropertyName $name -NotePropertyValue ([string]$op.$name) }
+                    }
                 }
                 $applied++
             }
             'note' {
-                $grp = Resolve-GroupNode $root ([string]$op.group) $true
-                if ([string]::IsNullOrWhiteSpace([string]$op.note)) {
-                    if ($grp.PSObject.Properties['_note']) { $grp.PSObject.Properties.Remove('_note') }
-                } else {
-                    if ($grp.PSObject.Properties['_note']) { $grp._note = [string]$op.note }
-                    else { $grp | Add-Member -NotePropertyName '_note' -NotePropertyValue ([string]$op.note) -Force }
-                }
+                $groupSpec = [string[]]@()
+                if ($op.PSObject.Properties['group']) { $groupSpec = $op.group }
+                $group = Resolve-RemapGroup $root $groupSpec $true
+                if ([string]::IsNullOrWhiteSpace([string]$op.note)) { $group.PSObject.Properties.Remove('_note') }
+                elseif ($group.PSObject.Properties['_note']) { $group._note = [string]$op.note }
+                else { $group | Add-Member -NotePropertyName '_note' -NotePropertyValue ([string]$op.note) }
                 $applied++
             }
-            default {
-                Write-Warning "Неизвестная операция: $type"
-            }
+            default { throw "Неизвестная операция: $type" }
         }
     }
-
     $formatted = Format-RemapJson $root
     $null = $formatted | ConvertFrom-Json
-    $bak = Backup-RemapTable $Path
+    $backup = Backup-RemapTable $Path
     Write-Text $Path $formatted
-
-    return [pscustomobject]@{
-        ok         = $true
-        applied    = $applied
-        newHash    = (Get-RemapFileHash $Path)
-        backupFile = $bak
-    }
+    return [pscustomobject]@{ ok=$true; applied=$applied; newHash=(Get-RemapFileHash $Path); backupFile=$backup }
 }
-
 
 # ------------------------------------------------------------------ scan (no copy)
 function Scan-Mission {
@@ -1074,7 +1229,7 @@ function Scan-Mission {
         Ignore    = @($classified | Where-Object Status -eq 'ignore').Count
         External  = @($classified | Where-Object Status -eq 'external').Count
         Broken    = $broken.Count
-        Refs      = $classified
+        Refs      = [object[]]$classified
     }
 }
 
@@ -1088,34 +1243,36 @@ function Invoke-Restore {
         [string]$AddonRoot  = $script:RMC.AddonRoot,
         [switch]$Force
     )
+    $paths = Get-RMRestorePaths -SourceMission $SourceMission -DestDir $DestDir -AddonRoot $AddonRoot -Force:$Force
     $modIndex = Build-ModIndex
     $remap    = Load-RemapTable -Path $RemapTable
-    $map      = $remap.Map
+    $lookup   = Get-RMReplacementIndex $remap $modIndex
+    # Read the source files before replacing an existing destination.
+    $null = Get-MissionRefs -MissionDir $paths.Source
 
-    $missionName = Split-Path $SourceMission -Leaf
-    $destMission = Join-Path $DestDir $missionName
+    $missionName = $paths.Name
+    $destMission = $paths.Destination
     if (Test-Path -LiteralPath $destMission) {
         if (-not $Force) { throw "Destination already exists: $destMission (use -Force)" }
         Remove-Item -LiteralPath $destMission -Recurse -Force
     }
-    New-Item -ItemType Directory -Path $DestDir -Force | Out-Null
-    Copy-Item -LiteralPath $SourceMission -Destination $destMission -Recurse -Force
+    New-Item -ItemType Directory -Path $paths.DestDir -Force | Out-Null
+    Copy-Item -LiteralPath $paths.Source -Destination $destMission -Recurse -Force
 
-    # apply remap to .layer files
+    # Replace each original reference once; generated targets are never remapped again.
     $replacements = [ordered]@{}
-    foreach ($f in (Get-ChildItem -LiteralPath $destMission -Recurse -File -Include *.layer)) {
+    foreach ($f in (Get-ChildItem -LiteralPath $destMission -Recurse -File -Include *.layer,*.ent -ErrorAction Stop)) {
         $text = Read-Text $f.FullName
-        $changed = $false
-        foreach ($old in $map.Keys) {
-            $n = ([regex]::Matches($text, [regex]::Escape($old))).Count
-            if ($n -gt 0) {
-                $text = $text.Replace($old, $map[$old])
-                if (-not $replacements.Contains($old)) { $replacements[$old] = 0 }
-                $replacements[$old] += $n
-                $changed = $true
-            }
-        }
-        if ($changed) { Write-Text $f.FullName $text }
+        $rewritten = [regex]::Replace($text, $script:RefRx, [System.Text.RegularExpressions.MatchEvaluator]{
+            param($match)
+            $guid = $match.Groups[1].Value.ToUpperInvariant()
+            if ($modIndex.ContainsKey($guid) -or -not $lookup.ByGuid.ContainsKey($guid)) { return $match.Value }
+            $entry = $lookup.ByGuid[$guid]
+            if (-not $replacements.Contains($entry.OldRef)) { $replacements[$entry.OldRef] = 0 }
+            $replacements[$entry.OldRef]++
+            return $entry.NewRef
+        })
+        if ($rewritten -cne $text) { Write-Text $f.FullName $rewritten }
     }
 
     # fix .ent.meta resource path to new location
@@ -1123,7 +1280,7 @@ function Invoke-Restore {
     $newResourcePath = $null
     if ($metaFile) {
         $meta = Read-Text $metaFile.FullName
-        $rel  = $destMission.Substring($AddonRoot.Length).TrimStart('\','/').Replace('\','/')
+        $rel  = $destMission.Substring($paths.AddonRoot.Length).TrimStart('\','/').Replace('\','/')
         $newResourcePath = "$rel/$missionName.ent"
         $meta = [regex]::Replace($meta, '(Name\s+"\{[0-9A-Fa-f]{16}\})[^"]+(")', { param($mm) $mm.Groups[1].Value + $newResourcePath + $mm.Groups[2].Value })
         Write-Text $metaFile.FullName $meta
@@ -1131,8 +1288,7 @@ function Invoke-Restore {
 
     # reclassify destination against the mod index
     $destRefs = Get-MissionRefs -MissionDir $destMission
-    $remap2   = Load-RemapTable -Path $RemapTable
-    $classified = Classify-Refs -Refs $destRefs -ModIndex $modIndex -Remap $remap2
+    $classified = Classify-Refs -Refs $destRefs -ModIndex $modIndex -Remap $remap -ReplacementIndex $lookup -FinalValidation
     $broken = @($classified | Where-Object Status -eq 'broken')
 
     return [pscustomobject]@{
