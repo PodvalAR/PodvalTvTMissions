@@ -130,6 +130,33 @@ cd .\Tools
     -ReportJson "validation-report.json"
 ```
 
+## Автоматическая нормализация слоёв миссий (Mission Normalization)
+
+Скрипт `Normalize-MissionLayers.ps1` автоматизирует шаги 1–8 спецификации [`MISSION_MIGRATION_GUIDE.md`](MISSION_MIGRATION_GUIDE.md):
+
+- **Каноническое именование:** авто-определение карты и переименование миссии в `TvT_<ИмяМиссии>_<Карта>`, синхронизация файлов `.ent`, `.ent.meta`, ResourcePath и папки `<Миссия>_Layers`.
+- **Сегрегация сущностей:** автоматическое извлечение техники в `VEHICLES.layer`, пехоты в `UNITS.layer`, стационарных орудий (Корд, АГС, СПГ, турели) в `_2_PROPS.layer`.
+- **Расчёт позывных:** чтение `PS_GroupCallsignAssigner`, расчет по формуле $(C \times 100) + (P \times 10) + S$ и автоматическое переименование отделений в `<Faction>_<Callsign>` (например, `RU_210`, `USAF_010`, `CDF_201`).
+- **Сквозная привязка техники:** привязка `m_sAttachmentGroupName` техники к отделениям по существующим ссылкам или ближайшим координатам спавна, переименование машин в `<Group>_V`.
+- **Маркеры:** авто-добавление контуров флага `m_sImageSetGlow`, исправление значений `m_sQuadName "undefined"` на `"commander"` / `"infantry"`, скрытие меток техники в игре (`m_aHideOnGameModeStates { GAME }`), ремаппинг устаревших тегов `#DRG-Sq-` на `#PDVL_Squad_`.
+- **Фризтайм:** пространственное распределение зон фризтайма (`SCR_EditorRestrictionZoneEntity`) по координатам спавна сторон в `<Faction>/FREEZ.layer`.
+- **Очистка старых слоёв:** безопасное удаление устаревших разрозненных файлов (`rus.layer`, `us.layer`, `log.layer`, `desc.layer`, `domiki.layer`, `friz.layer`, `default.layer`) после переноса данных.
+- **Встроенная валидация:** автоматический прогон `Test-MissionStandard.ps1` по завершении для подтверждения чистоты результата.
+
+### Запуск нормализатора
+
+```powershell
+cd .\Tools
+# Полная нормализация с переименованием и автоматической валидацией
+.\Normalize-MissionLayers.ps1 -MissionPath "..\Worlds\Banan\ChernarusMinus\TVT_Zavod_Chernorus_Minus"
+
+# Сухой прогон (просмотр действий без изменения файлов)
+.\Normalize-MissionLayers.ps1 -MissionPath "..\Worlds\Banan\ChernarusMinus\TVT_Zavod_Chernorus_Minus" -DryRun
+
+# Нормализация только внутренних слоёв без переименования папки мира
+.\Normalize-MissionLayers.ps1 -MissionPath "..\Worlds\Author\TvT_MyMission_Everon" -SkipRename
+```
+
 ## Тесты
 
 ```powershell
@@ -157,6 +184,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\Tests\firstrun-verificatio
 | Файл | Назначение |
 |---|---|
 | `Test-MissionStandard.ps1` | Валидатор соответствия миссии каноническому стандарту PodvalTvT |
+| `Normalize-MissionLayers.ps1` | Авто-нормализатор структуры слоёв, позывных, техники и маркеров (шаги 1–8) |
 | `Restore-Core.ps1` | Вся логика: разбор ссылок, ремаппинг, конфигурация |
 | `Restore-Mission.ps1` | CLI-обёртка над ядром: восстановление одной миссии |
 | `Scan-Legacy.ps1` | CLI-обёртка над ядром: скан старых миссий и объявление заглушек |
@@ -167,4 +195,4 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\Tests\firstrun-verificatio
 | `remap_table.json` | Таблица замен префабов — источник правды |
 | `catalog_new_prefabs.json` | Снимок каталога префабов мода (отслеживается в git) |
 | `legacy_refs_report.json` | Отчёт о применении префабов в старых миссиях (локальный, в `.gitignore`) |
-| `Tests\` | Регрессионные проверки (включая `mission-validation-regression.ps1`) |
+| `Tests\` | Регрессионные проверки (включая `mission-validation-regression.ps1` и `mission-normalization-regression.ps1`) |
