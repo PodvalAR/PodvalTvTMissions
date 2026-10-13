@@ -79,6 +79,22 @@ cd .\Tools
 
 Параметры командной строки (`-AddonRoot`, `-PrefabsModRoot`, `-RemapTable`, `-ConfigPath`) перекрывают значения из файла настроек.
 
+### Поиск новых префабов в старых миссиях
+
+`remap_table.json` — единственный источник правды о заменах. Он пополняется явным сканированием дерева старых миссий: каждая найденная битая ссылка объявляется заглушкой в группе `_Unresolved_Pending`, а отчёт о применении (`legacy_refs_report.json`) показывает, сколько раз и в каких миссиях она встречается.
+
+```powershell
+cd .\Tools
+.\Scan-Legacy.ps1                                    # сухой прогон: ничего не пишет
+.\Scan-Legacy.ps1 -SourceRoot "D:\PodvalCommunityEvent\Worlds" -Write
+```
+
+Сканирование требует `DefaultSourceRoot` и `PrefabsModRoot`. Если корень не задан, сканер **падает с ошибкой**, а не возвращает пустой результат: молчаливый «пустой» отчёт читался бы как «в старых миссиях всё чисто».
+
+То же самое делает кнопка **«⌕ Просканировать старые миссии»** в редакторе базы замен; вкладка **«Использование»** показывает собранный отчёт. Существующие назначения при сканировании не меняются, поэтому повторный запуск безопасен.
+
+`generate_remap_table.py` — одноразовый bootstrap: он подбирает замену по совпадению роли/фракции/имени и предлагает её. По умолчанию тоже ничего не пишет; с `--write` объявляет предложения заглушками, которые затем назначаются в редакторе. Ручные исключения вынесены в `curated_overrides.json`.
+
 ## ИИ-подсказки (необязательно)
 
 ИИ отключён, пока не задана переменная окружения с ключом:
@@ -89,6 +105,31 @@ setx JUSTWOKER_API_KEY "<ключ>"
 
 Ключ читается только из переменной окружения и **никогда** не записывается в файл настроек. Адрес сервиса и модель меняются в настройках (`AiBaseUrl`, `AiModel`).
 
+## Валидация миссий на соответствие стандарту (Mission Validation)
+
+Скрипт `Test-MissionStandard.ps1` выполняет комплексную статическую проверку TvT-миссии на соответствие спецификации [`MISSION_MIGRATION_GUIDE.md`](MISSION_MIGRATION_GUIDE.md):
+
+- **Структура и именование:** канонический формат `TvT_<Название>_<Карта>`, синхронизация трёх звеньев (папка, `<Миссия>.ent`, `<Миссия>.ent.meta`, каталог `<Миссия>_Layers`).
+- **Изоляция ролей:** чистота слоёв (в `UNITS.layer` строго пехота `SCR_AIGroup`, в `VEHICLES.layer` строго техника `Vehicle`, отсутствие стационарных орудий в пехотных слоях).
+- **Сквозная привязка техники:** проверка параметра `m_sAttachmentGroupName` техники к реальным пехотным отделениям в `UNITS.layer`.
+- **Позывные отделений:** формат `<Faction>_<Callsign>` (например, `USAF_101`, `RU_010`, `CDF_201`).
+- **Маркеры:** запрет значений `m_sQuadName "undefined"`, обязательный контур `m_sImageSetGlow` для флагов отделений, скрытие меток техники в игре (`m_aHideOnGameModeStates { GAME }`), запрет устаревших тегов `#DRG-Sq-`.
+- **Мультиплеер:** наличие `PS_GameModeCoop`, `PerceptionManager`, `SCR_AIWorld`, стандартный фризтайм (`m_iFreezeTime 300000` = 5 мин) и разметка описания `DescriptionEditableScrollable.layout`.
+
+### Запуск валидатора
+
+```powershell
+cd .\Tools
+# Обычный запуск (Warnings информативны, exit code 1 только при критических Errors)
+.\Test-MissionStandard.ps1 -MissionPath "..\Worlds\Banan\Everon\TvT_LigthHouse_Everon"
+
+# Строгий режим (любые Warnings приводят к exit code 1) с выгрузкой JSON-отчёта
+.\Test-MissionStandard.ps1 `
+    -MissionPath "..\Worlds\Banan\Everon\TvT_LigthHouse_Everon" `
+    -Strict `
+    -ReportJson "validation-report.json"
+```
+
 ## Тесты
 
 ```powershell
@@ -96,7 +137,7 @@ cd .\Tools
 powershell -NoProfile -ExecutionPolicy Bypass -File .\Tests\Run-Regression.ps1
 ```
 
-Тесты используют временные синтетические данные: рабочие `catalog_new_prefabs.json`, `catalog_old_prefabs.json` и `remap_table.json` не читаются и не изменяются. Тесты на Node.js пропускаются с предупреждением, если `node` не найден в `PATH`.
+Тесты используют временные синтетические данные: рабочие `catalog_new_prefabs.json`, `legacy_refs_report.json` и `remap_table.json` не читаются и не изменяются. Тесты на Node.js пропускаются с предупреждением, если `node` не найден в `PATH`.
 
 ### Ручная проверка первого запуска
 
@@ -115,10 +156,15 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\Tests\firstrun-verificatio
 
 | Файл | Назначение |
 |---|---|
+| `Test-MissionStandard.ps1` | Валидатор соответствия миссии каноническому стандарту PodvalTvT |
 | `Restore-Core.ps1` | Вся логика: разбор ссылок, ремаппинг, конфигурация |
-| `Restore-Mission.ps1` | CLI-обёртка над ядром |
+| `Restore-Mission.ps1` | CLI-обёртка над ядром: восстановление одной миссии |
+| `Scan-Legacy.ps1` | CLI-обёртка над ядром: скан старых миссий и объявление заглушек |
+| `generate_remap_table.py` | Bootstrap: подбор замен по совпадению роли/фракции (сухой прогон по умолчанию) |
+| `curated_overrides.json` | Ручные исключения для bootstrap (старый ref → новый ref) |
 | `UI\Serve-RestoreUI.ps1` | Локальный веб-сервер (только loopback) |
 | `UI\index.html`, `UI\editor.html` | Интерфейс и редактор таблицы замен |
-| `remap_table.json` | Таблица замен префабов |
-| `catalog_*_prefabs.json` | Снимки каталогов префабов |
-| `Tests\` | Регрессионные проверки |
+| `remap_table.json` | Таблица замен префабов — источник правды |
+| `catalog_new_prefabs.json` | Снимок каталога префабов мода (отслеживается в git) |
+| `legacy_refs_report.json` | Отчёт о применении префабов в старых миссиях (локальный, в `.gitignore`) |
+| `Tests\` | Регрессионные проверки (включая `mission-validation-regression.ps1`) |
