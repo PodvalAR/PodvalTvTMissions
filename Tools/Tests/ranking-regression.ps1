@@ -186,13 +186,13 @@ function Get-Item {
     return [pscustomobject]@{FullName=$LiteralPath;Length=$script:fixtureFiles[$LiteralPath].Length;LastWriteTimeUtc=$script:fixtureMtimes[$LiteralPath];PSIsContainer=$false}
 }
 function Read-Text([string]$Path) {
-    if ([IO.Path]::GetFileName($Path) -in @('catalog_new_prefabs.json','catalog_old_prefabs.json','remap_table.json')) { throw 'Forbidden production data access.' }
+    if ([IO.Path]::GetFileName($Path) -in @('catalog_new_prefabs.json','legacy_refs_report.json','remap_table.json')) { throw 'Forbidden production data access.' }
     if (-not $script:fixtureFiles.ContainsKey($Path)) { throw "Missing fixture file: $Path" }
     $script:fixtureReads++
     return $script:fixtureFiles[$Path]
 }
 function Write-Text([string]$Path,[string]$Text) {
-    if ([IO.Path]::GetFileName($Path) -in @('catalog_new_prefabs.json','catalog_old_prefabs.json','remap_table.json')) { throw 'Forbidden production data write.' }
+    if ([IO.Path]::GetFileName($Path) -in @('catalog_new_prefabs.json','legacy_refs_report.json','remap_table.json')) { throw 'Forbidden production data write.' }
     $script:fixtureFiles[$Path] = $Text
     $script:fixtureMtimes[$Path] = [DateTime]::UtcNow.AddSeconds($script:fixtureWrites.Count + 1)
     $script:fixtureWrites.Add($Path)

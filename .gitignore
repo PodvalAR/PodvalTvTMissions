@@ -7,4 +7,14 @@ PodvalTvTMissions/resourceDatabase.rdb
 Tools/tool.config.json
 Tools/tool.config.json.bak
 Tools/UI/ui.config.json
-Tools/remap_table.json.bak
+
+# Remap table write backups, including the timestamped ones the writer produces.
+Tools/remap_table.json.bak*
+
+# Obsolete: superseded by the legacy sweep and its usage report. Kept only as a local
+# historical snapshot; nothing reads it any more.
+Tools/catalog_old_prefabs.json
+
+# The legacy sweep rewrites this report on demand. It describes the operator's own
+# mission tree, so it is machine-specific and must never be committed.
+Tools/legacy_refs_report.json

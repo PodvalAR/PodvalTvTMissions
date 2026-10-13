@@ -156,6 +156,21 @@ try {
     # An empty stored value means "not configured" and must not erase the default.
     Assert ([string]$imported.Applied['DefaultSourceRoot'] -eq '') 'An empty stored value leaves the setting unset.'
 
+    # The usage report path is machine-owned: setting it in the config must be refused
+    # with its own explanation, not with a generic "unknown key" complaint. Both messages
+    # are Cyrillic, which Windows PowerShell 5.1 cannot read from a BOM-less UTF-8 file,
+    # so the check compares the two texts instead of matching their wording.
+    $withMachine = @{ RemapTable = 'C:\ignored\remap.json'; LegacyReport = 'C:\ignored\report.json' } | ConvertTo-Json
+    [System.IO.File]::WriteAllText($cfgFile, $withMachine, [System.Text.UTF8Encoding]::new($false))
+    $machineImport = Import-RMUserConfig -Path $cfgFile
+    Assert (-not $machineImport.Applied.ContainsKey('LegacyReport')) 'A machine-owned path never becomes configuration.'
+    Assert (($machineImport.Warnings -join ' ') -match 'LegacyReport') 'A machine-owned path is named in the warning.'
+    $withoutMachine = @{ RemapTable = 'C:\ignored\remap.json' } | ConvertTo-Json
+    [System.IO.File]::WriteAllText($cfgFile, $withoutMachine, [System.Text.UTF8Encoding]::new($false))
+    $plainImport = Import-RMUserConfig -Path $cfgFile
+    Assert ($plainImport.Warnings.Count -eq 0) 'A config without machine-owned keys produces no warning.'
+    Assert ($machineImport.Warnings.Count -eq 1) 'The machine-owned key is reported exactly once.'
+
     # A stored path that no longer exists is dropped with a warning instead of throwing.
     Set-RMConfig @{ PrefabsModRoot='' } | Out-Null
     $stale = @{ AddonRoot = $importAddon; PrefabsModRoot = (Join-Path $importFixture 'Gone') } | ConvertTo-Json

@@ -20,6 +20,9 @@ $script:B = '{BBBBBBBBBBBBBBBB}Prefabs/Characters/Rifleman.et'
 $script:C = '{CCCCCCCCCCCCCCCC}Prefabs/Characters/Officer.et'
 $script:D = '{DDDDDDDDDDDDDDDD}Prefabs/Characters/DRG_Medic.et'
 $script:E = '{EEEEEEEEEEEEEEEE}Prefabs/Objects/Box.et'
+# Matches SuspectRx but is deliberately absent from the fixture mod index, so sweeps can
+# observe it as a broken reference.
+$script:F = '{FFFFFFFFFFFFFFFF}Prefabs/Groups/Group_Ses_TKA_Squad.et'
 $script:table = 'C:\Fixture\fixture-remap.json'
 function Reset-Fixture {
     $script:files = @{}
@@ -31,7 +34,7 @@ function Reset-Fixture {
     $script:files['C:\Fixture\Mod\C.et.meta'] = 'Name "' + $script:C + '"'
     $script:files['C:\Fixture\Mod\D.et.meta'] = 'Name "' + $script:D + '"'
     $script:files[$script:table] = '{"_meta":{}}'
-    Set-RMConfig @{ PrefabsModRoot='C:\Fixture\Mod'; IndexCache='C:\Fixture\cache'; RemapTable=$script:table; AddonRoot='C:\Fixture\Addon'; CatalogNew='C:\Fixture\fixture-new.json'; CatalogOld='C:\Fixture\fixture-old.json'; DefaultSourceRoot='C:\Fixture\Source' } | Out-Null
+    Set-RMConfig @{ PrefabsModRoot='C:\Fixture\Mod'; IndexCache='C:\Fixture\cache'; RemapTable=$script:table; AddonRoot='C:\Fixture\Addon'; CatalogNew='C:\Fixture\fixture-new.json'; LegacyReport='C:\Fixture\legacy-report.json'; DefaultSourceRoot='C:\Fixture\Source' } | Out-Null
 }
 function Test-Path {
     [CmdletBinding()] param($LiteralPath,$Path,$PathType)
@@ -64,7 +67,7 @@ function Get-ChildItem {
     }
 }
 function Read-Text([string]$Path) {
-    if ([System.IO.Path]::GetFileName($Path) -in @('catalog_new_prefabs.json','catalog_old_prefabs.json','remap_table.json')) { throw 'Forbidden fixture access.' }
+    if ([System.IO.Path]::GetFileName($Path) -in @('catalog_new_prefabs.json','legacy_refs_report.json','remap_table.json')) { throw 'Forbidden fixture access.' }
     if (-not $script:files.ContainsKey($Path)) { throw "Missing fixture file: $Path" }
     return $script:files[$Path]
 }
@@ -257,17 +260,15 @@ Assert ((Read-Text $script:table) -eq $before -and $script:calls.Count -eq 0) 'V
 # Public collection properties stay arrays at zero, one and multiple elements.
 Reset-Fixture
 $builtNew = Get-NewPrefabsCatalog
-$builtOld = Get-OldPrefabsCatalog
 Assert ($builtNew -is [array] -and $builtNew.Count -eq 3 -and $builtNew[0] -isnot [array]) 'Missing new catalog builds a flat array.'
-Assert ($builtOld -is [array] -and $builtOld.Count -eq 0) 'Missing old catalog builds a flat empty array.'
+$absentReport = Get-LegacyRefReport -Path 'C:\Fixture\legacy-report.json'
+Assert ($absentReport.Exists -eq $false -and $absentReport.Refs -is [array] -and $absentReport.Refs.Count -eq 0) 'Absent legacy report reads as an empty, non-stale report.'
 foreach ($count in @(0,1,2)) {
     Reset-Fixture
     $items = @()
     for ($i=0; $i -lt $count; $i++) { $items += [pscustomobject]@{guid=$i} }
     $script:files['C:\Fixture\fixture-new.json'] = ConvertTo-Json -InputObject $items -Depth 5
-    $script:files['C:\Fixture\fixture-old.json'] = $script:files['C:\Fixture\fixture-new.json']
     Assert ((Get-NewPrefabsCatalog) -is [array] -and (Get-NewPrefabsCatalog).Count -eq $count) 'New catalog result retains array shape.'
-    Assert ((Get-OldPrefabsCatalog) -is [array] -and (Get-OldPrefabsCatalog).Count -eq $count) 'Old catalog result retains array shape.'
     $tree = [pscustomobject]@{}
     $texts = @()
     for ($i=0; $i -lt $count; $i++) {
@@ -282,5 +283,86 @@ foreach ($count in @(0,1,2)) {
     Assert ($model.groups -is [array] -and $model.groups.Count -eq $count) 'Model groups retain array shape.'
     Assert ($model.entries -is [array] -and $model.entries.Count -eq $count) 'Model entries retain array shape.'
     Assert ($scan.Refs -is [array] -and $scan.Refs.Count -eq $count) 'Scan refs retain array shape.'
+    Assert ($scan.StubRefs -is [array] -and $scan.StubsAdded -eq 0) 'Scan without -WriteStubs declares nothing and reports no stubs.'
 }
+
+# ---- legacy sweep: usage report + stub declaration -------------------------------
+# A missing or mistyped legacy root must fail loudly. A silent empty sweep would let the
+# operator believe the legacy tree is clean when in fact nothing was ever read.
+Reset-Fixture
+Assert-Throws { Sync-LegacyRefsToRemapTable -SourceRoot '' } 'Unset legacy root is rejected.'
+Assert-Throws { Sync-LegacyRefsToRemapTable -SourceRoot 'C:\Fixture\NoSuchTree' } 'Missing legacy root is rejected.'
+Assert ($script:calls.Count -eq 0) 'Rejected sweeps write nothing.'
+
+# Dry run scans and reports but touches neither the table nor the report file.
+Reset-Fixture
+$script:files['C:\Fixture\Source\Mission\Mission.ent'] = '"'+$script:A+'" "'+$script:A+'" "'+$script:B+'" "'+$script:E+'"'
+$script:files['C:\Fixture\Source\Other\Second.layer']   = '"'+$script:F+'" "'+$script:E+'"'
+$tableBefore = Read-Text $script:table
+$dry = Sync-LegacyRefsToRemapTable -SourceRoot 'C:\Fixture\Source'
+Assert ($dry.Written -eq $false -and $dry.Added -eq 0) 'Dry run declares no stubs.'
+Assert ((Read-Text $script:table) -eq $tableBefore) 'Dry run leaves the remap table byte-identical.'
+Assert (-not $script:files.ContainsKey('C:\Fixture\legacy-report.json')) 'Dry run writes no usage report.'
+# A (DRG_Rifleman) and F (Group_Ses_...) match SuspectRx and are absent from the mod index;
+# B is alive in the mod, E is not a suspect reference.
+Assert ($dry.Total -eq 4 -and $dry.Broken -eq 2) 'Only suspect references missing from the mod are reported as broken.'
+Assert ($dry.Resolved -eq 1 -and $dry.External -eq 1) 'Alive and non-suspect references are classified, not declared.'
+Assert ($dry.Missions -is [array] -and $dry.Missions.Count -eq 2) 'The sweep enumerates the missions it scanned.'
+
+# A real sweep declares every broken ref once and persists the usage report.
+Reset-Fixture
+$script:files['C:\Fixture\Source\Mission\Mission.ent'] = '"'+$script:A+'" "'+$script:A+'" "'+$script:B+'" "'+$script:E+'"'
+$script:files['C:\Fixture\Source\Other\Second.layer']   = '"'+$script:F+'" "'+$script:E+'"'
+$wet = Sync-LegacyRefsToRemapTable -SourceRoot 'C:\Fixture\Source' -Write
+Assert ($wet.Written -eq $true -and $wet.Added -eq 2) 'Sweep declares both broken references.'
+Assert ($wet.AddedRefs -is [array] -and @($wet.AddedRefs | Sort-Object) -join ',' -eq (($script:A,$script:F | Sort-Object) -join ',')) 'Sweep reports exactly the declared refs.'
+Assert ($wet.ReportPath -eq 'C:\Fixture\legacy-report.json') 'Sweep names the report it wrote.'
+$declared = Read-Table
+Assert ($declared._Unresolved_Pending.PSObject.Properties[$script:A] -and -not $declared._Unresolved_Pending.PSObject.Properties[$script:A].Value) 'A is declared as an unfilled stub.'
+Assert ($declared._Unresolved_Pending.PSObject.Properties[$script:F] -and -not $declared._Unresolved_Pending.PSObject.Properties[$script:F].Value) 'F is declared as an unfilled stub.'
+Assert (-not $declared._Unresolved_Pending.PSObject.Properties[$script:B]) 'A reference alive in the mod is never declared.'
+
+$report = Get-LegacyRefReport -Path 'C:\Fixture\legacy-report.json'
+Assert ($report.Exists -and $report.Stale -eq $false) 'A report written against the current table is fresh.'
+Assert ($report.Refs -is [array] -and $report.Refs.Count -eq 4) 'The report records every scanned reference.'
+$aRow = @($report.Refs | Where-Object { $_.fullRef -eq $script:A })[0]
+Assert ($aRow.usageCount -eq 2) 'Occurrences across files are counted per reference.'
+Assert ($aRow.missions -is [array] -and $aRow.missions.Count -eq 1) 'A reference used by one mission lists that mission once.'
+$eRow = @($report.Refs | Where-Object { $_.fullRef -eq $script:E })[0]
+Assert ($eRow.usageCount -eq 2 -and $eRow.missions.Count -eq 2) 'A reference used by two missions keeps both and counts both usages.'
+Assert ($report.MissionCount -eq 2) 'The report records how many missions were scanned.'
+
+# Re-running must be idempotent: nothing new is declared and nothing is duplicated.
+Reset-Fixture
+$script:files['C:\Fixture\Source\Mission\Mission.ent'] = '"'+$script:A+'" "'+$script:A+'" "'+$script:B+'" "'+$script:E+'"'
+$script:files['C:\Fixture\Source\Other\Second.layer']   = '"'+$script:F+'" "'+$script:E+'"'
+Sync-LegacyRefsToRemapTable -SourceRoot 'C:\Fixture\Source' -Write | Out-Null
+$tableAfterFirst = Read-Text $script:table
+$second = Sync-LegacyRefsToRemapTable -SourceRoot 'C:\Fixture\Source' -Write
+Assert ($second.Added -eq 0 -and $second.AddedRefs.Count -eq 0) 'A repeated sweep declares nothing new.'
+Assert ((Read-Text $script:table) -eq $tableAfterFirst) 'A repeated sweep leaves the table byte-identical.'
+
+# Editing the table after a sweep is the only thing that makes usage numbers misleading.
+$declared = Read-Table
+$declared._Unresolved_Pending | Add-Member -NotePropertyName $script:C -NotePropertyValue $script:B
+Set-Table $declared
+$stale = Get-LegacyRefReport -Path 'C:\Fixture\legacy-report.json'
+Assert ($stale.Stale -eq $true) 'A report whose table hash no longer matches is flagged stale.'
+Assert ($stale.Refs.Count -eq 4) 'A stale report still returns its data instead of hiding it.'
+
+# -NoReport still declares stubs but leaves no machine artifact behind.
+Reset-Fixture
+$script:files['C:\Fixture\Source\Mission\Mission.ent'] = '"'+$script:A+'"'
+$quiet = Sync-LegacyRefsToRemapTable -SourceRoot 'C:\Fixture\Source' -Write -NoReport
+Assert ($quiet.Added -eq 1 -and $quiet.ReportPath -eq '') '-NoReport declares stubs without naming a report.'
+Assert (-not $script:files.ContainsKey('C:\Fixture\legacy-report.json')) '-NoReport writes no usage report.'
+
+# Add-RemapStubs is the single writer: it skips refs already declared either way.
+Reset-Fixture
+Set-Table ([pscustomobject]@{ Group=[pscustomobject]@{ $script:A=$script:B; $script:D='' } })
+$stubbed = Add-RemapStubs -Broken @($script:A,$script:D,$script:E) -RemapTable $script:table
+Assert ($stubbed.Added -eq 1 -and $stubbed.Refs.Count -eq 1 -and $stubbed.Refs[0] -eq $script:E) 'Stub writing skips filled and already declared references.'
+$finalTable = Read-Table
+Assert ($finalTable._Unresolved_Pending.PSObject.Properties[$script:E]) 'The undeclared reference lands in the unresolved group.'
+
 Write-Output ("PASS: {0} assertions; PowerShell {1}; all data IO mocked." -f $script:assertions,$PSVersionTable.PSVersion)

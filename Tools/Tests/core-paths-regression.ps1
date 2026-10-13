@@ -43,7 +43,7 @@ try {
     Write-Text (Join-Path $source 'Objects.layer') ('Prefab "' + $old + '" Live "{BBBBBBBBBBBBBBBB}Prefabs/StillLive.et" Missing "' + $missing + '"')
     Write-Text (Join-Path $source 'Mission.ent.meta') 'Name "{1111111111111111}Worlds/Old/Mission.ent"'
     Write-Text (Join-Path $dest 'sentinel.txt') 'keep until successful restore'
-    Set-RMConfig @{ AddonRoot=$addon; PrefabsModRoot=$mod; RemapTable=$table; IndexCache=(Join-Path $fixtureRoot 'index'); CatalogNew=(Join-Path $fixtureRoot 'fixture-new.json'); CatalogOld=(Join-Path $fixtureRoot 'fixture-old.json') } | Out-Null
+    Set-RMConfig @{ AddonRoot=$addon; PrefabsModRoot=$mod; RemapTable=$table; IndexCache=(Join-Path $fixtureRoot 'index'); CatalogNew=(Join-Path $fixtureRoot 'fixture-new.json'); LegacyReport=(Join-Path $fixtureRoot 'fixture-report.json') } | Out-Null
 
     Assert-Fails { Invoke-Restore -SourceMission (Join-Path $fixtureRoot 'Missing') -DestDir $destDir -Force } 'Source mission directory not found'
     Assert (Test-Path -LiteralPath (Join-Path $dest 'sentinel.txt')) 'Missing source preserves destination.'

@@ -58,8 +58,13 @@ function setup({ tree = baseTree(), fetch } = {}) {
   const snapshot = code => JSON.parse(evaluate(`JSON.stringify(${code})`));
   evaluate(`gBaseline = { tree: ${JSON.stringify(tree)}, versionHash: 'hash1' };
     gModIndex = { '3333333333333333': "Prefabs/New's.et", '4444444444444444': 'Prefabs/Second.et' };
-    gCatalogBaseline = { old: [{fullRef: ${JSON.stringify(oldRef)}, guid:'1111111111111111', isModPrefab:true, usageCount:2, missions:'synthetic'}],
-      new: [{fullRef:${JSON.stringify(targetRef)}, guid:'3333333333333333',path:"Prefabs/New's.et",category:'Props'}] };
+    gCatalogBaseline = { new: [{fullRef:${JSON.stringify(targetRef)}, guid:'3333333333333333',path:"Prefabs/New's.et",category:'Props'}] };
+    gUsageReport = { exists:true, stale:false, sourceRoot:'C:/Legacy', scannedAt:'2026-10-13T00:00:00Z', missionCount:2, refCount:2,
+      refs:[{fullRef:${JSON.stringify(oldRef)}, usageCount:2, missions:['Region/Mission','Region/Other'], status:'broken'},
+            {fullRef:${JSON.stringify(otherRef)}, usageCount:1, missions:['Region/Mission'], status:'broken'}] };
+    // These fixtures inject the external snapshots directly, so the deferred loader must
+    // treat them as already present. The lazy-load path itself is covered separately below.
+    gExternalLoaded = true;
     gCsrfToken = 'synthetic-token'; adoptReplay(replayOperations(gBaseline.tree, []));`);
   return { context, evaluate, snapshot, requests, alerts, document, nodes, lockRegions };
 }
@@ -101,14 +106,14 @@ test('all operation kinds replay into one working tree and undo restores baselin
   assert.equal(working.Alpha._note, "note's <text>");
   assert.equal(working['New/Exact'][otherRef], '');
   assert.equal(Object.hasOwn(working, otherRef), false);
-  assert.equal(env.snapshot('gOldCatalog')[0].status, 'mapped');
+  assert.equal(env.evaluate(`gUsageState.get(${JSON.stringify(oldRef.toLowerCase())}).status`), 'mapped');
   assert.equal(env.snapshot('gNewCatalog')[0].mappedCount, 1);
   env.evaluate('revertOp(1)');
   assert.equal(env.snapshot('gModel.meta').description, 'baseline');
   assert.equal(env.snapshot('gModel.tree').Alpha._note, "note's <text>");
   env.evaluate('revertAllChanges()');
   assert.deepEqual(env.snapshot('gModel.tree'), baseTree());
-  assert.equal(env.snapshot('gOldCatalog')[0].status, 'stub');
+  assert.equal(env.evaluate(`gUsageState.get(${JSON.stringify(oldRef.toLowerCase())}).status`), 'stub');
   assert.equal(env.snapshot('gNewCatalog')[0].mappedCount, 0);
   assert.equal(env.requests.length, 0);
 });
@@ -321,23 +326,89 @@ test('AI cannot apply a stored recommendation while editor is busy or after pick
   assert.equal(env.snapshot('gPendingOps').length, 0);
 });
 
-test('Legacy edits expose pending controls and ambiguous legacy refs require row selection', async () => {
+test('usage view renders report rows and derives status from the live table', async () => {
   const env = setup();
-  env.evaluate("switchMainTab('legacy')");
+  env.evaluate("switchMainTab('usage')");
+  const body = env.document.getElementById('usageTableBody').innerHTML;
+  assert.equal(env.document.getElementById('statUsageAll').textContent, 2);
+  assert.match(body, /Region\/Mission, Region\/Other/);
+  assert.equal(env.document.getElementById('statUsageBroken').textContent, 2);
+  assert.match(env.document.getElementById('usageNotice').textContent, /2026-10-13/);
+  assert.match(env.document.getElementById('usageNotice').textContent, /C:\/Legacy/);
+
+  // Filling the entry in the table must flip the derived status without any reload: the
+  // report stores no status of its own, so nothing can go stale here.
   enqueue(env, [{ op: 'set', groupPath: ["Unit's", 'Exact'], oldRef, newRef: targetRef }]);
+  const key = oldRef.toLowerCase();
+  assert.equal(env.evaluate(`gUsageState.get(${JSON.stringify(key)}).status`), 'mapped');
+  assert.equal(env.evaluate(`gUsageState.get(${JSON.stringify(key)}).targetRef`), targetRef);
   assert.equal(env.document.getElementById('btnSaveBatch').style.display, 'inline-flex');
-  await env.evaluate(`openSuggestModal(${JSON.stringify(oldRef)})`);
-  assert.equal(env.snapshot('gActiveMainTab'), 'remap');
-  assert.equal(env.requests.length, 0);
-  assert.match(env.alerts.at(-1), /нескольких группах/);
 });
 
-test('catalog refresh preserves dirty working state and original optimistic concurrency hash', async () => {
+test('usage view reports a stale sweep instead of hiding outdated mission data', () => {
+  const env = setup();
+  env.evaluate("gUsageReport.stale = true; switchMainTab('usage')");
+  const notice = env.document.getElementById('usageNotice').textContent;
+  assert.match(notice, /Таблица замен изменилась после скана/);
+  // Stale data is still rendered; the operator decides what to do with it.
+  assert.equal(env.document.getElementById('statUsageAll').textContent, 2);
+});
+
+test('usage view explains an absent report instead of showing an empty table', () => {
+  const env = setup();
+  env.evaluate(`gUsageReport = { exists:false, stale:false, sourceRoot:'', scannedAt:'', missionCount:0, refCount:0, refs:[] };
+    switchMainTab('usage')`);
+  assert.match(env.document.getElementById('usageTableBody').innerHTML, /Отчёта по старым миссиям ещё нет/);
+  assert.equal(env.document.getElementById('usageNotice').style.display, 'none');
+});
+
+test('an explicit legacy sweep refreshes the table and report', async () => {
+  const env = setup({ fetch: async (url, options) => {
+    if (url === '/api/legacy/scan') return response({ ok: true, written: true, sourceRoot: 'C:/Legacy',
+      missions: ['Region/Mission', 'Region/Other'], total: 4, resolved: 1, mapped: 0, ignore: 0, external: 1,
+      broken: 2, added: 1, addedRefs: [otherRef], reportPath: 'C:/Tools/legacy_refs_report.json' });
+    if (url === '/api/table') return response({ tree: { Alpha: { [oldRef]: targetRef } }, versionHash: 'hash2' });
+    if (url === '/api/legacy/report') return response({ exists: true, stale: false, sourceRoot: 'C:/Legacy',
+      scannedAt: '2026-10-14T00:00:00Z', missionCount: 2, refCount: 1,
+      refs: [{ fullRef: otherRef, usageCount: 4, missions: ['Region/Mission'], status: 'broken' }] });
+    throw new Error('Unexpected endpoint ' + url);
+  } });
+  await env.evaluate('scanLegacy()');
+  // The sweep wrote to the table, so the server hash replaced the stale one.
+  assert.equal(env.snapshot('gBaseline.versionHash'), 'hash2');
+  assert.equal(env.snapshot('gModel.tree').Alpha[oldRef], targetRef);
+  assert.equal(env.snapshot('gUsageReport.refs')[0].fullRef, otherRef);
+  assert.equal(env.snapshot('gUsageReport.refs')[0].usageCount, 4);
+  assert.match(env.alerts.at(-1), /Добавлено новых заглушек: 1/);
+  assert.match(env.alerts.at(-1), /Миссий: 2/);
+  assert.equal(env.requests[0].options.headers['X-Restore-Token'], 'synthetic-token');
+});
+
+test('a legacy sweep is refused while edits are unsaved', async () => {
+  const env = setup({ fetch: async () => { throw new Error('Unexpected endpoint'); } });
+  enqueue(env, [{ op: 'set', groupPath: ["Unit's", 'Exact'], oldRef, newRef: targetRef }]);
+  await env.evaluate('scanLegacy()');
+  assert.equal(env.requests.length, 0);
+  assert.match(env.alerts.at(-1), /Сначала сохраните или отмените/);
+});
+
+test('a failed legacy sweep surfaces the server error instead of claiming success', async () => {
   const env = setup({ fetch: async url => {
-    if (url === '/api/catalog/rebuild') return response({ ok: true, oldCount: 1, newCount: 1 });
+    if (url === '/api/legacy/scan') return response({ ok: false, error: 'DefaultSourceRoot = не задан.' }, false);
+    throw new Error('Unexpected endpoint ' + url);
+  } });
+  await env.evaluate('scanLegacy()');
+  assert.match(env.alerts.at(-1), /DefaultSourceRoot/);
+  // A failed sweep must not pretend to have produced a report.
+  assert.equal(env.snapshot('gUsageReport.refs').length, 2);
+  assert.equal(env.snapshot('gBaseline.versionHash'), 'hash1');
+});
+
+test('catalog refresh preserves dirty working state and never rescans the legacy missions', async () => {
+  const env = setup({ fetch: async url => {
+    if (url === '/api/catalog/rebuild') return response({ ok: true, newCount: 1 });
     if (url === '/api/modindex') return response({ '3333333333333333': "Prefabs/New's.et" });
     if (url === '/api/catalog/new') return response([{ fullRef: targetRef, guid: '3333333333333333', path: "Prefabs/New's.et", category: 'Props' }]);
-    if (url === '/api/catalog/old') return response([{ fullRef: oldRef, guid: '1111111111111111', isModPrefab: true, usageCount: 3, missions: 'refreshed' }]);
     throw new Error('Unexpected endpoint ' + url);
   } });
   enqueue(env, [{ op: 'set', groupPath: ["Unit's", 'Exact'], oldRef, newRef: targetRef }]);
@@ -346,8 +417,111 @@ test('catalog refresh preserves dirty working state and original optimistic conc
   assert.deepEqual(env.snapshot('gPendingOps'), queued);
   assert.equal(env.snapshot('gBaseline.versionHash'), 'hash1');
   assert.equal(env.snapshot('gModel.tree')["Unit's"].Exact[oldRef], targetRef);
-  assert.equal(env.snapshot('gOldCatalog')[0].status, 'mapped');
-  assert.equal(env.snapshot('gOldCatalog')[0].usageCount, 3);
+  // Refreshing the prefab catalog must leave the usage report alone: a sweep is explicit.
+  assert.equal(env.requests.some(request => request.url === '/api/legacy/report'), false);
+  assert.equal(env.requests.some(request => request.url === '/api/legacy/scan'), false);
   assert.equal(env.requests.some(request => request.url === '/api/table'), false);
+  assert.equal(env.snapshot('gUsageReport.refs')[0].usageCount, 2);
+  assert.match(env.alerts.at(-1), /Префабов в каталоге: 1/);
   assert.equal(env.requests[0].options.headers['X-Restore-Token'], 'synthetic-token');
+});
+
+test('the editor exposes no legacy catalog surface', () => {
+  const env = setup();
+  for (const id of ['tabLegacy', 'toolbarLegacy', 'viewLegacy', 'legacyTableBody', 'searchLegacy', 'badgeLegacyUnmapped']) {
+    assert.equal(env.nodes.has(id), false, `${id} must not exist any more`);
+  }
+  assert.equal(env.snapshot('gUsageReport.refs').length, 2);
+  assert.equal(typeof env.evaluate('renderUsage'), 'function');
+  assert.equal(env.evaluate('typeof renderLegacy'), 'undefined');
+  assert.equal(env.evaluate('typeof gOldCatalog'), 'undefined');
+});
+
+// A fresh page load must not pay for the prefab catalog: it was ~7s of derivation and
+// ~7MB of JSON, and only two tabs ever read it. The mod index stays eager on purpose,
+// because validateLocalRef would otherwise report every filled entry as target-missing.
+function deferredSetup(fetch) {
+  const env = setup({ fetch });
+  env.evaluate('gExternalLoaded = false; gExternalPromise = null; gNewCatalog = []; gUsageReport = { exists:false, stale:false, sourceRoot:"", scannedAt:"", missionCount:0, refCount:0, refs:[] }');
+  return env;
+}
+
+const deferredFetch = async url => {
+  if (url === '/api/catalog/new') return response([
+    { fullRef: targetRef, guid: '3333333333333333', path: "Prefabs/New's.et", category: 'Props' }
+  ]);
+  if (url === '/api/legacy/report') return response({ exists: true, stale: false, sourceRoot: 'C:/Legacy',
+    scannedAt: '2026-10-13T00:00:00Z', missionCount: 2, refCount: 2,
+    refs: [{ fullRef: otherRef, usageCount: 4, missions: ['Region/Mission'], status: 'broken' }] });
+  throw new Error('Unexpected endpoint ' + url);
+};
+
+test('the remap tab renders before the prefab catalog is ever requested', async () => {
+  const env = deferredSetup(deferredFetch);
+  await env.evaluate('loadAllData()');
+  const requested = env.requests.map(request => request.url);
+  // The mod index is required for correct statuses and must stay eager.
+  assert.ok(requested.includes('/api/modindex'));
+  assert.ok(requested.includes('/api/table'));
+  // The catalog and the usage report must not be requested at all on the default tab.
+  assert.equal(requested.includes('/api/catalog/new'), false);
+  assert.equal(requested.includes('/api/legacy/report'), false);
+  assert.equal(env.snapshot('gNewCatalog').length, 0);
+  // A pending edit must validate against the live mod index. Without it every filled
+  // entry degrades to target-missing, which would be a false alarm on the main tab.
+  enqueue(env, [{ op: 'set', groupPath: ["Unit's", 'Exact'], oldRef, newRef: targetRef }]);
+  const statuses = env.snapshot(`gModel.entries.filter(entry => entry.newRef).map(entry => entry.status)`);
+  assert.equal(statuses.includes('target-missing'), false);
+  assert.equal(statuses.includes('path-mismatch'), false);
+  // Unknown counts are shown as unknown, never as a misleading zero.
+  assert.equal(String(env.document.getElementById('badgeTruthCount').textContent), '…');
+  assert.equal(String(env.document.getElementById('badgeUsageCount').textContent), '…');
+});
+
+test('the catalog and the usage report load once, on first visit to either dependent tab', async () => {
+  const env = deferredSetup(deferredFetch);
+  await env.evaluate('switchMainTab("truth")');
+  assert.equal(env.snapshot('gNewCatalog').length, 1);
+  assert.equal(env.snapshot('gUsageReport.refs').length, 1);
+  assert.deepEqual(env.requests.map(request => request.url), ['/api/catalog/new', '/api/legacy/report']);
+  assert.equal(String(env.document.getElementById('badgeTruthCount').textContent), '1');
+
+  // Already-loaded tabs must stay synchronous and must not refetch.
+  env.requests.length = 0;
+  env.evaluate('switchMainTab("usage"); switchMainTab("truth"); switchMainTab("usage")');
+  assert.equal(env.requests.length, 0);
+  assert.equal(env.snapshot('gNewCatalog').length, 1);
+});
+
+test('the deferred load preserves unsaved edits and rebases them onto the new snapshots', async () => {
+  const env = deferredSetup(deferredFetch);
+  enqueue(env, [{ op: 'set', groupPath: ["Unit's", 'Exact'], oldRef, newRef: targetRef }]);
+  const queued = env.snapshot('gPendingOps');
+  await env.evaluate('switchMainTab("truth")');
+  assert.deepEqual(env.snapshot('gPendingOps'), queued);
+  assert.equal(env.snapshot('gModel.tree')["Unit's"].Exact[oldRef], targetRef);
+  // deriveCatalogs must recompute mappedCount for the catalog that just arrived.
+  assert.equal(env.snapshot('gNewCatalog')[0].mappedCount, 1);
+});
+
+test('a failed deferred load reports the error and falls back to the remap tab', async () => {
+  const env = deferredSetup(async url => {
+    if (url === '/api/catalog/new') return response({ error: 'nope' }, false);
+    return deferredFetch(url);
+  });
+  await env.evaluate('switchMainTab("truth")');
+  assert.match(env.alerts.at(-1), /Не удалось загрузить данные каталога/);
+  assert.equal(env.evaluate('gActiveMainTab'), 'remap');
+  // A failed attempt must not be cached as loaded: a retry has to try again.
+  assert.equal(env.evaluate('gExternalLoaded'), false);
+  assert.equal(env.evaluate('gExternalPromise'), null);
+});
+
+test('the picker catalog panel triggers the deferred load when reached from the remap tab', async () => {
+  const env = deferredSetup(deferredFetch);
+  await env.evaluate('switchSuggestMode("truth")');
+  await new Promise(resolve => setImmediate(resolve));
+  await new Promise(resolve => setImmediate(resolve));
+  assert.equal(env.snapshot('gNewCatalog').length, 1);
+  assert.deepEqual(env.requests.map(request => request.url), ['/api/catalog/new', '/api/legacy/report']);
 });

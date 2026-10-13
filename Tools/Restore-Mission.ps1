@@ -83,12 +83,8 @@ if ($res.BrokenCount -gt 0) {
     Write-Host ("!! UNRESOLVED broken refs (not resolved in mod): {0}" -f $res.BrokenCount) -ForegroundColor Red
     $res.Broken | Sort-Object Path | ForEach-Object { Write-Host ("   {0}" -f $_.Ref) -ForegroundColor Red }
     if ($WriteStubs) {
-        $stubEntries = @{}
-        foreach ($b in $res.Broken) {
-            if (-not $remap.Map.Contains($b.Ref) -and -not $remap.Stubs.Contains($b.Ref)) { $stubEntries[$b.Ref] = '' }
-        }
-        $w = Set-RemapEntries -Entries $stubEntries -Path $resolved.RemapTable
-        Write-Host ("   -> wrote {0} stub(s) to remap_table.json ({1}); fill them and re-run." -f $w.Added, '_Unresolved_Pending') -ForegroundColor Yellow
+        $stubs = Add-RemapStubs -Broken $res.Broken -RemapTable $resolved.RemapTable
+        Write-Host ("   -> wrote {0} stub(s) to remap_table.json ({1}); fill them and re-run." -f $stubs.Added, '_Unresolved_Pending') -ForegroundColor Yellow
     } else {
         Write-Host '   -> add these to remap_table.json and re-run (or use -WriteStubs).' -ForegroundColor Red
     }
