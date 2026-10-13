@@ -33,6 +33,33 @@ function Invoke-AnthropicJson {
     return ($respText | ConvertFrom-Json)
 }
 
+function Invoke-OpenAIJson {
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory)][string]$Uri,
+        [Parameter(Mandatory)][string]$BodyJson,
+        [Parameter(Mandatory)][string]$ApiKey
+    )
+    $req = [System.Net.WebRequest]::Create($Uri)
+    $req.Method = 'POST'
+    $req.ContentType = 'application/json; charset=utf-8'
+    $req.Headers.Add('Authorization', "Bearer $ApiKey")
+    $req.Timeout = 120000
+    $req.ReadWriteTimeout = 120000
+    $bytes = [System.Text.Encoding]::UTF8.GetBytes($BodyJson)
+    $req.ContentLength = $bytes.Length
+    $rs = $req.GetRequestStream()
+    $rs.Write($bytes, 0, $bytes.Length)
+    $rs.Close()
+    $resp = $req.GetResponse()
+    $stream = $resp.GetResponseStream()
+    $ms = New-Object System.IO.MemoryStream
+    $stream.CopyTo($ms)
+    $respText = [System.Text.Encoding]::UTF8.GetString($ms.ToArray())
+    $resp.Close()
+    return ($respText | ConvertFrom-Json)
+}
+
 # ------------------------------------------------------------------ AI suggest (optional)
 function Invoke-AISuggest {
     [CmdletBinding()]
@@ -73,12 +100,30 @@ function Invoke-AISuggest {
         'Return status=uncertain for an uncertain or incomplete match. Write a short reason in Russian. ' +
         'Reply only with JSON: {"status":"match|uncertain|no_match","ref":"<provided ref> or null","confidence":0..1,"reason":"short Russian explanation"}.'
     $user = [pscustomobject]@{brokenRef=$BrokenRef;sourceFeatures=$sourceFeatures;candidates=$structuredCandidates} | ConvertTo-Json -Depth 10
-    $body = @{
-        model=$Model;max_tokens=500;system=$system;messages=@(@{role='user';content=$user})
-    } | ConvertTo-Json -Depth 12
-    $response = Invoke-AnthropicJson -Uri "$BaseUrl/messages" -BodyJson $body -ApiKey $key
-    $replyText=''
-    foreach ($block in $response.content) { if ($block.type -eq 'text') { $replyText += $block.text } }
+    $isOpenAI = ($BaseUrl -match '/chat/completions' -or $Model -match '^(gpt-|deepseek|qwen|llama|mistral)')
+    $replyText = ''
+    if ($isOpenAI) {
+        $endpoint = if ($BaseUrl -match '/chat/completions$') { $BaseUrl } else { "$BaseUrl/chat/completions" }
+        $body = @{
+            model = $Model
+            max_tokens = 500
+            messages = @(
+                @{ role = 'system'; content = $system },
+                @{ role = 'user'; content = $user }
+            )
+        } | ConvertTo-Json -Depth 12
+        $response = Invoke-OpenAIJson -Uri $endpoint -BodyJson $body -ApiKey $key
+        if ($response.choices -and $response.choices.Count -gt 0) {
+            $replyText = [string]$response.choices[0].message.content
+        }
+    } else {
+        $endpoint = if ($BaseUrl -match '/messages$') { $BaseUrl } else { "$BaseUrl/messages" }
+        $body = @{
+            model=$Model;max_tokens=500;system=$system;messages=@(@{role='user';content=$user})
+        } | ConvertTo-Json -Depth 12
+        $response = Invoke-AnthropicJson -Uri $endpoint -BodyJson $body -ApiKey $key
+        foreach ($block in $response.content) { if ($block.type -eq 'text') { $replyText += $block.text } }
+    }
     $jsonMatch = [regex]::Match($replyText,'\{[\s\S]*\}')
     if (-not $jsonMatch.Success) { throw 'AI reply had no JSON.' }
     $parsed = $jsonMatch.Value | ConvertFrom-Json
@@ -120,17 +165,35 @@ function Invoke-AIChat {
     $sys = "Ты помощник по инструменту восстановления миссий Arma Reforger (PodvalTvT). " +
            "Инструмент копирует старые миссии и заменяет ссылки на удалённые префабы на существующие в моде. " +
            "Отвечай кратко и по-русски. Объясняй статусы ссылок (есть в моде / сломано / есть замена / служебное / внешнее) и как подобрать замену."
-    $body = @{
-        model = $Model
-        max_tokens = 700
-        system = $sys
-        messages = @(@{ role='user'; content = $Message })
-    } | ConvertTo-Json -Depth 10
-
-    $headers = @{ 'x-api-key'=$key; 'anthropic-version'='2023-06-01'; 'content-type'='application/json' }
-    $resp = Invoke-AnthropicJson -Uri "$BaseUrl/messages" -BodyJson $body -ApiKey $key
-    $text = ''
-    if ($resp.content) { foreach ($blk in $resp.content) { if ($blk.type -eq 'text') { $text += $blk.text } } }
-    return $text
+    $isOpenAI = ($BaseUrl -match '/chat/completions' -or $Model -match '^(gpt-|deepseek|qwen|llama|mistral)')
+    if ($isOpenAI) {
+        $endpoint = if ($BaseUrl -match '/chat/completions$') { $BaseUrl } else { "$BaseUrl/chat/completions" }
+        $body = @{
+            model = $Model
+            max_tokens = 700
+            messages = @(
+                @{ role = 'system'; content = $sys },
+                @{ role = 'user'; content = $Message }
+            )
+        } | ConvertTo-Json -Depth 10
+        $resp = Invoke-OpenAIJson -Uri $endpoint -BodyJson $body -ApiKey $key
+        $text = ''
+        if ($resp.choices -and $resp.choices.Count -gt 0) {
+            $text = [string]$resp.choices[0].message.content
+        }
+        return $text
+    } else {
+        $endpoint = if ($BaseUrl -match '/messages$') { $BaseUrl } else { "$BaseUrl/messages" }
+        $body = @{
+            model = $Model
+            max_tokens = 700
+            system = $sys
+            messages = @(@{ role='user'; content = $Message })
+        } | ConvertTo-Json -Depth 10
+        $resp = Invoke-AnthropicJson -Uri $endpoint -BodyJson $body -ApiKey $key
+        $text = ''
+        if ($resp.content) { foreach ($blk in $resp.content) { if ($blk.type -eq 'text') { $text += $blk.text } } }
+        return $text
+    }
 }
 

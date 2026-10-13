@@ -277,9 +277,9 @@
       <span>База ремапа</span>
       <span class="badge" id="badgeRemapCount">0</span>
     </button>
-    <button id="tabLegacy" class="tab-btn" onclick="switchMainTab('legacy')">
-      <span>Старые префабы (Legacy)</span>
-      <span class="badge warn" id="badgeLegacyUnmapped">0 unmapped</span>
+    <button id="tabUsage" class="tab-btn" onclick="switchMainTab('usage')">
+      <span>Использование</span>
+      <span class="badge" id="badgeUsageCount">0</span>
     </button>
     <button id="tabTruth" class="tab-btn" onclick="switchMainTab('truth')">
       <span>Каталог мода (Истина)</span>
@@ -288,6 +288,9 @@
   </div>
 
   <div class="header-actions">
+    <button id="btnScanLegacy" class="sm ghost" onclick="scanLegacy()" title="Просканировать старые миссии и добавить ненайденные префабы в таблицу замен как заглушки">
+      <span>⌕ Просканировать старые миссии</span>
+    </button>
     <button id="btnRebuildCatalogs" class="sm ghost" onclick="rebuildCatalogs()" title="Обновить список доступных префабов для каталога и автоподбора">
       <span>↻ Обновить каталог префабов</span>
     </button>
@@ -331,24 +334,24 @@
   <div class="btns">
     <button class="sm" onclick="openAddModal()">+ Добавить</button>
     <button class="sm" onclick="openMetaModal()">✎ Описание</button>
+    <button class="sm ghost" onclick="exportCsv()" title="Export remap database to CSV">&#1069;&#1082;&#1089;&#1087;&#1086;&#1088;&#1090; CSV</button>
+    <button class="sm ghost" onclick="triggerImportCsv()" title="Import remap replacements from CSV">&#1048;&#1084;&#1087;&#1086;&#1088;&#1090; CSV</button>
+    <input type="file" id="fileCsvInput" accept=".csv,.tsv" style="display:none" onchange="handleCsvFile(this)" />
     <button id="btnBulkMove" class="sm ghost" style="display:none" onclick="openBulkMoveModal()">Переместить (<span id="selectedCount">0</span>)</button>
     <button id="btnBulkDelete" class="sm danger sm" style="display:none" onclick="bulkDeleteSelected()">Удалить (<span id="selectedDelCount">0</span>)</button>
   </div>
 </div>
 
-<!-- Панель инструментов: Старые префабы (Legacy) -->
-<div class="toolbar" id="toolbarLegacy" style="display:none">
+<!-- Панель инструментов: Использование в старых миссиях -->
+<div class="toolbar" id="toolbarUsage" style="display:none">
   <div class="search-wrap">
     <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 14z"/></svg>
-    <input type="text" id="searchLegacy" placeholder="Поиск старых префабов по пути, GUID или миссии..." oninput="renderLegacy()" />
+    <input type="text" id="searchUsage" placeholder="Поиск по пути префаба, GUID или названию миссии..." oninput="renderUsage()" />
   </div>
 
   <div class="stats" style="display:flex;gap:6px">
-    <div class="chip active" id="chipLegacyUnmapped" onclick="setLegacyFilter('unmapped')">Только несмапленные: <b id="statLegacyUnmapped">0</b></div>
-    <div class="chip" id="chipLegacyAll" onclick="setLegacyFilter('all')">Все: <b id="statLegacyAll">0</b></div>
-    <div class="chip on" id="chipLegacyMapped" onclick="setLegacyFilter('mapped')">Замаплены: <b id="statLegacyMapped">0</b></div>
-    <div class="chip warn" id="chipLegacyStubs" onclick="setLegacyFilter('stub')">Заглушки: <b id="statLegacyStubs">0</b></div>
-    <div class="chip notice" id="chipLegacyAlive" onclick="setLegacyFilter('alive')">Живы в моде: <b id="statLegacyAlive">0</b></div>
+    <div class="chip active" id="chipUsageBroken" onclick="setUsageFilter('broken')">Требуют назначения: <b id="statUsageBroken">0</b></div>
+    <div class="chip" id="chipUsageAll" onclick="setUsageFilter('all')">Всего ссылок: <b id="statUsageAll">0</b></div>
   </div>
 </div>
 
@@ -395,21 +398,22 @@
     </div>
   </div>
 
-  <!-- 2. Контейнер: Старые префабы (Legacy) -->
-  <div id="viewLegacy" class="table-container" style="display:none">
+  <!-- 2. Контейнер: Использование в старых миссиях -->
+  <div id="viewUsage" class="table-container" style="display:none">
+    <div id="usageNotice" style="display:none;margin:0 0 12px;padding:11px 15px;border-radius:10px;font-size:12.5px"></div>
     <table>
       <thead>
         <tr>
-          <th style="width:80px;text-align:center">В миссиях</th>
-          <th style="width:200px">Миссии</th>
-          <th style="width:38%">Старый префаб</th>
-          <th style="width:110px;text-align:center">Статус</th>
+          <th style="width:80px;text-align:center">Вхождений</th>
+          <th style="width:240px">Миссии</th>
+          <th style="width:40%">Префаб в старых миссиях</th>
+          <th style="width:110px;text-align:center">Состояние</th>
           <th>Текущая цель в ремапе</th>
           <th style="width:140px;text-align:right">Действие</th>
         </tr>
       </thead>
-      <tbody id="legacyTableBody">
-        <tr><td colspan="6" class="empty-state">Загрузка каталога старых префабов...</td></tr>
+      <tbody id="usageTableBody">
+        <tr><td colspan="6" class="empty-state">Загрузка отчёта по старым миссиям...</td></tr>
       </tbody>
     </table>
   </div>
@@ -564,13 +568,16 @@
 let gModel = null;
 let gModIndex = {};
 let gNewCatalog = [];
-let gOldCatalog = [];
+// Usage report: how often and where old references occur in the legacy mission tree.
+// It is produced by an explicit sweep, never on page load, so it may legitimately be
+// empty and may lag behind the remap table; both states are surfaced, not hidden.
+let gUsageReport = { exists: false, stale: false, sourceRoot: '', scannedAt: '', missionCount: 0, refCount: 0, refs: [] };
 
-let gActiveMainTab = 'remap'; // remap | legacy | truth
+let gActiveMainTab = 'remap'; // remap | usage | truth
 let gRemapMode = 'table'; // table | tree
 let gRemapFilter = 'all'; // all | filled | stubs | warnings | errors
 
-let gLegacyFilter = 'unmapped'; // unmapped | all | mapped | stub | alive
+let gUsageFilter = 'broken'; // broken | all
 let gTruthCategory = 'all'; // all | Characters | Groups | Vehicles | Props | Weapons
 
 let gPendingOps = [];
@@ -580,12 +587,20 @@ let gAiSuggestRequest = 0;
 let gAiRecommendation = null;
 let gMoveTarget = null;
 let gBaseline = null;
-let gCatalogBaseline = { old: [], new: [] };
+let gCatalogBaseline = { new: [] };
+let gUsageState = new Map();
 let gNextOperationId = 1;
 let gSaving = false;
 let gLoading = false;
 let gCsrfToken = '';
 let gAddGroupPath = null;
+// External snapshots. The mod index stays eager: validateLocalRef needs it to tell a real
+// target-missing from a good mapping, so deferring it would paint the whole remap table
+// with false errors until the operator visited another tab. The prefab catalog and the
+// legacy usage report are only read by the "Использование" and "Каталог мода" tabs, so
+// they load on first visit instead of on page load.
+let gExternalLoaded = false;
+let gExternalPromise = null;
 
 const REF_SHAPE = /^\{[0-9A-Fa-f]{16}\}.+\.et$/i;
 const IGNORE_REF = /\/System\/|MissionEndTimer|\/Logic\/|GameMode|\/Modes\/|Manager\.et$|Trigger|PerceptionManager|AIWorld/i;
@@ -752,19 +767,26 @@ function deriveCatalogs(entries) {
       mappedCounts.set(targetGuid, (mappedCounts.get(targetGuid) || 0) + 1);
     } else stubs.add(key);
   }
-  gOldCatalog = gCatalogBaseline.old.map(original => {
-    const item = { ...original, targetRef: '' };
-    const key = item.fullRef.toLowerCase();
-    const guid = extractGuid(item.fullRef);
+  // Usage rows carry no status of their own: it is always recomputed from the current
+  // table, so editing the table can never leave a stale label in this view.
+  gUsageState = new Map();
+  for (const row of (gUsageReport.refs || [])) {
+    const key = String(row.fullRef || '').toLowerCase();
+    const guid = extractGuid(row.fullRef);
+    let status = 'unmapped';
+    let targetRef = '';
     if (mapped.has(key) || mappedGuids.has(guid)) {
-      item.status = 'mapped';
-      item.targetRef = mapped.get(key) || '';
-    } else if (stubs.has(key)) item.status = 'stub';
-    else if (guid && gModIndex[guid]) item.status = 'alive';
-    else if (IGNORE_REF.test(item.fullRef)) item.status = 'system';
-    else item.status = item.isModPrefab ? 'unmapped' : 'external';
-    return item;
-  });
+      status = 'mapped';
+      targetRef = mapped.get(key) || '';
+    } else if (stubs.has(key)) {
+      status = 'stub';
+    } else if (guid && gModIndex[guid]) {
+      status = 'alive';
+    } else if (IGNORE_REF.test(row.fullRef)) {
+      status = 'system';
+    }
+    gUsageState.set(key, { status, targetRef });
+  }
   gNewCatalog = gCatalogBaseline.new.map(item => ({ ...item, mappedCount: mappedCounts.get(String(item.guid).toUpperCase()) || 0 }));
 }
 
@@ -840,19 +862,21 @@ async function loadAllData() {
   gLoading = true;
   setEditorLock();
   try {
-    const urls = ['/api/config', '/api/table', '/api/modindex', '/api/catalog/new', '/api/catalog/old'];
+    // The mod index comes along eagerly: validateLocalRef depends on it, and without it
+    // every filled entry would be misreported as target-missing. Only the catalog and the
+    // usage report are deferred to ensureExternalData().
+    const urls = ['/api/config', '/api/table', '/api/modindex'];
     const responses = await Promise.all(urls.map(url => fetch(url, { cache: 'no-store' })));
     responses.forEach((response, index) => { if (!response.ok) throw new Error('Ошибка ' + urls[index]); });
-    const [config, model, index, newCatalog, oldCatalog] = await Promise.all(responses.map(response => response.json()));
+    const [config, model, index] = await Promise.all(responses.map(response => response.json()));
     if (!config.csrfToken) throw new Error('Сервер не вернул токен защиты.');
-    if (!model.tree || !Array.isArray(newCatalog) || !Array.isArray(oldCatalog)) throw new Error('Некорректный формат данных сервера.');
+    if (!model.tree) throw new Error('Некорректный формат данных сервера.');
     gCsrfToken = config.csrfToken;
     gBaseline = { tree: cloneJson(model.tree), versionHash: model.versionHash || '' };
     gModIndex = index;
     // Without the prefab mod the server validates against the persisted catalog
     // snapshot; the operator must be told that statuses may lag behind the real mod.
     document.getElementById('snapshotNotice').style.display = model.modIndexLive ? 'none' : '';
-    gCatalogBaseline = { old: cloneJson(oldCatalog), new: cloneJson(newCatalog) };
     adoptReplay(replayOperations(gBaseline.tree, []));
     return true;
   } catch (err) {
@@ -864,17 +888,51 @@ async function loadAllData() {
   }
 }
 
+// The catalog and the usage report form one unit: deriveCatalogs maps mappedCount onto the
+// catalog using the current table, and usage statuses come from the same pass, so loading
+// them separately would mean rebuilding the derived state twice. They are fetched together,
+// once, and replayed through adoptReplay exactly like a full reload would.
+async function ensureExternalData() {
+  if (gExternalLoaded) return true;
+  if (gExternalPromise) return gExternalPromise;
+  if (!gCsrfToken) {
+    alert('Сначала дождитесь загрузки данных сервера.');
+    return false;
+  }
+  gExternalPromise = (async () => {
+    try {
+      const urls = ['/api/catalog/new', '/api/legacy/report'];
+      const responses = await Promise.all(urls.map(url => fetch(url, { cache: 'no-store' })));
+      responses.forEach((response, index) => { if (!response.ok) throw new Error('Ошибка ' + urls[index]); });
+      const [newCatalog, usageReport] = await Promise.all(responses.map(response => response.json()));
+      if (!Array.isArray(newCatalog) || !Array.isArray(usageReport.refs)) throw new Error('Некорректный формат данных сервера.');
+      gUsageReport = usageReport;
+      gCatalogBaseline = { new: cloneJson(newCatalog) };
+      gExternalLoaded = true;
+      // Replay pending operations onto the untouched baseline so nothing is lost, then let
+      // deriveCatalogs recompute usage statuses and catalog mappedCount against the new data.
+      adoptReplay(replayOperations(gBaseline.tree, gPendingOps));
+      return true;
+    } catch (err) {
+      alert('Не удалось загрузить данные каталога: ' + err.message);
+      return false;
+    } finally {
+      gExternalPromise = null;
+    }
+  })();
+  return gExternalPromise;
+}
+
 function updateBadges() {
   if (gModel && gModel.stats) {
     document.getElementById('badgeRemapCount').textContent = gModel.stats.total;
   }
-  if (gOldCatalog) {
-    const unmapped = gOldCatalog.filter(x => x.status === 'unmapped').length;
-    document.getElementById('badgeLegacyUnmapped').textContent = unmapped + ' unmapped';
-  }
-  if (gNewCatalog) {
-    document.getElementById('badgeTruthCount').textContent = gNewCatalog.length;
-  }
+  // Before the deferred load these counts are genuinely unknown, not zero. Showing "0"
+  // would claim the operator has no usage rows and no prefabs.
+  document.getElementById('badgeUsageCount').textContent =
+    gExternalLoaded ? (gUsageReport.refs || []).length : '…';
+  document.getElementById('badgeTruthCount').textContent =
+    gExternalLoaded ? gNewCatalog.length : '…';
 }
 
 function updateDatalist() {
@@ -890,19 +948,32 @@ function updateDatalist() {
 }
 
 // ---------- Переключение вкладок верхнего уровня ----------
-function switchMainTab(tab) {
+async function switchMainTab(tab) {
   gActiveMainTab = tab;
   document.getElementById('tabRemap').classList.toggle('active', tab === 'remap');
-  document.getElementById('tabLegacy').classList.toggle('active', tab === 'legacy');
+  document.getElementById('tabUsage').classList.toggle('active', tab === 'usage');
   document.getElementById('tabTruth').classList.toggle('active', tab === 'truth');
 
   document.getElementById('toolbarRemap').style.display = tab === 'remap' ? 'flex' : 'none';
-  document.getElementById('toolbarLegacy').style.display = tab === 'legacy' ? 'flex' : 'none';
+  document.getElementById('toolbarUsage').style.display = tab === 'usage' ? 'flex' : 'none';
   document.getElementById('toolbarTruth').style.display = tab === 'truth' ? 'flex' : 'none';
 
   document.getElementById('viewRemap').style.display = tab === 'remap' ? 'flex' : 'none';
-  document.getElementById('viewLegacy').style.display = tab === 'legacy' ? 'block' : 'none';
+  document.getElementById('viewUsage').style.display = tab === 'usage' ? 'block' : 'none';
   document.getElementById('viewTruth').style.display = tab === 'truth' ? 'block' : 'none';
+
+  // Both non-default tabs read the deferred snapshots. When they are already in memory
+  // this stays on a synchronous path so re-switching tabs never flashes a placeholder.
+  if ((tab === 'usage' || tab === 'truth') && !gExternalLoaded) {
+    const body = tab === 'usage' ? document.getElementById('usageTableBody') : document.getElementById('truthTableBody');
+    body.innerHTML = '<tr><td colspan="6" class="empty-state"><span class="spinner"></span> Загрузка каталога мода...</td></tr>';
+    const loaded = await ensureExternalData();
+    // A failed load leaves the tab showing the placeholder; fall back to the tab that
+    // always has data rather than rendering a broken view.
+    if (!loaded) { switchMainTab('remap'); return; }
+    // The operator may have switched away while the data was in flight.
+    if (gActiveMainTab !== tab) return;
+  }
 
   renderAll();
 }
@@ -911,8 +982,8 @@ function renderAll() {
   refreshPendingControls();
   if (gActiveMainTab === 'remap') {
     renderRemap();
-  } else if (gActiveMainTab === 'legacy') {
-    renderLegacy();
+  } else if (gActiveMainTab === 'usage') {
+    renderUsage();
   } else if (gActiveMainTab === 'truth') {
     renderTruth();
   }
@@ -1103,62 +1174,96 @@ function toggleTreeHeader(el) {
 }
 
 // ==========================================
-// 2. ВКЛАДКА: СТАРЫЕ ПРЕФАБЫ (LEGACY)
+// 2. ВКЛАДКА: ИСПОЛЬЗОВАНИЕ В СТАРЫХ МИССИЯХ
 // ==========================================
-function setLegacyFilter(f) {
-  gLegacyFilter = f;
-  document.querySelectorAll('#toolbarLegacy .chip').forEach(c => c.classList.remove('active'));
-  if (f === 'unmapped') document.getElementById('chipLegacyUnmapped').classList.add('active');
-  else if (f === 'mapped') document.getElementById('chipLegacyMapped').classList.add('active');
-  else if (f === 'stub') document.getElementById('chipLegacyStubs').classList.add('active');
-  else if (f === 'alive') document.getElementById('chipLegacyAlive').classList.add('active');
-  else document.getElementById('chipLegacyAll').classList.add('active');
-  renderLegacy();
+function setUsageFilter(f) {
+  gUsageFilter = f;
+  document.querySelectorAll('#toolbarUsage .chip').forEach(c => c.classList.remove('active'));
+  if (f === 'broken') document.getElementById('chipUsageBroken').classList.add('active');
+  else document.getElementById('chipUsageAll').classList.add('active');
+  renderUsage();
 }
 
-function renderLegacy() {
-  const tbody = document.getElementById('legacyTableBody');
-  if (!gOldCatalog || gOldCatalog.length === 0) {
-    tbody.innerHTML = '<tr><td colspan="6" class="empty-state">Каталог старых префабов пуст. Нажмите «↻ Обновить каталоги».</td></tr>';
+function usageRows() {
+  const rows = [];
+  for (const item of (gUsageReport.refs || [])) {
+    const key = String(item.fullRef || '').toLowerCase();
+    const derived = gUsageState.get(key) || { status: 'unmapped', targetRef: '' };
+    rows.push({ ...item, status: derived.status, targetRef: derived.targetRef });
+  }
+  return rows;
+}
+
+function renderUsageNotice() {
+  const notice = document.getElementById('usageNotice');
+  if (!gUsageReport.exists) {
+    notice.style.display = 'none';
+    return;
+  }
+  if (gUsageReport.stale) {
+    notice.style.display = '';
+    notice.style.background = 'var(--orangebg)';
+    notice.style.border = '1px solid rgba(232,133,68,.35)';
+    notice.style.color = 'var(--orange)';
+    notice.textContent = `Таблица замен изменилась после скана ${gUsageReport.scannedAt || ''}. Статусы пересчитаны по текущей таблице, но список миссий может быть неполным — выполните повторное сканирование.`;
+    return;
+  }
+  notice.style.display = '';
+  notice.style.background = 'var(--panel2, transparent)';
+  notice.style.border = '1px solid var(--line, rgba(255,255,255,.08))';
+  notice.style.color = 'var(--mut)';
+  notice.textContent = `Скан от ${gUsageReport.scannedAt || '—'}. Каталог: ${gUsageReport.sourceRoot || '—'} · миссий: ${gUsageReport.missionCount || 0} · ссылок: ${gUsageReport.refCount || 0}`;
+}
+
+function renderUsage() {
+  renderUsageNotice();
+  const tbody = document.getElementById('usageTableBody');
+  const rows = usageRows();
+  if (!gUsageReport.exists) {
+    tbody.innerHTML = '<tr><td colspan="6" class="empty-state">Отчёта по старым миссиям ещё нет. Нажмите «⌕ Просканировать старые миссии».</td></tr>';
+    document.getElementById('statUsageAll').textContent = 0;
+    document.getElementById('statUsageBroken').textContent = 0;
+    return;
+  }
+  if (rows.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="6" class="empty-state">В просканированных миссиях не найдено ссылок на префабы.</td></tr>';
+    document.getElementById('statUsageAll').textContent = 0;
+    document.getElementById('statUsageBroken').textContent = 0;
     return;
   }
 
-  // Счётчики
-  document.getElementById('statLegacyAll').textContent = gOldCatalog.length;
-  document.getElementById('statLegacyUnmapped').textContent = gOldCatalog.filter(x => x.status === 'unmapped').length;
-  document.getElementById('statLegacyMapped').textContent = gOldCatalog.filter(x => x.status === 'mapped').length;
-  document.getElementById('statLegacyStubs').textContent = gOldCatalog.filter(x => x.status === 'stub').length;
-  document.getElementById('statLegacyAlive').textContent = gOldCatalog.filter(x => x.status === 'alive').length;
+  document.getElementById('statUsageAll').textContent = rows.length;
+  document.getElementById('statUsageBroken').textContent = rows.filter(x => x.status === 'unmapped' || x.status === 'stub').length;
 
-  const q = document.getElementById('searchLegacy').value.trim().toLowerCase();
-
-  const filtered = gOldCatalog.filter(item => {
+  const q = document.getElementById('searchUsage').value.trim().toLowerCase();
+  const filtered = rows.filter(item => {
+    if (gUsageFilter === 'broken' && item.status !== 'unmapped' && item.status !== 'stub') return false;
     if (q) {
-      const m1 = item.fullRef.toLowerCase().includes(q);
-      const m2 = (item.missions || '').toLowerCase().includes(q);
-      if (!m1 && !m2) return false;
+      const inRef = item.fullRef.toLowerCase().includes(q);
+      const inMissions = (item.missions || []).some(m => String(m).toLowerCase().includes(q));
+      if (!inRef && !inMissions) return false;
     }
-    if (gLegacyFilter === 'unmapped') return item.status === 'unmapped';
-    if (gLegacyFilter === 'mapped') return item.status === 'mapped';
-    if (gLegacyFilter === 'stub') return item.status === 'stub';
-    if (gLegacyFilter === 'alive') return item.status === 'alive';
     return true;
   });
 
   if (filtered.length === 0) {
-    tbody.innerHTML = '<tr><td colspan="6" class="empty-state">Нет старых префабов, подходящих под фильтр.</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="6" class="empty-state">Нет ссылок, подходящих под фильтр.</td></tr>';
     return;
   }
 
   tbody.innerHTML = filtered.slice(0, 300).map(item => {
     const disp = formatRefDisplay(item.fullRef);
     const tag = getStatusTagHtml(item.status);
+    const missions = (item.missions || []).join(', ') || '—';
     const isUnmapped = item.status === 'unmapped' || item.status === 'stub';
+    const button = isUnmapped
+      ? `<button class="sm primary" onclick="openSuggestModal(${jsArg(item.fullRef)})">Замапить</button>`
+      : `<button class="sm ghost" onclick="openSuggestModal(${jsArg(item.fullRef)})">Изменить</button>`;
 
     return `
       <tr>
-        <td style="text-align:center;font-weight:700;color:${item.usageCount > 0 ? 'var(--fg)' : 'var(--mut2)'}">${item.usageCount}</td>
-        <td style="font-size:11.5px;color:var(--mut)" title="${escapeHtml(item.missions)}">${escapeHtml(item.missions || '—')}</td>
+        <td style="text-align:center;font-weight:700;color:${item.usageCount > 0 ? 'var(--fg)' : 'var(--mut2)'}">${item.usageCount || 0}</td>
+        <td style="font-size:11.5px;color:var(--mut)" title="${escapeHtml(missions)}">${escapeHtml(missions)}</td>
         <td class="ref-col" title="${escapeHtml(item.fullRef)}">
           <span class="g">${escapeHtml(disp.guid)}</span><span class="p">${escapeHtml(disp.path)}</span>
         </td>
@@ -1166,20 +1271,10 @@ function renderLegacy() {
         <td style="font-family:monospace;font-size:11.5px;color:var(--mut)">
           ${item.targetRef ? escapeHtml(item.targetRef) : '<i style="color:var(--mut2)">нет</i>'}
         </td>
-        <td style="text-align:right">
-          ${isUnmapped ? `
-            <button class="sm primary" onclick="mapLegacyItem(${jsArg(item.fullRef)})">Замапить</button>
-          ` : `
-            <button class="sm ghost" onclick="openSuggestModal(${jsArg(item.fullRef)})">Изменить</button>
-          `}
-        </td>
+        <td style="text-align:right">${button}</td>
       </tr>
     `;
   }).join('');
-}
-
-function mapLegacyItem(oldRef) {
-  openSuggestModal(oldRef);
 }
 
 // ==========================================
@@ -1251,6 +1346,12 @@ function switchSuggestMode(mode) {
   document.getElementById('suggestRankerPanel').style.display = mode === 'ranker' ? 'block' : 'none';
   document.getElementById('suggestTruthPanel').style.display = mode === 'truth' ? 'block' : 'none';
   if (mode === 'truth') {
+    // This panel is reachable from the remap tab, so the catalog may not be loaded yet.
+    if (!gExternalLoaded) {
+      document.getElementById('suggestTruthList').innerHTML = '<div style="padding:16px;text-align:center"><span class="spinner"></span> Загрузка каталога...</div>';
+      ensureExternalData().then(ok => { if (ok) renderSuggestTruthList(); });
+      return;
+    }
     renderSuggestTruthList();
   }
 }
@@ -1608,15 +1709,20 @@ async function rebuildCatalogs() {
     const response = await postJson('/api/catalog/rebuild');
     const data = await response.json();
     if (!response.ok || !data.ok) throw new Error(data.error || 'Ошибка пересборки');
-    // Refresh catalog metadata without rebasing or losing unsaved operations.
-    const responses = await Promise.all(['/api/modindex', '/api/catalog/new', '/api/catalog/old'].map(url => fetch(url, { cache: 'no-store' })));
-    if (responses.some(item => !item.ok)) throw new Error('Не удалось обновить каталоги.');
-    const [index, newCatalog, oldCatalog] = await Promise.all(responses.map(item => item.json()));
-    if (!Array.isArray(newCatalog) || !Array.isArray(oldCatalog)) throw new Error('Некорректный формат каталогов.');
+    // Refresh catalog metadata without rebasing or losing unsaved operations. The usage
+    // report is deliberately NOT reloaded here: rebuilding the prefab catalog does not
+    // rescan the legacy missions, and a sweep must stay an explicit action.
+    const responses = await Promise.all(['/api/modindex', '/api/catalog/new'].map(url => fetch(url, { cache: 'no-store' })));
+    if (responses.some(item => !item.ok)) throw new Error('Не удалось обновить каталог.');
+    const [index, newCatalog] = await Promise.all(responses.map(item => item.json()));
+    if (!Array.isArray(newCatalog)) throw new Error('Некорректный формат каталога.');
     gModIndex = index;
-    gCatalogBaseline = { old: cloneJson(oldCatalog), new: cloneJson(newCatalog) };
+    gCatalogBaseline = { new: cloneJson(newCatalog) };
+    // The freshly rebuilt catalog is the current snapshot; a later tab visit must not
+    // re-fetch it and overwrite what was just loaded.
+    gExternalLoaded = true;
     adoptReplay(replayOperations(gBaseline.tree, gPendingOps));
-    alert(`Каталоги успешно пересобраны!\nНовые префабы (Истина): ${data.newCount}\nСтарые префабы (Legacy): ${data.oldCount}`);
+    alert(`Каталог префабов успешно пересобран!\nПрефабов в каталоге: ${data.newCount}`);
   } catch (err) {
     alert('Ошибка: ' + err.message);
   } finally {
@@ -1624,6 +1730,63 @@ async function rebuildCatalogs() {
     setEditorLock();
     button.disabled = false;
     button.innerHTML = '↻ Обновить каталог префабов';
+  }
+}
+
+// An explicit sweep of the legacy mission tree. It declares broken references as stubs in
+// the remap table and rewrites the usage report. Queued edits are never silently dropped:
+// if there are any, the operator is asked to save or discard first.
+async function scanLegacy() {
+  if (editorBusy()) return;
+  if (gPendingOps.length) {
+    alert('Сначала сохраните или отмените несохранённые изменения.');
+    return;
+  }
+  if (!confirm('Просканировать старые миссии?\n\nВсе найденные битые ссылки будут добавлены в таблицу замен как заглушки, требующие назначения. Существующие назначения не изменяются.')) return;
+
+  const button = document.getElementById('btnScanLegacy');
+  gLoading = true;
+  setEditorLock();
+  button.disabled = true;
+  button.innerHTML = '<span class="spinner"></span> Сканирование...';
+  try {
+    const response = await postJson('/api/legacy/scan', { write: true, report: true });
+    const data = await response.json();
+    if (!response.ok || !data.ok) throw new Error(data.error || 'Ошибка сканирования');
+
+    const responses = await Promise.all(['/api/table', '/api/legacy/report'].map(url => fetch(url, { cache: 'no-store' })));
+    if (responses.some(item => !item.ok)) throw new Error('Не удалось обновить таблицу замен.');
+    const [model, usageReport] = await Promise.all(responses.map(item => item.json()));
+    if (!model.tree) throw new Error('Некорректный формат таблицы замен.');
+    // The sweep only ever appends stubs, so the optimistic hash the pending state was
+    // built on is replaced by the server's; unsaved operations are rebased onto it.
+    gBaseline = { tree: cloneJson(model.tree), versionHash: model.versionHash || '' };
+    gUsageReport = usageReport;
+    // The sweep just refreshed the report, so it counts as loaded.
+    gExternalLoaded = true;
+    adoptReplay(replayOperations(gBaseline.tree, []));
+
+    const added = data.added || 0;
+    alert(
+      `Сканирование завершено.\n\n` +
+      `Каталог: ${data.sourceRoot || '—'}\n` +
+      `Миссий: ${(data.missions || []).length}\n` +
+      `Всего ссылок: ${data.total}\n` +
+      `  битых: ${data.broken}\n` +
+      `  живых в моде: ${data.resolved}\n` +
+      `  уже замаплено: ${data.mapped}\n` +
+      `  служебных: ${data.ignore}\n` +
+      `  внешних: ${data.external}\n\n` +
+      `Добавлено новых заглушек: ${added}` +
+      (added ? `\n\nЗаполните их на вкладке «База ремапа».` : '')
+    );
+  } catch (err) {
+    alert('Ошибка: ' + err.message);
+  } finally {
+    gLoading = false;
+    setEditorLock();
+    button.disabled = false;
+    button.innerHTML = '⌕ Просканировать старые миссии';
   }
 }
 
@@ -1721,6 +1884,41 @@ function escapeHtml(s) {
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#39;');
+}
+
+function exportCsv() {
+  window.open('/api/table/export', '_blank');
+}
+
+function triggerImportCsv() {
+  const inp = document.getElementById('fileCsvInput');
+  if (inp) { inp.value = ''; inp.click(); }
+}
+
+async function handleCsvFile(input) {
+  const file = input.files && input.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = async (e) => {
+    const csvContent = e.target.result;
+    if (!confirm('РРјРїРѕСЂС‚РёСЂРѕРІР°С‚СЊ С„Р°Р№Р» \"' + file.name + '\" РІ Р±Р°Р·Сѓ Р·Р°РјРµРЅ?')) return;
+    try {
+      const res = await api('/api/table/import', { method: 'POST', body: JSON.stringify({ csv: csvContent }) });
+      if (res && res.ok) {
+        let msg = 'РРјРїРѕСЂС‚ Р·Р°РІРµСЂС€С‘РЅ: РґРѕР±Р°РІР»РµРЅРѕ ' + (res.added || 0) + ', РѕР±РЅРѕРІР»РµРЅРѕ ' + (res.updated || 0) + '.';
+        if (res.errors && res.errors.length > 0) {
+          msg += '\nРџСЂРѕРїСѓС‰РµРЅРѕ СЃ РѕС€РёР±РєР°РјРё: ' + res.errors.length + '\n' + res.errors.slice(0, 5).join('\n');
+        }
+        alert(msg);
+        await loadAllData();
+      } else {
+        alert('РћС€РёР±РєР° РёРјРїРѕСЂС‚Р°: ' + (res.error || 'РЅРµРёР·РІРµСЃС‚РЅР°СЏ РѕС€РёР±РєР°'));
+      }
+    } catch(err) {
+      alert('РћС€РёР±РєР° РїСЂРё РѕС‚РїСЂР°РІРєРµ CSV: ' + err.message);
+    }
+  };
+  reader.readAsText(file, 'utf-8');
 }
 </script>
 

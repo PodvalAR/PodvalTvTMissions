@@ -317,7 +317,165 @@ function Handle-Api($ctx) {
             $b = Read-Body $ctx
             $dest = if ($b.destDir) { $b.destDir } else { $cfg.DefaultDestDir }
             $res = Invoke-Restore -SourceMission $b.sourceDir -DestDir $dest -RemapTable $cfg.RemapTable -AddonRoot $cfg.AddonRoot -Force:([bool]$b.force)
-            Send-Json $ctx $res
+
+            $targetPath = $res.DestMission
+            $normSummary = $null
+            if ($b -and $b.PSObject.Properties['normalize'] -and [bool]$b.normalize -and $targetPath -and (Test-Path -LiteralPath $targetPath)) {
+                $normScript = Join-Path $ScriptDir '..\Normalize-MissionLayers.ps1'
+                if (Test-Path -LiteralPath $normScript) {
+                    try {
+                        $normSummary = & $normScript -MissionDir $targetPath -Force
+                        if ($normSummary.NormalizedMission) {
+                            $targetPath = $normSummary.NormalizedMission
+                            $res.DestMission = $targetPath
+                        }
+                    } catch {
+                        Write-Warning ("Auto-normalize failed: {0}" -f $_.Exception.Message)
+                    }
+                }
+            }
+
+            $valReport = $null
+            if ($b -and $b.PSObject.Properties['validate'] -and [bool]$b.validate -and $targetPath -and (Test-Path -LiteralPath $targetPath)) {
+                $valScript = Join-Path $ScriptDir '..\Test-MissionStandard.ps1'
+                if (Test-Path -LiteralPath $valScript) {
+                    try {
+                        $valReport = & $valScript -MissionPath $targetPath -ReportJson
+                    } catch {
+                        Write-Warning ("Validation failed: {0}" -f $_.Exception.Message)
+                    }
+                }
+            }
+
+            # Audit Trail
+            $reportFile = $null
+            if ($targetPath -and (Test-Path -LiteralPath $targetPath)) {
+                try {
+                    $reportData = [ordered]@{
+                        mission         = (Split-Path -Leaf $targetPath)
+                        migratedAt      = (Get-Date).ToString('o')
+                        sourceMission   = [string]$b.sourceDir
+                        destMission     = $targetPath
+                        replacements    = $res.Replacements
+                        resolvedCount   = $res.Resolved
+                        brokenCount     = $res.BrokenCount
+                        broken          = $res.Broken
+                        ignoreCount     = $res.Ignore
+                        externalCount   = $res.External
+                        normalization   = $normSummary
+                        validation      = $valReport
+                    }
+                    $reportFile = Join-Path $targetPath 'migration_report.json'
+                    $reportJson = $reportData | ConvertTo-Json -Depth 10
+                    $utf8BomWriter = [System.Text.UTF8Encoding]::new($true)
+                    [System.IO.File]::WriteAllText($reportFile, $reportJson, $utf8BomWriter)
+                } catch {
+                    Write-Warning ("Failed to write migration report: {0}" -f $_.Exception.Message)
+                }
+            }
+
+            if ($normSummary -or $valReport -or $reportFile) {
+                $out = [pscustomobject]@{
+                    ok            = $true
+                    DestMission   = $res.DestMission
+                    Replacements  = $res.Replacements
+                    Resolved      = $res.Resolved
+                    BrokenCount   = $res.BrokenCount
+                    Broken        = $res.Broken
+                    Ignore        = $res.Ignore
+                    External      = $res.External
+                    Normalization = $normSummary
+                    Validation    = $valReport
+                    ReportPath    = $reportFile
+                }
+                Send-Json $ctx $out
+            } else {
+                Send-Json $ctx $res
+            }
+            return
+        }
+        'GET /api/table/export' {
+            try {
+                $csv = Export-RemapTableCsv -Path $cfg.RemapTable
+                $bytes = [System.Text.Encoding]::UTF8.GetBytes($csv)
+                $ctx.Response.ContentType = 'text/csv; charset=utf-8'
+                $ctx.Response.AddHeader('Content-Disposition', 'attachment; filename="remap_table.csv"')
+                $ctx.Response.ContentLength64 = $bytes.Length
+                $ctx.Response.OutputStream.Write($bytes, 0, $bytes.Length)
+                $ctx.Response.Close()
+            } catch {
+                Send-Json $ctx ([pscustomobject]@{ ok=$false; error=$_.Exception.Message }) 500
+            }
+            return
+        }
+        'POST /api/table/import' {
+            $b = Read-Body $ctx
+            $csvText = if ($b -and $b.PSObject.Properties['csv']) { [string]$b.csv } else { '' }
+            if ([string]::IsNullOrWhiteSpace($csvText)) {
+                Send-Json $ctx ([pscustomobject]@{ ok=$false; error='Empty CSV content.' }) 400
+                return
+            }
+            try {
+                $res = Import-RemapTableCsv -CsvContent $csvText -Path $cfg.RemapTable
+                Send-Json $ctx $res
+            } catch {
+                Send-Json $ctx ([pscustomobject]@{ ok=$false; error=$_.Exception.Message }) 500
+            }
+            return
+        }
+        'POST /api/validate' {
+            $b = Read-Body $ctx
+            $p = [string]$b.missionPath
+            if ([string]::IsNullOrWhiteSpace($p)) {
+                Send-Json $ctx ([pscustomobject]@{ ok=$false; error='Missing missionPath.' }) 400
+                return
+            }
+            $valScript = Join-Path $ScriptDir '..\Test-MissionStandard.ps1'
+            if (-not (Test-Path -LiteralPath $valScript)) {
+                Send-Json $ctx ([pscustomobject]@{ ok=$false; error='Test-MissionStandard.ps1 not found.' }) 500
+                return
+            }
+            try {
+                $report = & $valScript -MissionPath $p -ReportJson
+                Send-Json $ctx ([pscustomobject]@{ ok=$true; report=$report })
+            } catch {
+                Send-Json $ctx ([pscustomobject]@{ ok=$false; error=$_.Exception.Message }) 500
+            }
+            return
+        }
+        'POST /api/normalize' {
+            $b = Read-Body $ctx
+            $p = [string]$b.missionPath
+            if ([string]::IsNullOrWhiteSpace($p)) {
+                Send-Json $ctx ([pscustomobject]@{ ok=$false; error='Missing missionPath.' }) 400
+                return
+            }
+            $normScript = Join-Path $ScriptDir '..\Normalize-MissionLayers.ps1'
+            if (-not (Test-Path -LiteralPath $normScript)) {
+                Send-Json $ctx ([pscustomobject]@{ ok=$false; error='Normalize-MissionLayers.ps1 not found.' }) 500
+                return
+            }
+            try {
+                $normRes = & $normScript -MissionDir $p -Force
+                Send-Json $ctx ([pscustomobject]@{ ok=$true; summary=$normRes })
+            } catch {
+                Send-Json $ctx ([pscustomobject]@{ ok=$false; error=$_.Exception.Message }) 500
+            }
+            return
+        }
+        'POST /api/open-folder' {
+            $b = Read-Body $ctx
+            $p = [string]$b.path
+            if ([string]::IsNullOrWhiteSpace($p) -or -not (Test-Path -LiteralPath $p)) {
+                Send-Json $ctx ([pscustomobject]@{ ok=$false; error='Folder not found.' }) 400
+                return
+            }
+            try {
+                Start-Process explorer.exe -ArgumentList "`"$p`""
+                Send-Json $ctx ([pscustomobject]@{ ok=$true })
+            } catch {
+                Send-Json $ctx ([pscustomobject]@{ ok=$false; error=$_.Exception.Message }) 500
+            }
             return
         }
         'GET /api/table' {
@@ -348,20 +506,75 @@ function Handle-Api($ctx) {
             }
             return
         }
-        'GET /api/catalog/new' {
-            $cat = Get-NewPrefabsCatalog
-            Send-Json $ctx $cat
-            return
-        }
-        'GET /api/catalog/old' {
-            $cat = Get-OldPrefabsCatalog
-            Send-Json $ctx $cat
+        # The prefab catalog only needs to be *listed* here: the truth table and the picker read
+# plain columns, and the derived matchingFeatures are consumed exclusively by the ranker
+# (/api/suggest), which derives them on demand. Sending them anyway cost ~5MB of JSON and
+# several seconds of derivation on every page load.
+'GET /api/catalog/new' {
+            $cat = Get-NewPrefabsCatalog -SkipFeatures
+            $rows = New-Object System.Collections.Generic.List[object]
+            foreach ($item in $cat) {
+                $rows.Add([pscustomobject]@{
+                    guid        = [string]$item.guid
+                    path        = [string]$item.path
+                    fullRef     = [string]$item.fullRef
+                    name        = [string]$item.name
+                    category    = [string]$item.category
+                    faction     = [string]$item.faction
+                    subCategory = [string]$item.subCategory
+                    mappedCount = if ($null -ne $item.mappedCount) { [int]$item.mappedCount } else { 0 }
+                })
+            }
+            Send-Json $ctx ([object[]]$rows.ToArray())
             return
         }
         'POST /api/catalog/rebuild' {
             $n = Build-NewPrefabsCatalog -Refresh
-            $o = Build-OldPrefabsCatalog -Refresh
-            Send-Json $ctx ([pscustomobject]@{ ok=$true; newCount=$n.Count; oldCount=$o.Count })
+            Send-Json $ctx ([pscustomobject]@{ ok=$true; newCount=$n.Count })
+            return
+        }
+        # The usage report is a machine-owned artifact produced by an explicit legacy
+        # sweep. Reading it is cheap; the sweep itself is not, so it is a separate call.
+        'GET /api/legacy/report' {
+            $report = Get-LegacyRefReport
+            Send-Json $ctx ([pscustomobject]@{
+                exists       = $report.Exists
+                stale        = $report.Stale
+                sourceRoot   = $report.SourceRoot
+                scannedAt    = $report.ScannedAt
+                missionCount = $report.MissionCount
+                refCount     = $report.RefCount
+                refs         = $report.Refs
+            })
+            return
+        }
+        'POST /api/legacy/scan' {
+            $b = Read-Body $ctx
+            $write = $true
+            if ($b -and $null -ne $b.PSObject.Properties['write']) { $write = [bool]$b.PSObject.Properties['write'].Value }
+            $noReport = $false
+            if ($b -and $null -ne $b.PSObject.Properties['report']) { $noReport = -not [bool]$b.PSObject.Properties['report'].Value }
+            try {
+                $res = Sync-LegacyRefsToRemapTable -SourceRoot $script:RMC.DefaultSourceRoot `
+                                                   -RemapTable $cfg.RemapTable -Write:$write -NoReport:$noReport
+                Send-Json $ctx ([pscustomobject]@{
+                    ok         = $true
+                    written    = $res.Written
+                    sourceRoot = $res.SourceRoot
+                    missions   = $res.Missions
+                    total      = $res.Total
+                    resolved   = $res.Resolved
+                    mapped     = $res.Mapped
+                    ignore     = $res.Ignore
+                    external   = $res.External
+                    broken     = $res.Broken
+                    added      = $res.Added
+                    addedRefs  = $res.AddedRefs
+                    reportPath = $res.ReportPath
+                })
+            } catch {
+                Send-Json $ctx ([pscustomobject]@{ ok = $false; error = $_.Exception.Message }) 400
+            }
             return
         }
         default {
@@ -450,7 +663,29 @@ while ($listener.IsListening) {
             }
         }
         else {
-            Send-Text $ctx 'Not found' 'text/plain; charset=utf-8' 404
+            $rel = $p.TrimStart('/') -replace '/', '\'
+            $staticPath = [System.IO.Path]::GetFullPath((Join-Path $ScriptDir $rel))
+            $scriptDirFull = [System.IO.Path]::GetFullPath($ScriptDir)
+            if ($staticPath.StartsWith($scriptDirFull, [System.StringComparison]::OrdinalIgnoreCase) -and (Test-Path -LiteralPath $staticPath -PathType Leaf)) {
+                $ext = [System.IO.Path]::GetExtension($staticPath).ToLowerInvariant()
+                $mime = switch ($ext) {
+                    '.css'  { 'text/css; charset=utf-8' }
+                    '.js'   { 'application/javascript; charset=utf-8' }
+                    '.json' { 'application/json; charset=utf-8' }
+                    '.svg'  { 'image/svg+xml' }
+                    '.png'  { 'image/png' }
+                    '.ico'  { 'image/x-icon' }
+                    '.txt'  { 'text/plain; charset=utf-8' }
+                    default { 'application/octet-stream' }
+                }
+                $bytes = [System.IO.File]::ReadAllBytes($staticPath)
+                $ctx.Response.ContentType = $mime
+                $ctx.Response.ContentLength64 = $bytes.Length
+                $ctx.Response.OutputStream.Write($bytes, 0, $bytes.Length)
+                $ctx.Response.Close()
+            } else {
+                Send-Text $ctx 'Not found' 'text/plain; charset=utf-8' 404
+            }
         }
     } catch {
         try { Send-Json $ctx ([pscustomobject]@{ error = $_.Exception.Message }) 500 } catch {}

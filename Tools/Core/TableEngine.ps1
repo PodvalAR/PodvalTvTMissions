@@ -597,3 +597,148 @@ function Save-RemapOperations {
     Write-Text $Path $formatted
     return [pscustomobject]@{ ok=$true; applied=$applied; newHash=(Get-RemapFileHash $Path); backupFile=$backup }
 }
+
+# ------------------------------------------------------------------ CSV export & import
+
+function Export-RemapTableCsv {
+    [CmdletBinding()]
+    param(
+        [string]$Path = $script:RMC.RemapTable,
+        [string]$Delimiter = ','
+    )
+    $model = Get-RemapModel -Path $Path
+    $lines = New-Object System.Collections.Generic.List[string]
+    $escapeCsv = {
+        param([string]$val)
+        if ($null -eq $val) { $val = '' }
+        if ($val -match '[\r\n",;]') {
+            '"' + ($val -replace '"', '""') + '"'
+        } else {
+            $val
+        }
+    }
+
+    # Header
+    $header = @('GroupPath', 'OldRef', 'NewRef', 'Status', 'Note') | ForEach-Object { & $escapeCsv $_ }
+    $lines.Add(($header -join $Delimiter))
+
+    foreach ($entry in $model.entries) {
+        $gp = ($entry.groupPath -join '/')
+        $row = @(
+            (& $escapeCsv $gp),
+            (& $escapeCsv $entry.oldRef),
+            (& $escapeCsv $entry.newRef),
+            (& $escapeCsv $entry.status),
+            (& $escapeCsv $entry.note)
+        )
+        $lines.Add(($row -join $Delimiter))
+    }
+    return ($lines -join "`r`n")
+}
+
+function Import-RemapTableCsv {
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory)][AllowEmptyString()][string]$CsvContent,
+        [string]$Path = $script:RMC.RemapTable,
+        [string]$Delimiter = ',',
+        [switch]$Overwrite
+    )
+    if ([string]::IsNullOrWhiteSpace($CsvContent)) {
+        return [pscustomobject]@{ ok=$false; error='Empty CSV content.'; added=0; updated=0; skipped=0; errors=@() }
+    }
+
+    $lines = $CsvContent -split "(\r?\n)" | Where-Object { -not [string]::IsNullOrWhiteSpace($_) }
+    if ($lines.Count -lt 2) {
+        return [pscustomobject]@{ ok=$false; error='CSV must contain a header and at least one data row.'; added=0; updated=0; skipped=0; errors=@() }
+    }
+
+    $parseCsvLine = {
+        param([string]$line, [string]$delim)
+        $fields = New-Object System.Collections.Generic.List[string]
+        $inQuotes = $false
+        $cur = New-Object System.Text.StringBuilder
+        for ($i = 0; $i -lt $line.Length; $i++) {
+            $c = $line[$i]
+            if ($c -eq '"') {
+                if ($inQuotes -and $i + 1 -lt $line.Length -and $line[$i+1] -eq '"') {
+                    [void]$cur.Append('"')
+                    $i++
+                } else {
+                    $inQuotes = -not $inQuotes
+                }
+            } elseif ($c -eq $delim -and -not $inQuotes) {
+                $fields.Add($cur.ToString())
+                $cur.Length = 0
+            } else {
+                [void]$cur.Append($c)
+            }
+        }
+        $fields.Add($cur.ToString())
+        return $fields.ToArray()
+    }
+
+    $headerFields = & $parseCsvLine $lines[0] $Delimiter
+    $groupCol = -1; $oldRefCol = -1; $newRefCol = -1; $noteCol = -1
+    for ($i = 0; $i -lt $headerFields.Length; $i++) {
+        $name = $headerFields[$i].Trim().ToLowerInvariant()
+        if ($name -eq 'grouppath' -or $name -eq 'group') { $groupCol = $i }
+        elseif ($name -eq 'oldref' -or $name -eq 'old') { $oldRefCol = $i }
+        elseif ($name -eq 'newref' -or $name -eq 'new') { $newRefCol = $i }
+        elseif ($name -eq 'note') { $noteCol = $i }
+    }
+
+    if ($oldRefCol -eq -1) {
+        return [pscustomobject]@{ ok=$false; error='Missing OldRef column in CSV header.'; added=0; updated=0; skipped=0; errors=@() }
+    }
+
+    $entriesToSet = @{}
+    $groupsMap = @{}
+    $errors = New-Object System.Collections.Generic.List[string]
+    $lineNum = 1
+
+    for ($idx = 1; $idx -lt $lines.Count; $idx++) {
+        $lineNum++
+        $fields = & $parseCsvLine $lines[$idx] $Delimiter
+        if ($fields.Length -le $oldRefCol) { continue }
+        $oldRef = $fields[$oldRefCol].Trim()
+        if ([string]::IsNullOrWhiteSpace($oldRef)) { continue }
+
+        if ($oldRef -notmatch '^\{[0-9A-Fa-f]{16}\}.+\.et$') {
+            $errors.Add(('Row {0}: invalid OldRef format: {1}' -f $lineNum, $oldRef))
+            continue
+        }
+
+        $newRef = ''
+        if ($newRefCol -ge 0 -and $newRefCol -lt $fields.Length) {
+            $newRef = $fields[$newRefCol].Trim()
+        }
+        if (-not [string]::IsNullOrWhiteSpace($newRef) -and $newRef -notmatch '^\{[0-9A-Fa-f]{16}\}.+\.et$') {
+            $errors.Add(('Row {0}: invalid NewRef format: {1}' -f $lineNum, $newRef))
+            continue
+        }
+
+        $groupPath = @()
+        if ($groupCol -ge 0 -and $groupCol -lt $fields.Length -and -not [string]::IsNullOrWhiteSpace($fields[$groupCol])) {
+            $groupPath = @($fields[$groupCol].Trim().Split([char[]]@('/', '\')) | Where-Object { -not [string]::IsNullOrWhiteSpace($_) })
+        }
+
+        $entriesToSet[$oldRef] = $newRef
+        if ($groupPath.Count -gt 0) {
+            $groupsMap[$oldRef] = $groupPath
+        }
+    }
+
+    if ($entriesToSet.Count -eq 0) {
+        return [pscustomobject]@{ ok=$true; added=0; updated=0; skipped=0; errors=$errors.ToArray() }
+    }
+
+    $res = Set-RemapEntries -Entries $entriesToSet -Path $Path -EntryGroups $groupsMap
+    return [pscustomobject]@{
+        ok      = $true
+        added   = $res.Added
+        updated = $res.Updated
+        skipped = ($lines.Count - 1 - $entriesToSet.Count - $errors.Count)
+        errors  = $errors.ToArray()
+    }
+}

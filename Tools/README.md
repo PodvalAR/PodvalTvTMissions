@@ -1,4 +1,4 @@
-﻿# Инструмент восстановления миссий (Mission Restore)
+# Инструмент восстановления миссий (Mission Restore)
 
 Локальный инструмент для переноса старых (legacy DRG-era) миссий Arma Reforger в текущий аддон `PodvalTvTMissions` с автоматической заменой ссылок на удалённые префабы по таблице `remap_table.json`.
 
@@ -194,7 +194,8 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\Tests\firstrun-verificatio
 | `curated_overrides.json` | Ручные исключения для bootstrap (старый ref → новый ref) |
 | `UI\Serve-RestoreUI.ps1` | Локальный веб-сервер (только loopback) |
 | `UI\index.html`, `UI\editor.html` | Интерфейс и редактор таблицы замен |
-| `remap_table.json` | Таблица замен префабов — источник правды |
+| `remap_table.json` | Таблица замен префабов — источник правды (поддерживает экспорт и импорт в CSV) |
 | `catalog_new_prefabs.json` | Снимок каталога префабов мода (отслеживается в git) |
 | `legacy_refs_report.json` | Отчёт о применении префабов в старых миссиях (локальный, в `.gitignore`) |
-| `Tests\` | Регрессионные проверки (включая `mission-validation-regression.ps1` и `mission-normalization-regression.ps1`) |
+| `migration_report.json` | Автоматический аудит-отчёт миграции (сохраняется в папке восстановленной миссии) |
+| `Tests\` | Регрессионные проверки (включая `mission-validation-regression.ps1`, `mission-normalization-regression.ps1`, `phase4-regression.ps1`) |
