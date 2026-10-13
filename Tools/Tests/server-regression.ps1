@@ -80,6 +80,8 @@ function Save-RemapOperations { param($Operations,$ExpectedVersionHash,$Path) $s
 function Get-RemapModel { param($Path) return [pscustomobject]@{ groups=@(); entries=@() } }
 function Build-NewPrefabsCatalog { param([switch]$Refresh) $script:OperationCalls++; return $script:FixtureItems }
 function Build-OldPrefabsCatalog { param([switch]$Refresh) $script:OperationCalls++; return $script:FixtureItems }
+function Get-LegacyRefReport { return $script:LegacyReport }
+function Sync-LegacyRefsToRemapTable { param($SourceRoot,$RemapTable,$ReportPath,[switch]$Write,[switch]$NoReport) if ($script:LegacySweepThrow) { throw $script:LegacySweepThrow }; return [pscustomobject]@{ ok=$true; Added=2; Broken=2; AddedRefs=@('{0000000000000003}Prefabs/Old1.et','{0000000000000004}Prefabs/Old2.et'); ReportPath='synthetic-report' } }
 function Start-Sleep { param($Milliseconds) }
 $script:StopCalls = 0
 $script:Listener = [pscustomobject]@{}
@@ -261,23 +263,23 @@ $script:RequestBody = $savedRequest
 $coreParseErrors = $null
 $coreAst = [System.Management.Automation.Language.Parser]::ParseFile((Join-Path $ToolsRoot 'Restore-Core.ps1'), [ref]$tokens, [ref]$coreParseErrors)
 if ($coreParseErrors.Count) { throw ($coreParseErrors | Out-String) }
-foreach ($name in @('Get-NewPrefabsCatalog', 'Get-OldPrefabsCatalog')) {
+foreach ($name in @('Get-NewPrefabsCatalog')) {
     $functionAst = $coreAst.Find({ param($node) $node -is [System.Management.Automation.Language.FunctionDefinitionAst] -and $node.Name -eq $name }, $true)
     if (-not $functionAst) { throw "Core function not found: $name" }
     . ([scriptblock]::Create($functionAst.Extent.Text))
 }
-$script:RMC = @{ CatalogNew=$serverPath; CatalogOld=$serverPath }
+$script:RMC = @{ CatalogNew=$serverPath }
 function Read-Text($Path) {
     if ($Path -cne $serverPath) { throw "Unexpected synthetic catalog path: $Path" }
     return (ConvertTo-Json -InputObject $script:FixtureItems -Depth 5 -Compress)
 }
-function Get-RoleTokens($path) { return [pscustomobject]@{FeatureVersion=2;Path=$path} }
+function Get-RoleTokens($path) { $script:RoleTokenCalls++; return [pscustomobject]@{FeatureVersion=2;Path=$path} }
 
 foreach ($count in @(0,1,2)) {
     $script:NewCatalogCache = $null
     $script:FixtureItems = @()
     for ($i=0; $i -lt $count; $i++) { $script:FixtureItems += [pscustomobject]@{ Name="Item$i"; Ref="Item$i" } }
-    foreach ($path in @('/api/missions','/api/catalog/new','/api/catalog/old','/api/suggest')) {
+    foreach ($path in @('/api/missions','/api/catalog/new','/api/suggest')) {
         $method = if ($path -eq '/api/suggest') { 'POST' } else { 'GET' }
         $ctx = New-Context -method $method -path $path -headers @{ 'X-Restore-Token'=$script:CsrfToken }
         Handle-Api $ctx
@@ -291,6 +293,103 @@ foreach ($count in @(0,1,2)) {
             Assert-Equal $first.Name 'Item0' "$path must contain flat records, not nested arrays"
         }
     }
+}
+
+# The catalog route deliberately projects a fixed column set and drops matchingFeatures:
+# deriving those cost ~7s and ~5MB per page load, and no UI consumer ever read them.
+# The contract must stay explicit, because PowerShell property access is case-insensitive
+# and would happily hide a renamed or dropped field.
+$script:NewCatalogCache = $null
+$script:FixtureItems = @([pscustomobject]@{
+    guid='0000000000000001'; path='Prefabs/Test.et'; fullRef='{0000000000000001}Prefabs/Test.et'
+    name='Test.et'; category='Characters'; faction='BLUFOR'; subCategory='US/Regular'; mappedCount=4
+    matchingFeatures=[pscustomobject]@{ FeatureVersion=2; Role='rifleman' }
+})
+$script:SkipFeaturesCalls = 0
+$script:RoleTokenCalls = 0
+$ctx = New-Context -method GET -path '/api/catalog/new' -headers @{ 'X-Restore-Token'=$script:CsrfToken }
+Handle-Api $ctx
+$catalogJson = Read-Response $ctx
+Assert-Equal $script:RoleTokenCalls 0 'Catalog route derives no role features'
+$row = @(ConvertFrom-Json -InputObject $catalogJson)[0]
+Assert-Equal $row.guid '0000000000000001' 'Catalog row exposes the GUID'
+Assert-Equal $row.path 'Prefabs/Test.et' 'Catalog row exposes the relative path'
+Assert-Equal $row.fullRef '{0000000000000001}Prefabs/Test.et' 'Catalog row exposes the full ref'
+Assert-Equal $row.name 'Test.et' 'Catalog row exposes the display name'
+Assert-Equal $row.category 'Characters' 'Catalog row exposes the category'
+Assert-Equal $row.faction 'BLUFOR' 'Catalog row exposes the faction'
+Assert-Equal $row.subCategory 'US/Regular' 'Catalog row exposes the subcategory'
+Assert-Equal $row.mappedCount 4 'Catalog row exposes the mapped count'
+Assert-Equal ($null -ne $row.PSObject.Properties['matchingFeatures']) $false 'Catalog route must not ship derived features'
+Assert-Equal ($catalogJson -match 'matchingFeatures') $false 'Serialized catalog must not mention matchingFeatures'
+
+# A row missing optional columns must still serialize with the same shape rather than
+# dropping keys, so the browser never has to guard every field access.
+$script:NewCatalogCache = $null
+$script:FixtureItems = @([pscustomobject]@{ guid='0000000000000002'; path='Prefabs/Bare.et'; fullRef='{0000000000000002}Prefabs/Bare.et' })
+$ctx = New-Context -method GET -path '/api/catalog/new' -headers @{ 'X-Restore-Token'=$script:CsrfToken }
+Handle-Api $ctx
+$bareJson = Read-Response $ctx
+$decodedBare = ConvertFrom-Json -InputObject $bareJson
+# PS 5.1 unwraps a single-element JSON array, so normalise before indexing.
+$bare = @($decodedBare)[0]
+foreach ($key in @('guid','path','fullRef','name','category','faction','subCategory','mappedCount')) {
+    Assert-Equal ($null -ne $bare.PSObject.Properties[$key]) $true "Sparse catalog row still exposes $key"
+}
+Assert-Equal $bare.mappedCount 0 'Missing mapped count defaults to zero rather than null'
+
+# The usage report is an envelope, not a bare array: the UI needs its metadata to decide
+# whether to show stale numbers or to prompt for a sweep.
+$script:FixtureItems = @([pscustomobject]@{ fullRef='{0000000000000003}Prefabs/Old.et'; usageCount=2; missions=@('Region/Mission'); status='broken' })
+$script:LegacyReport = [pscustomobject]@{ Exists=$true; Stale=$true; SourceRoot='synthetic-source'; ScannedAt='2026-10-13T00:00:00Z'; MissionCount=7; RefCount=1; Refs=$script:FixtureItems }
+$ctx = New-Context -method GET -path '/api/legacy/report' -headers @{ 'X-Restore-Token'=$script:CsrfToken }
+Handle-Api $ctx
+$decoded = ConvertFrom-Json -InputObject (Read-Response $ctx)
+Assert-Equal $ctx.Response.StatusCode 200 'Usage report responds'
+Assert-Equal $decoded.exists $true 'Report exposes existence'
+Assert-Equal $decoded.stale $true 'Report exposes staleness'
+Assert-Equal $decoded.missionCount 7 'Report exposes the scanned mission count'
+Assert-Equal $decoded.refs.Count 1 'Report carries usage rows'
+Assert-Equal $decoded.refs[0].usageCount 2 'Usage rows keep their occurrence count'
+
+# A sweep declares stubs and reports what it added; the operator sees it verbatim.
+$script:LegacyReport = $null
+$script:RequestBody = [pscustomobject]@{ write=$true; report=$true }
+$ctx = New-Context -method POST -path '/api/legacy/scan' -headers @{ 'X-Restore-Token'=$script:CsrfToken }
+Handle-Api $ctx
+$decoded = ConvertFrom-Json -InputObject (Read-Response $ctx)
+Assert-Equal $ctx.Response.StatusCode 200 'Legacy sweep responds'
+Assert-Equal $decoded.ok $true 'Legacy sweep succeeds'
+Assert-Equal $decoded.added 2 'Legacy sweep reports how many stubs it declared'
+Assert-Equal $decoded.broken 2 'Legacy sweep reports how many references are broken'
+Assert-Equal $decoded.addedRefs.Count 2 'Legacy sweep names each declared reference'
+Assert-Equal $decoded.reportPath 'synthetic-report' 'Legacy sweep names the report it wrote'
+
+# An unconfigured legacy root must surface as a 400 with the reason, never as an empty
+# success that the operator would read as "the legacy tree is clean".
+$script:LegacySweepThrow = 'Корневой каталог старых миссий недоступен (scan legacy missions): DefaultSourceRoot = не задан.'
+$ctx = New-Context -method POST -path '/api/legacy/scan' -headers @{ 'X-Restore-Token'=$script:CsrfToken }
+Handle-Api $ctx
+$decoded = ConvertFrom-Json -InputObject (Read-Response $ctx)
+Assert-Equal $ctx.Response.StatusCode 400 'A failed sweep answers 400'
+Assert-Equal $decoded.ok $false 'A failed sweep is not reported as success'
+Assert-True ($decoded.error -match 'DefaultSourceRoot') 'A failed sweep explains which setting is missing'
+$script:LegacySweepThrow = $null
+
+# The catalog rebuild refreshes the mod catalog only; the legacy sweep is a separate,
+# explicit action and must never be triggered by refreshing the prefab catalog.
+$script:RequestBody = $savedRequest
+$ctx = New-Context -method POST -path '/api/catalog/rebuild' -headers @{ 'X-Restore-Token'=$script:CsrfToken }
+Handle-Api $ctx
+$decoded = ConvertFrom-Json -InputObject (Read-Response $ctx)
+Assert-Equal $decoded.ok $true 'Catalog rebuild responds'
+Assert-Equal ($decoded.PSObject.Properties['oldCount']) $null 'Catalog rebuild no longer reports a legacy count'
+Assert-True ([bool]$decoded.PSObject.Properties['newCount']) 'Catalog rebuild still reports the mod catalog size'
+
+foreach ($gone in @('GET /api/catalog/old')) {
+    $ctx = New-Context -method GET -path ($gone -replace '^GET ','') -headers @{ 'X-Restore-Token'=$script:CsrfToken }
+    Handle-Api $ctx
+    Assert-Equal $ctx.Response.StatusCode 404 "$gone is no longer routed"
 }
 
 $script:StopCalls=0
