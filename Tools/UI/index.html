@@ -311,11 +311,11 @@
       </label>
       <label class="check" style="margin-bottom:8px">
         <input type="checkbox" id="autoNormalize" checked />
-        <span><b>РђРІС‚Рѕ-РЅРѕСЂРјР°Р»РёР·Р°С†РёСЏ СЃР»РѕРµРІ</b><br>РџСЂРёРІРµСЃС‚Рё СЃС‚СЂСѓРєС‚СѓСЂСѓ СЃР»РѕРµРІ, РїРѕР·С‹РІРЅС‹С… Рё С‚РµС…РЅРёРєРё Рє СЃС‚Р°РЅРґР°СЂС‚Сѓ PodvalTvTMissions.</span>
+        <span><b>Авто-нормализация слоёв</b><br>Привести структуру слоёв, позывных и техники к стандарту PodvalTvTMissions.</span>
       </label>
       <label class="check" style="margin-bottom:11px">
         <input type="checkbox" id="autoValidate" checked />
-        <span><b>РџСЂРѕРІРµСЂРёС‚СЊ СЃС‚Р°РЅРґР°СЂС‚</b><br>Р—Р°РїСѓСЃС‚РёС‚СЊ РІР°Р»РёРґР°С‚РѕСЂ Test-MissionStandard РїРѕСЃР»Рµ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ.</span>
+        <span><b>Проверить стандарт</b><br>Запустить валидатор Test-MissionStandard после восстановления.</span>
       </label>
       <div class="btns">
         <button id="bScan" class="primary" disabled>Проверить миссию</button>
@@ -417,8 +417,8 @@
     </div>
 
     <div class="card">
-      <h2>Журнал<span class="tail"><button class="sm ghost" id="bOpenFolder" style="display:none" title="РћС‚РєСЂС‹С‚СЊ РїР°РїРєСѓ РјРёСЃСЃРёРё РІ РџСЂРѕРІРѕРґРЅРёРєРµ Windows">Р’ РїР°РїРєСѓ</button>
-        <button class="sm ghost" id="bValidateNow" style="display:none" title="РџСЂРѕРІРµСЂРёС‚СЊ СЃРѕРѕС‚РІРµС‚СЃС‚РІРёРµ СЃС‚Р°РЅРґР°СЂС‚Сѓ PodvalTvTMissions">РЎС‚Р°РЅРґР°СЂС‚</button>
+      <h2>Журнал<span class="tail"><button class="sm ghost" id="bOpenFolder" style="display:none" title="Открыть папку миссии в Проводнике Windows">В папку</button>
+        <button class="sm ghost" id="bValidateNow" style="display:none" title="Проверить соответствие стандарту PodvalTvTMissions">Стандарт</button>
         <button class="sm ghost" id="bClear">Очистить</button></span></h2>
       <div id="log"></div>
     </div>
@@ -847,11 +847,11 @@ async function assign(ref, newRef, path, tr){
 /* ---------- восстановление ---------- */
 let lastRestoredPath = '';
 
-/* ---------- РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ ---------- */
+/* ---------- восстановление ---------- */
 $('#bRestore').onclick = async () => {
   const dir = $('#missionSel').value;
   if(!dir) return;
-  if(!confirm('РЎРєРѕРїРёСЂРѕРІР°С‚СЊ РјРёСЃСЃРёСЋ РІ РїР°РїРєСѓ РЅР°Р·РЅР°С‡РµРЅРёСЏ Рё РїСЂРёРјРµРЅРёС‚СЊ РІСЃРµ РіРѕС‚РѕРІС‹Рµ Р·Р°РјРµРЅС‹?\n\nРЎСѓС‰РµСЃС‚РІСѓСЋС‰Р°СЏ РєРѕРїРёСЏ Р±СѓРґРµС‚ РїРµСЂРµР·Р°РїРёСЃР°РЅР°.')) return;
+  if(!confirm('Скопировать миссию в папку назначения и применить все готовые замены?\n\nСуществующая копия будет перезаписана.')) return;
   setBusy(true);
   try{
     const normalize = $('#autoNormalize') ? $('#autoNormalize').checked : false;
@@ -861,33 +861,33 @@ $('#bRestore').onclick = async () => {
       normalize: normalize, validate: validate
     })});
     const n = Object.keys(res.Replacements || {}).length;
-    log('РЎРєРѕРїРёСЂРѕРІР°РЅРѕ: ' + res.DestMission, 'ok');
-    log(`РџСЂРёРјРµРЅРµРЅРѕ Р·Р°РјРµРЅ: ${n} В· РІ РјРѕРґРµ ${res.Resolved} В· СЃР»СѓР¶РµР±РЅС‹С… ${res.Ignore} В· РІРЅРµС€РЅРёС… ${res.External}`, 'dim');
+    log('Скопировано: ' + res.DestMission, 'ok');
+    log(`Применено замен: ${n} · в моде ${res.Resolved} · служебных ${res.Ignore} · внешних ${res.External}`, 'dim');
     if(res.BrokenCount){
-      log('РќРµ СѓРґР°Р»РѕСЃСЊ РїРѕРґСЃС‚Р°РІРёС‚СЊ: ' + res.BrokenCount + ' вЂ” РёС… РЅСѓР¶РЅРѕ РЅР°Р·РЅР°С‡РёС‚СЊ РІСЂСѓС‡РЅСѓСЋ.', 'warn');
+      log('Не удалось подставить: ' + res.BrokenCount + ' — их нужно назначить вручную.', 'warn');
       res.Broken.forEach(b => log('   ' + b.Ref, 'err'));
     } else {
-      log('Р“РѕС‚РѕРІРѕ вЂ” РІСЃРµ СЃСЃС‹Р»РєРё СЂР°Р·СЂРµС€Р°СЋС‚СЃСЏ.', 'ok');
+      log('Готово — все ссылки разрешаются.', 'ok');
     }
     if(res.Normalization){
-      log(`РђРІС‚Рѕ-РЅРѕСЂРјР°Р»РёР·Р°С†РёСЏ: СЃСѓС‰РЅРѕСЃС‚РµР№ ${res.Normalization.EntitiesMoved || 0}, РѕС‚РґРµР»РµРЅРёР№ ${res.Normalization.SquadsRenamed || 0}, С‚РµС…РЅРёРєРё ${res.Normalization.VehiclesLinked || 0}`, 'ok');
+      log(`Авто-нормализация: сущностей ${res.Normalization.EntitiesMoved || 0}, отделений ${res.Normalization.SquadsRenamed || 0}, техники ${res.Normalization.VehiclesLinked || 0}`, 'ok');
     }
     if(res.Validation){
       const v = res.Validation;
       const statusTag = v.Valid ? 'OK' : (v.Errors > 0 ? 'FAIL' : 'WARN');
-      log(`РЎС‚Р°РЅРґР°СЂС‚ PodvalTvTMissions: [${statusTag}] РћС€РёР±РѕРє: ${v.Errors || 0}, РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёР№: ${v.Warnings || 0}`, v.Valid ? 'ok' : (v.Errors > 0 ? 'err' : 'warn'));
+      log(`Стандарт PodvalTvTMissions: [${statusTag}] Ошибок: ${v.Errors || 0}, Предупреждений: ${v.Warnings || 0}`, v.Valid ? 'ok' : (v.Errors > 0 ? 'err' : 'warn'));
       if(v.Issues && v.Issues.length > 0){
         v.Issues.slice(0, 8).forEach(iss => log(`   [${iss.Severity}] ${iss.RuleId}: ${iss.Message}`, iss.Severity === 'ERROR' ? 'err' : 'warn'));
-        if(v.Issues.length > 8) log(`   ... Рё РµС‰С‘ ${v.Issues.length - 8} СЃРѕРѕР±С‰РµРЅРёР№`, 'dim');
+        if(v.Issues.length > 8) log(`   ... и ещё ${v.Issues.length - 8} сообщений`, 'dim');
       }
     }
     if(res.ReportPath){
-      log('РћС‚С‡С‘С‚ РјРёРіСЂР°С†РёРё: ' + res.ReportPath, 'dim');
+      log('Отчёт миграции: ' + res.ReportPath, 'dim');
     }
     lastRestoredPath = res.DestMission || '';
     if($('#bOpenFolder') && lastRestoredPath) $('#bOpenFolder').style.display = '';
     if($('#bValidateNow') && lastRestoredPath) $('#bValidateNow').style.display = '';
-  }catch(e){ log('РћС€РёР±РєР° РєРѕРїРёСЂРѕРІР°РЅРёСЏ: ' + e.message, 'err'); }
+  }catch(e){ log('Ошибка копирования: ' + e.message, 'err'); }
   setBusy(false);
 };
 
@@ -896,7 +896,7 @@ if($('#bOpenFolder')){
     if(!lastRestoredPath) return;
     try {
       await api('/api/open-folder', {method:'POST', body:JSON.stringify({path: lastRestoredPath})});
-    } catch(e) { log('РќРµ СѓРґР°Р»РѕСЃСЊ РѕС‚РєСЂС‹С‚СЊ РїР°РїРєСѓ: ' + e.message, 'err'); }
+    } catch(e) { log('Не удалось открыть папку: ' + e.message, 'err'); }
   };
 }
 
@@ -905,17 +905,17 @@ if($('#bValidateNow')){
     if(!lastRestoredPath) return;
     setBusy(true);
     try {
-      log('Р—Р°РїСѓСЃРє РІР°Р»РёРґР°С†РёРё СЃС‚Р°РЅРґР°СЂС‚Р° РґР»СЏ: ' + lastRestoredPath, 'dim');
+      log('Запуск валидации стандарта для: ' + lastRestoredPath, 'dim');
       const res = await api('/api/validate', {method:'POST', body:JSON.stringify({missionPath: lastRestoredPath})});
       if(res && res.report){
         const v = res.report;
         const statusTag = v.Valid ? 'OK' : (v.Errors > 0 ? 'FAIL' : 'WARN');
-        log(`РЎС‚Р°РЅРґР°СЂС‚ PodvalTvTMissions: [${statusTag}] РћС€РёР±РѕРє: ${v.Errors || 0}, РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёР№: ${v.Warnings || 0}`, v.Valid ? 'ok' : (v.Errors > 0 ? 'err' : 'warn'));
+        log(`Стандарт PodvalTvTMissions: [${statusTag}] Ошибок: ${v.Errors || 0}, Предупреждений: ${v.Warnings || 0}`, v.Valid ? 'ok' : (v.Errors > 0 ? 'err' : 'warn'));
         if(v.Issues && v.Issues.length > 0){
           v.Issues.forEach(iss => log(`   [${iss.Severity}] ${iss.RuleId}: ${iss.Message}`, iss.Severity === 'ERROR' ? 'err' : 'warn'));
         }
       }
-    } catch(e) { log('РћС€РёР±РєР° РІР°Р»РёРґР°С†РёРё: ' + e.message, 'err'); }
+    } catch(e) { log('Ошибка валидации: ' + e.message, 'err'); }
     setBusy(false);
   };
 }

@@ -334,8 +334,8 @@
   <div class="btns">
     <button class="sm" onclick="openAddModal()">+ Добавить</button>
     <button class="sm" onclick="openMetaModal()">✎ Описание</button>
-    <button class="sm ghost" onclick="exportCsv()" title="Export remap database to CSV">&#1069;&#1082;&#1089;&#1087;&#1086;&#1088;&#1090; CSV</button>
-    <button class="sm ghost" onclick="triggerImportCsv()" title="Import remap replacements from CSV">&#1048;&#1084;&#1087;&#1086;&#1088;&#1090; CSV</button>
+    <button class="sm ghost" onclick="exportCsv()" title="Экспортировать базу ремапа в файл CSV">Экспорт CSV</button>
+    <button class="sm ghost" onclick="triggerImportCsv()" title="Импортировать замены из файла CSV">Импорт CSV</button>
     <input type="file" id="fileCsvInput" accept=".csv,.tsv" style="display:none" onchange="handleCsvFile(this)" />
     <button id="btnBulkMove" class="sm ghost" style="display:none" onclick="openBulkMoveModal()">Переместить (<span id="selectedCount">0</span>)</button>
     <button id="btnBulkDelete" class="sm danger sm" style="display:none" onclick="bulkDeleteSelected()">Удалить (<span id="selectedDelCount">0</span>)</button>
@@ -1901,21 +1901,21 @@ async function handleCsvFile(input) {
   const reader = new FileReader();
   reader.onload = async (e) => {
     const csvContent = e.target.result;
-    if (!confirm('РРјРїРѕСЂС‚РёСЂРѕРІР°С‚СЊ С„Р°Р№Р» \"' + file.name + '\" РІ Р±Р°Р·Сѓ Р·Р°РјРµРЅ?')) return;
+    if (!confirm('Импортировать файл "' + file.name + '" в базу замен?')) return;
     try {
       const res = await api('/api/table/import', { method: 'POST', body: JSON.stringify({ csv: csvContent }) });
       if (res && res.ok) {
-        let msg = 'РРјРїРѕСЂС‚ Р·Р°РІРµСЂС€С‘РЅ: РґРѕР±Р°РІР»РµРЅРѕ ' + (res.added || 0) + ', РѕР±РЅРѕРІР»РµРЅРѕ ' + (res.updated || 0) + '.';
+        let msg = 'Импорт завершён: добавлено ' + (res.added || 0) + ', обновлено ' + (res.updated || 0) + '.';
         if (res.errors && res.errors.length > 0) {
-          msg += '\nРџСЂРѕРїСѓС‰РµРЅРѕ СЃ РѕС€РёР±РєР°РјРё: ' + res.errors.length + '\n' + res.errors.slice(0, 5).join('\n');
+          msg += '\nПропущено с ошибками: ' + res.errors.length + '\n' + res.errors.slice(0, 5).join('\n');
         }
         alert(msg);
         await loadAllData();
       } else {
-        alert('РћС€РёР±РєР° РёРјРїРѕСЂС‚Р°: ' + (res.error || 'РЅРµРёР·РІРµСЃС‚РЅР°СЏ РѕС€РёР±РєР°'));
+        alert('Ошибка импорта: ' + (res.error || 'неизвестная ошибка'));
       }
     } catch(err) {
-      alert('РћС€РёР±РєР° РїСЂРё РѕС‚РїСЂР°РІРєРµ CSV: ' + err.message);
+      alert('Ошибка при отправке CSV: ' + err.message);
     }
   };
   reader.readAsText(file, 'utf-8');
