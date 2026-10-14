@@ -324,7 +324,7 @@ function Handle-Api($ctx) {
                 $normScript = Join-Path $ScriptDir '..\Normalize-MissionLayers.ps1'
                 if (Test-Path -LiteralPath $normScript) {
                     try {
-                        $normSummary = & $normScript -MissionDir $targetPath -Force
+                        $normSummary = & $normScript -MissionPath $targetPath -PassThru
                         if ($normSummary.NormalizedMission) {
                             $targetPath = $normSummary.NormalizedMission
                             $res.DestMission = $targetPath
@@ -340,7 +340,7 @@ function Handle-Api($ctx) {
                 $valScript = Join-Path $ScriptDir '..\Test-MissionStandard.ps1'
                 if (Test-Path -LiteralPath $valScript) {
                     try {
-                        $valReport = & $valScript -MissionPath $targetPath -ReportJson
+                        $valReport = & $valScript -MissionPath $targetPath -PassThru
                     } catch {
                         Write-Warning ("Validation failed: {0}" -f $_.Exception.Message)
                     }
@@ -436,7 +436,7 @@ function Handle-Api($ctx) {
                 return
             }
             try {
-                $report = & $valScript -MissionPath $p -ReportJson
+                $report = & $valScript -MissionPath $p -PassThru
                 Send-Json $ctx ([pscustomobject]@{ ok=$true; report=$report })
             } catch {
                 Send-Json $ctx ([pscustomobject]@{ ok=$false; error=$_.Exception.Message }) 500
@@ -456,7 +456,7 @@ function Handle-Api($ctx) {
                 return
             }
             try {
-                $normRes = & $normScript -MissionDir $p -Force
+                $normRes = & $normScript -MissionPath $p -PassThru
                 Send-Json $ctx ([pscustomobject]@{ ok=$true; summary=$normRes })
             } catch {
                 Send-Json $ctx ([pscustomobject]@{ ok=$false; error=$_.Exception.Message }) 500

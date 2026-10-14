@@ -30,6 +30,7 @@ param(
     [string]$ConfigPath,
     [switch]$RefreshIndex,
     [switch]$WriteStubs,
+    [switch]$Normalize,
     [switch]$Force
 )
 
@@ -90,5 +91,14 @@ if ($res.BrokenCount -gt 0) {
     }
 } else {
     Write-Host 'OK: no unresolved broken references remain.' -ForegroundColor Green
+}
+
+if ($Normalize) {
+    $normScript = Join-Path $PSScriptRoot 'Normalize-MissionLayers.ps1'
+    if (Test-Path -LiteralPath $normScript) {
+        Write-Host ''
+        Write-Host 'Running mission layers normalization...' -ForegroundColor Cyan
+        & $normScript -MissionPath $res.DestMission
+    }
 }
 Write-Host '=======================================' -ForegroundColor Cyan

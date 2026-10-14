@@ -33,6 +33,7 @@
 [CmdletBinding()]
 param(
     [Parameter(Mandatory, Position = 0)]
+    [Alias('MissionDir')]
     [string]$MissionPath,
 
     [string]$ReportJson,
@@ -54,7 +55,9 @@ function New-Issue {
     )
     [pscustomobject]@{
         Level          = $Level
+        Severity       = $Level
         Category       = $Category
+        RuleId         = $Category
         File           = $File
         Line           = $Line
         Message        = $Message
@@ -361,13 +364,18 @@ function Test-MissionStructure {
             }
 
             if ($line -match 'm_sImageSet\s+.*PS_Atlas_x64\.imageset') {
-                $windowEnd = [Math]::Min($mLines.Length - 1, $i + 20)
+                $windowEnd = [Math]::Min($mLines.Length - 1, $i + 25)
                 $hasHideState = $false
                 for ($k = $i; $k -le $windowEnd; $k++) {
-                    if ($mLines[$k] -match 'm_aHideOnGameModeStates\s*\{\s*(GAME|1)') {
+                    if ($mLines[$k] -match 'm_aHideOnGameModeStates\s*\{\s*(GAME|1|\d+)') {
                         $hasHideState = $true; break
                     }
-                    if ($mLines[$k] -match '^\s*\}\s*$') { break }
+                    if ($mLines[$k] -match 'm_aHideOnGameModeStates' -and $k + 1 -le $windowEnd -and $mLines[$k + 1] -match '^\s*(GAME|1|\d+)\s*$') {
+                        $hasHideState = $true; break
+                    }
+                    if ($k -gt $i -and ($mLines[$k] -match 'm_sImageSet\b' -or $mLines[$k] -match '^\s*(\$grp\s+)?[A-Za-z0-9_]+\s*:\s*"')) {
+                        break
+                    }
                 }
                 if (-not $hasHideState) {
                     $issues.Add((New-Issue -Level 'WARNING' -Category 'Markers' -File $mf.FullName -Line $lineNum `
@@ -436,6 +444,7 @@ $isPassed = ($errorCount -eq 0 -and (-not $Strict -or $warningCount -eq 0))
 if ($PassThru) {
     return [pscustomobject]@{
         Passed   = $isPassed
+        Valid    = $isPassed
         Errors   = $errorCount
         Warnings = $warningCount
         Issues   = $findings

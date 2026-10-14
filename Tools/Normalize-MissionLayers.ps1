@@ -43,6 +43,7 @@
 [CmdletBinding()]
 param(
     [Parameter(Mandatory, Position = 0)]
+    [Alias('MissionDir')]
     [string]$MissionPath,
 
     [switch]$SkipRename,
@@ -59,6 +60,8 @@ function Read-FileText([string]$Path) {
     return [System.IO.File]::ReadAllText($Path, [System.Text.Encoding]::UTF8)
 }
 
+$script:Utf8NoBom = New-Object System.Text.UTF8Encoding($false)
+
 function Write-FileUtf8([string]$Path, [string]$Content) {
     if ($DryRun) {
         Write-Verbose "[DryRun] Запись файла: $Path"
@@ -68,7 +71,7 @@ function Write-FileUtf8([string]$Path, [string]$Content) {
     if (-not (Test-Path -LiteralPath $parent -PathType Container)) {
         New-Item -ItemType Directory -Path $parent -Force | Out-Null
     }
-    [System.IO.File]::WriteAllText($Path, $Content, [System.Text.Encoding]::UTF8)
+    [System.IO.File]::WriteAllText($Path, $Content, $script:Utf8NoBom)
 }
 
 # ------------------------------------------------------------------ Парсер Enfusion синтаксиса
@@ -81,7 +84,7 @@ function Parse-EnfusionTopBlocks([string]$text) {
     $inQuote = $false
     $escape = $false
     $depth = 0
-    $blockStart = -1
+    $topStart = -1
 
     while ($i -lt $len) {
         $ch = $text[$i]
@@ -96,35 +99,40 @@ function Parse-EnfusionTopBlocks([string]$text) {
 
         if ($ch -eq '"') {
             $inQuote = $true
+            if ($depth -eq 0 -and $topStart -lt 0) {
+                $topStart = $i
+            }
             $i++
             continue
         }
 
-        # Комментарии строк //
+        # Однострочные комментарии //
         if ($ch -eq '/' -and ($i + 1 -lt $len) -and $text[$i + 1] -eq '/') {
             while ($i -lt $len -and $text[$i] -ne "`n") { $i++ }
+            $i++
             continue
         }
 
+        # Фиксируем начало верхнеуровневого блока по первому непробельному символу
+        if ($depth -eq 0 -and $topStart -lt 0) {
+            if (-not [char]::IsWhiteSpace($ch)) {
+                $topStart = $i
+            }
+        }
+
         if ($ch -eq '{') {
-            if ($depth -eq 0) {
-                if ($blockStart -lt 0) { $blockStart = $i }
+            if ($depth -eq 0 -and $topStart -lt 0) {
+                $topStart = $i
             }
             $depth++
         } elseif ($ch -eq '}') {
             $depth--
-            if ($depth -eq 0) {
-                # Захватываем от начала заголовка (до первой '{')
-                # blockStart - это индекс '{'. Найдем реальное начало блока до нее.
-                $hdrStart = $blockStart
-                while ($hdrStart -gt 0 -and $text[$hdrStart - 1] -notin @("`n", "`r", '}')) {
-                    $hdrStart--
-                }
-                $blockContent = $text.Substring($hdrStart, $i - $hdrStart + 1).Trim()
+            if ($depth -eq 0 -and $topStart -ge 0) {
+                $blockContent = $text.Substring($topStart, $i - $topStart + 1).Trim()
                 if (-not [string]::IsNullOrWhiteSpace($blockContent)) {
                     $blocks.Add($blockContent)
                 }
-                $blockStart = -1
+                $topStart = -1
             }
         }
         $i++
@@ -196,51 +204,63 @@ function Get-EntityName([string]$b) {
     if ($b -match '^\s*(?:\$grp\s+)?[A-Za-z0-9_]+\s+([A-Za-z0-9_]+)\s*:\s*"') {
         return $Matches[1]
     }
+    if ($b -match '^\s*\$grp\s+[A-Za-z0-9_]+\s*:\s*"[^"]*"\s*\{\s*([A-Za-z0-9_]+)\s*\{') {
+        $c = $Matches[1]
+        if ($c -notmatch '^m_' -and $c -notin @('components', 'coords', 'angles', 'm_aUnitPrefabSlots', 'MultiSlots', 'Points', 'EnvironmentProbeEntity')) {
+            return $c
+        }
+    }
     $lines = $b -split "`r?`n"
     foreach ($line in $lines) {
-        if ($line -match '^\s*([A-Za-z0-9_]+)\s*\{') {
+        $t = $line.Trim()
+        if (-not $t -or $t.StartsWith('//')) { continue }
+        if ($t -match '^([A-Za-z0-9_]+)\s*\{') {
             $candidate = $Matches[1]
-            if ($candidate -notin @('components', 'coords', 'angles', 'm_aUnitPrefabSlots', 'MultiSlots', 'Points')) {
+            if ($candidate -notmatch '^m_' -and $candidate -notin @('components', 'coords', 'angles', 'm_aUnitPrefabSlots', 'MultiSlots', 'Points', 'EnvironmentProbeEntity', 'Entity')) {
                 return $candidate
             }
         }
+        break
     }
     return ''
 }
 
 # ------------------------------------------------------------------ Определение категории и фракции
 function Classify-Entity([string]$block, [string]$sourceFile) {
-    if ($block -match '(?i)PS_MissionDescription|PrefabsEditable/MissionDescription') {
+    $src = $sourceFile.ToLowerInvariant()
+    $blk = $block.ToLowerInvariant()
+
+    if ($blk -match 'ps_missiondescription|prefabs(editable)?/missiondescription' -or $src -match 'desc') {
         return 'DESCRIPTION'
     }
-    if ($block -match '(?i)PS_Objective|Prefabs/Objective/') {
+    if ($blk -match 'ps_objective|prefabs(editable)?/objective/') {
         return 'OBJECTIVE'
     }
-    if ($block -match '(?i)SCR_AIWorld|PerceptionManager|PS_GameModeCoop|PS_GameMode_Lobby|SCR_MapEntity') {
+    if ($blk -match 'scr_aiworld|perceptionmanager|ps_gamemodecoop|ps_gamemode_lobby|scr_mapentity' -or $src -match 'default') {
         return 'GAMEMODE'
     }
-    if ($block -match '(?i)DRG_MissionEndTimer|DRG_CriticalLoss|GUB_ZoneControl') {
+    if ($blk -match 'drg_missionendtimer|drg_criticalloss|gub_zonecontrol' -or $src -match 'logic') {
         return 'GAMELOGIC'
     }
-    if ($block -match '(?i)SCR_FlagComponent|E_FlagPole') {
+    if ($blk -match 'scr_flagcomponent|e_flagpole' -or ($src -match 'flag' -and $blk -notmatch 'ps_objective')) {
         return 'FLAGS'
     }
-    if ($block -match '(?i)PolylineShapeEntity|PolyZone_Border|PS_PolyZone') {
+    if ($blk -match 'polylineshapeentity|polyzone_border|ps_polyzone' -or $src -match 'zone') {
         return 'ZONES'
     }
-    if ($block -match '(?i)SCR_EditorRestrictionZoneEntity|Prefabs/RestrictionZone') {
+    if ($blk -match 'scr_editorrestrictionzoneentity|prefabs(editable)?/restrictionzone' -or $src -match 'friz|freeze') {
         return 'FREEZ'
     }
-    if ($block -match '(?i)PS_ManualMarker|PrefabsEditable/Markers/') {
+    if ($blk -match 'ps_manualmarker|prefabs(editable)?/markers/' -or $src -match 'marker') {
         return 'MARKER'
     }
-    if ($block -match '(?i)(Tripod|NSV|Kord|AGS|TOW|Browning|DShKM|SPG9|Mortar|M2HB_Mini|Static)') {
+    if ($blk -match '(?i)(tripod|nsv|kord|ags|tow|browning|dshkm|spg9|mortar|m2hb_mini|static)') {
         return 'PROP'
     }
-    if ($block -match '^\s*(\$grp\s+)?Vehicle\s+' -or $block -match 'Prefabs/Vehicles/') {
+    if ($blk -match '^\s*(\$grp\s+)?vehicle\b' -or $blk -match 'prefabs/vehicles/') {
         return 'VEHICLE'
     }
-    if ($block -match '^\s*(\$grp\s+)?SCR_AIGroup\s+' -or $block -match 'Prefabs/Groups/') {
+    if ($blk -match '^\s*(\$grp\s+)?scr_aigroup\b' -or $blk -match 'prefabs/groups/') {
         return 'INFANTRY'
     }
     return 'PROP'
@@ -250,21 +270,44 @@ function Determine-Faction([string]$block, [string]$sourceFile) {
     $src = $sourceFile.ToLowerInvariant()
     $blk = $block.ToLowerInvariant()
 
-    # Сначала по содержимому префабов
-    if ($blk -match 'groupflagsblufor|prefabs/groups/blufor|rhs_usaf|ses_cdf|/characters/factions/blufor|prefabs/vehicles/wheeled/m998|/us/') {
-        return 'BLUFOR'
-    }
-    if ($blk -match 'groupflagsopfor|prefabs/groups/opfor|rhs_afrf|ses_chdkz|ses_tka|/characters/factions/opfor|btr70|ural|k17|/ussr/') {
-        return 'OPFOR'
-    }
-    if ($blk -match 'groupflagsindfor|prefabs/groups/indfor|ses_tkr|ses_napa|rhs_ion|/characters/factions/indfor|/fia/') {
-        return 'INDFOR'
+    # Очищаем от m_aVisibleForFactions { ... }, чтобы список видимости обеих сторон не влиял на классификацию
+    $cleanBlk = $blk -replace '(?s)m_avisibleforfactions\s*\{[^}]*\}', ''
+
+    # 1. По изображениям шевронов (GroupFlags)
+    if ($cleanBlk -match 'groupflagsblufor') { return 'BLUFOR' }
+    if ($cleanBlk -match 'groupflagsopfor')  { return 'OPFOR' }
+    if ($cleanBlk -match 'groupflagsindfor') { return 'INDFOR' }
+
+    # 2. По префиксам маркеров / сущностей
+    if ($cleanBlk -match '\brhs_usaf_g_|\busaf_g_|\bcdf_g_|\bblufor_g_') { return 'BLUFOR' }
+    if ($cleanBlk -match '\brhs_afrf_g_|\bafrf_g_|\bru_g_|\bchdkz_g_|\btka_g_|\bopfor_g_') { return 'OPFOR' }
+    if ($cleanBlk -match '\brhs_ion_g_|\btkr_g_|\bnapa_g_|\bfia_g_|\bindfor_g_') { return 'INDFOR' }
+
+    # 3. По префабам групп и персонажей
+    if ($cleanBlk -match 'prefabs/groups/blufor|/characters/factions/blufor|rhs_usaf|ses_cdf') { return 'BLUFOR' }
+    if ($cleanBlk -match 'prefabs/groups/opfor|/characters/factions/opfor|rhs_afrf|ses_chdkz|ses_tka') { return 'OPFOR' }
+    if ($cleanBlk -match 'prefabs/groups/indfor|/characters/factions/indfor|ses_tkr|ses_napa|rhs_ion') { return 'INDFOR' }
+
+    # 4. По префабам техники
+    if ($cleanBlk -match 'lav25|m998|m1025|m113|bradley|abrams|hmmwv|uh60|ah1|ch47') { return 'BLUFOR' }
+    if ($cleanBlk -match 'btr70|btr80|btr90|tigr|k17|k4386|bmp|t72|t80|t90|ural|uaz|mi8|mi24') { return 'OPFOR' }
+
+    # 5. По имени файла-источника (с учётом всех вариантов именования)
+    if ($src -match '(?i)(blufor|usaf|cdf|\bus\b|markerus|usmarker)') { return 'BLUFOR' }
+    if ($src -match '(?i)(opfor|afrf|chdkz|tka|\brus\b|\brussia\b|markerrus|rusmarker)') { return 'OPFOR' }
+    if ($src -match '(?i)(indfor|fia|tkr|napa|ion)') { return 'INDFOR' }
+
+    # 6. По цвету маркера (красный -> OPFOR, синий -> BLUFOR)
+    if ($cleanBlk -match 'm_markercolor\s+(0\.\d+)\s+(0\.\d+)\s+([01](\.\d+)?)') {
+        $red = [double]$Matches[1]
+        $blue = [double]$Matches[3]
+        if ($red -gt 0.4 -and $blue -lt 0.2) { return 'OPFOR' }
+        if ($blue -gt 0.4 -and $red -lt 0.2) { return 'BLUFOR' }
     }
 
-    # Затем по имени файла источника
-    if ($src -match 'blufor|\busaf?\b|\bcdf\b') { return 'BLUFOR' }
-    if ($src -match 'opfor|\brusa?\b|\bafrf\b|\bchdkz\b|\btka\b') { return 'OPFOR' }
-    if ($src -match 'indfor|\bfia\b|\btkr\b|\bnapa\b|\bion\b') { return 'INDFOR' }
+    # 7. По позывным в описании маркера
+    if ($cleanBlk -match 'kompas|aktiv|buran|gruspawn') { return 'OPFOR' }
+    if ($cleanBlk -match 'blazer|atlas') { return 'BLUFOR' }
 
     return 'OPFOR'
 }
@@ -351,30 +394,60 @@ function Invoke-MissionNormalization {
             if (-not $DryRun) {
                 $oldEnt = Join-Path $missionDir "$missionName.ent"
                 $newEnt = Join-Path $missionDir "$targetName.ent"
-                if (Test-Path -LiteralPath $oldEnt) { Rename-Item -LiteralPath $oldEnt -NewName "$targetName.ent" -Force }
+                if (Test-Path -LiteralPath $oldEnt) {
+                    if ($oldEnt -ne $newEnt -and (Test-Path -LiteralPath $newEnt)) {
+                        Remove-Item -LiteralPath $newEnt -Force
+                    }
+                    Rename-Item -LiteralPath $oldEnt -NewName "$targetName.ent" -Force
+                }
 
                 $oldMeta = Join-Path $missionDir "$missionName.ent.meta"
                 $newMeta = Join-Path $missionDir "$targetName.ent.meta"
                 if (Test-Path -LiteralPath $oldMeta) {
-                    Rename-Item -LiteralPath $oldMeta -NewName "$targetName.ent.meta" -Force
-                    $metaTxt = Read-FileText $newMeta
-                    if ($metaTxt -match 'Name\s+"\{[0-9A-Fa-f]{16}\}([^"]+)"') {
-                        $oldRes = $Matches[1]
-                        $newRes = $oldRes -replace [regex]::Escape("$missionName.ent"), "$targetName.ent"
-                        $metaTxt = $metaTxt -replace [regex]::Escape($oldRes), $newRes
-                        Write-FileUtf8 $newMeta $metaTxt
+                    if ($oldMeta -ne $newMeta -and (Test-Path -LiteralPath $newMeta)) {
+                        Remove-Item -LiteralPath $newMeta -Force
                     }
+                    Rename-Item -LiteralPath $oldMeta -NewName "$targetName.ent.meta" -Force
                 }
 
                 $oldLayers = Join-Path $missionDir "${missionName}_Layers"
                 $newLayers = Join-Path $missionDir "${targetName}_Layers"
                 if (Test-Path -LiteralPath $oldLayers) {
+                    if ($oldLayers -ne $newLayers -and (Test-Path -LiteralPath $newLayers)) {
+                        Remove-Item -LiteralPath $newLayers -Recurse -Force
+                    }
                     Rename-Item -LiteralPath $oldLayers -NewName "${targetName}_Layers" -Force
                 }
 
                 $newMissionDir = Join-Path $parentDir $targetName
+                if ($newMissionDir -ne $missionDir -and (Test-Path -LiteralPath $newMissionDir)) {
+                    Write-Host "Удаление существующей целевой папки перед переименованием: $newMissionDir" -ForegroundColor Yellow
+                    Remove-Item -LiteralPath $newMissionDir -Recurse -Force
+                }
                 Rename-Item -LiteralPath $missionDir -NewName $targetName -Force
                 $missionDir = $newMissionDir
+            }
+        }
+    }
+
+    # Синхронизация пути в .ent.meta с реальной директорией мира
+    $currentMeta = Join-Path $missionDir "$targetName.ent.meta"
+    if (-not $DryRun -and (Test-Path -LiteralPath $currentMeta)) {
+        $metaTxt = Read-FileText $currentMeta
+        if ($metaTxt -match 'Name\s+"\{([0-9A-Fa-f]{16})\}([^"]+)"') {
+            $guid = $Matches[1]
+            $oldRes = $Matches[2]
+            $worldsIdx = $missionDir.IndexOf('\Worlds\', [System.StringComparison]::OrdinalIgnoreCase)
+            if ($worldsIdx -ge 0) {
+                $relFromWorlds = $missionDir.Substring($worldsIdx + 1).Replace('\', '/')
+                $newRes = "$relFromWorlds/$targetName.ent"
+            } else {
+                $newRes = $oldRes -replace [regex]::Escape("$missionName.ent"), "$targetName.ent"
+            }
+            if ($oldRes -ne $newRes) {
+                $metaTxt = $metaTxt -replace [regex]::Escape($oldRes), $newRes
+                Write-FileUtf8 $currentMeta $metaTxt
+                Write-Host "Обновлён ResourcePath в .ent.meta: $newRes" -ForegroundColor DarkCyan
             }
         }
     }
@@ -390,12 +463,30 @@ function Invoke-MissionNormalization {
         }
     }
 
-    # 2. Сбор всех существующих .layer файлов
-    $allLayerFiles = if (Test-Path -LiteralPath $layersDir -PathType Container) {
+    $standardRootLayers = @(
+        '_0_DESCRIPTION.layer',
+        '_0_OBJECTIVES.layer',
+        '_1_GAME_MODE.layer',
+        '_1_GAME_LOGIC.layer',
+        '_2_FLAGS.layer',
+        '_2_PROPS.layer',
+        '_3_ZONES.layer'
+    )
+
+    # 2. Сбор существующих .layer файлов. Если есть устаревшие слои - приоритетно обрабатываем их,
+    # избегая дублирования с уже частично сгенерированными новыми слоями.
+    $allExistingFiles = if (Test-Path -LiteralPath $layersDir -PathType Container) {
         @(Get-ChildItem -LiteralPath $layersDir -Recurse -Filter "*.layer" -File -ErrorAction SilentlyContinue)
     } else {
         @()
     }
+
+    $legacyLayerFiles = @($allExistingFiles | Where-Object {
+        $rel = $_.FullName.Substring($layersDir.Length).TrimStart('\', '/')
+        ($_.DirectoryName -eq $layersDir -and $_.Name -notin $standardRootLayers) -or $rel -match '^(?i)(atack|def)\\'
+    })
+
+    $allLayerFiles = if ($legacyLayerFiles.Count -gt 0) { $legacyLayerFiles } else { $allExistingFiles }
     Write-Host "Обнаружено файлов слоёв для анализа: $($allLayerFiles.Count)" -ForegroundColor Gray
 
     $entitiesByLayer = @{
@@ -464,9 +555,15 @@ function Invoke-MissionNormalization {
                         $restrictionZones.Add([pscustomobject]@{ Block = $rebuilt; Coords = $coords })
                     }
                 } elseif ($cat -eq 'DESCRIPTION') {
-                    $entitiesByLayer['DESCRIPTION'].Add($top)
+                    foreach ($sub in $spl.SubEntities) {
+                        $entitiesByLayer['DESCRIPTION'].Add($sub)
+                        $report.EntitiesMoved++
+                    }
                 } elseif ($cat -eq 'OBJECTIVE') {
-                    $entitiesByLayer['OBJECTIVE'].Add($top)
+                    foreach ($sub in $spl.SubEntities) {
+                        $entitiesByLayer['OBJECTIVE'].Add($sub)
+                        $report.EntitiesMoved++
+                    }
                 } elseif ($cat -eq 'GAMEMODE') {
                     $entitiesByLayer['GAMEMODE'].Add($top)
                 } elseif ($cat -eq 'GAMELOGIC') {
@@ -547,10 +644,27 @@ function Invoke-MissionNormalization {
                 $usedCallsigns[$newName] = 1
             }
 
-            if ($oldName -and $oldName -ne $newName) {
+            if ($oldName) {
                 $groupRenameMap[$oldName] = $newName
-                $uBlock = $uBlock -replace "(?m)^\s*$([regex]::Escape($oldName))\s*\{", " $newName {"
-                $report.GroupsRenamed++
+                if ($oldName -ne $newName) {
+                    if ($uBlock -match "(?m)^(\s*(?:\$grp\s+)?[A-Za-z0-9_]+\s+)$([regex]::Escape($oldName))(\s*:\s*`")") {
+                        $uBlock = $uBlock -replace "(?m)^(\s*(?:\$grp\s+)?[A-Za-z0-9_]+\s+)$([regex]::Escape($oldName))(\s*:\s*`")", "`$1$newName`$2"
+                        $report.GroupsRenamed++
+                    } elseif ($uBlock -match "(?m)^\s*$([regex]::Escape($oldName))\s*\{") {
+                        $uBlock = $uBlock -replace "(?m)^\s*$([regex]::Escape($oldName))\s*\{", " $newName {"
+                        $report.GroupsRenamed++
+                    }
+                }
+            } else {
+                # Именование анонимных экземпляров внутри $grp
+                if ($uBlock -match '(?m)^\s*\{\s*$') {
+                    $uBlock = $uBlock -replace '(?m)^\s*\{\s*$', " $newName {"
+                    $report.GroupsRenamed++
+                } elseif ($uBlock -match '^\s*SCR_AIGroup\s*:\s*"') {
+                    $uBlock = $uBlock -replace '^\s*SCR_AIGroup\s*:\s*"', "SCR_AIGroup $newName : `""
+                    $report.GroupsRenamed++
+                }
+                $groupRenameMap[$newName] = $newName
             }
 
             if ($coords) {
@@ -624,6 +738,8 @@ function Invoke-MissionNormalization {
                 if ($oldVehName) {
                     $vBlock = $vBlock -replace "(?m)^\s*$([regex]::Escape($oldVehName))\s*\{", " $newVehName {"
                     $vBlock = $vBlock -replace "(?m)^\s*Vehicle\s+$([regex]::Escape($oldVehName))\s*:", "Vehicle $newVehName :"
+                } else {
+                    $vBlock = $vBlock -replace '(?m)^\s*Vehicle\s*:\s*"', "Vehicle $newVehName : `""
                 }
 
                 if ($vBlock -match 'm_sAttachmentGroupName\s+"[^"]*"') {
@@ -659,7 +775,10 @@ function Invoke-MissionNormalization {
                 }
 
                 if ($fixed -match 'm_sQuadName\s+"undefined"') {
-                    $quad = if ($fixed -match '(?i)hq|command|000|010') { 'commander' } else { 'infantry' }
+                    $quad = if ($fixed -match '(?i)hq|command|000|010|ks') { 'commander' }
+                            elseif ($fixed -match '(?i)recon|spn|sniper') { 'recon' }
+                            elseif ($fixed -match '(?i)crew|pilot|lav|btr') { 'motorized' }
+                            else { 'infantry' }
                     $fixed = $fixed -replace 'm_sQuadName\s+"undefined"', "m_sQuadName `"$quad`""
                     $report.MarkersFixed++
                 }
@@ -688,8 +807,10 @@ function Invoke-MissionNormalization {
             }
 
             if ($fixed -match 'PS_Atlas_x64\.imageset') {
-                if ($fixed -notmatch 'm_aHideOnGameModeStates') {
-                    $fixed = $fixed -replace '(?m)(^\s*m_sImageSet\s+.*$)', "`$1`n  m_aHideOnGameModeStates { GAME }"
+                if ($fixed -match '(?s)m_aHideOnGameModeStates\s*\{[^}]*\}') {
+                    $fixed = $fixed -replace '(?s)m_aHideOnGameModeStates\s*\{[^}]*\}', 'm_aHideOnGameModeStates { 1 }'
+                } else {
+                    $fixed = $fixed -replace '(?m)(^\s*m_sImageSet\s+.*$)', "`$1`n  m_aHideOnGameModeStates { 1 }"
                     $report.MarkersFixed++
                 }
             }
@@ -726,22 +847,72 @@ function Invoke-MissionNormalization {
 
     # 8. Нормализация системных слоёв
     $normDesc = New-Object System.Collections.Generic.List[string]
+    $descOrder = 0
     foreach ($dBlock in $entitiesByLayer['DESCRIPTION']) {
         $fixedDesc = $dBlock
-        if ($fixedDesc -notmatch 'm_sDescriptionLayout') {
-            $fixedDesc = $fixedDesc -replace '(?s)\}\s*$', " m_sDescriptionLayout `"{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout`"`n}"
-        } else {
-            $fixedDesc = $fixedDesc -replace 'm_sDescriptionLayout\s+"[^"]*"', 'm_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"'
+
+        $descName = "_$($descOrder)_DETAILS"
+        if ($fixedDesc -match '(?i)m_sTitle\s+"[^"]*(описание|about|description)[^"]*"') {
+            $descName = "_0_ABOUT"
+        } elseif ($fixedDesc -match '(?i)m_sTitle\s+"[^"]*(правил|условн|rule)[^"]*"') {
+            $descName = "_1_RULES"
+        } elseif ($fixedDesc -match '(?i)m_sTitle\s+"[^"]*(цел|задач|objective)[^"]*"') {
+            $descName = "_2_OBJECTIVES"
         }
+
+        $existingName = Get-EntityName $fixedDesc
+        if ($existingName) {
+            $fixedDesc = $fixedDesc -replace "(?m)^\s*$([regex]::Escape($existingName))\s*\{", " $descName {"
+        } else {
+            $fixedDesc = ([regex]'(?m)^\s*\{\s*$').Replace($fixedDesc, " $descName {", 1)
+        }
+
+        if ($fixedDesc -match 'm_sDescriptionLayout\s+"[^"]*"') {
+            $fixedDesc = $fixedDesc -replace 'm_sDescriptionLayout\s+"[^"]*"', 'm_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"'
+        } else {
+            $fixedDesc = $fixedDesc -replace '(?s)\}\s*$', "  m_sDescriptionLayout `"{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout`"`n}"
+        }
+
+        if ($fixedDesc -match 'm_iOrder\s+\d+') {
+            $fixedDesc = $fixedDesc -replace 'm_iOrder\s+\d+', "m_iOrder $descOrder"
+        } else {
+            $fixedDesc = $fixedDesc -replace '(?s)\}\s*$', "  m_iOrder $descOrder`n}"
+        }
+
         if ($fixedDesc -notmatch 'm_bEmptyFactionVisibility') {
-            $fixedDesc = $fixedDesc -replace '(?s)\}\s*$', " m_bEmptyFactionVisibility 1`n}"
+            $fixedDesc = $fixedDesc -replace '(?s)\}\s*$', "  m_bEmptyFactionVisibility 1`n}"
         }
         if ($fixedDesc -notmatch 'm_bShowForAnyFaction') {
-            $fixedDesc = $fixedDesc -replace '(?s)\}\s*$', " m_bShowForAnyFaction 1`n}"
+            $fixedDesc = $fixedDesc -replace '(?s)\}\s*$', "  m_bShowForAnyFaction 1`n}"
         }
+
         $normDesc.Add($fixedDesc)
+        $descOrder++
     }
-    $entitiesByLayer['DESCRIPTION'] = $normDesc
+
+    $normObj = New-Object System.Collections.Generic.List[string]
+    $objIdx = 1
+    foreach ($oBlock in $entitiesByLayer['OBJECTIVE']) {
+        $fixedObj = $oBlock
+        $existingName = Get-EntityName $fixedObj
+        $objName = if ($fixedObj -match 'm_sFactionKey\s+"([^"]+)"') {
+            $fk = switch -regex ($Matches[1]) {
+                'USAF|BLUFOR|CDF' { 'USAF' }
+                'AFRF|OPFOR|ChDKZ|TKA' { 'RU' }
+                default { 'OBJ' }
+            }
+            "${fk}_OBJ_$objIdx"
+        } else {
+            "OBJ_$objIdx"
+        }
+        if ($existingName) {
+            $fixedObj = $fixedObj -replace "(?m)^\s*$([regex]::Escape($existingName))\s*\{", " $objName {"
+        } else {
+            $fixedObj = ([regex]'(?m)^\s*\{\s*$').Replace($fixedObj, " $objName {", 1)
+        }
+        $normObj.Add($fixedObj)
+        $objIdx++
+    }
 
     $normGM = New-Object System.Collections.Generic.List[string]
     $hasAIWorld = $false
@@ -775,9 +946,17 @@ function Invoke-MissionNormalization {
     $entitiesByLayer['GAMEMODE'] = $normGM
 
     # 9. Запись целевых слоёв на диск
+    $descLayerContent = if ($normDesc.Count -gt 0) {
+        "`$grp PS_MissionDescription : `"{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et`" {`n" + ($normDesc -join "`n") + "`n}"
+    } else { '' }
+
+    $objLayerContent = if ($normObj.Count -gt 0) {
+        "`$grp PS_Objective : `"{A4F0B4846EF850C4}Prefabs/Objective/Objective.et`" {`n" + ($normObj -join "`n") + "`n}"
+    } else { '' }
+
     $layerOutputs = @{
-        '_0_DESCRIPTION.layer' = ($entitiesByLayer['DESCRIPTION'] -join "`n`n")
-        '_0_OBJECTIVES.layer'  = ($entitiesByLayer['OBJECTIVE'] -join "`n`n")
+        '_0_DESCRIPTION.layer' = $descLayerContent
+        '_0_OBJECTIVES.layer'  = $objLayerContent
         '_1_GAME_MODE.layer'   = ($entitiesByLayer['GAMEMODE'] -join "`n`n")
         '_1_GAME_LOGIC.layer'  = ($entitiesByLayer['GAMELOGIC'] -join "`n`n")
         '_2_FLAGS.layer'       = ($entitiesByLayer['FLAGS'] -join "`n`n")
@@ -820,19 +999,8 @@ function Invoke-MissionNormalization {
     }
 
     # 10. Удаление старых ненормализованных файлов слоёв
-    $legacyNames = @(
-        'rus.layer', 'us.layer', 'usa.layer', 'fia.layer', 'tkr.layer', 'tka.layer',
-        'log.layer', 'desc.layer', 'objdescr.layer', 'domiki.layer', 'friz.layer',
-        'default.layer', 'zone.layer', 'polyzone.layer', 'props.layer', 'decor.layer',
-        'miscr.layer', 'rus_marker.layer', 'rus_markers.layer', 'usaf_marker.layer',
-        'usaf_markers.layer', 'ion.layer', 'ion_markers.layer', 'vehicl.layer',
-        'atack', 'def'
-    )
-
-    foreach ($lf in $allLayerFiles) {
-        $baseName = $lf.Name.ToLowerInvariant()
-        $relPath = $lf.FullName.Substring($layersDir.Length).TrimStart('\', '/')
-        if ($baseName -in $legacyNames -or $relPath -match '^(?i)(atack|def)\\') {
+    foreach ($lf in (Get-ChildItem -LiteralPath $layersDir -Filter "*.layer" -File -ErrorAction SilentlyContinue)) {
+        if ($lf.Name -notin $standardRootLayers) {
             if (-not $DryRun) {
                 Remove-Item -LiteralPath $lf.FullName -Force -ErrorAction SilentlyContinue
             }
@@ -867,6 +1035,10 @@ function Invoke-MissionNormalization {
     Write-Host "Маркеров:         $($report.MarkersFixed) обновлено (контуры, квады, теги)"
     Write-Host "Слоёв очищено:    $($report.LayersCleaned.Count) старых файлов удалено"
     Write-Host "=====================================================================" -ForegroundColor Green
+
+    $report | Add-Member -NotePropertyName 'NormalizedMission' -NotePropertyValue $missionDir -Force
+    $report | Add-Member -NotePropertyName 'SquadsRenamed' -NotePropertyValue $report.GroupsRenamed -Force
+    $report | Add-Member -NotePropertyName 'VehiclesLinked' -NotePropertyValue $report.VehiclesAttached -Force
 
     if ($PassThru) { return $report }
 }
