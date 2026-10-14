@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
 <meta charset="utf-8" />
@@ -6,218 +6,371 @@
 <title>Восстановление миссий</title>
 <style>
   :root{
-    --bg:#0f1216; --panel:#181c22; --panel2:#20252d; --panel3:#272d37;
-    --line:#2e353f; --line2:#3c4553;
-    --fg:#e8ecf2; --mut:#96a1b0; --mut2:#6f7a89;
+    color-scheme:dark;
+    --bg:#0d1014; --panel:#161a20; --panel2:#1e232b; --panel3:#272d37;
+    --line:#2a313b; --line2:#39424f;
+    --fg:#eaeef4; --mut:#9aa5b4; --mut2:#7b8696;
     --green:#4ec98a; --greenbg:rgba(78,201,138,.12);
     --blue:#5aa9f0; --bluebg:rgba(90,169,240,.12);
     --red:#f0736f; --redbg:rgba(240,115,111,.13);
     --yellow:#e0b95a; --yellowbg:rgba(224,185,90,.12);
     --gray:#8b96a5; --graybg:rgba(139,150,165,.1);
-    --accent:#4c8dff;
+    --accent:#4c8dff; --accent-hi:#6ea5ff;
+    --r-sm:6px; --r:9px; --r-lg:12px;
+    --shadow:0 8px 28px rgba(0,0,0,.32);
+    --ease:cubic-bezier(.2,.7,.2,1);
+    --header-h:58px;
   }
   *{box-sizing:border-box}
-  html,body{margin:0;height:100%}
+  html{scroll-padding-top:calc(var(--header-h) + 14px)}
+  html,body{margin:0;min-height:100%}
   body{
-    background:var(--bg); color:var(--fg);
+    background:
+      radial-gradient(900px 420px at 12% -8%, rgba(76,141,255,.09), transparent 60%),
+      var(--bg);
+    background-attachment:fixed;
+    color:var(--fg);
     font:14px/1.5 -apple-system,"Segoe UI",Roboto,system-ui,sans-serif;
     -webkit-font-smoothing:antialiased;
   }
   code,.mono{font-family:"Cascadia Mono",Consolas,"SF Mono",Menlo,monospace}
+  a{color:var(--accent-hi)}
+  :focus-visible{outline:2px solid var(--accent-hi);outline-offset:2px;border-radius:4px}
+  ::selection{background:rgba(76,141,255,.35)}
+  ::-webkit-scrollbar{width:10px;height:10px}
+  ::-webkit-scrollbar-thumb{background:var(--line2);border-radius:8px;border:2px solid transparent;background-clip:padding-box}
+  ::-webkit-scrollbar-thumb:hover{background:#4a5462;background-clip:padding-box;border:2px solid transparent}
+  ::-webkit-scrollbar-track{background:transparent}
+  @media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 
   /* ---------- шапка ---------- */
   header{
-    display:flex;align-items:center;gap:18px;
-    padding:0 20px;height:56px;
-    background:var(--panel);border-bottom:1px solid var(--line);
+    display:flex;align-items:center;gap:14px 20px;flex-wrap:wrap;
+    padding:8px 20px;min-height:var(--header-h);
+    background:rgba(22,26,32,.88);backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line);
     position:sticky;top:0;z-index:20;
   }
-  header .logo{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:600}
-  header .logo .dot{width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent)}
-  .stats{display:flex;gap:8px;margin-left:auto;align-items:center}
+  header::after{
+    content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;
+    background:linear-gradient(90deg,transparent,var(--accent),transparent);
+    background-size:40% 100%;background-repeat:no-repeat;
+    opacity:0;transition:opacity .2s;
+  }
+  body.spin-busy header::after{opacity:1;animation:busybar 1.1s linear infinite}
+  @keyframes busybar{from{background-position:-40% 0}to{background-position:140% 0}}
+  .brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:inherit}
+  .brand-mark{
+    width:30px;height:30px;border-radius:9px;flex:none;display:grid;place-items:center;
+    background:linear-gradient(135deg,var(--accent),#7a5cff);box-shadow:0 4px 14px rgba(76,141,255,.35);
+  }
+  .brand-mark svg{width:17px;height:17px;fill:none;stroke:#fff;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+  .brand-text{display:flex;flex-direction:column;line-height:1.15}
+  .brand-text b{font-size:15px;font-weight:650}
+  .brand-text small{font-size:11px;color:var(--mut2);letter-spacing:.2px}
+  .nav{display:flex;gap:3px;padding:3px;background:var(--panel2);border:1px solid var(--line);border-radius:10px}
+  .nav-link{
+    padding:5px 13px;border-radius:7px;font-size:13px;font-weight:500;
+    color:var(--mut);text-decoration:none;transition:.12s;white-space:nowrap;
+  }
+  .nav-link:hover{color:var(--fg);background:var(--panel3)}
+  .nav-link.active{background:var(--accent);color:#fff;font-weight:600}
+  .header-actions{display:flex;gap:6px;margin-left:auto;align-items:center;flex-wrap:wrap}
   .chip{
     display:inline-flex;align-items:center;gap:6px;
-    padding:5px 11px;border-radius:7px;font-size:12px;
+    padding:4px 10px;border-radius:999px;font-size:12px;
     background:var(--panel2);border:1px solid var(--line);color:var(--mut);
     white-space:nowrap;
   }
+  .chip::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor;opacity:.55}
   .chip b{color:var(--fg);font-weight:600}
   .chip.on{background:var(--greenbg);border-color:rgba(78,201,138,.35);color:var(--green)}
+  .chip.on::before{opacity:1;box-shadow:0 0 8px currentColor}
   .chip.off{background:var(--graybg);color:var(--mut2)}
   .chip.warn{background:var(--yellowbg);border-color:rgba(224,185,90,.35);color:var(--yellow)}
+  .sep{width:1px;height:22px;background:var(--line);margin:0 4px}
 
   /* ---------- баннер первого запуска ---------- */
   .setupBanner{
     display:flex;align-items:center;gap:14px;flex-wrap:wrap;
-    margin:0 20px 4px;padding:12px 16px;max-width:1720px;margin-left:auto;margin-right:auto;
-    background:var(--yellowbg);border:1px solid rgba(224,185,90,.35);border-radius:10px;
+    margin:14px auto 0;padding:12px 16px;max-width:1720px;width:calc(100% - 40px);
+    background:var(--yellowbg);border:1px solid rgba(224,185,90,.35);border-radius:var(--r-lg);
     color:var(--yellow);font-size:13px;
   }
+  .setupBanner::before{content:"!";width:22px;height:22px;border-radius:50%;background:var(--yellow);color:#241c05;font-weight:800;display:grid;place-items:center;flex:none}
   .setupBanner b{color:var(--fg)}
   .setupBanner .setupBannerText{flex:1;min-width:260px}
-  #settingsCard{max-width:1720px;margin:12px auto 14px}
-  #settingsCard .field{margin-bottom:12px}
-  #settingsCard code{font-size:11px;background:var(--panel2);padding:1px 5px;border-radius:4px;color:var(--mut)}
+  #settingsCard{max-width:1720px;width:calc(100% - 40px);margin:14px auto 0}
+  .settings-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px 22px}
+  .settings-grid .wide{grid-column:1/-1}
+  .settings-group{
+    grid-column:1/-1;margin:10px 0 2px;padding-bottom:6px;border-bottom:1px solid var(--line);
+    font-size:11px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--mut2);
+  }
+  .settings-group:first-child{margin-top:0}
+  @media(max-width:820px){.settings-grid{grid-template-columns:1fr}}
+  code{font-size:11.5px;background:var(--panel2);padding:1px 5px;border-radius:4px;color:var(--mut)}
 
   /* ---------- каркас ---------- */
-  .layout{display:grid;grid-template-columns:440px 1fr;gap:16px;padding:16px 20px;align-items:start;max-width:1720px;margin:0 auto}
-  @media(max-width:1080px){ .layout{grid-template-columns:1fr} }
+  .layout{display:grid;grid-template-columns:minmax(360px,430px) minmax(0,1fr);gap:16px;padding:16px 20px 32px;align-items:start;max-width:1720px;margin:0 auto}
+  .col-left{position:sticky;top:calc(var(--header-h) + 14px);max-height:calc(100vh - var(--header-h) - 28px);overflow:auto;padding-right:2px}
+  @media(max-width:1080px){ .layout{grid-template-columns:1fr} .col-left{position:static;max-height:none;overflow:visible} }
 
-  .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px;margin-bottom:14px}
+  .card{
+    background:var(--panel);border:1px solid var(--line);border-radius:var(--r-lg);
+    padding:16px;margin-bottom:14px;box-shadow:0 1px 0 rgba(255,255,255,.025) inset;
+  }
   .card:last-child{margin-bottom:0}
   .card h2{
-    margin:0 0 4px;font-size:13px;font-weight:600;color:var(--fg);
-    display:flex;align-items:center;gap:9px;
+    margin:0 0 4px;font-size:14px;font-weight:650;color:var(--fg);
+    display:flex;align-items:center;gap:10px;min-height:24px;
   }
   .card h2 .num{
-    width:20px;height:20px;border-radius:6px;background:var(--accent);color:#fff;
-    font-size:11px;font-weight:700;display:grid;place-items:center;flex:none;
+    width:22px;height:22px;border-radius:50%;background:var(--panel3);color:var(--mut);border:1px solid var(--line2);
+    font-size:11.5px;font-weight:700;display:grid;place-items:center;flex:none;transition:.2s;
   }
-  .card h2 .tail{margin-left:auto;font-weight:400;font-size:12px;color:var(--mut2)}
-  .hint{margin:0 0 12px;font-size:12px;color:var(--mut)}
+  .card h2 .tail{margin-left:auto;font-weight:400;font-size:12px;color:var(--mut2);display:flex;gap:6px;align-items:center;min-width:0}
+  .hint{margin:0 0 12px;font-size:12px;color:var(--mut);line-height:1.5}
+  .hint.tight{margin:0}
+
+  /* шаги: состояние */
+  .step.is-active{border-color:rgba(76,141,255,.45);box-shadow:0 0 0 3px rgba(76,141,255,.07)}
+  .step.is-active h2 .num{background:var(--accent);border-color:var(--accent);color:#fff}
+  .step.is-done h2 .num{background:var(--green);border-color:var(--green);color:#06210f;font-size:0}
+  .step.is-done h2 .num::after{content:"✓";font-size:12px;font-weight:800}
+  .step.is-locked{opacity:.62}
+  .step.is-locked:hover{opacity:1}
 
   /* ---------- поля ---------- */
-  .field{margin-bottom:11px}
-  .field>label{display:block;font-size:12px;color:var(--mut);margin-bottom:5px}
+  .field{margin-bottom:12px}
+  .field>label{display:block;font-size:12px;color:var(--mut);margin-bottom:5px;font-weight:500}
+  .field .hint{margin:5px 0 0;display:block;color:var(--mut2)}
   input[type=text],select{
     width:100%;background:var(--panel2);border:1px solid var(--line2);color:var(--fg);
-    border-radius:7px;padding:9px 11px;font-size:13px;outline:none;
+    border-radius:var(--r-sm);padding:9px 11px;font-size:13px;outline:none;font-family:inherit;transition:border-color .12s, box-shadow .12s;
   }
-  input[type=text]:focus,select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(76,141,255,.16)}
+  input[type=text]::placeholder{color:var(--mut2)}
+  input[type=text]:hover,select:hover{border-color:#4a5462}
+  input[type=text]:focus,select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(76,141,255,.18)}
   select{cursor:pointer}
   select:disabled{opacity:.5;cursor:not-allowed}
+  .path-input{font-family:"Cascadia Mono",Consolas,monospace;font-size:12.5px}
 
   .btns{display:flex;gap:8px;flex-wrap:wrap}
   button{
     background:var(--panel2);border:1px solid var(--line2);color:var(--fg);
-    border-radius:7px;padding:9px 14px;font-size:13px;cursor:pointer;
-    transition:.12s;font-family:inherit;
+    border-radius:var(--r-sm);padding:9px 14px;font-size:13px;cursor:pointer;
+    transition:background .12s,border-color .12s,transform .06s;font-family:inherit;
   }
   button:hover:not(:disabled){background:var(--panel3);border-color:#4a5462}
   button:active:not(:disabled){transform:translateY(1px)}
   button:disabled{opacity:.45;cursor:not-allowed}
   button.primary{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}
-  button.primary:hover:not(:disabled){background:#3f7ff0}
-  button.ghost{background:transparent}
+  button.primary:hover:not(:disabled){background:#3f7ff0;border-color:#3f7ff0}
+  button.success{background:#2a8050;border-color:#369b62;color:#fff;font-weight:600}
+  button.success:hover:not(:disabled){background:#2f925b;border-color:#3fae70}
+  button.ghost{background:transparent;border-color:transparent;color:var(--mut)}
+  button.ghost:hover:not(:disabled){background:var(--panel2);border-color:var(--line2);color:var(--fg)}
   button.sm{padding:5px 10px;font-size:12px}
+  button.block{width:100%}
   button.danger{border-color:rgba(240,115,111,.5);color:var(--red)}
-  button.danger:hover:not(:disabled){background:var(--redbg)}
+  button.danger:hover:not(:disabled){background:var(--redbg);border-color:rgba(240,115,111,.7);color:var(--red)}
+  button.ghost.danger{border-color:transparent}
 
-  .check{display:flex;align-items:flex-start;gap:8px;font-size:12.5px;color:var(--mut);cursor:pointer;padding:2px 0}
-  .check input{margin:2px 0 0;accent-color:var(--accent);cursor:pointer;flex:none}
-  .check span b{color:var(--fg);font-weight:500}
+  .check{display:flex;align-items:flex-start;gap:10px;font-size:12.5px;color:var(--mut);cursor:pointer;padding:9px 11px;border:1px solid var(--line);border-radius:var(--r);background:var(--panel2);margin-bottom:8px;transition:border-color .12s,background .12s}
+  .check:hover{border-color:var(--line2)}
+  .check:has(input:checked){border-color:rgba(76,141,255,.4);background:rgba(76,141,255,.06)}
+  .check input{margin:2px 0 0;accent-color:var(--accent);cursor:pointer;flex:none;width:15px;height:15px}
+  .check span{line-height:1.45}
+  .check span b{color:var(--fg);font-weight:600}
+  .check.inline{display:inline-flex;align-items:center;padding:6px 10px;margin:0}
+  .check.inline input{margin:0}
+  .action-row{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+  .action-note{margin:10px 0 0;font-size:11.5px;color:var(--mut2);line-height:1.45}
+
+  .found-chip{font-size:11.5px;color:var(--mut2)}
+  .restored{
+    margin-top:12px;padding:11px 12px;border-radius:var(--r);
+    background:var(--greenbg);border:1px solid rgba(78,201,138,.35);
+  }
+  .restored .title{font-size:12px;font-weight:650;color:var(--green);display:flex;align-items:center;gap:6px;margin-bottom:4px}
+  .restored .where{font-family:"Cascadia Mono",Consolas,monospace;font-size:11.5px;color:var(--mut);word-break:break-all;margin-bottom:9px}
 
   /* ---------- сводка ---------- */
-  .summary{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+  .summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(118px,1fr));gap:8px;margin:10px 0 12px}
   .st{
-    display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:8px;
-    border:1px solid transparent;font-size:12.5px;
+    display:flex;flex-direction:column;align-items:flex-start;gap:3px;padding:10px 12px;border-radius:var(--r);
+    border:1px solid transparent;font-size:12px;text-align:left;cursor:pointer;position:relative;
   }
-  .st .n{font-size:16px;font-weight:700;line-height:1}
-  .st .t{color:var(--mut)}
+  .st .n{font-size:22px;font-weight:700;line-height:1;font-variant-numeric:tabular-nums}
+  .st .t{color:var(--mut);font-weight:500}
+  .st.active{box-shadow:0 0 0 2px var(--accent-hi)}
+  .st.active::after{content:"фильтр";position:absolute;top:7px;right:9px;font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--accent-hi)}
   .st.resolved{background:var(--greenbg);border-color:rgba(78,201,138,.3)} .st.resolved .n{color:var(--green)}
   .st.mapped{background:var(--bluebg);border-color:rgba(90,169,240,.3)} .st.mapped .n{color:var(--blue)}
   .st.broken{background:var(--redbg);border-color:rgba(240,115,111,.35)} .st.broken .n{color:var(--red)}
   .st.ignore{background:var(--yellowbg);border-color:rgba(224,185,90,.3)} .st.ignore .n{color:var(--yellow)}
   .st.external{background:var(--graybg);border-color:rgba(139,150,165,.25)} .st.external .n{color:var(--gray)}
+  .st:hover:not(:disabled){filter:brightness(1.12)}
+
+  .progress{height:6px;background:var(--panel3);border-radius:99px;overflow:hidden;margin-bottom:10px}
+  .progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--green),#7be0ae);border-radius:99px;transition:width .35s var(--ease)}
+  .next{
+    display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:var(--r);margin-bottom:12px;
+    font-size:12.5px;border:1px solid var(--line);background:var(--panel2);color:var(--mut);
+  }
+  .next b{color:var(--fg)}
+  .next.ok{background:var(--greenbg);border-color:rgba(78,201,138,.35);color:var(--green)}
+  .next.warn{background:var(--yellowbg);border-color:rgba(224,185,90,.35);color:var(--yellow)}
+  .tools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:10px}
+  .tools .grow{flex:1;min-width:200px}
 
   /* ---------- таблица ---------- */
-  .legend{display:flex;flex-wrap:wrap;gap:14px;font-size:11.5px;color:var(--mut2);margin-bottom:10px}
+  details.legend-details{margin-bottom:10px;font-size:12px}
+  details.legend-details summary{cursor:pointer;color:var(--mut);font-size:12px;user-select:none;width:max-content}
+  details.legend-details summary:hover{color:var(--fg)}
+  .legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:11.5px;color:var(--mut2);margin-top:8px}
   .legend b{font-weight:600}
   .lg-resolved{color:var(--green)} .lg-mapped{color:var(--blue)} .lg-broken{color:var(--red)}
   .lg-ignore{color:var(--yellow)} .lg-external{color:var(--gray)}
 
-  .tablewrap{max-height:calc(100vh - 340px);overflow:auto;border:1px solid var(--line);border-radius:9px}
+  .tablewrap{max-height:calc(100vh - 330px);min-height:140px;overflow:auto;border:1px solid var(--line);border-radius:var(--r)}
   table{width:100%;border-collapse:collapse}
   th{
     position:sticky;top:0;z-index:2;background:var(--panel2);
-    text-align:left;padding:9px 12px;font-size:11px;font-weight:600;color:var(--mut);
-    text-transform:uppercase;letter-spacing:.4px;border-bottom:1px solid var(--line2);
+    text-align:left;padding:9px 12px;font-size:11px;font-weight:650;color:var(--mut);
+    text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--line2);
   }
   td{padding:9px 12px;border-bottom:1px solid var(--line);font-size:12.5px;vertical-align:top}
   tr:last-child td{border-bottom:none}
-  tbody tr:hover{background:rgba(255,255,255,.022)}
+  tbody tr{transition:background .1s}
+  tbody tr:hover{background:rgba(255,255,255,.025)}
+  tr.row-broken>td:first-child{box-shadow:inset 3px 0 0 var(--red)}
+  tr.row-mapped>td:first-child{box-shadow:inset 3px 0 0 var(--blue)}
   td.path{font-family:"Cascadia Mono",Consolas,monospace;font-size:12px;word-break:break-all;line-height:1.45}
   td.path .g{display:block;color:var(--mut2);font-size:11px;margin-top:2px}
   td.cnt{color:var(--mut);text-align:center;width:52px;font-variant-numeric:tabular-nums}
-  td.act{width:104px;text-align:right}
-  .tag{display:inline-block;padding:3px 9px;border-radius:6px;font-size:11px;font-weight:600;white-space:nowrap}
+  td.act{width:150px;text-align:right;white-space:nowrap}
+  .tag{display:inline-block;padding:3px 9px;border-radius:999px;font-size:11px;font-weight:600;white-space:nowrap}
   .tag.resolved{background:var(--greenbg);color:var(--green)}
   .tag.mapped{background:var(--bluebg);color:var(--blue)}
   .tag.broken{background:var(--redbg);color:var(--red)}
   .tag.ignore{background:var(--yellowbg);color:var(--yellow)}
   .tag.external{background:var(--graybg);color:var(--gray)}
-  .done{color:var(--green);font-size:12px}
+  .done{color:var(--green);font-size:12px;font-weight:600}
+  .link-btn{
+    display:inline-block;padding:4px 8px;font-size:11.5px;border-radius:var(--r-sm);
+    color:var(--accent-hi);text-decoration:none;border:1px solid transparent;
+  }
+  .link-btn:hover{background:var(--panel3);border-color:var(--line2)}
 
   /* ---------- кандидаты ---------- */
   tr.cand>td{background:var(--panel2);padding:0}
-  .candbox{padding:12px 14px;border-bottom:1px solid var(--line)}
-  .candbox .head{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap}
-  .candbox .head .t{font-size:12px;color:var(--mut)}
+  .candbox{padding:12px 14px 8px;border-bottom:1px solid var(--line);border-left:3px solid var(--accent)}
+  .candbox .head{display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap}
+  .candbox .head .t{font-size:12px;color:var(--mut);font-weight:600;flex:1}
+  .candbox .t{font-size:12px;color:var(--mut);margin-bottom:6px}
   .cand-row{
-    display:flex;align-items:center;gap:10px;padding:8px 10px;
-    border:1px solid var(--line);border-radius:7px;margin-bottom:6px;background:var(--panel);
+    display:flex;align-items:flex-start;gap:10px;padding:9px 11px;
+    border:1px solid var(--line);border-radius:var(--r);margin-bottom:6px;background:var(--panel);
+    transition:border-color .12s;
   }
+  .cand-row:hover{border-color:var(--line2)}
   .cand-row.pick{border-color:var(--green);background:var(--greenbg)}
   .cand-row .rank{
-    width:20px;height:20px;border-radius:5px;background:var(--panel3);color:var(--mut);
+    width:20px;height:20px;border-radius:5px;background:var(--panel3);color:var(--mut);margin-top:1px;
     font-size:11px;font-weight:700;display:grid;place-items:center;flex:none;
   }
+  .cand-row>button{align-self:center;flex:none}
   .cand-row .p{flex:1;font-family:"Cascadia Mono",Consolas,monospace;font-size:11.5px;word-break:break-all;line-height:1.4}
-  .cand-row .sc{font-size:11px;color:var(--mut2);white-space:nowrap;font-variant-numeric:tabular-nums}
-  .cand-row .lvl{
-    font-size:10.5px;padding:1px 6px;border-radius:4px;white-space:nowrap;flex:none;
-    border:1px solid var(--line);background:var(--panel3);color:var(--mut);
-  }
   .cand-row .warn{
-    font-size:10.5px;padding:1px 6px;border-radius:4px;display:block;margin-top:4px;
+    font-size:11px;padding:2px 7px;border-radius:4px;display:block;margin-top:5px;width:max-content;max-width:100%;
     border:1px solid #6b3a2a;background:rgba(220,80,50,.14);color:#e08a5f;
   }
   .candidate-info{flex:1;min-width:0}
   .candidate-info .p{display:block}
   .candidate-reasons{margin:5px 0 0;padding-left:18px;color:var(--mut);font-size:11px;line-height:1.5}
-  .candidate-level{color:var(--mut2);font-size:11px;margin-top:4px}
-  .candidate-fallback{border-top:1px solid var(--line);margin-top:14px;padding-top:10px}
-  .candidate-section-title{font-size:12px;font-weight:600;margin-bottom:8px}
-  .ai-recommendation{border:1px solid var(--green);border-radius:7px;padding:12px;margin:10px 0;background:var(--panel);font-size:12px}
+  .candidate-level{color:var(--mut2);font-size:11px;margin-top:4px;display:flex;flex-wrap:wrap;align-items:center;gap:4px}
+  .lvl{font-size:10.5px;font-weight:650;padding:1px 7px;border-radius:999px;white-space:nowrap;border:1px solid var(--line);background:var(--panel3);color:var(--mut)}
+  .lvl-high{background:var(--greenbg);border-color:rgba(78,201,138,.35);color:var(--green)}
+  .lvl-medium{background:var(--yellowbg);border-color:rgba(224,185,90,.35);color:var(--yellow)}
+  .lvl-low{background:var(--redbg);border-color:rgba(240,115,111,.35);color:var(--red)}
+  .candidate-fallback{border-top:1px dashed var(--line2);margin-top:12px;padding-top:10px}
+  .candidate-section-title{font-size:12px;font-weight:650;margin-bottom:4px}
+  .ai-recommendation{border:1px solid var(--green);border-radius:var(--r);padding:12px;margin:0 0 10px;background:var(--panel);font-size:12px}
   .ai-recommendation.uncertain,.ai-recommendation.no-match{border-color:#e08a5f}
   .ai-recommendation p{margin:6px 0;line-height:1.5}
-  .ai-recommendation .p{font-family:monospace;word-break:break-all;margin:8px 0}
+  .ai-recommendation .p{font-family:"Cascadia Mono",Consolas,monospace;word-break:break-all;margin:8px 0}
+  .ai-recommendation button{margin-right:8px}
 
-  .empty{padding:26px;text-align:center;color:var(--mut2);font-size:13px}
-  .empty .big{font-size:26px;display:block;margin-bottom:8px;opacity:.55}
+  .empty{padding:34px 20px;text-align:center;color:var(--mut2);font-size:13px;line-height:1.6}
+  .empty .big{font-size:28px;display:block;margin-bottom:8px;opacity:.7}
+  .empty.ok .big{color:var(--green);opacity:1}
+
+  .placeholder{text-align:center;padding:40px 24px;border-style:dashed;background:transparent}
+  .placeholder .ico{width:46px;height:46px;border-radius:14px;margin:0 auto 12px;display:grid;place-items:center;background:var(--panel2);border:1px solid var(--line2);color:var(--accent-hi);font-size:20px}
+  .placeholder h3{margin:0 0 6px;font-size:15px}
+  .placeholder p{margin:0 auto;max-width:420px;color:var(--mut);font-size:12.5px}
+  .placeholder ol{margin:14px auto 0;padding:0;list-style:none;display:inline-flex;flex-direction:column;gap:6px;text-align:left;font-size:12.5px;color:var(--mut)}
+  .placeholder li b{color:var(--fg)}
 
   /* ---------- лог ---------- */
   #log{
     font-family:"Cascadia Mono",Consolas,monospace;font-size:11.5px;line-height:1.65;
-    background:#0b0e12;border:1px solid var(--line);border-radius:8px;padding:11px 13px;
-    max-height:170px;overflow:auto;white-space:pre-wrap;word-break:break-word;
+    background:#0a0d11;border:1px solid var(--line);border-radius:var(--r);padding:11px 13px;
+    height:190px;min-height:90px;max-height:60vh;resize:vertical;overflow:auto;white-space:pre-wrap;word-break:break-word;
   }
+  #log:empty::before{content:"Здесь будут появляться сообщения о ходе работы.";color:var(--mut2)}
   .lg-ok{color:var(--green)} .lg-warn{color:var(--yellow)} .lg-err{color:var(--red)} .lg-dim{color:var(--mut2)}
   .spin{opacity:.55;pointer-events:none}
   details>summary{color:var(--fg)}
   details[open]>summary{margin-bottom:8px}
-  #chatBox .u{color:var(--accent);font-weight:600}
+  .help-d{margin-bottom:10px;padding:10px 12px;border:1px solid var(--line);border-radius:var(--r);background:var(--panel2)}
+  .help-d:last-child{margin-bottom:0}
+  .help-d>summary{cursor:pointer;font-weight:600;font-size:13px;margin-bottom:0}
+  .help-d[open]>summary{margin-bottom:8px}
+  .help-d .legend-row{margin-bottom:6px;font-size:12.5px;line-height:1.7;color:var(--mut)}
+  .help-d .legend-row b{color:var(--fg)}
+  #chatBox{max-height:230px;overflow:auto;background:#0a0d11;border:1px solid var(--line);border-radius:var(--r);padding:11px 13px;margin-bottom:9px;font-size:12.5px;line-height:1.6;display:none}
+  #chatBox .u{color:var(--accent-hi);font-weight:600}
   #chatBox .a{color:var(--fg);white-space:pre-wrap}
   #chatBox .q{margin-bottom:9px}
+  .chat-row{display:flex;gap:8px}
+
+  /* ---------- уведомления ---------- */
+  #toasts{position:fixed;right:18px;bottom:18px;z-index:60;display:flex;flex-direction:column;gap:8px;align-items:flex-end;pointer-events:none}
+  .toast{
+    pointer-events:auto;max-width:420px;padding:10px 14px;border-radius:var(--r);font-size:12.5px;line-height:1.45;
+    background:var(--panel3);border:1px solid var(--line2);box-shadow:var(--shadow);color:var(--fg);
+    border-left-width:4px;animation:toastin .22s var(--ease);word-break:break-word;
+  }
+  .toast.ok{border-left-color:var(--green)} .toast.err{border-left-color:var(--red)} .toast.warn{border-left-color:var(--yellow)}
+  .toast.out{opacity:0;transform:translateY(6px);transition:.2s}
+  @keyframes toastin{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 </style>
 </head>
 <body>
-
 <header>
-  <div class="logo"><span class="dot"></span>Восстановление миссий</div>
-  <div class="stats">
-    <a href="/editor" class="chip" style="text-decoration:none;color:var(--accent);font-weight:600" title="Открыть редактор базы ремапа">Редактор базы →</a>
-    <span class="chip" id="chipMod">префабов в моде: <b id="mMod">…</b></span>
-    <span class="chip" id="mAi">ИИ: …</span>
+  <a class="brand" href="/" aria-label="Восстановление миссий">
+    <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/><path d="M12 8v4l3 2"/></svg></span>
+    <span class="brand-text"><b>Восстановление миссий</b><small>PodvalTvT · Tools</small></span>
+  </a>
+  <nav class="nav" aria-label="Разделы">
+    <a class="nav-link active" href="/" aria-current="page">Восстановление</a>
+    <a class="nav-link" href="/editor" title="Открыть редактор базы ремапа">Редактор базы</a>
+  </nav>
+  <div class="header-actions">
+    <span class="chip" id="chipMod" title="Количество префабов, найденных в моде">префабов в моде: <b id="mMod">…</b></span>
+    <span class="chip off" id="mAi">ИИ: …</span>
+    <span class="sep" aria-hidden="true"></span>
     <button class="sm ghost" id="bSettings" title="Пути и параметры инструмента">Настройки</button>
     <button class="sm ghost" id="bReindex" title="Пересканировать префабы мода">Пересканировать мод</button>
     <button class="sm ghost" id="bHelp" title="Показать справку">Справка</button>
-    <button class="sm danger" id="bStop" title="Остановить сервер">Остановить сервер</button>
+    <button class="sm ghost danger" id="bStop" title="Остановить сервер">Остановить сервер</button>
   </div>
 </header>
 
-<div class="setupBanner" id="setupBanner" style="display:none">
+<div class="setupBanner" id="setupBanner" style="display:none" role="status">
   <div class="setupBannerText">
     <b>Инструмент не настроен.</b>
     <span id="setupBannerMsg">Укажите обязательные пути — они сохранятся в локальный файл, который не попадает в git.</span>
@@ -226,152 +379,164 @@
 </div>
 
 <div class="card" id="settingsCard" style="display:none">
-  <h2>Настройки</h2>
+  <h2>Настройки<span class="tail"><button class="sm ghost" id="bCloseSettings" title="Скрыть панель (Esc)">Скрыть ✕</button></span></h2>
   <p class="hint" id="settingsPathHint">Пути сохраняются в локальный файл настроек, который находится в <code>.gitignore</code> и не попадает в репозиторий.</p>
-  <div class="field">
-    <label for="setAddon">Корень аддона (обязательно)</label>
-    <input type="text" id="setAddon" spellcheck="false" />
-    <span class="hint">Папка с файлом <code>.gproj</code>. Обычно определяется автоматически.</span>
+  <div class="settings-grid">
+    <div class="settings-group">Пути</div>
+    <div class="field">
+      <label for="setAddon">Корень аддона (обязательно)</label>
+      <input type="text" class="path-input" id="setAddon" spellcheck="false" />
+      <span class="hint">Папка с файлом <code>.gproj</code>. Обычно определяется автоматически.</span>
+    </div>
+    <div class="field">
+      <label for="setPrefabs">Папка мода префабов (обязательно)</label>
+      <input type="text" class="path-input" id="setPrefabs" spellcheck="false" />
+      <span class="hint">Корень аддона <code>PodvalTvTPrefabs</code> — отдельного репозитория рядом с этим. Поддерживаются <code>%ПЕРЕМЕННЫЕ%</code> и <code>~</code>.</span>
+    </div>
+    <div class="field">
+      <label for="setSource">Папка со старыми миссиями</label>
+      <input type="text" class="path-input" id="setSource" spellcheck="false" />
+      <span class="hint">Необязательно: подставляется в поле поиска миссий.</span>
+    </div>
+    <div class="field">
+      <label for="setDest">Папка назначения по умолчанию</label>
+      <input type="text" class="path-input" id="setDest" spellcheck="false" />
+    </div>
+    <div class="field wide">
+      <label for="setRemap">Файл таблицы замен</label>
+      <input type="text" class="path-input" id="setRemap" spellcheck="false" />
+    </div>
+
+    <div class="settings-group">Сервер и ИИ</div>
+    <div class="field">
+      <label for="setPort">Порт сервера</label>
+      <input type="text" id="setPort" spellcheck="false" />
+      <span class="hint">Применяется после перезапуска сервера.</span>
+    </div>
+    <div class="field">
+      <label for="setAiBase">Адрес ИИ-сервиса</label>
+      <input type="text" id="setAiBase" spellcheck="false" />
+    </div>
+    <div class="field">
+      <label for="setAiModel">Модель ИИ</label>
+      <input type="text" id="setAiModel" spellcheck="false" />
+    </div>
+    <div class="field">
+      <label for="setKeyEnv">Переменная окружения с ключом ИИ</label>
+      <input type="text" id="setKeyEnv" spellcheck="false" />
+      <span class="hint" id="setKeyHint">Ключ хранится только в переменной окружения и никогда не записывается в файл настроек.</span>
+    </div>
   </div>
-  <div class="field">
-    <label for="setPrefabs">Папка мода префабов (обязательно)</label>
-    <input type="text" id="setPrefabs" spellcheck="false" />
-    <span class="hint">Корень аддона <code>PodvalTvTPrefabs</code> — отдельного репозитория рядом с этим. Поддерживаются <code>%ПЕРЕМЕННЫЕ%</code> и <code>~</code>.</span>
-  </div>
-  <div class="field">
-    <label for="setSource">Папка со старыми миссиями</label>
-    <input type="text" id="setSource" spellcheck="false" />
-    <span class="hint">Необязательно: подставляется в поле поиска миссий.</span>
-  </div>
-  <div class="field">
-    <label for="setDest">Папка назначения по умолчанию</label>
-    <input type="text" id="setDest" spellcheck="false" />
-  </div>
-  <div class="field">
-    <label for="setRemap">Файл таблицы замен</label>
-    <input type="text" id="setRemap" spellcheck="false" />
-  </div>
-  <div class="field">
-    <label for="setPort">Порт сервера</label>
-    <input type="text" id="setPort" spellcheck="false" />
-    <span class="hint">Применяется после перезапуска сервера.</span>
-  </div>
-  <div class="field">
-    <label for="setAiBase">Адрес ИИ-сервиса</label>
-    <input type="text" id="setAiBase" spellcheck="false" />
-  </div>
-  <div class="field">
-    <label for="setAiModel">Модель ИИ</label>
-    <input type="text" id="setAiModel" spellcheck="false" />
-  </div>
-  <div class="field">
-    <label for="setKeyEnv">Переменная окружения с ключом ИИ</label>
-    <input type="text" id="setKeyEnv" spellcheck="false" />
-    <span class="hint" id="setKeyHint">Ключ хранится только в переменной окружения и никогда не записывается в файл настроек.</span>
-  </div>
-  <div class="btns">
+  <div class="btns" style="margin-top:6px">
     <button id="bSaveSettings" class="primary">Сохранить настройки</button>
-    <button id="bCloseSettings" class="ghost">Скрыть</button>
+    <button id="bCloseSettings2" class="ghost">Отмена</button>
   </div>
 </div>
 
 <div class="layout">
 
   <!-- ================= ЛЕВАЯ КОЛОНКА ================= -->
-  <div>
-    <div class="card">
-      <h2><span class="num">1</span>Найти миссию</h2>
+  <div class="col-left">
+    <section class="card step is-active" id="step1">
+      <h2><span class="num">1</span>Найти миссию<span class="tail"><span class="found-chip" id="foundChip"></span></span></h2>
       <p class="hint">Укажите папку со старыми миссиями — найдём их и покажем в списке.</p>
       <div class="field">
         <label for="srcRoot">Папка с миссиями</label>
-        <input type="text" id="srcRoot" spellcheck="false" />
+        <input type="text" class="path-input" id="srcRoot" spellcheck="false" placeholder="Путь к папке со старыми миссиями" />
       </div>
       <div class="btns"><button id="bList" class="primary">Найти миссии</button></div>
-      <div class="field" style="margin-top:12px">
+      <div class="field" style="margin-top:12px;margin-bottom:0">
         <label for="missionSel">Миссия</label>
         <select id="missionSel" disabled><option value="">Сначала нажмите «Найти миссии»</option></select>
       </div>
-    </div>
+    </section>
 
-    <div class="card">
+    <section class="card step is-locked" id="step2">
       <h2><span class="num">2</span>Куда сохранять</h2>
       <p class="hint">Готовая миссия будет скопирована сюда с исправленными ссылками.</p>
-      <div class="field">
+      <div class="field" style="margin-bottom:0">
         <label for="destDir">Папка назначения</label>
-        <input type="text" id="destDir" spellcheck="false" />
+        <input type="text" class="path-input" id="destDir" spellcheck="false" placeholder="Путь к папке назначения" />
       </div>
-    </div>
+    </section>
 
-    <div class="card">
-      <h2><span class="num">3</span>Проверить</h2>
+    <section class="card step is-locked" id="step3">
+      <h2><span class="num">3</span>Проверить и скопировать</h2>
       <p class="hint">Сканируем миссию и ищем префабы, которых больше нет в моде.</p>
-      <label class="check" style="margin-bottom:11px">
+      <label class="check">
         <input type="checkbox" id="writeStubs" checked />
         <span><b>Записывать заглушки</b><br>Добавлять ненайденные ссылки в таблицу замен с пустым значением, чтобы они не терялись.</span>
       </label>
-      <label class="check" style="margin-bottom:8px">
+      <label class="check">
         <input type="checkbox" id="autoNormalize" checked />
         <span><b>Авто-нормализация слоёв</b><br>Привести структуру слоёв, позывных и техники к стандарту PodvalTvTMissions.</span>
       </label>
-      <label class="check" style="margin-bottom:11px">
+      <label class="check">
         <input type="checkbox" id="autoValidate" checked />
         <span><b>Проверить стандарт</b><br>Запустить валидатор Test-MissionStandard после восстановления.</span>
       </label>
-      <div class="btns">
-        <button id="bScan" class="primary" disabled>Проверить миссию</button>
-        <button id="bRestore" class="danger" disabled>Скопировать и исправить</button>
+      <div class="action-row">
+        <button id="bScan" class="primary block" disabled>Проверить миссию</button>
+        <button id="bRestore" class="success block" disabled title="Копирует миссию в папку назначения и подставляет готовые замены">Скопировать и исправить</button>
       </div>
-      <p class="hint" style="margin:11px 0 0">
-        «Скопировать и исправить» — это финальное действие: копирует миссию и подставляет все готовые замены.
+      <p class="action-note">
+        «Скопировать и исправить» — финальное действие: копирует миссию и подставляет все готовые замены. Существующая копия в папке назначения будет перезаписана.
       </p>
-    </div>
+      <div class="restored" id="restoredBox" style="display:none">
+        <div class="title">✓ Миссия скопирована</div>
+        <div class="where" id="restoredPath"></div>
+        <div class="btns">
+          <button class="sm" id="bOpenFolder" style="display:none" title="Открыть папку миссии в Проводнике Windows">Открыть папку</button>
+          <button class="sm" id="bValidateNow" style="display:none" title="Проверить соответствие стандарту PodvalTvTMissions">Проверить стандарт</button>
+        </div>
+      </div>
+    </section>
   </div>
 
   <!-- ================= ПРАВАЯ КОЛОНКА ================= -->
   <div>
     <div class="card" id="helpCard" style="display:none;border-color:var(--accent)">
-      <h2><span class="num">?</span>Справка<span class="tail"><button class="sm ghost" id="bHelpClose">Свернуть</button></span></h2>
+      <h2><span class="num" style="background:var(--accent);border-color:var(--accent);color:#fff">?</span>Справка<span class="tail"><button class="sm ghost" id="bHelpClose">Свернуть</button></span></h2>
 
-      <details open style="margin-bottom:10px">
-        <summary style="cursor:pointer;font-weight:600;font-size:13px;margin-bottom:6px">Что вообще делает этот инструмент</summary>
-        <p class="hint" style="margin:0">
+      <details class="help-d" open>
+        <summary>Что вообще делает этот инструмент</summary>
+        <p class="hint tight">
           Старые миссии (из эпохи мода DRG) ссылаются на префабы, которых больше нет в моде — персонажи, группы, техника с
           прежними именами. Движок Arma Reforger находит префаб по внутреннему GUID, поэтому простое «переименование» папки
           проблему не решает. Инструмент копирует миссию и подставляет на место старой ссылки — существующую, того же персонажа/группу.
         </p>
       </details>
 
-      <details style="margin-bottom:10px">
-        <summary style="cursor:pointer;font-weight:600;font-size:13px;margin-bottom:6px">Статусы ссылок (легенда)</summary>
-        <div style="font-size:12.5px;line-height:1.7;color:var(--mut)">
-          <div style="margin-bottom:6px"><span class="tag resolved">есть в моде</span> — префаб найден в индексе мода по его GUID. Ссылка рабочая, <b style="color:var(--fg)">ничего делать не нужно</b>.</div>
-          <div style="margin-bottom:6px"><span class="tag broken">сломано</span> — префаба нет в моде и нет готовой замены. <b style="color:var(--fg)">Нужно подобрать замену</b> — это единственный статус, требующий работы.</div>
-          <div style="margin-bottom:6px"><span class="tag mapped">есть замена</span> — для этого префаба в таблице уже прописана замена. Ничего делать не нужно, при копировании подставится автоматически.</div>
-          <div style="margin-bottom:6px"><span class="tag ignore">служебное</span> — это не персонажи/техника, а служебные сущности (таймеры, менеджеры, триггеры). По вашему правилу восстанавливаем только пехоту и технику, поэтому такие ссылки <b style="color:var(--fg)">намеренно не трогаем</b>.</div>
-          <div><span class="tag external">внешнее</span> — ссылка ведёт на объект из базы игры или другого мода. Это нормально, оставляем как есть.</div>
+      <details class="help-d">
+        <summary>Статусы ссылок (легенда)</summary>
+        <div>
+          <div class="legend-row"><span class="tag resolved">есть в моде</span> — префаб найден в индексе мода по его GUID. Ссылка рабочая, <b>ничего делать не нужно</b>.</div>
+          <div class="legend-row"><span class="tag broken">сломано</span> — префаба нет в моде и нет готовой замены. <b>Нужно подобрать замену</b> — это единственный статус, требующий работы.</div>
+          <div class="legend-row"><span class="tag mapped">есть замена</span> — для этого префаба в таблице уже прописана замена. Ничего делать не нужно, при копировании подставится автоматически.</div>
+          <div class="legend-row"><span class="tag ignore">служебное</span> — это не персонажи/техника, а служебные сущности (таймеры, менеджеры, триггеры). По вашему правилу восстанавливаем только пехоту и технику, поэтому такие ссылки <b>намеренно не трогаем</b>.</div>
+          <div class="legend-row"><span class="tag external">внешнее</span> — ссылка ведёт на объект из базы игры или другого мода. Это нормально, оставляем как есть.</div>
         </div>
       </details>
 
-      <details style="margin-bottom:10px">
-        <summary style="cursor:pointer;font-weight:600;font-size:13px;margin-bottom:6px">Порядок работы (4 шага)</summary>
+      <details class="help-d">
+        <summary>Порядок работы (3 шага)</summary>
         <p class="hint" style="margin:0 0 6px"><b style="color:var(--fg)">1. Найти миссию</b> — укажите папку со старыми миссиями, нажмите «Найти миссии», выберите нужную из списка.</p>
-        <p class="hint" style="margin:0 0 6px"><b style="color:var(--fg)">2. Проверить</b> — сканируем миссию, показываем, что сломано.</p>
-        <p class="hint" style="margin:0 0 6px"><b style="color:var(--fg)">3. Подобрать замены</b> — у каждой «сломанной» строки кнопка «Подобрать»: покажет похожие префабы из мода (с оценкой совпадения). Выберите лучший → «Назначить». Для спорных случаев есть «Спросить ИИ».</p>
-        <p class="hint" style="margin:0"><b style="color:var(--fg)">4. Скопировать и исправить</b> — финальная кнопка: копирует миссию в папку назначения и подставляет все готовые замены.</p>
+        <p class="hint" style="margin:0 0 6px"><b style="color:var(--fg)">2. Проверить</b> — сканируем миссию, показываем, что сломано. У каждой «сломанной» строки кнопка «Подобрать»: покажет похожие префабы из мода (с оценкой совпадения). Выберите лучший → «Назначить». Для спорных случаев есть «Спросить ИИ».</p>
+        <p class="hint" style="margin:0"><b style="color:var(--fg)">3. Скопировать и исправить</b> — финальная кнопка: копирует миссию в папку назначения и подставляет все готовые замены.</p>
       </details>
 
-      <details style="margin-bottom:10px">
-        <summary style="cursor:pointer;font-weight:600;font-size:13px;margin-bottom:6px">Что значит «оценка совпадения» у кандидатов</summary>
-        <p class="hint" style="margin:0">
+      <details class="help-d">
+        <summary>Что значит «оценка совпадения» у кандидатов</summary>
+        <p class="hint tight">
           Инструмент сравнивает имя старого префаба с именами существующих и даёт оценку: совпадает роль (MG, SR, SL…),
-          фракция и подсистема. Чем выше процент — тем ближе кандидат. Но <b style="color:var(--fg)">это подсказка, а не истина</b>:
+          фракция и подсистема. Чем выше соответствие — тем ближе кандидат. Но <b style="color:var(--fg)">это подсказка, а не истина</b>:
           например старый «Sniper» может соответствовать и «Sharpshooter», и обычному «SR» — выбирайте по смыслу роли.
         </p>
       </details>
 
-      <details style="margin-bottom:10px">
-        <summary style="cursor:pointer;font-weight:600;font-size:13px;margin-bottom:6px">Куда всё записывается и можно ли откатить</summary>
-        <p class="hint" style="margin:0">
+      <details class="help-d">
+        <summary>Куда всё записывается и можно ли откатить</summary>
+        <p class="hint tight">
           Все замены хранятся в одной таблице <code>Tools/remap_table.json</code> — она общая для всех миссий, поэтому одну
           настроенную замену переиспользуют другие миссии. Перед каждой записью автоматически создаётся резервная копия
           <code>remap_table.json.bak</code>. Копирование миссии можно повторять сколько угодно — оно каждый раз перезаписывает
@@ -379,37 +544,56 @@
         </p>
       </details>
 
-      <details>
-        <summary style="cursor:pointer;font-weight:600;font-size:13px;margin-bottom:6px">Кнопка «Спросить ИИ»</summary>
-        <p class="hint" style="margin:0">
+      <details class="help-d">
+        <summary>Кнопка «Спросить ИИ»</summary>
+        <p class="hint tight">
           ИИ получает список найденных кандидатов и выбирает лучший. Он <b style="color:var(--fg)">не может выдумать новый GUID</b> —
           ответ ограничен уже найденными вариантами. Это подсказка: всегда бегло проверяйте глазами, что выбрано осмысленно.
         </p>
       </details>
     </div>
 
+    <div class="card placeholder" id="resEmpty">
+      <div class="ico" aria-hidden="true">⌕</div>
+      <h3>Здесь появится результат проверки</h3>
+      <p>Выберите миссию слева и нажмите «Проверить миссию» — мы покажем все ссылки на префабы и подскажем, что нужно исправить.</p>
+      <ol>
+        <li><b>1.</b> Найдите и выберите миссию</li>
+        <li><b>2.</b> Проверьте её на сломанные ссылки</li>
+        <li><b>3.</b> Подберите замены и скопируйте миссию</li>
+      </ol>
+    </div>
+
     <div class="card" id="resCard" style="display:none">
       <h2>Результат проверки<span class="tail" id="resTitle"></span></h2>
 
-      <div class="summary" id="summary"></div>
+      <div class="summary" id="summary" role="group" aria-label="Сводка по статусам. Нажмите, чтобы отфильтровать"></div>
+      <div class="progress" aria-hidden="true"><span id="progBar"></span></div>
+      <div class="next" id="resNext" role="status"></div>
 
-      <div class="legend">
-        <span><b class="lg-resolved">есть в моде</b> — префаб найден, ничего делать не надо</span>
-        <span><b class="lg-broken">сломано</b> — префаба нет, нужна замена</span>
-        <span><b class="lg-mapped">есть замена</b> — подмена уже настроена</span>
-        <span><b class="lg-ignore">не трогаем</b> — служебное (таймеры, менеджеры)</span>
-        <span><b class="lg-external">внешнее</b> — из базы игры или другого мода</span>
+      <div class="tools">
+        <input type="text" id="refSearch" class="grow" placeholder="Поиск по пути или GUID…" spellcheck="false" aria-label="Поиск по ссылкам" />
+        <label class="check inline">
+          <input type="checkbox" id="showAll" />
+          <span>Показывать все ссылки</span>
+        </label>
       </div>
 
-      <label class="check" style="margin-bottom:10px">
-        <input type="checkbox" id="showAll" />
-        <span>Показывать все ссылки, а не только сломанные</span>
-      </label>
+      <details class="legend-details">
+        <summary>Что означают статусы</summary>
+        <div class="legend">
+          <span><b class="lg-resolved">есть в моде</b> — префаб найден, ничего делать не надо</span>
+          <span><b class="lg-broken">сломано</b> — префаба нет, нужна замена</span>
+          <span><b class="lg-mapped">есть замена</b> — подмена уже настроена</span>
+          <span><b class="lg-ignore">не трогаем</b> — служебное (таймеры, менеджеры)</span>
+          <span><b class="lg-external">внешнее</b> — из базы игры или другого мода</span>
+        </div>
+      </details>
 
       <div class="tablewrap">
         <table>
           <thead>
-            <tr><th style="width:120px">Статус</th><th>Ссылка на префаб</th><th style="width:52px">Кол-во</th><th style="width:104px"></th></tr>
+            <tr><th style="width:120px">Статус</th><th>Ссылка на префаб</th><th style="width:52px">Кол-во</th><th style="width:150px"></th></tr>
           </thead>
           <tbody id="rows"></tbody>
         </table>
@@ -417,23 +601,23 @@
     </div>
 
     <div class="card">
-      <h2>Журнал<span class="tail"><button class="sm ghost" id="bOpenFolder" style="display:none" title="Открыть папку миссии в Проводнике Windows">В папку</button>
-        <button class="sm ghost" id="bValidateNow" style="display:none" title="Проверить соответствие стандарту PodvalTvTMissions">Стандарт</button>
-        <button class="sm ghost" id="bClear">Очистить</button></span></h2>
-      <div id="log"></div>
+      <h2>Журнал<span class="tail"><button class="sm ghost" id="bClear">Очистить</button></span></h2>
+      <div id="log" role="log" aria-live="polite"></div>
     </div>
 
     <div class="card" id="chatCard" style="display:none">
       <h2>Спросить ИИ<span class="tail"><button class="sm ghost" id="bChatToggle">Свернуть</button></span></h2>
       <p class="hint" style="margin-bottom:9px">Просто объяснить что-то про инструмент, статусы или подбор замен.</p>
-      <div id="chatBox" style="max-height:230px;overflow:auto;background:#0b0e12;border:1px solid var(--line);border-radius:8px;padding:11px 13px;margin-bottom:9px;font-size:12.5px;line-height:1.6;display:none"></div>
-      <div style="display:flex;gap:8px">
+      <div id="chatBox"></div>
+      <div class="chat-row">
         <input type="text" id="chatInput" placeholder="Например: почему ссылка считается служебной?" />
         <button id="bChatSend" class="primary">Спросить</button>
       </div>
     </div>
   </div>
 </div>
+
+<div id="toasts" aria-live="polite"></div>
 
 <script>
 const $ = s => document.querySelector(s);
@@ -467,18 +651,53 @@ const candidateSessionCurrent = (box, session) => candidateSessions.get(box) ===
 function log(msg, kind){
   const el = $('#log');
   const t = new Date().toLocaleTimeString('ru-RU');
-  el.insertAdjacentHTML('beforeend', `<span class="lg-dim">[${t}]</span> ${esc(msg)}\n`);
+  const cls = ['ok','warn','err','dim'].includes(kind) ? ` class="lg-${kind}"` : '';
+  el.insertAdjacentHTML('beforeend', `<span class="lg-dim">[${t}]</span> <span${cls}>${esc(msg)}</span>\n`);
   el.scrollTop = el.scrollHeight;
+  // Errors must not go unnoticed: the journal sits below the result table.
+  if(kind === 'err') toast(msg, 'err');
 }
+
+/* Короткое всплывающее уведомление; журнал остаётся основным источником истины. */
+function toast(msg, kind){
+  const host = $('#toasts');
+  if(!host) return;
+  const el = document.createElement('div');
+  el.className = 'toast ' + (kind || '');
+  el.textContent = msg;
+  // At most three at once: a burst of per-reference errors must not flood the screen.
+  if(host.children && host.children.length >= 3 && host.children[0].remove) host.children[0].remove();
+  host.appendChild(el);
+  if(typeof setTimeout !== 'function') return;
+  const ttl = kind === 'err' ? 9000 : 4200;
+  const drop = () => { el.className += ' out'; setTimeout(() => el.remove(), 220); };
+  setTimeout(drop, ttl);
+  el.onclick = drop;
+}
+
+/* Состояние карточек-шагов: что уже сделано, что сейчас, что ещё недоступно. */
+function updateSteps(){
+  const hasMission = !!$('#missionSel').value;
+  const set = (id, state) => {
+    const el = $(id);
+    el.classList.toggle('is-done', state === 'done');
+    el.classList.toggle('is-active', state === 'active');
+    el.classList.toggle('is-locked', state === 'locked');
+  };
+  set('#step1', hasMission ? 'done' : 'active');
+  set('#step2', hasMission ? ($('#destDir').value.trim() ? 'done' : 'active') : 'locked');
+  set('#step3', hasMission && $('#destDir').value.trim() ? 'active' : 'locked');
+}
+
 function setBusy(on){
   busy = on;
   const hasMission = !!$('#missionSel').value;
   $('#bScan').disabled = on || !hasMission;
   $('#bRestore').disabled = on || !hasMission;
   $('#bList').disabled = on;
-  document.querySelectorAll('body *').forEach(()=>{});
   document.body.classList.toggle('spin-busy', on);
-  if(on){ $('#resCard').style.opacity='.6'; } else { $('#resCard').style.opacity='1'; }
+  $('#resCard').style.opacity = on ? '.6' : '1';
+  updateSteps();
 }
 
 const NAMES = {
@@ -529,6 +748,7 @@ async function boot(){
     if(CFG.aiEnabled) $('#chatCard').style.display = '';
     $('#srcRoot').value = CFG.defaultSourceRoot || '';
     $('#destDir').value = CFG.defaultDestDir || '';
+    updateSteps();
     log('Готово к работе. Таблица замен: ' + CFG.remapTable, 'dim');
   }catch(e){ log('Не удалось загрузить настройки: ' + e.message, 'err'); }
 }
@@ -602,6 +822,7 @@ $('#bList').onclick = async () => {
     if(!list.length){
       sel.innerHTML = '<option value="">Миссии не найдены</option>';
       sel.disabled = true;
+      $('#foundChip').textContent = '';
       log('В папке не найдено ни одной миссии: ' + root, 'warn');
     } else {
       list.forEach(m => {
@@ -610,12 +831,24 @@ $('#bList').onclick = async () => {
         sel.appendChild(o);
       });
       sel.disabled = false;
+      $('#foundChip').textContent = 'найдено: ' + list.length;
       log('Найдено миссий: ' + list.length, 'ok');
     }
     setBusy(false);
   }catch(e){ setBusy(false); log('Ошибка: ' + e.message, 'err'); }
 };
 $('#missionSel').onchange = () => setBusy(busy);
+$('#destDir').addEventListener('input', updateSteps);
+$('#bCloseSettings2').onclick = () => toggleSettings(false);
+// Enter в поле папки запускает поиск миссий; Esc закрывает настройки и справку.
+$('#srcRoot').addEventListener('keydown', e => { if(e.key === 'Enter'){ e.preventDefault(); if(!busy) $('#bList').click(); } });
+if(typeof document.addEventListener === 'function'){
+  document.addEventListener('keydown', e => {
+    if(e.key !== 'Escape') return;
+    if($('#settingsCard').style.display !== 'none') toggleSettings(false);
+    else if($('#helpCard').style.display !== 'none') $('#helpCard').style.display = 'none';
+  });
+}
 
 /* ---------- сканирование ---------- */
 $('#bScan').onclick = async () => {
@@ -624,18 +857,27 @@ $('#bScan').onclick = async () => {
   setBusy(true);
   try{
     const s = await api('/api/scan', {method:'POST', body:JSON.stringify({sourceDir:dir, writeStubs:$('#writeStubs').checked})});
+    statusFilter = null;
+    $('#refSearch').value = '';
     render(s);
     const msg = `Проверка «${s.Mission}»: сломано ${s.Broken}, есть в моде ${s.Resolved}, служебных ${s.Ignore}, внешних ${s.External}`;
     log(msg, s.Broken ? 'warn' : 'ok');
     if($('#writeStubs').checked && s.Broken) log(`Заглушки записаны в таблицу замен: ${s.Broken}. Заполните их ниже.`, 'dim');
+    const card = $('#resCard');
+    if(card.scrollIntoView) card.scrollIntoView({behavior:'smooth', block:'nearest'});
   }catch(e){ log('Ошибка проверки: ' + e.message, 'err'); }
   setBusy(false);
 };
 
 /* ---------- отрисовка ---------- */
+// null — фильтр по умолчанию («сломано» или все, если включён переключатель);
+// иначе — показать только ссылки с этим статусом (клик по плитке в сводке).
+let statusFilter = null;
+
 function render(s){
   lastScan = s;
   $('#resCard').style.display = '';
+  $('#resEmpty').style.display = 'none';
   $('#resTitle').textContent = s.Mission;
 
   const cells = [
@@ -646,7 +888,24 @@ function render(s){
     ['external','Внешние',    s.External],
   ];
   $('#summary').innerHTML = cells.map(([k,t,n]) =>
-    `<div class="st ${k}"><span class="n">${n}</span><span class="t">${t}</span></div>`).join('');
+    `<button type="button" class="st ${k}${statusFilter === k ? ' active' : ''}" data-k="${k}" aria-pressed="${statusFilter === k}" title="Показать только: ${t.toLowerCase()}"><span class="n">${n}</span><span class="t">${t}</span></button>`).join('');
+  $$('#summary [data-k]').forEach(b => b.onclick = () => {
+    statusFilter = statusFilter === b.dataset.k ? null : b.dataset.k;
+    render(lastScan);
+  });
+
+  // Готовность = доля ссылок, которым ничего не мешает (служебные и внешние не считаются).
+  const need = (s.Resolved || 0) + (s.Mapped || 0) + (s.Broken || 0);
+  const ready = (s.Resolved || 0) + (s.Mapped || 0);
+  $('#progBar').style.width = (need ? Math.round(ready / need * 100) : 100) + '%';
+  const next = $('#resNext');
+  if(s.Broken){
+    next.className = 'next warn';
+    next.innerHTML = `Осталось подобрать замену: <b>${s.Broken}</b>. Нажмите «Подобрать» в строке со статусом «сломано».`;
+  } else {
+    next.className = 'next ok';
+    next.innerHTML = '<b>Все ссылки готовы.</b> Можно нажимать «Скопировать и исправить» слева.';
+  }
 
   drawRows();
 }
@@ -654,13 +913,22 @@ function render(s){
 function drawRows(){
   if(!lastScan) return;
   const all = $('#showAll').checked;
-  const refs = lastScan.Refs.filter(r => all || r.Status === 'broken');
+  const q = $('#refSearch').value.trim().toLowerCase();
+  const refs = lastScan.Refs.filter(r =>
+    (statusFilter ? r.Status === statusFilter : (all || r.Status === 'broken')) &&
+    (!q || String(r.Path).toLowerCase().includes(q) || String(r.Guid).toLowerCase().includes(q)));
   const tb = $('#rows');
 
   if(!refs.length){
-    tb.innerHTML = `<tr><td colspan="4"><div class="empty">
-      <span class="big">✓</span>
-      ${all ? 'В миссии нет ссылок на префабы.' : 'Сломанных ссылок нет — миссия готова к копированию.<br>Включите «показывать все ссылки», чтобы увидеть полный список.'}
+    let msg;
+    if(q) msg = 'Ничего не найдено по запросу.';
+    else if(statusFilter) msg = 'Нет ссылок с выбранным статусом.';
+    else if(all) msg = 'В миссии нет ссылок на префабы.';
+    else msg = 'Сломанных ссылок нет — миссия готова к копированию.<br>Включите «Показывать все ссылки», чтобы увидеть полный список.';
+    const good = !q && !statusFilter && !all;
+    tb.innerHTML = `<tr><td colspan="4"><div class="empty${good ? ' ok' : ''}">
+      <span class="big">${good ? '✓' : '∅'}</span>
+      ${msg}
     </div></td></tr>`;
     return;
   }
@@ -670,13 +938,13 @@ function drawRows(){
 
   tb.innerHTML = refs.map(r => {
     const [label] = NAMES[r.Status] || [r.Status];
-    const editorLink = `<a href="/editor?q=${encodeURIComponent(r.Guid)}" target="_blank" class="sm ghost" style="text-decoration:none;display:inline-block;padding:4px 7px;font-size:11.5px;color:var(--accent)" title="Открыть в редакторе базы">В базу ↗</a>`;
+    const editorLink = `<a href="/editor?q=${encodeURIComponent(r.Guid)}" target="_blank" rel="noopener" class="link-btn" title="Открыть в редакторе базы">В базу ↗</a>`;
     const act = r.Status === 'broken'
       ? `<button class="sm" data-sg="${esc(r.Ref)}">Подобрать</button> ${editorLink}`
       : (r.Status === 'mapped' ? editorLink : '');
-    return `<tr data-ref="${esc(r.Ref)}">
+    return `<tr class="row-${esc(r.Status)}" data-ref="${esc(r.Ref)}">
       <td><span class="tag ${r.Status}">${label}</span></td>
-      <td class="path">${esc(r.Path)}<span class="g mono">${r.Guid}</span></td>
+      <td class="path">${esc(r.Path)}<span class="g mono">${esc(r.Guid)}</span></td>
       <td class="cnt">${r.Count}</td>
       <td class="act">${act}</td>
     </tr>`;
@@ -684,7 +952,8 @@ function drawRows(){
 
   $$('#rows [data-sg]').forEach(b => b.onclick = () => suggest(b.dataset.sg, b.closest('tr')));
 }
-$('#showAll').onchange = drawRows;
+$('#showAll').onchange = () => { statusFilter = null; if(lastScan) render(lastScan); };
+$('#refSearch').addEventListener('input', drawRows);
 
 /* ---------- подбор кандидатов ---------- */
 async function suggest(ref, tr){
@@ -762,7 +1031,7 @@ function renderCands(box, ref, refPath, rawCandidates, bestRef, tr, ai=null, ses
     const label = c.MatchLabel || ({high:'Высокое соответствие',medium:'Среднее соответствие',low:'Слабое соответствие'}[c.MatchLevel]) || 'Соответствие не определено';
     d.innerHTML = `<span class="rank">${i+1}</span>
       <div class="candidate-info"><span class="p">${esc(c.Path || c.Ref.split('}').slice(1).join('}'))}</span>
-      <div class="candidate-level">${esc(label)}${c.ScopeRu ? ' · ' + esc(c.ScopeRu) : ''}${Number.isFinite(c.Score) ? ' · балл ' + esc(c.Score) : ''}</div>
+      <div class="candidate-level"><span class="lvl lvl-${esc(c.MatchLevel || 'none')}">${esc(label)}</span>${c.ScopeRu ? ' · ' + esc(c.ScopeRu) : ''}${Number.isFinite(c.Score) ? ' · балл ' + esc(c.Score) : ''}</div>
       ${reasons.length ? `<ul class="candidate-reasons">${reasons.map(reason => `<li>${esc(reason)}</li>`).join('')}</ul>` : ''}
       ${warnings.map(warning => `<span class="warn">${esc(warning)}</span>`).join('')}</div>`;
     const b = document.createElement('button');
@@ -822,6 +1091,7 @@ async function assign(ref, newRef, path, tr){
   try{
     await api('/api/map', {method:'POST', body:JSON.stringify({oldRef:ref, newRef})});
     log('Замена назначена → ' + path, 'ok');
+    toast('Замена назначена', 'ok');
     const tr2 = tr || document.querySelector(`tr[data-ref="${CSS.escape(ref)}"]`);
     const cand = tr2?.nextElementSibling;
     if(cand && cand.classList.contains('cand')) cand.remove();
@@ -885,8 +1155,13 @@ $('#bRestore').onclick = async () => {
       log('Отчёт миграции: ' + res.ReportPath, 'dim');
     }
     lastRestoredPath = res.DestMission || '';
+    if(lastRestoredPath){
+      $('#restoredPath').textContent = lastRestoredPath;
+      $('#restoredBox').style.display = '';
+    }
     if($('#bOpenFolder') && lastRestoredPath) $('#bOpenFolder').style.display = '';
     if($('#bValidateNow') && lastRestoredPath) $('#bValidateNow').style.display = '';
+    toast(res.BrokenCount ? `Миссия скопирована, но ${res.BrokenCount} ссылок не удалось заменить` : 'Миссия скопирована, все ссылки разрешаются', res.BrokenCount ? 'warn' : 'ok');
   }catch(e){ log('Ошибка копирования: ' + e.message, 'err'); }
   setBusy(false);
 };
