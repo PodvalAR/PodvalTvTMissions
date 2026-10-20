@@ -1,8 +1,3 @@
-Vehicle M1151_armed_M2HB_Tan_PAS13G1 : "{1032C5695C3FF4D9}Prefabs/Vehicles/Wheeled/M998/M1151_armed_M2HB_Tan_PAS13G.et" {
- coords 4897.591 37.761 4611.31
- angles 0 127.858 0
- m_sAttachmentGroupName "Pivo"
-}
 Vehicle LAV25_RHS_D1 : "{123595894023C474}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS_D.et" {
  coords 4875.542 37.336 4632.067
  angles 0 130.789 0
@@ -21,6 +16,9 @@ $grp Vehicle : "{2D74C39A650A3031}Prefabs/Vehicles/Wheeled/M923A1/M923A1_enginee
      }
     }
    }
+   SCR_VehicleDustPerWheel "{5476BC43E4910F64}" {
+    m_fDustTopSpeed 60
+   }
   }
   coords 4869.031 44.789 4674.471
  }
@@ -35,6 +33,9 @@ $grp Vehicle : "{2D74C39A650A3031}Prefabs/Vehicles/Wheeled/M923A1/M923A1_enginee
       NumSlots 50
      }
     }
+   }
+   SCR_VehicleDustPerWheel "{5476BC43E4910F64}" {
+    m_fDustTopSpeed 60
    }
   }
   coords 4862.766 37.362 4626.787
@@ -51,10 +52,18 @@ $grp Vehicle : "{2D74C39A650A3031}Prefabs/Vehicles/Wheeled/M923A1/M923A1_enginee
      }
     }
    }
+   SCR_VehicleDustPerWheel "{5476BC43E4910F64}" {
+    m_fDustTopSpeed 60
+   }
   }
   coords 4828.396 37.982 4586.851
   angles 0 -102.631 0
  }
+}
+Vehicle M1151_armed_M2HB_Tan_PAS13G1 : "{A88EC0EBCF4E54F5}Prefabs/Vehicles/Wheeled/M998/M1151_armed_M2HB_Tan_PAS13G.et" {
+ coords 4897.591 37.761 4611.31
+ angles 0 127.858 0
+ m_sAttachmentGroupName "Pivo"
 }
 $grp Vehicle : "{DE32642254476DD6}Prefabs/Vehicles/Wheeled/M1240A1_MATV/M1240A1_MATV_Turret_optic_pas13g_Tan.et" {
  M1240A1_MATV_Turret_optic_pas13g_Tan1 {
@@ -67,4 +76,8 @@ $grp Vehicle : "{DE32642254476DD6}Prefabs/Vehicles/Wheeled/M1240A1_MATV/M1240A1_
   angles 0 130.778 0
   m_sAttachmentGroupName "Pivo"
  }
+}
+Vehicle AH6M_Base1 : "{F5763805919D0553}Prefabs/Vehicles/Helicopters/AH6M/AH6M_Base.et" {
+ coords 4886.84 44.882 4677.889
+ angles 0 -165 0
 }
