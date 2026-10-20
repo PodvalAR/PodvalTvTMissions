@@ -1,0 +1,48 @@
+PolylineShapeEntity {
+ components {
+  PS_PolyZone "{6AA8F9AF3ABCE2B6}" {
+   m_mPolygonTexture "{62F4404928D33DB5}UI/layouts/Textures/Grid1b.edds"
+   m_cPolygonColor 0.376 0.471 0.749 1
+   m_fPolygonUVScale 3.96
+   m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+   m_cPolygonBorderColor 0 0.125 0.502 1
+   m_fPolygonBorderWidth 12
+   m_aVisibleForFactions {
+    "RHS_AFRF"
+    "RHS_USAF"
+    ""
+   }
+  }
+ }
+ coords 4376.963 17.844 4796.345
+ Points {
+  ShapePoint "{6AA71C39A92D1B83}" {
+   Position -250.921 -0 -240.428
+  }
+  ShapePoint "{6AA71C39A4959640}" {
+   Position -373.497 -0 -110.012
+  }
+  ShapePoint "{6AA71C39A0BE38CB}" {
+   Position 43.552 0 268.609
+  }
+  ShapePoint "{6AA71C39BB39B3CB}" {
+   Position 158.404 0 148.607
+  }
+ }
+ IsClosed 1
+}
+$grp SCR_EditorRestrictionZoneEntity : "{6144B0BE2EAC6897}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneMedium.et" {
+ {
+  coords 4215.398 17.971 4999.017
+ }
+ {
+  coords 4254.008 17.844 802.362
+ }
+ {
+  coords 4239.924 17.844 4769.563
+ }
+}
+SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+ coords 6001.585 23.603 6863.154
+ angles -1.262 0 0
+}

@@ -110,7 +110,7 @@ $grp SCR_AIGroup : "{B1E378B85225424B}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/MTV
    "{AEC67AECA3B4E70F}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/Char_RHS_USAF_Regular_Marksman_m27.et"
   }
  }
- SQUAD7 {
+ SQUAD7_recon {
   components {
    PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
     m_iCompanyCallsign 2
@@ -119,12 +119,13 @@ $grp SCR_AIGroup : "{B1E378B85225424B}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/MTV
   coords 4102.992 17.844 4320.259
   angles 0 -41.715 0
   m_aUnitPrefabSlots {
-   "{4055C74F1AF2931D}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/Char_RHS_USAF_Regular_SL.et"
-   "{47923D1E7C7429DE}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/Char_RHS_USAF_Regular_TL.et"
-   "{20084871DFC15824}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/Char_RHS_USAF_Regular_GL.et"
-   "{47923D1E7C7429DE}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/Char_RHS_USAF_Regular_TL.et"
-   "{0B697BCA54687A77}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/Char_RHS_USAF_Regular_AT_SMAW.et"
+   "{9B4D0736DB47A818}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/75th Ranger/Ranger_Modern/dim_US_Ranger_2014_SL.et"
+   "{9C8AFD67BDC112DB}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/75th Ranger/Ranger_Modern/dim_US_Ranger_2014_TL.et"
+   "{FB1088081E746321}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/75th Ranger/Ranger_Modern/dim_US_Ranger_2014_GL.et"
+   "{FB1088081E746321}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/75th Ranger/Ranger_Modern/dim_US_Ranger_2014_GL.et"
+   "{C4FD530A81D85F5D}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/75th Ranger/Ranger_Modern/dim_US_Ranger_2014_Marksman.et"
   }
+  m_sCustomNameSet "Отряд разведки"
  }
  SQUAD8_snipers {
   components {
@@ -138,5 +139,6 @@ $grp SCR_AIGroup : "{B1E378B85225424B}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/MTV
    "{4055C74F1AF2931D}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/Char_RHS_USAF_Regular_SL.et"
    "{283076EBB65C44DA}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/Regular/Char_RHS_USAF_Regular_Barret_Sniper.et"
   }
+  m_sCustomNameSet "Снайперский отряд"
  }
 }
