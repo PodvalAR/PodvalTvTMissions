@@ -1,0 +1,60 @@
+GenericEntity : "{7A333AFB11EA847A}Prefabs/System/DRG_VehicleDestroyPrefab.et" {
+ components {
+  DRG_VehicleDestroyComponent "{65733BD6110AE8FC}" {
+   m_aVehicleLossLogics {
+    VehicleLossLogic "{6AA969D78C1BA40B}" {
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "AFRF_1"
+      "AFRF_2"
+     }
+     m_sFailedObjectiveNames {
+      "USAF_1"
+      "USAF_2"
+     }
+     m_sVehicleEntityNames {
+      "M1083_Command_Tan1"
+      "M1083_Command_Tan2"
+     }
+     m_sMessage "РФ уничтожили все КШМ"
+    }
+   }
+  }
+ }
+ coords 4917.288 18.485 6914.289
+}
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ AFRF_1 {
+  coords 8090.522 7.515 5075.005
+  m_sTitle "КШМ №1 Уничтожена"
+  m_iScore 50
+  m_sFactionKey "RHS_AFRF"
+ }
+ AFRF_2 {
+  coords 8085.1 8.021 5068.365
+  m_sTitle "КШМ №2 Уничтожена"
+  m_sFactionKey "RHS_AFRF"
+ }
+ AFRF_3 {
+  coords 8078.686 7.823 5058.144
+  m_sTitle "Силы США разбиты"
+  m_sFactionKey "RHS_AFRF"
+ }
+ USAF_1 {
+  coords 8074.593 7.604 5048.575
+  m_sTitle "КШМ №1 удержана"
+  m_iScore 50
+  m_sFactionKey "RHS_USAF"
+ }
+ USAF_2 {
+  coords 8063.004 7.645 5033.369
+  m_sTitle "КШМ №2 Удержана"
+  m_iScore 50
+  m_sFactionKey "RHS_USAF"
+ }
+ USAF_3 {
+  coords 8049.574 7.264 5017.709
+  m_sTitle "ВС РФ Разибиты"
+  m_sFactionKey "RHS_USAF"
+ }
+}
