@@ -1,18 +1,30 @@
-PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
- coords 702.148 302.361 3897.109
- m_sTitle "Правила и задачи"
- m_sTextData "РФ запрещено покидать КРАСНЫЙ триггер"\
- ""\
- "Для захвата базы необходимо двукратное преимущество в ЗЕЛЁНОМ триггере на протяжении трёх минут."\
- ""\
- "Играйте честно!"
- m_aVisibleForFactions {
-  "RHS_AFRF"
-  "Ses_TKR"
-  ""
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ {
+  coords 702.148 302.361 3897.109
+  m_sTitle "Правила и задачи"
+  m_sTextData "РФ запрещено покидать КРАСНЫЙ триггер"\
+  ""\
+  "Для захвата базы необходимо двукратное преимущество в СИНЕМ триггере на протяжении трёх минут."\
+  ""\
+  "Играйте честно!"
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "Ses_TKR"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
  }
- m_bEmptyFactionVisibility 1
- m_bShowForAnyFaction 1
+ {
+  coords 2263.699 51.339 3951.642
+  m_sTitle "Дополнительно РФ"
+  m_sTextData "У РФ есть стационарные ПКМ"\
+  ""\
+  "Метки видит только фракция РФ"
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+  }
+ }
 }
 $grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
  TKR_WIN {
