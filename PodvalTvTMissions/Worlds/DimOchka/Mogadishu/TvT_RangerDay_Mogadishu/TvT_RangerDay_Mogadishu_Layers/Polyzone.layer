@@ -1,0 +1,146 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ {
+  coords 8267.328 57.438 6310.739
+  m_sTitle "Правила и задачи"
+  m_sDescriptionLayout "{41DAF7B7061DC0BC}UI/MissionDescription/DescriptionEditable.layout"
+  m_sTextData "ПРАВИЛА:"\
+  "0. Экипажи вертолетов первым делом должны высадить десант;"\
+  "1. Экипажу вертолетов разрешено заводить двигатели на фризтайме, но ЗАПРЕЩЕНО взлетать;"\
+  "2. Экипаж вертолетов MH-6 (Диско 1-1) должны высадить Delta Force, а после лететь на аэродром чтобы переодеться в обычных бойцов (метка снаряжение для пилотов) и ждать UH-60 для высадки. ТОЛЬКО В случае если вертолет будет уничтожен, на базе стоит хаммер (можете им воспользоваться) ;"\
+  "3. Экипаж UH-60 после высадки рейджеров должен вернуться на аэродром и забрать переодевшихся пилотов для след. высадки;"\
+  "4. Запрещено всем кроме пилотов (Диско 1-1) трогать снаряжение для пилотов и хаммер;"\
+  "5. Сомалийцам на тойоте ЗАПРЕЩЕНО садиться в машины до конца фриз-тайма."\
+  ""\
+  "ЗАДАЧИ:"\
+  "• США: "\
+  " 1. Удержать заложников."\
+  ""\
+  "• Сомалийцы:"\
+  " 1. Захватить заложников (захватить зону)."\
+  ""\
+  "*UH-60 Реально посадить на дорогу."
+  m_aVisibleForFactions {
+   "US"
+   "Ses_TKR"
+   "Ses_CDF"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+ }
+ {
+  coords 8267.328 57.438 6310.739
+  m_sTitle "Обстановка"
+  m_sTextData "1993 г."\
+  "Подразделения США выполняют задание по аресту и захвату двух членов правительства Сомали."
+  m_aVisibleForFactions {
+   "US"
+   "Ses_TKR"
+   "Ses_CDF"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+ }
+}
+$grp GenericEntity : "{3D78D7D606FF9818}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_NoCapture.et" {
+ flag1 {
+  coords 3139.836 31.556 2561.67
+ }
+ flag2 {
+  coords 3156.573 31.493 2499.747
+ }
+ flag3 {
+  coords 3071.538 31.555 2486.758
+ }
+ flag4 {
+  coords 3058.767 31.585 2536.217
+ }
+}
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{6AB0D9DD7C531D54}" {
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "TKA_WIN"
+     }
+     m_sFailedObjectiveNames {
+      "US_WIN"
+     }
+     m_sMessage "Заложники захвачены"
+     m_Timer GUB_ZoneControlTimer "{6AB0D9DD8C14A8BC}" {
+      timeToComplete 180
+     }
+     m_ZoneController GUB_ZoneController "{6AB0D9DD8E56EC8D}" {
+      m_sZoneEntityName "capture"
+     }
+     m_FlagController GUB_FlagController "{6AB0D9DD88652BB0}" {
+      m_aFlagNames {
+       "flag1"
+       "flag2"
+       "flag3"
+       "flag4"
+      }
+      m_fStartFactionKey "US"
+      m_fEndFactionKey "Ses_TKR"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{6AB0D9DD9602B96D}" {
+       m_sFirstFactionKey "Ses_TKR"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 3474.812 2 2407.45
+}
+PolylineShapeEntity capture : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
+ components {
+  PS_PolyZone "{60E90266F25533F6}" {
+   m_mPolygonTexture "{62F4404928D33DB5}UI/layouts/Textures/Grid1b.edds"
+   m_cPolygonColor 0 0.502 0.125 1
+   m_fPolygonUVScale 0.44
+   m_cPolygonBorderColor 0 0.125 0.502 1
+   m_aVisibleForFactions {
+    "US"
+    "Ses_TKR"
+    ""
+   }
+  }
+ }
+ coords 3068.518 3.436 2482.082
+ Points {
+  ShapePoint "{6AB0EA9DB11A068B}" {
+   Position -14.884 -0.441 56.212
+  }
+  ShapePoint "{6AB0EA9DB32A86BB}" {
+   Position 74.473 -0.436 82.658
+  }
+  ShapePoint "{6AB0EA9DB25E0C44}" {
+   Position 91.734 -0.436 13.738
+  }
+ }
+}
+PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+ coords 1566.625 2.005 1677.723
+ angles 0 90 0
+ m_MarkerColor 0.502 0 0 1
+ m_sQuadName "mark-exclamation"
+ m_fWorldSize 50
+ m_sDescription "Снаряжение для пилотов"
+ m_bUseWorldScale 0
+ m_aVisibleForFactions {
+  "US"
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 5547.709 15.194 4020.56
+}

@@ -1,0 +1,215 @@
+Vehicle YoyotaDJ78_Stripes1 : "{434523EA7BE44200}Prefabs/Vehicles/Wheeled/YoyotaDJ78/Variants/Stripes/YoyotaDJ78_Stripes.et" {
+ coords 4410.752 9.875 3953.406
+ angles 0 -150 0
+ m_sAttachmentGroupName "LOL2"
+}
+Vehicle YoyotaDJ78_turret1 : "{49256CFDDC33BBD4}Prefabs/Vehicles/Wheeled/YoyotaDJ78/YoyotaDJ78_turret.et" {
+ coords 4415.499 9.762 3963.225
+ angles -0.034 -154.388 -2.001
+ m_sAttachmentGroupName "LOL"
+}
+Vehicle YoyotaDJ78_turret_Desert1 : "{750D6A1E9D52FEB7}Prefabs/Vehicles/Wheeled/YoyotaDJ78/Variants/Desert/YoyotaDJ78_turret_Desert.et" {
+ coords 4428.243 9.5 3990.511
+ angles 0 -156.36 0
+ m_sAttachmentGroupName "MEM"
+}
+Vehicle YoyotaDJ78_transport_Tan1 : "{7AA9B33C7B718A14}Prefabs/Vehicles/Wheeled/YoyotaDJ78/Variants/Tan/YoyotaDJ78_transport_Tan.et" {
+ coords 4423.756 9.594 3980.458
+ angles 0 -155.049 0
+ m_sAttachmentGroupName "MEM"
+}
+$grp SCR_AIGroup : "{B2829E998DF41555}Prefabs/Groups/OPFOR/Ses_TKA/Group_A2F_TKA_Squad.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68E7468B5129FCA8}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 3150.776 11.936 3154.042
+  angles 0 -173.631 0
+  m_faction "Ses_TKR"
+  m_aUnitPrefabSlots {
+   "{833007A59429D956}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_SL_4.et"
+   "{4114F2E62B288D34}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL_1.et"
+   "{68C608E7EA187C05}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AT.et"
+   "{29B8977022F1ADF1}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AAT.et"
+   "{0E4342B1BA50DEE3}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_MG_1.et"
+   "{4860C7A306B8BD26}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AMG_1.et"
+   "{82583650C8E9B5B4}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman.et"
+   "{E71CF76A95D6667D}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Marksman_2.et"
+  }
+  m_sCustomNameSet "Сомалийский отряд"
+ }
+ LOL {
+  components {
+   PS_GroupCallsignAssigner "{68E7468B5129FCA8}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 4414 9.698 3975.19
+  angles 0 117.885 0
+  m_faction "Ses_TKR"
+  m_aUnitPrefabSlots {
+   "{B76349A4F3CDC755}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_SL_3.et"
+   "{2D40C60697EC021A}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL_2.et"
+   "{26FEDBB7E8B17764}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AT_1.et"
+   "{60DD5EA5545914A1}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AAT_1.et"
+   "{E279BF3CFDDE76BA}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_MG.et"
+   "{A30720AB3537A74E}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AMG.et"
+   "{DCB95034932A16B8}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman_1.et"
+   "{2C69E9F8133F4FF7}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Sapper_2.et"
+   "{58AE4C26D0517659}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Sniper_2.et"
+  }
+  m_sCustomNameSet "Сомалийский отряд на Тойоте"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68E7468B5129FCA8}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 3127.185 12.348 3152.573
+  angles 0 164.169 0
+  m_faction "Ses_TKR"
+  m_aUnitPrefabSlots {
+   "{3EAB31BD43ECDF10}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_SL_1.et"
+   "{C8DC8AFF9B099571}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL_3.et"
+   "{4AAAEF575475F84A}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AT_2.et"
+   "{E91526BCE4780CE4}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AAT_3.et"
+   "{F77ABDD02B6EE454}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AR_2.et"
+   "{4114F2E62B288D34}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL_1.et"
+   "{403DDD18AFFBC0D9}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Sapper_1.et"
+   "{D0E3CB03406978A3}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Marksman.et"
+  }
+  m_sCustomNameSet "Сомалийский отряд"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68E7468B5129FCA8}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 2835.024 15.011 3222.567
+  angles 0 162.311 0
+  m_faction "Ses_TKR"
+  m_aUnitPrefabSlots {
+   "{833007A59429D956}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_SL_4.et"
+   "{2D40C60697EC021A}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL_2.et"
+   "{68C608E7EA187C05}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AT.et"
+   "{29B8977022F1ADF1}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AAT.et"
+   "{F77ABDD02B6EE454}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AR_2.et"
+   "{BDBB1F0764260B73}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL.et"
+   "{878B3AA80A71C6A6}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_MG_3.et"
+   "{C1A8BFBAB699A563}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AMG_3.et"
+   "{08705F90B79D0BFA}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Sniper.et"
+  }
+  m_sCustomNameSet "Сомалийский отряд"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68E7468B5129FCA8}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 1
+   }
+  }
+  coords 2817.806 15.376 3216.351
+  angles 0 139.607 0
+  m_faction "Ses_TKR"
+  m_aUnitPrefabSlots {
+   "{3EAB31BD43ECDF10}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_SL_1.et"
+   "{2D40C60697EC021A}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL_2.et"
+   "{AF36A3AE58906F21}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AT_3.et"
+   "{29B8977022F1ADF1}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AAT.et"
+   "{F77ABDD02B6EE454}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AR_2.et"
+   "{BDBB1F0764260B73}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL.et"
+   "{82583650C8E9B5B4}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman.et"
+   "{0280BB939933F116}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Marksman_3.et"
+  }
+  m_sCustomNameSet "Сомалийский отряд"
+ }
+ MEM {
+  components {
+   PS_GroupCallsignAssigner "{68E7468B5129FCA8}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 4421.401 9.594 3990.985
+  angles 0 112.826 0
+  m_faction "Ses_TKR"
+  m_aUnitPrefabSlots {
+   "{52FF055DFF28503E}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_SL_2.et"
+   "{C8DC8AFF9B099571}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL_3.et"
+   "{4AAAEF575475F84A}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AT_2.et"
+   "{0C896A45E89D9B8F}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AAT_2.et"
+   "{878B3AA80A71C6A6}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_MG_3.et"
+   "{C1A8BFBAB699A563}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AMG_3.et"
+   "{B0ED64D42FEE9996}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman_2.et"
+   "{5571282D230B0EFD}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman_3.et"
+   "{0280BB939933F116}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Marksman_3.et"
+  }
+  m_sCustomNameSet "Сомалийский отряд на Тойоте"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68E7468B5129FCA8}" {
+    m_iCompanyCallsign 4
+   }
+  }
+  coords 3724.693 2.532 2682.913
+  angles 0 -112.577 0
+  m_faction "Ses_TKR"
+  m_aUnitPrefabSlots {
+   "{3EAB31BD43ECDF10}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_SL_1.et"
+   "{BDBB1F0764260B73}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL.et"
+   "{68C608E7EA187C05}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AT.et"
+   "{29B8977022F1ADF1}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AAT.et"
+   "{B06E612693916259}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AR.et"
+   "{DCB95034932A16B8}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman_1.et"
+   "{B0ED64D42FEE9996}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman_2.et"
+   "{D0E3CB03406978A3}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Marksman.et"
+  }
+  m_sCustomNameSet "Сомалийский отряд"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68E7468B5129FCA8}" {
+    m_iCompanyCallsign 4
+    m_iSquadCallsign 1
+   }
+  }
+  coords 3718.645 2.562 2697.57
+  angles 0 -112.952 0
+  m_faction "Ses_TKR"
+  m_aUnitPrefabSlots {
+   "{52FF055DFF28503E}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_SL_2.et"
+   "{BDBB1F0764260B73}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL.et"
+   "{68C608E7EA187C05}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AT.et"
+   "{29B8977022F1ADF1}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AAT.et"
+   "{F77ABDD02B6EE454}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AR_2.et"
+   "{5571282D230B0EFD}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman_3.et"
+   "{68450D15566787CA}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman_4.et"
+   "{E71CF76A95D6667D}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Marksman_2.et"
+  }
+  m_sCustomNameSet "Сомалийский отряд"
+ }
+ LOL2 {
+  components {
+   PS_GroupCallsignAssigner "{68E7468B5129FCA8}" {
+   }
+  }
+  coords 4405.001 9.698 3957.058
+  angles 0 118.799 0
+  m_faction "Ses_TKR"
+  m_aUnitPrefabSlots {
+   "{44F829A0BCF2F1DA}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_PL.et"
+  }
+  m_sCustomNameSet "Абдул Сахал"
+ }
+}
+Vehicle YoyotaDJ78_transport_Desert1 : "{EA1376958FDDDD7A}Prefabs/Vehicles/Wheeled/YoyotaDJ78/Variants/Desert/YoyotaDJ78_transport_Desert.et" {
+ coords 4419.408 9.678 3971.231
+ angles 1.218 -150.753 -0.344
+ m_sAttachmentGroupName "LOL"
+}
