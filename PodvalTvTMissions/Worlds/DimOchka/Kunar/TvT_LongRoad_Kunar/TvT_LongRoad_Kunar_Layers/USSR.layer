@@ -1,0 +1,231 @@
+$grp SCR_AIGroup : "{010788F1C78D41E8}Prefabs/Groups/OPFOR/USSR/dim_Group_USSR_GRU_Afgan.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B351898A1AB}" {
+    m_iCompanyCallsign 4
+    m_iSquadCallsign 1
+   }
+  }
+  coords 1377.158 349.604 682.381
+  angles 0 15 0
+ }
+ GRU {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B351898A1AB}" {
+    m_iCompanyCallsign 4
+   }
+  }
+  coords 2792.769 170 1461.124
+  angles 0 105 0
+  m_aUnitPrefabSlots {
+   "{7DEC152966199C3D}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/Afgan/Cover/dim_GRU_Afgan_C_SL.et"
+   "{1DB19A17A32A5704}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/Afgan/Cover/dim_GRU_Afgan_C_GL.et"
+   "{CE8D632B799573AD}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/Afgan/Cover/dim_GRU_Afgan_C_Sapper.et"
+   "{B9E234D082625A7F}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/Afgan/Cover/dim_GRU_Afgan_C_RFL.et"
+   "{42733A2C3AD22ACD}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/Afgan/Cover/dim_GRU_Afgan_C_MG.et"
+   "{A000FB4A4EBA3C47}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_SPN_KZS/Afgan/Cover/dim_GRU_Afgan_C_Sniper.et"
+  }
+ }
+}
+Vehicle dim_UAZ1 : "{0ACA2ED6AD52D641}Prefabs/Vehicles/Wheeled/UAZ469/dim_UAZ469.et" {
+ coords 1045.076 289.974 1773.284
+ angles 0.947 86.565 0.84
+ m_sAttachmentGroupName "PL"
+}
+$grp Vehicle : "{1A0461D666A83FB0}Prefabs/Vehicles/Wheeled/YoyotaDJ78/dim_YoyotaDJ78_KORD.et" {
+ dim_YoyotaDJ78_KORD1 {
+  coords 2794.52 170 1457.16
+  angles 0 -165 0
+  m_sAttachmentGroupName "GRU"
+ }
+ dim_YoyotaDJ78_KORD2 {
+  coords 2796.746 170 1465.468
+  angles 0 -165 0
+  m_sAttachmentGroupName "GRU"
+ }
+}
+Vehicle Ural4320_ammo1 : "{3336BE330C4F355B}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_ammo.et" {
+ coords 1035.964 290 1831.144
+ angles 0 180 0
+ m_sAttachmentGroupName "btr5"
+ m_bEnableMoveOnFreeze 1
+}
+$grp Vehicle : "{3ADAB98297CE0203}Prefabs/Vehicles/Wheeled/Ural_4320_Grad/BM 21-1_Base.et" {
+ BM_21_1_Base2 {
+  coords 1031.708 290.05 1832.42
+  angles 0 -180 0
+  m_sAttachmentGroupName "btr5"
+  m_bEnableMoveOnFreeze 1
+ }
+ BM_21_1_Base1 {
+  coords 1040.14 290 1832.386
+  angles 0 -160.391 0
+  m_sAttachmentGroupName "btr5"
+  m_bEnableMoveOnFreeze 1
+ }
+}
+$grp SCR_AIGroup : "{47C53385C6FABFC2}Prefabs/Groups/OPFOR/USSR/dim_Group_USSR_Rifle_SQ_2.et" {
+ ural {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 1034.365 291.884 1805.358
+  angles 0 -91.526 0
+  m_aUnitPrefabSlots {
+   "{EBBC0835E2E8A83B}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Afgan/dim_USSR_Afgan_SL_3.et"
+   "{24CCD378324BA97B}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Afgan/dim_USSR_Afgan_SR_3.et"
+   "{60E4C27439471D8C}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Afgan/dim_USSR_Afgan_RTO.et"
+   "{813D163670EFBC95}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Afgan/dim_USSR_Afgan_MG.et"
+   "{36C0FBF0356CF90A}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Afgan/dim_USSR_Afgan_AMG.et"
+   "{71274F5678AB956E}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Afgan/dim_USSR_Afgan_LAT.et"
+   "{017C115E1EC9330E}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Afgan/dim_USSR_Afgan_Medic.et"
+   "{E876D8F9CD1D1AB3}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Afgan/dim_USSR_Afgan_Rifleman.et"
+   "{3280A28FD5A5D95E}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Afgan/dim_USSR_Afgan_Sniper_2.et"
+  }
+  m_sCustomNameSet "Отделение ВДВ"
+ }
+ PL {
+  coords 1044.011 291.603 1777.102
+  angles 0 -180 0
+  m_aUnitPrefabSlots {
+   "{27BC80AA31C33BF5}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Afgan/dim_USSR_Afgan_PL.et"
+  }
+  m_sCustomNameSet "Командир колонны"
+ }
+}
+$grp Vehicle : "{4C81D7ED8F8C0D87}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_tanker.et" {
+ Ural4320_tanker1 {
+  coords 1028.491 290 1808.181
+  angles 0 -179.576 0
+  m_sAttachmentGroupName "ural"
+ }
+ Ural4320_tanker2 {
+  coords 1028.726 290 1817.723
+  angles 0 -179.576 0
+  m_sAttachmentGroupName "ural"
+ }
+}
+$grp SCR_AIGroup : "{670E9081FC7E6B27}Prefabs/Groups/OPFOR/USSR/dim_Group_USSR_BTR_SQ.et" {
+ btr {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 1038.516 291.974 1776.831
+  angles 0 177.101 0
+  m_sCustomNameSet "Отделение на БТР-70"
+ }
+ btr2 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 1024.978 291.836 1775.181
+  angles 0 167.273 0
+  m_aUnitPrefabSlots {
+   "{BEA239332C240A65}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Afgan/dim_USSR_Afgan_SL.et"
+   "{24CCD378324BA97B}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Afgan/dim_USSR_Afgan_SR_3.et"
+   "{813D163670EFBC95}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Afgan/dim_USSR_Afgan_MG.et"
+   "{36C0FBF0356CF90A}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Afgan/dim_USSR_Afgan_AMG.et"
+   "{7686AFA8B74D959C}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Afgan/dim_USSR_Afgan_Rifleman_2.et"
+   "{E876D8F9CD1D1AB3}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Afgan/dim_USSR_Afgan_Rifleman.et"
+   "{017C115E1EC9330E}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Afgan/dim_USSR_Afgan_Medic.et"
+   "{DFD2F34C744ACF0A}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Afgan/dim_USSR_Afgan_CC.et"
+   "{7DE3DB256DCC5CB6}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_CREW_RANDOM.et"
+  }
+  m_sCustomNameSet "Отделение на БТР-70"
+ }
+ btr3 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 1029.021 291.884 1829.723
+  angles 0 -89.786 0
+  m_aUnitPrefabSlots {
+   "{0E2044CCEE0D3F50}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Afgan/dim_USSR_Afgan_SL_2.et"
+   "{C3BAD5CB49B736FC}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Afgan/dim_USSR_Afgan_SR.et"
+   "{60E4C27439471D8C}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Afgan/dim_USSR_Afgan_RTO.et"
+   "{0B82A1ED6729B62A}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Afgan/dim_USSR_Afgan_AT.et"
+   "{BC7F4C2B22AAF3B5}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Afgan/dim_USSR_Afgan_AAT.et"
+   "{7686AFA8B74D959C}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Afgan/dim_USSR_Afgan_Rifleman_2.et"
+   "{017C115E1EC9330E}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Afgan/dim_USSR_Afgan_Medic.et"
+  }
+  m_sCustomNameSet "Отделение на БТР-70"
+ }
+ btr4 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 1020.281 291.929 1841.724
+  angles 0 88.955 0
+  m_aUnitPrefabSlots {
+   "{BEA239332C240A65}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Afgan/dim_USSR_Afgan_SL.et"
+   "{24CCD378324BA97B}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Afgan/dim_USSR_Afgan_SR_3.et"
+   "{813D163670EFBC95}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Afgan/dim_USSR_Afgan_MG.et"
+   "{36C0FBF0356CF90A}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Afgan/dim_USSR_Afgan_AMG.et"
+   "{7686AFA8B74D959C}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Afgan/dim_USSR_Afgan_Rifleman_2.et"
+   "{E876D8F9CD1D1AB3}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Afgan/dim_USSR_Afgan_Rifleman.et"
+   "{017C115E1EC9330E}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Afgan/dim_USSR_Afgan_Medic.et"
+   "{DFD2F34C744ACF0A}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Afgan/dim_USSR_Afgan_CC.et"
+   "{7DE3DB256DCC5CB6}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_CREW_RANDOM.et"
+  }
+  m_sCustomNameSet "Отделение на БТР-70"
+ }
+ btr5 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 1035.309 290 1823.583
+  angles 0 1.928 0
+  m_aUnitPrefabSlots {
+   "{BEA239332C240A65}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Afgan/dim_USSR_Afgan_SL.et"
+   "{60E4C27439471D8C}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Afgan/dim_USSR_Afgan_RTO.et"
+   "{7686AFA8B74D959C}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Afgan/dim_USSR_Afgan_Rifleman_2.et"
+   "{E876D8F9CD1D1AB3}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Afgan/dim_USSR_Afgan_Rifleman.et"
+  }
+  m_sCustomNameSet "Экипаж БМ-21 \"Град\""
+ }
+}
+$grp Vehicle : "{C012BB3488BEA0C2}Prefabs/Vehicles/Wheeled/BTR70/BTR70.et" {
+ BTR1 {
+  coords 1034.001 289.875 1771.321
+  angles 0 75.596 0
+  m_sAttachmentGroupName "btr"
+ }
+ BTR2 {
+  coords 1023.501 289.875 1768.645
+  angles 0 75.582 0
+  m_sAttachmentGroupName "btr2"
+ }
+ BTR4 {
+  coords 1024.277 289.947 1839.26
+  angles 0 177.782 0
+  m_sAttachmentGroupName "btr4"
+ }
+}
+$grp Vehicle : "{D9B91FAB817A6033}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_covered.et" {
+ Ural4320_transport_covered1 {
+  coords 1028.322 289.869 1797.61
+  angles 0 177.417 0
+  m_sAttachmentGroupName "ural"
+ }
+ Ural4320_transport_covered2 {
+  coords 1025.91 290.032 1827.849
+  angles 0 154.225 0
+  m_sAttachmentGroupName "btr3"
+ }
+}
