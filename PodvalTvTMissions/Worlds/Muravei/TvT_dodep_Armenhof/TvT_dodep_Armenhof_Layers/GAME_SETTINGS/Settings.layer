@@ -29,8 +29,8 @@ GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactions
      }
      m_aConditions {
       GUB_ZoneControlBetweenFactionsCondition "{6AB2912BB273D656}" {
-       m_sFirstFactionKey "Drg_VCA"
-       m_sSecondFactionKey "Ses_TKR"
+       m_sFirstFactionKey "Ses_TKR"
+       m_sSecondFactionKey "Drg_VCA"
        m_fComparisonMultiplier 2
       }
      }
@@ -44,11 +44,15 @@ $grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
  VCA_Win {
   coords 3710.421 365.641 1423.46
   m_sTitle "Город захвачен"
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
   m_sFactionKey "Drg_VCA"
  }
- VCA_Win2 {
+ TKR_Win2 {
   coords 3687.52 366.625 1418.382
   m_sTitle "Город Удержан"
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
   m_sFactionKey "Ses_TKR"
  }
 }
