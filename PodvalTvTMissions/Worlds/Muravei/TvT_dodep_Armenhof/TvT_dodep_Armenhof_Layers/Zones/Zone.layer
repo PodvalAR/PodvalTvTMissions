@@ -230,19 +230,54 @@ PolylineShapeEntity Capture {
    Position -1.059 0.107 -2.78
   }
   ShapePoint "{6AB17D88B6BC2906}" {
-   Position -0.466 0.05 -2.282
-  }
-  ShapePoint "{6AB17D88B49FAE1E}" {
-   Position -0.077 0.03 -1.587
-  }
-  ShapePoint "{6AB17D88B31F1672}" {
-   Position 0.049 0.025 -0.998
-  }
-  ShapePoint "{6AB17D88B3BF826C}" {
-   Position 0.061 0.019 -0.591
+   Position 0.351 0.044 -1.311
   }
  }
  IsClosed 1
+}
+$grp GenericEntity : "{3D78D7D606FF9818}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_NoCapture.et" {
+ Flag1 {
+  coords 1947.551 379.024 771.102
+  angles 0 147.24 0
+ }
+ Flag2 {
+  coords 1862.435 365.273 828.641
+  angles 0 43.63 0
+ }
+}
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{6AB29128A2BAC270}" {
+     m_sZonePreviewName "Арменхоф"
+     m_Timer GUB_ZoneControlTimer "{6AB2912841814DA0}" {
+      timeToComplete 120
+     }
+     m_ZoneController GUB_ZoneController "{6AB2912859EEA0A2}" {
+      m_sZoneEntityName "Capture"
+     }
+     m_FlagController GUB_FlagController "{6AB291282C7AC5C2}" {
+      m_aFlagNames {
+       "Flag1"
+       "Flag2"
+      }
+      m_fStartFactionKey "Ses_TKR"
+      m_fEndFactionKey "Drg_VCA"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{6AB2912BB273D656}" {
+       m_sFirstFactionKey "Drg_VCA"
+       m_sSecondFactionKey "Ses_TKR"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 3195.195 357.761 57.74
 }
 SCR_EditorRestrictionZoneEntity : "{6144B0BE2EAC6897}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneMedium.et" {
  coords 228.838 321.615 1326.831

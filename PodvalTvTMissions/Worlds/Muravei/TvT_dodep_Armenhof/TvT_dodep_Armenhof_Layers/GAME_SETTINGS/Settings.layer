@@ -11,20 +11,46 @@ GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactions
  components {
   GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
    m_aControlLogics {
-    GUB_ZoneControlLogic "{6AB17D8D3666B948}" {
+    GUB_ZoneControlLogic "{6AB29128A2BAC270}" {
      m_sZonePreviewName "Арменхоф"
-     m_bAdvanceGameStage 1
-     m_sSuccessObjectiveNames {
-      ""
+     m_Timer GUB_ZoneControlTimer "{6AB2912841814DA0}" {
+      timeToComplete 120
      }
-     m_sFailedObjectiveNames {
-      ""
+     m_ZoneController GUB_ZoneController "{6AB2912859EEA0A2}" {
+      m_sZoneEntityName "Capture"
+     }
+     m_FlagController GUB_FlagController "{6AB291282C7AC5C2}" {
+      m_aFlagNames {
+       "Flag1"
+       "Flag2"
+      }
+      m_fStartFactionKey "Ses_TKR"
+      m_fEndFactionKey "Drg_VCA"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{6AB2912BB273D656}" {
+       m_sFirstFactionKey "Drg_VCA"
+       m_sSecondFactionKey "Ses_TKR"
+       m_fComparisonMultiplier 2
+      }
      }
     }
    }
   }
  }
- coords 3826.49 369.498 228.028
+ coords 3195.195 357.761 57.74
+}
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ VCA_Win {
+  coords 3710.421 365.641 1423.46
+  m_sTitle "Город захвачен"
+  m_sFactionKey "Drg_VCA"
+ }
+ VCA_Win2 {
+  coords 3687.52 366.625 1418.382
+  m_sTitle "Город Удержан"
+  m_sFactionKey "Ses_TKR"
+ }
 }
 GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
  coords 3819.532 370.866 217.394
