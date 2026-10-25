@@ -1,0 +1,128 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ {
+  coords 8267.328 57.438 6310.739
+  m_sTitle "Правила и задачи"
+  m_sDescriptionLayout "{41DAF7B7061DC0BC}UI/MissionDescription/DescriptionEditable.layout"
+  m_sTextData "ПРАВИЛА:"\
+  "1. Пилоты (по желанию) могут сдаться Сомалийцам."\
+  ""\
+  "ЗАДАЧИ:"\
+  "• США: "\
+  " 1. Удержать место падения;"\
+  " 2. Пилоты живы."\
+  ""\
+  "• Сомалийцы:"\
+  " 1. Захватить место падения;"\
+  " 2. Пилоты захвачены (убиты)."
+  m_aVisibleForFactions {
+   "US"
+   "Ses_TKR"
+   "Ses_CDF"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+ }
+ {
+  coords 8267.328 57.438 6310.739
+  m_sTitle "Обстановка"
+  m_sTextData "1993 г."\
+  "Упал черный ястрел с позывным \"Супер-61\". США пытаются удержать место падения от наступающих боевиков."
+  m_aVisibleForFactions {
+   "US"
+   "Ses_TKR"
+   "Ses_CDF"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+ }
+ {
+  coords 8267.328 57.438 6310.739
+  m_sTitle "ВАЖНО"
+  m_sTextData "Миссия ночная, внимательно смотрите в кого стреляете. "\
+  "США все в пустынном камуфляже и в касках."
+  m_aVisibleForFactions {
+   "US"
+   "Ses_TKR"
+   "Ses_CDF"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+ }
+}
+GenericEntity flag1 : "{3D78D7D606FF9818}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_NoCapture.et" {
+ coords 2857.241 12.082 2863.484
+}
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{6AB0D9DD7C531D54}" {
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "TKA_WIN"
+     }
+     m_sFailedObjectiveNames {
+      "US_WIN"
+     }
+     m_sMessage "Место падение захвачено"
+     m_Timer GUB_ZoneControlTimer "{6AB0D9DD8C14A8BC}" {
+      timeToComplete 180
+     }
+     m_ZoneController GUB_ZoneController "{6AB0D9DD8E56EC8D}" {
+      m_sZoneEntityName "capture"
+     }
+     m_FlagController GUB_FlagController "{6AB0D9DD88652BB0}" {
+      m_aFlagNames {
+       "flag1"
+      }
+      m_fStartFactionKey "US"
+      m_fEndFactionKey "Ses_TKR"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{6AB0D9DD9602B96D}" {
+       m_sFirstFactionKey "Ses_TKR"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 3474.812 2 2407.45
+}
+PolylineShapeEntity capture : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
+ components {
+  PS_PolyZone "{60E90266F25533F6}" {
+   m_cPolygonColor 0.655 0.875 0.71 1
+   m_fPolygonUVScale 0.44
+   m_cPolygonBorderColor 0 0.125 0.502 1
+   m_aVisibleForFactions {
+    "US"
+    "Ses_TKR"
+    ""
+   }
+  }
+ }
+ coords 2820.707 7.753 2868.735
+ Points {
+  ShapePoint "{6AB1331AC8350245}" {
+   Position 40.909 0.339 13.154
+  }
+  ShapePoint "{6AB1331ACA835F43}" {
+   Position 58.855 -1.32 -51.631
+  }
+  ShapePoint "{6AB1331AD5295C27}" {
+   Position 17.851 -1.584 -64.329
+  }
+ }
+ LineColor 1 1 1 1
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 5547.709 15.194 4020.56
+}
