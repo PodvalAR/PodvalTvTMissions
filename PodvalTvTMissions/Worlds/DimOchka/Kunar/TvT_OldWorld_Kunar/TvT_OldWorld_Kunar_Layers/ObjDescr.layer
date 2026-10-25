@@ -1,0 +1,225 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ {
+  coords 6876.31 5.565 6301.583
+  m_sTitle "Правила и задачи"
+  m_sTextData "ПРАВИЛА:"\
+  "1. Экипажу вертолета разрешено садиться в вертолет только после конца фриз-тайма;"\
+  "2. СССР запрещено трогать ЗУ-23, можно садиться только боевикам;"\
+  "3. СССР запрещено специально взрывать ЗУ-23 (напр. чтобы не досталась противнику);"\
+  "4. Всем запрещено садиться в Ми-8."\
+  ""\
+  "ЗАДАЧИ:"\
+  "• СССР: "\
+  " 1. Удержать аэродром."\
+  ""\
+  "• Моджахеды:"\
+  " 1. Захватить аэродром."\
+  ""\
+  "Дополнительно:"\
+  "1. У Моджахедов есть 2 ПЗРК + могут захватить Урал с ЗУ-23 на аэродроме."
+  m_aVisibleForFactions {
+   "USSR"
+   "RHS_ION"
+   "Ses_TKR"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+ }
+ {
+  coords 6876.31 5.565 6301.583
+  m_sTitle "Обстановка"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "2026 г."\
+  "После серии нападений на американские военные объекты и союзные конвои разведка США установила личности трёх полевых командиров, руководящих деятельностью боевиков в провинции Кунар. Именно они координируют нападения, организуют поставки оружия и вербуют новых бойцов."\
+  "Из-за политических рисков, проведение открытой военной операции признано нецелесообразным. Вместо этого США заключили контракт с ЧВК «ИОН», назначив награду в 5 000 долларов за каждого ликвидированного командира."\
+  ""
+  m_aVisibleForFactions {
+   "USSR"
+   "RHS_ION"
+   "Ses_TKR"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+ }
+}
+$grp GenericEntity : "{3D78D7D606FF9818}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_NoCapture.et" {
+ flag1 {
+  coords 2727.662 22.598 3122.482
+  angles 0 79.607 0
+ }
+ flag2 {
+  coords 2768.69 24.427 2979.119
+  angles 0 79.607 0
+ }
+ flag3 {
+  coords 2591.23 17.187 3214.945
+  angles 0 148.383 0
+ }
+}
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{6AB29B53F23A9E15}" {
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "TKR_WIN"
+     }
+     m_sFailedObjectiveNames {
+      "USSR_WIN"
+     }
+     m_sMessage "Аэродром захвачен"
+     m_Timer GUB_ZoneControlTimer "{6AB29B5207BC392A}" {
+      timeToComplete 180
+     }
+     m_ZoneController GUB_ZoneController "{6AB29B5206290164}" {
+      m_sZoneEntityName "capture"
+     }
+     m_FlagController GUB_FlagController "{6AB29B52007FC392}" {
+      m_aFlagNames {
+       "flag1"
+       "flag2"
+       "flag3"
+      }
+      m_fStartFactionKey "USSR"
+      m_fEndFactionKey "Ses_TKR"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{6AB29B520A530BB7}" {
+       m_sFirstFactionKey "Ses_TKR"
+       m_sSecondFactionKey "USSR"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 2589.084 82.615 3956.019
+}
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ USSR_WIN {
+  coords 3829.863 28 3425.816
+  m_sTitle "Аэродром удержан"
+  m_sFactionKey "USSR"
+ }
+ TKR_WIN {
+  coords 3834.272 28 3404.242
+  m_sTitle "Аэродром захвачен"
+  m_sFactionKey "Ses_TKR"
+ }
+}
+PolylineShapeEntity capture : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
+ components {
+  PS_PolyZone "{60E90266F25533F6}" {
+   m_cPolygonColor 0.749 0.376 0.376 0.687
+   m_fPolygonUVScale 0.44
+   m_cPolygonBorderColor 0.502 0 0 1
+   m_fPolygonBorderWidth 12
+   m_aVisibleForFactions {
+    "USSR"
+    "Ses_TKR"
+    ""
+   }
+  }
+ }
+ coords 3190.546 10 3035.486
+ Points {
+  ShapePoint "{6AB29B416D530058}" {
+   Position -57.425 0.61 -90.816
+  }
+  ShapePoint "{6AB29B416F2401C6}" {
+   Position -183.44 0 -98.273
+  }
+  ShapePoint "{6AB29B416F7B9CEA}" {
+   Position -187.393 0.004 -99.767
+  }
+  ShapePoint "{6AB29B4169B2480C}" {
+   Position -239.126 0.168 -132.564
+  }
+  ShapePoint "{6AB29B41689A8E18}" {
+   Position -314.064 0.189 -94.274
+  }
+  ShapePoint "{6AB29B416BA2DE9E}" {
+   Position -329.298 0.03 -57.399
+  }
+  ShapePoint "{6AB29B416A2628CC}" {
+   Position -388.891 0 -4.803
+  }
+  ShapePoint "{6AB29B41719A766A}" {
+   Position -435.469 -1.21 -74.753
+  }
+  ShapePoint "{6AB29B4170B3A271}" {
+   Position -470.772 -1.175 -70.874
+  }
+  ShapePoint "{6AB29B4173EE3DCF}" {
+   Position -546.443 -2 -18.983
+  }
+  ShapePoint "{6AB29B417CC18AEF}" {
+   Position -567.743 -1.937 18.989
+  }
+  ShapePoint "{6AB29B417989D413}" {
+   Position -550.095 -2.699 50.426
+  }
+  ShapePoint "{6AB29B417882F1B0}" {
+   Position -577.233 -5.055 70.218
+  }
+  ShapePoint "{6AB29B417B981643}" {
+   Position -527.132 0 141.95
+  }
+  ShapePoint "{6AB29B417AEA8687}" {
+   Position -543.773 0 151.844
+  }
+  ShapePoint "{6AB29B417A3E426B}" {
+   Position -550.827 0 151.344
+  }
+  ShapePoint "{6AB29B4184B18E29}" {
+   Position -566.302 0 145.855
+  }
+  ShapePoint "{6AB29B41841DAD13}" {
+   Position -574.953 -0.014 144.416
+  }
+  ShapePoint "{6AB29B4184565620}" {
+   Position -581.933 -0.209 144.527
+  }
+  ShapePoint "{6AB29B41871D9E52}" {
+   Position -589.662 -0.104 147.352
+  }
+  ShapePoint "{6AB29B4181D6DD39}" {
+   Position -802.685 8.032 277.161
+  }
+  ShapePoint "{6AB29B4182A634BD}" {
+   Position -735.891 15.067 384.528
+  }
+  ShapePoint "{6AB29B418C03A87C}" {
+   Position -728.386 18.617 399.978
+  }
+  ShapePoint "{6AB29B418C4B538E}" {
+   Position -722.22 18.341 397.863
+  }
+  ShapePoint "{6AB29B418FFF5728}" {
+   Position -713.372 18.272 416.302
+  }
+  ShapePoint "{6AB29B4189F9B230}" {
+   Position -697.574 13.849 432.483
+  }
+  ShapePoint "{6AB29B418A0E0AAC}" {
+   Position -656.739 15.236 417.464
+  }
+  ShapePoint "{6AB29B419C52D137}" {
+   Position -622.082 7.635 401.261
+  }
+  ShapePoint "{6AB29B4195A5D032}" {
+   Position -603.997 1.628 389.971
+  }
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 5547.709 75.207 4020.56
+}
