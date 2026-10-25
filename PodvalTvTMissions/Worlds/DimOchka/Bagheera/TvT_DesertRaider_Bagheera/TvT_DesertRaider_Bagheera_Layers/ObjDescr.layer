@@ -1,0 +1,271 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ {
+  coords 736.284 137.096 5024.601
+  m_sTitle "Правила и задачи"
+  m_sDescriptionLayout "{41DAF7B7061DC0BC}UI/MissionDescription/DescriptionEditable.layout"
+  m_sTextData "ПРАВИЛА:"\
+  "Правила проекта."\
+  ""\
+  "ЗАДАЧИ:"\
+  "• США: "\
+  " 1. Удержать мост;"\
+  " 2. Удержать опорный пункт."\
+  ""\
+  "• ТКA:"\
+  " 1. Захватить мост;"\
+  " 2. Захватить опорный пункт."\
+  ""\
+  "Дополнительно:"\
+  "1. У США 2 ПТУРа по 1 снаряду, миномет с SOFLAM, SMAW. "\
+  "2. SMAWы без прицела."
+  m_aVisibleForFactions {
+   "RHS_USAF"
+   "Ses_TKA"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+ }
+ {
+  coords 736.284 137.096 5024.601
+  m_sTitle "Обстановка"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "В мире идет противостояние Такистана и США. "\
+  ""\
+  "После тяжелых боев за главное шоссе к столице, морпехи США успешно закрепились на нем, однако враг не дремлет и стягивает к точке 3-е Мотострелковое подразделение Такистанской армии \"Пустынные рейдеры\" для ответного удара."\
+  ""\
+  "К сожалению, из-за надвигающейся песчаной бури, поддержка с воздуха недоступна."
+  m_aVisibleForFactions {
+   "RHS_USAF"
+   "Ses_TKA"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+ }
+}
+$grp GenericEntity : "{3D78D7D606FF9818}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_NoCapture.et" {
+ flag1 {
+  coords 4000.857 61.197 3142.168
+ }
+ flag2 {
+  coords 4013.606 60.236 3233.141
+ }
+ flag3 {
+  coords 3694.39 67.177 3302.241
+ }
+ flag4 {
+  coords 3750.934 63.365 3353.356
+ }
+}
+$grp GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ {
+  components {
+   GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+    m_aControlLogics {
+     GUB_ZoneControlLogic "{6A78E321824E3B6E}" {
+      m_sSuccessObjectiveNames {
+       "TKR_WIN2"
+      }
+      m_sFailedObjectiveNames {
+       "USAF_WIN2"
+      }
+      m_Timer GUB_ZoneControlTimer "{6A78E3218C62278A}" {
+       timeToComplete 120
+      }
+      m_ZoneController GUB_ZoneController "{6A78E3218E0A5611}" {
+       m_sZoneEntityName "capture"
+      }
+      m_FlagController GUB_FlagController "{6A78E32189B16AD3}" {
+       m_aFlagNames {
+        "flag1"
+        "flag2"
+       }
+       m_fStartFactionKey "RHS_USAF"
+       m_fEndFactionKey "Ses_TKA"
+      }
+      m_aConditions {
+       GUB_ZoneControlBetweenFactionsCondition "{6A78E32199B47786}" {
+        m_sFirstFactionKey "Ses_TKA"
+        m_sSecondFactionKey "RHS_USAF"
+        m_fComparisonMultiplier 2
+        m_iOperator GREATER
+       }
+      }
+     }
+    }
+   }
+  }
+  coords 4995.569 261.645 1467.845
+ }
+ {
+  components {
+   GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+    m_aControlLogics {
+     GUB_ZoneControlLogic "{6A78E321824E3B6E}" {
+      m_sSuccessObjectiveNames {
+       "TKR_WIN"
+      }
+      m_sFailedObjectiveNames {
+       "USAF_WIN"
+      }
+      m_Timer GUB_ZoneControlTimer "{6A78E3218C62278A}" {
+       timeToComplete 150
+      }
+      m_ZoneController GUB_ZoneController "{6A78E3218E0A5611}" {
+       m_sZoneEntityName "capture2"
+      }
+      m_FlagController GUB_FlagController "{6A78E32189B16AD3}" {
+       m_aFlagNames {
+        "flag3"
+        "flag4"
+       }
+       m_fStartFactionKey "RHS_USAF"
+       m_fEndFactionKey "Ses_TKA"
+      }
+      m_aConditions {
+       GUB_ZoneControlBetweenFactionsCondition "{6A78E32199B47786}" {
+        m_sFirstFactionKey "Ses_TKA"
+        m_sSecondFactionKey "RHS_USAF"
+        m_fComparisonMultiplier 2
+        m_iOperator GREATER
+       }
+      }
+     }
+    }
+   }
+  }
+  coords 4995.569 261.645 1467.845
+ }
+}
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ USAF_WIN {
+  coords 4448.621 133.538 6688.524
+  m_sTitle "Опорный пункт удержан"
+  m_iScore 50
+  m_sFactionKey "RHS_USAF"
+ }
+ TKA_WIN {
+  coords 4446.063 133.538 6666.788
+  m_sTitle "Опорный пункт захвачен"
+  m_iScore 50
+  m_sFactionKey "Ses_TKA"
+ }
+ TKA_WIN2 {
+  coords 4446.063 133.538 6666.788
+  m_sTitle "Мост  захвачен"
+  m_iScore 50
+  m_sFactionKey "Ses_TKA"
+ }
+ USAF_WIN2 {
+  coords 4448.621 133.538 6688.524
+  m_sTitle "Мост удержан"
+  m_iScore 50
+  m_sFactionKey "RHS_USAF"
+ }
+}
+$grp PolylineShapeEntity : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
+ capture {
+  components {
+   PS_PolyZone "{60E90266F25533F6}" {
+    m_cPolygonColor 0.506 0.584 0.812 1
+    m_fPolygonUVScale 0.44
+    m_cPolygonBorderColor 0 0.125 0.502 1
+    m_aVisibleForFactions {
+     "RHS_USAF"
+     "Ses_TKA"
+     ""
+    }
+   }
+  }
+  coords 3999.754 58.953 3246.275
+  Points {
+   ShapePoint "{6AB2E84F7C999BB2}" {
+    Position 13.725 0.023 0.075
+   }
+   ShapePoint "{6AB2E84F7EF8B1A5}" {
+    Position 13.813 -0.058 -123.056
+   }
+   ShapePoint "{6AB2E84F7E4E7048}" {
+    Position 0.241 -0.058 -123.103
+   }
+  }
+ }
+ capture2 {
+  components {
+   PS_PolyZone "{60E90266F25533F6}" {
+    m_cPolygonColor 0.506 0.584 0.812 1
+    m_fPolygonUVScale 0.44
+    m_cPolygonBorderColor 0 0.125 0.502 1
+    m_aVisibleForFactions {
+     "RHS_USAF"
+     "Ses_TKA"
+     ""
+    }
+   }
+  }
+  coords 3772.974 58.269 3282.239
+  Points {
+   ShapePoint "{6AB2E84FA9A22FA1}" {
+    Position -14.336 0.083 -4.072
+   }
+   ShapePoint "{6AB2E84FA9F4A490}" {
+    Position -18.628 -0.074 1.723
+   }
+   ShapePoint "{6AB2E84FA8A38CAE}" {
+    Position -26.98 0.001 4.562
+   }
+   ShapePoint "{6AB2E84FA89BC3D8}" {
+    Position -32.51 0.178 2.93
+   }
+   ShapePoint "{6AB2E84FA868FE3D}" {
+    Position -37.215 -0.065 7.149
+   }
+   ShapePoint "{6AB2E84FABAAECC8}" {
+    Position -47.201 -0.034 8.119
+   }
+   ShapePoint "{6AB2E84FAA78E300}" {
+    Position -57.148 0.381 29.889
+   }
+   ShapePoint "{6AB2E84FB5EF2DED}" {
+    Position -58.282 -0.299 81.65
+   }
+   ShapePoint "{6AB2E84FB4F01633}" {
+    Position -55.813 -0.341 85.94
+   }
+   ShapePoint "{6AB2E84FB4736CBE}" {
+    Position -25.87 -0.074 86.581
+   }
+   ShapePoint "{6AB2E84FB74F3F42}" {
+    Position -15.659 -0.074 100.292
+   }
+   ShapePoint "{6AB2E84FB6E807FE}" {
+    Position 2.752 -0.074 104.44
+   }
+   ShapePoint "{6AB2E84FB62AC846}" {
+    Position 8.136 0.001 92.051
+   }
+   ShapePoint "{6AB2E84FB671280F}" {
+    Position 19.233 0.736 82.75
+   }
+   ShapePoint "{6AB2E84FB192CEF6}" {
+    Position 23.07 1.135 70.184
+   }
+   ShapePoint "{6AB2E84FB010EB6F}" {
+    Position 16.167 1.049 49.101
+   }
+   ShapePoint "{6AB2E84FB05C8BDC}" {
+    Position 14.736 0.109 16.339
+   }
+   ShapePoint "{6AB2E84FB3C7E978}" {
+    Position 8.941 0.386 5.049
+   }
+  }
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 4971.273 263.323 1431.384
+}
