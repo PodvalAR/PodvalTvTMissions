@@ -1,0 +1,196 @@
+SCR_AIGroup DEF_KS : "{D5D0C33728F89BC6}Prefabs/Groups/INDFOR/Ses_NAPA/dim_Group_NAPA_KS.et" {
+ coords 3876.194 31.2 5990.255
+ angles 0 72.569 0
+ m_aUnitPrefabSlots {
+  "{CCB0406BA3CA65E4}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_Officer.et"
+ }
+ m_sCustomNameSet "Старший агент Моссада"
+}
+$grp SCR_AIGroup : "{EB059CC44716B326}Prefabs/Groups/INDFOR/Ses_NAPA/dim_Group_NAPA_Squad.et" {
+ DEF_NAPA1 {
+  components {
+   PS_GroupCallsignAssigner "{696976B34DD51700}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 3878.127 31.396 5982.916
+  angles 0 72.914 0
+  m_aUnitPrefabSlots {
+   "{388231D29631E6B5}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_SL.et"
+   "{3F45CB83F0B75C76}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_TL.et"
+   "{6B07EEBE4DE3B05A}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_LAT.et"
+   "{58DFBEEC53022D8C}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_GL.et"
+   "{0756A8213DFBEDEE}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_Rfl_1.et"
+   "{6B029CC1813F62C0}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_Rfl_2.et"
+   "{E42B1DC858ABD65D}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_Medic.et"
+   "{E093F55569511CB4}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_Marksman.et"
+  }
+  m_sCustomNameSet "Агенты Моссада"
+ }
+ DEF_NAPA8 {
+  components {
+   PS_GroupCallsignAssigner "{696976B34DD51700}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 3871.525 30.93 6005.284
+  angles 0 72.914 0
+  m_aUnitPrefabSlots {
+   "{BAA797A2757DAD4C}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_SL_3.et"
+   "{3F45CB83F0B75C76}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_TL.et"
+   "{7103D1C4FBE7CCB3}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_LAT_2.et"
+   "{58DFBEEC53022D8C}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_GL.et"
+   "{8E9ED0388DDAF5AB}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_Rfl_3.et"
+   "{0756A8213DFBEDEE}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_Rfl_1.et"
+   "{382D543406081122}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_Sapper.et"
+   "{56A0CC5531275EC8}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_Sniper.et"
+  }
+  m_sCustomNameSet "Агенты Моссада"
+ }
+ DEF_NAPA2 {
+  components {
+   PS_GroupCallsignAssigner "{696976B34DD51700}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 3866.168 30.696 6022.716
+  angles 0 72.914 0
+  m_aUnitPrefabSlots {
+   "{5F3BDB5B79983A27}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_SL_2.et"
+   "{3F45CB83F0B75C76}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_TL.et"
+   "{6B07EEBE4DE3B05A}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_LAT.et"
+   "{58DFBEEC53022D8C}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_GL.et"
+   "{8E9ED0388DDAF5AB}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_Rfl_3.et"
+   "{6B029CC1813F62C0}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_Rfl_2.et"
+   "{E42B1DC858ABD65D}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_Medic.et"
+   "{E093F55569511CB4}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_Marksman.et"
+  }
+  m_sCustomNameSet "Агенты Моссада"
+ }
+ DEF_NAPA3 {
+  components {
+   PS_GroupCallsignAssigner "{696976B34DD51700}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 5031.757 35.106 1864.037
+  angles -0.026 -71.177 1.703
+  m_aUnitPrefabSlots {
+   "{388231D29631E6B5}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_SL.et"
+   "{3F45CB83F0B75C76}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_TL.et"
+   "{6B07EEBE4DE3B05A}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_LAT.et"
+   "{58DFBEEC53022D8C}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_GL.et"
+   "{0756A8213DFBEDEE}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_Rfl_1.et"
+   "{6B029CC1813F62C0}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_Rfl_2.et"
+   "{E42B1DC858ABD65D}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_Medic.et"
+   "{E093F55569511CB4}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_Marksman.et"
+  }
+  m_sCustomNameSet "Агенты Моссада"
+ }
+ DEF_NAPA4 {
+  components {
+   PS_GroupCallsignAssigner "{696976B34DD51700}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 2
+   }
+  }
+  coords 5020.391 35.481 1831.504
+  angles -0.026 -71.177 1.703
+  m_aUnitPrefabSlots {
+   "{5F3BDB5B79983A27}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_SL_2.et"
+   "{3F45CB83F0B75C76}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_TL.et"
+   "{6B07EEBE4DE3B05A}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_LAT.et"
+   "{58DFBEEC53022D8C}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_GL.et"
+   "{8E9ED0388DDAF5AB}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_Rfl_3.et"
+   "{6B029CC1813F62C0}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_Rfl_2.et"
+   "{E42B1DC858ABD65D}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_Medic.et"
+   "{E093F55569511CB4}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_Marksman.et"
+  }
+  m_sCustomNameSet "Агенты Моссада"
+ }
+ DEF_NAPA5 {
+  components {
+   PS_GroupCallsignAssigner "{696976B34DD51700}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 5023.991 35.374 1842.06
+  angles -0.026 -71.177 1.703
+  m_aUnitPrefabSlots {
+   "{BAA797A2757DAD4C}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_SL_3.et"
+   "{3F45CB83F0B75C76}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_TL.et"
+   "{7103D1C4FBE7CCB3}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_LAT_2.et"
+   "{58DFBEEC53022D8C}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_GL.et"
+   "{8E9ED0388DDAF5AB}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_Rfl_3.et"
+   "{0756A8213DFBEDEE}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_Rfl_1.et"
+   "{382D543406081122}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_Sapper.et"
+   "{56A0CC5531275EC8}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_Sniper.et"
+  }
+  m_sCustomNameSet "Агенты Моссада"
+ }
+ DEF_NAPA6 {
+  components {
+   PS_GroupCallsignAssigner "{696976B34DD51700}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 2
+   }
+  }
+  coords 2823.622 6.804 2653.682
+  angles 1.693 -75.617 3.503
+  m_aUnitPrefabSlots {
+   "{5F3BDB5B79983A27}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_SL_2.et"
+   "{3F45CB83F0B75C76}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_TL.et"
+   "{6B07EEBE4DE3B05A}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_LAT.et"
+   "{58DFBEEC53022D8C}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_GL.et"
+   "{8E9ED0388DDAF5AB}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_Rfl_3.et"
+   "{6B029CC1813F62C0}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_Rfl_2.et"
+   "{E42B1DC858ABD65D}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_Medic.et"
+   "{E093F55569511CB4}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_Marksman.et"
+  }
+  m_sCustomNameSet "Агенты Моссада"
+ }
+ DEF_NAPA7 {
+  components {
+   PS_GroupCallsignAssigner "{696976B34DD51700}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 1
+   }
+  }
+  coords 2828.074 5.878 2669.849
+  angles 1.787 -77.16 3.456
+  m_aUnitPrefabSlots {
+   "{BAA797A2757DAD4C}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_SL_3.et"
+   "{3F45CB83F0B75C76}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_TL.et"
+   "{7103D1C4FBE7CCB3}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_LAT_2.et"
+   "{58DFBEEC53022D8C}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_GL.et"
+   "{8E9ED0388DDAF5AB}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_Rfl_3.et"
+   "{0756A8213DFBEDEE}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_Rfl_1.et"
+   "{382D543406081122}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_Sapper.et"
+   "{56A0CC5531275EC8}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_Sniper.et"
+  }
+  m_sCustomNameSet "Агенты Моссада"
+ }
+ DEF_NAPA9 {
+  components {
+   PS_GroupCallsignAssigner "{696976B34DD51700}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 2832.746 4.78 2693.373
+  angles 1.666 -75.176 3.516
+  m_aUnitPrefabSlots {
+   "{388231D29631E6B5}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_SL.et"
+   "{3F45CB83F0B75C76}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_TL.et"
+   "{6B07EEBE4DE3B05A}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_LAT.et"
+   "{58DFBEEC53022D8C}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_GL.et"
+   "{0756A8213DFBEDEE}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_Rfl_1.et"
+   "{6B029CC1813F62C0}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_Rfl_2.et"
+   "{E42B1DC858ABD65D}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_Medic.et"
+   "{E093F55569511CB4}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_Marksman.et"
+  }
+  m_sCustomNameSet "Агенты Моссада"
+ }
+}
