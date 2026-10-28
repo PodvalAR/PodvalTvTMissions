@@ -1,0 +1,34 @@
+SCR_ChimeraCharacter : "{B6B969268FDAD97F}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_KS.et" {
+ ID "520EC961A090B1EE"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Хадир Валив"
+   }
+  }
+  ActionsManagerComponent "{520EA1D2F659CE02}" {
+   additionalActions {
+    DRG_DeathConfirmAction "{6AB6DBDD84A11548}" {
+     ParentContextList {
+      "LowerTorso"
+     }
+     UIInfo UIInfo "{6AB6DBDD86FF52AF}" {
+      Name "Подтвердить смерть"
+     }
+     ActionTitle "#drg_ConfirmDeathAction"
+     Duration 3
+     m_bAdvanceGameStage 0
+     m_aObjectivesToDone {
+      "NAPA_WIN"
+     }
+     m_aObjectivesToFail {
+      "TKA_WIN"
+     }
+     m_vFactionKey "Ses_NAPA"
+    }
+   }
+  }
+ }
+ coords 3916.073 16.216 4133.472
+ angles 0 0 0
+}

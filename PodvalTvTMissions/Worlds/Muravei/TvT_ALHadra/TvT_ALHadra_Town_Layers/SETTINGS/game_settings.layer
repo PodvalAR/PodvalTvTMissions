@@ -1,0 +1,36 @@
+SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
+ coords 83.578 40.018 5928.842
+}
+PerceptionManager PerceptionManager1 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 33.78 55.682 6108.953
+}
+PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
+ coords 24.5 52.345 6073.305
+}
+PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ coords 5098.435 127.673 320.422
+ m_sTitle "Правила и задачи"
+ m_sTextData "ВС РФ необходимо уничтожить 2 КШМ США"\
+ ""\
+ "США могут перемещать КШМ только в пределах КРАСНОГО триггера"\
+ "США (Кроме отделения разведки) Запрещено покидать СИНИЙ триггер"\
+ ""\
+ ""\
+ "Играйте честно"\
+ ""
+ m_aVisibleForFactions {
+  "RHS_AFRF"
+  "RHS_USAF"
+  ""
+ }
+ m_bEmptyFactionVisibility 1
+ m_bShowForAnyFaction 1
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 2725.218 26.78 5948.205
+}

@@ -1,0 +1,25 @@
+{
+  "_comment": "Copy this file to Tools\\tool.config.json and fill in your own paths. The copy is git-ignored, so your paths stay on your machine. Paths support %ENVIRONMENT_VARIABLE% and ~. Use forward or backslashes; the tool normalizes them.",
+
+  "Port": 8787,
+
+  "_comment_addon": "Root of the ADD-ON: the folder that contains addon.gproj. Detected automatically when the repository layout is standard, so you normally do not need to set it.",
+  "AddonRoot": "",
+
+  "_comment_prefabs": "REQUIRED. Root of the PodvalTvTPrefabs add-on (a separate repository, normally cloned as a sibling of this one). Without it the tool cannot check references or restore missions; suggestions still work from the bundled catalog.",
+  "PrefabsModRoot": "",
+
+  "_comment_source": "Folder with the legacy (DRG-era) missions. Optional; used as the default in the mission search field.",
+  "DefaultSourceRoot": "",
+
+  "_comment_dest": "Default destination folder for restored missions. Defaults to <AddonRoot>\\Worlds when left empty.",
+  "DefaultDestDir": "",
+
+  "_comment_remap": "Replacement table. Defaults to Tools\\remap_table.json when left empty.",
+  "RemapTable": "",
+
+  "_comment_ai": "AI assist is optional and OFF unless the environment variable below is set. The key itself is never written to this file - only the NAME of the environment variable that holds it.",
+  "ApiKeyEnv": "JUSTWOKER_API_KEY",
+  "AiBaseUrl": "https://api.justwoker.icu/v1",
+  "AiModel": "claude-opus-4-8"
+}

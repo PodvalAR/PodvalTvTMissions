@@ -1,0 +1,37 @@
+SCR_ChimeraCharacter : "{BCCA3502127B1BA5}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_SL_2.et" {
+ ID "520EC961A090B1EE"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "#PDVL_Role_SL"
+   }
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{14D6297150EDACCF}Prefabs/Weapons/Rifles/AKM/Rifle_AKMN.et"
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{EF1C27B8B48193B1}Prefabs/Characters/HeadGear/US_BushHat/US_BushHat_Olive.et"
+    }
+    LoadoutSlotInfo ArmoredVest {
+     Prefab ""
+    }
+    LoadoutSlotInfo Vest {
+     Prefab "{506EF3B2F0A69D34}Prefabs/Characters/Vests/Vest_NAZ/Vest_NAZ.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{689E6D83F89602AF}" {
+     TargetStorage "Vest/Vest_NAZ.et"
+     PrefabsToSpawn {
+      "{B9E3B9B143A43A79}Prefabs/Weapons/Magazines/AKM/Magazine_AK_762x39_Steel_30rnd_Ball.et" "{B9E3B9B143A43A79}Prefabs/Weapons/Magazines/AKM/Magazine_AK_762x39_Steel_30rnd_Ball.et" "{B9E3B9B143A43A79}Prefabs/Weapons/Magazines/AKM/Magazine_AK_762x39_Steel_30rnd_Ball.et" "{B9E3B9B143A43A79}Prefabs/Weapons/Magazines/AKM/Magazine_AK_762x39_Steel_30rnd_Ball.et" "{B9E3B9B143A43A79}Prefabs/Weapons/Magazines/AKM/Magazine_AK_762x39_Steel_30rnd_Ball.et" "{B9E3B9B143A43A79}Prefabs/Weapons/Magazines/AKM/Magazine_AK_762x39_Steel_30rnd_Ball.et" "{B9E3B9B143A43A79}Prefabs/Weapons/Magazines/AKM/Magazine_AK_762x39_Steel_30rnd_Ball.et" "{645C73791ECA1698}Prefabs/Weapons/Grenades/Grenade_RGD5.et" "{645C73791ECA1698}Prefabs/Weapons/Grenades/Grenade_RGD5.et" "{77EAE5E07DC4678A}Prefabs/Weapons/Grenades/Smoke_RDG2.et" "{77EAE5E07DC4678A}Prefabs/Weapons/Grenades/Smoke_RDG2.et"
+     }
+    }
+   }
+  }
+ }
+ coords 149.632 1 56.719
+}

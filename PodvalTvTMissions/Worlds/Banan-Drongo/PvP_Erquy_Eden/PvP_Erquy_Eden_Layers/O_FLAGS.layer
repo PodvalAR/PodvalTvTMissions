@@ -3,7 +3,8 @@ $grp GenericEntity : "{37FF769500E5C13C}PrefabsEditable/Auto/Structures/Military
   components {
    SCR_FlagComponent "{5E3C95A1E1EE9681}" {
     m_aObjectiveNames {
-     "FLAG_1_FIA" "FLAG_1_US"
+     "FLAG_1_FIA"
+     "FLAG_1_US"
     }
     m_aFlagData {
      PS_FlagData "{65B672EEC56AF294}" {
@@ -16,17 +17,25 @@ $grp GenericEntity : "{37FF769500E5C13C}PrefabsEditable/Auto/Structures/Military
     }
     m_sFactionKey "FIA"
    }
+   BaseActionsManagerComponent "{6202D4E6F133BF4A}" {
+    additionalActions {
+     PS_FlagChangeAction "{6202D4E6A53D4B3C}" {
+      Duration 10
+      m_bUseAnimation 1
+      m_fAnimationFPS 60
+     }
+    }
+   }
   }
   coords 10886.632 35.203 11714.006
-  angleX 20.943
-  angleY 148.282
-  angleZ -44.329
+  angles 20.943 148.282 -44.329
  }
  FLAG_2 {
   components {
    SCR_FlagComponent "{5E3C95A1E1EE9681}" {
     m_aObjectiveNames {
-     "FLAG_2_FIA" "FLAG_2_US"
+     "FLAG_2_FIA"
+     "FLAG_2_US"
     }
     m_aFlagData {
      PS_FlagData "{65B672EEDA126BAB}" {
@@ -39,8 +48,17 @@ $grp GenericEntity : "{37FF769500E5C13C}PrefabsEditable/Auto/Structures/Military
     }
     m_sFactionKey "FIA"
    }
+   BaseActionsManagerComponent "{6202D4E6F133BF4A}" {
+    additionalActions {
+     PS_FlagChangeAction "{6202D4E6A53D4B3C}" {
+      Duration 10
+      m_bUseAnimation 1
+      m_fAnimationFPS 60
+     }
+    }
+   }
   }
   coords 11386.343 88.798 11180.525
-  angleY 148.282
+  angles 0 148.282 0
  }
 }
