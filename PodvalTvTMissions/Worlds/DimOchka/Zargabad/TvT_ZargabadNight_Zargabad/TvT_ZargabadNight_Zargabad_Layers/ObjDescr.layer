@@ -4,8 +4,7 @@ $grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescripti
   m_sTitle "Правила и задачи"
   m_sDescriptionLayout "{41DAF7B7061DC0BC}UI/MissionDescription/DescriptionEditable.layout"
   m_sTextData "ПРАВИЛА:"\
-  "1. Хадир Валиву, Мухаммед Залару и отделениям стартующим напротив этих ВИПов ЗАПРЕЩЕНО покидать красный триггер;"\
-  "2. Камиль Калару и отделению стартующему напротив него - ЗАПРЕЩЕНО покидать зеленый триггер."\
+  "1. Всем ВИПам и отделениям стартующим напротив этих ВИПов ЗАПРЕЩЕНО покидать красный триггер."\
   ""\
   "ЗАДАЧИ:"\
   "• ТКА: "\
@@ -27,7 +26,7 @@ $grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescripti
   coords 193.235 306.141 2509.323
   m_sTitle "Обстановка"
   m_sTextData "1979 г. Такистан"\
-  "В мире идет горячая фаза противостояния Такистана и Израиля. Последним удалось вычислить причастных Такистанских офицеров к расправе над солдатами ЦАХАЛа. Моссад готовит акцию возмездния. "
+  "В мире идет горячая фаза противостояния Такистана и Израиля. Последним удалось вычислить причастных Такистанских офицеров к расправе над солдатами ЦАХАЛа. Моссад готовит акцию возмездия. "
   m_aVisibleForFactions {
    "RHS_USAF"
    "Ses_TKR"
@@ -54,117 +53,36 @@ $grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescripti
   m_bShowForAnyFaction 1
  }
 }
-$grp PolylineShapeEntity : "{7019844BAD5C4DD8}Prefabs/PolyZone/PolyZone_Border.et" {
- {
-  components {
-   PS_PolyZone "{60E90266F25533F6}" {
-    m_cPolygonColor 1 1 1 0
-    m_fPolygonUVScale 0.44
-    m_cPolygonBorderColor 0.502 0 0 1
-    m_bReversed 0
-    m_aVisibleForFactions {
-     ""
-     "Ses_NAPA"
-     "Ses_TKA"
-    }
-   }
-  }
-  coords 3859.339 16.262 4093.867
-  Points {
-   ShapePoint "{6AB6DBDC8BE8C01C}" {
-    Position -0.024 -0.439 122.618
-   }
-   ShapePoint "{6AB6DBDC953538AD}" {
-    Position 322.645 0.624 124.883
-   }
-   ShapePoint "{6AB6DBDC9791965C}" {
-    Position 322.837 1.057 -0.318
-   }
-  }
-  {
-   PS_PolyZoneTrigger {
-    ID "60FD050E1E83544C"
-    m_sGroupKey "VIP_"
+PolylineShapeEntity : "{7019844BAD5C4DD8}Prefabs/PolyZone/PolyZone_Border.et" {
+ components {
+  PS_PolyZone "{60E90266F25533F6}" {
+   m_cPolygonColor 1 1 1 0
+   m_fPolygonUVScale 0.44
+   m_cPolygonBorderColor 0.502 0 0 1
+   m_bReversed 0
+   m_aVisibleForFactions {
+    ""
+    "Ses_NAPA"
+    "Ses_TKA"
    }
   }
  }
+ coords 3859.339 16.262 4093.867
+ Points {
+  ShapePoint "{6AB6DBDC8BE8C01C}" {
+   Position -0.024 -0.439 122.618
+  }
+  ShapePoint "{6AB6DBDC953538AD}" {
+   Position 322.645 0.624 124.883
+  }
+  ShapePoint "{6AB6DBDC9791965C}" {
+   Position 322.837 1.057 -0.318
+  }
+ }
  {
-  components {
-   PS_PolyZone "{60E90266F25533F6}" {
-    m_cPolygonColor 1 1 1 0
-    m_fPolygonUVScale 0.44
-    m_cPolygonBorderColor 0 0.502 0.125 1
-    m_bReversed 0
-    m_aVisibleForFactions {
-     ""
-     "Ses_NAPA"
-     "Ses_TKA"
-    }
-   }
-  }
-  coords 3859.339 16.262 4093.867
-  Points {
-   ShapePoint "{6AB6DBDC8BE8C01C}" {
-    Position -0.024 -0.439 122.618
-   }
-   ShapePoint "{6AB6DBDC953538AD}" {
-    Position 322.645 0.624 124.883
-   }
-   ShapePoint "{6AB6DBDC9791965C}" {
-    Position 331.421 0.609 133.611
-   }
-   ShapePoint "{6AB6DBDCDA2EF0B0}" {
-    Position 330.762 0.424 199.289
-   }
-   ShapePoint "{6AB6DBDCE796D38B}" {
-    Position 488.019 0.706 199.12
-   }
-   ShapePoint "{6AB6DBDCE6223DE2}" {
-    Position 488.14 1.482 0.483
-   }
-   ShapePoint "{6AB6DBDCE07B2BCF}" {
-    Position 431.038 1.394 0.129
-   }
-   ShapePoint "{6AB6DBDCE324612D}" {
-    Position 430.944 1.398 -8.687
-   }
-   ShapePoint "{6AB6DBDCE2874EE6}" {
-    Position 429.065 1.439 -23.998
-   }
-   ShapePoint "{6AB6DBDCE214E818}" {
-    Position 425.086 1.534 -36.427
-   }
-   ShapePoint "{6AB6DBDCEDDB814B}" {
-    Position 403.056 1.745 -80.49
-   }
-   ShapePoint "{6AB6DBDCEEF0804C}" {
-    Position 381.111 1.612 -116.309
-   }
-   ShapePoint "{6AB6DBDCE9D6D273}" {
-    Position 292.762 0.975 -60.538
-   }
-   ShapePoint "{6AB6DBDCE8B9D684}" {
-    Position 250.187 0.56 -35.988
-   }
-   ShapePoint "{6AB6DBDCE82A5799}" {
-    Position 229.616 0.412 -25.442
-   }
-   ShapePoint "{6AB6DBDCEBC538D0}" {
-    Position 212.297 0.348 -18.227
-   }
-   ShapePoint "{6AB6DBDCEA78B45E}" {
-    Position 203.973 0.417 -18.781
-   }
-   ShapePoint "{6AB6DBDCF6D3127F}" {
-    Position -0.733 0.117 -18.144
-   }
-  }
-  LineColor 0.502 0.3765 0 1
-  {
-   PS_PolyZoneTrigger {
-    ID "60FD050E1E83544C"
-    m_sGroupKey "VIPIK_"
-   }
+  PS_PolyZoneTrigger {
+   ID "60FD050E1E83544C"
+   m_sGroupKey "VIP_"
   }
  }
 }

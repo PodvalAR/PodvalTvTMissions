@@ -228,7 +228,7 @@ $grp SCR_AIGroup : "{F21917B6C71E18E0}Prefabs/Groups/OPFOR/Ses_TKA/Group_Ses_TKA
   m_bSnapToTerrain 0
   m_sCustomNameSet "Мухаммед Залар (VIP)"
  }
- VIPIK_TKA4 {
+ VIP_TKA4 {
   components {
    AIFormationComponent "{507E9DC12F541FE6}" {
     DefaultFormation "1"
@@ -342,18 +342,6 @@ $grp SCR_AIGroup : "{F21917B6C71E18E0}Prefabs/Groups/OPFOR/Ses_TKA/Group_Ses_TKA
   }
   m_bSnapToTerrain 0
   m_sCustomNameSet "Камиль Калар (VIP)"
- }
-}
-$grp Vehicle : "{F3C22A3CC0664AB7}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_Ses_TKA.et" {
- UAZ469_Ses_TKA1 {
-  coords 3914.152 16.247 4132.39
-  angles -0.81 25.081 -0.38
-  m_sAttachmentGroupName "VIPIK_TKA4"
- }
- UAZ469_Ses_TKA2 {
-  coords 3907.377 16.273 4126.725
-  angles 3.116 24.611 -2.505
-  m_sAttachmentGroupName "VIPIK_TKA1"
  }
 }
 $grp SCR_AIGroup : "{F84C950E55A7BD7E}Prefabs/Groups/OPFOR/Ses_TKA/Group_Ses_TKA_RifleSquad.et" {
@@ -493,7 +481,7 @@ $grp SCR_AIGroup : "{F84C950E55A7BD7E}Prefabs/Groups/OPFOR/Ses_TKA/Group_Ses_TKA
   m_bSnapToTerrain 0
   m_sCustomNameSet "Отделение ТКА"
  }
- VIPIK_TKA1 {
+ TKA1 {
   components {
    AIFormationComponent "{507E9DC12F541FE6}" {
     DefaultFormation "1"
@@ -615,7 +603,7 @@ $grp SCR_AIGroup : "{F84C950E55A7BD7E}Prefabs/Groups/OPFOR/Ses_TKA/Group_Ses_TKA
     }
    }
   }
-  coords 3905.946 16.276 4130.041
+  coords 4213.328 16.276 4173.113
   angles 0 113.722 0
   m_aUnitPrefabSlots {
    "{AFFB63AA07D712D2}Prefabs/Characters/Factions/OPFOR/TKA/Char_A2F_TKA_SL.et"
