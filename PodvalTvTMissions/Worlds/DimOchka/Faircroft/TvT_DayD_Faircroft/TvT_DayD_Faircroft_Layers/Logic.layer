@@ -1,3 +1,50 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ {
+  coords 1869.258 8.518 5228.316
+  m_sTitle "Правила и задачи"
+  m_sTextData "ПРАВИЛА:"\
+  "1. Экипажам вертолетов разрешено заводить двигатели только после конца фриз-тайма;"\
+  "2. Экипажам вертолетов разрешено садиться в Кобры только после полной высадки десанта;"\
+  "3. В UH-60 должно находиться 2 пилотов (после фриз-тайма на палубе из пилотов никого не должно быть);"\
+  "4. Морпехам США на лодках разрешено высаживаться только в желтом триггере;"\
+  "5. ВС РФ на электростанции запрещено покидать триггер до прихода подкрепления;"\
+  "6. Одна машина подкрепления должна обязательно приехать на электростанцию (Компаса). "\
+  ""\
+  "ЗАДАЧИ:"\
+  "• США: "\
+  " 1. Захватить электростанцию;"\
+  " 2. Удержать пляж."\
+  ""\
+  "• ВС РФ:"\
+  " 1. Захватить пляж;"\
+  " 2. Удержать электростанцию."\
+  ""\
+  "Побеждает тот, кто быстрее захватит территорию врага."\
+  ""\
+  "Дополнительно:"\
+  "1. У ВС РФ есть грузовики с мешками с песком и 3000 припасов. Разрешено строить только укрепления;"\
+  "2. У США есть SMAWы, минометы."
+  m_aVisibleForFactions {
+   "RHS_USAF"
+   "RHS_AFRF"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+ {
+  coords 1869.258 8.518 5228.316
+  m_sTitle "Обстановка"
+  m_sTextData "Экспедиционный корпус КМП США совершает высадку на подконтрольную территорию РФ с целью захвата острова"
+  m_aVisibleForFactions {
+   "RHS_USAF"
+   "RHS_AFRF"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+}
 $grp GenericEntity : "{3D78D7D606FF9818}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_NoCapture.et" {
  flag1 {
   coords 1710.719 13.323 4480.841
@@ -94,6 +141,32 @@ $grp GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFac
    }
   }
   coords 2579.787 15.083 7579.005
+ }
+}
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ USAF_WIN2 {
+  coords 1927.902 13.152 5238.651
+  m_sTitle "Пляж удержан"
+  m_iScore 50
+  m_sFactionKey "RHS_USAF"
+ }
+ USAF_WIN {
+  coords 1927.902 13.152 5238.651
+  m_sTitle "Электростанция захвачена"
+  m_iScore 50
+  m_sFactionKey "RHS_USAF"
+ }
+ RUS_WIN {
+  coords 1927.902 13.152 5238.651
+  m_sTitle "Электростанция удержана"
+  m_iScore 70
+  m_sFactionKey "RHS_AFRF"
+ }
+ RUS_WIN2 {
+  coords 1927.902 13.152 5238.651
+  m_sTitle "Пляж захвачен"
+  m_iScore 30
+  m_sFactionKey "RHS_AFRF"
  }
 }
 $grp PolylineShapeEntity : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {

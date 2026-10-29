@@ -5,16 +5,17 @@ SCR_AIGroup OF : "{09F6CBFB9260D79C}Prefabs/Groups/BLUFOR/RHS_USAF/USMC/Desert/d
   "{9E7BA14AF9113409}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/Regular/dim_USMC_Officer.et"
  }
  m_bSnapToTerrain 0
- m_sCustomNameSet "Командир опорного пункта"
+ m_sCustomNameSet "Командующий операцией"
 }
 $grp SCR_AIGroup : "{3298D6DA95D73EAD}Prefabs/Groups/BLUFOR/RHS_USAF/USMC/Desert/dim_USMC_D_Rifle_Squad.et" {
  AMER4 {
   components {
    PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
     m_iCompanyCallsign 1
+    m_iPlatoonCallsign 2
    }
   }
-  coords 61.704 2.137 2785.978
+  coords 60.085 2.137 2787.721
   angles 0 137.114 0
   m_aUnitPrefabSlots {
    "{B79FA8178D2B432D}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/Regular/dim_USMC_SL.et"
@@ -27,14 +28,17 @@ $grp SCR_AIGroup : "{3298D6DA95D73EAD}Prefabs/Groups/BLUFOR/RHS_USAF/USMC/Desert
    "{4010906113D9F545}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/Regular/dim_USMC_Rifleman.et"
   }
   m_bSnapToTerrain 0
+  m_sCustomNameSet "Отряд USMC с М252"
  }
  AMER2 {
   components {
    PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
-    m_iCompanyCallsign 3
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
    }
   }
-  coords 34.664 3.832 2770.376
+  coords 444.706 3.832 2932.228
   angles 0 137.697 0
   m_aUnitPrefabSlots {
    "{B79FA8178D2B432D}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/Regular/dim_USMC_SL.et"
@@ -51,11 +55,12 @@ $grp SCR_AIGroup : "{3298D6DA95D73EAD}Prefabs/Groups/BLUFOR/RHS_USAF/USMC/Desert
  AMER7 {
   components {
    PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
-    m_iCompanyCallsign 3
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 3
    }
   }
-  coords 143.775 0.422 2343.325
-  angles 0 -48.292 0
+  coords 542.579 2.137 2278.812
+  angles 0 -43.197 0
   m_aUnitPrefabSlots {
    "{B79FA8178D2B432D}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/Regular/dim_USMC_SL.et"
    "{DA175908BFAFE13E}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/Regular/dim_USMC_AR.et"
@@ -67,14 +72,16 @@ $grp SCR_AIGroup : "{3298D6DA95D73EAD}Prefabs/Groups/BLUFOR/RHS_USAF/USMC/Desert
    "{4010906113D9F545}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/Regular/dim_USMC_Rifleman.et"
   }
   m_bSnapToTerrain 0
+  m_sCustomNameSet "Отряд USMC с М252"
  }
  AMER8 {
   components {
    PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
     m_iCompanyCallsign 1
+    m_iSquadCallsign 1
    }
   }
-  coords 140.433 0.424 2358.903
+  coords 708.191 3.832 2692.083
   angles 0 137.114 0
   m_aUnitPrefabSlots {
    "{B79FA8178D2B432D}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/Regular/dim_USMC_SL.et"
@@ -104,8 +111,8 @@ $grp SCR_AIGroup : "{3298D6DA95D73EAD}Prefabs/Groups/BLUFOR/RHS_USAF/USMC/Desert
    "{DBC7F2308F4A5E27}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/Regular/dim_USMC_AMG.et"
    "{D2D52CA65D696546}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/Regular/dim_USMC_SMAW.et"
    "{67FC76DD39ED1722}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/Regular/dim_USMC_ASMAW_ACOG.et"
-   "{D2D52CA65D696546}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/Regular/dim_USMC_SMAW.et"
-   "{67FC76DD39ED1722}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/Regular/dim_USMC_ASMAW_ACOG.et"
+   "{0617477813E40A57}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/Regular/dim_USMC_Medic.et"
+   "{8EFE547FC6E95045}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/Regular/dim_USMC_Medic_2.et"
   }
   m_bSnapToTerrain 0
   m_sCustomNameSet "Отряд поддержки USMC"
@@ -113,7 +120,7 @@ $grp SCR_AIGroup : "{3298D6DA95D73EAD}Prefabs/Groups/BLUFOR/RHS_USAF/USMC/Desert
  AMER9 {
   components {
    PS_GroupCallsignAssigner "{68B17A4774E5470E}" {
-    m_iCompanyCallsign 3
+    m_iCompanyCallsign 1
    }
   }
   coords 722.186 2.137 2709.613
@@ -135,26 +142,32 @@ $grp Vehicle : "{37EF248E158BAD57}Prefabs/CB90/Vehicles/CB90_Naval_Base.et" {
  CB90_Naval_Base1 {
   coords 65.55 0 2782.606
   angles 0 46.893 0
- }
- CB90_Naval_Base2 {
-  coords 52.345 0 2796.713
-  angles 0 46.893 0
- }
- CB90_Naval_Base3 {
-  coords 122.996 0 2341.599
-  angles 0 -135 0
- }
- CB90_Naval_Base4 {
-  coords 132.122 0 2332.474
-  angles 0 -135 0
+  m_sAttachmentGroupName "AMER4"
  }
  CB90_Naval_Base5 {
   coords 475.655 0 2945.463
   angles 0 48.1 0
+  m_sAttachmentGroupName "AMER3"
  }
  CB90_Naval_Base6 {
   coords 720.108 0 2714.693
   angles 0 46.893 0
+  m_sAttachmentGroupName "AMER9"
+ }
+ CB90_Naval_Base7 {
+  coords 739.001 0 2705.83
+  angles 0 46.893 0
+  m_sAttachmentGroupName "AMER8"
+ }
+ CB90_Naval_Base2 {
+  coords 456.783 0 2954.343
+  angles 0 48.1 0
+  m_sAttachmentGroupName "AMER2"
+ }
+ CB90_Naval_Base8 {
+  coords 539.036 0 2283.701
+  angles 0 46.893 0
+  m_sAttachmentGroupName "AMER7"
  }
 }
 $grp Vehicle : "{56E88FE5DDF6AA12}Prefabs/Vehicles/Helicopters/AH1S/AH1S_Base.et" {
@@ -170,6 +183,11 @@ $grp Vehicle : "{56E88FE5DDF6AA12}Prefabs/Vehicles/Helicopters/AH1S/AH1S_Base.et
  }
 }
 SCR_AIGroup HELI : "{6981CA4A67B1A730}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_Heli.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+   m_iCompanyCallsign 3
+  }
+ }
  coords 241.381 15.89 2452.78
  angles 0 -45 0
  m_aUnitPrefabSlots {
@@ -179,18 +197,25 @@ SCR_AIGroup HELI : "{6981CA4A67B1A730}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Gro
   "{083C4B5EC73745C8}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Summer/Regular/dim_USMC_HeliPilot.et"
  }
  m_bSnapToTerrain 0
+ m_sCustomNameSet "Экипажи вертолетов"
 }
 $grp Vehicle : "{70B7A59379C0525B}Prefabs/Vehicles/Helicopters/UH60/UH-60_black.et" {
- UH_60_black1 {
-  coords 18.201 3.953 2751.839
-  angles 0 45 0
- }
  UH_60_black2 {
   coords 250.494 15.89 2449.281
   angles 0 45 0
   m_sAttachmentGroupName "HELI"
  }
  UH_60_black3 {
+  components {
+   SlotManagerComponent "{693717EA5E627710}" {
+    Slots {
+     EntitySlotInfo ShadowAO {
+     }
+     RegisteringComponentSlotInfo Fuel_probe {
+     }
+    }
+   }
+  }
   coords 276.062 15.89 2474.849
   angles 0 45 0
   m_sAttachmentGroupName "HELI"
@@ -236,6 +261,11 @@ GenericEntity : "{D5A13F922E3AFEC3}PrefabsEditable/Auto/Props/Military/LHD/E_LHD
 }
 $grp SCR_AIGroup : "{F77D5F8E4E2A70A7}Prefabs/Groups/BLUFOR/RHS_USAF/Group_RHS_USAF_Base.et" {
  {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 2
+   }
+  }
   coords 270.486 15.885 2498.09
   angles 0 135.572 0
   m_aUnitPrefabSlots {
@@ -252,6 +282,12 @@ $grp SCR_AIGroup : "{F77D5F8E4E2A70A7}Prefabs/Groups/BLUFOR/RHS_USAF/Group_RHS_U
   m_sCustomNameSet "SEAL Team 6"
  }
  {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
   coords 258.185 15.885 2485.721
   angles 0 135.057 0
   m_aUnitPrefabSlots {
