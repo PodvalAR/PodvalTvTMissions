@@ -20,34 +20,12 @@ $grp Vehicle : "{2D74C39A650A3031}Prefabs/Vehicles/Wheeled/M923A1/M923A1_enginee
    SCR_VehicleDustPerWheel "{5476BC43E4910F64}" {
     m_fDustTopSpeed 60
    }
+   SCR_VehicleDustPerWheel "{5476BC43E4910F64}" {
+    m_fDustTopSpeed 60
+   }
   }
   coords 4869.031 44.789 4674.471
   m_sAttachmentGroupName "Stroybat2"
- }
- M923A1_engineer3 {
-  components {
-   SCR_UniversalInventoryStorageComponent "{5916C580F1DA28BB}" {
-    MultiSlots {
-     MultiSlotConfiguration "{68FD43E21F1D579D}" {
-      SlotTemplate InventoryStorageSlot Mines {
-       Prefab "{E4C9F0A4090CFE4D}Prefabs/Weapons/Explosives/Mine_M14/Mine_M14.et"
-      }
-      NumSlots 10
-     }
-    }
-   }
-   SCR_VehicleDustPerWheel "{5476BC43E4910F64}" {
-    m_fDustTopSpeed 60
-   }
-   SCR_VehicleDustPerWheel "{5476BC43E4910F64}" {
-    m_fDustTopSpeed 60
-   }
-   SCR_VehicleDustPerWheel "{5476BC43E4910F64}" {
-    m_fDustTopSpeed 60
-   }
-  }
-  coords 4862.766 37.362 4626.787
-  m_sAttachmentGroupName "Stroybat3"
  }
  M923A1_engineer4 {
   components {
@@ -60,6 +38,9 @@ $grp Vehicle : "{2D74C39A650A3031}Prefabs/Vehicles/Wheeled/M923A1/M923A1_enginee
       NumSlots 10
      }
     }
+   }
+   SCR_VehicleDustPerWheel "{5476BC43E4910F64}" {
+    m_fDustTopSpeed 60
    }
    SCR_VehicleDustPerWheel "{5476BC43E4910F64}" {
     m_fDustTopSpeed 60
