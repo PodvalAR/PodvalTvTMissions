@@ -1,0 +1,36 @@
+$grp GenericEntity : "{1400870B54975930}Prefabs/Props/Military/Compositions/CIV/ArsenalBox_Halloween_potato.et" {
+ Bot_Point {
+  coords 2519.983 377.249 587.355
+ }
+ Top_Marker {
+  coords 1416.76 304.516 3541.984
+  angles 0 -146.836 0
+ }
+ Mid_Point {
+  coords 1816.958 333.088 2310.776
+ }
+}
+$grp SCR_AIGroup : "{FB9AD525B44F7EAC}Prefabs/Groups/INDFOR/RHS_ION/dim_ION_Crew_rtvt.et" {
+ Bot_Point_Marker {
+  coords 2513.493 377.163 586.169
+  angles 15 0 0
+ }
+ Top_Point_Marker {
+  components {
+   PS_GroupCallsignAssigner "{690F20D41E414188}" {
+    m_iSquadCallsign 1
+   }
+  }
+  coords 1417.921 304.624 3542.301
+  angles 0 0 0
+ }
+ Mid_Point_Marker {
+  components {
+   PS_GroupCallsignAssigner "{690F20D41E414188}" {
+    m_iSquadCallsign 2
+   }
+  }
+  coords 1814.067 333.281 2309.339
+  angles 0 0 0
+ }
+}

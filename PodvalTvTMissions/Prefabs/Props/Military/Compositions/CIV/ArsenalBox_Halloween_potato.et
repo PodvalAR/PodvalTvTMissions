@@ -1,0 +1,77 @@
+GenericEntity : "{54986385A6AF77B2}Prefabs/Props/Military/Arsenal/ArsenalBoxes/ArsenalBox_Base.et" {
+ ID "56F2C6D6F7C6DAFA"
+ components {
+  ClimbingDataComponent "{6AB920ABCCA570C3}" {
+   CanClimbOver 0
+  }
+  MeshObject "{56F2C6D1431AD85A}" {
+   Materials {
+    MaterialAssignClass "{6AB920ABCCA5710F}" {
+     SourceMaterial "ArsenalBox_01_Decal"
+     AssignedMaterial "{F02E9152E2651631}Assets/Props/Military/AmmoBox/ArsenalBox_01/Data/ArsenalBox_01_Decal_Halloween.emat"
+    }
+    MaterialAssignClass "{6AB920ABCCA57103}" {
+     SourceMaterial "explosive_0A0A9C1C7B189A8B"
+     AssignedMaterial "{8A9B5EA675FD654E}Assets/Props/Military/AmmoBox/ArsenalBox_01/Data/EquipmentBoxWooden_Explosives_01_CIV.emat"
+    }
+    MaterialAssignClass "{6AB920ABCCA57105}" {
+     SourceMaterial "tarp_EBFB69929B4DE0C6"
+     AssignedMaterial "{C50CB32ED6503523}Assets/Props/Military/AmmoBox/ArsenalBox_01/Data/EquipmentBoxStack_01_cover_Halloween.emat"
+    }
+    MaterialAssignClass "{6AB920ABCCA57107}" {
+     SourceMaterial "weapon_box_6864083D30F4F63D"
+     AssignedMaterial "{E8F5CA873E1109F8}Assets/Props/Military/AmmoBox/ArsenalBox_01/Data/EquipmentBoxWooden_Weapon_01_CIV.emat"
+    }
+   }
+  }
+  SCR_ArsenalComponent "{56F2C6D1431AD9AF}" {
+   m_OverwriteArsenalConfig SCR_ArsenalItemListConfig "{6AB920ABCCA5711C}" {
+    m_aArsenalItems {
+     SCR_ArsenalItemStandalone "{6AB920ABCCA5711F}" {
+      m_eItemType HEADWEAR
+      m_iSupplyCost 100
+      m_ItemResourceName "{55515A3002FB359A}Prefabs/Characters/HeadGear/Helmet_Pumpkin_01/Helmet_Pumpkin_01.et"
+     }
+     SCR_ArsenalItemStandalone "{6AB920ABCCA57112}" {
+      m_eItemType EQUIPMENT
+      m_iSupplyCost 100
+      m_ItemResourceName "{B02960E01E2C9E07}Prefabs/Characters/HeadGear/Helmet_Pumpkin_01/Helmet_Pumpkin_02.et"
+     }
+     SCR_ArsenalItemStandalone "{6AB920A8FA3E74A5}" {
+      m_eItemType EXPLOSIVES
+      m_iSupplyCost 100
+      m_ItemResourceName "{741020CD18472F31}Prefabs/Weapons/Explosives/Mine_TM62M/Mine_TM62M_EffectModuleEntity_potato.et"
+     }
+     SCR_ArsenalItemStandalone "{6AB97267DEE12694}" {
+      m_eItemType EXPLOSIVES
+      m_ItemResourceName "{F6118B08BF0B2232}Prefabs/Weapons/Explosives/Mine_PMN4/Mine_PMN4_potato.et"
+     }
+    }
+   }
+   m_eArsenalSaveType NO_RESTRICTIONS
+  }
+  SCR_FactionAffiliationComponent "{5A50E7655452A21D}" {
+   "faction affiliation" "CIV"
+  }
+ }
+ {
+  GenericEntity {
+   ID "6AB920ABCCA570F1"
+   components {
+    MeshObject "{6AB920ABCCA53290}" {
+     Object "{F99B66D76942BA66}Assets/Characters/Headgear/Helmet_Pumpkin/Helmet_Pumpkin_Item.xob"
+     Materials {
+      MaterialAssignClass "{6AB920ABCCA53295}" {
+       SourceMaterial "Pumpkinhead"
+       AssignedMaterial "{789E60786E10E0DB}Assets/Characters/Headgear/Helmet_Pumpkin/Data/Helmet_Pumpkin_02.emat"
+      }
+     }
+    }
+    Hierarchy "{6AB920ABCCA5329B}" {
+    }
+   }
+   coords 0.333 0.762 -0.01
+   angles 0 32.987 0
+  }
+ }
+}

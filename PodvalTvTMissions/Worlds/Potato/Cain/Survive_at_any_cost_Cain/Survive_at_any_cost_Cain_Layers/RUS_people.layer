@@ -1,3 +1,118 @@
+GenericEntity : "{1400870B54975930}Prefabs/Props/Military/Compositions/CIV/ArsenalBox_Halloween_potato.et" {
+ components {
+  SCR_ArsenalComponent "{56F2C6D1431AD9AF}" {
+   m_OverwriteArsenalConfig SCR_ArsenalItemListConfig "{6AB920ABCCA5711C}" {
+    m_aArsenalItems {
+     SCR_ArsenalItemStandalone "{6AB920ABCCA5711F}" {
+      m_aArsenalDisplayData {
+       SCR_ArsenalItemDisplayData "{6AB920AE871755F2}" {
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 6653.256 25.876 3901.768
+}
 SCR_AIGroup : "{35681BE27C302FF5}Prefabs/Groups/BLUFOR/GreenBerets/Group_US_GreenBeret_SentryTeam.et" {
- coords 6645.878 25.74 3901.739
+ coords 6626.226 25.74 3906.763
+}
+GameEntity : "{55515A3002FB359A}Prefabs/Characters/HeadGear/Helmet_Pumpkin_01/Helmet_Pumpkin_01.et" {
+ components {
+  InventoryItemComponent "{5244E4431E28A759}" {
+   Attributes SCR_ItemAttributeCollection "{52C8D601873E6784}" {
+    ItemPhysAttributes ItemPhysicalAttributes "{6AB917A4B7988D3F}" {
+     SizeSetupStrategy Volume
+     ItemVolume 4000
+    }
+   }
+  }
+ }
+ coords 6635.885 25.748 3909.996
+}
+GenericEntity : "{7C367E9261376345}Prefabs/Compositions/Slotted/SlotFlatSmall/AmmoStorage_S_US_01.et" {
+ coords 6631.514 25.757 3900.342
+ {
+  GenericEntity {
+   ID "5D06E957D85806FB"
+   {
+    StaticModelEntity {
+     ID "5D06E95F91DA892F"
+     {
+      GenericEntity {
+       ID "5A532DC5FADC4941"
+       coords 0 0.1 0
+      }
+     }
+    }
+   }
+  }
+ }
+}
+Turret : "{AC7742558D95350B}Prefabs/Weapons/Tripods/9K135/Deployable_Tripod_9K135.et" {
+ coords 6635.895 25.882 3915.282
+}
+GameEntity : "{B02960E01E2C9E07}Prefabs/Characters/HeadGear/Helmet_Pumpkin_01/Helmet_Pumpkin_02.et" {
+ components {
+  InventoryItemComponent "{5244E4431E28A759}" {
+   Attributes SCR_ItemAttributeCollection "{52C8D601873E6784}" {
+    ItemPhysAttributes ItemPhysicalAttributes "{6AB917A467DC97EA}" {
+     SizeSetupStrategy Volume
+     ItemVolume 4000
+    }
+   }
+  }
+ }
+ coords 6636.849 25.742 3908.658
+}
+GenericEntity : "{B53B98CEA2D72735}Prefabs/Props/Military/Compositions/FIA/ArsenalBox_FIA.et" {
+ coords 6645.897 25.505 3895.206
+}
+GenericEntity : "{BE99D77D1155B127}Prefabs/Props/Military/Arsenal/ArsenalBoxes/US/ArsenalBox_US.et" {
+ coords 6642.537 25.339 3892.567
+}
+GenericEntity : "{D6EF54367CECE1D9}Prefabs/Weapons/Explosives/Mine_TM62M/Mine_TM62M.et" {
+ coords 6633.574 25.863 3915.837
+}
+GenericEntity : "{E2295ED22CDAC340}Prefabs/Props/Military/Compositions/CIV/ArsenalBox_Halloween.et" {
+ components {
+  SCR_ArsenalComponent "{56F2C6D1431AD9AF}" {
+   m_OverwriteArsenalConfig SCR_ArsenalItemListConfig "{666B457F72CA924C}" {
+    m_aArsenalItems {
+     SCR_ArsenalItemStandalone "{666B457F4B7D87E5}" {
+      m_iSupplyCost 100
+     }
+     SCR_ArsenalItemStandalone "{666D6341FEA626C4}" {
+      m_iSupplyCost 100
+     }
+     SCR_ArsenalItemStandalone "{666D6341F4F39EA6}" {
+      m_bEnabled 0
+     }
+     SCR_ArsenalItemStandalone "{66741DE84F3C9A6B}" {
+      m_bEnabled 0
+     }
+     SCR_ArsenalItemStandalone "{66734DB7C9ABE739}" {
+      m_bEnabled 0
+     }
+     SCR_ArsenalItemStandalone "{667B622622AD7885}" {
+      m_bEnabled 0
+     }
+     SCR_ArsenalItemStandalone "{667C4A033DEEB0E2}" {
+      m_bEnabled 0
+     }
+     SCR_ArsenalItemStandalone "{66893EB0763BFB56}" {
+      m_bEnabled 0
+     }
+     SCR_ArsenalItemStandalone "{668B5071048D088D}" {
+      m_bEnabled 0
+     }
+     SCR_ArsenalItemStandalone "{668B50711D234A77}" {
+      m_bEnabled 0
+     }
+    }
+   }
+  }
+ }
+ coords 6634.122 25.737 3911.06
 }
