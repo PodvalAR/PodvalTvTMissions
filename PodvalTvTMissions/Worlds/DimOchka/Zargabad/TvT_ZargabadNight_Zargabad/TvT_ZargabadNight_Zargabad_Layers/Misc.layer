@@ -5,12 +5,12 @@ $grp ParticleEffectEntity {
   EffectPath "{B073169BAA0BDD62}Particles/Logistics/Fire/Ammunition_Fire/Ammunition_Fire_Medium.ptc"
  }
  {
-  coords 3582.521 30.453 4970.161
+  coords 3588.54 31.798 4990.765
   angles 3.539 -155.112 1.86
   EffectPath "{B073169BAA0BDD62}Particles/Logistics/Fire/Ammunition_Fire/Ammunition_Fire_Medium.ptc"
  }
  {
-  coords 3922.606 41.234 4581.777
+  coords 3923.052 38.407 4582.058
   angles 3.539 -12.853 1.86
   EffectPath "{B073169BAA0BDD62}Particles/Logistics/Fire/Ammunition_Fire/Ammunition_Fire_Medium.ptc"
  }
@@ -30,163 +30,192 @@ $grp ParticleEffectEntity {
   EffectPath "{B073169BAA0BDD62}Particles/Logistics/Fire/Ammunition_Fire/Ammunition_Fire_Medium.ptc"
  }
 }
-$grp SCR_DestructibleBuildingEntity : "{2BC6179E0DF58E72}Prefabs/Models/houses/tem_oiltower2.et" {
+DecalEntity : "{4E2502622DA0DB28}Prefabs/Decals/Miscellaneous/Decal_Damage_Burnt_01.et" {
+ coords 3923.787 37.934 4581.021
+ angles -80.935 150.812 -151.118
+ scale 10
+}
+$grp SCR_DestructibleBuildingEntity : "{88A9F1FE0D1FDC30}Temppa/Prefabs/Structures/tem_oiltower2/tem_oiltower2.et" {
  {
-  coords 3602.913 -0 4500.455
-  angles 0 -180 0
+  coords 4053.519 0.245 3746.909
+  angles 0 143.935 0
  }
  {
-  coords 3943.135 0 4661.134
-  angles 0 -37.741 0
+  coords 4207.746 0.031 4485.626
+  angles -0.696 129.008 -0.563
  }
  {
-  coords 4056.599 -0.001 3751.646
-  angles 0 -110.564 0
+  coords 3612.366 -0 4476.454
+  angles 2.474 68.713 0.395
  }
  {
-  coords 4207.5 -0.017 4488.369
-  angles 0 -176.796 0
+  coords 3598.743 -0.001 5008.976
+  angles 1.263 -69.337 -3.346
  }
  {
-  coords 4467.862 0 3703.617
-  angles 0 33.204 0
+  coords 3944.258 0 4652.203
+  angles -2.497 -115.676 -0.205
+ }
+ {
+  coords 4471.152 0 3702.544
+  angles 0.82 -66.283 0.36
  }
 }
-$grp SCR_DestructibleEntity : "{2FB8CFD5DFB931E7}Prefabs/Models/walls/tem_oilPipe1_45degR.et" {
+$grp SCR_DestructibleEntity : "{E5331BF23A536A60}Temppa/Prefabs/Pipes/tem_oilPipe1_valve.et" {
  {
-  coords 3654.743 12.026 4543.743
-  angles 0 6.975 0
+  coords 4272.104 16.095 4533.479
+  angles 0 54.409 0
+  {
+   SCR_DestructibleEntity : "{52998B4BF8E8A3D4}Temppa/Prefabs/Pipes/tem_oilPipe1_Uup.et" {
+    coords 7.364 -0.039 -36.457
+    angles 0 -2.928 0
+   }
+   SCR_DestructibleEntity : "{B688517C99CA33C3}Temppa/Prefabs/Pipes/tem_oilPipe1_45degL.et" {
+    coords 6.685 -0.072 -18.044
+    angles 0 -1.32 0
+   }
+   SCR_DestructibleEntity : "{CB90BD84FC590F5A}Temppa/Prefabs/Pipes/tem_oilPipe1_45degR.et" {
+    coords -2.72 -0.057 -12.529
+    angles 0 -44.691 0
+   }
+   SCR_DestructibleEntity : "{D1BD36C55027D26A}Temppa/Prefabs/Pipes/tem_oilPipe1_ground.et" {
+    coords 8.441 -0.066 -59.167
+    angles 0 178.68 0
+   }
+   SCR_DestructibleEntity : "{E5331BF23A536A60}Temppa/Prefabs/Pipes/tem_oilPipe1_valve.et" {
+    coords 7.891 -0.041 -47.059
+    angles 0 -2.073 0
+   }
+  }
  }
  {
-  coords 3928.647 33.69 4595.179
-  angles 0 149.234 0
+  coords 3923.684 35.352 4584.875
+  angles 0.653 -168.112 -1.139
+  {
+   SCR_DestructibleEntity : "{52998B4BF8E8A3D4}Temppa/Prefabs/Pipes/tem_oilPipe1_Uup.et" {
+    coords 7.364 -0.039 -36.457
+    angles 0 -2.928 0
+   }
+   SCR_DestructibleEntity : "{B688517C99CA33C3}Temppa/Prefabs/Pipes/tem_oilPipe1_45degL.et" {
+    coords 6.685 -0.072 -18.044
+    angles 0 -1.32 0
+   }
+   SCR_DestructibleEntity : "{CB90BD84FC590F5A}Temppa/Prefabs/Pipes/tem_oilPipe1_45degR.et" {
+    coords -2.72 -0.057 -12.529
+    angles 0 -44.691 0
+   }
+   SCR_DestructibleEntity : "{D1BD36C55027D26A}Temppa/Prefabs/Pipes/tem_oilPipe1_ground.et" {
+    coords 8.441 -0.066 -59.167
+    angles 0 178.68 0
+   }
+   SCR_DestructibleEntity : "{E5331BF23A536A60}Temppa/Prefabs/Pipes/tem_oilPipe1_valve.et" {
+    coords 7.891 -0.041 -47.059
+    angles 0 -2.073 0
+   }
+  }
  }
  {
-  coords 4115.334 20.559 3718.324
-  angles 0 76.411 0
+  coords 3586.519 28.288 4993.47
+  angles 0 133.994 0
+  {
+   SCR_DestructibleEntity : "{52998B4BF8E8A3D4}Temppa/Prefabs/Pipes/tem_oilPipe1_Uup.et" {
+    coords 7.364 -0.039 -36.457
+    angles 0 -2.928 0
+   }
+   SCR_DestructibleEntity : "{B688517C99CA33C3}Temppa/Prefabs/Pipes/tem_oilPipe1_45degL.et" {
+    coords 6.685 -0.072 -18.044
+    angles 0 -1.32 0
+   }
+   SCR_DestructibleEntity : "{CB90BD84FC590F5A}Temppa/Prefabs/Pipes/tem_oilPipe1_45degR.et" {
+    coords -2.72 -0.057 -12.529
+    angles 0 -44.691 0
+   }
+   SCR_DestructibleEntity : "{D1BD36C55027D26A}Temppa/Prefabs/Pipes/tem_oilPipe1_ground.et" {
+    coords 8.441 -0.066 -59.167
+    angles 0 178.68 0
+   }
+   SCR_DestructibleEntity : "{E5331BF23A536A60}Temppa/Prefabs/Pipes/tem_oilPipe1_valve.et" {
+    coords 7.891 -0.041 -47.059
+    angles 0 -2.073 0
+   }
+  }
  }
  {
-  coords 4261.666 15.7 4528.695
-  angles 0 10.179 0
+  coords 4389.195 18.267 3696.451
+  angles -0.895 -88.852 -0.018
+  {
+   SCR_DestructibleEntity : "{52998B4BF8E8A3D4}Temppa/Prefabs/Pipes/tem_oilPipe1_Uup.et" {
+    coords 7.364 -0.039 -36.457
+    angles 0 -2.928 0
+   }
+   SCR_DestructibleEntity : "{B688517C99CA33C3}Temppa/Prefabs/Pipes/tem_oilPipe1_45degL.et" {
+    coords 6.685 -0.072 -18.044
+    angles 0 -1.32 0
+   }
+   SCR_DestructibleEntity : "{CB90BD84FC590F5A}Temppa/Prefabs/Pipes/tem_oilPipe1_45degR.et" {
+    coords -2.72 -0.057 -12.529
+    angles 0 -44.691 0
+   }
+   SCR_DestructibleEntity : "{D1BD36C55027D26A}Temppa/Prefabs/Pipes/tem_oilPipe1_ground.et" {
+    coords 8.441 -0.066 -59.167
+    angles 0 178.68 0
+   }
+   SCR_DestructibleEntity : "{E5331BF23A536A60}Temppa/Prefabs/Pipes/tem_oilPipe1_valve.et" {
+    coords 7.891 -0.041 -47.059
+    angles 0 -2.073 0
+   }
+  }
  }
  {
-  coords 4400.79 17.883 3695.777
-  angles 0 -139.821 0
- }
-}
-$grp SCR_DestructibleEntity : "{52A0232DBA2A0D7E}Prefabs/Models/walls/tem_oilPipe1_45degL.et" {
- {
-  coords 3656.281 10.54 4533.734
-  angles 0 51.935 0
- }
- {
-  coords 3921.302 32.739 4602.151
-  angles 0 -165.806 0
- }
- {
-  coords 4106.5 20.135 3713.365
-  angles 0 121.371 0
- }
- {
-  coords 4262.645 15.845 4518.614
-  angles 0 55.139 0
- }
- {
-  coords 4404.983 17.937 3704.997
-  angles 0 -94.861 0
- }
-}
-$grp SCR_DestructibleEntity : "{80CA8FF42F1C8DAE}Prefabs/Models/walls/tem_oilPipe1_valve.et" {
- {
-  coords 3635.248 12.394 4515.689
-  angles 0 46.952 0
+  coords 4123.667 22.306 3710.156
+  angles 3.381 121.143 -2.134
+  {
+   SCR_DestructibleEntity : "{52998B4BF8E8A3D4}Temppa/Prefabs/Pipes/tem_oilPipe1_Uup.et" {
+    coords 7.364 -0.039 -36.457
+    angles 0 -2.928 0
+   }
+   SCR_DestructibleEntity : "{B688517C99CA33C3}Temppa/Prefabs/Pipes/tem_oilPipe1_45degL.et" {
+    coords 6.685 -0.072 -18.044
+    angles 0 -1.32 0
+   }
+   SCR_DestructibleEntity : "{CB90BD84FC590F5A}Temppa/Prefabs/Pipes/tem_oilPipe1_45degR.et" {
+    coords -2.72 -0.057 -12.529
+    angles 0 -44.691 0
+   }
+   SCR_DestructibleEntity : "{D1BD36C55027D26A}Temppa/Prefabs/Pipes/tem_oilPipe1_ground.et" {
+    coords 8.441 -0.066 -59.167
+    angles 0 178.68 0
+   }
+   SCR_DestructibleEntity : "{E5331BF23A536A60}Temppa/Prefabs/Pipes/tem_oilPipe1_valve.et" {
+    coords 7.891 -0.041 -47.059
+    angles 0 -2.073 0
+   }
+  }
  }
  {
-  coords 3665.63 10.677 4548.825
-  angles 0 51.786 0
- }
- {
-  coords 3583.418 33.69 4968.052
-  angles 0 -21.299 0
- }
- {
-  coords 3923.147 32.37 4584.495
-  angles 0 -165.955 0
- }
- {
-  coords 3926.891 32.885 4629.295
-  angles 0 -170.789 0
- }
- {
-  coords 4123.916 21.756 3709.915
-  angles 0 121.222 0
- }
- {
-  coords 4082.219 20.244 3726.722
-  angles 0 116.388 0
- }
- {
-  coords 4240.634 15.794 4501.775
-  angles 0 50.156 0
- }
- {
-  coords 4272.821 15.719 4533.16
-  angles 0 54.99 0
- }
- {
-  coords 4388.896 17.765 3697.487
-  angles 0 -95.01 0
- }
- {
-  coords 4432.464 18.062 3708.575
-  angles 0 -99.844 0
- }
-}
-$grp SCR_DestructibleEntity : "{83B58C63576504E4}Prefabs/Models/walls/tem_oilpipe1_ground2.et" {
- {
-  coords 3626.941 9.946 4507.889
-  angles 0 45.954 0
- }
- {
-  coords 3587.413 32.003 4957.782
-  angles 0 -20.345 0
- }
- {
-  coords 3928.686 35.101 4640.55
-  angles 0 -171.787 0
- }
- {
-  coords 4071.997 19.915 3731.761
-  angles 0 115.39 0
- }
- {
-  coords 4231.903 15.793 4494.45
-  angles 0 49.158 0
- }
- {
-  coords 4443.687 18.218 3710.552
-  angles 0 -100.842 0
- }
-}
-$grp SCR_DestructibleEntity : "{C8F3D7005342396E}Prefabs/Models/walls/tem_oilPipe1_Uup.et" {
- {
-  coords 3642.774 10.693 4522.417
-  angles 0 48.237 0
- }
- {
-  coords 3925.058 32.926 4619.369
-  angles 0 -169.504 0
- }
- {
-  coords 4091.163 20.259 3722.04
-  angles 0 117.673 0
- }
- {
-  coords 4248.524 16.009 4508.071
-  angles 0 51.441 0
- }
- {
-  coords 4422.483 18.329 3707.067
-  angles 0 -98.559 0
+  coords 3665.138 11.276 4547.827
+  angles 0.595 46.143 1.911
+  {
+   SCR_DestructibleEntity : "{52998B4BF8E8A3D4}Temppa/Prefabs/Pipes/tem_oilPipe1_Uup.et" {
+    coords 7.364 -0.039 -36.457
+    angles 0 -2.928 0
+   }
+   SCR_DestructibleEntity : "{B688517C99CA33C3}Temppa/Prefabs/Pipes/tem_oilPipe1_45degL.et" {
+    coords 6.685 -0.072 -18.044
+    angles 0 -1.32 0
+   }
+   SCR_DestructibleEntity : "{CB90BD84FC590F5A}Temppa/Prefabs/Pipes/tem_oilPipe1_45degR.et" {
+    coords -2.72 -0.057 -12.529
+    angles 0 -44.691 0
+   }
+   SCR_DestructibleEntity : "{D1BD36C55027D26A}Temppa/Prefabs/Pipes/tem_oilPipe1_ground.et" {
+    coords 8.441 -0.066 -59.167
+    angles 0 178.68 0
+   }
+   SCR_DestructibleEntity : "{E5331BF23A536A60}Temppa/Prefabs/Pipes/tem_oilPipe1_valve.et" {
+    coords 7.891 -0.041 -47.059
+    angles 0 -2.073 0
+   }
+  }
  }
 }
