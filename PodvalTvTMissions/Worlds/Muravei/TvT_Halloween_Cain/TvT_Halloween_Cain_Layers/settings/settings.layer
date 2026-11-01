@@ -1,0 +1,108 @@
+SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
+ coords 6078.522 104.385 7834.56
+}
+PerceptionManager PerceptionManager2 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 4694.054 138.094 7568.144
+}
+PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
+ components {
+  SCR_TimeAndWeatherHandlerComponent "{5EE3229927D4D2F5}" {
+   m_aStartingWeatherAndTime {
+    SCR_TimeAndWeatherState "{6AC2ADD83560EE8D}" {
+     m_iStartingHour 16
+     m_iStartingMinutes 35
+    }
+   }
+   m_bDateOverride 1
+   m_iDay 31
+   m_iMonth 10
+   m_iYear 2026
+  }
+ }
+ coords 5639.927 376.173 7180.918
+}
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ {
+  coords 5809.382 76.286 8580.746
+  m_sTitle "Правила и задачи"
+  m_sTextData "Для захвата необходимо двукратное преимущество в КРАСНОМ триггере в течении двух минут"\
+  "ВС РФ (Маски призраков)"\
+  "ВС США (Макски пришельцев)"\
+  ""\
+  "Играйте честно!"
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+ {
+  coords 5808.496 76.279 8580.161
+  m_sTitle "Лор"
+  m_sTextData "Гуманоиды пытаются восстановить контроль над Минералами"\
+  ""
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+}
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{6AC2B2E80A62C708}" {
+     m_bAdvanceGameStage 1
+     m_Timer GUB_ZoneControlTimer "{6AC2B2E804BDD8A4}" {
+      timeToComplete 120
+     }
+     m_ZoneController GUB_ZoneController "{6AC2B2E802BE715A}" {
+      m_sZoneEntityName "Capture"
+     }
+     m_FlagController GUB_FlagController "{6AC2B2E81E346A58}" {
+      m_aFlagNames {
+       "FLAG1"
+       "FLAG2"
+      }
+      m_fStartFactionKey "RHS_AFRF"
+      m_fEndFactionKey "RHS_USAF"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{6AC2B2E820C1E74D}" {
+       m_sFirstFactionKey "RHS_USAF"
+       m_sSecondFactionKey "RHS_AFRF"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 5877.336 94.861 8811.685
+}
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ AFRF_WIN {
+  coords 6676.761 234.679 8730.081
+  m_sTitle "ГОРОД УДЕРЖАН"
+  m_sFactionKey "RHS_AFRF"
+ }
+ USAF_WIN {
+  coords 6677.355 234.552 8730.48
+  m_sTitle "ГОРОД ЗАХВАЧЕН"
+  m_sFactionKey "RHS_USAF"
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 7357.329 319.209 7819.321
+}
