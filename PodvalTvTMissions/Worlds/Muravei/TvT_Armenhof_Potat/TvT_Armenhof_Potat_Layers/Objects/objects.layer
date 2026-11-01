@@ -1,99 +1,265 @@
-$grp GenericEntity : "{63CBCCD35D82066C}Prefabs/Props/Military/CargoContainers/CargoContainer_01_20ft_US_supplies.et" {
- {
-  coords 1378.844 303.81 3532.996
-  angles 0.412 62.632 0.795
+$grp GenericEntity : "{D774D8C83D10DB68}Prefabs/Compositions/Slotted/SlotFlatSmall/SupplyCache_S_USSR_01.et" {
+ Bot_point_suply {
+  components {
+   SCR_CampaignBuildingCompositionComponent "{5E96A067C097D570}" {
+    Enabled 0
+   }
+   ActionsManagerComponent "{5D66ED1096104FD8}" {
+    Enabled 0
+   }
+  }
+  coords 2538.053 385.205 6.881
+  {
+   GenericEntity {
+    ID "62EACD0CC8BFE73D"
+    components {
+     SCR_ResourceComponent "{5D8AA552F85C2FBB}" {
+      m_aContainers {
+       SCR_ResourceContainerVirtual "{5D8AA552C6324D54}" {
+        m_fResourceValueCurrent 1000
+        m_fResourceValueMax 3000
+        m_bEnableResourceGain 1
+        m_fResourceGain 1
+        m_fResourceGainTickrate 1
+        m_fResourceGainTimeout 900
+       }
+      }
+      m_aGenerators {
+       SCR_ResourceGenerator "{5DE4B6C45FC967FC}" {
+        m_fStorageRange 1
+       }
+      }
+     }
+    }
+    {
+     GenericEntity {
+      ID "62F4A41DAC20435A"
+      components {
+       SCR_ResourceComponent "{5D247A59598D71AE}" {
+        m_aContainers {
+         SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
+          m_bEnableResourceGain 1
+          m_fResourceGain 1
+          m_fResourceGainTimeout 1
+         }
+        }
+       }
+      }
+      coords -1.957 0.148 0.223
+     }
+     GenericEntity {
+      ID "62F4A41DAC20AB94"
+      components {
+       SCR_ResourceComponent "{5D247A59598D71AE}" {
+        m_aContainers {
+         SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
+          m_fResourceValueCurrent 1000
+          m_bEnableResourceGain 1
+          m_fResourceGain 1
+          m_fResourceGainTimeout 1
+         }
+        }
+       }
+      }
+     }
+     GenericEntity {
+      ID "62F4A41DAC20AB9A"
+      components {
+       SCR_ResourceComponent "{5D247A59598D71AE}" {
+        m_aContainers {
+         SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
+          m_bEnableResourceGain 1
+          m_fResourceGain 1
+          m_fResourceGainTimeout 1
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
  }
- {
-  coords 1383.138 303.907 3525.833
-  angles 0.412 62.632 0.795
+ Mid_point_suply {
+  components {
+   SCR_CampaignBuildingCompositionComponent "{5E96A067C097D570}" {
+    Enabled 0
+   }
+   ActionsManagerComponent "{5D66ED1096104FD8}" {
+    Enabled 0
+   }
+  }
+  coords 1671.297 324.303 2546.18
+  angles 0 46.379 0
+  {
+   GenericEntity {
+    ID "62EACD0CC8BFE73D"
+    components {
+     SCR_ResourceComponent "{5D8AA552F85C2FBB}" {
+      m_aContainers {
+       SCR_ResourceContainerVirtual "{5D8AA552C6324D54}" {
+        m_fResourceValueCurrent 1000
+        m_fResourceValueMax 3000
+        m_bEnableResourceGain 1
+        m_fResourceGain 1
+        m_fResourceGainTickrate 1
+        m_fResourceGainTimeout 900
+       }
+      }
+      m_aConsumers {
+       SCR_ResourceConsumer "{5DE4B6C41E28EB13}" {
+       }
+      }
+      m_aGenerators {
+       SCR_ResourceGenerator "{5DE4B6C45FC967FC}" {
+        m_fStorageRange 1
+       }
+      }
+     }
+    }
+    {
+     GenericEntity {
+      ID "62F4A41DAC20435A"
+      components {
+       SCR_ResourceComponent "{5D247A59598D71AE}" {
+        m_aContainers {
+         SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
+          m_bEnableResourceGain 1
+          m_fResourceGain 1
+          m_fResourceGainTimeout 1
+         }
+        }
+       }
+      }
+      coords -1.957 0.148 0.223
+     }
+     GenericEntity {
+      ID "62F4A41DAC20AB94"
+      components {
+       SCR_ResourceComponent "{5D247A59598D71AE}" {
+        m_aContainers {
+         SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
+          m_fResourceValueCurrent 1000
+          m_bEnableResourceGain 1
+          m_fResourceGain 1
+          m_fResourceGainTimeout 1
+         }
+        }
+       }
+      }
+     }
+     GenericEntity {
+      ID "62F4A41DAC20AB9A"
+      components {
+       SCR_ResourceComponent "{5D247A59598D71AE}" {
+        m_aContainers {
+         SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
+          m_bEnableResourceGain 1
+          m_fResourceGain 1
+          m_fResourceGainTimeout 1
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+   GenericEntity {
+    ID "62EACD0CC8BFF749"
+    coords -1125.244 -28.166 -1231.65
+    angles 0.672 5.24 -1.037
+   }
+  }
  }
- {
-  coords 1387.124 303.988 3519.031
-  angles 0.412 62.632 0.795
- }
- {
-  coords 2221.703 379.401 1764.289
-  angles -2.091 -74.086 -2.455
- }
- {
-  coords 2225.591 379.706 1772.213
-  angles -2.092 -74.118 -2.454
- }
- {
-  coords 2228.065 379.902 1780.486
-  angles 4.404 -74.398 -2.477
- }
- {
-  coords 2878.521 322.673 2722.933
-  angles -1.525 79.622 -3.356
- }
- {
-  coords 2877.648 322.507 2728.598
-  angles -2.361 80.4 -3.226
- }
- {
-  coords 2875.943 322.526 2740.208
-  angles -1.472 80.52 -3.38
- }
- {
-  coords 2890.098 322.445 2730.502
-  angles -1.387 81.969 -3.416
- }
- {
-  coords 2889.125 322.227 2736.478
-  angles -0.518 81.685 -3.539
- }
- {
-  coords 2888.552 322.025 2742.401
-  angles -0.632 79.829 -3.52
- }
- {
-  coords 2876.706 322.344 2733.996
-  angles -1.614 80.595 -4.26
- }
- {
-  coords 2890.621 322.591 2725.088
-  angles -0.39 81.659 -2.655
- }
- {
-  coords 2887.689 322.005 2747.603
-  angles -0.535 81.412 -3.536
- }
- {
-  coords 2886.978 322.047 2753.61
-  angles -1.336 82.819 -3.436
- }
-}
-GenericEntity : "{6A30882656A63268}Prefabs/Structures/Military/CamoNets/US/CamoNet_Tent_US.et" {
- coords 3212.214 329.59 2907.763
- angles 0 78.362 0
-}
-GenericEntity : "{84D9030883610D2F}Prefabs/Props/Military/CargoContainers/CargoContainer_01_10ft_USSR_supplies.et" {
- coords 2498.552 377.477 574.121
- angles -1.726 165.859 4.038
-}
-$grp GenericEntity : "{CAD13AC8DAFEB0E8}Prefabs/Props/Military/CargoContainers/CargoContainer_01_20ft_USSR_supplies.et" {
- {
-  coords 2521.146 377.715 580.113
-  angles -4.666 165.985 2.981
- }
- {
-  coords 2514.203 377.613 578.796
-  angles -4.666 165.985 2.981
- }
- {
-  coords 2504.988 377.479 577.074
-  angles -4.666 165.985 2.981
- }
-}
-$grp GenericEntity : "{F6118B08BF0B2232}Prefabs/Weapons/Explosives/Mine_PMN4/Mine_PMN4_potato.et" {
- {
-  coords 274.624 306.617 1591.136
- }
- {
-  coords 274.109 306.654 1589.069
- }
- {
-  coords 277.272 306.671 1590.156
+ Top_point_suply {
+  components {
+   SCR_CampaignBuildingCompositionComponent "{5E96A067C097D570}" {
+    Enabled 0
+   }
+   ActionsManagerComponent "{5D66ED1096104FD8}" {
+    Enabled 0
+   }
+  }
+  coords 1491.311 303.612 3835.535
+  angles 0 176.187 0
+  {
+   GenericEntity {
+    ID "62EACD0CC8BFE73D"
+    components {
+     SCR_ResourceComponent "{5D8AA552F85C2FBB}" {
+      m_aContainers {
+       SCR_ResourceContainerVirtual "{5D8AA552C6324D54}" {
+        m_fResourceValueCurrent 1000
+        m_fResourceValueMax 3000
+        m_bEnableResourceGain 1
+        m_fResourceGain 1
+        m_fResourceGainTickrate 1
+        m_fResourceGainTimeout 900
+       }
+      }
+      m_aConsumers {
+       SCR_ResourceConsumer "{5DE4B6C41E28EB13}" {
+       }
+      }
+      m_aGenerators {
+       SCR_ResourceGenerator "{5DE4B6C45FC967FC}" {
+        m_fStorageRange 1
+       }
+      }
+     }
+    }
+    {
+     GenericEntity {
+      ID "62F4A41DAC20435A"
+      components {
+       SCR_ResourceComponent "{5D247A59598D71AE}" {
+        m_aContainers {
+         SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
+          m_bEnableResourceGain 1
+          m_fResourceGain 1
+          m_fResourceGainTimeout 1
+         }
+        }
+       }
+      }
+      coords -1.957 0.148 0.223
+     }
+     GenericEntity {
+      ID "62F4A41DAC20AB94"
+      components {
+       SCR_ResourceComponent "{5D247A59598D71AE}" {
+        m_aContainers {
+         SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
+          m_fResourceValueCurrent 1000
+          m_bEnableResourceGain 1
+          m_fResourceGain 1
+          m_fResourceGainTimeout 1
+         }
+        }
+       }
+      }
+     }
+     GenericEntity {
+      ID "62F4A41DAC20AB9A"
+      components {
+       SCR_ResourceComponent "{5D247A59598D71AE}" {
+        m_aContainers {
+         SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
+          m_bEnableResourceGain 1
+          m_fResourceGain 1
+          m_fResourceGainTimeout 1
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+   GenericEntity {
+    ID "62EACD0CC8BFF749"
+    coords 92.879 27.25 285.483
+    angles 0.672 5.24 -1.037
+   }
+  }
  }
 }
