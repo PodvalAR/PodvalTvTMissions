@@ -1,0 +1,85 @@
+SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
+ coords 3185.451 358.346 77.062
+}
+PerceptionManager PerceptionManager1 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 3169.193 359.001 74.848
+}
+PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
+ components {
+  SCR_TimeAndWeatherHandlerComponent "{5EE3229927D4D2F5}" {
+   m_bUsePredefineStartingTimeAndWeather 1
+   m_aStartingWeatherAndTime {
+    SCR_TimeAndWeatherState "{6ABF4AEF81916B3C}" {
+     m_sWeatherPresetName "Clear"
+     m_iStartingHour 16
+     m_iStartingMinutes 30
+    }
+   }
+   m_bDateOverride 1
+   m_iDay 31
+   m_iMonth 10
+   m_iYear 2026
+  }
+ }
+ coords 3187.795 358.116 69.614
+ m_bAutoPlayerRespawn 1
+ m_fAutoReloadTime 10
+ m_iFreezeTime 180000
+ m_aFactionRespawnCount {
+  PS_FactionRespawnCount "{6ABF4AE63DD1D452}" {
+   m_sFactionKey "RHS_AFRF"
+   m_iCount 10000
+   m_iTime 10000
+  }
+  PS_FactionRespawnCount "{6ABF4AE651D26B35}" {
+   m_sFactionKey "RHS_USAF"
+   m_iCount 10000
+   m_iTime 10000
+  }
+ }
+}
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ {
+  coords 2513.493 376.734 592.702
+  m_sTitle "Правила и задачи"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "												В ночь Хэллоуина аномалия разбросала по всей карте проклятые тыквы. Разведка обеих сторон подтверждает: это не сбой системы, а настоящий клад. Две равные группировки начинают масштабную охоту за урожаем."\
+  ""\
+  "												Задача: исследовать карту, собирать тыквы и доставлять их на свою базу. Вам попадутся два вида трофеев: маленькие (10 ресурсов) и большие (100 ресурсов). "\
+  ""\
+  "												Полученные средства тратьте на строительство, бронетехнику или снаряжение прямо в бою."\
+  "Битва длится ровно 45 минут. Побеждает команда, которая к концу матча будет иметь больше ресурсов в хранилище."\
+  "Совет: Жадность погубит пехоту, а бережливость – оставит без снаряги. Тратьте ресурсы с умом!"\
+  ""\
+  "												Внимание! Тыквы можно воровать прямо с вражеской базы. Один удачный рейд может перевернуть исход матча!"
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+ {
+  coords 2513.271 376.717 592.78
+  m_sTitle "ВАЖНО!"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "После смерти игроки возрождаются через 10 секунд на своей исходной точке"
+  m_aVisibleForFactions {
+   "US_AFRF"
+   "US_USAF"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+  m_iOrder 1
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 2517.447 376.809 593.422
+}
