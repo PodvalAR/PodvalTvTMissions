@@ -29,18 +29,28 @@ GenericEntity : "{54986385A6AF77B2}Prefabs/Props/Military/Arsenal/ArsenalBoxes/A
     m_aArsenalItems {
      SCR_ArsenalItemStandalone "{6AB920ABCCA5711F}" {
       m_eItemType HEADWEAR
-      m_iSupplyCost 100
+      m_iSupplyCost 0
       m_ItemResourceName "{55515A3002FB359A}Prefabs/Characters/HeadGear/Helmet_Pumpkin_01/Helmet_Pumpkin_01.et"
      }
      SCR_ArsenalItemStandalone "{6AB920ABCCA57112}" {
       m_eItemType EQUIPMENT
-      m_iSupplyCost 100
+      m_iSupplyCost 0
       m_ItemResourceName "{B02960E01E2C9E07}Prefabs/Characters/HeadGear/Helmet_Pumpkin_01/Helmet_Pumpkin_02.et"
      }
      SCR_ArsenalItemStandalone "{6AB920A8FA3E74A5}" {
       m_eItemType EXPLOSIVES
       m_iSupplyCost 100
-      m_ItemResourceName "{741020CD18472F31}Prefabs/Weapons/Explosives/Mine_TM62M/Mine_TM62M_EffectModuleEntity_potato.et"
+      m_aArsenalDisplayData {
+       SCR_ArsenalItemDisplayData "{6ABF351A4A33E3DB}" {
+       }
+      }
+      m_aArsenalAlternativeCostData {
+       SCR_ArsenalAlternativeCostSellAmountData "{6ABF351A22721046}" {
+        m_iSupplyCost 100
+        m_iSupplyRefundAmount 100
+       }
+      }
+      m_ItemResourceName "{52EAA9E27A13CC2E}Prefabs/Weapons/Explosives/Mine_TM62M/TM62_potato.et"
      }
      SCR_ArsenalItemStandalone "{6AB97267DEE12694}" {
       m_eItemType EXPLOSIVES
@@ -51,7 +61,7 @@ GenericEntity : "{54986385A6AF77B2}Prefabs/Props/Military/Arsenal/ArsenalBoxes/A
    m_eArsenalSaveType NO_RESTRICTIONS
   }
   SCR_FactionAffiliationComponent "{5A50E7655452A21D}" {
-   "faction affiliation" "CIV"
+   "faction affiliation" "USSR"
   }
  }
  {
