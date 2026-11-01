@@ -9,116 +9,20 @@ PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_Game
  m_iFreezeTime 120000
  m_bDisableGarbageSystem 0
 }
-$grp SCR_PrefabDeleterEntity {
- {
-  editor EntityEditorProps "{68FF454CA5CF94FD}" {
-   Style sphere
-  }
-  coords 2990.373 25.973 4978.512
-  m_fRadius 78
- }
- {
-  editor EntityEditorProps "{68FF454CA5CF94FD}" {
-   Style sphere
-  }
-  coords 3057.131 25.973 4870.029
-  m_fRadius 78
- }
- {
-  editor EntityEditorProps "{68FF454CA5CF94FD}" {
-   Style sphere
-  }
-  coords 3118.219 25.973 4789.639
-  m_fRadius 78
- }
- {
-  editor EntityEditorProps "{68FF454CA5CF94FD}" {
-   Style sphere
-  }
-  coords 3175.609 25.973 4670.217
-  m_fRadius 78
- }
- {
-  editor EntityEditorProps "{68FF454CA5CF94FD}" {
-   Style sphere
-  }
-  coords 3146.907 25.973 4575.296
-  m_fRadius 78
- }
- {
-  editor EntityEditorProps "{68FF454CA5CF94FD}" {
-   Style sphere
-  }
-  coords 3057.427 25.973 5079.154
-  m_fRadius 78
- }
- {
-  editor EntityEditorProps "{68FF454CA5CF94FD}" {
-   Style sphere
-  }
-  coords 3062.433 25.973 5194.008
-  m_fRadius 78
- }
- {
-  editor EntityEditorProps "{68FF454CA5CF94FD}" {
-   Style sphere
-  }
-  coords 3057.143 25.973 5290.174
-  m_fRadius 78
- }
- {
-  editor EntityEditorProps "{68FF454CA5CF94FD}" {
-   Style sphere
-  }
-  coords 2958.694 25.973 5244.521
-  m_fRadius 78
- }
- {
-  editor EntityEditorProps "{68FF454CA5CF94FD}" {
-   Style sphere
-  }
-  coords 2858.258 25.973 5253.998
-  m_fRadius 78
- }
- {
-  editor EntityEditorProps "{68FF454CA5CF94FD}" {
-   Style sphere
-  }
-  coords 2799.314 25.973 5196.512
-  m_fRadius 78
- }
- {
-  editor EntityEditorProps "{68FF454CA5CF94FD}" {
-   Style sphere
-  }
-  coords 2770.354 25.973 5316.16
-  m_fRadius 78
- }
- {
-  editor EntityEditorProps "{68FF454CA5CF94FD}" {
-   Style sphere
-  }
-  coords 2879.202 25.973 5375.691
-  m_fRadius 78
- }
- {
-  editor EntityEditorProps "{68FF454CA5CF94FD}" {
-   Style sphere
-  }
-  coords 2987.163 25.973 5375.007
-  m_fRadius 78
- }
-}
 $grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
  {
   coords 7475.513 0 1429.732
   m_sTitle "Обстановка"
   m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
-  m_sTextData "												Официальная легенда: это «спортивно-тактическое мероприятие по развитию навыков экстремального вождения в условиях хаоса»."\
+  m_sTextData "В ночь Хэллоуина аномалии исказили гравитацию над островом. Командование срочно реквизировало партию магических метел. Ваша задача – установить воздушный мост через всю карту и проверить, кто здесь настоящий ас, а кто просто летающий пехотинец."\
   ""\
-  "												Реальность: пока командование жрет блины с икрой, а связисты подменяют спутниковые карты мемами с котами, объявлена Великая Гонка."\
-  "	"\
-  "												Победитель получит не просто звание «Ас логистики», а банку редчайшей тушенки, ящик самогону (из спирта, добытого из радиаторов БТР) и коллекционные штаны на зависть Реджи"
+  "Вражеские отряды и деревья не делают скидку на магию. Метла – штука хрупкая."\
+  ""\
+  "Не пытайтесь выполнять мертвые петли над вражеской базой."\
+  ""\
+  "Передача эстафеты – это святое. Не подведите команду на финишной прямой!"\
+  ""\
+  "Совет: Летите низко, маневрируйте и помните – метла не отменяет законы баллистики в Arma. Удачи в воздухе!"
   m_aVisibleForFactions {
    "CIV"
    ""
@@ -130,12 +34,10 @@ $grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescripti
   coords 7473.555 0 1398.83
   m_sTitle "Правила и задачи"
   m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
-  m_sTextData "Правила:"\
-  "Гонка происходит вдоль главной дороги вокруг всего острова"\
+  m_sTextData "Задача гражданских – эстафета: Пилот берет метлу на старте, летит через всю карту от края до края, передает транспорт следующему игроку на другой стороне. Получатель должен немедленно взлететь и вернуться на изначальную точку, завершив круг."\
   ""\
-  "Задачи:"\
-  "1. ВЫЖИТЬ"\
-  "2. Совершить объезд всего острова и вернуться на место старта"
+  "Задача американцев - захватить хотя бы одну метлу на отделение"\
+  "Отделение, не справившееся с задачей будет жестоко наказано"
   m_aVisibleForFactions {
    "CIV"
    ""
