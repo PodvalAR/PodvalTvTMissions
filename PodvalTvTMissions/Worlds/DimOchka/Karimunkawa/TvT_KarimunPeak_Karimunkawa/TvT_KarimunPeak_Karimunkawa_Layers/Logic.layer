@@ -1,0 +1,351 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ {
+  coords 1869.258 8.518 5228.316
+  m_sTitle "Правила и задачи"
+  m_sDescriptionLayout "{41DAF7B7061DC0BC}UI/MissionDescription/DescriptionEditable.layout"
+  m_sTextData "ПРАВИЛА:"\
+  " 1. Запрещено взлетать на фриз-тайме (двигатели запустить можно);"\
+  " 2. Боевые вертолеты можно брать только после полной высадки десанта."\
+  ""\
+  "ЗАДАЧИ:"\
+  "• США: "\
+  " 1. Захватить разрушенную деревню на вершине;"\
+  " 2. Захватить военную базу."\
+  ""\
+  "• НОАК:"\
+  " 1. Удержать разрушенную деревню на вершине;"\
+  " 2. Удержать военную базу."\
+  ""\
+  "Дополнительно:"\
+  "1. У НОАК есть миномет с SOFLAM. Рекомендуется занимать слот миномета только тем, кто уверен что справится с управлением."
+  m_aVisibleForFactions {
+   "DIM_PLA"
+   "RHS_USAF"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+ {
+  coords 1869.258 8.518 5228.316
+  m_sTitle "Обстановка"
+  m_sTextData "Пока идет сражение за северную часть острова - КМП США отправляет часть своих подкреплений на юг для удара по еще не закрепившимся подразделениям НОАК."\
+  ""\
+  "Их задача занять стратегически важную вершину Каримун, на которой в дальнейшем можно будет установить противокорабельные ракеты для уничтожения подходящего  3-го флота ВМФ Китая."
+  m_aVisibleForFactions {
+   "RHS_USAF"
+   "DIM_PLA"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+}
+$grp GenericEntity : "{3D78D7D606FF9818}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_NoCapture.et" {
+ flag1 {
+  coords 3742.959 248.515 3990.315
+ }
+ flag2 {
+  coords 3876.829 246.587 4022.634
+ }
+ flag3 {
+  coords 3908.991 246.582 3922.768
+ }
+ flag4 {
+  coords 4583.63 272.366 4191.472
+ }
+ flag5 {
+  coords 4469.902 249.655 4083.004
+ }
+}
+$grp GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ {
+  components {
+   GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+    m_aControlLogics {
+     GUB_ZoneControlLogic "{6AC757F170EADA6B}" {
+      m_sSuccessObjectiveNames {
+       "USAF_WIN"
+      }
+      m_sFailedObjectiveNames {
+       "NOAK_WIN"
+      }
+      m_Timer GUB_ZoneControlTimer "{6AC757F17A2B4FE4}" {
+       timeToComplete 150
+      }
+      m_ZoneController GUB_ZoneController "{6AC757F186A9B13B}" {
+       m_sZoneEntityName "capture"
+      }
+      m_FlagController GUB_FlagController "{6AC757F1808694A0}" {
+       m_aFlagNames {
+        "flag1"
+        "flag2"
+        "flag3"
+       }
+       m_fStartFactionKey "DIM_PLA"
+       m_fEndFactionKey "RHS_USAF"
+      }
+      m_aConditions {
+       GUB_ZoneControlBetweenFactionsCondition "{6AC757F18B624FF1}" {
+        m_sFirstFactionKey "RHS_USAF"
+        m_sSecondFactionKey "DIM_PLA"
+        m_fComparisonMultiplier 2
+        m_iOperator GREATER
+       }
+      }
+     }
+    }
+   }
+  }
+  coords 4482.226 7.775 1261.959
+ }
+ {
+  components {
+   GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+    m_aControlLogics {
+     GUB_ZoneControlLogic "{6AC757F170EADA6B}" {
+      m_sSuccessObjectiveNames {
+       "USAF_WIN2"
+      }
+      m_sFailedObjectiveNames {
+       "NOAK_WIN2"
+      }
+      m_Timer GUB_ZoneControlTimer "{6AC757F17A2B4FE4}" {
+       timeToComplete 150
+      }
+      m_ZoneController GUB_ZoneController "{6AC757F186A9B13B}" {
+       m_sZoneEntityName "capture"
+      }
+      m_FlagController GUB_FlagController "{6AC757F1808694A0}" {
+       m_aFlagNames {
+        "flag4"
+        "flag5"
+       }
+       m_fStartFactionKey "DIM_PLA"
+       m_fEndFactionKey "RHS_USAF"
+      }
+      m_aConditions {
+       GUB_ZoneControlBetweenFactionsCondition "{6AC757F18B624FF1}" {
+        m_sFirstFactionKey "RHS_USAF"
+        m_sSecondFactionKey "DIM_PLA"
+        m_fComparisonMultiplier 2
+        m_iOperator GREATER
+       }
+      }
+     }
+    }
+   }
+  }
+  coords 4482.226 7.775 1261.959
+ }
+}
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ USAF_WIN {
+  coords 1927.902 13.152 5238.651
+  m_sTitle "База захвачена"
+  m_sFactionKey "RHS_USAF"
+  m_bAdvanceWhenTriggered 1
+ }
+ NOAK_WIN {
+  coords 1927.902 13.152 5238.651
+  m_sTitle "База удержана"
+  m_iScore 50
+  m_sFactionKey "DIM_PLA"
+  m_bAdvanceWhenTriggered 1
+ }
+ USAF_WIN2 {
+  coords 1927.902 13.152 5238.651
+  m_sTitle "Деревня захвачена"
+  m_sFactionKey "RHS_USAF"
+  m_bAdvanceWhenTriggered 1
+ }
+ NOAK_WIN2 {
+  coords 1927.902 13.152 5238.651
+  m_sTitle "Деревня удержана"
+  m_iScore 50
+  m_sFactionKey "DIM_PLA"
+  m_bAdvanceWhenTriggered 1
+ }
+}
+$grp PolylineShapeEntity : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
+ capture {
+  components {
+   PS_PolyZone "{60E90266F25533F6}" {
+    m_cPolygonColor 1 1 1 0.481
+    m_fPolygonUVScale 0.44
+    m_cPolygonBorderColor 0.502 0 0 1
+    m_aVisibleForFactions {
+     "DIM_PLA"
+     "RHS_USAF"
+     ""
+    }
+   }
+  }
+  coords 3867.154 237 4030.65
+  Points {
+   ShapePoint "{6AC757F0F23CF646}" {
+    Position 11.448 -0 -1.475
+   }
+   ShapePoint "{6AC757F0FD52E781}" {
+    Position 14.391 -0 -6.275
+   }
+   ShapePoint "{6AC757F0FF28B451}" {
+    Position 46.468 0 -97.91
+   }
+   ShapePoint "{6AC757F0FEB32182}" {
+    Position 48.609 0 -106.937
+   }
+   ShapePoint "{6AC757F0FECF95C5}" {
+    Position 49.046 0 -110.968
+   }
+   ShapePoint "{6AC757F0F8B90393}" {
+    Position -90.906 -0 -118.967
+   }
+   ShapePoint "{6AC757F0FB9164C6}" {
+    Position -94.172 -0 -114.387
+   }
+   ShapePoint "{6AC757F0FA8314A6}" {
+    Position -135.975 -0.312 -81.011
+   }
+   ShapePoint "{6AC757F105E7FDBC}" {
+    Position -156.829 -0.312 -65.491
+   }
+   ShapePoint "{6AC757F10536DD3A}" {
+    Position -159.375 -0.312 -64.095
+   }
+   ShapePoint "{6AC757F105771786}" {
+    Position -161.758 -0.312 -62.617
+   }
+   ShapePoint "{6AC757F10484D123}" {
+    Position -163.227 -0.313 -60.928
+   }
+   ShapePoint "{6AC757F107A1287D}" {
+    Position -162.294 -0.312 -57.857
+   }
+   ShapePoint "{6AC757F1067C18E4}" {
+    Position -161.302 -0.313 -54.84
+   }
+   ShapePoint "{6AC757F10174670E}" {
+    Position -146.331 -0.293 -22.254
+   }
+   ShapePoint "{6AC757F1006E9A34}" {
+    Position -128.711 1.098 4.395
+   }
+   ShapePoint "{6AC757F1031425BF}" {
+    Position -126.986 0.962 7.628
+   }
+   ShapePoint "{6AC757F10352A88F}" {
+    Position -125.693 0.936 10.314
+   }
+   ShapePoint "{6AC757F10294403E}" {
+    Position -124.462 0.816 13.901
+   }
+   ShapePoint "{6AC757F102D19C83}" {
+    Position -122.911 0.552 16.787
+   }
+   ShapePoint "{6AC757F102139BCC}" {
+    Position -121.303 0.302 19.024
+   }
+   ShapePoint "{6AC757F10CA5DEC6}" {
+    Position -44.229 -0.313 6.497
+   }
+  }
+ }
+ capture2 {
+  components {
+   PS_PolyZone "{60E90266F25533F6}" {
+    m_cPolygonColor 1 1 1 0.481
+    m_fPolygonUVScale 0.44
+    m_cPolygonBorderColor 0.502 0 0 1
+    m_aVisibleForFactions {
+     "RHS_USAF"
+     "DIM_PLA"
+     ""
+    }
+   }
+  }
+  coords 4329.888 216.963 4027.886
+  Points {
+   ShapePoint "{6AC757F137AE41FB}" {
+    Position -1.436 7.759 50.066
+   }
+   ShapePoint "{6AC757F136A7060F}" {
+    Position 0.926 8.58 75.336
+   }
+   ShapePoint "{6AC757F13632A938}" {
+    Position 0.676 8.267 86.931
+   }
+   ShapePoint "{6AC757F13675D9D4}" {
+    Position 0.863 6.967 109.231
+   }
+   ShapePoint "{6AC757F131C34D73}" {
+    Position 2.315 5.925 123.545
+   }
+   ShapePoint "{6AC757F131045286}" {
+    Position 3.963 4.37 143.32
+   }
+   ShapePoint "{6AC757F1308C9DF5}" {
+    Position 25.093 3.145 180.212
+   }
+   ShapePoint "{6AC757F130511756}" {
+    Position 39.444 3.006 196.626
+   }
+   ShapePoint "{6AC757F133889909}" {
+    Position 54.759 3.46 205.872
+   }
+   ShapePoint "{6AC757F1332B78B2}" {
+    Position 73.734 4.852 208.641
+   }
+   ShapePoint "{6AC757F1329D0B06}" {
+    Position 99.837 7.941 198.03
+   }
+   ShapePoint "{6AC757F132DF20E3}" {
+    Position 116.127 10.307 185.479
+   }
+   ShapePoint "{6AC757F13DE52B95}" {
+    Position 223.157 26.845 86.418
+   }
+   ShapePoint "{6AC757F13C9F6ABA}" {
+    Position 258.219 31.613 56.539
+   }
+   ShapePoint "{6AC757F13FEA2DF4}" {
+    Position 265.027 32.879 43.432
+   }
+   ShapePoint "{6AC757F13F0567FF}" {
+    Position 249.547 31.962 32.538
+   }
+   ShapePoint "{6AC757F13EA4972A}" {
+    Position 235.995 29.235 22.773
+   }
+   ShapePoint "{6AC757F13EC8E195}" {
+    Position 221.997 27.079 14.022
+   }
+   ShapePoint "{6AC757F13E6F6F72}" {
+    Position 210.916 25.83 8.754
+   }
+   ShapePoint "{6AC757F1472D23EF}" {
+    Position 167.439 26.077 15.727
+   }
+   ShapePoint "{6AC757F146605D84}" {
+    Position 141.665 24.699 -0.578
+   }
+   ShapePoint "{6AC757F141B61978}" {
+    Position 116.744 19.537 -7.845
+   }
+   ShapePoint "{6AC757F141DAD62A}" {
+    Position 97.519 15.187 -14.091
+   }
+   ShapePoint "{6AC757F140D02397}" {
+    Position 88.702 13.651 -15.345
+   }
+  }
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 2537.186 4.243 2315.116
+}
