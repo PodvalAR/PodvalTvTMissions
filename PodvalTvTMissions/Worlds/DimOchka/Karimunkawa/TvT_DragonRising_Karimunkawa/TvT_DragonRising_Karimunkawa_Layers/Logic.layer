@@ -1,0 +1,151 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ {
+  coords 1869.258 8.518 5228.316
+  m_sTitle "Правила и задачи"
+  m_sDescriptionLayout "{41DAF7B7061DC0BC}UI/MissionDescription/DescriptionEditable.layout"
+  m_sTextData "ПРАВИЛА:"\
+  "Правила проекта."\
+  ""\
+  "ЗАДАЧИ:"\
+  "• США: "\
+  " 1. Удержать базу."\
+  ""\
+  "• НОАК:"\
+  " 1. Захватить базу."\
+  ""\
+  "Дополнительно:"\
+  "1. У США есть миномет, 1 ПТУР;"\
+  "2. LAV-25 без топлива."
+  m_aVisibleForFactions {
+   "DIM_PLA"
+   "RHS_USAF"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+ {
+  coords 1869.258 8.518 5228.316
+  m_sTitle "Обстановка"
+  m_sTextData "2018 г."\
+  "Китай теряет связь с научной станцией на подконтрольном КНР острове Фусо. Спустя пару часов разведка выявила большое скопление американских сил на контингенте. США заявили, что на острове вспыхнуло восстание местных против китайского присутствия и для обеспечения безопасности мирных жителей остров временно переходит под их контроль."\
+  "Китай считает это провокацией и начинает морскую операцию по возврату острова."
+  m_aVisibleForFactions {
+   "RHS_USAF"
+   "DIM_PLA"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+}
+$grp GenericEntity : "{3D78D7D606FF9818}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_NoCapture.et" {
+ flag1 {
+  coords 3061.495 20.353 3459.649
+ }
+ flag2 {
+  coords 3158.323 20.345 3311.949
+ }
+ flag3 {
+  coords 3040.117 19.054 3311.11
+ }
+}
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{6AB8C3B1CF89429E}" {
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "NOAK_WIN"
+     }
+     m_sFailedObjectiveNames {
+      "USAF_WIN"
+     }
+     m_sMessage "База захвачена"
+     m_Timer GUB_ZoneControlTimer "{6AB8C3B1CECEE7DC}" {
+      timeToComplete 180
+     }
+     m_ZoneController GUB_ZoneController "{6AB8C3B1CE6535A2}" {
+      m_sZoneEntityName "capture"
+     }
+     m_FlagController GUB_FlagController "{6AB8C3B1C996835E}" {
+      m_aFlagNames {
+       "flag1"
+       "flag2"
+       "flag3"
+      }
+      m_fStartFactionKey "RHS_USAF"
+      m_fEndFactionKey "DIM_PLA"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{6AB8C3B1EDAC26F7}" {
+       m_sFirstFactionKey "DIM_PLA"
+       m_sSecondFactionKey "RHS_USAF"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 2579.787 15.083 7579.005
+}
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ USAF_WIN {
+  coords 1927.902 13.152 5238.651
+  m_sTitle "База удержана"
+  m_sFactionKey "RHS_USAF"
+  m_bAdvanceWhenTriggered 1
+ }
+ NOAK_WIN {
+  coords 1927.902 13.152 5238.651
+  m_sTitle "База захвачена"
+  m_sFactionKey "DIM_PLA"
+  m_bAdvanceWhenTriggered 1
+ }
+}
+PolylineShapeEntity capture : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
+ components {
+  PS_PolyZone "{60E90266F25533F6}" {
+   m_cPolygonColor 1 1 1 0.375
+   m_fPolygonUVScale 0.44
+   m_cPolygonBorderColor 0 0.125 0.502 1
+   m_aVisibleForFactions {
+    "DIM_PLA"
+    "RHS_USAF"
+    ""
+   }
+  }
+ }
+ coords 2967.781 10.75 3401.491
+ Points {
+  ShapePoint "{6AC6FD129B9D8379}" {
+   Position 94.944 0 65.355
+  }
+  ShapePoint "{6AC6FD129A602F6D}" {
+   Position 134.893 0 0.792
+  }
+  ShapePoint "{6AC6FD12A5E3C04A}" {
+   Position 141.456 0 -7.947
+  }
+  ShapePoint "{6AC6FD12A4332DCD}" {
+   Position 198.989 0 -92.464
+  }
+  ShapePoint "{6AC6FD12A67CAE30}" {
+   Position 102.24 0 -145.749
+  }
+  ShapePoint "{6AC6FD12A0DF7B10}" {
+   Position 43.889 0 -66.526
+  }
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 2537.186 4.243 2315.116
+}
