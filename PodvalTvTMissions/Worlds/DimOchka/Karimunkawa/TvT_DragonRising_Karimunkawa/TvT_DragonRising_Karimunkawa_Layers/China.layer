@@ -1,0 +1,143 @@
+Vehicle PLA_Navy_Rosomak_KORD1 : "{0EA4D2B5F0BA67E0}Prefabs/Vehicles/PLA Vehicle/PLA_Navy_Rosomak_KORD.et" {
+ coords 5893.971 3.219 3490.53
+ angles 0 -123.474 0
+ m_sAttachmentGroupName "KNR2"
+}
+$grp SCR_AIGroup : "{232B882BF156A8C7}Prefabs/Groups/OPFOR/PLA/NAVY/PLA_NAVY_Inf_Squad_2.et" {
+ KNR3 {
+  components {
+   PS_GroupCallsignAssigner "{6AC6C5F64661C87D}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 5906.853 3.219 3502.896
+  angles 0 150 0
+ }
+ KNR4 {
+  components {
+   PS_GroupCallsignAssigner "{6AC6C5F64661C87D}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 4298.222 12.441 4921.444
+  angles 0 163.882 0
+ }
+}
+$grp SCR_AIGroup : "{3D515F84E4A5D501}Prefabs/Groups/OPFOR/PLA/NAVY/PLA_NAVY_SPN.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{6AC6C5F629AF1207}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 3746.096 121.261 2796.181
+  angles 0 -51.111 0
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{6AC6C5F629AF1207}" {
+    m_iCompanyCallsign 3
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 2835.784 100.094 4365.53
+  angles 0 163.222 0
+ }
+}
+$grp SCR_AIGroup : "{4F7FBCCB4D9227E9}Prefabs/Groups/OPFOR/PLA/NAVY/PLA_NAVY_Inf_Squad_1.et" {
+ KNR2 {
+  components {
+   PS_GroupCallsignAssigner "{6AC6C5F64661C87D}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 5896.418 3.219 3496.248
+  angles 0 144.538 0
+  m_aUnitPrefabSlots +{
+   "{35BEFD501A106018}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/dim_PLA_Navy_CREW.et"
+  }
+ }
+ KNR6 {
+  components {
+   PS_GroupCallsignAssigner "{6AC6C5F64661C87D}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 4334.857 12.857 4931.938
+  angles 0 161.643 0
+  m_aUnitPrefabSlots +{
+   "{35BEFD501A106018}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/dim_PLA_Navy_CREW.et"
+  }
+ }
+ KNR5 {
+  components {
+   PS_GroupCallsignAssigner "{6AC6C5F64661C87D}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 4311.75 12.609 4925.176
+  angles 0 165.326 0
+ }
+}
+$grp Vehicle : "{5DA462303D790044}Prefabs/Vehicles/PLA Vehicle/PLA_Vamtac_KORD.et" {
+ PLA_Vamtac_KORD1 {
+  coords 4290.39 12.344 4915.217
+  angles 0 -105 0
+  m_sAttachmentGroupName "KNR4"
+ }
+ PLA_Vamtac_KORD2 {
+  coords 4311.083 12.59 4920.718
+  angles -1.124 -107.611 -0.582
+  m_sAttachmentGroupName "KNR5"
+ }
+}
+Vehicle PLA_Navy_Rosomak1 : "{81B8A1E44BAEA751}Prefabs/Vehicles/PLA Vehicle/PLA_Navy_Rosomak.et" {
+ coords 5883.063 3.344 3481.478
+ angles 0 -132.61 0
+}
+$grp Vehicle : "{9BB52C146A190963}Prefabs/Vehicles/PLA Vehicle/PLA_Vamtac_Transport.et" {
+ PLA_Vamtac_Transport1 {
+  coords 5873.742 3.625 3473.254
+  angles 2.53 -135 0
+  m_sAttachmentGroupName "HQ"
+ }
+ PLA_Vamtac_Transport2 {
+  coords 4299.607 12.458 4917.698
+  angles -1.057 -101.634 -0.696
+  m_sAttachmentGroupName "KNR4"
+ }
+ PLA_Vamtac_Transport3 {
+  coords 4320.176 12.69 4923.618
+  angles -0.868 -104.256 0.22
+  m_sAttachmentGroupName "KNR5"
+ }
+}
+SCR_AIGroup KNR1 : "{AFF9B96F03361D91}Prefabs/Groups/OPFOR/PLA/NAVY/PLA_NAVY_Motorized_Inf.et" {
+ components {
+  PS_GroupCallsignAssigner "{6AC6C5F64661C87D}" {
+   m_iCompanyCallsign 1
+  }
+ }
+ coords 5884.146 3.39 3486.558
+ angles 0.586 139.104 0.677
+}
+SCR_AIGroup HQ : "{C3DD7B07001D5FE2}Prefabs/Groups/OPFOR/PLA/NAVY/PLA_NAVY_HQ.et" {
+ coords 5872.023 3.535 3475.51
+ angles 0 135.292 0
+}
+$grp Vehicle : "{CD3A724819D4E820}Prefabs/Vehicles/PLA Vehicle/PLA_NAVY_ROSOMAK_Transport.et" {
+ PLA_NAVY_ROSOMAK_Transport1 {
+  coords 5905.807 3.219 3498.69
+  angles 0 -120 0
+  m_sAttachmentGroupName "KNR3"
+ }
+ PLA_NAVY_ROSOMAK_Transport2 {
+  coords 4332.203 12.816 4926.641
+  angles -0.865 -105.004 0.232
+  m_sAttachmentGroupName "KNR6"
+ }
+}
