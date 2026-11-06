@@ -35,7 +35,7 @@ $grp SCR_AIGroup : "{3298D6DA95D73EAD}Prefabs/Groups/BLUFOR/RHS_USAF/USMC/Desert
    "{396D531D125A3EDD}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_Rifleman_v2_D.et"
    "{A0D97D555EAC6433}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/dim_Role_Character_USAF_USMC_Grenadier_D.et"
   }
-  m_sCustomNameSet "Расчет М252 с SOFLAM"
+  m_sCustomNameSet "Расчет М252"
  }
  AMER3 {
   components {
@@ -152,7 +152,7 @@ $grp SCR_AIGroup : "{3298D6DA95D73EAD}Prefabs/Groups/BLUFOR/RHS_USAF/USMC/Desert
   angles 0 -90.779 0
   m_aUnitPrefabSlots {
    "{8106B950A0B22B93}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Force Recon/dim_USMC_FR_Scout_RTO.et"
-   "{E8416AD4EB2E6B1E}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Force Recon/dim_Role_Character_USAF_USMC_Sniper_Barret.et"
+   "{FB0695DF46E2DE77}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/USMC/Desert/Force Recon/dim_Role_Character_USAF_USMC_FR_Sniper.et"
   }
   m_bSnapToTerrain 0
   m_sCustomNameSet "Снайперская пара"
@@ -168,13 +168,15 @@ Vehicle M1151_armed_MK19_Tan1 : "{88AC991871268D13}Prefabs/Vehicles/Wheeled/M998
  angles 0 -91.813 0
  m_sAttachmentGroupName "REC"
 }
-Vehicle M1151_armed_M2HB_Tan_AP2 : "{9C07B4B8CF07B8A1}Prefabs/Vehicles/Wheeled/M998/M1151_armed_M2HB_Tan_AP.et" {
- coords 6763.169 48.445 4298.126
- angles 0 -92.468 0
- m_sAttachmentGroupName "REC"
-}
-Vehicle M1167_armed_TOW_Tan1 : "{D875ADE39021650D}Prefabs/Vehicles/Wheeled/M998/M1167_armed_TOW_Tan.et" {
- coords 6792.093 48.445 4301.231
- angles 0 -96.514 0
- m_sAttachmentGroupName "REC2"
+$grp Vehicle : "{9C07B4B8CF07B8A1}Prefabs/Vehicles/Wheeled/M998/M1151_armed_M2HB_Tan_AP.et" {
+ M1151_armed_M2HB_Tan_AP2 {
+  coords 6763.169 48.445 4298.126
+  angles 0 -92.468 0
+  m_sAttachmentGroupName "REC"
+ }
+ M1151_armed_M2HB_Tan_AP3 {
+  coords 6792.093 48.445 4301.231
+  angles 0 -97.218 0
+  m_sAttachmentGroupName "REC2"
+ }
 }

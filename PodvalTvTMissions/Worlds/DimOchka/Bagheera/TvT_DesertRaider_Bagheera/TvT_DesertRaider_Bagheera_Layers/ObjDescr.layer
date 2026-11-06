@@ -4,7 +4,7 @@ $grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescripti
   m_sTitle "Правила и задачи"
   m_sDescriptionLayout "{41DAF7B7061DC0BC}UI/MissionDescription/DescriptionEditable.layout"
   m_sTextData "ПРАВИЛА:"\
-  "Правила проекта."\
+  " 1. США запрещено выходить из своих триггеров пока не увидят технику противника."\
   ""\
   "ЗАДАЧИ:"\
   "• США: "\
@@ -194,7 +194,7 @@ $grp PolylineShapeEntity : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
    PS_PolyZone "{60E90266F25533F6}" {
     m_cPolygonColor 0.506 0.584 0.812 1
     m_fPolygonUVScale 0.44
-    m_cPolygonBorderColor 0 0.125 0.502 1
+    m_cPolygonBorderColor 0 0.125 0.503 1
     m_aVisibleForFactions {
      "RHS_USAF"
      "Ses_TKA"
@@ -202,63 +202,64 @@ $grp PolylineShapeEntity : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
     }
    }
   }
-  coords 3772.974 58.269 3282.239
+  coords 3774.849 58.269 3279.76
   Points {
-   ShapePoint "{6AB2E84FA9A22FA1}" {
-    Position -14.336 0.083 -4.072
+   ShapePoint "{60E90266E922A02A}" {
+    Position 15.135 -0.996 -29.005
    }
    ShapePoint "{6AB2E84FA9F4A490}" {
-    Position -18.628 -0.074 1.723
+    Position 4.519 -2.588 -41.902
    }
    ShapePoint "{6AB2E84FA8A38CAE}" {
-    Position -26.98 0.001 4.562
+    Position -18.954 -3.015 -52.601
    }
    ShapePoint "{6AB2E84FA89BC3D8}" {
-    Position -32.51 0.178 2.93
+    Position -54.414 -4.014 -59.349
    }
    ShapePoint "{6AB2E84FA868FE3D}" {
-    Position -37.215 -0.065 7.149
+    Position -89.189 -6.694 -61.351
    }
    ShapePoint "{6AB2E84FABAAECC8}" {
-    Position -47.201 -0.034 8.119
+    Position -98.917 -5.605 -42.671
    }
    ShapePoint "{6AB2E84FAA78E300}" {
-    Position -57.148 0.381 29.889
+    Position -102.409 -2.747 9.364
    }
    ShapePoint "{6AB2E84FB5EF2DED}" {
-    Position -58.282 -0.299 81.65
+    Position -105.311 -1.64 59.194
    }
    ShapePoint "{6AB2E84FB4F01633}" {
-    Position -55.813 -0.341 85.94
+    Position -94.785 -3.638 85.284
    }
    ShapePoint "{6AB2E84FB4736CBE}" {
-    Position -25.87 -0.074 86.581
+    Position -74.408 -5.072 109.411
    }
    ShapePoint "{6AB2E84FB74F3F42}" {
-    Position -15.659 -0.074 100.292
+    Position -28.333 -2.726 119.359
    }
    ShapePoint "{6AB2E84FB6E807FE}" {
-    Position 2.752 -0.074 104.44
+    Position 1.764 -0.074 108.397
    }
    ShapePoint "{6AB2E84FB62AC846}" {
-    Position 8.136 0.001 92.051
+    Position 23.271 0.338 99.084
    }
    ShapePoint "{6AB2E84FB671280F}" {
-    Position 19.233 0.736 82.75
+    Position 29.644 0.527 86.405
    }
    ShapePoint "{6AB2E84FB192CEF6}" {
-    Position 23.07 1.135 70.184
+    Position 35.298 0.678 68.049
    }
    ShapePoint "{6AB2E84FB010EB6F}" {
-    Position 16.167 1.049 49.101
+    Position 35.57 0.704 55.29
    }
    ShapePoint "{6AB2E84FB05C8BDC}" {
-    Position 14.736 0.109 16.339
+    Position 35.87 -2.472 5.316
    }
    ShapePoint "{6AB2E84FB3C7E978}" {
-    Position 8.941 0.386 5.049
+    Position 25.606 -0.826 -16.398
    }
   }
+  LineColor 0 0.1255 0.502 1
  }
 }
 GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {

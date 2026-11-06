@@ -138,6 +138,18 @@ $grp SCR_AIGroup : "{3298D6DA95D73EAD}Prefabs/Groups/BLUFOR/RHS_USAF/USMC/Desert
   m_bSnapToTerrain 0
  }
 }
+$grp Vehicle : "{32A7BCC2E9929510}Prefabs/Vehicles/Helicopters/UH60/dim_UH-60_Black_M60.et" {
+ dim_UH_60_Black_M1 {
+  coords 276.062 15.89 2474.849
+  angles 0 45 0
+  m_sAttachmentGroupName "HELI"
+ }
+ dim_UH_60_Black_M2 {
+  coords 250.494 15.89 2449.281
+  angles 0 45 0
+  m_sAttachmentGroupName "HELI"
+ }
+}
 $grp Vehicle : "{56E88FE5DDF6AA12}Prefabs/Vehicles/Helicopters/AH1S/AH1S_Base.et" {
  AH1S_Base1 {
   coords 234.577 15.885 2461.916
@@ -166,28 +178,6 @@ SCR_AIGroup HELI : "{6981CA4A67B1A730}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Gro
  }
  m_bSnapToTerrain 0
  m_sCustomNameSet "Экипажи вертолетов"
-}
-$grp Vehicle : "{70B7A59379C0525B}Prefabs/Vehicles/Helicopters/UH60/UH-60_black.et" {
- UH_60_black2 {
-  coords 250.494 15.89 2449.281
-  angles 0 45 0
-  m_sAttachmentGroupName "HELI"
- }
- UH_60_black3 {
-  components {
-   SlotManagerComponent "{693717EA5E627710}" {
-    Slots {
-     EntitySlotInfo ShadowAO {
-     }
-     RegisteringComponentSlotInfo Fuel_probe {
-     }
-    }
-   }
-  }
-  coords 276.062 15.89 2474.849
-  angles 0 45 0
-  m_sAttachmentGroupName "HELI"
- }
 }
 $grp GenericEntity : "{9E91534DD244B27C}Prefabs/Vehicles/Naval/Type 36 Frigate/Type 36 Frigate.et" {
  {
