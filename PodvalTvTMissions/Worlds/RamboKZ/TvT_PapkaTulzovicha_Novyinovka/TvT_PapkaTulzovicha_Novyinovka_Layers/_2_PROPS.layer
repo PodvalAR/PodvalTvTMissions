@@ -1,12 +1,27 @@
-GenericEntity : "{C7CDE1D7E0EEC5D8}Prefabs/Items/Stuff/SecretDocuments_Community.et" {
+PTVT_ProtectedDocumentEntity : "{C7CDE1D7E0EEC5D8}Prefabs/Items/Stuff/SecretDocuments_Community.et" {
  components {
   PS_SpectatorLabel "{64FEF7DCA087800B}" {
    m_cMapMarkerConfig PS_ManualMarkerConfig "{64FEF7DCA087803F}" {
-    m_sImageSetGlow "{0250208EA4A9AB25}UI/Textures/Icons/icons_wrapperUI-32-glow.imageset"
-    m_MarkerColor 0.651 0 0 1
+    m_sImageSet "{FDD5423E69D007F8}UI/Textures/Icons/icons_wrapperUI-128.imageset"
+    m_MarkerColor 0.875 0.682 0.11 1
+    m_sQuadName "field-manual"
     m_sDescription "Секретный документ"
     m_aVisibleForFactions {
      "RHS_AFRF"
+     "RHS_USAF"
+     "RHS_ION"
+     "Ses_CDF"
+     "Ses_ChDKZ"
+     "Ses_TKR"
+     "Ses_TKA"
+     "Drg_IGF"
+     "Drg_PIR"
+     "UK"
+     "USSR"
+     "US"
+     "FIA"
+     "Drg_VCA"
+     ""
      ""
     }
    }
