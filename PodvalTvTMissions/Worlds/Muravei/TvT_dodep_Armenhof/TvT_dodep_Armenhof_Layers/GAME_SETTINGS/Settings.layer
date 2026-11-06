@@ -1,0 +1,66 @@
+SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
+ coords 3819.157 369.924 222.225
+}
+PerceptionManager PerceptionManager1 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 3822.754 370.491 219.838
+}
+PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
+ coords 3824.364 369.14 231.632
+}
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{6AB29128A2BAC270}" {
+     m_sZonePreviewName "Арменхоф"
+     m_Timer GUB_ZoneControlTimer "{6AB2912841814DA0}" {
+      timeToComplete 120
+     }
+     m_ZoneController GUB_ZoneController "{6AB2912859EEA0A2}" {
+      m_sZoneEntityName "Capture"
+     }
+     m_FlagController GUB_FlagController "{6AB291282C7AC5C2}" {
+      m_aFlagNames {
+       "Flag1"
+       "Flag2"
+      }
+      m_fStartFactionKey "Ses_TKR"
+      m_fEndFactionKey "Drg_VCA"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{6AB2912BB273D656}" {
+       m_sFirstFactionKey "Ses_TKR"
+       m_sSecondFactionKey "Drg_VCA"
+       m_fComparisonMultiplier 2
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 3195.195 357.761 57.74
+}
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ VCA_Win {
+  coords 3710.421 365.641 1423.46
+  m_sTitle "Город захвачен"
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+  m_sFactionKey "Drg_VCA"
+ }
+ TKR_Win2 {
+  coords 3687.52 366.625 1418.382
+  m_sTitle "Город Удержан"
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+  m_sFactionKey "Ses_TKR"
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 3819.532 370.866 217.394
+}

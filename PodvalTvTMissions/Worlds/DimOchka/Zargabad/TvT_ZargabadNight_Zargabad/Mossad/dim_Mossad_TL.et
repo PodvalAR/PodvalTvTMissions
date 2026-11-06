@@ -1,0 +1,43 @@
+SCR_ChimeraCharacter : "{6E4C05048B0CBFA7}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_TL_2.et" {
+ ID "520EC961A090B1EE"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "#PDVL_Role_SR"
+   }
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{8CFEE770D8AD8F5F}Prefabs/Weapons/Rifles/AKM/Rifle_AKMN_GP25.et"
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{B9229C128CBD8920}Prefabs/Characters/HeadGear/Disguise/Hair/2/Hair_2_1.et"
+    }
+    LoadoutSlotInfo ArmoredVest {
+     Prefab ""
+    }
+    LoadoutSlotInfo Vest {
+     Prefab "{77E4160B2A5831E1}Prefabs/Characters/Vests/Vest_ChestRigLarge/Vest_ChestRigLarge_1.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{689E807D2F48502A}" {
+     TargetStorage "Vest/Vest_ChestRigLarge_1.et"
+     PrefabsToSpawn {
+      "{B9E3B9B143A43A79}Prefabs/Weapons/Magazines/AKM/Magazine_AK_762x39_Steel_30rnd_Ball.et" "{B9E3B9B143A43A79}Prefabs/Weapons/Magazines/AKM/Magazine_AK_762x39_Steel_30rnd_Ball.et" "{B9E3B9B143A43A79}Prefabs/Weapons/Magazines/AKM/Magazine_AK_762x39_Steel_30rnd_Ball.et" "{B9E3B9B143A43A79}Prefabs/Weapons/Magazines/AKM/Magazine_AK_762x39_Steel_30rnd_Ball.et" "{B9E3B9B143A43A79}Prefabs/Weapons/Magazines/AKM/Magazine_AK_762x39_Steel_30rnd_Ball.et" "{B9E3B9B143A43A79}Prefabs/Weapons/Magazines/AKM/Magazine_AK_762x39_Steel_30rnd_Ball.et" "{B9E3B9B143A43A79}Prefabs/Weapons/Magazines/AKM/Magazine_AK_762x39_Steel_30rnd_Ball.et" "{645C73791ECA1698}Prefabs/Weapons/Grenades/Grenade_RGD5.et" "{645C73791ECA1698}Prefabs/Weapons/Grenades/Grenade_RGD5.et" "{77EAE5E07DC4678A}Prefabs/Weapons/Grenades/Smoke_RDG2.et" "{77EAE5E07DC4678A}Prefabs/Weapons/Grenades/Smoke_RDG2.et"
+     }
+    }
+    ItemsInitConfigurationItem "{689E807D5C5AD381}" {
+     TargetStorage "Back/Backpack_Veshmeshok.et"
+     PrefabsToSpawn {
+      "{262F0D09C4130826}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_VOG25.et" "{262F0D09C4130826}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_VOG25.et" "{262F0D09C4130826}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_VOG25.et" "{262F0D09C4130826}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_VOG25.et" "{262F0D09C4130826}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_VOG25.et" "{262F0D09C4130826}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_VOG25.et" "{262F0D09C4130826}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_VOG25.et" "{262F0D09C4130826}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_VOG25.et" "{262F0D09C4130826}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_VOG25.et" "{262F0D09C4130826}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_VOG25.et" "{262F0D09C4130826}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_VOG25.et" "{262F0D09C4130826}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_VOG25.et"
+     }
+    }
+   }
+  }
+ }
+ coords 147.005 1 57.419
+}

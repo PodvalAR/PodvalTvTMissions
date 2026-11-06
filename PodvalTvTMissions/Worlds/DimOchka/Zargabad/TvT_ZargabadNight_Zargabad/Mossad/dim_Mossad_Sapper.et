@@ -1,0 +1,40 @@
+SCR_ChimeraCharacter : "{C4501323DEA6C9D6}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_Sapper.et" {
+ ID "520EC961A090B1EE"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "#PDVL_Role_Sapper"
+   }
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{D838A5FFDBF7C437}Prefabs/Weapons/Rifles/ARY_UZI/ARY_Rifle_Uzi_Black.et"
+  }
+  SCR_CharacterIdentityComponent "{5584CBC63E092DBC}" {
+   Override 1
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{A76B07F70925F428}Prefabs/Characters/HeadGear/Disguise/Hair/1/Hair_1_1.et"
+    }
+    LoadoutSlotInfo ArmoredVest {
+     Prefab ""
+    }
+    LoadoutSlotInfo Vest {
+     Prefab "{B31C3920D102434D}Prefabs/Characters/Vests/Vest_ChestRigLarge/Vest_ChestRigLarge_5.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{689E6D83F89602AF}" {
+     TargetStorage "Vest/Vest_ChestRigLarge_5.et"
+     PrefabsToSpawn {
+      "{6478F22B21B8059C}Prefabs/Weapons/Magazines/ARY_Magazine_9x19_UZI_32rnd_Mixed_Black.et" "{6478F22B21B8059C}Prefabs/Weapons/Magazines/ARY_Magazine_9x19_UZI_32rnd_Mixed_Black.et" "{6478F22B21B8059C}Prefabs/Weapons/Magazines/ARY_Magazine_9x19_UZI_32rnd_Mixed_Black.et" "{6478F22B21B8059C}Prefabs/Weapons/Magazines/ARY_Magazine_9x19_UZI_32rnd_Mixed_Black.et" "{6478F22B21B8059C}Prefabs/Weapons/Magazines/ARY_Magazine_9x19_UZI_32rnd_Mixed_Black.et" "{6478F22B21B8059C}Prefabs/Weapons/Magazines/ARY_Magazine_9x19_UZI_32rnd_Mixed_Black.et" "{6478F22B21B8059C}Prefabs/Weapons/Magazines/ARY_Magazine_9x19_UZI_32rnd_Mixed_Black.et" "{6478F22B21B8059C}Prefabs/Weapons/Magazines/ARY_Magazine_9x19_UZI_32rnd_Mixed_Black.et" "{6478F22B21B8059C}Prefabs/Weapons/Magazines/ARY_Magazine_9x19_UZI_32rnd_Mixed_Black.et"
+     }
+    }
+   }
+  }
+ }
+ coords 151.553 1 56.882
+}

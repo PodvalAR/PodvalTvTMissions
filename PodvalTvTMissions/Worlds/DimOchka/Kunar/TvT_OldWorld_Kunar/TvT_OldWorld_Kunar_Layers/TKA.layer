@@ -1,0 +1,207 @@
+Vehicle YoyotaDJ78_PKM_Tan1 : "{09F9A83F8268866B}Prefabs/Vehicles/Wheeled/YoyotaDJ78/Variants/Tan/YoyotaDJ78_PKM_Tan.et" {
+ coords 2368.267 163.5 1868.445
+ m_sAttachmentGroupName "car4"
+}
+$grp SCR_AIGroup : "{13DBB5C9728E6DE1}Prefabs/Groups/INDFOR/TKR/Group_Ses_TKR_Random_motor.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 3447.784 14.753 2535.56
+  m_sCustomNameSet "Отряд боевиков"
+ }
+ car1 {
+  components {
+   PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
+    m_iCompanyCallsign 4
+    m_iSquadCallsign 1
+   }
+  }
+  coords 651.366 38.413 3263.103
+  angles 0 147.939 0
+  m_sCustomNameSet "Отряд боевиков"
+ }
+}
+Vehicle YoyotaDJ78_PKM1 : "{52D23EA9EC364F13}Prefabs/Vehicles/Wheeled/YoyotaDJ78/YoyotaDJ78_PKM.et" {
+ coords 2370.233 163.5 1883.49
+ angles 0 20.116 0
+ m_sAttachmentGroupName "car3"
+}
+$grp Vehicle : "{750D6A1E9D52FEB7}Prefabs/Vehicles/Wheeled/YoyotaDJ78/Variants/Desert/YoyotaDJ78_turret_Desert.et" {
+ YoyotaDJ78_turret_Desert1 {
+  coords 661.096 38.681 3266.438
+  angles 1.223 60.007 0.328
+  m_sAttachmentGroupName "car2"
+ }
+ YoyotaDJ78_turret_Desert2 {
+  coords 645.441 38.183 3256.239
+  angles 1.223 60.007 0.328
+  m_sAttachmentGroupName "car1"
+ }
+}
+Vehicle YoyotaDJ78_transport1 : "{8348192B26F6C590}Prefabs/Vehicles/Wheeled/YoyotaDJ78/YoyotaDJ78_transport.et" {
+ coords 2363.82 163.5 1862.807
+ angles 0 1.543 0
+ m_sAttachmentGroupName "car4"
+}
+$grp SCR_AIGroup : "{A33B404F66AC1ED8}Prefabs/Groups/INDFOR/TKR/Group_Ses_TKR_Rifle.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A8820D36201ED9}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 2149.817 22.556 2954.479
+  angles 0 94.766 0
+  m_aUnitPrefabSlots {
+   "{88886FC274202013}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_SL_Random.et"
+   "{C00096717E140FE4}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_GL_Random.et"
+   "{6E9511C7C88E1E10}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_AT_Random.et"
+   "{AAA88BB9DF1D6B4D}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_AAT_Random.et"
+   "{61A809AD2C9D9820}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_MG_Random.et"
+   "{A59593D33B0EED7D}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_AMG_Random.et"
+   "{8E68A198939D2E8D}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Rifleman_Random.et"
+   "{C472228F83886D43}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_Sapper_Random.et"
+   "{2EB542F4AB0EAE4D}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Stinger.et"
+  }
+  m_sCustomNameSet "Отряд боевиков с ПЗРК"
+ }
+ {
+  coords 2325.722 20.154 3876.809
+  angles 0 -165 0
+  m_aUnitPrefabSlots {
+   "{44F829A0BCF2F1DA}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_PL.et"
+   "{C00096717E140FE4}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_GL_Random.et"
+   "{6E9511C7C88E1E10}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_AT_Random.et"
+   "{AAA88BB9DF1D6B4D}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_AAT_Random.et"
+   "{61A809AD2C9D9820}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_MG_Random.et"
+   "{A59593D33B0EED7D}Prefabs/Characters/Factions/INDFOR/TKR/Random/dim_Ses_TKR_AMG_Random.et"
+   "{A5A9262E9A743059}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_IGLA.et"
+  }
+  m_sCustomNameSet "Отряд боевиков с местным командиром и ПЗРК"
+ }
+}
+$grp SCR_AIGroup : "{B2829E998DF41555}Prefabs/Groups/OPFOR/Ses_TKA/Group_A2F_TKA_Squad.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{690E684CFA37FFC2}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 3769.171 59.608 2801.284
+  angles 0 -54.458 0
+  m_faction "Ses_TKR"
+  m_aUnitPrefabSlots {
+   "{3EAB31BD43ECDF10}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_SL_1.et"
+   "{C8DC8AFF9B099571}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL_3.et"
+   "{4AAAEF575475F84A}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AT_2.et"
+   "{E91526BCE4780CE4}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AAT_3.et"
+   "{F77ABDD02B6EE454}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AR_2.et"
+   "{4114F2E62B288D34}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL_1.et"
+   "{403DDD18AFFBC0D9}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Sapper_1.et"
+   "{D0E3CB03406978A3}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Marksman.et"
+  }
+  m_sCustomNameSet "Отряд боевиков"
+ }
+ car2 {
+  components {
+   PS_GroupCallsignAssigner "{690E684CFA37FFC2}" {
+    m_iCompanyCallsign 4
+   }
+  }
+  coords 666.732 38.888 3273.408
+  angles 0 147.311 0
+  m_faction "Ses_TKR"
+  m_aUnitPrefabSlots {
+   "{833007A59429D956}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_SL_4.et"
+   "{2D40C60697EC021A}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL_2.et"
+   "{68C608E7EA187C05}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AT.et"
+   "{29B8977022F1ADF1}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AAT.et"
+   "{F77ABDD02B6EE454}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AR_2.et"
+   "{BDBB1F0764260B73}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL.et"
+   "{878B3AA80A71C6A6}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_MG_3.et"
+   "{C1A8BFBAB699A563}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AMG_3.et"
+   "{D0E3CB03406978A3}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Marksman.et"
+  }
+  m_sCustomNameSet "Отряд боевиков"
+ }
+ car3 {
+  components {
+   PS_GroupCallsignAssigner "{690E684CFA37FFC2}" {
+    m_iCompanyCallsign 5
+   }
+  }
+  coords 2365.619 163.5 1886.671
+  angles 0 109.819 0
+  m_faction "Ses_TKR"
+  m_aUnitPrefabSlots {
+   "{3EAB31BD43ECDF10}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_SL_1.et"
+   "{2D40C60697EC021A}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL_2.et"
+   "{AF36A3AE58906F21}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AT_3.et"
+   "{29B8977022F1ADF1}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AAT.et"
+   "{F77ABDD02B6EE454}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AR_2.et"
+   "{BDBB1F0764260B73}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL.et"
+   "{82583650C8E9B5B4}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman.et"
+   "{C9F5A5011FDAD89C}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Sapper_3.et"
+   "{0280BB939933F116}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Marksman_3.et"
+  }
+  m_sCustomNameSet "Отряд боевиков"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{690E684CFA37FFC2}" {
+    m_iSquadCallsign 1
+   }
+  }
+  coords 2316.47 20.515 3878.995
+  angles 0 -164.394 0
+  m_faction "Ses_TKR"
+  m_aUnitPrefabSlots {
+   "{08705F90B79D0BFA}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Sniper.et"
+   "{58AE4C26D0517659}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Sniper_2.et"
+  }
+  m_sCustomNameSet "Пара снайперов"
+ }
+ car4 {
+  components {
+   PS_GroupCallsignAssigner "{690E684CFA37FFC2}" {
+    m_iCompanyCallsign 5
+    m_iSquadCallsign 1
+   }
+  }
+  coords 2360.817 163.5 1870.012
+  angles 0 92.16 0
+  m_faction "Ses_TKR"
+  m_aUnitPrefabSlots {
+   "{3EAB31BD43ECDF10}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_SL_1.et"
+   "{2D40C60697EC021A}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL_2.et"
+   "{AF36A3AE58906F21}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AT_3.et"
+   "{29B8977022F1ADF1}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AAT.et"
+   "{F77ABDD02B6EE454}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_AR_2.et"
+   "{BDBB1F0764260B73}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_GL.et"
+   "{82583650C8E9B5B4}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Rifleman.et"
+   "{C9F5A5011FDAD89C}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Sapper_3.et"
+   "{0280BB939933F116}Prefabs/Characters/Factions/INDFOR/TKR/dim_Ses_TKR_Marksman_3.et"
+  }
+  m_sCustomNameSet "Отряд боевиков"
+ }
+}
+$grp Vehicle : "{EA1376958FDDDD7A}Prefabs/Vehicles/Wheeled/YoyotaDJ78/Variants/Desert/YoyotaDJ78_transport_Desert.et" {
+ YoyotaDJ78_transport_Desert1 {
+  coords 2365.137 163.5 1879.813
+  angles 0 15.26 0
+  m_sAttachmentGroupName "car3"
+ }
+ YoyotaDJ78_transport_Desert2 {
+  coords 668.422 38.905 3271.056
+  angles 1.986 56.486 -0.242
+  m_sAttachmentGroupName "car2"
+ }
+ YoyotaDJ78_transport_Desert3 {
+  coords 652.767 38.413 3260.857
+  angles 1.986 56.486 -0.242
+  m_sAttachmentGroupName "car1"
+ }
+}

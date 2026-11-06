@@ -1,0 +1,49 @@
+SCR_ChimeraCharacter : "{58E4BD4522587222}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_Rfl_3.et" {
+ ID "520EC961A090B1EE"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "#PDVL_Role_Rifleman"
+   }
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{29C9D4508C3130AC}Prefabs/Characters/HeadGear/Hat_FlatCap_01/dim_PakolHat_ICG_1.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{044560269A810B60}Prefabs/Characters/Uniforms/Terra_arma_shirt/Terra_arma_shirt_base.et"
+    }
+    LoadoutSlotInfo ArmoredVest {
+     Prefab ""
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{ADBC10EA4D0D97C2}Prefabs/Characters/Uniforms/Pants_Taksuit_7.et"
+    }
+    LoadoutSlotInfo Vest {
+     Prefab "{F396524995F06BFA}Prefabs/Characters/Vests/Vest_SRU21P/Vest_SRU21P.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{689B2D43EA87EF4F}" {
+     TargetStorage "Pants/Pants_Taksuit_7.et"
+     PrefabsToSpawn + {
+      "{66410ECE9E686298}Prefabs/Weapons/Magazines/ARY_G3/20Rnd_Alu/dim_ARY_Magazine_762x51_G3_20Rnd_Alu_DM151_AP.et" "{66410ECE9E686298}Prefabs/Weapons/Magazines/ARY_G3/20Rnd_Alu/dim_ARY_Magazine_762x51_G3_20Rnd_Alu_DM151_AP.et"
+     }
+    }
+    ItemsInitConfigurationItem "{689B2D43EAE0FA83}" {
+     TargetStorage "Pants/Pants_Taksuit_7.et"
+    }
+    ItemsInitConfigurationItem "{689B2D43EAF841F3}" {
+     TargetStorage "Jacket/Terra_arma_shirt_base.et"
+    }
+    ItemsInitConfigurationItem "{689E6D83F89602AF}" {
+     TargetStorage "Vest/Vest_SRU21P.et"
+    }
+   }
+  }
+ }
+ coords 154.077 1 56.656
+}

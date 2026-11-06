@@ -1,0 +1,114 @@
+$grp GenericEntity : "{522DEDD6E6C0E6C4}Prefabs/Vehicles/Airplanes/IL76/Plane_IL76_USSR_static.et" {
+ {
+  coords 2970.389 10 3011.344
+  angles 0 122.393 0
+ }
+ A {
+  coords 2832.604 10 3097.37
+  angles 0 120 0
+ }
+}
+$grp Vehicle : "{AFF6067A5CE8A852}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8_base.et" {
+ Mi8_base1 {
+  components {
+   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+    FuelNodes {
+     SCR_FuelNode "{5622A70CD4036C5A}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{5A7CE769E7A9C416}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{5A7CE769E7A9C414}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+    }
+   }
+  }
+  coords 2830.208 9.788 3043.066
+  angles 3.885 31.935 0
+ }
+ Mi8_base2 {
+  components {
+   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+    FuelNodes {
+     SCR_FuelNode "{5622A70CD4036C5A}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{5A7CE769E7A9C416}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{5A7CE769E7A9C414}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+    }
+   }
+  }
+  coords 2859.691 9.788 3024.677
+  angles 3.885 31.935 0
+ }
+ Mi8_base3 {
+  components {
+   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+    FuelNodes {
+     SCR_FuelNode "{5622A70CD4036C5A}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{5A7CE769E7A9C416}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{5A7CE769E7A9C414}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+    }
+   }
+  }
+  coords 2681.859 7.833 3091.435
+  angles 3.542 -56.834 0
+ }
+ Mi8_base4 {
+  components {
+   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+    FuelNodes {
+     SCR_FuelNode "{5622A70CD4036C5A}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{5A7CE769E7A9C416}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{5A7CE769E7A9C414}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+    }
+   }
+  }
+  coords 2664.056 7.833 3064.193
+  angles 3.542 -56.834 0
+ }
+}
+GenericEntity : "{FD598E08BF17996A}Prefabs/Vehicles/Airplanes/IL76/Plane_IL76RU_running.et" {
+ components {
+  MeshObject "{5AAD3AF612B4E9F3}" {
+   Materials {
+    MaterialAssignClass "{6AB28D48AFD34388}" {
+     SourceMaterial "Fuselage"
+     AssignedMaterial "{D55817D5BDEBE23A}Assets/Vehicles/Airplanes/il76/data/Fuselage_USSR.emat"
+    }
+   }
+  }
+ }
+ coords 3045.275 10 3062.333
+ angles 0 -58.549 0
+}

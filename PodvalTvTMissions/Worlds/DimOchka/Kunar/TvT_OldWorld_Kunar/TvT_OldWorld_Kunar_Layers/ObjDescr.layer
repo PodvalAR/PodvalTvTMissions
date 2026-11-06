@@ -1,0 +1,180 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ {
+  coords 6876.31 5.565 6301.583
+  m_sTitle "Правила и задачи"
+  m_sTextData "ПРАВИЛА:"\
+  "1. Экипажу вертолета разрешено садиться в вертолет только после конца фриз-тайма;"\
+  "2. СССР запрещено трогать ЗУ-23, можно садиться только боевикам;"\
+  "3. СССР запрещено специально взрывать ЗУ-23 (напр. чтобы не досталась противнику);"\
+  "4. Всем запрещено садиться в Ми-8."\
+  ""\
+  "ЗАДАЧИ:"\
+  "• СССР: "\
+  " 1. Удержать аэродром."\
+  ""\
+  "• Моджахеды:"\
+  " 1. Захватить аэродром."\
+  ""\
+  "Дополнительно:"\
+  "1. У Моджахедов есть 2 ПЗРК + могут захватить Урал с ЗУ-23 на аэродроме."
+  m_aVisibleForFactions {
+   "USSR"
+   "RHS_ION"
+   "Ses_TKR"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+ }
+ {
+  coords 6876.31 5.565 6301.583
+  m_sTitle "Обстановка"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "Aфганистан."\
+  "В провинцию Кунар прибыли, только что прошедшие учебку, призывники. Однако именно в этот злосчастный день моджахеды планируют совершить атаку на авиабазу Баграм с целью уничтожения \"неверных\" и захвату ценных ресурсов. "\
+  "Десантникам предстоит крещение огнем..."\
+  ""
+  m_aVisibleForFactions {
+   "USSR"
+   "RHS_ION"
+   "Ses_TKR"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+ }
+}
+$grp GenericEntity : "{3D78D7D606FF9818}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_NoCapture.et" {
+ flag1 {
+  coords 2727.662 22.598 3122.482
+  angles 0 79.607 0
+ }
+ flag2 {
+  coords 2768.69 24.427 2979.119
+  angles 0 79.607 0
+ }
+ flag3 {
+  coords 2591.23 17.187 3214.945
+  angles 0 148.383 0
+ }
+}
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{6AB29B53F23A9E15}" {
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "TKR_WIN"
+     }
+     m_sFailedObjectiveNames {
+      "USSR_WIN"
+     }
+     m_sMessage "Аэродром захвачен"
+     m_Timer GUB_ZoneControlTimer "{6AB29B5207BC392A}" {
+      timeToComplete 180
+     }
+     m_ZoneController GUB_ZoneController "{6AB29B5206290164}" {
+      m_sZoneEntityName "capture"
+     }
+     m_FlagController GUB_FlagController "{6AB29B52007FC392}" {
+      m_aFlagNames {
+       "flag1"
+       "flag2"
+       "flag3"
+      }
+      m_fStartFactionKey "USSR"
+      m_fEndFactionKey "Ses_TKR"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{6AB29B520A530BB7}" {
+       m_sFirstFactionKey "Ses_TKR"
+       m_sSecondFactionKey "USSR"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 2589.084 82.615 3956.019
+}
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ USSR_WIN {
+  coords 3829.863 28 3425.816
+  m_sTitle "Аэродром удержан"
+  m_sFactionKey "USSR"
+ }
+ TKR_WIN {
+  coords 3834.272 28 3404.242
+  m_sTitle "Аэродром захвачен"
+  m_sFactionKey "Ses_TKR"
+ }
+}
+PolylineShapeEntity capture : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
+ components {
+  PS_PolyZone "{60E90266F25533F6}" {
+   m_cPolygonColor 0.749 0.376 0.376 0.687
+   m_fPolygonUVScale 0.44
+   m_cPolygonBorderColor 0.502 0 0 1
+   m_fPolygonBorderWidth 12
+   m_aVisibleForFactions {
+    "USSR"
+    "Ses_TKR"
+    ""
+   }
+  }
+ }
+ coords 3190.546 10 3035.486
+ Points {
+  ShapePoint "{60E90266E922A02A}" {
+   Position -100.247 0 22.689
+  }
+  ShapePoint "{6AB29B416D530058}" {
+   Position -161.155 0 -73.245
+  }
+  ShapePoint "{6AB29B41689A8E18}" {
+   Position -307.788 0 19.508
+  }
+  ShapePoint "{6AB29B416BA2DE9E}" {
+   Position -346.574 0 -42.152
+  }
+  ShapePoint "{6AB29B416A2628CC}" {
+   Position -392.997 -1.247 -2.069
+  }
+  ShapePoint "{6AB9451859EAF736}" {
+   Position -394.448 -1.5 -20.828
+  }
+  ShapePoint "{6AB29B41719A766A}" {
+   Position -435.469 -1.21 -74.753
+  }
+  ShapePoint "{6AB29B4170B3A271}" {
+   Position -470.772 -1.175 -70.874
+  }
+  ShapePoint "{6AB29B4173EE3DCF}" {
+   Position -546.443 -2 -18.983
+  }
+  ShapePoint "{6AB29B417CC18AEF}" {
+   Position -567.743 -1.937 18.989
+  }
+  ShapePoint "{6AB29B417989D413}" {
+   Position -548.375 -3.373 49.104
+  }
+  ShapePoint "{6AB29B417B981643}" {
+   Position -489.552 0 134.786
+  }
+  ShapePoint "{6AB29B4181D6DD39}" {
+   Position -648.667 0 235.414
+  }
+  ShapePoint "{6AB29B4189F9B230}" {
+   Position -586.779 0 330.249
+  }
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 5547.709 75.207 4020.56
+}

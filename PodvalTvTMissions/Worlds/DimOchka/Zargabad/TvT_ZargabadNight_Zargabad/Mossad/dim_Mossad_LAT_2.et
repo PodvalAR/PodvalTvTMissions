@@ -1,0 +1,29 @@
+SCR_ChimeraCharacter : "{6B07EEBE4DE3B05A}Worlds/DimOchka/Zargabad/TvT_ZargabadNight_Zargabad/Mossad/dim_Mossad_LAT.et" {
+ ID "520EC961A090B1EE"
+ components {
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{F6255455C1E58E61}Prefabs/Characters/HeadGear/US_BushHat/US_BushHat.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{C765CE33535F1B3E}Prefabs/Characters/Uniforms/Jacket_Bomber_1.et"
+    }
+    LoadoutSlotInfo Vest {
+     Prefab "{77E4160B2A5831E1}Prefabs/Characters/Vests/Vest_ChestRigLarge/Vest_ChestRigLarge_1.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{689B2D43EAF841F3}" {
+     TargetStorage "Jacket/Jacket_Bomber_1.et"
+    }
+    ItemsInitConfigurationItem "{689E6D826BD04590}" {
+     TargetStorage "Vest/Vest_ChestRigLarge_1.et"
+    }
+   }
+  }
+ }
+ coords 3878.902 31.308 5990.281
+}

@@ -1,0 +1,51 @@
+SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
+ coords 1172.244 143.018 5480.498
+}
+PerceptionManager PerceptionManager1 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 1213.661 147.211 5558.963
+}
+PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
+ components {
+  SCR_TimeAndWeatherHandlerComponent "{5EE3229927D4D2F5}" {
+   m_bUsePredefineStartingTimeAndWeather 1
+   m_aStartingWeatherAndTime {
+    SCR_TimeAndWeatherState "{6AB6DBDB7ACFF8A2}" {
+     m_sWeatherPresetName "Clear"
+     m_iStartingHour 19
+     m_iStartingMinutes 15
+    }
+   }
+  }
+ }
+ coords 1157.627 140.96 5483.873
+ {
+  SCR_FactionManager "6AB8C04D22EE750C" {
+   ID "5ED9088735FF2D8B"
+   Factions {
+    SCR_Faction "{604D1A678B852591}" {
+     FactionColor 0 0.423 0.6654 1
+     UIInfo SCR_FactionUIInfo "{604D1A6037B69643}" {
+      Name "Израиль"
+      Icon "{3639288F0C06DE04}Assets/Props/Fabric/Flags/ISR_Flag_icon.edds"
+      m_sNameUpper "Израиль"
+     }
+     m_OutlineFactionColor 0.001 0.025 0.082 1
+     m_NotificationFactionColor 0 0.284 0.44 1
+     m_NotificationTextFactionColor 0 0.423 0.665 1
+     m_sFactionFlag "{615D1133CD33F112}Assets/Props/Fabric/Flags/ISR_Flag_big.edds"
+     m_FactionFlagMaterial "{5E4C054AB548FCF2}Assets/Props/Fabric/Flags/Data/dim_Flag_1_2_ISR.emat"
+     m_sGroupFlagsImageSet "{1228936E5DB30403}UI/Textures/GroupManagement/FlagIcons/GroupFlagsBlufor.imageset"
+     m_sGroupFlagsImageSetOutlines "{D1BFDF90DD7A4E01}UI/Textures/GroupManagement/FlagIcons/GroupFlagsBlufor-outline.imageset"
+    }
+   }
+  }
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 3251.117 19.53 4797.703
+}

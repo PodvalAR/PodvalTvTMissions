@@ -1,0 +1,40 @@
+SCR_ChimeraCharacter : "{FEA69A802A21BCB9}Prefabs/Characters/Factions/BLUFOR/US/Regular/Desert/dim_US_D_Reg_AR.et" {
+ ID "520EC961A090BBD5"
+ components {
+  SCR_CharacterIdentityComponent "{5584CBC63E092DBC}" {
+   Override 1
+   Identity Identity "{5584CBC6363C648B}" {
+    VisualIdentity VisualIdentity "{56E6D9456009D1C4}" {
+     Head "{5E4F708243A0826F}Prefabs/Characters/Heads/Head_Aarab_01.et"
+    }
+   }
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{EA91E1C609F04319}Prefabs/Characters/HeadGear/MLE78_Helmet/Casque_mle78_ONU.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{48F8D5B1422E6BE3}Prefabs/Characters/Uniforms/FELIN_T4S2_Vest/FELIN_T4S2_Vest_Rolled_DA.et"
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{C095E929FA798DB3}Prefabs/Characters/Uniforms/FELIN_T4S2_Pantalon/Pants_FELIN_T4S2_DA_base.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{68C296C7D8DB0537}" {
+     TargetStorage "Jacket/FELIN_T4S2_Vest_Rolled_DA.et"
+    }
+    ItemsInitConfigurationItem "{68C296C643D42AA9}" {
+     TargetStorage "Jacket/FELIN_T4S2_Vest_Rolled_DA.et"
+    }
+    ItemsInitConfigurationItem "{68C296C6496CFB2A}" {
+     TargetStorage "Pants/Pants_FELIN_T4S2_DA_base.et"
+    }
+   }
+  }
+ }
+ coords 111.523 1 21.922
+}

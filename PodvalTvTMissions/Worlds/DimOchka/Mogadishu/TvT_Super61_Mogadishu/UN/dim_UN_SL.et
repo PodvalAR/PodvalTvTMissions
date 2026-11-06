@@ -1,0 +1,53 @@
+SCR_ChimeraCharacter : "{932E6B9F18A51EAA}Prefabs/Characters/Factions/BLUFOR/US/Regular/Desert/dim_US_D_Reg_SL.et" {
+ ID "520EC961A090BBD5"
+ components {
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{732C273DE3789F6D}Prefabs/Weapons/Rifles/ARY_G3/ARY_G3_G3A3/Variants/Quality/dim_ARY_Rifle_G3A3_Quality_SlimBlack_Opt_2.et"
+  }
+  SCR_CharacterIdentityComponent "{5584CBC63E092DBC}" {
+   Override 1
+   Identity Identity "{5584CBC6363C648B}" {
+    VisualIdentity VisualIdentity "{56E6D9456009D1C4}" {
+     Head "{E57DD1A690AEC59E}Prefabs/Characters/Heads/Head_Arab_05.et"
+    }
+   }
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{9C6F08D4C1D9486A}Prefabs/Characters/HeadGear/BERET/beret_ONU.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{48F8D5B1422E6BE3}Prefabs/Characters/Uniforms/FELIN_T4S2_Vest/FELIN_T4S2_Vest_Rolled_DA.et"
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{C095E929FA798DB3}Prefabs/Characters/Uniforms/FELIN_T4S2_Pantalon/Pants_FELIN_T4S2_DA_base.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{68C296C7D8DB0537}" {
+     TargetStorage "Jacket/FELIN_T4S2_Vest_Rolled_DA.et"
+    }
+    ItemsInitConfigurationItem "{68C296C643D42AA9}" {
+     TargetStorage "Jacket/FELIN_T4S2_Vest_Rolled_DA.et"
+    }
+    ItemsInitConfigurationItem "{68C296C6496CFB2A}" {
+     TargetStorage "Pants/Pants_FELIN_T4S2_DA_base.et"
+    }
+    ItemsInitConfigurationItem "{68C296C24A8F554B}" {
+     PrefabsToSpawn {
+      "{66410ECE9E686298}Prefabs/Weapons/Magazines/ARY_G3/20Rnd_Alu/dim_ARY_Magazine_762x51_G3_20Rnd_Alu_DM151_AP.et" "{66410ECE9E686298}Prefabs/Weapons/Magazines/ARY_G3/20Rnd_Alu/dim_ARY_Magazine_762x51_G3_20Rnd_Alu_DM151_AP.et" "{66410ECE9E686298}Prefabs/Weapons/Magazines/ARY_G3/20Rnd_Alu/dim_ARY_Magazine_762x51_G3_20Rnd_Alu_DM151_AP.et" "{66410ECE9E686298}Prefabs/Weapons/Magazines/ARY_G3/20Rnd_Alu/dim_ARY_Magazine_762x51_G3_20Rnd_Alu_DM151_AP.et"
+     }
+    }
+    ItemsInitConfigurationItem "{68C296CB56D87F2B}" {
+     PrefabsToSpawn {
+      "{66410ECE9E686298}Prefabs/Weapons/Magazines/ARY_G3/20Rnd_Alu/dim_ARY_Magazine_762x51_G3_20Rnd_Alu_DM151_AP.et" "{66410ECE9E686298}Prefabs/Weapons/Magazines/ARY_G3/20Rnd_Alu/dim_ARY_Magazine_762x51_G3_20Rnd_Alu_DM151_AP.et" "{66410ECE9E686298}Prefabs/Weapons/Magazines/ARY_G3/20Rnd_Alu/dim_ARY_Magazine_762x51_G3_20Rnd_Alu_DM151_AP.et" "{66410ECE9E686298}Prefabs/Weapons/Magazines/ARY_G3/20Rnd_Alu/dim_ARY_Magazine_762x51_G3_20Rnd_Alu_DM151_AP.et"
+     }
+    }
+   }
+  }
+ }
+ coords 110.716 1 21.905
+}

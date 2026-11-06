@@ -1,0 +1,66 @@
+$grp GenericEntity : "{C92071B2E5B2B82F}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_02_V1_USSR_Campaign.et" {
+ {
+  components {
+   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+    m_sDefaultMaterial "{E7E23C8706EF6147}Assets/Props/Fabric/Flags/Data/Flag_2_3_SovietArmy.emat"
+    m_aObjectiveNames {
+     "Drg_VCA_zavod_WIN"
+     "US_zavod_WIN"
+    }
+    m_aFlagData {
+     PS_FlagData "{645F1E9A17B42959}" {
+      m_sFactionKey "Drg_VCA"
+     }
+     PS_FlagData "{645F1E9A123F609E}" {
+      m_sFactionKey "Drg_VCA"
+     }
+    }
+    m_sFactionKey "Drg_VCA"
+    m_sUseNotification 1
+    m_sNotificationText "Производственное здание захвачено"
+   }
+   BaseActionsManagerComponent "{6202D4E6F133BF4A}" {
+    additionalActions {
+     PS_FlagChangeAction "{6202D4E6A53D4B3C}" {
+      Duration 10
+      m_bUseAnimation 1
+     }
+    }
+   }
+  }
+  coords 3052.573 25.411 3380.829
+  angles 14.324 0 0
+ }
+ {
+  components {
+   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+    m_sDefaultMaterial "{E7E23C8706EF6147}Assets/Props/Fabric/Flags/Data/Flag_2_3_SovietArmy.emat"
+    m_aObjectiveNames {
+     "Drg_VCA_disp_WIN"
+     "US_disp_WIN"
+    }
+    m_aFlagData {
+     PS_FlagData "{645F1E9A17B42959}" {
+      m_sFactionKey "Drg_VCA"
+     }
+     PS_FlagData "{645F1E9A123F609E}" {
+      m_sFactionKey "Drg_VCA"
+     }
+    }
+    m_sFactionKey "Drg_VCA"
+    m_sUseNotification 1
+    m_sNotificationText " Здание диспетчерской захвачено"
+   }
+   BaseActionsManagerComponent "{6202D4E6F133BF4A}" {
+    additionalActions {
+     PS_FlagChangeAction "{6202D4E6A53D4B3C}" {
+      Duration 10
+      m_bUseAnimation 1
+     }
+    }
+   }
+  }
+  coords 3096.507 20.535 3293.592
+  angles 8.243 0 0
+ }
+}

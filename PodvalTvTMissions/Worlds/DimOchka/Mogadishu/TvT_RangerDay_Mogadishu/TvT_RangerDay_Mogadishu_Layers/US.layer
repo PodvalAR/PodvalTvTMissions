@@ -1,0 +1,230 @@
+$grp Vehicle : "{04BDACC0BB83284E}Prefabs/Vehicles/Wheeled/M923A1/M923A1_transport_covered_MERDC.et" {
+ M923A1_transport_covered_MERDC1 {
+  coords 1767.988 4.941 1978.111
+  angles 1.989 32.822 0.218
+  m_sAttachmentGroupName "US2"
+ }
+ M923A1_transport_covered_MERDC2 {
+  coords 1760.218 4.617 1965.242
+  angles 1.237 32.808 -0.267
+  m_sAttachmentGroupName "US3"
+ }
+}
+$grp SCR_AIGroup : "{0956C232E69AF443}Prefabs/Groups/BLUFOR/US/Regular/dim_Group_US_Reg_Desert.et" {
+ US2 {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 0
+   }
+  }
+  coords 1769.991 6.365 1971.987
+  angles -4.673 -58.646 2.601
+  m_aUnitPrefabSlots {
+   "{932E6B9F18A51EAA}Prefabs/Characters/Factions/BLUFOR/US/Regular/Desert/dim_US_D_Reg_SL.et"
+   "{EE3687677D362233}Prefabs/Characters/Factions/BLUFOR/US/Regular/Desert/dim_US_D_Reg_SR.et"
+   "{FEA69A802A21BCB9}Prefabs/Characters/Factions/BLUFOR/US/Regular/Desert/dim_US_D_Reg_AR.et"
+   "{F373E4A1DD96D593}Prefabs/Characters/Factions/BLUFOR/US/Regular/Desert/dim_US_D_Reg_GL.et"
+   "{A8AA59B963515242}Prefabs/Characters/Factions/BLUFOR/US/Regular/Desert/dim_US_D_Reg_LAT.et"
+   "{A56D87D44775BC82}Prefabs/Characters/Factions/BLUFOR/US/Regular/Desert/dim_US_D_Reg_SR_Opt.et"
+   "{EB0C86E7E86A88D9}Prefabs/Characters/Factions/BLUFOR/US/Regular/Desert/dim_US_D_Reg_Sapper.et"
+   "{AB3E7D906D47218B}Prefabs/Characters/Factions/BLUFOR/US/Regular/Desert/dim_US_D_Reg_Medic.et"
+   "{CB68DC9141448C23}Prefabs/Characters/Factions/BLUFOR/US/Regular/Desert/dim_US_D_Reg_Rifle_2.et"
+  }
+  m_sCustomNameSet "Рейнджеры США"
+ }
+ US1 {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 0
+   }
+  }
+  coords 1778.366 5.31 1985.708
+  angles 0.177 -58.357 -1.993
+  m_aUnitPrefabSlots {
+   "{932E6B9F18A51EAA}Prefabs/Characters/Factions/BLUFOR/US/Regular/Desert/dim_US_D_Reg_SL.et"
+   "{EE3687677D362233}Prefabs/Characters/Factions/BLUFOR/US/Regular/Desert/dim_US_D_Reg_SR.et"
+   "{FEA69A802A21BCB9}Prefabs/Characters/Factions/BLUFOR/US/Regular/Desert/dim_US_D_Reg_AR.et"
+   "{F373E4A1DD96D593}Prefabs/Characters/Factions/BLUFOR/US/Regular/Desert/dim_US_D_Reg_GL.et"
+   "{CE5ADA6C88688A34}Prefabs/Characters/Factions/BLUFOR/US/Regular/Desert/dim_US_D_Reg_Rifle.et"
+   "{A56D87D44775BC82}Prefabs/Characters/Factions/BLUFOR/US/Regular/Desert/dim_US_D_Reg_SR_Opt.et"
+   "{FEA69A802A21BCB9}Prefabs/Characters/Factions/BLUFOR/US/Regular/Desert/dim_US_D_Reg_AR.et"
+   "{F373E4A1DD96D593}Prefabs/Characters/Factions/BLUFOR/US/Regular/Desert/dim_US_D_Reg_GL.et"
+   "{CB68DC9141448C23}Prefabs/Characters/Factions/BLUFOR/US/Regular/Desert/dim_US_D_Reg_Rifle_2.et"
+  }
+  m_sCustomNameSet "Рейнджеры США"
+ }
+ PL {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 0
+    m_iSquadCallsign 0
+   }
+  }
+  coords 1788.176 6.075 2002.827
+  angles -0.163 -59.211 -3.22
+  m_aUnitPrefabSlots {
+   "{79B112D1D6AD5BD6}Prefabs/Characters/Factions/BLUFOR/US/Regular/Desert/dim_US_Reg_D_PL.et"
+   "{A56D87D44775BC82}Prefabs/Characters/Factions/BLUFOR/US/Regular/Desert/dim_US_D_Reg_SR_Opt.et"
+   "{F373E4A1DD96D593}Prefabs/Characters/Factions/BLUFOR/US/Regular/Desert/dim_US_D_Reg_GL.et"
+   "{AB3E7D906D47218B}Prefabs/Characters/Factions/BLUFOR/US/Regular/Desert/dim_US_D_Reg_Medic.et"
+  }
+  m_sCustomNameSet "Командующий операцией Томас Мэтью"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iSquadCallsign 0
+   }
+  }
+  coords 1551.772 2 1589.229
+  angles 0 -38.048 0
+  m_aUnitPrefabSlots {
+   "{932E6B9F18A51EAA}Prefabs/Characters/Factions/BLUFOR/US/Regular/Desert/dim_US_D_Reg_SL.et"
+   "{EE3687677D362233}Prefabs/Characters/Factions/BLUFOR/US/Regular/Desert/dim_US_D_Reg_SR.et"
+   "{FEA69A802A21BCB9}Prefabs/Characters/Factions/BLUFOR/US/Regular/Desert/dim_US_D_Reg_AR.et"
+   "{F373E4A1DD96D593}Prefabs/Characters/Factions/BLUFOR/US/Regular/Desert/dim_US_D_Reg_GL.et"
+   "{A8AA59B963515242}Prefabs/Characters/Factions/BLUFOR/US/Regular/Desert/dim_US_D_Reg_LAT.et"
+   "{A56D87D44775BC82}Prefabs/Characters/Factions/BLUFOR/US/Regular/Desert/dim_US_D_Reg_SR_Opt.et"
+   "{FEA69A802A21BCB9}Prefabs/Characters/Factions/BLUFOR/US/Regular/Desert/dim_US_D_Reg_AR.et"
+   "{F373E4A1DD96D593}Prefabs/Characters/Factions/BLUFOR/US/Regular/Desert/dim_US_D_Reg_GL.et"
+   "{CE5ADA6C88688A34}Prefabs/Characters/Factions/BLUFOR/US/Regular/Desert/dim_US_D_Reg_Rifle.et"
+  }
+  m_sCustomNameSet "Рейнджеры США"
+ }
+ US3 {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 1762.26 6.048 1959.406
+  angles 0.259 -58.422 2.592
+  m_aUnitPrefabSlots {
+   "{932E6B9F18A51EAA}Prefabs/Characters/Factions/BLUFOR/US/Regular/Desert/dim_US_D_Reg_SL.et"
+   "{EE3687677D362233}Prefabs/Characters/Factions/BLUFOR/US/Regular/Desert/dim_US_D_Reg_SR.et"
+   "{FEA69A802A21BCB9}Prefabs/Characters/Factions/BLUFOR/US/Regular/Desert/dim_US_D_Reg_AR.et"
+   "{F373E4A1DD96D593}Prefabs/Characters/Factions/BLUFOR/US/Regular/Desert/dim_US_D_Reg_GL.et"
+   "{A8AA59B963515242}Prefabs/Characters/Factions/BLUFOR/US/Regular/Desert/dim_US_D_Reg_LAT.et"
+   "{A56D87D44775BC82}Prefabs/Characters/Factions/BLUFOR/US/Regular/Desert/dim_US_D_Reg_SR_Opt.et"
+   "{FEA69A802A21BCB9}Prefabs/Characters/Factions/BLUFOR/US/Regular/Desert/dim_US_D_Reg_AR.et"
+   "{F373E4A1DD96D593}Prefabs/Characters/Factions/BLUFOR/US/Regular/Desert/dim_US_D_Reg_GL.et"
+   "{CE5ADA6C88688A34}Prefabs/Characters/Factions/BLUFOR/US/Regular/Desert/dim_US_D_Reg_Rifle.et"
+  }
+  m_sCustomNameSet "Рейнджеры США"
+ }
+}
+Vehicle dim_UH_60_black1 : "{38FEC1F1CF4169AB}Prefabs/Vehicles/Helicopters/UH60/dim_UH-60_black.et" {
+ coords 1543.626 2.025 1604.874
+ angles 0 138.879 0
+ m_sAttachmentGroupName "PIL2"
+}
+$grp Vehicle : "{4FA233113AE2B19E}Prefabs/Vehicles/Wheeled/M998/dim_M1025_armed_M2HB7_Woodland.et" {
+ dim_M1025_armed_M2HB7_Woodland1 {
+  coords 1785.21 6.144 2006.404
+  angles 2.444 29.961 -0.656
+  m_sAttachmentGroupName "PL"
+ }
+ dim_M1025_armed_M2HB7_Woodland2 {
+  coords 1779.331 5.684 1996.218
+  angles 1.996 30.483 0.137
+  m_sAttachmentGroupName "US1"
+ }
+ dim_M1025_armed_M2HB7_Woodland3 {
+  coords 1774.443 5.333 1988.441
+  angles 1.991 32.251 0.198
+  m_sAttachmentGroupName "US1"
+ }
+ dim_M1025_armed_M2HB7_Woodland4 {
+  coords 1560.834 2.439 1679.4
+  angles 0 138.368 0
+ }
+}
+$grp Vehicle : "{8797559E53DA0E7B}Prefabs/Vehicles/Helicopters/MH-6J/MH-6J.et" {
+ MH_6J2 {
+  coords 1590.464 2.024 1645.568
+  angles 0 139.387 0
+  m_sAttachmentGroupName "PIL"
+ }
+ MH_6J1 {
+  coords 1607.574 2.024 1660.244
+  angles 0 139.387 0
+  m_sAttachmentGroupName "PIL"
+ }
+ MH_6J4 {
+  coords 1572.605 2.024 1630.258
+  angles 0 139.387 0
+  m_sAttachmentGroupName "PIL"
+ }
+}
+$grp SCR_AIGroup : "{AC37A0539DB4CA1C}Prefabs/Groups/BLUFOR/US/Regular/Group_US_Regular_Heli.et" {
+ PIL {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 1599.432 2 1632.266
+  angles 0 -41.231 0
+  m_aUnitPrefabSlots +{
+   "{29119BCA182D3062}Prefabs/Characters/Factions/BLUFOR/US/Regular/Char_US_Regular_HeliCoPilot.et"
+  }
+ }
+ PIL2 {
+  components {
+   PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+    m_iCompanyCallsign 3
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 1550.239 2 1608.955
+  angles 0 -129.266 0
+  m_aUnitPrefabSlots {
+   "{FFFAFFE6B001CC77}Prefabs/Characters/Factions/BLUFOR/US/Regular/Desert/dim_US_D_HeliPilot_MP5.et"
+   "{E3B381AA1B64760C}Prefabs/Characters/Factions/BLUFOR/US/Regular/Desert/dim_US_D_CoPilot_MP5.et"
+  }
+ }
+}
+$grp SCR_AIGroup : "{D86A53387FE69F56}Prefabs/Groups/BLUFOR/US/dim_US_SPN_Delta.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B0F0D80A730}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 1582.401 2 1617.369
+  angles 0 -41.489 0
+  m_aUnitPrefabSlots {
+   "{2F309F977D12B192}Prefabs/Characters/Factions/BLUFOR/US/SPN/Desert/dim_US_SPN_D_SL.et"
+   "{4F6D10A9B8217AAB}Prefabs/Characters/Factions/BLUFOR/US/SPN/Desert/dim_US_SPN_D_GL.et"
+   "{01153F3842C23CEC}Prefabs/Characters/Factions/BLUFOR/US/SPN/Desert/dim_US_SPN_D_Rifleman.et"
+   "{20751AF14BC52D3D}Prefabs/Characters/Factions/BLUFOR/US/SPN/Desert/dim_US_SPN_D_RTO.et"
+   "{53899A954E8EBF2A}Prefabs/Characters/Factions/BLUFOR/US/SPN/Desert/dim_US_SPN_D_Medic.et"
+  }
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B0F0D80A730}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 1613.145 2 1644.558
+  angles 0 -41.489 0
+  m_aUnitPrefabSlots {
+   "{A4876463FDBE5CFA}Prefabs/Characters/Factions/BLUFOR/US/SPN/Desert/dim_US_SPN_D_Officer.et"
+   "{2F309F977D12B192}Prefabs/Characters/Factions/BLUFOR/US/SPN/Desert/dim_US_SPN_D_SL.et"
+   "{4F6D10A9B8217AAB}Prefabs/Characters/Factions/BLUFOR/US/SPN/Desert/dim_US_SPN_D_GL.et"
+   "{01153F3842C23CEC}Prefabs/Characters/Factions/BLUFOR/US/SPN/Desert/dim_US_SPN_D_Rifleman.et"
+   "{F95533A2E3107BE9}Prefabs/Characters/Factions/BLUFOR/US/SPN/Desert/dim_US_SPN_D_Rifleman_2.et"
+   "{4F6D10A9B8217AAB}Prefabs/Characters/Factions/BLUFOR/US/SPN/Desert/dim_US_SPN_D_GL.et"
+   "{20751AF14BC52D3D}Prefabs/Characters/Factions/BLUFOR/US/SPN/Desert/dim_US_SPN_D_RTO.et"
+   "{53899A954E8EBF2A}Prefabs/Characters/Factions/BLUFOR/US/SPN/Desert/dim_US_SPN_D_Medic.et"
+   "{4835219B1B0D2BB4}Prefabs/Characters/Factions/BLUFOR/US/SPN/Desert/dim_US_SPN_D_Sapper.et"
+   "{26B8B9FA2C22645E}Prefabs/Characters/Factions/BLUFOR/US/SPN/Desert/dim_US_SPN_D_Sniper.et"
+  }
+ }
+}

@@ -1,0 +1,43 @@
+SCR_ChimeraCharacter : "{EC1A93A939A97F56}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_Officer.et" {
+ ID "520EC961A090B1EE"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "#PDVL_Role_Officer"
+   }
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{F6255455C1E58E61}Prefabs/Characters/HeadGear/US_BushHat/US_BushHat.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{27162F1F6EE6581A}Prefabs/Characters/Uniforms/Jacket_Denim_01/Jacket_Denim_01_brownShirt.et"
+    }
+    LoadoutSlotInfo ArmoredVest {
+     Prefab ""
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{DD19B3B43F05BFB5}Prefabs/Characters/Uniforms/Pants_Jeans/GD_Jeans_Black.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{689B2D43EA87EF4F}" {
+     TargetStorage "Pants/GD_Jeans_Black.et"
+    }
+    ItemsInitConfigurationItem "{689B2D43EAE0FA83}" {
+     TargetStorage "Pants/GD_Jeans_Black.et"
+    }
+    ItemsInitConfigurationItem "{689B2D43EAF841F3}" {
+     TargetStorage "Jacket/Jacket_Denim_01_brownShirt.et"
+     PrefabsToSpawn {
+      "{F0FE50B01B98C67A}Prefabs/Items/Equipment/Radios/Radio_R148_NAPA_Multi.et"
+     }
+    }
+   }
+  }
+ }
+ coords 154.877 1 56.669
+}

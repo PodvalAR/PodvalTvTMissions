@@ -1,0 +1,46 @@
+SCR_ChimeraCharacter : "{804CD4845BD16C7E}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_Rfl_5.et" {
+ ID "520EC961A090B1EE"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "#PDVL_Role_Rifleman"
+   }
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{D838A5FFDBF7C437}Prefabs/Weapons/Rifles/ARY_UZI/ARY_Rifle_Uzi_Black.et"
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{F6AD0C45143005B7}Prefabs/Characters/HeadGear/Hat_FlatCap_01/Shemag_1.et"
+    }
+    LoadoutSlotInfo ArmoredVest {
+     Prefab ""
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{22CCB8F2BCCE29E6}Prefabs/Characters/Uniforms/Pants_Trousers_01/Pants_Trousers_01_base.et"
+    }
+    LoadoutSlotInfo Vest {
+     Prefab "{77E4160B2A5831E1}Prefabs/Characters/Vests/Vest_ChestRigLarge/Vest_ChestRigLarge_1.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{689B2D43EA87EF4F}" {
+     TargetStorage "Pants/Pants_Trousers_01_base.et"
+    }
+    ItemsInitConfigurationItem "{689B2D43EAE0FA83}" {
+     TargetStorage "Pants/Pants_Trousers_01_base.et"
+    }
+    ItemsInitConfigurationItem "{689E6D83F89602AF}" {
+     TargetStorage "Vest/Vest_ChestRigLarge_1.et"
+     PrefabsToSpawn {
+      "{6478F22B21B8059C}Prefabs/Weapons/Magazines/ARY_Magazine_9x19_UZI_32rnd_Mixed_Black.et" "{6478F22B21B8059C}Prefabs/Weapons/Magazines/ARY_Magazine_9x19_UZI_32rnd_Mixed_Black.et" "{6478F22B21B8059C}Prefabs/Weapons/Magazines/ARY_Magazine_9x19_UZI_32rnd_Mixed_Black.et" "{6478F22B21B8059C}Prefabs/Weapons/Magazines/ARY_Magazine_9x19_UZI_32rnd_Mixed_Black.et" "{6478F22B21B8059C}Prefabs/Weapons/Magazines/ARY_Magazine_9x19_UZI_32rnd_Mixed_Black.et" "{6478F22B21B8059C}Prefabs/Weapons/Magazines/ARY_Magazine_9x19_UZI_32rnd_Mixed_Black.et" "{6478F22B21B8059C}Prefabs/Weapons/Magazines/ARY_Magazine_9x19_UZI_32rnd_Mixed_Black.et" "{6478F22B21B8059C}Prefabs/Weapons/Magazines/ARY_Magazine_9x19_UZI_32rnd_Mixed_Black.et" "{6478F22B21B8059C}Prefabs/Weapons/Magazines/ARY_Magazine_9x19_UZI_32rnd_Mixed_Black.et"
+     }
+    }
+   }
+  }
+ }
+ coords 152.447 1 56.688
+}

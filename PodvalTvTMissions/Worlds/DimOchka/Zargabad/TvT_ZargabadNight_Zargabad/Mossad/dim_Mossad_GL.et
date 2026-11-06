@@ -1,0 +1,34 @@
+SCR_ChimeraCharacter : "{FBCABEC8645D2353}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_GL.et" {
+ ID "520EC961A090B1EE"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "#AR-Role_Grenadier"
+   }
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Jacket {
+     Prefab "{27162F1F6EE6581A}Prefabs/Characters/Uniforms/Jacket_Denim_01/Jacket_Denim_01_brownShirt.et"
+    }
+    LoadoutSlotInfo ArmoredVest {
+     Prefab ""
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{693B0449DFBBAE1E}" {
+     Enabled 0
+    }
+    ItemsInitConfigurationItem "{693B0449DFBBAE1F}" {
+     Enabled 0
+    }
+    ItemsInitConfigurationItem "{693B0449DFBBAE18}" {
+     TargetStorage "Jacket/Jacket_Denim_01_brownShirt.et"
+    }
+   }
+  }
+ }
+ coords 158.277 1 56.345
+}

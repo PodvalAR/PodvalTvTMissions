@@ -1,0 +1,50 @@
+SCR_ChimeraCharacter : "{B0A7322F19852265}Prefabs/Characters/Factions/INDFOR/NAPA/dim/BritishRebel/dim_BritRebel_M72.et" {
+ ID "520EC961A090B1EE"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "#PDVL_Role_LAT"
+   }
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{D838A5FFDBF7C437}Prefabs/Weapons/Rifles/ARY_UZI/ARY_Rifle_Uzi_Black.et"
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{9F3A7D7943C278D1}Prefabs/Characters/HeadGear/Hat_FlatCap_01/Hat_FlatCap_01_base.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{1AF5843B89C066B0}Prefabs/Characters/Uniforms/Shirt_TShirt_v1/Shirt_TShirt_v1_CoyoteBrown.et"
+    }
+    LoadoutSlotInfo ArmoredVest {
+     Prefab ""
+    }
+    LoadoutSlotInfo Vest {
+     Prefab "{78BBA3155AB87F87}Prefabs/Characters/Vests/Vest_SRU21P/Vest_SRU21P_base.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{689B2D43EAF841F3}" {
+     TargetStorage "Jacket/Shirt_TShirt_v1_CoyoteBrown.et"
+    }
+    ItemsInitConfigurationItem "{689E6D826BD04590}" {
+     TargetStorage "Vest/Vest_SRU21P_base.et"
+     PrefabsToSpawn {
+      "{6478F22B21B8059C}Prefabs/Weapons/Magazines/ARY_Magazine_9x19_UZI_32rnd_Mixed_Black.et" "{6478F22B21B8059C}Prefabs/Weapons/Magazines/ARY_Magazine_9x19_UZI_32rnd_Mixed_Black.et" "{6478F22B21B8059C}Prefabs/Weapons/Magazines/ARY_Magazine_9x19_UZI_32rnd_Mixed_Black.et" "{6478F22B21B8059C}Prefabs/Weapons/Magazines/ARY_Magazine_9x19_UZI_32rnd_Mixed_Black.et" "{6478F22B21B8059C}Prefabs/Weapons/Magazines/ARY_Magazine_9x19_UZI_32rnd_Mixed_Black.et" "{6478F22B21B8059C}Prefabs/Weapons/Magazines/ARY_Magazine_9x19_UZI_32rnd_Mixed_Black.et" "{6478F22B21B8059C}Prefabs/Weapons/Magazines/ARY_Magazine_9x19_UZI_32rnd_Mixed_Black.et" "{6478F22B21B8059C}Prefabs/Weapons/Magazines/ARY_Magazine_9x19_UZI_32rnd_Mixed_Black.et" "{6478F22B21B8059C}Prefabs/Weapons/Magazines/ARY_Magazine_9x19_UZI_32rnd_Mixed_Black.et"
+     }
+    }
+    ItemsInitConfigurationItem "{689E6D8233474F95}" {
+     Enabled 1
+     TargetStorage "Pants/GD_Jeans.et"
+     PrefabsToSpawn {
+      "{6478F22B21B8059C}Prefabs/Weapons/Magazines/ARY_Magazine_9x19_UZI_32rnd_Mixed_Black.et" "{6478F22B21B8059C}Prefabs/Weapons/Magazines/ARY_Magazine_9x19_UZI_32rnd_Mixed_Black.et" "{6478F22B21B8059C}Prefabs/Weapons/Magazines/ARY_Magazine_9x19_UZI_32rnd_Mixed_Black.et"
+     }
+    }
+   }
+  }
+ }
+ coords 157.392 1 56.445
+}

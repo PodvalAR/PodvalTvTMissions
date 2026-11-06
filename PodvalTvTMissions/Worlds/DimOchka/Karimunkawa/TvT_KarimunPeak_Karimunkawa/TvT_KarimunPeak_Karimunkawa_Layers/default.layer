@@ -1,0 +1,21 @@
+SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
+ coords 4510.843 1.758 6600.57
+}
+PerceptionManager PerceptionManager1 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 4536.424 5.514 6595.326
+}
+PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
+ components {
+  SCR_TimeAndWeatherHandlerComponent "{5EE3229927D4D2F5}" {
+   m_bUsePredefineStartingTimeAndWeather 1
+   m_aStartingWeatherAndTime {
+    SCR_TimeAndWeatherState "{6AC6DD318A622848}" {
+     m_sWeatherPresetName "Cloudy"
+     m_iStartingHour 11
+     m_iStartingMinutes 40
+    }
+   }
+  }
+ }
+ coords 4527.306 4.193 6601.309
+}

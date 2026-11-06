@@ -1,0 +1,32 @@
+SCR_ChimeraCharacter : "{CC3FCE8F30155207}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Desert/Char_RHS_AFRF_DESERT_Regular_SL.et" {
+ ID "520EC961A090B1EE"
+ components {
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{2A1F25C19148E083}Prefabs/Characters/HeadGear/Helmet_6B47/Helmet_6B47_no_cover.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{ABE48153B57F5056}Prefabs/Characters/Uniforms/6Sh122_Jacket/Jacket_6Sh122_Summer.et"
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{8B575813F1D2B104}Prefabs/Characters/Uniforms/6Sh122_Pants/Pants_6Sh122_Summer.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{689F35786861AA08}" {
+     TargetStorage "Pants/Pants_6Sh122_Summer.et"
+    }
+    ItemsInitConfigurationItem "{689F3578D5D3EE94}" {
+     TargetStorage "Jacket/Jacket_6Sh122_Summer.et"
+    }
+    ItemsInitConfigurationItem "{689F3578E51BED3D}" {
+     TargetStorage "Jacket/Jacket_6Sh122_Summer.et"
+    }
+   }
+  }
+ }
+ coords 1550.293 0.187 4017.096
+}
