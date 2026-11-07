@@ -112,6 +112,9 @@ SCR_AIGroup US_0_0_0 : "{68D5E3B6F7C86BD0}Prefabs/Groups/BLUFOR/Campaing/F_US_dr
  }
  coords 5429.085 45.265 10479.353
  angles 0 29.683 0
+ m_aUnitPrefabSlots {
+  "{F81AEF796B932D96}Prefabs/Characters/Factions/BLUFOR/US_Army/Dev/drg_Character_US_CL.et"
+ }
 }
 $grp SCR_AIGroup : "{6E2296FB529E9097}Prefabs/Groups/BLUFOR/US/dim_US_SPN_Force_Recon.et" {
  US_1_0_3 {
@@ -205,7 +208,7 @@ Turret : "{8094D99689ABE241}Prefabs/Weapons/Mortars/M252/Mortar_M252_hand.et" {
 Vehicle M923A1_ammo1 : "{92264FF932676C13}Prefabs/Vehicles/Wheeled/M923A1/M923A1_ammo.et" {
  coords 4903.997 28.593 11910.207
 }
-SCR_AIGroup US_3_0_0 : "{983EB2C5F6E84CD7}Prefabs/Groups/BLUFOR/Campaign/F_US_drg_MortarCrew.et" {
+SCR_AIGroup US_3_0_0 : "{983EB2C5F6E84CD7}Prefabs/Groups/BLUFOR/Campaing/F_US_drg_MortarCrew.et" {
  components {
   PS_GroupCallsignAssigner "{64607D07A7096E4D}" {
    m_iCompanyCallsign 3
@@ -216,6 +219,11 @@ SCR_AIGroup US_3_0_0 : "{983EB2C5F6E84CD7}Prefabs/Groups/BLUFOR/Campaign/F_US_dr
 }
 Vehicle M923A1_repair1 : "{A042ACE5C2B13206}Prefabs/Vehicles/Wheeled/M923A1/M923A1_repair.et" {
  coords 4903.576 28.593 11935.624
+}
+Vehicle UH1H_armed_gunship_empty_sharkNose1 : "{BDE43262FC05B4D7}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed_gunship_empty_sharkNose.et" {
+ coords 4846.437 29.284 11730.843
+ angles 0 -0.743 0
+ m_sAttachmentGroupName "US_6_0_0"
 }
 $grp Vehicle : "{CB4D4CF7E887B2D0}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed_gunship_HEDP.et" {
  UH1H_armed_gunship_HEDP1 {
@@ -255,6 +263,18 @@ $grp SCR_AIGroup : "{D5A29BB215DD0637}Prefabs/Groups/BLUFOR/Campaing/S_US_drg_Ro
   m_aUnitPrefabSlots {
    "{27BEF07908F77017}Prefabs/Characters/Factions/BLUFOR/US_Army/Dev/drg_Character_US_Pilot_Radio.et"
    "{ABF09C1FF1D412D8}Prefabs/Characters/Factions/BLUFOR/US_Army/Dev/drg_Character_US_Pilot.et"
+  }
+ }
+ US_6_0_0 {
+  components {
+   PS_GroupCallsignAssigner "{6460980F6615902D}" {
+    m_iCompanyCallsign 6
+   }
+  }
+  coords 4855.998 30.811 11732.138
+  angles -2.681 -90.047 4.464
+  m_aUnitPrefabSlots {
+   "{27BEF07908F77017}Prefabs/Characters/Factions/BLUFOR/US_Army/Dev/drg_Character_US_Pilot_Radio.et"
   }
  }
 }
