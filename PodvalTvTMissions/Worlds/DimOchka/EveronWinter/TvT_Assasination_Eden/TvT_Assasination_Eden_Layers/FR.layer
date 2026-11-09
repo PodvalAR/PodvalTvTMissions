@@ -1,0 +1,374 @@
+$grp Vehicle : "{0BBC303A84D87434}Prefabs/Vehicles/Land_Vehicles/Wheeled_Vehicles/VBMR/VBMR_VTT_CE.et" {
+ VBMR_VTT_CE1 {
+  components {
+   BaseLightManagerComponent "{51E210F17D2534F7}" {
+    LightSlots {
+     SCR_LightSlot "{68537D173CC4CDFA}" {
+     }
+     SCR_LightSlot "{68537D171C3A35CE}" {
+     }
+     SCR_LightSlot "{68537D16F35F7EBF}" {
+     }
+     SCR_LightSlot "{68537D16D2C51BF1}" {
+     }
+    }
+   }
+   MeshObject "{51DAA09FEFBFC0E7}" {
+    Materials {
+     MaterialAssignClass "{689CDA5B1CB05F80}" {
+      SourceMaterial "SCORPION"
+      AssignedMaterial "{669A8A81FB819A6A}Assets/Vehicles/Land_Vehicles/Wheeled_Vehicules/_SharedData/Programme SCORPION/Antennas/Data/SCORPION_CE.emat"
+     }
+     MaterialAssignClass "{689CDA5B1CB05F97}" {
+      SourceMaterial "SHOVEL"
+      AssignedMaterial "{2F426811861DC991}Assets/Vehicles/Land_Vehicles/Wheeled_Vehicules/_SharedData/Programme SCORPION/Common Parts/Shovel/Data/SHOVEL_CE.emat"
+     }
+     MaterialAssignClass "{689CDA5B1CB05F60}" {
+      SourceMaterial "VBMR_MAT1"
+      AssignedMaterial "{32F36D2A6352BE91}Assets/Vehicles/Land_Vehicles/Wheeled_Vehicules/VBMR/Data/CE/VBMR_MAT1_CE.emat"
+     }
+     MaterialAssignClass "{689CDA5B1CB05F67}" {
+      SourceMaterial "VBMR_MAT2"
+      AssignedMaterial "{3CED29625EA5B14B}Assets/Vehicles/Land_Vehicles/Wheeled_Vehicules/VBMR/Data/CE/VBMR_MAT2_CE.emat"
+     }
+     MaterialAssignClass "{689CDA5B1CB05F7E}" {
+      SourceMaterial "VBMR_MAT3"
+      AssignedMaterial "{3918EAA5B5F74BFD}Assets/Vehicles/Land_Vehicles/Wheeled_Vehicules/VBMR/Data/CE/VBMR_MAT3_CE.emat"
+     }
+     MaterialAssignClass "{689CDA5B1CB05F75}" {
+      SourceMaterial "VBMR_MAT4"
+      AssignedMaterial "{20D1A1F2254BAEFF}Assets/Vehicles/Land_Vehicles/Wheeled_Vehicules/VBMR/Data/CE/VBMR_MAT4_CE.emat"
+     }
+    }
+   }
+   SCR_BaseCompartmentManagerComponent "{20FB66C5DCB8DF72}" {
+    DoorInfoList {
+     CompartmentDoorInfo "{6846DD3261E01C89}" {
+     }
+    }
+   }
+   SCR_EditableVehicleComponent "{50DEB7C26B5EB312}" {
+    m_UIInfo SCR_EditableVehicleUIInfo "{5298E609432D192D}" {
+     Name "#AMF-VBMR-VTT"
+     Description "#AMF-VBMR-Description"
+     m_Image "{15EAFC078164055F}UI/Textures/EditorPreviews/Vehicles/Wheeled/VBMR/VBMR_VTT_CE_4x3.edds"
+     m_aAuthoredLabels +{
+     }
+     m_EntityBudgetCost {
+      SCR_EntityBudgetValue "{6846DD3261E01D49}" {
+       m_BudgetType RANK_SERGEANT
+      }
+     }
+    }
+   }
+   SlotManagerComponent "{55BCE45E438E4CFF}" {
+    Slots {
+     SCR_WheelSlotInfo Wheel_L01 {
+      Prefab "{5132D1616A3DF111}Prefabs/Vehicles/Land_Vehicles/Wheeled_Vehicles/VBMR/VehParts/VBMR_Wheel_CE.et"
+     }
+     SCR_WheelSlotInfo Wheel_R01 {
+      Prefab "{5132D1616A3DF111}Prefabs/Vehicles/Land_Vehicles/Wheeled_Vehicles/VBMR/VehParts/VBMR_Wheel_CE.et"
+     }
+     SCR_WheelSlotInfo Wheel_L02 {
+      Prefab "{5132D1616A3DF111}Prefabs/Vehicles/Land_Vehicles/Wheeled_Vehicles/VBMR/VehParts/VBMR_Wheel_CE.et"
+     }
+     SCR_WheelSlotInfo Wheel_R02 {
+      Prefab "{5132D1616A3DF111}Prefabs/Vehicles/Land_Vehicles/Wheeled_Vehicles/VBMR/VehParts/VBMR_Wheel_CE.et"
+     }
+     SCR_WheelSlotInfo Wheel_L03 {
+      Prefab "{5132D1616A3DF111}Prefabs/Vehicles/Land_Vehicles/Wheeled_Vehicles/VBMR/VehParts/VBMR_Wheel_CE.et"
+     }
+     SCR_WheelSlotInfo Wheel_R03 {
+      Prefab "{5132D1616A3DF111}Prefabs/Vehicles/Land_Vehicles/Wheeled_Vehicles/VBMR/VehParts/VBMR_Wheel_CE.et"
+     }
+     RegisteringComponentSlotInfo Turret {
+      Prefab "{2073086EAB31FA10}Prefabs/Vehicles/Land_Vehicles/Wheeled_Vehicles/_SharedData/Programme SCORPION/Turrets/HORNET_T1/Scorpion_HORNET_T1_CE.et"
+     }
+     RegisteringComponentSlotInfo Scorpion_Antenna_Antares {
+      Prefab "{535EDFDD88CE2183}Prefabs/Vehicles/Land_Vehicles/Wheeled_Vehicles/_SharedData/Programme SCORPION/Antennas/Scorpion_Antennas_Antares_CE.et"
+     }
+     RegisteringComponentSlotInfo Scoprion_Antenna_PilarV {
+      Prefab "{B89D821F6559EB74}Prefabs/Vehicles/Land_Vehicles/Wheeled_Vehicles/_SharedData/Programme SCORPION/Antennas/Scorpion_Antennas_PilarV_CE.et"
+     }
+     RegisteringComponentSlotInfo VBMR_VTT_RearCompart {
+      Prefab "{C07B4E2D48F2B9F1}Prefabs/Vehicles/Land_Vehicles/Wheeled_Vehicles/VBMR/VehParts/VTT/VBMR_VTT_VehParts.et"
+      DisablePhysicsInteraction 1
+      RegisterActions 1
+      RegisterDamage 1
+      RegisterWeapons 1
+      RegisterCompartments 1
+      RegisterLights 1
+      RegisterActionSignals 1
+     }
+     EntitySlotInfo VBMR_AdditionalArmor_Side {
+      Prefab "{2F2F0E70E4E42BE8}Prefabs/Vehicles/Land_Vehicles/Wheeled_Vehicles/VBMR/VehParts/AdditionalArmor/VBMR_AdditionalArmor_Side_CE.et"
+     }
+     EntitySlotInfo VBMR_AdditionalArmor_L01 {
+      Prefab "{214DB06006F18F5F}Prefabs/Vehicles/Land_Vehicles/Wheeled_Vehicles/VBMR/VehParts/AdditionalArmor/VBMR_AdditionalArmor_Door_L01_CE.et"
+     }
+     EntitySlotInfo VBMR_AdditionalArmor_R01 {
+      Prefab "{4D831AB192A7EE3B}Prefabs/Vehicles/Land_Vehicles/Wheeled_Vehicles/VBMR/VehParts/AdditionalArmor/VBMR_AdditionalArmor_Door_R01_CE.et"
+     }
+     EntitySlotInfo AMF_ER315 {
+      Offset -0.7114 2.0267 0.5615
+      Angles 0 90 0
+      DisablePhysicsInteraction 1
+     }
+    }
+   }
+   ActionsManagerComponent "{C97BE5489221AE18}" {
+    ActionContexts {
+     UserActionContext "{68990E345C86885F}" {
+      ContextName "switch_to_front_compart_from_rear_compart"
+      Position PointInfo "{68990E345CB971F8}" {
+       Offset 0.2123 2.1746 -0.5447
+       Angles 0 -180 0
+      }
+      Radius 0.3
+      Omnidirectional 0
+      VisibilityAngle 82.35
+     }
+    }
+   }
+  }
+  coords 7710.676 12.969 8111.407
+  angles 0 -139.155 0
+ }
+ VBMR_VTT_CE2 {
+  coords 7700.399 12.969 8099.185
+  angles 0 -139.577 0
+ }
+ VBMR_VTT_CE3 {
+  coords 7689.315 12.969 8087.204
+  angles 0 -139.577 0
+ }
+}
+Vehicle VBCI_Dragar_CE1 : "{2834E391EC6FC919}Prefabs/Vehicles/Land_Vehicles/Wheeled_Vehicles/VBCI/VBCI_Dragar_CE.et" {
+ components {
+  SCR_BaseCompartmentManagerComponent "{20FB66C5DCB8DF72}" {
+   DoorInfoList {
+    CompartmentDoorInfo "{660CF55C8717098F}" {
+     EntryPositionInfo PointInfo "{660CF55C87170EEA}" {
+      Offset -0.1185 -0.6693 1.8437
+     }
+     ExitPositionInfo PointInfo "{660CF55C87170EE0}" {
+      Offset -0.1185 -0.6693 1.8437
+     }
+     GetInTeleport 0
+     GetOutTeleport 0
+    }
+    CompartmentDoorInfo "{66D6B1F272A8AC1F}" {
+     EntryPositionInfo PointInfo "{66D6B1F272A8AD58}" {
+      Offset -0.1185 -0.6693 1.8437
+     }
+     ExitPositionInfo PointInfo "{66D6B1F272A8AD5C}" {
+      Offset -0.1185 0.2292 1.8436
+      Angles 0 90 0
+     }
+     GetInTeleport 0
+     GetOutTeleport 0
+     AlignDuringGetOut 1
+     GetInAligningTeleport 1
+     GetOutAligningTeleport 1
+     GetInSeatAligningOnEvent 1
+     GetOutAligningOnEvent 1
+     AccessibilitySettings CompartmentAccessibilityContext "{66E70C59D072C578}" {
+     }
+    }
+    CompartmentDoorInfo "{672ED090EDA51E74}" {
+     GetInTeleport 0
+     GetOutTeleport 0
+    }
+    CompartmentDoorInfo "{672ED09056CE8E84}" {
+     GetInTeleport 0
+     GetOutTeleport 0
+    }
+   }
+   CompartmentSlots {
+    CargoCompartmentSlot Passenger_L01 {
+     SkipCharacterDoorAnimationsFromSeat 0
+    }
+    CargoCompartmentSlot Passenger_L02 {
+     SkipCharacterDoorAnimationsFromSeat 0
+    }
+    CargoCompartmentSlot Passenger_L03 {
+     SkipCharacterDoorAnimationsFromSeat 0
+    }
+    CargoCompartmentSlot Passenger_L04 {
+     SkipCharacterDoorAnimationsFromSeat 0
+    }
+    CargoCompartmentSlot Passenger_R01 {
+     SkipCharacterDoorAnimationsFromSeat 0
+    }
+    CargoCompartmentSlot Passenger_R02 {
+     SkipCharacterDoorAnimationsFromSeat 0
+    }
+    CargoCompartmentSlot Passenger_R03 {
+     SkipCharacterDoorAnimationsFromSeat 0
+    }
+    CargoCompartmentSlot Passenger_R04 {
+     SkipCharacterDoorAnimationsFromSeat 0
+    }
+   }
+  }
+ }
+ coords 5392.903 43.298 10566.934
+ angles 0.859 -106.388 -0.253
+}
+$grp SCR_AIGroup : "{5A9B6C01177635FF}Prefabs/Groups/BLUFOR/French Army/dim_FR_Desert_Infantry_Squad.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68B17A65926CDAA3}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 7704.639 12.969 8119.265
+  angles 0 132.516 0
+  m_aUnitPrefabSlots {
+   "{A5D3611CB96D5CD7}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_SL.et"
+   "{3AEB947C48C50346}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_Marksman.et"
+   "{91FB6937C277335B}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_TL_2.et"
+   "{3335F68A47A7208A}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_LAT.et"
+   "{3335F68A47A7208A}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_LAT.et"
+   "{91FB6937C277335B}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_TL_2.et"
+   "{9A4C4E19E5A6EA27}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_MG.et"
+   "{C58EEE227C5E97EE}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_GL.et"
+   "{6850692FC045CE51}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_Rifleman.et"
+  }
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68B17A65926CDAA3}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 7693.158 12.969 8107.479
+  angles 0 128.138 0
+  m_aUnitPrefabSlots {
+   "{A5D3611CB96D5CD7}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_SL.et"
+   "{3AEB947C48C50346}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_Marksman.et"
+   "{91FB6937C277335B}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_TL_2.et"
+   "{3335F68A47A7208A}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_LAT.et"
+   "{3335F68A47A7208A}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_LAT.et"
+   "{91FB6937C277335B}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_TL_2.et"
+   "{9A4C4E19E5A6EA27}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_MG.et"
+   "{C58EEE227C5E97EE}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_GL.et"
+   "{6850692FC045CE51}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_Rifleman.et"
+  }
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68B17A65926CDAA3}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 7684.39 12.981 8095.519
+  angles 0 129.387 0
+  m_aUnitPrefabSlots {
+   "{A5D3611CB96D5CD7}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_SL.et"
+   "{3AEB947C48C50346}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_Marksman.et"
+   "{91FB6937C277335B}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_TL_2.et"
+   "{3335F68A47A7208A}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_LAT.et"
+   "{3335F68A47A7208A}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_LAT.et"
+   "{91FB6937C277335B}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_TL_2.et"
+   "{9A4C4E19E5A6EA27}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_MG.et"
+   "{C58EEE227C5E97EE}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_GL.et"
+   "{6850692FC045CE51}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_Rifleman.et"
+  }
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68B17A65926CDAA3}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 5327.945 43.244 10530.09
+  angles 0 68.138 0
+  m_aUnitPrefabSlots {
+   "{A5D3611CB96D5CD7}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_SL.et"
+   "{3AEB947C48C50346}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_Marksman.et"
+   "{91FB6937C277335B}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_TL_2.et"
+   "{3335F68A47A7208A}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_LAT.et"
+   "{3335F68A47A7208A}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_LAT.et"
+   "{91FB6937C277335B}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_TL_2.et"
+   "{9A4C4E19E5A6EA27}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_MG.et"
+   "{C58EEE227C5E97EE}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_GL.et"
+   "{6850692FC045CE51}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_Rifleman.et"
+  }
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68B17A65926CDAA3}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 5494.218 44.504 10539.333
+  angles 0 -101.922 0
+  m_aUnitPrefabSlots {
+   "{A5D3611CB96D5CD7}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_SL.et"
+   "{3AEB947C48C50346}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_Marksman.et"
+   "{91FB6937C277335B}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_TL_2.et"
+   "{3335F68A47A7208A}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_LAT.et"
+   "{3335F68A47A7208A}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_LAT.et"
+   "{91FB6937C277335B}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_TL_2.et"
+   "{9A4C4E19E5A6EA27}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_MG.et"
+   "{C58EEE227C5E97EE}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_GL.et"
+   "{6850692FC045CE51}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_Rifleman.et"
+  }
+ }
+}
+SCR_AIGroup : "{679238B227A50316}Prefabs/Groups/OPFOR/PLA/PLA_HQ.et" {
+ coords 5349.634 43.496 10533.466
+ angles 0 -18.993 0
+ m_aUnitPrefabSlots {
+  "{7E2A1AB5F9FEE48C}Worlds/DimOchka/EveronWinter/TvT_Assasination_Eden/dim_VIP_KNR.et"
+  "{EF88FC30443FC383}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/SF/Modern/dim_PLA_Modern_SF_N_SL.et"
+  "{F5301BA4090CE7AB}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/SF/Modern/dim_PLA_Modern_SF_N_Rifleman.et"
+  "{3658DFE1D6B5B949}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/SF/Modern/dim_PLA_Modern_SF_N_Medic.et"
+  "{82000D2F76BB6190}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/SF/Modern/dim_PLA_Modern_SF_N_AR.et"
+ }
+ m_sCustomNameSet "Мин. обороны КНР"
+}
+Vehicle VBMR_SAN_Unarmed_CE1 : "{6F21464B034804CC}Prefabs/Vehicles/Land_Vehicles/Wheeled_Vehicles/VBMR/VBMR_SAN_Unarmed_CE.et" {
+ coords 5414.299 43.252 10581.862
+ angles 0.86 163.88 -0.249
+}
+$grp SCR_AIGroup : "{758E98BA2BCB786E}Prefabs/Groups/BLUFOR/French Army/dim_FR_Desert_HQ.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68B17A6598BECDF8}" {
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 5327.122 43.586 10532.461
+  angles 0 72.377 0
+  m_aUnitPrefabSlots {
+   "{C1F39D41AE50DCF8}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_Officer.et"
+  }
+  m_sCustomNameSet "Командир базы"
+ }
+ {
+  coords 5347.07 43.586 10535.309
+  angles 0 72.377 0
+  m_aUnitPrefabSlots {
+   "{47B3A552CD7DA653}Worlds/DimOchka/EveronWinter/TvT_Assasination_Eden/dim_General_FR.et"
+  }
+  m_sCustomNameSet "Генерал Жан Де Подваль"
+ }
+}
+Vehicle GBC180_CCE_MK2_Cargo1 : "{C31D3409F78E1EFC}Prefabs/Vehicles/Land_Vehicles/Wheeled_Vehicles/GBC180/CCE/GBC180_CCE_MK2_Cargo.et" {
+ coords 5487.666 44.184 10574.246
+ angles 0.173 -101.119 0.878
+ m_bEnableMoveOnFreeze 1
+}
+$grp Vehicle : "{DB4858310B7A7ACD}Prefabs/Vehicles/Land_Vehicles/Wheeled_Vehicles/VBL/VBL_Armed_Base.et" {
+ VBL_Armed_Base1 {
+  coords 5406.082 43.217 10571.513
+  angles -0.865 105.004 -0.232
+ }
+ VBL_Armed_Base2 {
+  coords 5398.308 43.386 10573.256
+  angles -0.865 -15.003 0.232
+ }
+}

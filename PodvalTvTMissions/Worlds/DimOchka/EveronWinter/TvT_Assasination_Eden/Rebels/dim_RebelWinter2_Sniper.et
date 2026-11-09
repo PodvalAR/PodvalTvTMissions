@@ -1,0 +1,73 @@
+SCR_ChimeraCharacter : "{1BF83B06E5CA639B}Worlds/DimOchka/EveronWinter/TvT_MountainKing_Eden/REBELS/dim_RebelWinter_Sniper.et" {
+ ID "520EC961A090B1EE"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "#PDVL_Role_Sharpshooter"
+   }
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate ""
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{5D7350496AEA24C8}Prefabs/Characters/HeadGear/Hat_RadiovkaBeret_01/Hat_RadiovkaBeret_01_black_Dirty.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{B0F4EAC29E9058EA}Prefabs/Characters/Uniforms/Shirt_Turtleneck_01/Shirt_Turtleneck_01_grey.et"
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{6925E6C63EBCF623}Prefabs/Characters/Uniforms/Pants_Trousers_01/Pants_Trousers_01_DarkBrown.et"
+    }
+    LoadoutSlotInfo Boots {
+    }
+    LoadoutSlotInfo Vest {
+     Prefab ""
+    }
+    LoadoutSlotInfo HandWear {
+     Prefab "{8266820FFDE17477}Prefabs/Characters/Handwear/Gloves_Wool_01/Gloves_Wool_01.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{693B0449DFBBAE29}" {
+     TargetStorage "Pants/Pants_Trousers_01_DarkBrown.et"
+     PrefabsToSpawn +{
+     }
+    }
+    ItemsInitConfigurationItem "{693B0449DFBBAE1E}" {
+     TargetStorage "Jacket/Shirt_Turtleneck_01_grey.et"
+    }
+    ItemsInitConfigurationItem "{693B0449DFBBAE1F}" {
+     TargetStorage "Vest/Vest_ALICE_sniper.et/Bayonet/Scabbard_Bayonet_M9.et"
+    }
+    ItemsInitConfigurationItem "{693B0449DFBBAE18}" {
+     TargetStorage "Pants/Pants_Trousers_01_DarkBrown.et"
+    }
+    ItemsInitConfigurationItem "{696976A5EAA7156E}" {
+     TargetStorage "Vest/Vest_ALICE_sniper.et/Buttpack/Vest_ALICE_buttpack.et"
+     PrefabsToSpawn +{
+     }
+    }
+    ItemsInitConfigurationItem "{696976A5FB19057E}" {
+     Enabled 1
+     TargetStorage "Vest/Vest_ALICE_sniper.et/MagPouch/Pouch_ALICE_20rnd_M14.et"
+     PrefabsToSpawn +{
+     }
+    }
+    ItemsInitConfigurationItem "{696976A6020BFF73}" {
+     TargetStorage "Vest/Vest_ALICE_sniper.et/FirstAid/Vest_ALICE_firstaid.et"
+    }
+    ItemsInitConfigurationItem "{696A24CC6F559355}" {
+     TargetStorage "Pants/Pants_Trousers_01_DarkBrown.et"
+    }
+    ItemsInitConfigurationItem "{696EE2397E19F55D}" {
+     TargetStorage "Pants/Pants_Trousers_01_DarkBrown.et"
+    }
+   }
+  }
+ }
+ coords 11354.041 62.063 11223.803
+}

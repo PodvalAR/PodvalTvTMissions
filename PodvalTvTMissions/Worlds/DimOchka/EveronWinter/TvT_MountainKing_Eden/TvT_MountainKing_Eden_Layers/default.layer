@@ -1,0 +1,121 @@
+SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
+ coords 4510.843 1.758 6600.57
+}
+PerceptionManager PerceptionManager1 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 4536.424 5.514 6595.326
+}
+PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
+ components {
+  SCR_TimeAndWeatherHandlerComponent "{5EE3229927D4D2F5}" {
+   m_bUsePredefineStartingTimeAndWeather 1
+   m_aStartingWeatherAndTime {
+    SCR_TimeAndWeatherState "{6AC6DD318A622848}" {
+     m_sWeatherPresetName "Clear"
+     m_iStartingHour 11
+     m_iStartingMinutes 40
+    }
+   }
+  }
+ }
+ coords 4527.306 4.193 6601.309
+ {
+  SCR_FactionManager {
+   ID "5ED9088735FF2D8B"
+   Factions {
+    SCR_Faction "{604D1A678B852591}" {
+     UIInfo SCR_FactionUIInfo "{604D1A6037B69643}" {
+      Name "Ополчение"
+      m_sNameUpper "Ополчение"
+     }
+    }
+   }
+  }
+ }
+}
+$grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+ {
+  coords 10631.735 185.943 2441.653
+  angles 0 90 0
+  m_MarkerColor 0 0.502 0.125 1
+  m_sQuadName "mark-exclamation"
+  m_fWorldSize 75
+  m_sDescription "Убежище №1"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "DIM_PLA"
+   "FR"
+   "Ses_NAPA"
+   ""
+  }
+  m_bVisibleForEmptyFaction 1
+  m_bShowForAnyFaction 1
+ }
+ {
+  coords 10615.661 145.363 2229.927
+  angles 0 90 0
+  m_MarkerColor 0 0.502 0.125 1
+  m_sQuadName "mark-exclamation"
+  m_fWorldSize 75
+  m_sDescription "Убежище №2"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "DIM_PLA"
+   "FR"
+   "Ses_NAPA"
+   ""
+  }
+  m_bVisibleForEmptyFaction 1
+  m_bShowForAnyFaction 1
+ }
+ {
+  coords 11119.778 24.363 1806.594
+  angles 0 90 0
+  m_MarkerColor 0 0.502 0.125 1
+  m_sQuadName "mark-exclamation"
+  m_fWorldSize 75
+  m_sDescription "Убежище №3"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "DIM_PLA"
+   "FR"
+   "Ses_NAPA"
+   ""
+  }
+  m_bVisibleForEmptyFaction 1
+  m_bShowForAnyFaction 1
+ }
+ {
+  coords 10672.146 148.703 2343.914
+  angles 0 90 0
+  m_MarkerColor 0.502 0 0 1
+  m_sQuadName "mark-exclamation"
+  m_fWorldSize 75
+  m_sDescription "Миномет"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "DIM_PLA"
+   "FR"
+   "Ses_NAPA"
+   ""
+  }
+  m_bVisibleForEmptyFaction 1
+  m_bShowForAnyFaction 1
+ }
+ {
+  coords 10661.215 148.703 2334.793
+  angles 0 90 0
+  m_MarkerColor 0.502 0 0 1
+  m_sQuadName "mark-exclamation"
+  m_fWorldSize 75
+  m_sDescription "ЗУ-23"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "DIM_PLA"
+   "FR"
+   "Ses_NAPA"
+   ""
+  }
+  m_bVisibleForEmptyFaction 1
+  m_bShowForAnyFaction 1
+ }
+}

@@ -1,0 +1,28 @@
+SCR_ChimeraCharacter : "{F140360E38BBC659}Prefabs/Characters/Factions/BLUFOR/UK/UK1/SPN/Desert/dim_UK1_D_SPN_SL.et" {
+ ID "520EC961A090B1EE"
+ components {
+  SCR_CharacterFactionAffiliationComponent "{610725BE89F30BF3}" {
+   "faction affiliation" "US"
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{77A96CF0A56DD595}Prefabs/Weapons/Rifles/L85/A1/Rifle_L85A1_Attachments_SUSAT.et"
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Back {
+     Prefab "{B112DD31A5B9A6C1}Prefabs/Items/Equipment/Radios/Radio_ANPRC77_USA.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{69F6F60D0E67AA98}" {
+     PrefabsToSpawn {
+      "{D69684663E89D6EB}Prefabs/Items/Equipment/Radios/Radio_ANPRC152A_USA_Multi.et"
+     }
+    }
+   }
+  }
+ }
+ coords 4762.707 48.445 4545.591
+}

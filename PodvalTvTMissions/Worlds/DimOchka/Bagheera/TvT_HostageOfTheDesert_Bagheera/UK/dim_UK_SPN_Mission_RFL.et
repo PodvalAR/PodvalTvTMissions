@@ -1,0 +1,21 @@
+SCR_ChimeraCharacter : "{2DCBD525D30564D2}Prefabs/Characters/Factions/BLUFOR/UK/UK1/SPN/Desert/dim_UK1_D_SPN_Rifleman_2.et" {
+ ID "520EC961A090B1EE"
+ components {
+  SCR_CharacterFactionAffiliationComponent "{610725BE89F30BF3}" {
+   "faction affiliation" "US"
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{C4EDBC3422501EF1}Prefabs/Weapons/Rifles/L85/A1/Rifle_L85A1_Attachments_Irons.et"
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{69F6F60D0E67AA98}" {
+     PrefabsToSpawn {
+      "{7AA4434C22E4B2EF}Prefabs/Items/Equipment/Radios/Radio_ANPRC152A_USA_Singl.et"
+     }
+    }
+   }
+  }
+ }
+ coords 4768.157 48.445 4545.398
+}
