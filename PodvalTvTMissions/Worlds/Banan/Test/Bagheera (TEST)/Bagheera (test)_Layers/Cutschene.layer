@@ -1,0 +1,1382 @@
+GenericEntity : "{A1A11E5C3A29B763}Prefabs/Props/Furniture/ChairDental_01/ChairDental_01.et" {
+ coords 4749.507 45.537 4513.658
+ angles 0 -123.221 0
+ {
+  $grp CinematicEntity {
+   cutsceneIn {
+    components {
+     SCR_ScenarioFrameworkCinematicEntityComponent "{66449E5FDC272220}" {
+      m_aDebugActions {
+       SCR_ScenarioFrameworkDebugAction "{66449E5FDD67BA55}" {
+        m_sDebugActionName "playDialogue1"
+        m_aDebugActions {
+         SCR_ScenarioFrameworkActionVoiceOverPlayLine "{66449E5F767C31B4}" {
+          m_sVoiceOverDataConfig "{F4C7ABA3B30BDA16}Configs/VoiceData/KS/KS03.conf"
+          m_sLineName "TORTURE0"
+          m_ActorGetter SCR_ScenarioFrameworkGetEntityByName "{66449E5F7D4BD8C6}" {
+           m_sEntityName "tapeRecorder"
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+    coords -2434.011 -137.804 7284.403
+    angles 0 146.797 0
+    Scene CinematicScene "{65B67D8138086CF3}" {
+     EndFrame 1220
+     Tracks {
+      CustomCinematicTrack "{65C2665BFCEF3EFF}" {
+       TrackName "PlayNextCinematicTrack"
+       ClassName "PlayNextTimelineCinematicTrack"
+       ChildTracks {
+        StringCinematicTrack "{65C2665BFCEF3B8F}" {
+         TrackName "m_sCinematicScene"
+         Keyframes {
+          StringCinematicKeyframe "{65C2665BF3F673DC}" {
+           FrameNumber 0
+           Value "Intermezzo_Torture_Long"
+          }
+         }
+        }
+        EventCinematicTrack "{6666625786E1B3BF}" {
+         TrackName "PlayNext"
+        }
+       }
+      }
+      CustomCinematicTrack "{65C2665B8F3F7D86}" {
+       TrackName "FadesTrack"
+       Flags 0 0
+       ClassName "FadesCinematicTrack"
+       ChildTracks {
+        FloatCinematicTrack "{65C2665B8F3F7EA8}" {
+         TrackName "m_fBlackScreenOpacity"
+         Keyframes {
+          FloatCinematicKeyframe "{65C2665B8DAE4D6A}" {
+           FrameNumber 1147
+           Value 0
+          }
+          FloatCinematicKeyframe "{65C2665B831FCDD7}" {
+           FrameNumber 1220
+           Value 1
+           InterpMode 0
+          }
+         }
+         Flags 0 0
+        }
+        FloatCinematicTrack "{65C2665B8F3F79FC}" {
+         TrackName "m_fVolumeSFX"
+         Keyframes {
+          FloatCinematicKeyframe "{65C4A7C93084B9EB}" {
+           FrameNumber 0
+           Value 1
+          }
+          FloatCinematicKeyframe "{6652689F03D5C52C}" {
+           FrameNumber 1147
+           Value 1
+          }
+          FloatCinematicKeyframe "{6652689F06D3652F}" {
+           FrameNumber 1220
+           Value 0
+           InterpMode 0
+          }
+         }
+         Flags 0 0
+        }
+        FloatCinematicTrack "{65C2665B8F3F7879}" {
+         TrackName "m_fVolumeVoices"
+         Keyframes {
+          FloatCinematicKeyframe "{65C4A7C931010765}" {
+           FrameNumber 0
+           Value 1
+          }
+         }
+         Flags 0 0
+        }
+        BooleanCinematicTrack "{65C2665B8F3F78F6}" {
+         TrackName "m_bDestroyBlackscreenOnTimelineEnd"
+         Flags 0 0
+        }
+        IntegerCinematicTrack "{65C2665B8F3F7B73}" {
+         TrackName "m_iDestroyLaterInSeconds"
+         Flags 0 0
+        }
+       }
+      }
+      CustomCinematicTrack "{65C266149D19D2A5}" {
+       TrackName "Alignplayer"
+       Flags 0 0
+       ClassName "AlignPlayerCinematicTrack"
+       ChildTracks {
+        StringCinematicTrack "{65C266149D19D611}" {
+         TrackName "entityToAttachTo"
+         Keyframes {
+          StringCinematicKeyframe "{65C2EB86B6A940B4}" {
+           FrameNumber 0
+           Value "pivot"
+          }
+         }
+         Flags 0 0
+        }
+        FloatCinematicTrack "{65C2EB9CBBB982DE}" {
+         TrackName "m_fLerpFactor"
+         Keyframes {
+          FloatCinematicKeyframe "{65C2EB9CA8F33AD9}" {
+           FrameNumber 0
+           Value 0
+          }
+          FloatCinematicKeyframe "{65C2EB9CAB7F6D98}" {
+           FrameNumber 60
+           Value 1
+          }
+         }
+         Flags 0 0
+        }
+       }
+      }
+      CustomCinematicTrack "{6610B44206E1CF69}" {
+       TrackName "CharacterAnimationEventTrack"
+       ClassName "SCR_CharacterAnimationEventCinematicTrack"
+       ChildTracks {
+        StringCinematicTrack "{6610B440C1CE9EC0}" {
+         TrackName "m_sSourceEntityName"
+        }
+        BooleanCinematicTrack "{6610B440C1CE9D80}" {
+         TrackName "m_bUsePlayerCharacter"
+         Keyframes {
+          BooleanCinematicKeyframe "{6610B440E0BB0329}" {
+           FrameNumber 0
+           Value 1
+          }
+         }
+        }
+        StringCinematicTrack "{6610B440C1CE9C42}" {
+         TrackName "m_sTargerEntityName"
+         Keyframes {
+          StringCinematicKeyframe "{6610B440E6F92DE5}" {
+           FrameNumber 0
+           Value "tapeRecorder"
+          }
+         }
+        }
+       }
+      }
+      CustomCinematicTrack "{66449E5FE9E13138}" {
+       TrackName "playDialogue"
+       CategoryGUID "{65EE6906DC181592}"
+       ClassName "ScenarioFrameworkActionCinematicTrack"
+       ChildTracks {
+        StringCinematicTrack "{66449E5FE9E1310B}" {
+         TrackName "m_sActionSequenceName"
+         Keyframes {
+          StringCinematicKeyframe "{66449E5FD06CFD9E}" {
+           FrameNumber 950
+           Value "playDialogue1"
+          }
+         }
+        }
+        EventCinematicTrack "{66449E5FE9E13105}" {
+         TrackName "Launch"
+         Keyframes {
+          CinematicKeyframe "{66449E5FE9E13103}" {
+           FrameNumber 950
+          }
+         }
+        }
+       }
+      }
+      ScriptEventsCinematicTrack "{66E6C3DB7B41341A}" {
+       TrackName "BlockInventory"
+       Keyframes {
+        ScriptEventCinematicKeyframe "{66E6C3DB7D0A9D56}" {
+         FrameNumber 0
+         Script ""\
+         "		PlayerController pController = GetGame().GetPlayerController();"\
+         "		if (!pController)"\
+         "			return;"\
+         "		"\
+         "		IEntity playerEntity = pController.GetControlledEntity();"\
+         "		if (!playerEntity)"\
+         "			return;"\
+         "		"\
+         "		SCR_InventoryStorageManagerComponent invComp = SCR_InventoryStorageManagerComponent.Cast(playerEntity.FindComponent(SCR_InventoryStorageManagerComponent));"\
+         "		if (!invComp)"\
+         "			return;"\
+         "			"\
+         "		invComp.CloseInventory();"\
+         "		invComp.AllowInventoryAccess(false);"\
+         "	"
+        }
+       }
+      }
+     }
+    }
+   }
+   cutsceneOut {
+    components {
+     SCR_ScenarioFrameworkCinematicEntityComponent "{65C47EE0F7EC487B}" {
+      m_aDebugActions {
+       SCR_ScenarioFrameworkDebugAction "{65C47EE0EAEA8B55}" {
+        m_sDebugActionName "endOfCinematic"
+        m_aDebugActions {
+         SCR_ScenarioFrameworkActionCallAnimationCommand "{65C47EE15A327940}" {
+          m_Getter SCR_ScenarioFrameworkGetPlayerEntity "{65C47EE15F9CDED5}" {
+          }
+          m_sAnimationCommand "CMD_Gesture_NPC"
+          m_iAnimId 11
+         }
+        }
+       }
+       SCR_ScenarioFrameworkDebugAction "{660AE1E6D7ECDCBB}" {
+        m_sDebugActionName "tapeRecorderFinish"
+        m_aDebugActions {
+         SCR_ScenarioFrameworkActionStartSimpleAnimation "{660AE1E6D7ECDD3B}" {
+          m_ActorGetter SCR_ScenarioFrameworkGetEntityByName "{660AE1E6D7EF1F42}" {
+           m_sEntityName "tapeRecorder"
+          }
+          m_sAnimName "{91875C4DDC77A9BA}anims/anm/NPC/male/Body/Dentist/cine_savior_dentist_Pt2_TapePlayer.anm"
+         }
+        }
+       }
+       SCR_ScenarioFrameworkDebugAction "{65EEC62AB7868723}" {
+        m_sDebugActionName "playDialogue8"
+        m_aDebugActions {
+         SCR_ScenarioFrameworkActionVoiceOverPlayLine "{65EE6904E399688A}" {
+          m_iMaxNumberOfActivations 1
+          m_sVoiceOverDataConfig "{F4C7ABA3B30BDA16}Configs/VoiceData/KS/KS03.conf"
+          m_sLineName "TORTURE8"
+          m_ActorGetter SCR_ScenarioFrameworkGetEntityByName "{65EE6904E3996889}" {
+           m_sEntityName "tapeRecorder"
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+    coords -2434.011 -137.804 7284.403
+    angles 0 146.797 0
+    Scene CinematicScene "{65B67D8138086CF3}" {
+     EndFrame 640
+     Tracks {
+      CustomCinematicTrack "{65C2665B8F3F7D86}" {
+       TrackName "FadesTrack"
+       Flags 0 0
+       ClassName "FadesCinematicTrack"
+       ChildTracks {
+        FloatCinematicTrack "{65C2665B8F3F7EA8}" {
+         TrackName "m_fBlackScreenOpacity"
+         Keyframes {
+          FloatCinematicKeyframe "{65C2665B831FCDD7}" {
+           FrameNumber 0
+           Value 1
+           InterpMode 0
+          }
+          FloatCinematicKeyframe "{65C2665B8DAE4D6A}" {
+           FrameNumber 66
+           Value 0
+          }
+         }
+         Flags 0 0
+        }
+        FloatCinematicTrack "{65C2665B8F3F79FC}" {
+         TrackName "m_fVolumeSFX"
+         Keyframes {
+          FloatCinematicKeyframe "{6652689F0E63B779}" {
+           FrameNumber 0
+           Value 0
+           InterpMode 0
+          }
+          FloatCinematicKeyframe "{6652689F0DF051C1}" {
+           FrameNumber 66
+           Value 1
+          }
+         }
+         Flags 0 0
+        }
+        FloatCinematicTrack "{65C2665B8F3F7879}" {
+         TrackName "m_fVolumeVoices"
+         Keyframes {
+          FloatCinematicKeyframe "{6608D7D06C99A959}" {
+           FrameNumber 0
+           Value 1
+           InterpMode 2
+          }
+         }
+         Flags 0 0
+        }
+        BooleanCinematicTrack "{65C2665B8F3F78F6}" {
+         TrackName "m_bDestroyBlackscreenOnTimelineEnd"
+         Keyframes {
+          BooleanCinematicKeyframe "{65C47EE09699E1AC}" {
+           FrameNumber 0
+           Value 1
+          }
+         }
+         Flags 0 0
+        }
+        IntegerCinematicTrack "{65C2665B8F3F7B73}" {
+         TrackName "m_iDestroyLaterInSeconds"
+         Flags 0 0
+        }
+       }
+      }
+      CustomCinematicTrack "{65C266149D19D2A5}" {
+       TrackName "Alignplayer"
+       Flags 0 0
+       ClassName "AlignPlayerCinematicTrack"
+       ChildTracks {
+        StringCinematicTrack "{65C266149D19D611}" {
+         TrackName "entityToAttachTo"
+         Keyframes {
+          StringCinematicKeyframe "{65C2EB86B6A940B4}" {
+           FrameNumber 0
+           Value "pivot"
+          }
+         }
+         Flags 0 0
+        }
+        FloatCinematicTrack "{65C2EB9CBBB982DE}" {
+         TrackName "m_fLerpFactor"
+         Keyframes {
+          FloatCinematicKeyframe "{65C2EB9CAB7F6D98}" {
+           FrameNumber 0
+           Value 1
+          }
+         }
+         Flags 0 0
+        }
+       }
+      }
+      CustomCinematicTrack "{65C47EE004583393}" {
+       TrackName "cinematicFrameworkAnimations"
+       ClassName "ScenarioFrameworkActionCinematicTrack"
+       ChildTracks {
+        StringCinematicTrack "{65C47EE0045833AE}" {
+         TrackName "m_sActionSequenceName"
+         Keyframes {
+          StringCinematicKeyframe "{660AE1E6E5DDF492}" {
+           FrameNumber 41
+           Value "endOfCinematic"
+          }
+          StringCinematicKeyframe "{660AE1E6CA20A7BF}" {
+           FrameNumber 261
+           Value "tapeRecorderFinish"
+          }
+         }
+        }
+        EventCinematicTrack "{65C47EE0045833A0}" {
+         TrackName "Launch"
+         Keyframes {
+          CinematicKeyframe "{65C47EE0045833A1}" {
+           FrameNumber 41
+          }
+          CinematicKeyframe "{660AE1E6CFD838AC}" {
+           FrameNumber 261
+          }
+         }
+        }
+       }
+      }
+      CustomCinematicTrack "{65C49104916E4085}" {
+       TrackName "Postprocesscinematictrack"
+       Flags 0 0
+       ClassName "PostprocessCinematicTrack"
+       ChildTracks {
+        FloatCinematicTrack "{65C49104916E4093}" {
+         TrackName "m_fSaturation"
+         Keyframes {
+          FloatCinematicKeyframe "{6608D7D07144AB3D}" {
+           FrameNumber 0
+           Value 1
+          }
+         }
+         Flags 0 0
+        }
+       }
+      }
+      CustomCinematicTrack "{65EE6903D19AF841}" {
+       TrackName "playDialogue"
+       CategoryGUID "{65EE6906DC181592}"
+       ClassName "ScenarioFrameworkActionCinematicTrack"
+       ChildTracks {
+        StringCinematicTrack "{65EE6903D19AF852}" {
+         TrackName "m_sActionSequenceName"
+         Keyframes {
+          StringCinematicKeyframe "{65FAB6A359505424}" {
+           FrameNumber 0
+           Value "playDialogue8"
+          }
+         }
+        }
+        EventCinematicTrack "{65EE6903D19AF86B}" {
+         TrackName "Launch"
+         Keyframes {
+          CinematicKeyframe "{65EE6903D19AF869}" {
+           FrameNumber 0
+          }
+         }
+        }
+       }
+      }
+      CustomCinematicTrack "{660AE1E498E697EC}" {
+       TrackName "tapeRecorder_leftTape"
+       CategoryGUID "{65EE6906FEE2B8D1}"
+       ClassName "SlotBoneAnimationCinematicTrack"
+       ChildTracks {
+        StringCinematicTrack "{660AE1E498E697FC}" {
+         TrackName "m_sSlotName"
+         Keyframes {
+          StringCinematicKeyframe "{660AE1E481B7FF31}" {
+           FrameNumber 261
+           Value ""
+          }
+         }
+        }
+        StringCinematicTrack "{660AE1E498E697F8}" {
+         TrackName "m_sBoneName"
+         Keyframes {
+          StringCinematicKeyframe "{660AE1E498E697F4}" {
+           FrameNumber 0
+           Value "i_rotator_right"
+          }
+          StringCinematicKeyframe "{660AE1E481B7FAE9}" {
+           FrameNumber 261
+           Value "i_rotator_right"
+          }
+         }
+        }
+        Vector3CinematicTrack "{660AE1E498E697F6}" {
+         TrackName "m_YawPitchRoll"
+         X FloatCinematicTrack "{660AE1E498E697F3}" {
+          TrackName "X"
+          Keyframes {
+           FloatCinematicKeyframe "{660AE1E481B7FBE2}" {
+            FrameNumber 261
+            Value 0
+            InterpMode 2
+           }
+          }
+         }
+         Y FloatCinematicTrack "{660AE1E498E697F2}" {
+          TrackName "Y"
+          Keyframes {
+           FloatCinematicKeyframe "{660AE1E498E697CC}" {
+            FrameNumber 0
+            Value 0
+            InterpMode 1
+           }
+           FloatCinematicKeyframe "{660C7267EA6F4E23}" {
+            FrameNumber 261
+            Value 18
+            InterpMode 2
+           }
+          }
+         }
+         Z FloatCinematicTrack "{660AE1E498E697C9}" {
+          TrackName "Z"
+          Keyframes {
+           FloatCinematicKeyframe "{660AE1E481B7F855}" {
+            FrameNumber 261
+            Value 0
+            InterpMode 2
+           }
+          }
+         }
+        }
+        Vector3CinematicTrack "{660AE1E498E697CB}" {
+         TrackName "m_Position"
+         X FloatCinematicTrack "{660AE1E498E6A88E}" {
+          TrackName "X"
+          Keyframes {
+           FloatCinematicKeyframe "{660AE1E481B7F966}" {
+            FrameNumber 261
+            Value 0
+            InterpMode 2
+           }
+          }
+         }
+         Y FloatCinematicTrack "{660AE1E498E6A880}" {
+          TrackName "Y"
+          Keyframes {
+           FloatCinematicKeyframe "{660AE1E481B7F63A}" {
+            FrameNumber 261
+            Value 0
+            InterpMode 2
+           }
+          }
+         }
+         Z FloatCinematicTrack "{660AE1E498E6A89D}" {
+          TrackName "Z"
+          Keyframes {
+           FloatCinematicKeyframe "{660AE1E481B7F7E7}" {
+            FrameNumber 261
+            Value 0
+            InterpMode 2
+           }
+          }
+         }
+        }
+       }
+      }
+      CustomCinematicTrack "{660AE1E485C12040}" {
+       TrackName "tapeRecorder_rightTape"
+       CategoryGUID "{65EE6906FEE2B8D1}"
+       ClassName "SlotBoneAnimationCinematicTrack"
+       ChildTracks {
+        StringCinematicTrack "{660AE1E485C1205E}" {
+         TrackName "m_sSlotName"
+         Keyframes {
+          StringCinematicKeyframe "{660AE1E48E0AE901}" {
+           FrameNumber 261
+           Value ""
+          }
+         }
+        }
+        StringCinematicTrack "{660AE1E485C12052}" {
+         TrackName "m_sBoneName"
+         Keyframes {
+          StringCinematicKeyframe "{660AE1E485C12055}" {
+           FrameNumber 0
+           Value "i_rotator_left"
+          }
+          StringCinematicKeyframe "{660AE1E48E0AE473}" {
+           FrameNumber 261
+           Value "i_rotator_left"
+          }
+         }
+        }
+        Vector3CinematicTrack "{660AE1E485C12057}" {
+         TrackName "m_YawPitchRoll"
+         X FloatCinematicTrack "{660AE1E485C121A9}" {
+          TrackName "X"
+          Keyframes {
+           FloatCinematicKeyframe "{660AE1E48E0AE550}" {
+            FrameNumber 261
+            Value 0
+            InterpMode 2
+           }
+          }
+         }
+         Y FloatCinematicTrack "{660AE1E485C121AB}" {
+          TrackName "Y"
+          Keyframes {
+           FloatCinematicKeyframe "{660AE1E485C121AF}" {
+            FrameNumber 0
+            Value 0
+            InterpMode 1
+           }
+           FloatCinematicKeyframe "{660C7267E8816BC7}" {
+            FrameNumber 261
+            Value 18
+            InterpMode 2
+           }
+          }
+         }
+         Z FloatCinematicTrack "{660AE1E485C121A2}" {
+          TrackName "Z"
+          Keyframes {
+           FloatCinematicKeyframe "{660AE1E48E0AE37C}" {
+            FrameNumber 261
+            Value 0
+            InterpMode 2
+           }
+          }
+         }
+        }
+        Vector3CinematicTrack "{660AE1E485C121A3}" {
+         TrackName "m_Position"
+         X FloatCinematicTrack "{660AE1E485C121A4}" {
+          TrackName "X"
+          Keyframes {
+           FloatCinematicKeyframe "{660AE1E48E0AE004}" {
+            FrameNumber 261
+            Value 0
+            InterpMode 2
+           }
+          }
+         }
+         Y FloatCinematicTrack "{660AE1E485C121A5}" {
+          TrackName "Y"
+          Keyframes {
+           FloatCinematicKeyframe "{660AE1E48E0AE129}" {
+            FrameNumber 261
+            Value 0
+            InterpMode 2
+           }
+          }
+         }
+         Z FloatCinematicTrack "{660AE1E485C121B7}" {
+          TrackName "Z"
+          Keyframes {
+           FloatCinematicKeyframe "{660AE1E48E0ADEF9}" {
+            FrameNumber 261
+            Value 0
+            InterpMode 2
+           }
+          }
+         }
+        }
+       }
+      }
+      CustomCinematicTrack "{6610BCD6746FB753}" {
+       TrackName "CharacterAnimationEventTrack"
+       ClassName "SCR_CharacterAnimationEventCinematicTrack"
+       ChildTracks {
+        StringCinematicTrack "{6610BCD6746F482E}" {
+         TrackName "m_sSourceEntityName"
+        }
+        BooleanCinematicTrack "{6610BCD6746F4DB0}" {
+         TrackName "m_bUsePlayerCharacter"
+         Keyframes {
+          BooleanCinematicKeyframe "{6610BCD678839AC0}" {
+           FrameNumber 0
+           Value 1
+          }
+         }
+        }
+        StringCinematicTrack "{6610BCD6746F43D7}" {
+         TrackName "m_sTargerEntityName"
+         Keyframes {
+          StringCinematicKeyframe "{6610BCD67BDBB921}" {
+           FrameNumber 0
+           Value "tapeRecorder"
+          }
+         }
+        }
+       }
+      }
+      ScriptEventsCinematicTrack "{66E6C3D89258C3C9}" {
+       TrackName "UnblockInventory"
+       Keyframes {
+        ScriptEventCinematicKeyframe "{66E6C3D896D0D4A9}" {
+         FrameNumber 261
+         Script ""\
+         "		PlayerController pController = GetGame().GetPlayerController();"\
+         "		if (!pController)"\
+         "			return;"\
+         "		"\
+         "		IEntity playerEntity = pController.GetControlledEntity();"\
+         "		if (!playerEntity)"\
+         "			return;"\
+         "		"\
+         "		SCR_InventoryStorageManagerComponent invComp = SCR_InventoryStorageManagerComponent.Cast(playerEntity.FindComponent(SCR_InventoryStorageManagerComponent));"\
+         "		if (invComp)"\
+         "			invComp.AllowInventoryAccess(true);"\
+         "	"
+        }
+       }
+      }
+     }
+    }
+   }
+   Angelina {
+    coords -2434.011 -137.804 7284.403
+    angles 0 146.797 0
+    Scene CinematicScene "{660CC5D49506F8EE}" {
+     EndFrame 1280
+     Tracks {
+      CustomCinematicTrack "{660CC5D49F3D63DA}" {
+       TrackName "tapeRecorder_leftTape"
+       CategoryGUID "{65EE6906FEE2B8D1}"
+       ClassName "SlotBoneAnimationCinematicTrack"
+       ChildTracks {
+        StringCinematicTrack "{660CC5D49F3D602D}" {
+         TrackName "m_sSlotName"
+        }
+        StringCinematicTrack "{660CC5D49F3D6027}" {
+         TrackName "m_sBoneName"
+         Keyframes {
+          StringCinematicKeyframe "{660CC5D49F3D6024}" {
+           FrameNumber 0
+           Value "i_rotator_right"
+          }
+         }
+        }
+        Vector3CinematicTrack "{660CC5D49F3D6022}" {
+         TrackName "m_YawPitchRoll"
+         X FloatCinematicTrack "{660CC5D49F3D6020}" {
+          TrackName "X"
+         }
+         Y FloatCinematicTrack "{660CC5D49F3D603C}" {
+          TrackName "Y"
+          Keyframes {
+           FloatCinematicKeyframe "{660CC5D49F3D603D}" {
+            FrameNumber 0
+            Value 0
+            InterpMode 1
+           }
+           FloatCinematicKeyframe "{660CC5D482A2C835}" {
+            FrameNumber 1280
+            Value 30
+           }
+          }
+         }
+         Z FloatCinematicTrack "{660CC5D49F3D603B}" {
+          TrackName "Z"
+         }
+        }
+        Vector3CinematicTrack "{660CC5D49F3D6008}" {
+         TrackName "m_Position"
+         X FloatCinematicTrack "{660CC5D49F3D6009}" {
+          TrackName "X"
+         }
+         Y FloatCinematicTrack "{660CC5D49F3D6007}" {
+          TrackName "Y"
+         }
+         Z FloatCinematicTrack "{660CC5D49F3D6002}" {
+          TrackName "Z"
+         }
+        }
+       }
+      }
+      CustomCinematicTrack "{660CC5D49BA5409F}" {
+       TrackName "tapeRecorder_rightTape"
+       CategoryGUID "{65EE6906FEE2B8D1}"
+       ClassName "SlotBoneAnimationCinematicTrack"
+       ChildTracks {
+        StringCinematicTrack "{660CC5D49BA540AC}" {
+         TrackName "m_sSlotName"
+        }
+        StringCinematicTrack "{660CC5D49BA540A2}" {
+         TrackName "m_sBoneName"
+         Keyframes {
+          StringCinematicKeyframe "{660CC5D49BA540A3}" {
+           FrameNumber 0
+           Value "i_rotator_left"
+          }
+         }
+        }
+        Vector3CinematicTrack "{660CC5D49BA540A5}" {
+         TrackName "m_YawPitchRoll"
+         X FloatCinematicTrack "{660CC5D49BA540A7}" {
+          TrackName "X"
+         }
+         Y FloatCinematicTrack "{660CC5D49BA540BA}" {
+          TrackName "Y"
+          Keyframes {
+           FloatCinematicKeyframe "{660CC5D49BA540BB}" {
+            FrameNumber 0
+            Value 0
+            InterpMode 1
+           }
+           FloatCinematicKeyframe "{660CC5D4E64A0697}" {
+            FrameNumber 1280
+            Value 30
+           }
+          }
+         }
+         Z FloatCinematicTrack "{660CC5D49BA540BD}" {
+          TrackName "Z"
+         }
+        }
+        Vector3CinematicTrack "{660CC5D49BA540CC}" {
+         TrackName "m_Position"
+         X FloatCinematicTrack "{660CC5D49BA540CD}" {
+          TrackName "X"
+         }
+         Y FloatCinematicTrack "{660CC5D49BA540CF}" {
+          TrackName "Y"
+         }
+         Z FloatCinematicTrack "{660CC5D49BA540C1}" {
+          TrackName "Z"
+         }
+        }
+       }
+      }
+      CustomCinematicTrack "{660CC5D436447B7F}" {
+       TrackName "playDialogue"
+       ClassName "ScenarioFrameworkActionCinematicTrack"
+       ChildTracks {
+        StringCinematicTrack "{660CC5D4364484C5}" {
+         TrackName "m_sActionSequenceName"
+         Keyframes {
+          StringCinematicKeyframe "{660CC5D434698C56}" {
+           FrameNumber 0
+           Value "playDialogue"
+          }
+         }
+        }
+        EventCinematicTrack "{660CC5D436448366}" {
+         TrackName "Launch"
+         Keyframes {
+          CinematicKeyframe "{660CC5D4343F885B}" {
+           FrameNumber 0
+          }
+         }
+        }
+       }
+      }
+      CustomCinematicTrack "{660CD8E062B90C2C}" {
+       TrackName "Sound_Dialogue"
+       CategoryGUID "{65EE6906DC181592}"
+       ClassName "SCR_SoundCinematicTrack"
+       ChildTracks {
+        StringCinematicTrack "{660CD8E062B90C20}" {
+         TrackName "m_sResourceName"
+         Keyframes {
+          StringCinematicKeyframe "{660CD8E045FDFCE3}" {
+           FrameNumber 0
+           Value "{5D6D18DE4A183963}Sounds/VO/KS/CinematicScenes/VO_KS_Angelina_Direct.acp"
+          }
+          StringCinematicKeyframe "{660CD8E1FD70CFA9}" {
+           FrameNumber 479
+           Value "{5D6D18DE4A183963}Sounds/VO/KS/CinematicScenes/VO_KS_Angelina_Direct.acp"
+          }
+          StringCinematicKeyframe "{660CD8E1E1640A83}" {
+           FrameNumber 849
+           Value "{5D6D18DE4A183963}Sounds/VO/KS/CinematicScenes/VO_KS_Angelina_Direct.acp"
+          }
+         }
+        }
+        StringCinematicTrack "{660CD8E062B90C3B}" {
+         TrackName "m_sSoundEvent"
+         Keyframes {
+          StringCinematicKeyframe "{660CD8E1F4343ADF}" {
+           FrameNumber 0
+           Value "SOUND_KS03_REPORT_ANGELINA_06"
+          }
+          StringCinematicKeyframe "{660CD8E1F87F47E8}" {
+           FrameNumber 479
+           Value "SOUND_KS03_REPORT_ANGELINA_07"
+          }
+          StringCinematicKeyframe "{660CD8E1E0C22E68}" {
+           FrameNumber 849
+           Value "SOUND_KS03_REPORT_ANGELINA_08"
+          }
+         }
+        }
+        StringCinematicTrack "{660CD8E062BA9409}" {
+         TrackName "m_sEntityName"
+         Keyframes {
+          StringCinematicKeyframe "{661099DF946D8E1C}" {
+           FrameNumber 0
+           Value "tapeRecorder"
+          }
+          StringCinematicKeyframe "{660CD8E1FA549E77}" {
+           FrameNumber 479
+           Value "tapeRecorder"
+          }
+          StringCinematicKeyframe "{660CD8E1E125E95C}" {
+           FrameNumber 849
+           Value "tapeRecorder"
+          }
+         }
+        }
+        StringCinematicTrack "{660CD8E062BA95D1}" {
+         TrackName "m_sBoneName"
+         Keyframes {
+          StringCinematicKeyframe "{661099DF9DDA4B4B}" {
+           FrameNumber 0
+           Value "i_body"
+          }
+          StringCinematicKeyframe "{660CD8E1FA1028EA}" {
+           FrameNumber 479
+           Value "i_body"
+          }
+          StringCinematicKeyframe "{660CD8E1E1D38BC2}" {
+           FrameNumber 849
+           Value "i_body"
+          }
+         }
+        }
+        Vector3CinematicTrack "{660CD8E062BA16AA}" {
+         TrackName "m_vOffset"
+         X FloatCinematicTrack "{660CD8E062BA169A}" {
+          TrackName "X"
+         }
+         Y FloatCinematicTrack "{660CD8E062BA1698}" {
+          TrackName "Y"
+         }
+         Z FloatCinematicTrack "{660CD8E062BA316A}" {
+          TrackName "Z"
+         }
+        }
+        StringCinematicTrack "{660CD8E062BA3174}" {
+         TrackName "m_sSignalName1"
+        }
+        FloatCinematicTrack "{660CD8E062BB88C2}" {
+         TrackName "m_fSignalValue1"
+        }
+        StringCinematicTrack "{660CD8E062BB88C1}" {
+         TrackName "m_sSignalName2"
+        }
+        FloatCinematicTrack "{660CD8E062BB88C0}" {
+         TrackName "m_fSignalValue2"
+        }
+        StringCinematicTrack "{660CD8E062BBB419}" {
+         TrackName "m_sSignalName3"
+        }
+        FloatCinematicTrack "{660CD8E062BBB41E}" {
+         TrackName "m_fSignalValue3"
+        }
+        StringCinematicTrack "{660CD8E062BB5D07}" {
+         TrackName "m_sSignalName4"
+        }
+        FloatCinematicTrack "{660CD8E062BB5D06}" {
+         TrackName "m_fSignalValue4"
+        }
+        BooleanCinematicTrack "{660CD8E062BB5D71}" {
+         TrackName "m_bUpdatePosition"
+        }
+        BooleanCinematicTrack "{660CD8E062BB5D70}" {
+         TrackName "m_bSetRoomSize"
+        }
+        BooleanCinematicTrack "{660CD8E062BB27AC}" {
+         TrackName "m_bSetInterior"
+        }
+        EventCinematicTrack "{660CD8E062BB27AA}" {
+         TrackName "PlayEvent"
+         Keyframes {
+          CinematicKeyframe "{660CD8E062BB27A9}" {
+           FrameNumber 0
+          }
+          CinematicKeyframe "{660CD8E13D9A31C3}" {
+           FrameNumber 479
+          }
+          CinematicKeyframe "{660CD8E13B336CDF}" {
+           FrameNumber 849
+          }
+         }
+        }
+        EventCinematicTrack "{665268933225CE10}" {
+         TrackName "TerminateEvent"
+        }
+       }
+      }
+      CustomCinematicTrack "{661099DAE33D6072}" {
+       TrackName "tapeRecorder_Signal_IsPlaying"
+       ClassName "SCR_SignalCinematicTrack"
+       ChildTracks {
+        StringCinematicTrack "{661099DAE33D798E}" {
+         TrackName "m_sSignalName"
+         Keyframes {
+          StringCinematicKeyframe "{661099DAE89627BC}" {
+           FrameNumber 0
+           Value "IsPlaying"
+          }
+         }
+        }
+        FloatCinematicTrack "{661099DAE33D7D1D}" {
+         TrackName "m_fValue"
+         Keyframes {
+          FloatCinematicKeyframe "{661099DAEE3F54A2}" {
+           FrameNumber 0
+           Value 1
+           InterpMode 2
+          }
+          FloatCinematicKeyframe "{661099DAFBF3C867}" {
+           FrameNumber 1270
+           Value 0
+           InterpMode 2
+          }
+         }
+        }
+        BooleanCinematicTrack "{661099DAE33D731A}" {
+         TrackName "m_bForceUpdate"
+        }
+       }
+      }
+      CustomCinematicTrack "{6610BCD4DE427F48}" {
+       TrackName "tapeRecorder_SoundComponent"
+       ClassName "SCR_SoundComponentCinematicTrack"
+       ChildTracks {
+        StringCinematicTrack "{6610BCD4DE42733A}" {
+         TrackName "m_sSoundEvent"
+         Keyframes {
+          StringCinematicKeyframe "{6610C76EAB26BCE9}" {
+           FrameNumber 0
+           Value "SOUND_LEVER_PLAY_START"
+          }
+          StringCinematicKeyframe "{6610BCD519C7D8B5}" {
+           FrameNumber 1270
+           Value "SOUND_LEVER_REWIND_STOP"
+          }
+         }
+        }
+        StringCinematicTrack "{6610BCD4DE42722C}" {
+         TrackName "m_sBoneName"
+         Keyframes {
+          StringCinematicKeyframe "{6610BCD50B5879A6}" {
+           FrameNumber 0
+           Value "i_body"
+          }
+         }
+        }
+        EventCinematicTrack "{6610BCD4DE42712B}" {
+         TrackName "PlayEvent"
+         Keyframes {
+          CinematicKeyframe "{6610BCD4F0BBF356}" {
+           FrameNumber 0
+          }
+          CinematicKeyframe "{6610BCD514B2461B}" {
+           FrameNumber 1270
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+  $grp GenericEntity {
+   pivot {
+    coords 0.619 -0.002 0.216
+    angles 0 -160.328 0
+   }
+   tapeInteractionPoint {
+    components {
+     ActionsManagerComponent "{660CD13386D41633}" {
+      ActionContexts {
+       UserActionContext "{660CD13389672F83}" {
+        ContextName "InteractionPoint"
+        Position PointInfo "{6510E1C90744EB6A}" {
+        }
+        Radius 1
+       }
+      }
+      additionalActions {
+       SCR_ScriptedUserAction "{660CD133E7321DD6}" {
+        ParentContextList {
+         "InteractionPoint"
+        }
+        UIInfo UIInfo "{6510E1CB6CFE7B51}" {
+         Name "Play tape"
+        }
+        ActionTitle "#AR-KS_TapeInteraction"
+        VisibilityRange 1
+        Duration 0.5
+        m_bLoopAction 0
+       }
+      }
+     }
+     RplComponent "{660CD132B158CFC5}" {
+     }
+    }
+    coords 1.09 0.963 -0.279
+    angles 0 146.797 0
+   }
+  }
+  GenericEntity tapeRecorder : "{1CA7E18E0CEE6EA1}Prefabs/Props/Civilian/TapeRecorder_01/TapeRecorder_01_KS03.et" {
+   components {
+    SignalsManagerComponent "{660CC5D5503029AA}" {
+    }
+    SCR_CommunicationSoundComponent "{66449E5FFBB606C7}" {
+     Filenames {
+      "{B420A82B5B32DB99}Sounds/VO/KS/CinematicScenes/VO_KS_SovietTorturerCO_Direct_TapeRecorder.acp"
+      "{D09D5F0301A1909F}Sounds/VO/KS/CinematicScenes/VO_KS_SovietTorturerYuri_Direct_TapeRecorder.acp"
+      "{5D6D18DE4A183963}Sounds/VO/KS/CinematicScenes/VO_KS_Angelina_Direct.acp"
+      "{B841567755D1E690}Sounds/Props/Civilian/TapeRecorder_01/Props_TapeRecorder_01_Interactive.acp"
+     }
+    }
+    MeshObject "{5872F0EB7FA40561}" {
+     BoundingBox AABBBoundingVolume "{65B68EA9F7AF4B4B}" {
+      Mins -2 0 -2
+      Maxs 2 0.157 2
+     }
+    }
+    RigidBody "{5872F0EB7DFB5A9D}" {
+     Enabled 0
+    }
+    ActionsManagerComponent "{6510E1C90AEE369E}" {
+     Enabled 0
+     ActionContexts {
+      UserActionContext "{6510E1C900D6A136}" {
+       ContextName "InteractionPoint"
+       Position PointInfo "{6510E1C90744EB6A}" {
+        PivotID "i_control_switch"
+        Offset 0 0 0
+       }
+       Radius 2
+      }
+     }
+     additionalActions {
+      SCR_ScriptedUserAction "{6510E1CDF29EF069}" {
+       ParentContextList +{
+       }
+       UIInfo UIInfo "{6510E1CB6CFE7B51}" {
+        Name "Play tape"
+       }
+       ActionTitle "Play tape"
+       Duration 0.5
+       m_bLoopAction 0
+      }
+     }
+    }
+    AnimationPlayerComponent "{65B68EAB437CFAEC}" {
+     Animation "{1D2714F34BFFC416}anims/anm/NPC/male/Body/Dentist/cine_savior_dentist_victimloop_TapePlayer.anm"
+     Loop 1
+     AutoPlay 1
+    }
+   }
+   coords 0.619 -0.002 0.216
+   angles 0 -160.329 0
+  }
+  GenericEntity TASKS_AREA : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
+   components {
+    SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+     m_aActivationActions {
+      SCR_ScenarioFrameworkCreateVariable "{64FE82134F81B9F5}" {
+       m_sVariableName "BIS_IntelFound"
+       m_sVariableValue "0"
+      }
+     }
+    }
+   }
+   coords 1.315 1.865 2.908
+   angles 0 146.797 0
+   {
+    GenericEntity TASK_OBJECTS : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+     coords 0 0 0
+     {
+      GenericEntity TorturedDudeSlot : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+       components {
+        SCR_ScenarioFrameworkSlotBase "{5A26B3E02AC77BA0}" {
+         m_aActivationActions {
+          SCR_ScenarioFrameworkActionKillEntity "{64FE8220A0D1C21D}" {
+           m_iMaxNumberOfActivations 0
+          }
+          SCR_ScenarioFrameworkActionOnUserActionEvent "{64FE821D5A58EA09}" {
+           m_iMaxNumberOfActivations 1
+           m_iActionID 28
+           m_aActions {
+            SCR_ScenarioFrameworkActionChangeUserActionVisibility "{64FE82057FDDD00C}" {
+             m_iMaxNumberOfActivations 1
+             m_Getter SCR_ScenarioFrameworkGetSpawnedEntity "{64FE82056A9F0F99}" {
+              m_sLayerName "TorturedDudeSlot"
+             }
+             m_iActionID 28
+             m_bVisible 0
+            }
+            SCR_ScenarioFrameworkActionOnAnimationEvent "{65C2662CA04598D9}" {
+             m_Getter SCR_ScenarioFrameworkGetPlayerEntity "{65C2662C9AC74F3D}" {
+             }
+             m_sAnimationEventString "startPlayerAnimation"
+             m_aActions {
+              SCR_ScenarioFrameworkActionPlayCinematic "{65C2662C91F7644B}" {
+               m_sCinematicTimeline "cutsceneIn"
+              }
+              SCR_ScenarioFrameworkActionCallAnimationCommand "{65C2662C8926B233}" {
+               m_iMaxNumberOfActivations 1
+               m_Getter SCR_ScenarioFrameworkGetSpawnedEntity "{65C2662C8186573E}" {
+                m_sLayerName "TorturedDudeSlot"
+               }
+               m_sAnimationCommand "CMD_Gesture_NPC"
+               m_iAnimId 11
+              }
+              SCR_ScenarioFrameworkActionStartSimpleAnimation "{65C2662D77DA3A75}" {
+               m_ActorGetter SCR_ScenarioFrameworkGetEntityByName "{65C2662D6EEA27AC}" {
+                m_sEntityName "tapeRecorder"
+               }
+               m_sAnimName "{15EB5E87B17220BE}anims/anm/NPC/male/Body/Dentist/cine_savior_dentist_Pt1_TapePlayer.anm"
+              }
+              SCR_ScenarioFrameworkActionWaitAndExecute "{65C47EE3C20E6223}" {
+               m_iDelayInSeconds 20
+               m_aActions {
+                SCR_ScenarioFrameworkActionStartSimpleAnimation "{65C47EE3C7AB82E4}" {
+                 m_ActorGetter SCR_ScenarioFrameworkGetEntityByName "{65C47EE3B9E9FE0A}" {
+                  m_sEntityName "tapeRecorder"
+                 }
+                 m_sAnimName "{47870B202CB3118A}anims/anm/NPC/male/Body/Dentist/cine_savior_dentist_recordloop_TapePlayer.anm"
+                }
+               }
+              }
+              SCR_ScenarioFrameworkActionAI "{65CE8AF3B1C9AE34}" {
+               m_Getter SCR_ScenarioFrameworkGetArrayOfAIsFromArea "{65CE8AE068599D06}" {
+                m_aAreasName {
+                 "VILLA_GARISON_BACK"
+                 "VILLA_GARRISON_FRONT"
+                 "VILLA_LEAVING_UNITS"
+                 "VILLA_MORTAR_CREW"
+                 "VillaSurroundingArea"
+                }
+               }
+               m_aAIActions {
+                SCR_ScenarioFrameworkAIActionEnableAI "{65CE8AE0B1C92B20}" {
+                 m_bEnableAI 0
+                }
+               }
+              }
+             }
+            }
+            SCR_ScenarioFrameworkActionStartAnimation "{65B68EB4F6AB10ED}" {
+             m_iMaxNumberOfActivations 1
+             m_ActorGetter SCR_ScenarioFrameworkGetPlayerEntity "{65B68EB40B7866C3}" {
+             }
+             m_PropAllignToGetter SCR_ScenarioFrameworkGetEntityByName "{65C491055B4C7E3E}" {
+              m_sEntityName "pivot"
+             }
+             m_sGraphName "{F7C5319E76546C30}anims/anm/NPC/workspaces/Omega_NPCs.agr"
+             m_GraphInstanceName "{1AAF64456A5D3EDE}anims/anm/NPC/workspaces/Omega_NPCs.asi"
+             m_iNPC 2
+            }
+            SCR_ScenarioFrameworkActionWaitAndExecute "{65C2EB987D363764}" {
+             m_iDelayInSeconds 2
+             m_aActions {
+              SCR_ScenarioFrameworkActionAttachToSlotManager "{65C2EB9876850313}" {
+               m_ActorGetter SCR_ScenarioFrameworkGetPlayerEntity "{65C2EB9869EAB135}" {
+               }
+               m_PropToAttachGetter SCR_ScenarioFrameworkGetEntityByName "{65C2EB986673EDC5}" {
+                m_sEntityName "radioForCutscene"
+               }
+               m_sSlotName "cinematicLeftHand"
+              }
+             }
+            }
+            SCR_ScenarioFrameworkActionOnAnimationEvent "{65C47EEF68167261}" {
+             m_Getter SCR_ScenarioFrameworkGetPlayerEntity "{65C47EEFAE4C2EB7}" {
+             }
+             m_sAnimationEventString "endPlayerAnimation"
+             m_aActions {
+              SCR_ScenarioFrameworkActionStopAnimation "{65C47EEF597AB9E6}" {
+               m_ActorGetter SCR_ScenarioFrameworkGetPlayerEntity "{65C47EEF5FDFF1FE}" {
+               }
+              }
+              SCR_ScenarioFrameworkActionAttachToSlotManager "{65C49100EEDB893D}" {
+               m_ActorGetter SCR_ScenarioFrameworkGetPlayerEntity "{65C491037366AA13}" {
+               }
+               m_PropToAttachGetter SCR_ScenarioFrameworkGetEntityByName "{65C4910376642287}" {
+                m_sEntityName "radioForCutscene"
+               }
+               m_sSlotName "cinematicLeftHand"
+               m_bDetachAndDelete 1
+              }
+              SCR_ScenarioFrameworkActionChangeTaskState "{65CE8AF389579D13}" {
+               m_iMaxNumberOfActivations 0
+               m_Getter SCR_ScenarioFrameworkGetTask "{64FE82059D74C5F4}" {
+                m_sLayerTaskName "RESCUE_TASK"
+               }
+               m_eTaskState CANCELLED
+              }
+              SCR_ScenarioFrameworkActionAI "{65CE8AF3ABC59A59}" {
+               m_Getter SCR_ScenarioFrameworkGetArrayOfAIsFromArea "{65CE8AE068599D06}" {
+                m_aAreasName {
+                 "VILLA_GARISON_BACK"
+                 "VILLA_GARRISON_FRONT"
+                 "VILLA_LEAVING_UNITS"
+                 "VILLA_MORTAR_CREW"
+                 "VillaSurroundingArea"
+                }
+               }
+               m_aAIActions {
+                SCR_ScenarioFrameworkAIActionEnableAI "{65CE8AE0B1C92B20}" {
+                }
+               }
+              }
+             }
+            }
+            SCR_ScenarioFrameworkActionOnAnimationEvent "{65FACA5973CF835C}" {
+             m_Getter SCR_ScenarioFrameworkGetPlayerEntity "{65FACA590D8A0B41}" {
+             }
+             m_sAnimationEventString "missionTask"
+             m_aActions {
+              SCR_ScenarioFrameworkActionChangeTaskState "{65FACA596C27C284}" {
+               m_Getter SCR_ScenarioFrameworkGetTask "{64FE82059D74C5F4}" {
+                m_sLayerTaskName "RESCUE_TASK"
+               }
+               m_eTaskState CANCELLED
+              }
+             }
+            }
+           }
+          }
+          SCR_ScenarioFrameworkActionChangeUserActionVisibility "{660CC5D78CF0F512}" {
+           m_Getter SCR_ScenarioFrameworkGetEntityByName "{660CC5D78BC2B997}" {
+            m_sEntityName "tapeInteractionPoint"
+           }
+           m_bVisible 0
+          }
+          SCR_ScenarioFrameworkActionWaitAndExecute "{65B67D85205B99F6}" {
+           m_iDelayInSeconds 1
+           m_aActions {
+            SCR_ScenarioFrameworkActionStartAnimation "{65B67D853AAF82BC}" {
+             m_iMaxNumberOfActivations 1
+             m_ActorGetter SCR_ScenarioFrameworkGetSpawnedEntity "{65B67D854EB0B5C7}" {
+              m_sLayerName "TorturedDudeSlot"
+             }
+             m_PropAllignToGetter SCR_ScenarioFrameworkGetEntityByName "{65B68EB0A26285A6}" {
+              m_sEntityName "pivot"
+             }
+             m_sGraphName "{F7C5319E76546C30}anims/anm/NPC/workspaces/Omega_NPCs.agr"
+             m_GraphInstanceName "{1AAF64456A5D3EDE}anims/anm/NPC/workspaces/Omega_NPCs.asi"
+             m_iNPC 1
+             m_bHolsterWeapon 0
+             m_bUseCinematicCommand 0
+             m_bAnimationAllowEnvironmentalExit 0
+            }
+           }
+          }
+          SCR_ScenarioFrameworkActionWaitAndExecute "{6A627245170B7175}" {
+           m_iDelayInSeconds 2
+           m_aActions {
+            SCR_ScenarioFrameworkActionSetEntityPosition "{6A6272450755260C}" {
+             m_EntityGetter SCR_ScenarioFrameworkGetSpawnedEntity "{6A6272448B0E6EB4}" {
+              m_sLayerName "TorturedDudeSlot"
+             }
+             m_DestinationEntityGetter SCR_ScenarioFrameworkGetEntityByName "{6A627244801962F7}" {
+              m_sEntityName "pivot"
+             }
+            }
+           }
+          }
+          SCR_ScenarioFrameworkActionSetWoundState "{65C4A7C345A29F06}" {
+           m_Getter SCR_ScenarioFrameworkGetSpawnedEntity "{65C4A7C3397CB5DF}" {
+            m_sLayerName "TorturedDudeSlot"
+           }
+           m_bHead 1
+           m_bTorso 1
+           m_bLeftArm 1
+           m_bRightArm 1
+           m_bLeftLeg 1
+           m_bRightLeg 1
+          }
+          SCR_ScenarioFrameworkActionOnUserActionEvent "{660CC5D7D3C6C086}" {
+           m_Getter SCR_ScenarioFrameworkGetEntityByName "{660CC5D7DE0F28AC}" {
+            m_sEntityName "tapeInteractionPoint"
+           }
+           m_aActions {
+            SCR_ScenarioFrameworkActionPlayCinematic "{660CC5D7C7638661}" {
+             m_iMaxNumberOfActivations 1
+             m_sCinematicTimeline "Angelina"
+            }
+            SCR_ScenarioFrameworkActionChangeUserActionVisibility "{660CC5D64AD7E6F2}" {
+             m_Getter SCR_ScenarioFrameworkGetEntityByName "{660CC5D6491FCFBD}" {
+              m_sEntityName "tapeInteractionPoint"
+             }
+             m_bVisible 0
+            }
+           }
+          }
+         }
+         m_sObjectToSpawn "{2A2E02AB56F7C2C2}Prefabs/Characters/Factions/BLUFOR/US_Army/KS/KS_TorturedDude.et"
+         m_sID "victim"
+         m_bCanBeGarbageCollected 0
+        }
+       }
+       coords 3.112 -1.867 3.049
+       angles 0 -58.57 0
+      }
+     }
+    }
+   }
+  }
+  GenericEntity : "{EFCD232A50C15173}Prefabs/Props/Furniture/Nightstand_01.et" {
+   coords 1.095 -0.008 -0.326
+   angles 0 -30.255 0
+   {
+    GenericEntity : "{0A419CC48036D980}Prefabs/Props/Medical/ToolsSurgical_01_autoclavedrum_base.et" {
+     Flags 0x200000 0
+     coords 0.012 0.504 0.019
+     angles 0 -90 0
+    }
+    GenericEntity : "{8A016C49EC6DE969}Prefabs/Props/Medical/ToolsSurgical_01_kidneydish_V3.et" {
+     Flags 0x200000 0
+     coords -0.004 0.863 0.024
+     angles 0 -55 0
+    }
+   }
+  }
+ }
+}
