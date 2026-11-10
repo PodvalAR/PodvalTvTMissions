@@ -100,7 +100,8 @@ class TvT_InterrogationRescueComponent : ScriptComponent
 			GetGame().GetCallqueue().Remove(OnRpl_VictimSeated);
 		}
 
-		ResetAimLimits_C();
+		ResetRescuerState_C();
+		TriggerScreenFade_C(false, 0.5);
 
 		super.OnDelete(owner);
 	}
@@ -344,12 +345,17 @@ class TvT_InterrogationRescueComponent : ScriptComponent
 		// 2. Глобальное серверное оповещение всем игрокам в чат (smsg)
 		BroadcastServerMessage(m_sEndMessage);
 
-		// 3. Завершение анимации спасителя
+		// 3. Завершение фиксации спасителя
 		Rpc(RpcDo_StopEffects);
 		if (RplSession.Mode() != RplMode.Dedicated)
 			RpcDo_StopEffects();
 
-		// 4. Отложенный переход гейммода в финальное состояние Debriefing (пауза 5 сек на чтение сообщения)
+		// 4. Плавное экранное затемнение перед дебрифингом
+		Rpc(RpcDo_StartFadeOut, m_fDebriefingDelaySeconds);
+		if (RplSession.Mode() != RplMode.Dedicated)
+			RpcDo_StartFadeOut(m_fDebriefingDelaySeconds);
+
+		// 5. Отложенный переход гейммода в финальное состояние Debriefing (пауза 5 сек на чтение сообщения)
 		int debriefDelayMs = Math.Max(1000, (int)(m_fDebriefingDelaySeconds * 1000));
 		GetGame().GetCallqueue().CallLater(TransitionToDebriefing_S, debriefDelayMs, false);
 	}
@@ -524,135 +530,106 @@ class TvT_InterrogationRescueComponent : ScriptComponent
 				isLocalRescuer = true;
 		}
 
-		// 6. Запуск синематики cutsceneIn (только у спасителя: фейд затемнения экрана и блокировка инвентаря)
-		if (isLocalRescuer && m_sCinematicEntityName != "")
-		{
-			IEntity cineEnt = ResolveTargetEntity(m_sCinematicEntityName);
-			if (cineEnt)
-			{
-				CinematicEntity cutscene = CinematicEntity.Cast(cineEnt);
-				if (cutscene)
-					cutscene.Play();
-			}
-		}
-
-		// 7. Анимация осмотра спасителя (запускается строго на клиенте владельца персонажа)
+		// 6. Локальная фиксация спасителя (вид от 1-го лица, наклон на магнитофон, блокировка движения и инвентаря)
 		if (isLocalRescuer && rescuerEnt)
 		{
 			SCR_ChimeraCharacter rescuerChar = SCR_ChimeraCharacter.Cast(rescuerEnt);
 			if (rescuerChar)
-				StartRescuerAnimation(rescuerChar);
+				StartRescuerScene(rescuerChar);
 		}
 	}
 
 	/**
-	 * @brief Запуск анимации лоитеринга осмотра у спасителя с плавной подгонкой шага к точке pivot (m_iNPC = 2).
+	 * @brief Фиксация спасителя перед магнитофоном: вид от 1-го лица, наклон взгляда вниз, блокировка движения и инвентаря.
+	 * @note Полный отказ от StartLoitering и SetTransform: исключены сетевые телепортации и развороты корпуса.
 	 */
-	protected void StartRescuerAnimation(SCR_ChimeraCharacter rescuerChar)
+	protected void StartRescuerScene(SCR_ChimeraCharacter rescuerChar)
 	{
 		if (!rescuerChar)
 			return;
-
-		RplComponent rplComp = rescuerChar.GetRplComponent();
-		if (rplComp && !rplComp.IsOwner())
-			return;
-
-		IEntity propEntity = null;
-		if (m_sRescuerPivotEntityName != "")
-			propEntity = ResolveTargetEntity(m_sRescuerPivotEntityName);
-		if (!propEntity)
-			propEntity = ResolveTargetEntity(m_sPivotEntityName);
-		if (!propEntity)
-			propEntity = GetOwner();
-
-		vector vAnimationTransform[4] = { "1 0 0", "0 1 0", "0 0 1", "0 0 0" };
-		if (propEntity)
-		{
-			propEntity.GetWorldTransform(vAnimationTransform);
-		}
-
-		if (m_fRescuerYawOffset != 0)
-		{
-			vector angles = Math3D.MatrixToAngles(vAnimationTransform);
-			angles[0] = Math.Repeat(angles[0] + m_fRescuerYawOffset, 360.0);
-			vector origin = vAnimationTransform[3];
-			Math3D.AnglesToMatrix(angles, vAnimationTransform);
-			vAnimationTransform[3] = origin;
-		}
 
 		SCR_CharacterControllerComponent controller = SCR_CharacterControllerComponent.Cast(rescuerChar.GetCharacterController());
 		if (!controller)
 			return;
 
-		CharacterAnimationComponent animComp = controller.GetAnimationComponent();
-		if (!animComp)
-			return;
-
-		SCR_CharacterCommandHandlerComponent cmdHandler = SCR_CharacterCommandHandlerComponent.Cast(animComp.GetCommandHandler());
-		if (!cmdHandler)
-			return;
-
-		cmdHandler.StartCommand_Move();
-
-		SCR_ScriptedCommandsStaticTable staticTable = cmdHandler.GetScriptedStaticTable();
-		if (!staticTable)
-			return;
-
-		int commandId = -1;
-		string commandName = "";
-		if (staticTable)
-		{
-			commandId = staticTable.m_CustomCinematicCommand;
-			commandName = SCR_CustomAnimData_Properties.BINDING_COMMAND_NAME;
-		}
-
-		SCR_LoiterCustomAnimData customAnimData = SCR_LoiterCustomAnimData.CreateInstance(
-			commandID: commandId,
-			commandValue: ELoiteringType.CUSTOM,
-			commandName: commandName,
-			graphName: m_sVictimAnimGraph,
-			graphInstanceName: m_sVictimAnimInstance,
-			controlVariableName: staticTable.CONTROL_VARIABLE_NAME,
-			controlVariableID: staticTable.m_OfficerMissionSpeech,
-			controlVariableValue: 2,
-			allowRootMotion: true,
-			allowEnvironmentalExit: false);
-
+		// 1. Убираем оружие из рук
 		controller.SelectWeapon(null);
 
-		// Гарантируем вид от первого лица (1st person) по запросу сцены
+		// 2. Закрываем и блокируем доступ к инвентарю
+		SCR_InventoryStorageManagerComponent invComp = SCR_InventoryStorageManagerComponent.Cast(rescuerChar.FindComponent(SCR_InventoryStorageManagerComponent));
+		if (invComp)
+		{
+			invComp.CloseInventory();
+			invComp.AllowInventoryAccess(false);
+		}
+
+		// 3. Гарантируем вид строго от первого лица (1st person)
 		SCR_CharacterCameraHandlerComponent camHandler = SCR_CharacterCameraHandlerComponent.Cast(rescuerChar.FindComponent(SCR_CharacterCameraHandlerComponent));
 		if (camHandler && camHandler.IsInThirdPerson())
 			camHandler.SetThirdPerson(false);
 
-		// Направляем взгляд игрока вперед и чуть вниз на магнитофон и кресло (Pitch = m_fRescuerPitchOffset)
+		// 4. Направляем взгляд игрока вперед и чуть вниз на магнитофон (Pitch = m_fRescuerPitchOffset) и сбрасываем движение
+		IEntity tapeEnt = ResolveTargetEntity(m_sTapeRecorderName);
+		if (!tapeEnt)
+			tapeEnt = ResolveTargetEntity(m_sPivotEntityName);
+
 		CharacterInputContext inputCtx = controller.GetInputContext();
 		if (inputCtx)
 		{
-			vector pivotAngles = Math3D.MatrixToAngles(vAnimationTransform);
-			float yawRad = pivotAngles[0] * Math.DEG2RAD;
+			inputCtx.SetMovement(0, Vector(0, 0, 0));
+
 			float pitchRad = m_fRescuerPitchOffset * Math.DEG2RAD;
-			vector aimAngles = Vector(yawRad, pitchRad, 0);
+			vector aimAngles = Vector(0, pitchRad, 0);
+
+			if (tapeEnt)
+			{
+				vector rescuerPos = rescuerChar.GetOrigin();
+				vector targetPos = tapeEnt.GetOrigin();
+				vector dir = targetPos - rescuerPos;
+				vector angles = dir.VectorToAngles();
+				aimAngles[0] = angles[0] * Math.DEG2RAD;
+			}
+
 			inputCtx.SetAimingAngles(aimAngles);
 			inputCtx.SetLookAtAngles(aimAngles);
 		}
 
-		// Защита от "neckhole" (проваливания камеры внутрь воротника/бронежилета при наклоне головы/корпуса)
+		// 5. Защита от "neckhole" (проваливания камеры внутрь воротника/бронежилета при наклоне головы/корпуса)
 		CharacterHeadAimingComponent headAiming = controller.GetHeadAimingComponent();
 		if (headAiming)
 		{
 			headAiming.SetLimitAnglesOverride(-25.0, 35.0, -60.0, 60.0);
 			headAiming.SetPitchLimitReductionMultiplier(1.25);
 		}
-
-		// alignToPosition = false: исключает физическую тряску капсулы персонажа о каркас кресла и пол
-		controller.StartLoitering(propEntity, ELoiteringType.CUSTOM, true, true, false, vAnimationTransform, true, customAnimData);
 	}
 
 	/**
-	 * @brief Сброс переопределенных углов наклона камеры локального персонажа.
+	 * @brief Плавное экранное затемнение (шторка) на клиентах.
 	 */
-	protected void ResetAimLimits_C()
+	protected void TriggerScreenFade_C(bool fadeOut, float duration)
+	{
+		SCR_ScreenEffectsManager manager = SCR_ScreenEffectsManager.GetScreenEffectsDisplay();
+		if (manager)
+		{
+			SCR_FadeInOutEffect fade = SCR_FadeInOutEffect.Cast(manager.GetEffect(SCR_FadeInOutEffect));
+			if (fade)
+				fade.FadeOutEffect(fadeOut, duration);
+		}
+	}
+
+	/**
+	 * @brief Сетевой запуск плавного фейда затемнения экрана перед дебрифингом.
+	 */
+	[RplRpc(RplChannel.Reliable, RplRcver.Broadcast)]
+	protected void RpcDo_StartFadeOut(float duration)
+	{
+		TriggerScreenFade_C(true, duration);
+	}
+
+	/**
+	 * @brief Восстановление управления, инвентаря и углов камеры персонажа.
+	 */
+	protected void ResetRescuerState_C()
 	{
 		if (!GetGame())
 			return;
@@ -666,20 +643,24 @@ class TvT_InterrogationRescueComponent : ScriptComponent
 			return;
 
 		SCR_CharacterControllerComponent localCtrl = SCR_CharacterControllerComponent.Cast(localChar.GetCharacterController());
-		if (!localCtrl)
-			return;
+		if (localCtrl)
+		{
+			CharacterHeadAimingComponent headAiming = localCtrl.GetHeadAimingComponent();
+			if (headAiming)
+				headAiming.ResetLimitAnglesOverride();
+		}
 
-		CharacterHeadAimingComponent headAiming = localCtrl.GetHeadAimingComponent();
-		if (headAiming)
-			headAiming.ResetLimitAnglesOverride();
+		SCR_InventoryStorageManagerComponent invComp = SCR_InventoryStorageManagerComponent.Cast(localChar.FindComponent(SCR_InventoryStorageManagerComponent));
+		if (invComp)
+			invComp.AllowInventoryAccess(true);
 	}
 
 	/**
-	 * @brief Завершение сцены при переходе в дебрифинг.
+	 * @brief Завершение фиксации спасителя при переходе в дебрифинг.
 	 */
 	[RplRpc(RplChannel.Reliable, RplRcver.Broadcast)]
 	protected void RpcDo_StopEffects()
 	{
-		ResetAimLimits_C();
+		ResetRescuerState_C();
 	}
 }
