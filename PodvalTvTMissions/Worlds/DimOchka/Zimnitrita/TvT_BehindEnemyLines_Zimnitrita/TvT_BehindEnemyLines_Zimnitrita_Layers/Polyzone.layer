@@ -1,0 +1,228 @@
+GenericEntity : "{043E79FFEA4DF170}Prefabs/Custom/Static_Vechicle/fordik_jeepek/ford_pickup1.et" {
+ coords 13308.224 32.945 12962.805
+ angles 0 6.176 0
+}
+GenericEntity : "{28B3993DEB389D10}Prefabs/Custom/Static_Vechicle/SARKA_dead_qwerty/SARKA_dead_qwerty2.et" {
+ coords 13332.827 32.875 12998.745
+ angles 0 28.964 0
+}
+GenericEntity : "{3B080CE48118AA31}Prefabs/Custom/Static_Vechicle/UAZIK_dead_popa/UAZIK_dead_popa1.et" {
+ coords 13343.22 32.936 13030.826
+ angles 0 -150.615 0
+}
+$grp GenericEntity : "{3D78D7D606FF9818}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_NoCapture.et" {
+ flag1 {
+  coords 13274.334 62.836 12630.438
+ }
+ flag2 {
+  coords 13414.39 56.706 12942.457
+ }
+ flag3 {
+  coords 13406.566 58.777 12792.281
+ }
+ flag4 {
+  coords 13358.875 58.719 12621.911
+ }
+}
+GenericEntity : "{44E7ADDD57FC123E}Prefabs/Custom/Static_Vechicle/SARKA_dead_qwerty/SARKA_dead_qwerty1.et" {
+ coords 13316.784 32.931 12954.486
+ angles 0.206 -152.527 -0.397
+}
+GenericEntity : "{575C38043DDC251F}Prefabs/Custom/Static_Vechicle/UAZIK_dead_popa/UAZIK_dead_popa2.et" {
+ coords 13356.623 32.875 13007.235
+ angles 0 -159.603 0
+}
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{69F4ABD0C13CC2CA}" {
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "USAF_WIN"
+     }
+     m_sFailedObjectiveNames {
+      "AFRF_WIN"
+     }
+     m_sMessage "Логистический пункт \"Мотыка\" захвачен"
+     m_Timer GUB_ZoneControlTimer "{69F4ABD0C2942D8E}" {
+      timeToComplete 150
+     }
+     m_ZoneController GUB_ZoneController "{69F4ABD0CD09E009}" {
+      m_sZoneEntityName "capture"
+     }
+     m_FlagController GUB_FlagController "{69F4ABD0CE2CC267}" {
+      m_aFlagNames {
+       "flag1"
+       "flag2"
+       "flag3"
+       "flag4"
+      }
+      m_fStartFactionKey "RHS_AFRF"
+      m_fEndFactionKey "RHS_USAF"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{69F4ABD0CB823B14}" {
+       m_sFirstFactionKey "RHS_USAF"
+       m_sSecondFactionKey "RHS_AFRF"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 403.473 54.19 6769.772
+}
+$grp GenericEntity : "{73A46049FBF50671}Prefabs/Custom/Static_Vechicle/HMMWV_US_STATIC/hmmwv_wreck.et" {
+ {
+  coords 13317.085 32.906 12976.301
+  angles 0 -1.351 0
+ }
+ {
+  coords 13312.817 32.906 12968.231
+  angles 0 43.338 0
+ }
+}
+PolylineShapeEntity capture : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
+ components {
+  PS_PolyZone "{60E90266F25533F6}" {
+   m_cPolygonColor 0.812 0.506 0.506 1
+   m_fPolygonUVScale 0.44
+   m_cPolygonBorderColor 0.502 0 0 1
+   m_aVisibleForFactions {
+    "RHS_USAF"
+    "RHS_AFRF"
+    ""
+   }
+  }
+ }
+ coords 13215.548 50.595 12683.633
+ Points {
+  ShapePoint "{6AD51A4884748514}" {
+   Position -4.255 -0.251 3.828
+  }
+  ShapePoint "{6AD51A48874108ED}" {
+   Position 5.995 -0.117 14.946
+  }
+  ShapePoint "{6AD51A4881E74AD9}" {
+   Position -0.673 0.062 37.306
+  }
+  ShapePoint "{6AD51A4880C462F7}" {
+   Position 14.632 0.061 54.795
+  }
+  ShapePoint "{6AD51A4883C5E950}" {
+   Position 20.405 0.061 50.235
+  }
+  ShapePoint "{6AD51A48825916C4}" {
+   Position 65.905 0.061 102.451
+  }
+  ShapePoint "{6AD51A488D294D23}" {
+   Position 59.039 0.061 108.171
+  }
+  ShapePoint "{6AD51A488F7CAF45}" {
+   Position 112.999 -0.84 166.049
+  }
+  ShapePoint "{6AD51A488E2EE226}" {
+   Position 118.612 0.061 161.583
+  }
+  ShapePoint "{6AD51A4888A67AB0}" {
+   Position 165.011 0.061 212.379
+  }
+  ShapePoint "{6AD51A4888D6BCDB}" {
+   Position 158.613 -0.284 218.21
+  }
+  ShapePoint "{6AD51A488B7F3E18}" {
+   Position 204.334 -0.197 267.588
+  }
+  ShapePoint "{6AD51A488A4F1B35}" {
+   Position 226.237 -0.22 267.245
+  }
+  ShapePoint "{6AD51A4895D8EC93}" {
+   Position 228.017 -0.22 265.384
+  }
+  ShapePoint "{6AD51A48945A5615}" {
+   Position 215.55 -0.081 186.53
+  }
+  ShapePoint "{6AD51A4896BD4C8D}" {
+   Position 172.064 -0.032 137.437
+  }
+  ShapePoint "{6AD51A4891A83280}" {
+   Position 169.732 0.018 125.785
+  }
+  ShapePoint "{6AD51A48908D1EDE}" {
+   Position 198.85 -0.954 117.549
+  }
+  ShapePoint "{6AD51A4892C4B398}" {
+   Position 182.555 -1.039 60.971
+  }
+  ShapePoint "{6AD51A48924A82D3}" {
+   Position 177.712 -0.978 52.977
+  }
+  ShapePoint "{6AD51A489D02F14F}" {
+   Position 172.865 -0.618 47.374
+  }
+  ShapePoint "{6AD51A489C954996}" {
+   Position 166.834 0.009 46.223
+  }
+  ShapePoint "{6AD51A489F071827}" {
+   Position 145.349 0.061 31.576
+  }
+  ShapePoint "{6AD51A489927119C}" {
+   Position 117.207 0.057 -0.848
+  }
+  ShapePoint "{6AD51A48B5191D94}" {
+   Position 155.46 -1.046 -15.321
+  }
+  ShapePoint "{6AD51A48B1FB205F}" {
+   Position 140.78 -1.061 -59.559
+  }
+  ShapePoint "{6AD51A48BDDDCF79}" {
+   Position 128.319 0.029 -55.744
+  }
+  ShapePoint "{6AD51A48BC552DE2}" {
+   Position 117.025 0.061 -67.174
+  }
+  ShapePoint "{6AD51A48BFC779FC}" {
+   Position 123.021 -0.26 -73.228
+  }
+  ShapePoint "{6AD51A48BEB1F7FE}" {
+   Position 109.48 0.061 -87.594
+  }
+  ShapePoint "{6AD51A48BEC753C0}" {
+   Position 103.046 0.061 -81.627
+  }
+  ShapePoint "{6AD51A48B8EE31D9}" {
+   Position 93.798 0.061 -89.675
+  }
+  ShapePoint "{6AD51A48BA264FA9}" {
+   Position 36.419 0.061 -32.364
+  }
+  ShapePoint "{6AD51A48C52C2E73}" {
+   Position 25.28 0.061 -24.012
+  }
+ }
+}
+GenericEntity : "{D3084912ACDF7390}Prefabs/Custom/Static_Vechicle/UAZ452_dead_emae/UAZ452_dead_green.et" {
+ coords 13358.194 32.889 13041.271
+ angles 0 32.409 0
+}
+GenericEntity : "{F0A7D02A152C90E1}Prefabs/Custom/m923a1BOOOM.et" {
+ coords 13305.194 33.022 12954.535
+ angles 0 29.689 0
+}
+$grp GenericEntity : "{F5EF4223ACA6169C}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_02_V1_AFRF.et" {
+ {
+  coords 13191.48 41.781 12985.421
+  angles 0 70.791 0
+ }
+ {
+  coords 12659.406 38.315 11951.03
+  angles 0 70.791 0
+ }
+}
+GenericEntity : "{F625F74BCD8C697E}Prefabs/Custom/Static_Vechicle/kopinka/kopinka_wreck.et" {
+ coords 13359.113 32.706 13025.956
+ angles 0 120.233 0
+}

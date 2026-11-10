@@ -1,0 +1,93 @@
+SCR_ChimeraCharacter : "{DA45EEDCFF80D8CA}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USAF_MARSOC_Medic.et" {
+ ID "520EC961A090B1EE"
+ components {
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{318452E805157E54}Prefabs/Characters/HeadGear/Helmet_OPSCORE/variants/dim_Helmet_OPSCORE_SF_Coy_Peltor_MARSOC3.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{A8E237BA83F6468F}Prefabs/Characters/Uniforms/Shirt_CP_G3/MC/dim_G3_USA_MC_2.et"
+    }
+    LoadoutSlotInfo ArmoredVest {
+     Prefab "{789CDAE43C5DC2BA}Prefabs/Characters/Vests/Vest_Shaw_ARC/Vest_Shaw_ARC_MC.et"
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{5FB97B757511D4AA}Prefabs/Characters/Uniforms/Pants_CP_G3/CP_G3_Pants_no_kpads_MC.et"
+    }
+    LoadoutSlotInfo Boots {
+     Prefab "{09E2F277F5B672E8}Prefabs/Characters/Footwear/Solomon_4dgtx.et"
+    }
+    LoadoutSlotInfo Back {
+     Prefab "{F0A675A839C1ACAD}Prefabs/Items/Equipment/Backpacks/GMS_StaticLine_Parachute.et"
+    }
+    LoadoutSlotInfo Vest {
+     Prefab "{606682A7D0A37E94}Prefabs/Characters/Vests/Vest_Shaw_ARC/Variants/dim_Vest_Shaw_ARC_4.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{6720F9CB5344D10E}" {
+     TargetStorage "Pants/CP_G3_Pants_no_kpads_MC.et"
+    }
+    ItemsInitConfigurationItem "{6720F9CB52FFCEB5}" {
+     TargetStorage "Pants/CP_G3_Pants_no_kpads_MC.et"
+    }
+    ItemsInitConfigurationItem "{6A2ECE33897EE573}" {
+     TargetStorage "Vest/dim_Vest_Shaw_ARC_4.et/MBITR/Pouch_AVS_MBITR_Radio_Coy.et"
+    }
+    ItemsInitConfigurationItem "{6A2ECE3389555FB4}" {
+     TargetStorage "Vest/dim_Vest_Shaw_ARC_4.et/placard/Pouch_Shaw_Placard_Elastic_Coy.et"
+    }
+    ItemsInitConfigurationItem "{6A2ECE3388B0D441}" {
+     TargetStorage "Vest/dim_Vest_Shaw_ARC_4.et/flex1/Pouch_PCGEN3_takoPouch.et"
+    }
+    ItemsInitConfigurationItem "{6A2ECE338889F343}" {
+     TargetStorage "Vest/dim_Vest_Shaw_ARC_4.et/raid/Pouch_Shaw_Raid.et"
+     PrefabsToSpawn {
+      "{A540E8600876C2A3}Prefabs/Weapons/Magazines/Pmag/Magazine_556x45_PmagWindowed_Coy_30rnd_M855A1_last5tracer.et"
+     }
+    }
+    ItemsInitConfigurationItem "{6A2ECE3388E098A8}" {
+     TargetStorage "Vest/dim_Vest_Shaw_ARC_4.et/raid/Pouch_Shaw_Raid.et"
+    }
+    ItemsInitConfigurationItem "{6A2ECE3388F9C7FD}" {
+     TargetStorage "Vest/dim_Vest_Shaw_ARC_4.et/raid/Pouch_Shaw_Raid.et"
+    }
+    ItemsInitConfigurationItem "{6A2ECE3388D05B79}" {
+     TargetStorage "Vest/dim_Vest_Shaw_ARC_4.et/admin/Pouch_Shaw_ARC_Admin_Coy.et"
+    }
+    ItemsInitConfigurationItem "{6A2ECE33882888D9}" {
+     TargetStorage "Vest/dim_Vest_Shaw_ARC_4.et/admin/Pouch_Shaw_ARC_Admin_Coy.et"
+    }
+    ItemsInitConfigurationItem "{6A2ECE33C96585AF}" {
+     TargetStorage "Vest/dim_Vest_Shaw_ARC_4.et/pistol/Pouch_Highspeed_Pistol.et"
+    }
+    ItemsInitConfigurationItem "{6A2ECE33C95F23EB}" {
+     TargetStorage "Vest/dim_Vest_Shaw_ARC_4.et/pistol2/Pouch_Highspeed_Pistol.et"
+    }
+    ItemsInitConfigurationItem "{6A2ECE33C8056710}" {
+     TargetStorage "Vest/dim_Vest_Shaw_ARC_4.et/holster/Pouch_HP103_Holster_MC.et"
+    }
+    ItemsInitConfigurationItem "{6A2ECE33EFF77696}" {
+     TargetStorage "Vest/dim_Vest_Shaw_ARC_4.et/pistol3/Pouch_Highspeed_Pistol.et"
+     PrefabsToSpawn {
+      "{6BF76E1E3BDC44F0}Prefabs/Weapons/Magazines/m17_magazines/Magazine_9x19_m17_17rnd_M1153.et"
+     }
+    }
+    ItemsInitConfigurationItem "{6A2ECE3FCBCF3F74}" {
+     Enabled 0
+    }
+    ItemsInitConfigurationItem "{6A2ECE3FCB010DA9}" {
+     Enabled 0
+    }
+    ItemsInitConfigurationItem "{6A2ECE3FCB401192}" {
+     TargetStorage "Vest/dim_Vest_Shaw_ARC_4.et/BACK/Minimap_JPC_ZipOnPanel2.0_MC.et"
+    }
+   }
+  }
+ }
+ coords 6358.536 234.125 1812.802
+ angles 0 93.345 0
+}
