@@ -264,25 +264,27 @@ GenericEntity : "{A1A11E5C3A29B763}Prefabs/Props/Furniture/ChairDental_01/ChairD
         ContextName "InteractionPoint"
         Position PointInfo "{6510E1C90744EB6A}" {
         }
-        Radius 1
+        Radius 2
        }
       }
       additionalActions {
-       SCR_ScriptedUserAction "{660CD133E7321DD6}" {
+       TvT_InterrogationRescueAction "{660CD133E7321DD6}" {
         ParentContextList {
          "InteractionPoint"
         }
         UIInfo UIInfo "{6510E1CB6CFE7B51}" {
-         Name "Play tape"
+         Name "Осмотреть генерала"
         }
-        ActionTitle "#AR-KS_TapeInteraction"
-        VisibilityRange 1
+        ActionTitle "Осмотреть генерала"
+        VisibilityRange 2
         Duration 0.5
         m_bLoopAction 0
        }
       }
      }
      RplComponent "{660CD132B158CFC5}" {
+     }
+     TvT_InterrogationRescueComponent "{660CD132B158CFC6}" {
      }
     }
     coords 1.09 0.963 -0.279

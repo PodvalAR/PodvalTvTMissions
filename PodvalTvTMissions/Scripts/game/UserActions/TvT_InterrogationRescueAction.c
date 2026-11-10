@@ -26,27 +26,13 @@ class TvT_InterrogationRescueAction : SCR_ScriptedUserAction
 		if (comp && comp.IsTriggered())
 			return false;
 
-		PS_GameModeCoop gameMode = PS_GameModeCoop.Cast(GetGame().GetGameMode());
+		SCR_BaseGameMode gameMode = SCR_BaseGameMode.Cast(GetGame().GetGameMode());
 		if (gameMode)
 		{
 			SCR_EGameModeState state = gameMode.GetState();
 			// Разрешаем действие в стадии GAME и BRIEFING (для тестирования)
 			if (state != SCR_EGameModeState.GAME && state != SCR_EGameModeState.BRIEFING)
 				return false;
-		}
-
-		if (m_sTargetFaction != "")
-		{
-			FactionAffiliationComponent affComp = FactionAffiliationComponent.Cast(user.FindComponent(FactionAffiliationComponent));
-			if (affComp)
-			{
-				Faction faction = affComp.GetAffiliatedFaction();
-				if (!faction)
-					faction = affComp.GetDefaultAffiliatedFaction();
-
-				if (faction && faction.GetFactionKey() != m_sTargetFaction)
-					return false;
-			}
 		}
 
 		return true;
@@ -73,6 +59,21 @@ class TvT_InterrogationRescueAction : SCR_ScriptedUserAction
 	{
 		if (!Replication.IsServer())
 			return;
+
+		// Фракционный гейт только на сервере в момент выполнения: подсказка [F] видна всем, триггерит только Ирак
+		if (m_sTargetFaction != "")
+		{
+			FactionAffiliationComponent affComp = FactionAffiliationComponent.Cast(pUserEntity.FindComponent(FactionAffiliationComponent));
+			if (affComp)
+			{
+				Faction faction = affComp.GetAffiliatedFaction();
+				if (!faction)
+					faction = affComp.GetDefaultAffiliatedFaction();
+
+				if (faction && faction.GetFactionKey() != m_sTargetFaction)
+					return;
+			}
+		}
 
 		TvT_InterrogationRescueComponent comp = ResolveComponent();
 		if (comp)
