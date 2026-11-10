@@ -1,0 +1,76 @@
+SCR_ChimeraCharacter : "{F95533A2E3107BE9}Prefabs/Characters/Factions/BLUFOR/US/SPN/Desert/dim_US_SPN_D_Rifleman_2.et" {
+ ID "520EC961A090BBD5"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Агент разведки"
+    Icon "{8212EA1EC0F5C2D5}UI/Icons/agent.edds"
+   }
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{0B6E93F385AF49EA}Prefabs/Weapons/Rifles/M16/Rifle_M16A2_carbine_m855a1.et"
+  }
+  SCR_CharacterIdentityComponent "{5584CBC63E092DBC}" {
+   Override 1
+   Identity Identity "{5584CBC6363C648B}" {
+    VisualIdentity VisualIdentity "{56E6D9456009D1C4}" {
+     Head "{143245D81F2BAB94}Prefabs/Characters/Heads/Head_White_10.et"
+     Body "{0023F898C0FF18AA}Prefabs/Characters/Basebody/CharacterBasebody.et"
+    }
+   }
+   Camouflaged 0
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{833CC312DA954675}Prefabs/Characters/HeadGear/Hat_Patrol_US_01/Hat_Patrol_US_Goggles.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{DB71B2C667959898}Prefabs/Characters/Uniforms/shirts/Polo_shirt_01.et"
+    }
+    LoadoutSlotInfo ArmoredVest {
+     Prefab "{72A06DD7507A135D}Prefabs/Characters/Vests/SpecOps_Vest/SpecOps_Vest_noFlag.et"
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{6925E6C63EBCF623}Prefabs/Characters/Uniforms/Pants_Trousers_01/Pants_Trousers_01_DarkBrown.et"
+    }
+    LoadoutSlotInfo Boots {
+     Prefab "{C7923961D7235D70}Prefabs/Characters/Footwear/CombatBoots_Soviet_01.et"
+    }
+    LoadoutSlotInfo Vest {
+     Prefab "{D01C5B7008986DA3}Prefabs/Characters/Vests/Vest_PLCE/Variants/BF_Vest_PLCE_Officer.et"
+    }
+    LoadoutSlotInfo Extra3 {
+     Prefab ""
+    }
+    LoadoutSlotInfo Waist {
+     Prefab "{9DF85654DBD4683C}Prefabs/Characters/Belts/Delta_Belt_04.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{68CD6B3A809E1C99}" {
+     TargetStorage "Pants/Pants_Trousers_01_DarkBrown.et"
+    }
+    ItemsInitConfigurationItem "{68CD6B3A80F6D72C}" {
+     TargetStorage "Jacket/Polo_shirt_01.et"
+    }
+    ItemsInitConfigurationItem "{68CD6B3A80D0F11B}" {
+     TargetStorage "Jacket/Polo_shirt_01.et"
+    }
+    ItemsInitConfigurationItem "{68CD6B3945F13073}" {
+     TargetStorage "Vest/BF_Vest_PLCE_Officer.et/MagPouch/BF_Pouch_PLCE_AmmoPouch_01.et"
+    }
+    ItemsInitConfigurationItem "{68CD6B3943B7F161}" {
+     TargetStorage "Vest/BF_Vest_PLCE_Officer.et/MagPouch2/BF_Pouch_PLCE_AmmoPouch_02.et"
+    }
+    ItemsInitConfigurationItem "{68CD6B394EFC6E76}" {
+     TargetStorage "Vest/BF_Vest_PLCE_Officer.et/UtilityOne/BF_Pouch_PLCE_Utility_01.et"
+    }
+   }
+  }
+ }
+ coords 4758.929 48.445 4545.079
+ angles 0 120 0
+}

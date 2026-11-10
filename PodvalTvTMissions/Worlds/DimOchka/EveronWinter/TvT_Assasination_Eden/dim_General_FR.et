@@ -1,0 +1,55 @@
+SCR_ChimeraCharacter : "{C1F39D41AE50DCF8}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_Officer.et" {
+ ID "520EC961A090B1EE"
+ components {
+  SCR_CharacterInventoryStorageComponent "{520EA1D2DB118DAC}" {
+   components {
+    SCR_EquipmentStorageComponent "{56B49DA9722B635D}" {
+     InitialStorageSlots {
+      SCR_EquipmentStorageSlot BinocularSlot {
+       Prefab ""
+      }
+     }
+    }
+   }
+  }
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Генерал Жан Де Подваль"
+   }
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate ""
+  }
+  SCR_CharacterIdentityComponent "{5584CBC63E092DBC}" {
+   Override 1
+   Identity Identity "{5584CBC6363C648B}" {
+    VisualIdentity VisualIdentity "{56E6D9456009D1C4}" {
+     Head "{0F6C19B0574DCBCA}Prefabs/Characters/Heads/Head_White_03.et"
+     Body "{0023F898C0FF18AA}Prefabs/Characters/Basebody/CharacterBasebody.et"
+    }
+   }
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Jacket {
+     Prefab "{2EED68835F6248EB}Prefabs/Characters/Uniforms/F3_Vest/F3_Vest_Tundra.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{68B0DD4318E8B310}" {
+     Enabled 1
+     TargetStorage "Jacket/F3_Vest_Tundra.et"
+    }
+    ItemsInitConfigurationItem "{68B0DD4318C59FBA}" {
+    }
+    ItemsInitConfigurationItem "{68B1654693D54069}" {
+     Enabled 0
+    }
+   }
+  }
+ }
+ coords 5348.728 43.516 10535.768
+ angles 0 150 0
+}

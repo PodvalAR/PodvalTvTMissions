@@ -1,0 +1,114 @@
+SCR_ChimeraCharacter : "{3ADF7D94B0EE4C4C}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/Modern/dim_PLA_Navy_Modern_Officer.et" {
+ ID "520EC961A090B1EE"
+ components {
+  SCR_CharacterInventoryStorageComponent "{520EA1D2DB118DAC}" {
+   components {
+    SCR_EquipmentStorageComponent "{56B49DA9722B635D}" {
+     InitialStorageSlots {
+      SCR_EquipmentStorageSlot BinocularSlot {
+       Prefab ""
+      }
+     }
+    }
+   }
+  }
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Министр обороны КНР"
+   }
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate ""
+  }
+  SCR_CharacterIdentityComponent "{5584CBC63E092DBC}" {
+   Override 1
+   Identity Identity "{5584CBC6363C648B}" {
+    VisualIdentity VisualIdentity "{56E6D9456009D1C4}" {
+     Head "{24D28E910BF9F648}Prefabs/Characters/Heads/Head_Asian_02.et"
+     Body "{32B5FE236D152368}Prefabs/Characters/Basebody/CharacterBasebody_Asian_02.et"
+    }
+   }
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{F9392C6143711594}Prefabs/Characters/HeadGear/Hat_Beanie_Chechen/dim_Chechen_PLA_Head.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{26EC5DF53F410935}Worlds/DimOchka/EveronWinter/TvT_Assasination_Eden/vip_cloth.et"
+    }
+    LoadoutSlotInfo ArmoredVest {
+     Prefab "{037DD3060547B417}Prefabs/Characters/Vests/Vest_JPC/Vest_JPC_MCBlk.et"
+    }
+    LoadoutSlotInfo Back {
+     Prefab ""
+    }
+    LoadoutSlotInfo Vest {
+     Prefab "{9BF83C6833EB6A2B}Worlds/DimOchka/EveronWinter/TvT_Assasination_Eden/vip_preset.et"
+    }
+    LoadoutSlotInfo HandWear {
+     Prefab "{516F43E3D4E2080F}Prefabs/Clothing/sov_officergloves_brown.et"
+    }
+    LoadoutSlotInfo Head {
+     Enabled 0
+     Prefab ""
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{68A2CC320ED36F78}" {
+     Enabled 0
+    }
+    ItemsInitConfigurationItem "{68A2CC3209B3FFBE}" {
+     TargetStorage "Jacket/vip_cloth.et"
+    }
+    ItemsInitConfigurationItem "{6AC564862E16CCCA}" {
+     Enabled 0
+    }
+    ItemsInitConfigurationItem "{6AC5648629A49997}" {
+     Enabled 0
+    }
+    ItemsInitConfigurationItem "{6AC5648629BB8DFE}" {
+     Enabled 0
+    }
+    ItemsInitConfigurationItem "{6AC56486299315BC}" {
+     TargetStorage "Vest/vip_preset.et/holster/GD_Holster_SLS_RLeg_ACU.et"
+    }
+    ItemsInitConfigurationItem "{6AC56486A1FA721D}" {
+     TargetStorage "Jacket/vip_cloth.et"
+    }
+    ItemsInitConfigurationItem "{6AC56486AECD012F}" {
+     TargetStorage "Jacket/vip_cloth.et"
+     PrefabsToSpawn {
+      "{9C05543A503DB80F}Prefabs/Weapons/Magazines/Magazine_9x19_92G_15rnd.et" "{9C05543A503DB80F}Prefabs/Weapons/Magazines/Magazine_9x19_92G_15rnd.et"
+     }
+    }
+   }
+  }
+  ActionsManagerComponent "{520EA1D2F659CE02}" {
+   additionalActions {
+    DRG_DeathConfirmAction "{6AD172B070839759}" {
+     ParentContextList {
+      "LowerTorso"
+     }
+     UIInfo UIInfo "{6AD172B0723C08A0}" {
+      Name "Подтвердить смерть"
+     }
+     ActionTitle "#drg_ConfirmDeathAction"
+     Duration 3
+     m_sEventMessage "Министр обороны КНР ликвидирован"
+     m_aObjectivesToDone {
+      "NAPA_WIN"
+     }
+     m_aObjectivesToFail {
+      "FR_WIN"
+     }
+     m_vFactionKey "Ses_NAPA"
+    }
+   }
+  }
+ }
+ coords 5351.896 43.505 10534.349
+ angles 0 -32.338 0
+}

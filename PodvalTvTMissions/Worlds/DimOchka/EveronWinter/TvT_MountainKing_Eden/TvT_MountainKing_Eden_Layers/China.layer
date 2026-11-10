@@ -1,0 +1,258 @@
+$grp SCR_AIGroup : "{016CBF12B0D08A59}Prefabs/Groups/OPFOR/PLA/NAVY/PLA_NAVY_HELI.et" {
+ PIL {
+  components {
+   PS_GroupCallsignAssigner "{6AC6C5F64661C87D}" {
+    m_iCompanyCallsign 4
+   }
+  }
+  coords 10984.036 3.832 177.958
+  angles 0 135 0
+  m_bSnapToTerrain 0
+ }
+ PIL2 {
+  components {
+   PS_GroupCallsignAssigner "{6AC6C5F64661C87D}" {
+    m_iCompanyCallsign 4
+    m_iSquadCallsign 1
+   }
+  }
+  coords 10796.926 3.832 -156.663
+  angles 0 135 0
+  m_bSnapToTerrain 0
+ }
+}
+$grp Vehicle : "{087FC22BB52DD843}Prefabs/Vehicles/PLA Vehicle/PLA_Vamtac_KORD_CAMO.et" {
+ PLA_Vamtac_KORD_CAMO1 {
+  coords 8782.06 198.199 3936.904
+  angles -2.676 -175.716 -0.2
+  m_sAttachmentGroupName "KNR8"
+ }
+ PLA_Vamtac_KORD_CAMO2 {
+  coords 8779.919 197.324 3916.906
+  angles -1.028 -175.666 1.717
+  m_sAttachmentGroupName "KNR9"
+ }
+}
+$grp SCR_AIGroup : "{0A2E82CA3FCAF431}Prefabs/Groups/OPFOR/PLA/NAVY/MODERN/PLA_NAVY_MODERN_MOTO.et" {
+ KNR4 {
+  components {
+   PS_GroupCallsignAssigner "{6AC6C5F64661C87D}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 7187.095 137.219 2361.783
+  angles 0 -89.572 0
+  m_aUnitPrefabSlots {
+   "{B5DF1FEE2CED359B}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/Modern/dim_PLA_Navy_Modern_SL.et"
+   "{B218E5BF4A6B8F58}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/Modern/dim_PLA_Navy_Modern_TL.et"
+   "{8A4030EB7026836B}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/Modern/dim_PLA_Navy_Modern_MG.et"
+   "{1E91C8461AE88501}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/Modern/dim_PLA_Navy_Modern_AMG.et"
+   "{59767CE0572FE965}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/Modern/dim_PLA_Navy_Modern_LAT.et"
+   "{977F3C52BE122389}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/Modern/dim_PLA_Navy_Modern_Rifleman.et"
+   "{318B37EB24A18E3F}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/dim_PLA_Navy_CC.et"
+   "{35BEFD501A106018}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/dim_PLA_Navy_CREW.et"
+  }
+ }
+ KNR5 {
+  components {
+   PS_GroupCallsignAssigner "{6AC6C5F64661C87D}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 7187.557 137.155 2374.06
+  angles 0 -88.129 0
+  m_aUnitPrefabSlots {
+   "{B5DF1FEE2CED359B}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/Modern/dim_PLA_Navy_Modern_SL.et"
+   "{B218E5BF4A6B8F58}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/Modern/dim_PLA_Navy_Modern_TL.et"
+   "{8A4030EB7026836B}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/Modern/dim_PLA_Navy_Modern_MG.et"
+   "{1E91C8461AE88501}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/Modern/dim_PLA_Navy_Modern_AMG.et"
+   "{59767CE0572FE965}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/Modern/dim_PLA_Navy_Modern_LAT.et"
+   "{977F3C52BE122389}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/Modern/dim_PLA_Navy_Modern_Rifleman.et"
+   "{318B37EB24A18E3F}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/dim_PLA_Navy_CC.et"
+   "{35BEFD501A106018}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/dim_PLA_Navy_CREW.et"
+  }
+ }
+ KNR3 {
+  coords 7187.057 137.219 2356.562
+  angles 0 -89.572 0
+  m_aUnitPrefabSlots {
+   "{3ADF7D94B0EE4C4C}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/Modern/dim_PLA_Navy_Modern_Officer.et"
+  }
+  m_sCustomNameSet "Офицер МП НОАК"
+ }
+}
+$grp Vehicle : "{2B37186DD71FDF25}Prefabs/Vehicles/PLA Vehicle/PLA_M250_Transport.et" {
+ PLA_M250_Transport1 {
+  coords 7183.269 137.125 2392.243
+  angles 0 178.685 0
+  m_sAttachmentGroupName "KNR6"
+ }
+ PLA_M250_Transport2 {
+  coords 7182.926 137.156 2407.187
+  angles 0 178.685 0
+  m_sAttachmentGroupName "KNR7"
+ }
+}
+$grp SCR_AIGroup : "{7EC6BD7F0BE29069}Prefabs/Groups/OPFOR/PLA/NAVY/MODERN/PLA_NAVY_Spetsnaz.et" {
+ KNR1 {
+  components {
+   PS_GroupCallsignAssigner "{6AC6C5F629AF1207}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 11002.483 2.137 197.355
+  angles 0 -41.979 0
+  m_aUnitPrefabSlots {
+   "{EF88FC30443FC383}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/SF/Modern/dim_PLA_Modern_SF_N_SL.et"
+   "{E84F066122B97940}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/SF/Modern/dim_PLA_Modern_SF_N_TL.et"
+   "{82000D2F76BB6190}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/SF/Modern/dim_PLA_Modern_SF_N_AR.et"
+   "{F5301BA4090CE7AB}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/SF/Modern/dim_PLA_Modern_SF_N_Rifleman.et"
+   "{A52AD73FB005E13D}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/SF/Modern/dim_PLA_Modern_SF_N_LAT.et"
+   "{3658DFE1D6B5B949}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/SF/Modern/dim_PLA_Modern_SF_N_Medic.et"
+   "{84CC21474C0CB809}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/SF/Modern/dim_PLA_Modern_SF_N_Sapper.et"
+   "{EA41B9267B23F7E3}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/SF/Modern/dim_PLA_Modern_SF_N_Sniper.et"
+  }
+  m_bSnapToTerrain 0
+ }
+ KNR2 {
+  components {
+   PS_GroupCallsignAssigner "{6AC6C5F629AF1207}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 1
+   }
+  }
+  coords 10984.948 3.832 170.218
+  angles 0 -41.979 0
+  m_aUnitPrefabSlots {
+   "{EF88FC30443FC383}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/SF/Modern/dim_PLA_Modern_SF_N_SL.et"
+   "{E84F066122B97940}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/SF/Modern/dim_PLA_Modern_SF_N_TL.et"
+   "{82000D2F76BB6190}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/SF/Modern/dim_PLA_Modern_SF_N_AR.et"
+   "{F5301BA4090CE7AB}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/SF/Modern/dim_PLA_Modern_SF_N_Rifleman.et"
+   "{A52AD73FB005E13D}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/SF/Modern/dim_PLA_Modern_SF_N_LAT.et"
+   "{3658DFE1D6B5B949}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/SF/Modern/dim_PLA_Modern_SF_N_Medic.et"
+   "{84CC21474C0CB809}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/SF/Modern/dim_PLA_Modern_SF_N_Sapper.et"
+   "{EA41B9267B23F7E3}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/SF/Modern/dim_PLA_Modern_SF_N_Sniper.et"
+  }
+  m_bSnapToTerrain 0
+ }
+}
+$grp Vehicle : "{82AB92D7787D3D44}Prefabs/Vehicles/PLA Vehicle/PLA_NAVY_ROSOMAK_KB105_NEW.et" {
+ PLA_NAVY_ROSOMAK_KB105_NEW1 {
+  coords 7183.87 137.187 2365.531
+  angles 0 180 0
+  m_sAttachmentGroupName "KNR4"
+ }
+ PLA_NAVY_ROSOMAK_KB105_NEW2 {
+  coords 7183.87 137.125 2377.836
+  angles 0 -180 0
+  m_sAttachmentGroupName "KNR5"
+ }
+}
+$grp Vehicle : "{974A2A21DB6B2592}Prefabs/CB90/Vehicles/PlainGrey/CB90_Naval_PLA.et" {
+ CB90_Naval_PLA1 {
+  coords 11001.479 0 202.716
+  angles 0 48.629 0
+  m_sAttachmentGroupName "KNR1"
+ }
+ CB90_Naval_PLA2 {
+  coords 11014.414 0 188.029
+  angles 0 48.629 0
+  m_sAttachmentGroupName "KNR2"
+ }
+}
+$grp SCR_AIGroup : "{A19256301F8DB3D2}Prefabs/Groups/OPFOR/PLA/NAVY/MODERN/PLA_NAVY_MODERN_SQ_RIFLE_2.et" {
+ KNR8 {
+  components {
+   PS_GroupCallsignAssigner "{6AC6C5F64661C87D}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 8780.534 198.581 3945.955
+  angles 0 94.729 0
+  m_aUnitPrefabSlots {
+   "{B5DF1FEE2CED359B}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/Modern/dim_PLA_Navy_Modern_SL.et"
+   "{D389FF90CE404232}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/Modern/dim_PLA_Navy_Modern_TL_2.et"
+   "{8A4030EB7026836B}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/Modern/dim_PLA_Navy_Modern_MG.et"
+   "{1E91C8461AE88501}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/Modern/dim_PLA_Navy_Modern_AMG.et"
+   "{D857EEF11E699788}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/Modern/dim_PLA_Navy_Modern_AR.et"
+   "{B218E5BF4A6B8F58}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/Modern/dim_PLA_Navy_Modern_TL.et"
+   "{59767CE0572FE965}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/Modern/dim_PLA_Navy_Modern_LAT.et"
+   "{977F3C52BE122389}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/Modern/dim_PLA_Navy_Modern_Rifleman.et"
+   "{32B3C314CCE93DDA}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/Modern/dim_PLA_Navy_Modern_Medic.et"
+  }
+ }
+ KNR7 {
+  components {
+   PS_GroupCallsignAssigner "{6AC6C5F64661C87D}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 7186.822 137.125 2402.131
+  angles 0 -92.901 0
+ }
+}
+$grp Vehicle : "{C7DF0E6F3C502C27}Prefabs/Vehicles/PLA Vehicle/PLA_Vamtac_Transport_Camo.et" {
+ PLA_Vamtac_Transport_Camo1 {
+  coords 8781.231 197.727 3925.415
+  angles -2.027 -174.767 2.508
+  m_sAttachmentGroupName "KNR9"
+ }
+ PLA_Vamtac_Transport_Camo2 {
+  coords 8782.695 198.66 3946.063
+  angles -2.677 -175.909 -0.191
+  m_sAttachmentGroupName "KNR8"
+ }
+ PLA_Vamtac_Transport_Camo3 {
+  coords 7184.103 137.235 2356.938
+  angles 0.895 180 0
+  m_sAttachmentGroupName "KNR3"
+ }
+}
+$grp SCR_AIGroup : "{CDC662D0A3493CFC}Prefabs/Groups/OPFOR/PLA/NAVY/MODERN/PLA_NAVY_MODERN_SQ_RIFLE_1.et" {
+ KNR9 {
+  components {
+   PS_GroupCallsignAssigner "{6AC6C5F64661C87D}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 8778.586 197.761 3926.127
+  angles 0 96.734 0
+  m_aUnitPrefabSlots {
+   "{B5DF1FEE2CED359B}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/Modern/dim_PLA_Navy_Modern_SL.et"
+   "{D389FF90CE404232}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/Modern/dim_PLA_Navy_Modern_TL_2.et"
+   "{00FF873067E089D4}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/Modern/dim_PLA_Navy_Modern_AT.et"
+   "{D857EEF11E699788}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/Modern/dim_PLA_Navy_Modern_AR.et"
+   "{B218E5BF4A6B8F58}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/Modern/dim_PLA_Navy_Modern_TL.et"
+   "{977F3C52BE122389}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/Modern/dim_PLA_Navy_Modern_Rifleman.et"
+   "{A79B0F186FA52734}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/Modern/dim_PLA_Navy_Modern_LAT_2.et"
+   "{32B3C314CCE93DDA}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/Modern/dim_PLA_Navy_Modern_Medic.et"
+   "{486E2A7929E5883C}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/Modern/dim_PLA_Navy_Modern_Sniper.et"
+  }
+ }
+ KNR6 {
+  components {
+   PS_GroupCallsignAssigner "{6AC6C5F64661C87D}" {
+    m_iCompanyCallsign 1
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 7187.346 137.281 2387.769
+  angles 0 -91.696 0
+ }
+}
+$grp Vehicle : "{CE7A8E98466292E0}Prefabs/Vehicles/PLA Vehicle/PLA_SA342_GAZELLE_M134.et" {
+ PLA_SA342_GAZELLE_M1 {
+  coords 10971.826 3.832 163.083
+  angles 0 48.296 0
+  m_sAttachmentGroupName "PIL"
+ }
+ PLA_SA342_GAZELLE_M2 {
+  coords 10785.631 3.879 -170.395
+  angles 0 46.699 0
+  m_sAttachmentGroupName "PIL2"
+ }
+}

@@ -1,0 +1,48 @@
+SCR_ChimeraCharacter : "{C1F39D41AE50DCF8}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_Officer.et" {
+ ID "520EC961A090B1EE"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Командир заговорщиков"
+    Icon "{B0B3E06A17B8AC6D}UI/Icons/officer.edds"
+   }
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{51F4241327E88004}Prefabs/Characters/HeadGear/Hat_Beanie/Hat_beanie_OD.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{600B485B2FCD53E7}Prefabs/Characters/Uniforms/Jacket_Bomber_Winter/GD_Jacket_Bomber_Winter_Work.et"
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{E9316D5E26AABD70}Prefabs/Characters/Uniforms/Pants_CP_G3/MC_ALP_camo/CP_G3_Pants_no_kpads_MC_ALP.et"
+    }
+   }
+  }
+  ActionsManagerComponent "{520EA1D2F659CE02}" {
+   additionalActions {
+    DRG_DeathConfirmAction "{6AD12B49EBD30289}" {
+     ParentContextList {
+      "LowerTorso"
+     }
+     UIInfo UIInfo "{6AD12B49F4AD9ED3}" {
+      Name "Подтвердить смерть"
+     }
+     ActionTitle "#drg_ConfirmDeathAction"
+     Duration 3
+     m_sEventMessage "Цель ликвидирована"
+     m_aObjectivesToDone {
+      "NOAK_WIN"
+     }
+     m_aObjectivesToFail {
+      "FR_WIN"
+     }
+     m_vFactionKey "DIM_PLA"
+    }
+   }
+  }
+ }
+ coords 11109.839 23.761 1799.486
+ angles 0 129.597 0
+}

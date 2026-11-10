@@ -1,0 +1,111 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ {
+  coords 1869.258 8.518 5228.316
+  m_sTitle "Правила и задачи"
+  m_sDescriptionLayout "{41DAF7B7061DC0BC}UI/MissionDescription/DescriptionEditable.layout"
+  m_sTextData "ПРАВИЛА:"\
+  " 1. Стартующим в триггере - запрещено покидать триггер пока не начнется атака на базу;"\
+  "2. Мин.обороны запрещено покидать триггер."\
+  ""\
+  "ЗАДАЧИ:"\
+  "• Франции и НОАК: "\
+  " 1. Защитить Министра обороны КНР."\
+  ""\
+  "• НОАК:"\
+  " 1. Ликвидировать Министра обороны КНР"\
+  ""\
+  "Дополнительно:"\
+  "1. Смерть надо подтвердить."
+  m_aVisibleForFactions {
+   "DIM_PLA"
+   "FR"
+   "Ses_NAPA"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+ {
+  coords 1869.258 8.518 5228.316
+  m_sTitle "Обстановка"
+  m_sTextData "Агенты разведки КНР вычислили примерное местоположение скрывающегося командира заговорщиков. "
+  m_aVisibleForFactions {
+   "FR"
+   "DIM_PLA"
+   "Ses_NAPA"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+}
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ FR_WIN {
+  coords 1927.902 13.152 5238.651
+  m_sTitle "Командир жив"
+  m_sFactionKey "FR"
+  m_bAdvanceWhenTriggered 1
+ }
+ NAPA_WIN {
+  coords 1927.902 13.152 5238.651
+  m_sTitle "Мин. обороны убит"
+  m_sFactionKey "Ses_NAPA"
+  m_bAdvanceWhenTriggered 1
+ }
+ FR_WIN2 {
+  coords 1927.902 13.152 5238.651
+  m_sTitle "Командир жив"
+  m_sFactionKey "DIM_PLA"
+  m_bAdvanceWhenTriggered 1
+ }
+}
+PolylineShapeEntity : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
+ components {
+  PS_PolyZone "{60E90266F25533F6}" {
+   m_cPolygonColor 0.259 0.365 0.686 1
+   m_fPolygonUVScale 0.44
+   m_cPolygonBorderColor 0 0.125 0.502 1
+   m_aVisibleForFactions {
+    "FR"
+    "Ses_NAPA"
+    "DIM_PLA"
+    ""
+   }
+  }
+ }
+ coords 5117.805 39.902 10488.693
+ Points {
+  ShapePoint "{6AD172B152FB1BB9}" {
+   Position 104.385 1.063 93.362
+  }
+  ShapePoint "{6AD172B15C981045}" {
+   Position 402.826 1.319 177.954
+  }
+  ShapePoint "{6AD172B15E8C4265}" {
+   Position 436.667 2.956 13.336
+  }
+  ShapePoint "{6AD172B15903A59B}" {
+   Position 371.698 -0.071 -57.037
+  }
+  ShapePoint "{6AD172B15B184086}" {
+   Position 175.694 3.182 -31.285
+  }
+  ShapePoint "{6AD172B165191A3A}" {
+   Position 151.956 3.218 -93.316
+  }
+  ShapePoint "{6AD172B167EBB741}" {
+   Position 86.795 1.072 -112.189
+  }
+  ShapePoint "{6AD172B16656895C}" {
+   Position 52.25 0.71 -60.43
+  }
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 2537.186 4.243 2315.116
+}

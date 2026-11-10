@@ -1,0 +1,112 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ {
+  coords 8267.328 57.438 6310.739
+  m_sTitle "Правила и задачи"
+  m_sDescriptionLayout "{41DAF7B7061DC0BC}UI/MissionDescription/DescriptionEditable.layout"
+  m_sTextData "ПРАВИЛА:"\
+  "0. Всем США запрещено взаимодействовать с целью поиска (поймете когда увидите);"\
+  "1. На строительном грузовике США разрешено передвигаться только во время фриз-тайма для постройки укреплений."\
+  ""\
+  "ЗАДАЧИ:"\
+  "• США/Британии: "\
+  " 1. Не дать Такистанцам найти офицера."\
+  ""\
+  "• ТКА:"\
+  " 1. Найти пропавшего офицера (синяя зона поиска)."\
+  ""\
+  "Дополнительно:"\
+  " 1. США имеет 2 ПТУРа (3 снаряда в сумме) и 2 смава."
+  m_aVisibleForFactions {
+   "US"
+   "Ses_TKA"
+   "Ses_CDF"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+ }
+ {
+  coords 8267.328 57.438 6310.739
+  m_sTitle "Обстановка"
+  m_sTextData "1991 г."\
+  "Силами британского SAS была совершена засада на конвой Такистанской армии и захвачен генерал ТКА Сахир Авад. После возвращения на базу он был передан совместной группе ЦРУ/МИ-6 для дальнейшего допроса."\
+  ""\
+  "ТКА, обследовав остатки колонны, не находит тело генерала и данным разведки вычисляет примерный район, где его могут удерживать. "\
+  ""\
+  "Тем временем допрос генерала выходит за рамки разумного..."
+  m_aVisibleForFactions {
+   "US"
+   "Ses_TKA"
+   "Ses_CDF"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+ }
+}
+PolylineShapeEntity : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
+ components {
+  PS_PolyZone "{60E90266F25533F6}" {
+   m_cPolygonColor 0.506 0.584 0.812 1
+   m_fPolygonUVScale 0.44
+   m_cPolygonBorderColor 0 0.125 0.502 1
+   m_aVisibleForFactions {
+    "US"
+    "Ses_TKA"
+    ""
+    ""
+   }
+  }
+ }
+ coords 4659.935 48.479 4352.153
+ Points {
+  ShapePoint "{6AD3331C2D1783A1}" {
+   Position -5.613 1.661 39.204
+  }
+  ShapePoint "{6AD3331C2CA3D2A6}" {
+   Position 3.857 2.084 61.742
+  }
+  ShapePoint "{6AD3331C2FB79851}" {
+   Position 16.22 0.873 144.617
+  }
+  ShapePoint "{6AD3331C2FC9113C}" {
+   Position 23.062 0.435 203.865
+  }
+  ShapePoint "{6AD3331C2EB3A1D1}" {
+   Position 28.391 0.159 247.485
+  }
+  ShapePoint "{6AD3331C2EEB91E9}" {
+   Position 48.525 0.623 264.968
+  }
+  ShapePoint "{6AD3331C2E2519BC}" {
+   Position 98.122 -0.034 254.43
+  }
+  ShapePoint "{6AD3331C2E60CAF3}" {
+   Position 156.623 0.232 232.27
+  }
+  ShapePoint "{6AD3331C29AE2563}" {
+   Position 178.178 0.531 178.666
+  }
+  ShapePoint "{6AD3331C2887D1C6}" {
+   Position 179.764 0.379 133.507
+  }
+  ShapePoint "{6AD3331C286B6C74}" {
+   Position 137.81 -0.035 82.006
+  }
+  ShapePoint "{6AD3331C2BD6EE21}" {
+   Position 93.383 2.269 25.149
+  }
+  ShapePoint "{6AD3331C2B153680}" {
+   Position 69.188 -0.034 -0.872
+  }
+  ShapePoint "{6AD3331C2A91F8CC}" {
+   Position 52.064 0.028 -20.641
+  }
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 5547.709 15.194 4020.56
+}

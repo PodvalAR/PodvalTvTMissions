@@ -1,0 +1,70 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ {
+  coords 1869.258 8.518 5228.316
+  m_sTitle "Правила и задачи"
+  m_sDescriptionLayout "{41DAF7B7061DC0BC}UI/MissionDescription/DescriptionEditable.layout"
+  m_sTextData "ПРАВИЛА:"\
+  " 1. Запрещено взлетать на фриз-тайме (двигатели запустить можно);"\
+  " 2. ВИП (командир заговорщиков) должен выбрать убежище в котором будет сидеть. Его покидать нельзя. (если выбирает убежище №3 - запрещено покидать территорию руин);"\
+  " 3. Франция и ополчение союзники."\
+  ""\
+  "ЗАДАЧИ:"\
+  "• Франции и ополченцев: "\
+  " 1. Защитить командира заговорщиков"\
+  ""\
+  "• НОАК:"\
+  " 1. Ликвидировать командира заговорщиков"\
+  ""\
+  "Дополнительно:"\
+  "1. Смерть надо подтвердить."
+  m_aVisibleForFactions {
+   "DIM_PLA"
+   "FR"
+   "Ses_NAPA"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+ {
+  coords 1869.258 8.518 5228.316
+  m_sTitle "Обстановка"
+  m_sTextData "Агенты разведки КНР вычислили примерное местоположение скрывающегося командира заговорщиков. "
+  m_aVisibleForFactions {
+   "FR"
+   "DIM_PLA"
+   "Ses_NAPA"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+}
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ FR_WIN {
+  coords 1927.902 13.152 5238.651
+  m_sTitle "Командир жив"
+  m_sFactionKey "FR"
+  m_bAdvanceWhenTriggered 1
+ }
+ NOAK_WIN {
+  coords 1927.902 13.152 5238.651
+  m_sTitle "Цель ликвидирована"
+  m_sFactionKey "DIM_PLA"
+  m_bAdvanceWhenTriggered 1
+ }
+ FR_WIN2 {
+  coords 1927.902 13.152 5238.651
+  m_sTitle "Командир жив"
+  m_sFactionKey "Ses_NAPA"
+  m_bAdvanceWhenTriggered 1
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 2537.186 4.243 2315.116
+}

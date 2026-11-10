@@ -1,0 +1,78 @@
+SCR_ChimeraCharacter : "{2F309F977D12B192}Prefabs/Characters/Factions/BLUFOR/US/SPN/Desert/dim_US_SPN_D_SL.et" {
+ ID "520EC961A090BBD5"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Агент разведки"
+    Icon "{8212EA1EC0F5C2D5}UI/Icons/agent.edds"
+   }
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{E9F0FEFEF0A8A847}Prefabs/Weapons/Rifles/M16/Rifle_M16A2_carbine_m855a1_collimator.et"
+  }
+  SCR_CharacterIdentityComponent "{5584CBC63E092DBC}" {
+   Override 1
+   Identity Identity "{5584CBC6363C648B}" {
+    VisualIdentity VisualIdentity "{56E6D9456009D1C4}" {
+     Head "{2F3375E395C46AB3}Prefabs/Characters/Heads/Head_BaseBody_01.et"
+     Body "{0023F898C0FF18AA}Prefabs/Characters/Basebody/CharacterBasebody.et"
+    }
+   }
+   Camouflaged 0
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{DF97F45092BF9DE7}Prefabs/Characters/HeadGear/Hair_2.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{DD9CB456376FB01F}Prefabs/Characters/Uniforms/Shirt_flannel/flannel_shirt_brown_1.et"
+    }
+    LoadoutSlotInfo ArmoredVest {
+     Prefab "{72A06DD7507A135D}Prefabs/Characters/Vests/SpecOps_Vest/SpecOps_Vest_noFlag.et"
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{22341EC6AE9DE892}Prefabs/Characters/Uniforms/Pants_TrousersV2/Pants_TrousersV2_Tan.et"
+    }
+    LoadoutSlotInfo Boots {
+     Prefab "{C7923961D7235D70}Prefabs/Characters/Footwear/CombatBoots_Soviet_01.et"
+    }
+    LoadoutSlotInfo Back {
+    }
+    LoadoutSlotInfo Vest {
+     Prefab "{EFF9E390F9FB7572}Prefabs/Characters/Vests/Vest_PLCE/Variants/BF_Vest_PLCE_Utility.et"
+    }
+    LoadoutSlotInfo Extra3 {
+     Prefab ""
+    }
+    LoadoutSlotInfo Waist {
+     Prefab "{9DF85654DBD4683C}Prefabs/Characters/Belts/Delta_Belt_04.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{68CD6B3A809E1C99}" {
+     TargetStorage "Pants/Pants_TrousersV2_Tan.et"
+    }
+    ItemsInitConfigurationItem "{68CD6B3A80F6D72C}" {
+     TargetStorage "Jacket/flannel_shirt_brown_1.et"
+    }
+    ItemsInitConfigurationItem "{68CD6B3A80D0F11B}" {
+     TargetStorage "Jacket/flannel_shirt_brown_1.et"
+    }
+    ItemsInitConfigurationItem "{68CD6B3945F13073}" {
+     TargetStorage "Vest/BF_Vest_PLCE_Utility.et/MagPouch/BF_Pouch_PLCE_Utility_01.et"
+    }
+    ItemsInitConfigurationItem "{68CD6B3943B7F161}" {
+     TargetStorage "Vest/BF_Vest_PLCE_Utility.et/MagPouch2/BF_Pouch_PLCE_Utility_02.et"
+    }
+    ItemsInitConfigurationItem "{68CD6B394EFC6E76}" {
+     TargetStorage "Vest/BF_Vest_PLCE_Utility.et/MagPouch2/BF_Pouch_PLCE_Utility_02.et"
+    }
+   }
+  }
+ }
+ coords 4756.814 48.445 4541.221
+ angles 0 120 0
+}
