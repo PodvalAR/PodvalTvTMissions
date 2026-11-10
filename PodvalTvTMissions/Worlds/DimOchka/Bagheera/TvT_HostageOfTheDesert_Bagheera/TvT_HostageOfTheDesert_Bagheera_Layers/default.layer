@@ -54,6 +54,19 @@ GenericEntity : "{A1A11E5C3A29B763}Prefabs/Props/Furniture/ChairDental_01/ChairD
    }
    tapeInteractionPoint {
     components {
+     TvT_InterrogationRescueComponent "{660CD132B158CFC6}" {
+      m_sWinObjectiveName "TKA_WIN"
+      m_sLoseObjectiveName "US_WIN"
+      m_sEndMessage "Офицер Сахир Авад найден! Запись допроса зафиксирована. Победа Иракских сил!"
+      m_fEndDelaySeconds 15
+      m_sTapeRecorderName "tapeRecorder"
+      m_sVictimEntityName "victim"
+      m_sPivotEntityName "pivot"
+      m_fRescuerYawOffset 0
+      m_fRescuerPitchOffset -10
+      m_fDebriefingDelaySeconds 5
+      m_sCinematicEntityName ""
+     }
      ActionsManagerComponent "{660CD13386D41633}" {
       ActionContexts {
        UserActionContext "{660CD13389672F83}" {
@@ -79,19 +92,6 @@ GenericEntity : "{A1A11E5C3A29B763}Prefabs/Props/Furniture/ChairDental_01/ChairD
       }
      }
      RplComponent "{660CD132B158CFC5}" {
-     }
-     TvT_InterrogationRescueComponent "{660CD132B158CFC6}" {
-      m_sWinObjectiveName "TKA_WIN"
-      m_sLoseObjectiveName "US_WIN"
-      m_sEndMessage "Офицер Сахир Авад найден! Запись допроса зафиксирована. Победа Иракских сил!"
-      m_fEndDelaySeconds 15
-      m_fDebriefingDelaySeconds 5
-      m_sTapeRecorderName "tapeRecorder"
-      m_sVictimEntityName "victim"
-      m_sPivotEntityName "pivot"
-      m_fRescuerYawOffset 0
-      m_fRescuerPitchOffset -10
-      m_sCinematicEntityName ""
      }
     }
     coords 1.09 0.963 -0.279
