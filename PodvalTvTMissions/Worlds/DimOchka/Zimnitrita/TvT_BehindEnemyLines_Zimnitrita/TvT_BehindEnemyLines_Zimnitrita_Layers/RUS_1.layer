@@ -1,3 +1,61 @@
+Vehicle SubwayTrain_Mil_Hopital1 : "{14D4F9D1FFC3BBF7}Prefabs/Vehicles/SubwayTrain/Militaire/SubwayTrain_Mil_Hopital.et" {
+ coords 11970.7 20.606 10618.736
+ angles 0 27.104 0
+}
+Vehicle SST_Ural4320_Tractor1 : "{207F024150585247}Prefabs/Vehicles/Wheeled/Semitrailer/Soviet/SST_Ural4320_Tractor.et" {
+ coords 15104.808 50 14676.87
+ angles 0 20.989 0
+ m_sAttachmentGroupName "ALL_RUS10"
+ m_bEnableMoveOnFreeze 1
+}
+$grp Vehicle : "{447CFE8D73F95C40}Prefabs/Vehicles/Wheeled/BTR70/BTR70_AFRF.et" {
+ BTR70_AFRF2 {
+  components {
+   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+    FuelNodes {
+     SCR_FuelNode "{5622A70CD4036C5A}" {
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{5628CA8E08F1AAF4}" {
+      m_fInitialFuelTankState 0
+     }
+    }
+   }
+  }
+  coords 11976.996 20.696 10640.832
+  angles 0 27.677 0
+ }
+ BTR70_AFRF3 {
+  components {
+   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+    FuelNodes {
+     SCR_FuelNode "{5622A70CD4036C5A}" {
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{5628CA8E08F1AAF4}" {
+      m_fInitialFuelTankState 0
+     }
+    }
+   }
+  }
+  coords 11972.882 20.696 10632.987
+  angles 0 27.677 0
+ }
+}
+Vehicle SubwayTrain_MK2_Mil1 : "{52711F0E423A1500}Prefabs/Vehicles/SubwayTrain/Motrice/SubwayTrain_MK2_Mil.et" {
+ components {
+  MRD_TrainComponent "{64B04EE87F61D0A7}" {
+   m_sSplineName "Rail5"
+  }
+ }
+ coords 12002.826 20.676 10680.904
+ angles 0 27.104 0
+}
+Vehicle UAZ452_cargo_USSR_VAI1 : "{5B8446E5EA3372D7}Prefabs/Vehicles/Wheeled/UAZ452/UAZ452_cargo_USSR_VAI.et" {
+ coords 15092.231 50 14683.987
+ angles 0 25.312 0
+ m_sAttachmentGroupName "ALL_RUS5"
+}
 $grp SCR_AIGroup : "{7F40D42C0CE8A499}Prefabs/Groups/OPFOR/RHS_AFRF/Group_RHS_AFRF_Base.et" {
  ALL_RUS2 {
   components {
@@ -16,7 +74,7 @@ $grp SCR_AIGroup : "{7F40D42C0CE8A499}Prefabs/Groups/OPFOR/RHS_AFRF/Group_RHS_AF
    "{55549DEEF14DC4F2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_Rfl_3.et"
    "{25919A731E43E20C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_SVD.et"
   }
-  m_sCustomNameSet "Отделение ВДВ"
+  m_sCustomNameSet "Отделение ВС РФ"
  }
  ALL_RUS0 {
   coords 13296.282 50.656 12671.577
@@ -24,7 +82,7 @@ $grp SCR_AIGroup : "{7F40D42C0CE8A499}Prefabs/Groups/OPFOR/RHS_AFRF/Group_RHS_AF
   m_aUnitPrefabSlots {
    "{7516B89936D669A5}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_Officer.et"
   }
-  m_sCustomNameSet "Командир ВС РФ"
+  m_sCustomNameSet "Командир логистического пункта \"Мотыка\""
  }
  ALL_RUS3 {
   components {
@@ -44,7 +102,7 @@ $grp SCR_AIGroup : "{7F40D42C0CE8A499}Prefabs/Groups/OPFOR/RHS_AFRF/Group_RHS_AF
    "{55549DEEF14DC4F2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_Rfl_3.et"
    "{25919A731E43E20C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_SVD.et"
   }
-  m_sCustomNameSet "Отделение ВДВ"
+  m_sCustomNameSet "Отделение ВС РФ"
  }
  ALL_RUS4 {
   components {
@@ -83,7 +141,7 @@ $grp SCR_AIGroup : "{7F40D42C0CE8A499}Prefabs/Groups/OPFOR/RHS_AFRF/Group_RHS_AF
    "{6860B8D684214DC5}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_Rfl_4.et"
    "{25919A731E43E20C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_SVD.et"
   }
-  m_sCustomNameSet "Отделение ВДВ"
+  m_sCustomNameSet "Отделение ВС РФ"
  }
  ALL_RUS10 {
   components {
@@ -183,6 +241,7 @@ $grp SCR_AIGroup : "{7F40D42C0CE8A499}Prefabs/Groups/OPFOR/RHS_AFRF/Group_RHS_AF
   }
   coords 11996.493 20.5 10687
   angles 0 116.033 0
+  m_faction "CCA"
   m_aUnitPrefabSlots {
    "{1759891E89EC8E5D}Worlds/DimOchka/Zimnitrita/TvT_BehindEnemyLines_Zimnitrita/RUS/dim_RF_DriverTrain.et"
   }
@@ -217,4 +276,72 @@ $grp SCR_AIGroup : "{7F40D42C0CE8A499}Prefabs/Groups/OPFOR/RHS_AFRF/Group_RHS_AF
   }
   m_sCustomNameSet "Диспетчерский пункт \"Мотыка-Браво\""
  }
+}
+Vehicle SubwayTrain_Plateau_Mil1 : "{CFC9D382AF88103F}Prefabs/Vehicles/SubwayTrain/Militaire/SubwayTrain_Plateau_Mil.et" {
+ components {
+  MRD_TrainComponent "{64B04EE87F61D0A7}" {
+   m_sSplineName "Rail5"
+  }
+ }
+ coords 11979.322 20.607 10635.303
+ angles 0 27.612 0
+}
+Vehicle Ural4320_transport_covered1 : "{D9B91FAB817A6033}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_covered.et" {
+ components {
+  SCR_UniversalInventoryStorageComponent "{5916C58171230A92}" {
+   MultiSlots {
+    MultiSlotConfiguration "{5A60D38EDB3709A9}" {
+     SlotTemplate InventoryStorageSlot Bandages {
+      Prefab "{FA8BE6075AFFBCA8}Prefabs/Weapons/Rifles/AK74M/Rifle_AK74M.et"
+     }
+     NumSlots 20
+    }
+    MultiSlotConfiguration "{6AD51A59EA6C862E}" {
+     SlotTemplate InventoryStorageSlot Bandages {
+      Prefab "{FD34D121FA55CB10}Prefabs/Weapons/Magazines/6l23_plastic/Magazine_545x39_plastic_AK_30rnd_Last_5Tracer.et"
+     }
+     NumSlots 50
+    }
+    MultiSlotConfiguration "{6AD53EA4CD7BDA8D}" {
+     SlotTemplate InventoryStorageSlot Bandages {
+      Prefab "{F8B4DCE3F81C16EC}Prefabs/Characters/Vests/Vest_6Sh117/variants/6B45_Pouches_EMR/Vest_6Sh117_6B45_Pouches_Crew.et"
+     }
+     NumSlots 20
+    }
+    MultiSlotConfiguration "{6AD53EA4DCB0ACD8}" {
+     SlotTemplate InventoryStorageSlot Bandages {
+      Prefab "{4E612A2347762BE8}Prefabs/Characters/HeadGear/Helmet_6B47/EMR/Helmet_6B47_Cover_EMR_1.et"
+     }
+     NumSlots 20
+    }
+   }
+  }
+ }
+ coords 15096.619 50 14680.233
+ angles 0 21.883 0
+ m_sAttachmentGroupName "ALL_RUS10"
+}
+$grp Vehicle : "{E03590BE4CD8EF7F}Prefabs/Vehicles/SubwayTrain/Atelier/Atelier_Mil_Troupes.et" {
+ Atelier_Mil_Troupes1 {
+  components {
+   MRD_TrainComponent "{64B04EE87F61D0A7}" {
+    m_sSplineName "Rail5"
+   }
+  }
+  coords 11996.913 20.676 10669.352
+  angles 0 27.104 0
+ }
+ Atelier_Mil_Troupes2 {
+  components {
+   MRD_TrainComponent "{64B04EE87F61D0A7}" {
+    m_sSplineName "Rail5"
+   }
+  }
+  coords 11987.927 20.676 10651.793
+  angles 0 27.104 0
+ }
+}
+GenericEntity : "{EEDC2A602847246B}Prefabs/Vehicles/Wheeled/Semitrailer/Soviet/SST_Semitrailer_Tanker_RU.et" {
+ coords 15098.585 51.231 14663.071
+ angles 0 24.612 0
 }
