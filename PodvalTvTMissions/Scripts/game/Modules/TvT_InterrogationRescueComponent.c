@@ -503,8 +503,29 @@ class TvT_InterrogationRescueComponent : ScriptComponent
 			AudioSystem.PlayEvent(m_sAudioFile, "SOUND_VOICE", mat);
 		}
 
-		// 5. Запуск оригинального синематика cutsceneIn (камера, выравнивание треком AlignPlayer, фейд)
-		if (m_sCinematicEntityName != "")
+		// 5. Проверка, является ли данный клиент клиентом спасителя
+		bool isLocalRescuer = false;
+		IEntity rescuerEnt = null;
+		if (rescuerRplId.IsValid())
+		{
+			RplComponent rescuerRpl = RplComponent.Cast(Replication.FindItem(rescuerRplId));
+			if (rescuerRpl)
+			{
+				rescuerEnt = rescuerRpl.GetEntity();
+				if (rescuerRpl.IsOwner())
+					isLocalRescuer = true;
+			}
+		}
+
+		if (!isLocalRescuer)
+		{
+			PlayerController pc = GetGame().GetPlayerController();
+			if (pc && pc.GetControlledEntity() && rescuerEnt && pc.GetControlledEntity() == rescuerEnt)
+				isLocalRescuer = true;
+		}
+
+		// 6. Запуск синематики cutsceneIn (только у спасителя: фейд затемнения экрана и блокировка инвентаря)
+		if (isLocalRescuer && m_sCinematicEntityName != "")
 		{
 			IEntity cineEnt = ResolveTargetEntity(m_sCinematicEntityName);
 			if (cineEnt)
@@ -515,23 +536,8 @@ class TvT_InterrogationRescueComponent : ScriptComponent
 			}
 		}
 
-		// 6. Анимация осмотра спасителя (игрока, нажавшего кнопку F)
-		IEntity rescuerEnt = null;
-		if (rescuerRplId.IsValid())
-		{
-			RplComponent rescuerRpl = RplComponent.Cast(Replication.FindItem(rescuerRplId));
-			if (rescuerRpl)
-				rescuerEnt = rescuerRpl.GetEntity();
-		}
-
-		if (!rescuerEnt)
-		{
-			PlayerController pc = GetGame().GetPlayerController();
-			if (pc)
-				rescuerEnt = pc.GetControlledEntity();
-		}
-
-		if (rescuerEnt)
+		// 7. Анимация осмотра спасителя (запускается строго на клиенте владельца персонажа)
+		if (isLocalRescuer && rescuerEnt)
 		{
 			SCR_ChimeraCharacter rescuerChar = SCR_ChimeraCharacter.Cast(rescuerEnt);
 			if (rescuerChar)

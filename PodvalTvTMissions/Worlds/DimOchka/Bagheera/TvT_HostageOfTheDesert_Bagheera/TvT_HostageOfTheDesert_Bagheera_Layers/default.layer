@@ -131,37 +131,6 @@ GenericEntity : "{A1A11E5C3A29B763}Prefabs/Props/Furniture/ChairDental_01/ChairD
         }
        }
       }
-      CustomCinematicTrack "{65C266149D19D2A5}" {
-       TrackName "Alignplayer"
-       Flags 0 0
-       ClassName "AlignPlayerCinematicTrack"
-       ChildTracks {
-        StringCinematicTrack "{65C266149D19D611}" {
-         TrackName "entityToAttachTo"
-         Keyframes {
-          StringCinematicKeyframe "{65C2EB86B6A940B4}" {
-           FrameNumber 0
-           Value "pivot"
-          }
-         }
-         Flags 0 0
-        }
-        FloatCinematicTrack "{65C2EB9CBBB982DE}" {
-         TrackName "m_fLerpFactor"
-         Keyframes {
-          FloatCinematicKeyframe "{65C2EB9CA8F33AD9}" {
-           FrameNumber 0
-           Value 0
-          }
-          FloatCinematicKeyframe "{65C2EB9CAB7F6D98}" {
-           FrameNumber 60
-           Value 1
-          }
-         }
-         Flags 0 0
-        }
-       }
-      }
       CustomCinematicTrack "{6610B44206E1CF69}" {
        TrackName "CharacterAnimationEventTrack"
        ClassName "SCR_CharacterAnimationEventCinematicTrack"
