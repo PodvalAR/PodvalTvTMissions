@@ -16,6 +16,38 @@ SCR_ChimeraCharacter : "{2A2E02AB56F7C2C2}Prefabs/Characters/Factions/BLUFOR/US_
     }
    }
   }
+  ActionsManagerComponent "{520EA1D2F659CE02}" {
+   ActionContexts {
+    UserActionContext "{520EA1D2F659CE17}" {
+     ContextName "default"
+     Position PointInfo "{520EA1D2F659CE14}" {
+      PivotID "spine3"
+     }
+     Radius 1.2
+    }
+    UserActionContext "{5A26F8E7B44B5FB6}" {
+     Radius 0
+    }
+   }
+   additionalActions {
+    SCR_InspectCasualtyUserAction "{5D8CD8E6AA772324}" {
+     ParentContextList {
+     }
+    }
+    TvT_InterrogationRescueAction "{660CD133E7321DD6}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{660CD13389672F99}" {
+      Name "Осмотреть генерала"
+     }
+     ActionTitle "Осмотреть генерала"
+     VisibilityRange 2.5
+     Duration 1.5
+     "Sort Priority" 100
+    }
+   }
+  }
  }
  coords 4738.038 48.445 4511.826
 }

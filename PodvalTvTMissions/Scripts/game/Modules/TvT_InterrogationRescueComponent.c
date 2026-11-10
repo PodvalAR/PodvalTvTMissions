@@ -12,6 +12,12 @@ class TvT_InterrogationRescueComponent : ScriptComponent
 {
 	protected static TvT_InterrogationRescueComponent s_Instance;
 
+	[Attribute("TKA_WIN", UIWidgets.EditBox, "Имя объекта победы Ирака в мире")]
+	protected string m_sWinObjectiveName;
+
+	[Attribute("US_WIN", UIWidgets.EditBox, "Имя объекта победы США в мире")]
+	protected string m_sLoseObjectiveName;
+
 	[Attribute("Офицер Сахир Авад найден! Запись допроса зафиксирована. Победа Иракских сил!", UIWidgets.EditBox, "Сообщение об окончании миссии для всех игроков")]
 	protected string m_sEndMessage;
 
@@ -24,9 +30,6 @@ class TvT_InterrogationRescueComponent : ScriptComponent
 	[Attribute("{15EB5E87B17220BE}anims/anm/NPC/male/Body/Dentist/cine_savior_dentist_Pt1_TapePlayer.anm", UIWidgets.ResourceNamePicker, "Анимация бобин магнитофона")]
 	protected ResourceName m_sTapeAnimation;
 
-	[Attribute("{47870B202CB3118A}anims/anm/NPC/male/Body/Dentist/cine_savior_dentist_recordloop_TapePlayer.anm", UIWidgets.ResourceNamePicker, "Анимация бобин в режиме записи")]
-	protected ResourceName m_sTapeLoopAnimation;
-
 	[Attribute("tapeRecorder", UIWidgets.EditBox, "Имя сущности магнитофона")]
 	protected string m_sTapeRecorderName;
 
@@ -36,6 +39,15 @@ class TvT_InterrogationRescueComponent : ScriptComponent
 	[Attribute("pivot", UIWidgets.EditBox, "Имя точки привязки для кресла")]
 	protected string m_sPivotEntityName;
 
+	[Attribute("0", UIWidgets.EditBox, "Смещение угла поворота спасителя по Yaw в градусах")]
+	protected float m_fRescuerYawOffset;
+
+	[Attribute("cutsceneIn", UIWidgets.EditBox, "Имя сущности кинематографической катсцены")]
+	protected string m_sCinematicEntityName;
+
+	[Attribute("", UIWidgets.EditBox, "Имя отдельной точки привязки для спасителя (если пусто, используется m_sPivotEntityName)")]
+	protected string m_sRescuerPivotEntityName;
+
 	[Attribute("{F7C5319E76546C30}anims/anm/NPC/workspaces/Omega_NPCs.agr", UIWidgets.ResourceNamePicker, "Граф анимаций узника и спасителя")]
 	protected ResourceName m_sVictimAnimGraph;
 
@@ -44,8 +56,6 @@ class TvT_InterrogationRescueComponent : ScriptComponent
 
 	[RplProp()]
 	protected bool m_bTriggered;
-
-	protected int m_iVictimResolveAttempts;
 
 	protected RplComponent m_RplComponent;
 
@@ -75,9 +85,9 @@ class TvT_InterrogationRescueComponent : ScriptComponent
 		{
 			GetGame().GetCallqueue().Remove(FinishMission_S);
 			GetGame().GetCallqueue().Remove(InitVictimLoitering_S);
-			GetGame().GetCallqueue().Remove(PlayVictimGesture_S);
-			GetGame().GetCallqueue().Remove(SwitchTapeLoop_C);
 		}
+
+		ResetAimLimits_C();
 
 		super.OnDelete(owner);
 	}
@@ -88,25 +98,10 @@ class TvT_InterrogationRescueComponent : ScriptComponent
 	}
 
 	/**
-	 * @brief Серверная посадка генерала в кресло: отключение коллизии/мед.осмотра и loiter строго на якоре pivot.
+	 * @brief Серверная посадка генерала в кресло, отключение коллизии/мед.осмотра и старт лоитеринга (m_iNPC = 1).
 	 */
 	void InitVictimLoitering_S()
 	{
-		if (!Replication.IsServer())
-			return;
-
-		IEntity victimEnt = ResolveTargetEntity(m_sVictimEntityName);
-		if (!victimEnt)
-		{
-			// SF-слот TorturedDudeSlot может заспавнить узника позже инициализации компонента
-			if (m_iVictimResolveAttempts < 40)
-			{
-				m_iVictimResolveAttempts++;
-				GetGame().GetCallqueue().CallLater(InitVictimLoitering_S, 500, false);
-			}
-			return;
-		}
-
 		IEntity propEntity = ResolveTargetEntity(m_sPivotEntityName);
 		if (!propEntity)
 			propEntity = GetOwner();
@@ -125,11 +120,15 @@ class TvT_InterrogationRescueComponent : ScriptComponent
 			}
 		}
 
+		IEntity victimEnt = ResolveTargetEntity(m_sVictimEntityName);
+		if (!victimEnt)
+			return;
+
 		SCR_ChimeraCharacter character = SCR_ChimeraCharacter.Cast(victimEnt);
 		if (!character)
 			return;
 
-		// Отключаем коллизию капсулы узника, чтобы персонаж спасителя не выталкивался наверх
+		// 1. Отключаем физическую коллизию капсулы узника, чтобы персонаж спасителя не выталкивался наверх
 		Physics victimPhys = victimEnt.GetPhysics();
 		if (victimPhys)
 		{
@@ -137,7 +136,7 @@ class TvT_InterrogationRescueComponent : ScriptComponent
 			victimPhys.SetInteractionLayer(0);
 		}
 
-		// Отключаем все сторонние действия на узнике (включая ванильный медицинский осмотр SCR_InspectCasualtyUserAction)
+		// 2. Отключаем все сторонние действия на узнике (включая ванильный медицинский осмотр SCR_InspectCasualtyUserAction на лице)
 		ActionsManagerComponent actionsManager = ActionsManagerComponent.Cast(victimEnt.FindComponent(ActionsManagerComponent));
 		if (actionsManager)
 		{
@@ -150,7 +149,7 @@ class TvT_InterrogationRescueComponent : ScriptComponent
 			}
 		}
 
-		// Полное излечение узника (false = удаление кровотечений и сброс blood hitzone в UNDAMAGED)
+		// 3. Полное излечение узника (false = удаление кровотечений и сброс blood hitzone в UNDAMAGED)
 		SCR_CharacterDamageManagerComponent damageMan = SCR_CharacterDamageManagerComponent.Cast(character.GetDamageManager());
 		if (damageMan)
 		{
@@ -159,10 +158,12 @@ class TvT_InterrogationRescueComponent : ScriptComponent
 			damageMan.EnableDamageHandling(false);
 		}
 
+		// 4. Отключаем ИИ узника
 		AIControlComponent aiControl = AIControlComponent.Cast(victimEnt.FindComponent(AIControlComponent));
 		if (aiControl)
 			aiControl.ActivateAI(false);
 
+		// 5. Получаем контроллер и запускаем анимацию узника в кресле
 		SCR_CharacterControllerComponent controller = SCR_CharacterControllerComponent.Cast(character.GetCharacterController());
 		if (!controller)
 			return;
@@ -183,14 +184,6 @@ class TvT_InterrogationRescueComponent : ScriptComponent
 		if (!staticTable)
 			return;
 
-		vector vAnimationTransform[4] = { "1 0 0", "0 1 0", "0 0 1", "0 0 0" };
-		if (propEntity)
-		{
-			propEntity.GetWorldTransform(vAnimationTransform);
-			victimEnt.SetWorldTransform(vAnimationTransform);
-		}
-
-		// rootMotion выключен: переход сесть и луп играются на месте на якоре, тело не уезжает от кресла
 		SCR_LoiterCustomAnimData customAnimData = SCR_LoiterCustomAnimData.CreateInstance(
 			commandID: -1,
 			commandValue: ELoiteringType.CUSTOM,
@@ -200,10 +193,17 @@ class TvT_InterrogationRescueComponent : ScriptComponent
 			controlVariableName: staticTable.CONTROL_VARIABLE_NAME,
 			controlVariableID: staticTable.m_OfficerMissionSpeech,
 			controlVariableValue: 1,
-			allowRootMotion: false,
+			allowRootMotion: true,
 			allowEnvironmentalExit: false);
 
-		controller.StartLoitering(propEntity, ELoiteringType.CUSTOM, false, false, false, vAnimationTransform, true, customAnimData);
+		vector vAnimationTransform[4] = { "1 0 0", "0 1 0", "0 0 1", "0 0 0" };
+		if (propEntity)
+		{
+			propEntity.GetWorldTransform(vAnimationTransform);
+			victimEnt.SetWorldTransform(vAnimationTransform);
+		}
+
+		controller.StartLoitering(propEntity, ELoiteringType.CUSTOM, false, true, true, vAnimationTransform, true, customAnimData);
 	}
 
 	/**
@@ -230,9 +230,6 @@ class TvT_InterrogationRescueComponent : ScriptComponent
 		if (RplSession.Mode() != RplMode.Dedicated)
 			RpcDo_PlayEffects(rescuerRplId);
 
-		// Жест реакции узника только с сервера: аним-состояние серверного AI реплицируется движком
-		GetGame().GetCallqueue().CallLater(PlayVictimGesture_S, 2000, false);
-
 		// Таймер завершения миссии по окончании анимации осмотра (15 секунд)
 		int delayMs = Math.Max(1000, (int)(m_fEndDelaySeconds * 1000));
 		GetGame().GetCallqueue().CallLater(FinishMission_S, delayMs, false);
@@ -246,18 +243,40 @@ class TvT_InterrogationRescueComponent : ScriptComponent
 		if (!Replication.IsServer())
 			return;
 
-		// 1. Глобальное серверное оповещение всем игрокам в чат (smsg)
+		// 1. Обновление статуса задач PS_Objective
+		IEntity winObjEnt = GetGame().GetWorld().FindEntityByName(m_sWinObjectiveName);
+		if (winObjEnt)
+		{
+			PS_Objective winObj = PS_Objective.Cast(winObjEnt);
+			if (winObj)
+				winObj.SetCompleted(true);
+		}
+
+		IEntity loseObjEnt = GetGame().GetWorld().FindEntityByName(m_sLoseObjectiveName);
+		if (loseObjEnt)
+		{
+			PS_Objective loseObj = PS_Objective.Cast(loseObjEnt);
+			if (loseObj)
+				loseObj.SetCompleted(false);
+		}
+
+		// 2. Глобальное серверное оповещение всем игрокам в чат (smsg)
 		BroadcastServerMessage(m_sEndMessage);
 
-		// 2. Завершение анимации спасителя
+		// 3. Завершение анимации спасителя
 		Rpc(RpcDo_StopEffects);
 		if (RplSession.Mode() != RplMode.Dedicated)
 			RpcDo_StopEffects();
 
-		// 3. Переход гейммода в финальное состояние (дебрифинг); виртуальный вызов дойдёт до логики лобби
-		SCR_BaseGameMode gameMode = SCR_BaseGameMode.Cast(GetGame().GetGameMode());
+		// 4. Переход гейммода в финальное состояние Debriefing
+		PS_GameModeCoop gameMode = PS_GameModeCoop.Cast(GetGame().GetGameMode());
 		if (gameMode)
-			gameMode.EndGameMode(null);
+		{
+			if (gameMode.GetState() == SCR_EGameModeState.GAME)
+				gameMode.AdvanceGameState(SCR_EGameModeState.GAME);
+			else if (gameMode.GetState() == SCR_EGameModeState.BRIEFING)
+				gameMode.SetGameModeState(SCR_EGameModeState.DEBRIEFING);
+		}
 	}
 
 	/**
@@ -320,7 +339,7 @@ class TvT_InterrogationRescueComponent : ScriptComponent
 	}
 
 	/**
-	 * @brief Клиентские эффекты: анимация бобин магнитофона, звук и анимация осмотра спасителя.
+	 * @brief Клиентские эффекты: анимация осмотра спасителя, вращение бобин, реакция узника и звук.
 	 */
 	[RplRpc(RplChannel.Reliable, RplRcver.Broadcast)]
 	protected void RpcDo_PlayEffects(RplId rescuerRplId)
@@ -336,8 +355,6 @@ class TvT_InterrogationRescueComponent : ScriptComponent
 					animPlayer.Prepare(m_sTapeAnimation, 0, 1.0, true);
 				animPlayer.Play();
 			}
-
-			GetGame().GetCallqueue().CallLater(SwitchTapeLoop_C, 20000, false);
 		}
 
 		// 2. Отключаем коллизию кресла на клиенте
@@ -355,7 +372,36 @@ class TvT_InterrogationRescueComponent : ScriptComponent
 			}
 		}
 
-		// 3. Звук магнитофона / реплика допроса
+		// 3. Анимация/жест замученного генерала (движение узника) и отключение коллизии
+		IEntity victimEnt = ResolveTargetEntity(m_sVictimEntityName);
+		if (victimEnt)
+		{
+			Physics victimPhys = victimEnt.GetPhysics();
+			if (victimPhys)
+			{
+				victimPhys.SetActive(ActiveState.INACTIVE);
+				victimPhys.SetInteractionLayer(0);
+			}
+
+			SCR_ChimeraCharacter victimChar = SCR_ChimeraCharacter.Cast(victimEnt);
+			if (victimChar)
+			{
+				SCR_CharacterControllerComponent controller = SCR_CharacterControllerComponent.Cast(victimChar.GetCharacterController());
+				if (controller)
+				{
+					CharacterAnimationComponent animComp = controller.GetAnimationComponent();
+					if (animComp)
+					{
+						animComp.PhysicsEnableGravity(false);
+						TAnimGraphCommand cmdId = animComp.BindCommand("CMD_Gesture_NPC");
+						if (cmdId != -1)
+							animComp.CallCommand4I(cmdId, 0, 11, 0, 0, 0);
+					}
+				}
+			}
+		}
+
+		// 4. Звук магнитофона / реплика допроса
 		if (m_sAudioFile != "")
 		{
 			AudioSystem.PlayEventInitialize(m_sAudioFile);
@@ -364,7 +410,19 @@ class TvT_InterrogationRescueComponent : ScriptComponent
 			AudioSystem.PlayEvent(m_sAudioFile, "SOUND_VOICE", mat);
 		}
 
-		// 4. Анимация осмотра спасителя (игрока, нажавшего кнопку F)
+		// 5. Запуск оригинального синематика cutsceneIn (камера, выравнивание треком AlignPlayer, фейд)
+		if (m_sCinematicEntityName != "")
+		{
+			IEntity cineEnt = ResolveTargetEntity(m_sCinematicEntityName);
+			if (cineEnt)
+			{
+				CinematicEntity cutscene = CinematicEntity.Cast(cineEnt);
+				if (cutscene)
+					cutscene.Play();
+			}
+		}
+
+		// 6. Анимация осмотра спасителя (игрока, нажавшего кнопку F)
 		IEntity rescuerEnt = null;
 		if (rescuerRplId.IsValid())
 		{
@@ -389,52 +447,7 @@ class TvT_InterrogationRescueComponent : ScriptComponent
 	}
 
 	/**
-	 * @brief Переключение бобин на луп записи на каждом клиенте (в кампании — через 20 секунд).
-	 */
-	protected void SwitchTapeLoop_C()
-	{
-		IEntity tapeEnt = ResolveTargetEntity(m_sTapeRecorderName);
-		if (!tapeEnt)
-			return;
-
-		AnimationPlayerComponent animPlayer = AnimationPlayerComponent.Cast(tapeEnt.FindComponent(AnimationPlayerComponent));
-		if (!animPlayer)
-			return;
-
-		if (m_sTapeLoopAnimation != "")
-			animPlayer.Prepare(m_sTapeLoopAnimation, 0, 1.0, true);
-		animPlayer.Play();
-	}
-
-	/**
-	 * @brief Серверный жест реакции узника на осмотр: команды анимации на серверном AI реплицируются движком.
-	 */
-	protected void PlayVictimGesture_S()
-	{
-		if (!Replication.IsServer())
-			return;
-
-		IEntity victimEnt = ResolveTargetEntity(m_sVictimEntityName);
-		SCR_ChimeraCharacter victimChar = SCR_ChimeraCharacter.Cast(victimEnt);
-		if (!victimChar)
-			return;
-
-		SCR_CharacterControllerComponent controller = SCR_CharacterControllerComponent.Cast(victimChar.GetCharacterController());
-		if (!controller)
-			return;
-
-		CharacterAnimationComponent animComp = controller.GetAnimationComponent();
-		if (!animComp)
-			return;
-
-		TAnimGraphCommand cmdId = animComp.BindCommand("CMD_Gesture_NPC");
-		if (cmdId != -1)
-			animComp.CallCommand4I(cmdId, 0, 11, 0, 0, 0);
-	}
-
-	/**
-	 * @brief Loiter осмотра на owner-клиенте спасителя: жёсткая установка на pivot, затем анимация
-	 * без root motion — поза играется строго на якоре и не дрейфует от кресла и магнитофона.
+	 * @brief Запуск анимации лоитеринга осмотра у спасителя с плавной подгонкой шага к точке pivot (m_iNPC = 2).
 	 */
 	protected void StartRescuerAnimation(SCR_ChimeraCharacter rescuerChar)
 	{
@@ -445,7 +458,11 @@ class TvT_InterrogationRescueComponent : ScriptComponent
 		if (rplComp && !rplComp.IsOwner())
 			return;
 
-		IEntity propEntity = ResolveTargetEntity(m_sPivotEntityName);
+		IEntity propEntity = null;
+		if (m_sRescuerPivotEntityName != "")
+			propEntity = ResolveTargetEntity(m_sRescuerPivotEntityName);
+		if (!propEntity)
+			propEntity = ResolveTargetEntity(m_sPivotEntityName);
 		if (!propEntity)
 			propEntity = GetOwner();
 
@@ -453,8 +470,15 @@ class TvT_InterrogationRescueComponent : ScriptComponent
 		if (propEntity)
 		{
 			propEntity.GetWorldTransform(vAnimationTransform);
-			// Owner-клиент авторитетен по своему трансформу: установка на якор дойдёт до остальных потоком движения
-			rescuerChar.SetWorldTransform(vAnimationTransform);
+		}
+
+		if (m_fRescuerYawOffset != 0)
+		{
+			vector angles = Math3D.MatrixToAngles(vAnimationTransform);
+			angles[0] = Math.Repeat(angles[0] + m_fRescuerYawOffset, 360.0);
+			vector origin = vAnimationTransform[3];
+			Math3D.AnglesToMatrix(angles, vAnimationTransform);
+			vAnimationTransform[3] = origin;
 		}
 
 		SCR_CharacterControllerComponent controller = SCR_CharacterControllerComponent.Cast(rescuerChar.GetCharacterController());
@@ -475,20 +499,79 @@ class TvT_InterrogationRescueComponent : ScriptComponent
 		if (!staticTable)
 			return;
 
+		int commandId = -1;
+		string commandName = "";
+		if (staticTable)
+		{
+			commandId = staticTable.m_CustomCinematicCommand;
+			commandName = SCR_CustomAnimData_Properties.BINDING_COMMAND_NAME;
+		}
+
 		SCR_LoiterCustomAnimData customAnimData = SCR_LoiterCustomAnimData.CreateInstance(
-			commandID: staticTable.m_CustomCinematicCommand,
+			commandID: commandId,
 			commandValue: ELoiteringType.CUSTOM,
-			commandName: SCR_CustomAnimData_Properties.BINDING_COMMAND_NAME,
+			commandName: commandName,
 			graphName: m_sVictimAnimGraph,
 			graphInstanceName: m_sVictimAnimInstance,
 			controlVariableName: staticTable.CONTROL_VARIABLE_NAME,
 			controlVariableID: staticTable.m_OfficerMissionSpeech,
 			controlVariableValue: 2,
-			allowRootMotion: false,
+			allowRootMotion: true,
 			allowEnvironmentalExit: false);
 
 		controller.SelectWeapon(null);
-		controller.StartLoitering(propEntity, ELoiteringType.CUSTOM, true, false, false, vAnimationTransform, true, customAnimData);
+
+		// Гарантируем вид от первого лица (1st person) по запросу сцены
+		SCR_CharacterCameraHandlerComponent camHandler = SCR_CharacterCameraHandlerComponent.Cast(rescuerChar.FindComponent(SCR_CharacterCameraHandlerComponent));
+		if (camHandler && camHandler.IsInThirdPerson())
+			camHandler.SetThirdPerson(false);
+
+		// Направляем взгляд игрока вперед на магнитофон и кресло (Pitch = 0, Roll = 0)
+		CharacterInputContext inputCtx = controller.GetInputContext();
+		if (inputCtx)
+		{
+			vector pivotAngles = Math3D.MatrixToAngles(vAnimationTransform);
+			float yawRad = pivotAngles[0] * Math.DEG2RAD;
+			vector aimAngles = Vector(yawRad, 0, 0);
+			inputCtx.SetAimingAngles(aimAngles);
+			inputCtx.SetLookAtAngles(aimAngles);
+		}
+
+		// Защита от "neckhole" (проваливания камеры внутрь воротника/бронежилета при наклоне головы/корпуса)
+		CharacterHeadAimingComponent headAiming = controller.GetHeadAimingComponent();
+		if (headAiming)
+		{
+			headAiming.SetLimitAnglesOverride(-15.0, 35.0, -60.0, 60.0);
+			headAiming.SetPitchLimitReductionMultiplier(1.25);
+		}
+
+		// alignToPosition = false: исключает физическую тряску капсулы персонажа о каркас кресла и пол
+		controller.StartLoitering(propEntity, ELoiteringType.CUSTOM, true, true, false, vAnimationTransform, true, customAnimData);
+	}
+
+	/**
+	 * @brief Сброс переопределенных углов наклона камеры локального персонажа.
+	 */
+	protected void ResetAimLimits_C()
+	{
+		if (!GetGame())
+			return;
+
+		PlayerController pc = GetGame().GetPlayerController();
+		if (!pc)
+			return;
+
+		SCR_ChimeraCharacter localChar = SCR_ChimeraCharacter.Cast(pc.GetControlledEntity());
+		if (!localChar)
+			return;
+
+		SCR_CharacterControllerComponent localCtrl = SCR_CharacterControllerComponent.Cast(localChar.GetCharacterController());
+		if (!localCtrl)
+			return;
+
+		CharacterHeadAimingComponent headAiming = localCtrl.GetHeadAimingComponent();
+		if (headAiming)
+			headAiming.ResetLimitAnglesOverride();
 	}
 
 	/**
@@ -497,6 +580,6 @@ class TvT_InterrogationRescueComponent : ScriptComponent
 	[RplRpc(RplChannel.Reliable, RplRcver.Broadcast)]
 	protected void RpcDo_StopEffects()
 	{
-		// Не прерываем анимацию через StopLoitering(true), чтобы не ломать ракурс камеры и позу перед экраном дебрифинга
+		ResetAimLimits_C();
 	}
 }

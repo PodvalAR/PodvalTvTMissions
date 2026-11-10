@@ -14,6 +14,7 @@ PerceptionManager PerceptionManager2 : "{028DAEAD63E056BE}Prefabs/World/Game/Per
 }
 PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
  coords 3852.887 48.445 5502.371
+ m_iHardFreezeTime 0
  {
   SCR_FactionManager "6AD4B012DCB9E754" {
    ID "5ED9088735FF2D8B"
@@ -38,213 +39,202 @@ PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_Game
  }
 }
 GenericEntity : "{A1A11E5C3A29B763}Prefabs/Props/Furniture/ChairDental_01/ChairDental_01.et" {
+ components {
+  RigidBody "{5872F0EB7DFB5A9D}" {
+   Enabled 0
+  }
+ }
  coords 4749.507 45.537 4513.658
  angles 0 -123.221 0
  {
-  CinematicEntity cutsceneIn {
-   components {
-    SCR_ScenarioFrameworkCinematicEntityComponent "{66449E5FDC272220}" {
-     m_aDebugActions {
-      SCR_ScenarioFrameworkDebugAction "{66449E5FDD67BA55}" {
-       m_sDebugActionName "playDialogue1"
-       m_aDebugActions {
-        SCR_ScenarioFrameworkActionVoiceOverPlayLine "{66449E5F767C31B4}" {
-         m_sVoiceOverDataConfig "{F4C7ABA3B30BDA16}Configs/VoiceData/KS/KS03.conf"
-         m_sLineName "TORTURE0"
-         m_ActorGetter SCR_ScenarioFrameworkGetEntityByName "{66449E5F7D4BD8C6}" {
-          m_sEntityName "tapeRecorder"
+  $grp CinematicEntity {
+   cutsceneIn {
+    components {
+     SCR_ScenarioFrameworkCinematicEntityComponent "{66449E5FDC272220}" {
+      m_aDebugActions {
+       SCR_ScenarioFrameworkDebugAction "{66449E5FDD67BA55}" {
+        m_sDebugActionName "playDialogue1"
+        m_aDebugActions {
+         SCR_ScenarioFrameworkActionVoiceOverPlayLine "{66449E5F767C31B4}" {
+          m_sVoiceOverDataConfig "{F4C7ABA3B30BDA16}Configs/VoiceData/KS/KS03.conf"
+          m_sLineName "TORTURE0"
+          m_ActorGetter SCR_ScenarioFrameworkGetEntityByName "{66449E5F7D4BD8C6}" {
+           m_sEntityName "tapeRecorder"
+          }
          }
         }
        }
       }
      }
     }
-   }
-   coords -2434.011 -137.804 7284.403
-   angles 0 146.797 0
-   Scene CinematicScene "{65B67D8138086CF3}" {
-    EndFrame 1220
-    Tracks {
-     CustomCinematicTrack "{65C2665BFCEF3EFF}" {
-      TrackName "PlayNextCinematicTrack"
-      ClassName "PlayNextTimelineCinematicTrack"
-      ChildTracks {
-       StringCinematicTrack "{65C2665BFCEF3B8F}" {
-        TrackName "m_sCinematicScene"
-        Keyframes {
-         StringCinematicKeyframe "{65C2665BF3F673DC}" {
-          FrameNumber 0
-          Value "Intermezzo_Torture_Long"
+    coords 0 0 0
+    angles 0 0 0
+    Scene CinematicScene "{65B67D8138086CF3}" {
+     EndFrame 1220
+     Tracks {
+      CustomCinematicTrack "{65C2665B8F3F7D86}" {
+       TrackName "FadesTrack"
+       Flags 0 0
+       ClassName "FadesCinematicTrack"
+       ChildTracks {
+        FloatCinematicTrack "{65C2665B8F3F7EA8}" {
+         TrackName "m_fBlackScreenOpacity"
+         Keyframes {
+          FloatCinematicKeyframe "{65C2665B8DAE4D6A}" {
+           FrameNumber 1147
+           Value 0
+          }
+          FloatCinematicKeyframe "{65C2665B831FCDD7}" {
+           FrameNumber 1220
+           Value 1
+           InterpMode 0
+          }
          }
+         Flags 0 0
         }
-       }
-       EventCinematicTrack "{6666625786E1B3BF}" {
-        TrackName "PlayNext"
+        FloatCinematicTrack "{65C2665B8F3F79FC}" {
+         TrackName "m_fVolumeSFX"
+         Keyframes {
+          FloatCinematicKeyframe "{65C4A7C93084B9EB}" {
+           FrameNumber 0
+           Value 1
+          }
+          FloatCinematicKeyframe "{6652689F03D5C52C}" {
+           FrameNumber 1147
+           Value 1
+          }
+          FloatCinematicKeyframe "{6652689F06D3652F}" {
+           FrameNumber 1220
+           Value 0
+           InterpMode 0
+          }
+         }
+         Flags 0 0
+        }
+        FloatCinematicTrack "{65C2665B8F3F7879}" {
+         TrackName "m_fVolumeVoices"
+         Keyframes {
+          FloatCinematicKeyframe "{65C4A7C931010765}" {
+           FrameNumber 0
+           Value 1
+          }
+         }
+         Flags 0 0
+        }
+        BooleanCinematicTrack "{65C2665B8F3F78F6}" {
+         TrackName "m_bDestroyBlackscreenOnTimelineEnd"
+         Flags 0 0
+        }
+        IntegerCinematicTrack "{65C2665B8F3F7B73}" {
+         TrackName "m_iDestroyLaterInSeconds"
+         Flags 0 0
+        }
        }
       }
-     }
-     CustomCinematicTrack "{65C2665B8F3F7D86}" {
-      TrackName "FadesTrack"
-      Flags 0 0
-      ClassName "FadesCinematicTrack"
-      ChildTracks {
-       FloatCinematicTrack "{65C2665B8F3F7EA8}" {
-        TrackName "m_fBlackScreenOpacity"
-        Keyframes {
-         FloatCinematicKeyframe "{65C2665B8DAE4D6A}" {
-          FrameNumber 1147
-          Value 0
+      CustomCinematicTrack "{65C266149D19D2A5}" {
+       TrackName "Alignplayer"
+       Flags 0 0
+       ClassName "AlignPlayerCinematicTrack"
+       ChildTracks {
+        StringCinematicTrack "{65C266149D19D611}" {
+         TrackName "entityToAttachTo"
+         Keyframes {
+          StringCinematicKeyframe "{65C2EB86B6A940B4}" {
+           FrameNumber 0
+           Value "pivot"
+          }
          }
-         FloatCinematicKeyframe "{65C2665B831FCDD7}" {
-          FrameNumber 1220
-          Value 1
-          InterpMode 0
-         }
+         Flags 0 0
         }
-        Flags 0 0
-       }
-       FloatCinematicTrack "{65C2665B8F3F79FC}" {
-        TrackName "m_fVolumeSFX"
-        Keyframes {
-         FloatCinematicKeyframe "{65C4A7C93084B9EB}" {
-          FrameNumber 0
-          Value 1
+        FloatCinematicTrack "{65C2EB9CBBB982DE}" {
+         TrackName "m_fLerpFactor"
+         Keyframes {
+          FloatCinematicKeyframe "{65C2EB9CA8F33AD9}" {
+           FrameNumber 0
+           Value 0
+          }
+          FloatCinematicKeyframe "{65C2EB9CAB7F6D98}" {
+           FrameNumber 60
+           Value 1
+          }
          }
-         FloatCinematicKeyframe "{6652689F03D5C52C}" {
-          FrameNumber 1147
-          Value 1
-         }
-         FloatCinematicKeyframe "{6652689F06D3652F}" {
-          FrameNumber 1220
-          Value 0
-          InterpMode 0
-         }
+         Flags 0 0
         }
-        Flags 0 0
-       }
-       FloatCinematicTrack "{65C2665B8F3F7879}" {
-        TrackName "m_fVolumeVoices"
-        Keyframes {
-         FloatCinematicKeyframe "{65C4A7C931010765}" {
-          FrameNumber 0
-          Value 1
-         }
-        }
-        Flags 0 0
-       }
-       BooleanCinematicTrack "{65C2665B8F3F78F6}" {
-        TrackName "m_bDestroyBlackscreenOnTimelineEnd"
-        Flags 0 0
-       }
-       IntegerCinematicTrack "{65C2665B8F3F7B73}" {
-        TrackName "m_iDestroyLaterInSeconds"
-        Flags 0 0
        }
       }
-     }
-     CustomCinematicTrack "{65C266149D19D2A5}" {
-      TrackName "Alignplayer"
-      Flags 0 0
-      ClassName "AlignPlayerCinematicTrack"
-      ChildTracks {
-       StringCinematicTrack "{65C266149D19D611}" {
-        TrackName "entityToAttachTo"
-        Keyframes {
-         StringCinematicKeyframe "{65C2EB86B6A940B4}" {
-          FrameNumber 0
-          Value "pivot"
+      CustomCinematicTrack "{6610B44206E1CF69}" {
+       TrackName "CharacterAnimationEventTrack"
+       ClassName "SCR_CharacterAnimationEventCinematicTrack"
+       ChildTracks {
+        StringCinematicTrack "{6610B440C1CE9EC0}" {
+         TrackName "m_sSourceEntityName"
+        }
+        BooleanCinematicTrack "{6610B440C1CE9D80}" {
+         TrackName "m_bUsePlayerCharacter"
+         Keyframes {
+          BooleanCinematicKeyframe "{6610B440E0BB0329}" {
+           FrameNumber 0
+           Value 1
+          }
          }
         }
-        Flags 0 0
-       }
-       FloatCinematicTrack "{65C2EB9CBBB982DE}" {
-        TrackName "m_fLerpFactor"
-        Keyframes {
-         FloatCinematicKeyframe "{65C2EB9CA8F33AD9}" {
-          FrameNumber 0
-          Value 0
-         }
-         FloatCinematicKeyframe "{65C2EB9CAB7F6D98}" {
-          FrameNumber 60
-          Value 1
-         }
-        }
-        Flags 0 0
-       }
-      }
-     }
-     CustomCinematicTrack "{6610B44206E1CF69}" {
-      TrackName "CharacterAnimationEventTrack"
-      ClassName "SCR_CharacterAnimationEventCinematicTrack"
-      ChildTracks {
-       StringCinematicTrack "{6610B440C1CE9EC0}" {
-        TrackName "m_sSourceEntityName"
-       }
-       BooleanCinematicTrack "{6610B440C1CE9D80}" {
-        TrackName "m_bUsePlayerCharacter"
-        Keyframes {
-         BooleanCinematicKeyframe "{6610B440E0BB0329}" {
-          FrameNumber 0
-          Value 1
-         }
-        }
-       }
-       StringCinematicTrack "{6610B440C1CE9C42}" {
-        TrackName "m_sTargerEntityName"
-        Keyframes {
-         StringCinematicKeyframe "{6610B440E6F92DE5}" {
-          FrameNumber 0
-          Value "tapeRecorder"
+        StringCinematicTrack "{6610B440C1CE9C42}" {
+         TrackName "m_sTargerEntityName"
+         Keyframes {
+          StringCinematicKeyframe "{6610B440E6F92DE5}" {
+           FrameNumber 0
+           Value "tapeRecorder"
+          }
          }
         }
        }
       }
-     }
-     CustomCinematicTrack "{66449E5FE9E13138}" {
-      TrackName "playDialogue"
-      CategoryGUID "{65EE6906DC181592}"
-      ClassName "ScenarioFrameworkActionCinematicTrack"
-      ChildTracks {
-       StringCinematicTrack "{66449E5FE9E1310B}" {
-        TrackName "m_sActionSequenceName"
-        Keyframes {
-         StringCinematicKeyframe "{66449E5FD06CFD9E}" {
-          FrameNumber 950
-          Value "playDialogue1"
+      CustomCinematicTrack "{66449E5FE9E13138}" {
+       TrackName "playDialogue"
+       CategoryGUID "{65EE6906DC181592}"
+       ClassName "ScenarioFrameworkActionCinematicTrack"
+       ChildTracks {
+        StringCinematicTrack "{66449E5FE9E1310B}" {
+         TrackName "m_sActionSequenceName"
+         Keyframes {
+          StringCinematicKeyframe "{66449E5FD06CFD9E}" {
+           FrameNumber 950
+           Value "playDialogue1"
+          }
          }
         }
-       }
-       EventCinematicTrack "{66449E5FE9E13105}" {
-        TrackName "Launch"
-        Keyframes {
-         CinematicKeyframe "{66449E5FE9E13103}" {
-          FrameNumber 950
+        EventCinematicTrack "{66449E5FE9E13105}" {
+         TrackName "Launch"
+         Keyframes {
+          CinematicKeyframe "{66449E5FE9E13103}" {
+           FrameNumber 950
+          }
          }
         }
        }
       }
-     }
-     ScriptEventsCinematicTrack "{66E6C3DB7B41341A}" {
-      TrackName "BlockInventory"
-      Keyframes {
-       ScriptEventCinematicKeyframe "{66E6C3DB7D0A9D56}" {
-        FrameNumber 0
-        Script ""\
-        "		PlayerController pController = GetGame().GetPlayerController();"\
-        "		if (!pController)"\
-        "			return;"\
-        "		"\
-        "		IEntity playerEntity = pController.GetControlledEntity();"\
-        "		if (!playerEntity)"\
-        "			return;"\
-        "		"\
-        "		SCR_InventoryStorageManagerComponent invComp = SCR_InventoryStorageManagerComponent.Cast(playerEntity.FindComponent(SCR_InventoryStorageManagerComponent));"\
-        "		if (!invComp)"\
-        "			return;"\
-        "			"\
-        "		invComp.CloseInventory();"\
-        "		invComp.AllowInventoryAccess(false);"\
-        "	"
+      ScriptEventsCinematicTrack "{66E6C3DB7B41341A}" {
+       TrackName "BlockInventory"
+       Keyframes {
+        ScriptEventCinematicKeyframe "{66E6C3DB7D0A9D56}" {
+         FrameNumber 0
+         Script ""\
+         "		PlayerController pController = GetGame().GetPlayerController();"\
+         "		if (!pController)"\
+         "			return;"\
+         "		"\
+         "		IEntity playerEntity = pController.GetControlledEntity();"\
+         "		if (!playerEntity)"\
+         "			return;"\
+         "		"\
+         "		SCR_InventoryStorageManagerComponent invComp = SCR_InventoryStorageManagerComponent.Cast(playerEntity.FindComponent(SCR_InventoryStorageManagerComponent));"\
+         "		if (!invComp)"\
+         "			return;"\
+         "			"\
+         "		invComp.CloseInventory();"\
+         "		invComp.AllowInventoryAccess(false);"\
+         "	"
+        }
        }
       }
      }
@@ -285,6 +275,15 @@ GenericEntity : "{A1A11E5C3A29B763}Prefabs/Props/Furniture/ChairDental_01/ChairD
      RplComponent "{660CD132B158CFC5}" {
      }
      TvT_InterrogationRescueComponent "{660CD132B158CFC6}" {
+      m_sWinObjectiveName "TKA_WIN"
+      m_sLoseObjectiveName "US_WIN"
+      m_sEndMessage "Офицер Сахир Авад найден! Запись допроса зафиксирована. Победа Иракских сил!"
+      m_fEndDelaySeconds 15
+      m_sTapeRecorderName "tapeRecorder"
+      m_sVictimEntityName "victim"
+      m_sPivotEntityName "pivot"
+      m_fRescuerYawOffset 0
+      m_sCinematicEntityName "cutsceneIn"
      }
     }
     coords 1.09 0.963 -0.279
@@ -346,254 +345,9 @@ GenericEntity : "{A1A11E5C3A29B763}Prefabs/Props/Furniture/ChairDental_01/ChairD
    coords 0.619 -0.002 0.216
    angles 0 -160.329 0
   }
-  GenericEntity TASKS_AREA : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
-   components {
-    SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
-     m_aActivationActions {
-      SCR_ScenarioFrameworkCreateVariable "{64FE82134F81B9F5}" {
-       m_sVariableValue "0"
-      }
-     }
-    }
-   }
-   coords 1.315 1.865 2.908
-   angles 0 146.797 0
-   {
-    GenericEntity TASK_OBJECTS : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
-     coords 0 0 0
-     {
-      GenericEntity TorturedDudeSlot : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
-       components {
-        SCR_ScenarioFrameworkSlotBase "{5A26B3E02AC77BA0}" {
-         m_aActivationActions {
-          SCR_ScenarioFrameworkActionKillEntity "{64FE8220A0D1C21D}" {
-           m_iMaxNumberOfActivations 0
-          }
-          SCR_ScenarioFrameworkActionAttachToSlotManager "{6AD4B5798BF2A694}" {
-          }
-          SCR_ScenarioFrameworkActionOnUserActionEvent "{64FE821D5A58EA09}" {
-           m_iMaxNumberOfActivations 1
-           m_iActionID 28
-           m_aActions {
-            SCR_ScenarioFrameworkActionChangeUserActionVisibility "{64FE82057FDDD00C}" {
-             m_iMaxNumberOfActivations 1
-             m_Getter SCR_ScenarioFrameworkGetSpawnedEntity "{64FE82056A9F0F99}" {
-              m_sLayerName "TorturedDudeSlot"
-             }
-             m_iActionID 28
-             m_bVisible 0
-            }
-            SCR_ScenarioFrameworkActionOnAnimationEvent "{65C2662CA04598D9}" {
-             m_Getter SCR_ScenarioFrameworkGetPlayerEntity "{65C2662C9AC74F3D}" {
-             }
-             m_sAnimationEventString "startPlayerAnimation"
-             m_aActions {
-              SCR_ScenarioFrameworkActionPlayCinematic "{65C2662C91F7644B}" {
-               m_sCinematicTimeline "cutsceneIn"
-              }
-              SCR_ScenarioFrameworkActionCallAnimationCommand "{65C2662C8926B233}" {
-               m_iMaxNumberOfActivations 1
-               m_Getter SCR_ScenarioFrameworkGetSpawnedEntity "{65C2662C8186573E}" {
-                m_sLayerName "TorturedDudeSlot"
-               }
-               m_sAnimationCommand "CMD_Gesture_NPC"
-               m_iAnimId 11
-              }
-              SCR_ScenarioFrameworkActionStartSimpleAnimation "{65C2662D77DA3A75}" {
-               m_ActorGetter SCR_ScenarioFrameworkGetEntityByName "{65C2662D6EEA27AC}" {
-                m_sEntityName "tapeRecorder"
-               }
-               m_sAnimName "{15EB5E87B17220BE}anims/anm/NPC/male/Body/Dentist/cine_savior_dentist_Pt1_TapePlayer.anm"
-              }
-              SCR_ScenarioFrameworkActionWaitAndExecute "{65C47EE3C20E6223}" {
-               m_iDelayInSeconds 20
-               m_aActions {
-                SCR_ScenarioFrameworkActionStartSimpleAnimation "{65C47EE3C7AB82E4}" {
-                 m_ActorGetter SCR_ScenarioFrameworkGetEntityByName "{65C47EE3B9E9FE0A}" {
-                  m_sEntityName "tapeRecorder"
-                 }
-                 m_sAnimName "{47870B202CB3118A}anims/anm/NPC/male/Body/Dentist/cine_savior_dentist_recordloop_TapePlayer.anm"
-                }
-               }
-              }
-              SCR_ScenarioFrameworkActionAI "{65CE8AF3B1C9AE34}" {
-               m_Getter SCR_ScenarioFrameworkGetArrayOfAIsFromArea "{65CE8AE068599D06}" {
-                m_aAreasName {
-                 "VILLA_GARISON_BACK"
-                 "VILLA_GARRISON_FRONT"
-                 "VILLA_LEAVING_UNITS"
-                 "VILLA_MORTAR_CREW"
-                 "VillaSurroundingArea"
-                }
-               }
-               m_aAIActions {
-                SCR_ScenarioFrameworkAIActionEnableAI "{65CE8AE0B1C92B20}" {
-                 m_bEnableAI 0
-                }
-               }
-              }
-             }
-            }
-            SCR_ScenarioFrameworkActionStartAnimation "{65B68EB4F6AB10ED}" {
-             m_iMaxNumberOfActivations 1
-             m_ActorGetter SCR_ScenarioFrameworkGetPlayerEntity "{65B68EB40B7866C3}" {
-             }
-             m_PropAllignToGetter SCR_ScenarioFrameworkGetEntityByName "{65C491055B4C7E3E}" {
-              m_sEntityName "pivot"
-             }
-             m_sGraphName "{F7C5319E76546C30}anims/anm/NPC/workspaces/Omega_NPCs.agr"
-             m_GraphInstanceName "{1AAF64456A5D3EDE}anims/anm/NPC/workspaces/Omega_NPCs.asi"
-             m_iNPC 2
-            }
-            SCR_ScenarioFrameworkActionWaitAndExecute "{65C2EB987D363764}" {
-             m_iDelayInSeconds 2
-             m_aActions {
-              SCR_ScenarioFrameworkActionAttachToSlotManager "{65C2EB9876850313}" {
-               m_ActorGetter SCR_ScenarioFrameworkGetPlayerEntity "{65C2EB9869EAB135}" {
-               }
-               m_PropToAttachGetter SCR_ScenarioFrameworkGetEntityByName "{65C2EB986673EDC5}" {
-                m_sEntityName "radioForCutscene"
-               }
-               m_sSlotName "cinematicLeftHand"
-              }
-             }
-            }
-            SCR_ScenarioFrameworkActionOnAnimationEvent "{65C47EEF68167261}" {
-             m_Getter SCR_ScenarioFrameworkGetPlayerEntity "{65C47EEFAE4C2EB7}" {
-             }
-             m_sAnimationEventString "endPlayerAnimation"
-             m_aActions {
-              SCR_ScenarioFrameworkActionStopAnimation "{65C47EEF597AB9E6}" {
-               m_ActorGetter SCR_ScenarioFrameworkGetPlayerEntity "{65C47EEF5FDFF1FE}" {
-               }
-              }
-              SCR_ScenarioFrameworkActionAttachToSlotManager "{65C49100EEDB893D}" {
-               m_ActorGetter SCR_ScenarioFrameworkGetPlayerEntity "{65C491037366AA13}" {
-               }
-               m_PropToAttachGetter SCR_ScenarioFrameworkGetEntityByName "{65C4910376642287}" {
-                m_sEntityName "radioForCutscene"
-               }
-               m_sSlotName "cinematicLeftHand"
-               m_bDetachAndDelete 1
-              }
-              SCR_ScenarioFrameworkActionChangeTaskState "{65CE8AF389579D13}" {
-               m_iMaxNumberOfActivations 0
-               m_Getter SCR_ScenarioFrameworkGetTask "{64FE82059D74C5F4}" {
-                m_sLayerTaskName "RESCUE_TASK"
-               }
-               m_eTaskState CANCELLED
-              }
-              SCR_ScenarioFrameworkActionAI "{65CE8AF3ABC59A59}" {
-               m_Getter SCR_ScenarioFrameworkGetArrayOfAIsFromArea "{65CE8AE068599D06}" {
-                m_aAreasName {
-                 "VILLA_GARISON_BACK"
-                 "VILLA_GARRISON_FRONT"
-                 "VILLA_LEAVING_UNITS"
-                 "VILLA_MORTAR_CREW"
-                 "VillaSurroundingArea"
-                }
-               }
-               m_aAIActions {
-                SCR_ScenarioFrameworkAIActionEnableAI "{65CE8AE0B1C92B20}" {
-                }
-               }
-              }
-             }
-            }
-            SCR_ScenarioFrameworkActionOnAnimationEvent "{65FACA5973CF835C}" {
-             m_Getter SCR_ScenarioFrameworkGetPlayerEntity "{65FACA590D8A0B41}" {
-             }
-             m_sAnimationEventString "missionTask"
-             m_aActions {
-              SCR_ScenarioFrameworkActionChangeTaskState "{65FACA596C27C284}" {
-               m_Getter SCR_ScenarioFrameworkGetTask "{64FE82059D74C5F4}" {
-                m_sLayerTaskName "RESCUE_TASK"
-               }
-               m_eTaskState CANCELLED
-              }
-             }
-            }
-           }
-          }
-          SCR_ScenarioFrameworkActionChangeUserActionVisibility "{660CC5D78CF0F512}" {
-           m_Getter SCR_ScenarioFrameworkGetEntityByName "{660CC5D78BC2B997}" {
-            m_sEntityName "tapeInteractionPoint"
-           }
-           m_bVisible 0
-          }
-          SCR_ScenarioFrameworkActionWaitAndExecute "{65B67D85205B99F6}" {
-           m_iDelayInSeconds 1
-           m_aActions {
-            SCR_ScenarioFrameworkActionStartAnimation "{65B67D853AAF82BC}" {
-             m_iMaxNumberOfActivations 1
-             m_ActorGetter SCR_ScenarioFrameworkGetSpawnedEntity "{65B67D854EB0B5C7}" {
-              m_sLayerName "TorturedDudeSlot"
-             }
-             m_PropAllignToGetter SCR_ScenarioFrameworkGetEntityByName "{65B68EB0A26285A6}" {
-              m_sEntityName "pivot"
-             }
-             m_sGraphName "{F7C5319E76546C30}anims/anm/NPC/workspaces/Omega_NPCs.agr"
-             m_GraphInstanceName "{1AAF64456A5D3EDE}anims/anm/NPC/workspaces/Omega_NPCs.asi"
-             m_iNPC 1
-             m_bHolsterWeapon 0
-             m_bUseCinematicCommand 0
-             m_bAnimationAllowEnvironmentalExit 0
-            }
-           }
-          }
-          SCR_ScenarioFrameworkActionWaitAndExecute "{6A627245170B7175}" {
-           m_iDelayInSeconds 2
-           m_aActions {
-            SCR_ScenarioFrameworkActionSetEntityPosition "{6A6272450755260C}" {
-             m_EntityGetter SCR_ScenarioFrameworkGetSpawnedEntity "{6A6272448B0E6EB4}" {
-              m_sLayerName "TorturedDudeSlot"
-             }
-             m_DestinationEntityGetter SCR_ScenarioFrameworkGetEntityByName "{6A627244801962F7}" {
-              m_sEntityName "pivot"
-             }
-            }
-           }
-          }
-          SCR_ScenarioFrameworkActionSetWoundState "{65C4A7C345A29F06}" {
-           m_Getter SCR_ScenarioFrameworkGetSpawnedEntity "{65C4A7C3397CB5DF}" {
-            m_sLayerName "TorturedDudeSlot"
-           }
-           m_bHead 1
-           m_bTorso 1
-           m_bLeftArm 1
-           m_bRightArm 1
-           m_bLeftLeg 1
-           m_bRightLeg 1
-          }
-          SCR_ScenarioFrameworkActionOnUserActionEvent "{660CC5D7D3C6C086}" {
-           m_Getter SCR_ScenarioFrameworkGetEntityByName "{660CC5D7DE0F28AC}" {
-            m_sEntityName "tapeInteractionPoint"
-           }
-           m_aActions {
-            SCR_ScenarioFrameworkActionPlayCinematic "{660CC5D7C7638661}" {
-             m_iMaxNumberOfActivations 1
-             m_sCinematicTimeline "Angelina"
-            }
-            SCR_ScenarioFrameworkActionChangeUserActionVisibility "{660CC5D64AD7E6F2}" {
-             m_Getter SCR_ScenarioFrameworkGetEntityByName "{660CC5D6491FCFBD}" {
-              m_sEntityName "tapeInteractionPoint"
-             }
-             m_bVisible 0
-            }
-           }
-          }
-         }
-         m_sObjectToSpawn "{2D4C9D55E4E8F93F}Worlds/DimOchka/Bagheera/TvT_HostageOfTheDesert_Bagheera/ks_torturedduude_tka.et"
-         m_sID "victim"
-         m_bCanBeGarbageCollected 0
-        }
-       }
-       coords 3.112 -1.867 3.049
-       angles 0 -58.57 0
-      }
-     }
-    }
-   }
+  SCR_ChimeraCharacter victim : "{2D4C9D55E4E8F93F}Worlds/DimOchka/Bagheera/TvT_HostageOfTheDesert_Bagheera/ks_torturedduude_tka.et" {
+   coords 0.619 -0.002 0.216
+   angles 0 -160.328 0
   }
   GenericEntity : "{EFCD232A50C15173}Prefabs/Props/Furniture/Nightstand_01.et" {
    coords 1.095 -0.008 -0.326
