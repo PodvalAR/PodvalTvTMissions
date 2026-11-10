@@ -42,6 +42,12 @@ class TvT_InterrogationRescueComponent : ScriptComponent
 	[Attribute("0", UIWidgets.EditBox, "Смещение угла поворота спасителя по Yaw в градусах")]
 	protected float m_fRescuerYawOffset;
 
+	[Attribute("-10", UIWidgets.EditBox, "Начальный наклон камеры спасителя вниз в градусах (Pitch)")]
+	protected float m_fRescuerPitchOffset;
+
+	[Attribute("5", UIWidgets.EditBox, "Пауза перед переходом в дебрифинг после вывода победного сообщения (в секундах)")]
+	protected float m_fDebriefingDelaySeconds;
+
 	[Attribute("cutsceneIn", UIWidgets.EditBox, "Имя сущности кинематографической катсцены")]
 	protected string m_sCinematicEntityName;
 
@@ -84,6 +90,7 @@ class TvT_InterrogationRescueComponent : ScriptComponent
 		if (GetGame() && GetGame().GetCallqueue())
 		{
 			GetGame().GetCallqueue().Remove(FinishMission_S);
+			GetGame().GetCallqueue().Remove(TransitionToDebriefing_S);
 			GetGame().GetCallqueue().Remove(InitVictimLoitering_S);
 		}
 
@@ -268,7 +275,19 @@ class TvT_InterrogationRescueComponent : ScriptComponent
 		if (RplSession.Mode() != RplMode.Dedicated)
 			RpcDo_StopEffects();
 
-		// 4. Переход гейммода в финальное состояние Debriefing
+		// 4. Отложенный переход гейммода в финальное состояние Debriefing (пауза 5 сек на чтение сообщения)
+		int debriefDelayMs = Math.Max(1000, (int)(m_fDebriefingDelaySeconds * 1000));
+		GetGame().GetCallqueue().CallLater(TransitionToDebriefing_S, debriefDelayMs, false);
+	}
+
+	/**
+	 * @brief Переход гейммода в финальное состояние Debriefing после паузы на чтение сообщения.
+	 */
+	protected void TransitionToDebriefing_S()
+	{
+		if (!Replication.IsServer())
+			return;
+
 		PS_GameModeCoop gameMode = PS_GameModeCoop.Cast(GetGame().GetGameMode());
 		if (gameMode)
 		{
@@ -526,13 +545,14 @@ class TvT_InterrogationRescueComponent : ScriptComponent
 		if (camHandler && camHandler.IsInThirdPerson())
 			camHandler.SetThirdPerson(false);
 
-		// Направляем взгляд игрока вперед на магнитофон и кресло (Pitch = 0, Roll = 0)
+		// Направляем взгляд игрока вперед и чуть вниз на магнитофон и кресло (Pitch = m_fRescuerPitchOffset)
 		CharacterInputContext inputCtx = controller.GetInputContext();
 		if (inputCtx)
 		{
 			vector pivotAngles = Math3D.MatrixToAngles(vAnimationTransform);
 			float yawRad = pivotAngles[0] * Math.DEG2RAD;
-			vector aimAngles = Vector(yawRad, 0, 0);
+			float pitchRad = m_fRescuerPitchOffset * Math.DEG2RAD;
+			vector aimAngles = Vector(yawRad, pitchRad, 0);
 			inputCtx.SetAimingAngles(aimAngles);
 			inputCtx.SetLookAtAngles(aimAngles);
 		}
@@ -541,7 +561,7 @@ class TvT_InterrogationRescueComponent : ScriptComponent
 		CharacterHeadAimingComponent headAiming = controller.GetHeadAimingComponent();
 		if (headAiming)
 		{
-			headAiming.SetLimitAnglesOverride(-15.0, 35.0, -60.0, 60.0);
+			headAiming.SetLimitAnglesOverride(-25.0, 35.0, -60.0, 60.0);
 			headAiming.SetPitchLimitReductionMultiplier(1.25);
 		}
 
