@@ -42,6 +42,12 @@ class TvT_InterrogationRescueComponent : ScriptComponent
 	[Attribute("0", UIWidgets.EditBox, "Смещение угла поворота спасителя по Yaw в градусах")]
 	protected float m_fRescuerYawOffset;
 
+	[Attribute("-10", UIWidgets.EditBox, "Начальный наклон камеры спасителя вниз в градусах (Pitch)")]
+	protected float m_fRescuerPitchOffset;
+
+	[Attribute("5", UIWidgets.EditBox, "Пауза перед переходом в дебрифинг после вывода победного сообщения (в секундах)")]
+	protected float m_fDebriefingDelaySeconds;
+
 	[Attribute("cutsceneIn", UIWidgets.EditBox, "Имя сущности кинематографической катсцены")]
 	protected string m_sCinematicEntityName;
 
@@ -56,6 +62,11 @@ class TvT_InterrogationRescueComponent : ScriptComponent
 
 	[RplProp()]
 	protected bool m_bTriggered;
+
+	[RplProp(onRplName: "OnRpl_VictimSeated")]
+	protected bool m_bVictimSeated;
+
+	protected int m_iVictimInitClientAttempts;
 
 	protected RplComponent m_RplComponent;
 
@@ -84,7 +95,9 @@ class TvT_InterrogationRescueComponent : ScriptComponent
 		if (GetGame() && GetGame().GetCallqueue())
 		{
 			GetGame().GetCallqueue().Remove(FinishMission_S);
+			GetGame().GetCallqueue().Remove(TransitionToDebriefing_S);
 			GetGame().GetCallqueue().Remove(InitVictimLoitering_S);
+			GetGame().GetCallqueue().Remove(OnRpl_VictimSeated);
 		}
 
 		ResetAimLimits_C();
@@ -98,10 +111,13 @@ class TvT_InterrogationRescueComponent : ScriptComponent
 	}
 
 	/**
-	 * @brief Серверная посадка генерала в кресло, отключение коллизии/мед.осмотра и старт лоитеринга (m_iNPC = 1).
+	 * @brief Серверная посадка генерала в кресло и старт JIP-репликации для клиентов.
 	 */
 	void InitVictimLoitering_S()
 	{
+		if (!Replication.IsServer())
+			return;
+
 		IEntity propEntity = ResolveTargetEntity(m_sPivotEntityName);
 		if (!propEntity)
 			propEntity = GetOwner();
@@ -124,11 +140,21 @@ class TvT_InterrogationRescueComponent : ScriptComponent
 		if (!victimEnt)
 			return;
 
-		SCR_ChimeraCharacter character = SCR_ChimeraCharacter.Cast(victimEnt);
-		if (!character)
+		ApplyVictimLoitering(victimEnt, propEntity, true);
+
+		m_bVictimSeated = true;
+		Replication.BumpMe();
+	}
+
+	/**
+	 * @brief Посадка узника в кресло, отключение коллизии/гравитации/урона и запуск графа лоитеринга.
+	 */
+	protected void ApplyVictimLoitering(IEntity victimEnt, IEntity propEntity, bool isServer)
+	{
+		if (!victimEnt || !propEntity)
 			return;
 
-		// 1. Отключаем физическую коллизию капсулы узника, чтобы персонаж спасителя не выталкивался наверх
+		// 1. Отключаем физическую коллизию капсулы узника
 		Physics victimPhys = victimEnt.GetPhysics();
 		if (victimPhys)
 		{
@@ -136,7 +162,11 @@ class TvT_InterrogationRescueComponent : ScriptComponent
 			victimPhys.SetInteractionLayer(0);
 		}
 
-		// 2. Отключаем все сторонние действия на узнике (включая ванильный медицинский осмотр SCR_InspectCasualtyUserAction на лице)
+		SCR_ChimeraCharacter character = SCR_ChimeraCharacter.Cast(victimEnt);
+		if (!character)
+			return;
+
+		// 2. Отключаем сторонние действия на узнике
 		ActionsManagerComponent actionsManager = ActionsManagerComponent.Cast(victimEnt.FindComponent(ActionsManagerComponent));
 		if (actionsManager)
 		{
@@ -149,7 +179,7 @@ class TvT_InterrogationRescueComponent : ScriptComponent
 			}
 		}
 
-		// 3. Полное излечение узника (false = удаление кровотечений и сброс blood hitzone в UNDAMAGED)
+		// 3. Полное излечение узника и отключение обработки урона (бессмертие)
 		SCR_CharacterDamageManagerComponent damageMan = SCR_CharacterDamageManagerComponent.Cast(character.GetDamageManager());
 		if (damageMan)
 		{
@@ -197,13 +227,43 @@ class TvT_InterrogationRescueComponent : ScriptComponent
 			allowEnvironmentalExit: false);
 
 		vector vAnimationTransform[4] = { "1 0 0", "0 1 0", "0 0 1", "0 0 0" };
-		if (propEntity)
+		propEntity.GetWorldTransform(vAnimationTransform);
+		victimEnt.SetWorldTransform(vAnimationTransform);
+
+		if (isServer)
 		{
-			propEntity.GetWorldTransform(vAnimationTransform);
-			victimEnt.SetWorldTransform(vAnimationTransform);
+			controller.StartLoitering(propEntity, ELoiteringType.CUSTOM, false, true, true, vAnimationTransform, true, customAnimData);
+		}
+		else
+		{
+			cmdHandler.StartCommandLoitering(customAnimData);
+		}
+	}
+
+	/**
+	 * @brief Сетевой JIP-обработчик: сажает узника в кресло на подключившихся клиентах.
+	 */
+	protected void OnRpl_VictimSeated()
+	{
+		if (!m_bVictimSeated)
+			return;
+
+		IEntity propEntity = ResolveTargetEntity(m_sPivotEntityName);
+		if (!propEntity)
+			propEntity = GetOwner();
+
+		IEntity victimEnt = ResolveTargetEntity(m_sVictimEntityName);
+		if (!victimEnt || !propEntity)
+		{
+			if (m_iVictimInitClientAttempts < 25)
+			{
+				m_iVictimInitClientAttempts++;
+				GetGame().GetCallqueue().CallLater(OnRpl_VictimSeated, 200, false);
+			}
+			return;
 		}
 
-		controller.StartLoitering(propEntity, ELoiteringType.CUSTOM, false, true, true, vAnimationTransform, true, customAnimData);
+		ApplyVictimLoitering(victimEnt, propEntity, false);
 	}
 
 	/**
@@ -217,6 +277,27 @@ class TvT_InterrogationRescueComponent : ScriptComponent
 		m_bTriggered = true;
 		Replication.BumpMe();
 
+		// 1. Серверный вызов анимации узника (Authority) - реплицируется движком всем клиентам
+		IEntity victimEnt = ResolveTargetEntity(m_sVictimEntityName);
+		if (victimEnt)
+		{
+			SCR_ChimeraCharacter victimChar = SCR_ChimeraCharacter.Cast(victimEnt);
+			if (victimChar)
+			{
+				SCR_CharacterControllerComponent controller = SCR_CharacterControllerComponent.Cast(victimChar.GetCharacterController());
+				if (controller)
+				{
+					CharacterAnimationComponent animComp = controller.GetAnimationComponent();
+					if (animComp)
+					{
+						TAnimGraphCommand cmdId = animComp.BindCommand("CMD_Gesture_NPC");
+						if (cmdId != -1)
+							animComp.CallCommand4I(cmdId, 0, 11, 0, 0, 0);
+					}
+				}
+			}
+		}
+
 		RplId rescuerRplId = RplId.Invalid();
 		if (rescuer)
 		{
@@ -225,7 +306,7 @@ class TvT_InterrogationRescueComponent : ScriptComponent
 				rescuerRplId = rescuerRpl.Id();
 		}
 
-		// Запуск анимаций спасителя, генерала, магнитофона и звука
+		// 2. Запуск клиентских эффектов (анимация спасителя, магнитофон, синематик, звук)
 		Rpc(RpcDo_PlayEffects, rescuerRplId);
 		if (RplSession.Mode() != RplMode.Dedicated)
 			RpcDo_PlayEffects(rescuerRplId);
@@ -268,7 +349,19 @@ class TvT_InterrogationRescueComponent : ScriptComponent
 		if (RplSession.Mode() != RplMode.Dedicated)
 			RpcDo_StopEffects();
 
-		// 4. Переход гейммода в финальное состояние Debriefing
+		// 4. Отложенный переход гейммода в финальное состояние Debriefing (пауза 5 сек на чтение сообщения)
+		int debriefDelayMs = Math.Max(1000, (int)(m_fDebriefingDelaySeconds * 1000));
+		GetGame().GetCallqueue().CallLater(TransitionToDebriefing_S, debriefDelayMs, false);
+	}
+
+	/**
+	 * @brief Переход гейммода в финальное состояние Debriefing после паузы на чтение сообщения.
+	 */
+	protected void TransitionToDebriefing_S()
+	{
+		if (!Replication.IsServer())
+			return;
+
 		PS_GameModeCoop gameMode = PS_GameModeCoop.Cast(GetGame().GetGameMode());
 		if (gameMode)
 		{
@@ -526,13 +619,14 @@ class TvT_InterrogationRescueComponent : ScriptComponent
 		if (camHandler && camHandler.IsInThirdPerson())
 			camHandler.SetThirdPerson(false);
 
-		// Направляем взгляд игрока вперед на магнитофон и кресло (Pitch = 0, Roll = 0)
+		// Направляем взгляд игрока вперед и чуть вниз на магнитофон и кресло (Pitch = m_fRescuerPitchOffset)
 		CharacterInputContext inputCtx = controller.GetInputContext();
 		if (inputCtx)
 		{
 			vector pivotAngles = Math3D.MatrixToAngles(vAnimationTransform);
 			float yawRad = pivotAngles[0] * Math.DEG2RAD;
-			vector aimAngles = Vector(yawRad, 0, 0);
+			float pitchRad = m_fRescuerPitchOffset * Math.DEG2RAD;
+			vector aimAngles = Vector(yawRad, pitchRad, 0);
 			inputCtx.SetAimingAngles(aimAngles);
 			inputCtx.SetLookAtAngles(aimAngles);
 		}
@@ -541,7 +635,7 @@ class TvT_InterrogationRescueComponent : ScriptComponent
 		CharacterHeadAimingComponent headAiming = controller.GetHeadAimingComponent();
 		if (headAiming)
 		{
-			headAiming.SetLimitAnglesOverride(-15.0, 35.0, -60.0, 60.0);
+			headAiming.SetLimitAnglesOverride(-25.0, 35.0, -60.0, 60.0);
 			headAiming.SetPitchLimitReductionMultiplier(1.25);
 		}
 
