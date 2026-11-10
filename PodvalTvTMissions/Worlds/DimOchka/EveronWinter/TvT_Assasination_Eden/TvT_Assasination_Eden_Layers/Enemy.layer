@@ -105,6 +105,7 @@ SCR_AIGroup VIP : "{758E98BA2BCB786E}Prefabs/Groups/BLUFOR/French Army/dim_FR_De
  }
  coords 11336.354 62.438 11224.52
  angles 0 173.525 0
+ m_faction "Ses_NAPA"
  m_aUnitPrefabSlots {
   "{FF071C6CD5C82019}Worlds/DimOchka/EveronWinter/TvT_Assasination_Eden/Rebels/dim_RebelWinter2_Pilot.et"
   "{794263FF38AF6CF8}Worlds/DimOchka/EveronWinter/TvT_Assasination_Eden/Rebels/dim_RebelWinter2_Rfl3.et"
@@ -270,10 +271,51 @@ $grp SCR_AIGroup : "{EB059CC44716B326}Prefabs/Groups/INDFOR/Ses_NAPA/dim_Group_N
     m_iCompanyCallsign 1
    }
   }
-  coords 7438.071 136.99 4728.762
+  coords 7438.148 136.99 4728.723
   angles 0 27.255 0
   m_aUnitPrefabSlots {
    "{D7E75A8E1FB61439}Worlds/DimOchka/EveronWinter/TvT_MountainKing_Eden/REBELS/dim_RebelWinter_Officer.et"
+   "{ABCAE29FFFD9A37F}Worlds/DimOchka/EveronWinter/TvT_MountainKing_Eden/REBELS/dim_RebelWinter_LAT.et"
+  }
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{696976B34DD51700}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 1691.486 62.415 5887.271
+  angles 0 -96.51 0
+  m_aUnitPrefabSlots {
+   "{5748C7A5AEA08AE2}Worlds/DimOchka/EveronWinter/TvT_MountainKing_Eden/REBELS/dim_RebelWinter_SL.et"
+   "{508F3DF4C8263021}Worlds/DimOchka/EveronWinter/TvT_MountainKing_Eden/REBELS/dim_RebelWinter_TL.et"
+   "{ABCAE29FFFD9A37F}Worlds/DimOchka/EveronWinter/TvT_MountainKing_Eden/REBELS/dim_RebelWinter_LAT.et"
+   "{3715489B6B9341DB}Worlds/DimOchka/EveronWinter/TvT_MountainKing_Eden/REBELS/dim_RebelWinter_GL.et"
+   "{56E5384D6FFC6741}Worlds/DimOchka/EveronWinter/TvT_MountainKing_Eden/REBELS/dim_RebelWinter_Rfl_1.et"
+   "{3AB10CADD338E86F}Worlds/DimOchka/EveronWinter/TvT_MountainKing_Eden/REBELS/dim_RebelWinter_Rfl_2.et"
+   "{DF2D4054DFDD7F04}Worlds/DimOchka/EveronWinter/TvT_MountainKing_Eden/REBELS/dim_RebelWinter_Rfl_3.et"
+   "{7575A367D2E52C71}Worlds/DimOchka/EveronWinter/TvT_MountainKing_Eden/REBELS/dim_RebelWinter_Sapper.et"
+   "{B5988DA40AAC5CF2}Worlds/DimOchka/EveronWinter/TvT_MountainKing_Eden/REBELS/dim_RebelWinter_Medic.et"
+  }
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{696976B34DD51700}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 1693.404 63.128 5874.199
+  angles 0 -99.155 0
+  m_aUnitPrefabSlots {
+   "{5B5451C5D830DDAE}Worlds/DimOchka/EveronWinter/TvT_MountainKing_Eden/REBELS/dim_RebelWinter_SL_3.et"
+   "{508F3DF4C8263021}Worlds/DimOchka/EveronWinter/TvT_MountainKing_Eden/REBELS/dim_RebelWinter_TL.et"
+   "{126073C8E5EA0581}Worlds/DimOchka/EveronWinter/TvT_MountainKing_Eden/REBELS/dim_RebelWinter_LAT2.et"
+   "{3715489B6B9341DB}Worlds/DimOchka/EveronWinter/TvT_MountainKing_Eden/REBELS/dim_RebelWinter_GL.et"
+   "{56E5384D6FFC6741}Worlds/DimOchka/EveronWinter/TvT_MountainKing_Eden/REBELS/dim_RebelWinter_Rfl_1.et"
+   "{3AB10CADD338E86F}Worlds/DimOchka/EveronWinter/TvT_MountainKing_Eden/REBELS/dim_RebelWinter_Rfl_2.et"
+   "{7575A367D2E52C71}Worlds/DimOchka/EveronWinter/TvT_MountainKing_Eden/REBELS/dim_RebelWinter_Sapper.et"
+   "{B5988DA40AAC5CF2}Worlds/DimOchka/EveronWinter/TvT_MountainKing_Eden/REBELS/dim_RebelWinter_Medic.et"
+   "{84C386A0637AC650}Worlds/DimOchka/EveronWinter/TvT_MountainKing_Eden/REBELS/dim_RebelWinter_Marksman.et"
   }
  }
 }

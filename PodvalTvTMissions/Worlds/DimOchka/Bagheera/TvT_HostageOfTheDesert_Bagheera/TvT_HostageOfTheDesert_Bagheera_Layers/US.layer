@@ -101,6 +101,11 @@ $grp SCR_AIGroup : "{0956C232E69AF443}Prefabs/Groups/BLUFOR/US/Regular/dim_Group
   m_sCustomNameSet "Рейнджеры США"
  }
 }
+Vehicle M923A1_engineer1 : "{2D74C39A650A3030}Prefabs/Vehicles/Wheeled/M923A1/M923A1_engineer.et" {
+ coords 4727.875 48.445 4461.099
+ angles 0 -75 0
+ m_bEnableMoveOnFreeze 1
+}
 $grp Vehicle : "{57AA372F852C1CD5}Prefabs/Vehicles/Wheeled/LR_3Series/dim_LWB_M1_Desert.et" {
  dim_LWB_M1_Desert1 {
   coords 4751.092 48.445 4543.853
@@ -112,10 +117,6 @@ $grp Vehicle : "{57AA372F852C1CD5}Prefabs/Vehicles/Wheeled/LR_3Series/dim_LWB_M1
   angles 0 -157.231 0
   m_sAttachmentGroupName "SPN2"
  }
-}
-Vehicle M923A1_engineer_supplies1 : "{A06E5FB6A980BEC5}Prefabs/Vehicles/Wheeled/M923A1/M923A1_engineer_supplies.et" {
- coords 4727.599 48.445 4461.709
- angles 0 -75 0
 }
 $grp SCR_AIGroup : "{AE323503E7643499}Prefabs/Groups/BLUFOR/British Forces/dim_SBS_UK_SPN.et" {
  SPN {
