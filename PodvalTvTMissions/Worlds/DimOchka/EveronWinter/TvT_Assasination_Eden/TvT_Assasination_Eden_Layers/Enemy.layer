@@ -1,10 +1,17 @@
+Vehicle V2101_yellow1 : "{02582024FDD52845}Prefabs/Vehicles/Wheeled/V2101/V2101_yellow.et" {
+ coords 1688.825 62.392 5880.456
+ angles -1.762 -10.157 0.316
+ m_sAttachmentGroupName "NAPA2"
+}
 Vehicle V2101_darkBlue1 : "{1846AF973412368A}Prefabs/Vehicles/Wheeled/V2101/V2101_darkBlue.et" {
  coords 7482.226 138.649 4717.118
  angles -2.804 -63.954 -0.375
+ m_sAttachmentGroupName "NAPA5"
 }
 Vehicle V2101_darkRed1 : "{1B416443AC87C8C2}Prefabs/Vehicles/Wheeled/V2101/V2101_darkRed.et" {
  coords 4522.468 14.139 9481.819
  angles 3.693 -145.715 2.515
+ m_sAttachmentGroupName "NAPA8"
 }
 Vehicle UAZ452_cargo_CIV_blue1 : "{1D96D899FA313A08}Prefabs/Vehicles/Wheeled/UAZ452/UAZ452_cargo_CIV_blue.et" {
  components {
@@ -63,44 +70,67 @@ Vehicle UAZ452_cargo_CIV_blue1 : "{1D96D899FA313A08}Prefabs/Vehicles/Wheeled/UAZ
  }
  coords 11336.088 62.397 11221.382
  angles -0.479 83.423 3.655
+ m_sAttachmentGroupName "VIP"
+ m_bEnableMoveOnFreeze 1
 }
-SCR_DestructibleBuildingEntity : "{2EBA3486062A5A53}Prefabs/Structures/Military/Bunkers/AirfieldBunker_E_01/AirfieldBunker_E_01_big.et" {
- coords 5448.762 50.401 10524.877
-}
-Vehicle S105_lightgreen1 : "{321016E0F9361A22}Prefabs/Vehicles/Wheeled/S105/S105_lightgreen.et" {
- coords 7462.938 137.954 4717.765
- angles -2.804 -64.001 -0.372
+$grp Vehicle : "{321016E0F9361A22}Prefabs/Vehicles/Wheeled/S105/S105_lightgreen.et" {
+ S105_lightgreen1 {
+  coords 7462.938 137.954 4717.765
+  angles -2.804 -64.001 -0.372
+  m_sAttachmentGroupName "NAPA4"
+ }
+ S105_lightgreen2 {
+  coords 1686.168 61.771 5897.564
+  angles -2.667 -6.468 0.302
+  m_sAttachmentGroupName "NAPA1"
+ }
 }
 Vehicle V2101_lightGreen1 : "{4477ED1B4762DFCB}Prefabs/Vehicles/Wheeled/V2101/V2101_lightGreen.et" {
  coords 7444.893 137.09 4737.862
  angles -1.647 -66.913 -0.702
+ m_sAttachmentGroupName "NAPA3"
 }
 $grp Vehicle : "{4A5D95F81DBAC29F}Prefabs/Vehicles/Wheeled/T601/T601_blue_twoTone.et" {
  T601_blue_twoTone1 {
   coords 7460.31 137.678 4729.2
   angles -1.998 -66.568 0.109
+  m_sAttachmentGroupName "NAPA4"
  }
  T601_blue_twoTone2 {
   coords 4499.529 13.905 9479.337
   angles -2.683 -89.958 -0.896
+  m_sAttachmentGroupName "NAPA9"
  }
 }
 Vehicle S1203_transport_yellow1 : "{4C79EB5FADB89B7A}Prefabs/Vehicles/Wheeled/S1203/S1203_transport_yellow.et" {
  coords 4517.706 14.164 9479.721
  angles -3.248 -93.447 5.551
+ m_sAttachmentGroupName "NAPA8"
+}
+Vehicle T601_white1 : "{54483CA4A26F8632}Prefabs/Vehicles/Wheeled/T601/T601_white.et" {
+ coords 1688.126 62.201 5886.63
+ angles -1.933 -11.524 -0.519
+ m_sAttachmentGroupName "NAPA1"
+}
+Vehicle V2101_beige1 : "{5E696DD4888CE406}Prefabs/Vehicles/Wheeled/V2101/V2101_beige.et" {
+ coords 1687.191 62.038 5891.383
+ angles -1.926 -10.866 -0.541
+ m_sAttachmentGroupName "NAPA1"
 }
 Vehicle vaz_2109_breeze1 : "{60C35E44BC203BDC}Prefabs/Vehicles/Wheeled/vaz_2109/vaz_2109_breeze.et" {
  coords 7493.313 139.544 4699.192
  angles -2.72 -55.586 -0.778
+ m_sAttachmentGroupName "NAPA6"
 }
 Vehicle V2101_lightBlue1 : "{6F97E3363DB4BC2E}Prefabs/Vehicles/Wheeled/V2101/V2101_lightBlue.et" {
  coords 7457.323 137.709 4720.649
  angles -2.45 -59.544 0.635
+ m_sAttachmentGroupName "NAPA4"
 }
 SCR_AIGroup VIP : "{758E98BA2BCB786E}Prefabs/Groups/BLUFOR/French Army/dim_FR_Desert_HQ.et" {
  components {
   PS_GroupCallsignAssigner "{68B17A6598BECDF8}" {
-   m_iSquadCallsign 1
+   m_iCompanyCallsign 3
   }
  }
  coords 11336.354 62.438 11224.52
@@ -115,37 +145,45 @@ SCR_AIGroup VIP : "{758E98BA2BCB786E}Prefabs/Groups/BLUFOR/French Army/dim_FR_De
 Vehicle T601_beige_twoTone1 : "{99EAA21F54EFE595}Prefabs/Vehicles/Wheeled/T601/T601_beige_twoTone.et" {
  coords 7472.722 138.4 4711.838
  angles -1.997 -59.996 -0.12
+ m_sAttachmentGroupName "NAPA5"
+}
+Vehicle T601_green1 : "{9A40C9D2689EE151}Prefabs/Vehicles/Wheeled/T601/T601_green.et" {
+ coords 1689.839 62.595 5875.172
+ angles -4.408 -9.321 0.723
+ m_sAttachmentGroupName "NAPA2"
 }
 Vehicle S1203_transport_brown1 : "{ACED839A6C5BE657}Prefabs/Vehicles/Wheeled/S1203/S1203_transport_brown.et" {
  coords 7446.783 137.306 4725.814
  angles -1.656 -67.732 -0.678
+ m_sAttachmentGroupName "NAPA3"
 }
 Vehicle S105_green1 : "{AD80FB47D868C775}Prefabs/Vehicles/Wheeled/S105/S105_green.et" {
  coords 4510.576 13.992 9479.998
  angles 0.893 -89.958 2.684
+ m_sAttachmentGroupName "NAPA9"
 }
 Vehicle V2101_white1 : "{AE99BC6F557A648F}Prefabs/Vehicles/Wheeled/V2101/V2101_white.et" {
  coords 7435.579 136.886 4730.459
  angles -1.991 -69.276 0.204
+ m_sAttachmentGroupName "NAPA7"
 }
 Vehicle Cessna172zbq1 : "{B05C52F642F47298}Prefabs/Vehicles/Planes/Cessna172zbq.et" {
  coords 10594.986 18.543 11992.284
  angles 0 -75 0
+ m_sAttachmentGroupName "VIP"
 }
 Vehicle vaz_2109_Niagara1 : "{C629A9B629B82DC6}Prefabs/Vehicles/Wheeled/vaz_2109/vaz_2109_Niagara.et" {
  coords 4504.763 13.969 9479.255
  angles 0 -90 0
+ m_sAttachmentGroupName "NAPA9"
 }
 Vehicle UAZ469_covered_CIV_blue1 : "{C8B16ABCA57679A2}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_covered_CIV_blue.et" {
  coords 7499.221 139.911 4695.286
  angles -3.923 -52.354 -0.768
-}
-SCR_DestructibleBuildingEntity : "{DC41ABA09A6A2177}Prefabs/Structures/Military/Fortifications/Bunker_SPS/Bunker_SPS2M_covered.et" {
- coords 5406.619 44.507 10541.595
- angles 0 -85.098 0
+ m_sAttachmentGroupName "NAPA6"
 }
 $grp SCR_AIGroup : "{EB059CC44716B326}Prefabs/Groups/INDFOR/Ses_NAPA/dim_Group_NAPA_Squad.et" {
- {
+ NAPA3 {
   components {
    PS_GroupCallsignAssigner "{696976B34DD51700}" {
     m_iCompanyCallsign 1
@@ -164,11 +202,13 @@ $grp SCR_AIGroup : "{EB059CC44716B326}Prefabs/Groups/INDFOR/Ses_NAPA/dim_Group_N
    "{7575A367D2E52C71}Worlds/DimOchka/EveronWinter/TvT_MountainKing_Eden/REBELS/dim_RebelWinter_Sapper.et"
    "{B5988DA40AAC5CF2}Worlds/DimOchka/EveronWinter/TvT_MountainKing_Eden/REBELS/dim_RebelWinter_Medic.et"
   }
+  m_sCustomNameSet "Отряд заговорщиков"
  }
- {
+ NAPA4 {
   components {
    PS_GroupCallsignAssigner "{696976B34DD51700}" {
-    m_iCompanyCallsign 2
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
    }
   }
   coords 7469.459 137.987 4727.423
@@ -184,11 +224,13 @@ $grp SCR_AIGroup : "{EB059CC44716B326}Prefabs/Groups/INDFOR/Ses_NAPA/dim_Group_N
    "{B5988DA40AAC5CF2}Worlds/DimOchka/EveronWinter/TvT_MountainKing_Eden/REBELS/dim_RebelWinter_Medic.et"
    "{84C386A0637AC650}Worlds/DimOchka/EveronWinter/TvT_MountainKing_Eden/REBELS/dim_RebelWinter_Marksman.et"
   }
+  m_sCustomNameSet "Отряд заговорщиков"
  }
- {
+ NAPA5 {
   components {
    PS_GroupCallsignAssigner "{696976B34DD51700}" {
-    m_iCompanyCallsign 3
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
    }
   }
   coords 7482.11 138.577 4719.258
@@ -204,11 +246,13 @@ $grp SCR_AIGroup : "{EB059CC44716B326}Prefabs/Groups/INDFOR/Ses_NAPA/dim_Group_N
    "{B5988DA40AAC5CF2}Worlds/DimOchka/EveronWinter/TvT_MountainKing_Eden/REBELS/dim_RebelWinter_Medic.et"
    "{1BF83B06E5CA639B}Worlds/DimOchka/EveronWinter/TvT_MountainKing_Eden/REBELS/dim_RebelWinter_Sniper.et"
   }
+  m_sCustomNameSet "Отряд заговорщиков"
  }
- {
+ NAPA6 {
   components {
    PS_GroupCallsignAssigner "{696976B34DD51700}" {
     m_iCompanyCallsign 1
+    m_iSquadCallsign 3
    }
   }
   coords 7501.161 139.532 4706.917
@@ -224,11 +268,13 @@ $grp SCR_AIGroup : "{EB059CC44716B326}Prefabs/Groups/INDFOR/Ses_NAPA/dim_Group_N
    "{7575A367D2E52C71}Worlds/DimOchka/EveronWinter/TvT_MountainKing_Eden/REBELS/dim_RebelWinter_Sapper.et"
    "{B5988DA40AAC5CF2}Worlds/DimOchka/EveronWinter/TvT_MountainKing_Eden/REBELS/dim_RebelWinter_Medic.et"
   }
+  m_sCustomNameSet "Отряд заговорщиков"
  }
- {
+ NAPA8 {
   components {
    PS_GroupCallsignAssigner "{696976B34DD51700}" {
-    m_iCompanyCallsign 1
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
    }
   }
   coords 4518.351 14.245 9472.182
@@ -244,8 +290,9 @@ $grp SCR_AIGroup : "{EB059CC44716B326}Prefabs/Groups/INDFOR/Ses_NAPA/dim_Group_N
    "{BD2F054EC7B2E010}Worlds/DimOchka/EveronWinter/TvT_Assasination_Eden/Rebels/dim_RebelWinter2_sapper.et"
    "{B98B82A8ECABCC0B}Worlds/DimOchka/EveronWinter/TvT_Assasination_Eden/Rebels/dim_RebelWinter2_Medic.et"
   }
+  m_sCustomNameSet "Безоружный отряд"
  }
- {
+ NAPA9 {
   components {
    PS_GroupCallsignAssigner "{696976B34DD51700}" {
     m_iCompanyCallsign 2
@@ -264,24 +311,21 @@ $grp SCR_AIGroup : "{EB059CC44716B326}Prefabs/Groups/INDFOR/Ses_NAPA/dim_Group_N
    "{1277BC13CC4828B3}Worlds/DimOchka/EveronWinter/TvT_Assasination_Eden/Rebels/dim_RebelWinter2_Marksman.et"
    "{D3A29D2FF09DAFFA}Worlds/DimOchka/EveronWinter/TvT_Assasination_Eden/Rebels/dim_RebelWinter2_Sniper.et"
   }
+  m_sCustomNameSet "Безоружный отряд"
  }
- {
-  components {
-   PS_GroupCallsignAssigner "{696976B34DD51700}" {
-    m_iCompanyCallsign 1
-   }
-  }
+ NAPA7 {
   coords 7438.148 136.99 4728.723
   angles 0 27.255 0
   m_aUnitPrefabSlots {
    "{D7E75A8E1FB61439}Worlds/DimOchka/EveronWinter/TvT_MountainKing_Eden/REBELS/dim_RebelWinter_Officer.et"
    "{ABCAE29FFFD9A37F}Worlds/DimOchka/EveronWinter/TvT_MountainKing_Eden/REBELS/dim_RebelWinter_LAT.et"
   }
+  m_sCustomNameSet "Офицер заговорщиков"
  }
- {
+ NAPA1 {
   components {
    PS_GroupCallsignAssigner "{696976B34DD51700}" {
-    m_iCompanyCallsign 1
+    m_iCompanyCallsign 4
    }
   }
   coords 1691.486 62.415 5887.271
@@ -297,11 +341,13 @@ $grp SCR_AIGroup : "{EB059CC44716B326}Prefabs/Groups/INDFOR/Ses_NAPA/dim_Group_N
    "{7575A367D2E52C71}Worlds/DimOchka/EveronWinter/TvT_MountainKing_Eden/REBELS/dim_RebelWinter_Sapper.et"
    "{B5988DA40AAC5CF2}Worlds/DimOchka/EveronWinter/TvT_MountainKing_Eden/REBELS/dim_RebelWinter_Medic.et"
   }
+  m_sCustomNameSet "Отряд заговорщиков"
  }
- {
+ NAPA2 {
   components {
    PS_GroupCallsignAssigner "{696976B34DD51700}" {
-    m_iCompanyCallsign 2
+    m_iCompanyCallsign 4
+    m_iSquadCallsign 1
    }
   }
   coords 1693.404 63.128 5874.199
@@ -317,9 +363,18 @@ $grp SCR_AIGroup : "{EB059CC44716B326}Prefabs/Groups/INDFOR/Ses_NAPA/dim_Group_N
    "{B5988DA40AAC5CF2}Worlds/DimOchka/EveronWinter/TvT_MountainKing_Eden/REBELS/dim_RebelWinter_Medic.et"
    "{84C386A0637AC650}Worlds/DimOchka/EveronWinter/TvT_MountainKing_Eden/REBELS/dim_RebelWinter_Marksman.et"
   }
+  m_sCustomNameSet "Отряд заговорщиков"
  }
 }
-Vehicle T601_orange_twoTone1 : "{F185576106FA87E7}Prefabs/Vehicles/Wheeled/T601/T601_orange_twoTone.et" {
- coords 7472.243 138.187 4722.47
- angles -1.997 -59.996 -0.12
+$grp Vehicle : "{F185576106FA87E7}Prefabs/Vehicles/Wheeled/T601/T601_orange_twoTone.et" {
+ T601_orange_twoTone1 {
+  coords 7472.243 138.187 4722.47
+  angles -1.997 -59.996 -0.12
+  m_sAttachmentGroupName "NAPA5"
+ }
+ T601_orange_twoTone2 {
+  coords 1691.104 62.925 5870.565
+  angles -4.168 -21.137 1.609
+  m_sAttachmentGroupName "NAPA2"
+ }
 }

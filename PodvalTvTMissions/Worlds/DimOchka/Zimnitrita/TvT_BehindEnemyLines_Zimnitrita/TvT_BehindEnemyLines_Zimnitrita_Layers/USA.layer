@@ -110,12 +110,36 @@ $grp Vehicle : "{08F4BDDAD3E2EB7C}Prefabs/Vehicles/FixedWing/C-130/C130J.et" {
 }
 $grp Vehicle : "{11FB7857ABEF62B7}Prefabs/Vehicles/Wheeled/M1083/M1083_Transport_Covered_Woodland.et" {
  M1083_Transport_Covered_Woodland1 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{65B6498665024F6E}" {
+    MultiSlots {
+     MultiSlotConfiguration "{65B6498600000101}" {
+      SlotTemplate InventoryStorageSlot Jerrycan {
+       Prefab "{F0A675A839C1ACAD}Prefabs/Items/Equipment/Backpacks/GMS_StaticLine_Parachute.et"
+      }
+      NumSlots 20
+     }
+    }
+   }
+  }
   coords 6322.166 234.325 1860.705
   angles 0 142.009 0
   m_sAttachmentGroupName "US_MATV"
   m_bEnableMoveOnFreeze 1
  }
  M1083_Transport_Covered_Woodland2 {
+  components {
+   SCR_UniversalInventoryStorageComponent "{65B6498665024F6E}" {
+    MultiSlots {
+     MultiSlotConfiguration "{65B6498600000101}" {
+      SlotTemplate InventoryStorageSlot Jerrycan {
+       Prefab "{F0A675A839C1ACAD}Prefabs/Items/Equipment/Backpacks/GMS_StaticLine_Parachute.et"
+      }
+      NumSlots 20
+     }
+    }
+   }
+  }
   coords 6345.355 234.325 1887.744
   angles 0 141.889 0
   m_sAttachmentGroupName "US_MATV2"

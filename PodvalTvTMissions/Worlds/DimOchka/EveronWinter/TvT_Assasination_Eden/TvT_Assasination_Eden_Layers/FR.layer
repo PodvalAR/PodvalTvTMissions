@@ -133,14 +133,17 @@ $grp Vehicle : "{0BBC303A84D87434}Prefabs/Vehicles/Land_Vehicles/Wheeled_Vehicle
   }
   coords 7710.676 12.969 8111.407
   angles 0 -139.155 0
+  m_sAttachmentGroupName "FR3"
  }
  VBMR_VTT_CE2 {
   coords 7700.399 12.969 8099.185
   angles 0 -139.577 0
+  m_sAttachmentGroupName "FR2"
  }
  VBMR_VTT_CE3 {
   coords 7689.315 12.969 8087.204
   angles 0 -139.577 0
+  m_sAttachmentGroupName "FR1"
  }
 }
 Vehicle VBCI_Dragar_CE1 : "{2834E391EC6FC919}Prefabs/Vehicles/Land_Vehicles/Wheeled_Vehicles/VBCI/VBCI_Dragar_CE.et" {
@@ -216,10 +219,11 @@ Vehicle VBCI_Dragar_CE1 : "{2834E391EC6FC919}Prefabs/Vehicles/Land_Vehicles/Whee
  angles 0.859 -106.388 -0.253
 }
 $grp SCR_AIGroup : "{5A9B6C01177635FF}Prefabs/Groups/BLUFOR/French Army/dim_FR_Desert_Infantry_Squad.et" {
- {
+ FR3 {
   components {
    PS_GroupCallsignAssigner "{68B17A65926CDAA3}" {
-    m_iCompanyCallsign 1
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 2
    }
   }
   coords 7704.639 12.969 8119.265
@@ -236,10 +240,11 @@ $grp SCR_AIGroup : "{5A9B6C01177635FF}Prefabs/Groups/BLUFOR/French Army/dim_FR_D
    "{6850692FC045CE51}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_Rifleman.et"
   }
  }
- {
+ FR2 {
   components {
    PS_GroupCallsignAssigner "{68B17A65926CDAA3}" {
     m_iCompanyCallsign 2
+    m_iSquadCallsign 1
    }
   }
   coords 7693.158 12.969 8107.479
@@ -256,10 +261,10 @@ $grp SCR_AIGroup : "{5A9B6C01177635FF}Prefabs/Groups/BLUFOR/French Army/dim_FR_D
    "{6850692FC045CE51}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_Rifleman.et"
   }
  }
- {
+ FR1 {
   components {
    PS_GroupCallsignAssigner "{68B17A65926CDAA3}" {
-    m_iCompanyCallsign 3
+    m_iCompanyCallsign 2
    }
   }
   coords 7684.39 12.981 8095.519

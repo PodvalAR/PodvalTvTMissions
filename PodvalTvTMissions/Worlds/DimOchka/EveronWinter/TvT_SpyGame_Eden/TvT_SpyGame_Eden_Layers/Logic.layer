@@ -1,0 +1,121 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ {
+  coords 1869.258 8.518 5228.316
+  m_sTitle "Правила и задачи"
+  m_sDescriptionLayout "{41DAF7B7061DC0BC}UI/MissionDescription/DescriptionEditable.layout"
+  m_sTextData "ПРАВИЛА:"\
+  " 1. Запрещено взлетать на фриз-тайме (двигатели запустить можно);"\
+  " 2. Французским войска на базе запрещено покидать ее в течении 5 минут после фриз-тайма (сигналом что можно будет пролетающий самолет);"\
+  " 3. Запрещено стрелять с гранатометов по зданиям в триггере."\
+  ""\
+  "ЗАДАЧИ:"\
+  "• Франции: "\
+  " 1. Не дать найти шпиона;"\
+  " 2. Удержать базу."\
+  ""\
+  "• НОАК:"\
+  " 1. Найти китайского агента (синяя зона)."\
+  ""\
+  "Дополнительно:"\
+  "1. Миссия завершается через action меню."
+  m_aVisibleForFactions {
+   "DIM_PLA"
+   "FR"
+   "Ses_NAPA"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+ {
+  coords 1869.258 8.518 5228.316
+  m_sTitle "Обстановка"
+  m_sTextData "После покушения на китайского министра французским войскам удаётся захватить выжившего участника заговора. Однако Французы отказывается передавать пленного китайской стороне, настаивая на проведении собственного расследования. Ситуация осложняется тем, что китайский агент,  сообщивший о нападении, перестал выходить на связь с французской базы в Леви."\
+  ""\
+  "Расценив действия французского командования как попытку скрыть причастность к заговору, Пекин направляет к Эверону военно-морскую группировку. На фоне растущей напряжённости французские подразделения усиливают присутствие на острове и продолжают провокационные действия."\
+  ""\
+  "Морская пехота КНР готовится к высадке на базу Леви, чтобы освободить агента и установить контроль над объектом."
+  m_aVisibleForFactions {
+   "FR"
+   "DIM_PLA"
+   "Ses_NAPA"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+ {
+  coords 1869.258 8.518 5228.316
+  m_sTitle "Сообщение ГМу"
+  m_sDescriptionLayout "{41DAF7B7061DC0BC}UI/MissionDescription/DescriptionEditable.layout"
+  m_sTextData "Спустя 5 минут после окончания фриз-тайма надо пустить пролетающий самолет над базой."
+  m_aVisibleForFactions {
+   "DIM_PLA"
+   "FR"
+   "Ses_NAPA"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+}
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ FR_WIN {
+  coords 1927.902 13.152 5238.651
+  m_sTitle "База удержана"
+  m_sFactionKey "FR"
+  m_bAdvanceWhenTriggered 1
+ }
+ NOAK_WIN {
+  coords 1927.902 13.152 5238.651
+  m_sTitle "Китайский агент найден"
+  m_sFactionKey "DIM_PLA"
+  m_bAdvanceWhenTriggered 1
+ }
+}
+PolylineShapeEntity : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
+ components {
+  PS_PolyZone "{60E90266F25533F6}" {
+   m_cPolygonColor 0.506 0.584 0.812 1
+   m_fPolygonUVScale 0.44
+   m_cPolygonBorderColor 0 0.125 0.502 1
+   m_aVisibleForFactions {
+    "FR"
+    "DIM_PLA"
+    ""
+   }
+  }
+ }
+ coords 7366.652 163.073 4276.975
+ Points {
+  ShapePoint "{6AD6CDBDFFCB8A9C}" {
+   Position 53.777 -0.805 107.472
+  }
+  ShapePoint "{6AD6CDBDF9D711DA}" {
+   Position 273.353 3.771 41.268
+  }
+  ShapePoint "{6AD6CDBDFB8E2462}" {
+   Position 227.826 3.771 -117.86
+  }
+  ShapePoint "{6AD6CDBDFA1D6338}" {
+   Position 157.341 3.771 -96.038
+  }
+  ShapePoint "{6AD6CDBE05E971BA}" {
+   Position 143.657 3.785 -93.432
+  }
+  ShapePoint "{6AD6CDBE047F4E74}" {
+   Position 144.735 3.04 -39.809
+  }
+  ShapePoint "{6AD6CDBE066A53D0}" {
+   Position 43.293 0.522 -15.036
+  }
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 2537.186 4.243 2315.116
+}

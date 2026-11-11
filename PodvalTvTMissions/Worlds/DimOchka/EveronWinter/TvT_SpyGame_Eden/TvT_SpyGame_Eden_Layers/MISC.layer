@@ -1,0 +1,128 @@
+CinematicEntity Scene {
+ coords 0 0 0
+ Scene CinematicScene "{6AD6CDB896B539AE}" {
+  Tracks {
+   AnimationCinematicTrack "{6AD6CDB891C8CB8D}" {
+    TrackName "A"
+    Play BooleanCinematicTrack "{6AD6CDB891C8CA64}" {
+     TrackName "Play"
+    }
+   }
+  }
+ }
+}
+GenericEntity {
+ components {
+  MeshObject "{6AD6CDB83FEFE951}" {
+   Object "{CE9299E99CA39361}Assets/Items/Medicine/Scissors_01/Scissors.xob"
+  }
+ }
+ coords 7473.462 169.381 4268.383
+ angles 90 0 54.91
+}
+$grp DecalEntity : "{1DC3A792132D86CB}Prefabs/Decals/Blood/BloodStain_Large_02.et" {
+ {
+  coords 7473.617 4.819 4268.427
+  angles -90 -180 -180
+  scale 0.39
+ }
+ {
+  coords 7473.499 4.323 4266.059
+  angles -90 -180 -180
+  scale 1.5
+ }
+}
+DecalEntity : "{32D707B931FD52FE}Prefabs/Decals/Blood/BloodStain_Wall_01.et" {
+ coords 7473.578 4.951 4265.532
+ angles 0 90 -90
+ scale 1.632
+}
+GenericEntity : "{33B2DFDCD0EBA3DB}Prefabs/Items/Equipment/Kits/RepairKit_01/RepairKit_01_wrench.et" {
+ coords 7473.625 169.381 4268.504
+}
+$grp DecalEntity : "{3BD66CDD309673DB}Prefabs/Decals/Blood/BloodStain_Drops_01.et" {
+ {
+  coords 7473.21 4.323 4268.071
+  angles -90 -180 -180
+  scale 2
+ }
+ {
+  coords 7472.984 4.323 4266.353
+  angles -90 0 14.764
+  scale 2
+ }
+ {
+  coords 7473.202 4.323 4270.626
+  angles -90 -180 -180
+  scale 2
+ }
+}
+GameEntity : "{4CEE4FDF71E80099}Prefabs/Props/Medical/LampSurgical_01_on.et" {
+ coords 7474.117 168.885 4269.609
+ angles 0 -137.68 0
+ {
+  LightEntity {
+   ID "6644E4BDA4DB49E5"
+   coords -0.01 2.016 0.973
+   angles -50.356 7.385 -7.861
+   LV 8.74
+  }
+ }
+}
+$grp DecalEntity : "{71979372AFE909E5}Prefabs/Decals/Blood/BloodStain_Large_01.et" {
+ {
+  coords 7472.817 4.323 4266.036
+  angles -90 -180 -180
+  scale 1.5
+ }
+ {
+  coords 7472.557 4.323 4269.354
+  angles -90 -180 -180
+  scale 1.755
+ }
+}
+GenericEntity : "{75003B73E5AAF419}Prefabs/Props/Medical/ToolsSurgical_01_autoclavedrum_opened.et" {
+ coords 7473.626 169.382 4268.295
+ angles 0 -21.986 0
+}
+SCR_ChimeraCharacter : "{930CB1E8CB8FB06B}Worlds/DimOchka/EveronWinter/TvT_SpyGame_Eden/static_civ_spy_2.et" {
+}
+$grp GenericEntity : "{9ABAFFCBC76D824B}Prefabs/Props/Civilian/NoticeBoardCork_01.et" {
+ {
+  coords 7474.339 169.906 4269.283
+  angles 6.243 101.011 0.152
+  scale 1.3
+ }
+ {
+  coords 7474.872 169.912 4271.86
+  angles 0 101.011 0
+  scale 1.3
+ }
+}
+GenericEntity : "{E546356D4797342F}Prefabs/Props/Garbage/Medical/GarbageMedicalUS_01.et" {
+ coords 7471.585 169.808 4267.918
+}
+$grp GenericEntity : "{F06EAC6F2F97767F}Prefabs/Props/Medical/MedicalScreen_01.et" {
+ {
+  coords 7472.116 168.885 4270.404
+  angles 0 9.81 0
+ }
+ {
+  coords 7472.456 168.885 4272.26
+  angles 0 -27.018 0
+ }
+ {
+  coords 7473.432 168.885 4272.347
+  angles 0 12.267 0
+ }
+ {
+  coords 7474.45 168.885 4272.126
+  angles 0 12.267 0
+ }
+ {
+  coords 7473.919 168.885 4270.092
+  angles 0 9.81 0
+ }
+}
+SCR_ChimeraCharacter : "{FF588508774B3F45}Worlds/DimOchka/EveronWinter/TvT_SpyGame_Eden/static_civ_spy_1.et" {
+}

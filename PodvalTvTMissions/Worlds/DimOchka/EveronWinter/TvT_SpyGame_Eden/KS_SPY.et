@@ -1,0 +1,39 @@
+SCR_ChimeraCharacter : "{2D4C9D55E4E8F93F}Worlds/DimOchka/Bagheera/TvT_HostageOfTheDesert_Bagheera/ks_torturedduude_tka.et" {
+ ID "520EC961A090BBD5"
+ components {
+  SCR_CharacterIdentityComponent "{5584CBC63E092DBC}" {
+   Identity Identity "{5584CBC6363C648B}" {
+    VisualIdentity VisualIdentity "{56E6D9456009D1C4}" {
+     Head "{776C91C01437E4A2}Worlds/DimOchka/EveronWinter/TvT_SpyGame_Eden/Head_Asian_Wound.et"
+     Body "{32B5FE236D152368}Prefabs/Characters/Basebody/CharacterBasebody_Asian_02.et"
+    }
+   }
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Jacket {
+     Prefab "{702F013CB1492541}Prefabs/Characters/Uniforms/Jacket_Suit_01/Jacket_Suit_01_base.et"
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{1A65EADE4B08583E}Prefabs/Characters/Uniforms/Pants_Suit_01/Pants_Suit_01_black_V1.et"
+    }
+    SCR_FeetLoadoutSlotInfo Boots {
+     Prefab "{DAAFD15478BDE1C3}Prefabs/Characters/Footwear/CombatBoots_US_01.et"
+    }
+   }
+  }
+  ActionsManagerComponent "{520EA1D2F659CE02}" {
+   additionalActions {
+    TvT_InterrogationRescueAction "{660CD133E7321DD6}" {
+     UIInfo UIInfo "{660CD13389672F99}" {
+      Name "Осмотреть шпиона"
+     }
+     ActionTitle "Осмотреть шпиона"
+     m_sTargetFaction "DIM_PLA"
+     m_sActionTitle "Осмотреть шпиона"
+    }
+   }
+  }
+ }
+ coords 7481.305 164.645 4279.953
+}
