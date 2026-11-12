@@ -14,9 +14,6 @@ PerceptionManager PerceptionManager1 : "{028DAEAD63E056BE}Prefabs/World/Game/Per
 }
 PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
  components {
-  SCR_InitWeatherComponent "{61B68227C35BFE9A}" {
-   m_sInitialStartingWeatherId "04DA67DEAD3336AC"
-  }
   SCR_TimeAndWeatherHandlerComponent "{5EE3229927D4D2F5}" {
    m_bUsePredefineStartingTimeAndWeather 1
    m_aStartingWeatherAndTime {
@@ -26,28 +23,10 @@ PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_Game
      m_iStartingMinutes 23
     }
    }
-   m_bAllowHeaderSettings 1
    m_bDateOverride 1
    m_iMonth 8
    m_iYear 1996
   }
  }
  coords 4043.755 54.495 1303.687
-}
-TimeAndWeatherManagerEntity TimeAndWeatherManager_66C6A1C8F8F3BF5D2 : "{A3BAF78F6F03315B}Prefabs/World/Game/TimeAndWeatherManager.et" {
- coords 12916.548 19.926 12845.381
- WeatherStateMachine "{145430BBF1620448}Terrains/Common/WeatherPresets/StateMachine/WeatherStates.conf"
- "UTC TimeZone" 2
- "Initial Day Time" 3.396
- Year 1996
- "Month of the Year" 8
- "Day of the Month" 1
- Latitude 48.38
- Longitude 31.168
- "Internal variant transition" 0
- "Internal subvariant 0" 0
- "Internal subvariant 1" 0
- "Initial Wetness" 0.609
- "Initial Water Accumulation Cracks" 0.649
- "Initial Water Accumulation Puddles" 0.602
 }

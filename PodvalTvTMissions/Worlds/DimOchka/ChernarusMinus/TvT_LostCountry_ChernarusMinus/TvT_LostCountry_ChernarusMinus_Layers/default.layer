@@ -1,0 +1,55 @@
+SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
+ coords 13071.883 6 10120.916
+}
+GenericWorldFogEntity : "{941B72D7DE694160}Prefabs/World/Game/Chernarus/FogHaze_Chernarus.et" {
+ coords 6992.295 -64.374 2859.48
+ FogHeightStart entity
+}
+PerceptionManager PerceptionManager1 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 13075.575 6 10116.745
+}
+PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
+ components {
+  SCR_InitWeatherComponent "{61B68227C35BFE9A}" {
+   m_sInitialStartingWeatherId "04DA67DEAD3336AC"
+  }
+  SCR_TimeAndWeatherHandlerComponent "{5EE3229927D4D2F5}" {
+   m_bAllowHeaderSettings 1
+  }
+ }
+ coords 13072.121 6 10118.174
+ m_iFreezeTime 360000
+ m_iHardFreezeTime 10000
+ {
+  SCR_FactionManager "6AD76D181978D5BD" {
+   ID "5ED9088735FF2D8B"
+   Factions {
+    SCR_Faction "{5978B9CE6585BBE8}" {
+     FactionColor 0.016 0.552 0.9047 1
+     UIInfo SCR_FactionUIInfo "{5977478D568C0938}" {
+      Name "Миротворческие силы ООН"
+      Icon "{3BB03F8B0F67652A}Assets/Props/Fabric/Flags/UN_Flag_icon.edds"
+      m_sNameUpper "Миротворческие силы ООН"
+     }
+     m_sFactionFlag "{050FD4B166F57D6F}Assets/Props/Fabric/Flags/UN_Flag_big.edds"
+     m_FactionFlagMaterial "{5DB0C2B8BE5D4DA8}Assets/Props/Fabric/Flags/Data/dim_Flag_1_2_UN.emat"
+    }
+    SCR_Faction "{604D1A678A26714B}" {
+     m_aFriendlyFactionsIds {
+      "USSR"
+      ""
+     }
+    }
+   }
+  }
+ }
+}
+TimeAndWeatherManagerEntity : "{DD964D19D580E280}Prefabs/World/Game/Chernarus/TimeAndWeatherManager_Chernarus.et" {
+ coords 6867.967 6 2764.542
+ WeatherStateMachine "{04DA67DEAD3336AC}Terrains/Common/WeatherPresets/StateMachine/WeatherBagheeraDesert.conf"
+ "Initial Day Time" 20.525
+ "Day of the Month" 16
+ "Internal variant transition" 0
+ "Internal subvariant 0" 0
+ "Internal subvariant 1" 0
+}

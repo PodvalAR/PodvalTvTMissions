@@ -280,6 +280,26 @@ Vehicle SubwayTrain_Plateau_Mil1 : "{CFC9D382AF88103F}Prefabs/Vehicles/SubwayTra
  coords 11979.322 20.607 10635.303
  angles 0 27.612 0
 }
+$grp Vehicle : "{D50750212AE94413}Worlds/DimOchka/Zimnitrita/TvT_BehindEnemyLines_Zimnitrita/dim_SubwayTrain_Mil_Troupes1_test.et" {
+ dim_SubwayTrain_Mil_Troupes1_test1 {
+  components {
+   MRD_TrainComponent "{64B04EE87F61D0A7}" {
+    m_sSplineName "Rail5"
+   }
+  }
+  coords 11996.913 20.676 10669.352
+  angles 0 27.104 0
+ }
+ dim_SubwayTrain_Mil_Troupes1_test2 {
+  components {
+   MRD_TrainComponent "{64B04EE87F61D0A7}" {
+    m_sSplineName "Rail5"
+   }
+  }
+  coords 11987.927 20.676 10651.793
+  angles 0 27.104 0
+ }
+}
 Vehicle Ural4320_transport_covered1 : "{D9B91FAB817A6033}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_covered.et" {
  components {
   SCR_UniversalInventoryStorageComponent "{5916C58171230A92}" {
@@ -320,26 +340,6 @@ Vehicle Ural4320_transport_covered1 : "{D9B91FAB817A6033}Prefabs/Vehicles/Wheele
  coords 15096.619 50 14680.233
  angles 0 21.883 0
  m_sAttachmentGroupName "ALL_RUS10"
-}
-$grp Vehicle : "{E03590BE4CD8EF7F}Prefabs/Vehicles/SubwayTrain/Atelier/Atelier_Mil_Troupes.et" {
- Atelier_Mil_Troupes1 {
-  components {
-   MRD_TrainComponent "{64B04EE87F61D0A7}" {
-    m_sSplineName "Rail5"
-   }
-  }
-  coords 11996.913 20.676 10669.352
-  angles 0 27.104 0
- }
- Atelier_Mil_Troupes2 {
-  components {
-   MRD_TrainComponent "{64B04EE87F61D0A7}" {
-    m_sSplineName "Rail5"
-   }
-  }
-  coords 11987.927 20.676 10651.793
-  angles 0 27.104 0
- }
 }
 GenericEntity : "{EEDC2A602847246B}Prefabs/Vehicles/Wheeled/Semitrailer/Soviet/SST_Semitrailer_Tanker_RU.et" {
  coords 15098.585 51.231 14663.071

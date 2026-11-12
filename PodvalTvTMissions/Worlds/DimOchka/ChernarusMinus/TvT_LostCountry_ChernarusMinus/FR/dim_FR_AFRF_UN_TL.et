@@ -1,0 +1,79 @@
+SCR_ChimeraCharacter : "{710163DEFC7F18DF}Prefabs/Characters/Factions/BLUFOR/FR_Army/Summer/dim_FR_TL.et" {
+ ID "520EC961A090B1EE"
+ components {
+  SCR_CharacterFactionAffiliationComponent "{6063106E37B90E37}" {
+   "faction affiliation" "RHS_AFRF"
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{40AD9C1DE4BCFF29}Prefabs/Weapons/Rifles/FAMAS/dim_Famas_F1_Inf_RIS_Opt.et"
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{CB7E3A13F009FA96}Prefabs/Characters/HeadGear/BERET/beret_ONU_officer.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{E311D6829FE4B4A9}Prefabs/Characters/Uniforms/FELIN_T4S2_Vest/dim_FELIN_T4S2_Vest_Rolled_CCE_Patch.et"
+    }
+    LoadoutSlotInfo ArmoredVest {
+     Prefab "{F342102250ED03CC}Prefabs/Characters/Vests/Vest_CBA/Vest_CBA.et"
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{7ACBEAC605222C8A}Prefabs/Characters/Uniforms/FELIN_T4S2_Pantalon/Pants_FELIN_T4S2_CCE_base.et"
+    }
+    LoadoutSlotInfo Boots {
+     Prefab "{DAAFD15478BDE1C3}Prefabs/Characters/Footwear/CombatBoots_US_01.et"
+    }
+    LoadoutSlotInfo Vest {
+     Prefab "{73C45B6CD2688E0B}Prefabs/Characters/Vests/Vest_PLCE/Variants/BF_Vest_PLCE_Commander.et"
+    }
+    LoadoutSlotInfo HandWear {
+     Prefab ""
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{68B0DD431891FC70}" {
+     TargetStorage "Pants/Pants_FELIN_T4S2_CCE_base.et"
+    }
+    ItemsInitConfigurationItem "{68B0DD4318E8B310}" {
+     TargetStorage "Pants/Pants_FELIN_T4S2_CCE_base.et"
+    }
+    ItemsInitConfigurationItem "{68B0DD4318C59FBA}" {
+     Enabled 1
+     TargetStorage "Jacket/dim_FELIN_T4S2_Vest_Rolled_CCE_Patch.et"
+     PrefabsToSpawn {
+      "{AC04D0D1EABC994F}Prefabs/Items/Equipment/Radios/Radio_R148_RF_Multi.et"
+     }
+    }
+    ItemsInitConfigurationItem "{6AD76D10CAB68378}" {
+     TargetStorage "Vest/BF_Vest_PLCE_Commander.et/MagPouch/BF_Pouch_PLCE_AmmoPouch_01.et"
+     PrefabsToSpawn {
+      "{4BD8473ECB6C950B}Prefabs/Weapons/Magazines/FAMAS/Magazine_556x45_SS109_Famas_25rnd_BT.et" "{4BD8473ECB6C950B}Prefabs/Weapons/Magazines/FAMAS/Magazine_556x45_SS109_Famas_25rnd_BT.et" "{4BD8473ECB6C950B}Prefabs/Weapons/Magazines/FAMAS/Magazine_556x45_SS109_Famas_25rnd_BT.et" "{4BD8473ECB6C950B}Prefabs/Weapons/Magazines/FAMAS/Magazine_556x45_SS109_Famas_25rnd_BT.et"
+     }
+    }
+    ItemsInitConfigurationItem "{6AD76D10E551CE9A}" {
+     TargetStorage "Vest/BF_Vest_PLCE_Commander.et/MagPouch2/BF_Pouch_PLCE_Utility_02.et"
+     PrefabsToSpawn {
+      "{4BD8473ECB6C950B}Prefabs/Weapons/Magazines/FAMAS/Magazine_556x45_SS109_Famas_25rnd_BT.et" "{4BD8473ECB6C950B}Prefabs/Weapons/Magazines/FAMAS/Magazine_556x45_SS109_Famas_25rnd_BT.et" "{4BD8473ECB6C950B}Prefabs/Weapons/Magazines/FAMAS/Magazine_556x45_SS109_Famas_25rnd_BT.et" "{4BD8473ECB6C950B}Prefabs/Weapons/Magazines/FAMAS/Magazine_556x45_SS109_Famas_25rnd_BT.et"
+     }
+    }
+    ItemsInitConfigurationItem "{6AD76D10E6416A6F}" {
+     TargetStorage "Vest/BF_Vest_PLCE_Commander.et/UtilityOne/BF_Pouch_PLCE_Utility_01.et"
+     PrefabsToSpawn {
+      "{4BD8473ECB6C950B}Prefabs/Weapons/Magazines/FAMAS/Magazine_556x45_SS109_Famas_25rnd_BT.et" "{4BD8473ECB6C950B}Prefabs/Weapons/Magazines/FAMAS/Magazine_556x45_SS109_Famas_25rnd_BT.et"
+     }
+    }
+    ItemsInitConfigurationItem "{6AD76D135D1CA727}" {
+     TargetStorage "Vest/BF_Vest_PLCE_Commander.et/UtilityTwo/BF_Pouch_PLCE_Utility_01.et"
+     PrefabsToSpawn {
+      "{21839CF5BB32FF4D}Prefabs/Weapons/Grenades/AMF_GR_OF.et" "{21839CF5BB32FF4D}Prefabs/Weapons/Grenades/AMF_GR_OF.et" "{21839CF5BB32FF4D}Prefabs/Weapons/Grenades/AMF_GR_OF.et" "{2A1A0F3F15BBCAD7}Prefabs/Weapons/Grenades/GR_FUM_FR/GR_FUM_MA_White.et" "{2A1A0F3F15BBCAD7}Prefabs/Weapons/Grenades/GR_FUM_FR/GR_FUM_MA_White.et"
+     }
+    }
+   }
+  }
+ }
+ coords 12157.49 148.781 12600.289
+ angles 0 -90 0
+}

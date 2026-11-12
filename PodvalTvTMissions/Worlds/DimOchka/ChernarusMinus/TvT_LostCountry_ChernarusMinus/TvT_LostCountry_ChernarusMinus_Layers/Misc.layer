@@ -1,0 +1,103 @@
+$grp GenericEntity : "{13A99500A14FA14C}Prefabs/Props/Military/SupplyBox/SupplyShippingContainers/SupplyShippingContainers_01/SupplyShippingContainers_01_20ft.et" {
+ {
+  coords 11915.613 148.665 12514.364
+  angles 0 18.377 0
+ }
+ {
+  coords 11918.039 148.665 12513.559
+  angles 0 18.377 0
+ }
+ {
+  coords 11920.468 148.665 12512.752
+  angles 0 18.377 0
+ }
+}
+GenericEntity : "{24F98A215FAA249C}Prefabs/Structures/Signs/Military/Supplies/Sign_SupplyStorage_01_Supplies_FIA.et" {
+ coords 11919.089 148.719 12516.501
+ angles 0 17.946 0
+}
+$grp Vehicle : "{606EF5AB5BB2AFA8}Prefabs/Custom/MI8_UN.et" {
+ MI8_UN2 {
+  components {
+   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+    FuelNodes {
+     SCR_FuelNode "{5622A70CD4036C5A}" {
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{5A7CE769E7A9C416}" {
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{5A7CE769E7A9C414}" {
+      m_fInitialFuelTankState 0
+     }
+    }
+   }
+  }
+  coords 11863.612 148.656 12519.464
+  angles 0 -160.765 0
+ }
+ MI8_UN1 {
+  components {
+   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+    FuelNodes {
+     SCR_FuelNode "{5622A70CD4036C5A}" {
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{5A7CE769E7A9C416}" {
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{5A7CE769E7A9C414}" {
+      m_fInitialFuelTankState 0
+     }
+    }
+   }
+  }
+  coords 12177.564 148.781 12644.595
+  angles 0 -165 0
+ }
+}
+$grp Vehicle : "{B05C52F642F47298}Prefabs/Vehicles/Planes/Cessna172zbq.et" {
+ Cessna172zbq3 {
+  components {
+   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+    FuelNodes {
+     SCR_FuelNode "{5622A70CD4036C5A}" {
+      m_fInitialFuelTankState 0
+     }
+    }
+   }
+  }
+  coords 12038.658 148.406 12447.101
+  angles 0 20.386 0
+ }
+ Cessna172zbq2 {
+  components {
+   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+    FuelNodes {
+     SCR_FuelNode "{5622A70CD4036C5A}" {
+      m_fInitialFuelTankState 0
+     }
+    }
+   }
+  }
+  coords 12235.506 148.781 12625.281
+  angles 0 -114.614 0
+ }
+ Cessna172zbq1 {
+  components {
+   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+    FuelNodes {
+     SCR_FuelNode "{5622A70CD4036C5A}" {
+      m_fInitialFuelTankState 0
+     }
+    }
+   }
+  }
+  coords 12237.473 148.781 12603.154
+  angles 0 -69.614 0
+ }
+}
+GenericEntity : "{FD598E08BF17996A}Prefabs/Vehicles/Airplanes/IL76/Plane_IL76RU_running.et" {
+ coords 11882.649 148.374 12575.395
+ angles 0 110.491 0
+}
