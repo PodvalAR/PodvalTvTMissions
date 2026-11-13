@@ -336,6 +336,15 @@ SCR_AIGroup : "{679238B227A50316}Prefabs/Groups/OPFOR/PLA/PLA_HQ.et" {
  m_sCustomNameSet "Мин. обороны КНР"
 }
 Vehicle VBMR_SAN_Unarmed_CE1 : "{6F21464B034804CC}Prefabs/Vehicles/Land_Vehicles/Wheeled_Vehicles/VBMR/VBMR_SAN_Unarmed_CE.et" {
+ components {
+  SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+   FuelNodes {
+    SCR_FuelNode "{5622A70CD4036C5A}" {
+     m_fInitialFuelTankState 0
+    }
+   }
+  }
+ }
  coords 5414.299 43.252 10581.862
  angles 0.86 163.88 -0.249
 }
@@ -362,6 +371,11 @@ $grp SCR_AIGroup : "{758E98BA2BCB786E}Prefabs/Groups/BLUFOR/French Army/dim_FR_D
   m_sCustomNameSet "Генерал Жан Де Подваль"
  }
 }
+Vehicle M1083_Engineer1 : "{8DF0C4823CB4224D}Prefabs/Vehicles/Wheeled/M1083/M1083_Engineer.et" {
+ coords 5487.251 44.255 10569.678
+ angles 0.161 -100.39 0.881
+ m_bEnableMoveOnFreeze 1
+}
 Vehicle GBC180_CCE_MK2_Cargo1 : "{C31D3409F78E1EFC}Prefabs/Vehicles/Land_Vehicles/Wheeled_Vehicles/GBC180/CCE/GBC180_CCE_MK2_Cargo.et" {
  coords 5487.666 44.184 10574.246
  angles 0.173 -101.119 0.878
@@ -369,10 +383,28 @@ Vehicle GBC180_CCE_MK2_Cargo1 : "{C31D3409F78E1EFC}Prefabs/Vehicles/Land_Vehicle
 }
 $grp Vehicle : "{DB4858310B7A7ACD}Prefabs/Vehicles/Land_Vehicles/Wheeled_Vehicles/VBL/VBL_Armed_Base.et" {
  VBL_Armed_Base1 {
+  components {
+   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+    FuelNodes {
+     SCR_FuelNode "{5622A70CD4036C5A}" {
+      m_fInitialFuelTankState 0
+     }
+    }
+   }
+  }
   coords 5406.082 43.217 10571.513
   angles -0.865 105.004 -0.232
  }
  VBL_Armed_Base2 {
+  components {
+   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+    FuelNodes {
+     SCR_FuelNode "{5622A70CD4036C5A}" {
+      m_fInitialFuelTankState 0
+     }
+    }
+   }
+  }
   coords 5398.308 43.386 10573.256
   angles -0.865 -15.003 0.232
  }
