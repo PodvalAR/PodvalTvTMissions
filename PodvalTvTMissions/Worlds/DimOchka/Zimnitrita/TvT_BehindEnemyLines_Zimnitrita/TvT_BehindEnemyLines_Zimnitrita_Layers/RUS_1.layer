@@ -1,4 +1,9 @@
 Vehicle SubwayTrain_Mil_Hopital1 : "{14D4F9D1FFC3BBF7}Prefabs/Vehicles/SubwayTrain/Militaire/SubwayTrain_Mil_Hopital.et" {
+ components {
+  MRD_TrainComponent "{64B04EE87F61D0A7}" {
+   m_sSplineName "Rail5"
+  }
+ }
  coords 11970.7 20.606 10618.736
  angles 0 27.104 0
 }
@@ -247,7 +252,7 @@ $grp SCR_AIGroup : "{7F40D42C0CE8A499}Prefabs/Groups/OPFOR/RHS_AFRF/Group_RHS_AF
     m_iCompanyCallsign 4
    }
   }
-  coords 13188.798 31.335 12983.844
+  coords 12887.872 31.335 12392.286
   angles 0 -61.419 0
   m_aUnitPrefabSlots {
    "{D8E969BC8B5E3B04}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_SL.et"
@@ -332,7 +337,7 @@ Vehicle Ural4320_transport_covered1 : "{D9B91FAB817A6033}Prefabs/Vehicles/Wheele
      SlotTemplate InventoryStorageSlot Bandages {
       Prefab "{722CE6FEC39EE896}Prefabs/Weapons/Launchers/RPG22/Launcher_RPG22.et"
      }
-     NumSlots 20
+     NumSlots 3
     }
    }
   }
