@@ -1,0 +1,50 @@
+PolylineShapeEntity : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
+ components {
+  PS_PolyZone "{60E90266F25533F6}" {
+   m_cPolygonColor 0.655 0.875 0.71 1
+   m_fPolygonUVScale 0.44
+   m_cPolygonBorderColor 0 0.502 0.125 1
+   m_aVisibleForFactions {
+    "RHS_USAF"
+    "CIV"
+    "RHS_ION"
+    ""
+   }
+  }
+ }
+ coords 10664.914 24.802 6039.699
+ Points {
+  ShapePoint "{60E90266E922A02A}" {
+   Position -11.826 -2.976 -1.426
+  }
+  ShapePoint "{6AE1536822EA9A3A}" {
+   Position -22.201 -2.584 156.129
+  }
+  ShapePoint "{6AE153682E8590C4}" {
+   Position -31.983 -2.65 172.993
+  }
+  ShapePoint "{6AE153682E59CE7D}" {
+   Position -10.236 -0.172 249.356
+  }
+  ShapePoint "{6AE1536829388CFF}" {
+   Position 15.391 0.218 244.97
+  }
+  ShapePoint "{6AE1536835770B5F}" {
+   Position 40.498 -0.508 55.531
+  }
+  ShapePoint "{6AE1536834E62AA3}" {
+   Position 43.778 -0.508 40.322
+  }
+  ShapePoint "{6AE153683453DC2D}" {
+   Position 34.069 0.165 2.943
+  }
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 4798.521 0 1542.068
+}

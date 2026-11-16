@@ -1,0 +1,21 @@
+SCR_AIWorld : "{66048E60E9D7AB77}Prefabs/AI/SCR_AIWorld_Zarichne.et" {
+ coords 135.423 61.625 4398.76
+}
+GenericWorldFogEntity : "{F647028D78A8B701}Prefabs/World/Game/Zarichne/FogHaze_Zarichne.et" {
+ coords 1852.249 -92.302 3569.726
+ FogHeightStart entity
+}
+PerceptionManager PerceptionManager1 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 136.793 61.643 4410.337
+}
+TimeAndWeatherManagerEntity : "{81F1F45CD3EB7AEA}Worlds/DimOchka/ChernarusMinus/TvT_LostCountry_ChernarusMinus/dim_weather_test.et" {
+ coords 1885.677 8.917 3528.44
+ WeatherStateMachine "{04DA67DEAD3336AC}Terrains/Common/WeatherPresets/StateMachine/WeatherBagheeraDesert.conf"
+ "Initial Day Time" 20.058
+ "Internal variant transition" 0
+ "Internal subvariant 0" 0
+ "Internal subvariant 1" 0
+}
+PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
+ coords 138.884 61.673 4422.129
+}

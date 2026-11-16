@@ -1,0 +1,175 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ {
+  coords 6876.31 5.565 6301.583
+  m_sTitle "Правила и доп. инфа"
+  m_sTextData "ПРАВИЛА:"\
+  "1. Пилотам разрешено запускать двигатели, но запрещено взлетать до конца фриз-тайма;"\
+  "2. В Апач можно садиться только после полной высадки десанта;"\
+  "3. В Апач можно садиться только при полном экипаже (2 человека);"\
+  "4. Вертолетами могут управлять только пилоты."\
+  ""\
+  "ЗАДАЧИ:"\
+  "• РФ: "\
+  " 1. Удержать электростанцию."\
+  ""\
+  "• США:"\
+  " 1. Захватить электростанцию."\
+  ""\
+  "ДОПОЛНИТЕЛЬНО:"\
+  "1. В бумеранге нет топлива. Заправщик рандомно появляется в одном из двух мест;"\
+  "2. ЗУшки станционарные."
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "CCA"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+ }
+ {
+  coords 6876.31 5.565 6301.583
+  m_sTitle "Обстановка"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "2024 г., Восточная Польша, граница с Калининградской областью"\
+  "Российские войска смогли с севера прорвать фронт в районе Заричного и закрепиться на электростанции, однако прибывшее подразделение 82-й воздушно-десантной дивизии ВС США готовит контрнаступление."\
+  ""\
+  "Из-за большого количества гранатометов один из Бумерангов получил повреждение топливного бака. Отремонтировав его в полевых условиях, экипажу надо где-то найти топливо..."\
+  ""
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "RHS_USAF"
+   "CCA"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+ }
+}
+$grp GenericEntity : "{3D78D7D606FF9818}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_NoCapture.et" {
+ flag1 {
+  coords 1797.116 18.567 3673.837
+ }
+ flag2 {
+  coords 1850.705 19.061 3738.728
+ }
+}
+GenericEntity : "{592E8C59C778A189}Prefabs/System/GUB_ZoneControlBetweenFactionsPrefab.et" {
+ components {
+  GUB_ZoneControlComponent "{66E34DFE0E54C4B7}" {
+   m_aControlLogics {
+    GUB_ZoneControlLogic "{6ADEDA118BCFE20A}" {
+     m_bAdvanceGameStage 1
+     m_sSuccessObjectiveNames {
+      "USAF_WIN"
+     }
+     m_sFailedObjectiveNames {
+      "AFRF_WIN"
+     }
+     m_sMessage "Электростанция захвачена"
+     m_Timer GUB_ZoneControlTimer "{6ADEDA119FE50F25}" {
+      timeToComplete 150
+     }
+     m_ZoneController GUB_ZoneController "{6ADEDA1199F1CDB8}" {
+      m_sZoneEntityName "capture"
+     }
+     m_FlagController GUB_FlagController "{6ADEDA119963B443}" {
+      m_aFlagNames {
+       "flag1"
+       "flag2"
+      }
+      m_fStartFactionKey "RHS_AFRF"
+      m_fEndFactionKey "RHS_USAF"
+     }
+     m_aConditions {
+      GUB_ZoneControlBetweenFactionsCondition "{6ADEDA11A353187E}" {
+       m_sFirstFactionKey "RHS_USAF"
+       m_sSecondFactionKey "RHS_AFRF"
+       m_fComparisonMultiplier 2
+       m_iOperator GREATER
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 2712.471 20.519 4492.626
+}
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ AFRF_WIN {
+  coords 6927.594 8.248 6204.361
+  m_sTitle "Электростанция удержана"
+  m_sFactionKey "RHS_AFRF"
+ }
+ USAF_WIN {
+  coords 6927.594 8.248 6204.361
+  m_sTitle "Электростанция захвачена"
+  m_sFactionKey "RHS_USAF"
+ }
+}
+PolylineShapeEntity capture : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
+ components {
+  PS_PolyZone "{60E90266F25533F6}" {
+   m_cPolygonColor 0.812 0.506 0.506 1
+   m_fPolygonUVScale 0.44
+   m_cPolygonBorderColor 0.502 0 0 1
+   m_aVisibleForFactions {
+    "RHS_USAF"
+    "RHS_AFRF"
+    ""
+   }
+  }
+ }
+ coords 1836.86 9.875 3637.706
+ Points {
+  ShapePoint "{6ADEDA11CADD4831}" {
+   Position -98.454 -0.65 17.835
+  }
+  ShapePoint "{6ADEDA11D41340E5}" {
+   Position -73.744 -0.889 124.267
+  }
+  ShapePoint "{6ADEDA11D66EDCA3}" {
+   Position 21.032 0.283 103.64
+  }
+ }
+}
+$grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+ SPAWN1 {
+  coords 2401.222 22.156 4387.602
+  angles 0 90 0
+  m_MarkerColor 1 0.521 0.012 1
+  m_sQuadName "mark-question"
+  m_fWorldSize 75
+  m_sDescription "Заправщик"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "RHS_USAF"
+   "RHS_AFRF"
+   ""
+  }
+  m_bVisibleForEmptyFaction 1
+  m_bShowForAnyFaction 1
+ }
+ SPAWN2 {
+  coords 3033.128 26.406 4139.469
+  angles 0 90 0
+  m_MarkerColor 1 0.521 0.012 1
+  m_sQuadName "mark-question"
+  m_fWorldSize 75
+  m_sDescription "Заправщик"
+  m_bUseWorldScale 0
+  m_aVisibleForFactions {
+   "RHS_USAF"
+   "RHS_AFRF"
+   ""
+  }
+  m_bVisibleForEmptyFaction 1
+  m_bShowForAnyFaction 1
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 5547.709 15.194 4020.56
+}

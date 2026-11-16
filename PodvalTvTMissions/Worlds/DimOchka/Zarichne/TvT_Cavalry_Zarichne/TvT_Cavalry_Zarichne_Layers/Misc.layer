@@ -1,0 +1,40 @@
+Vehicle TANKER : "{13139B95B13DDA35}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_tanker_camo1.et" {
+ coords 2405.823 22.156 4386.304
+ angles 0 33.096 0
+}
+$grp StaticModelEntity : "{472BE7BF1240C1CE}Prefabs/Compositions/Misc/SubCompositions/Utility/Helipad_Lights_US_01.et" {
+ {
+  coords 526.937 0 190.501
+  angles 0 -1.924 0
+ }
+ {
+  coords 481.07 0 188.96
+  angles 0 -1.924 0
+ }
+ {
+  coords 433.591 -0.257 187.365
+  angles 0 -1.924 0
+ }
+}
+$grp Turret : "{8094D99689ABE241}Prefabs/Weapons/Mortars/M252/Mortar_M252_hand.et" {
+ {
+  coords 4331.343 18.141 1817.286
+  angles 0 -25.458 0
+ }
+ {
+  coords 4338.866 18.141 1820.867
+  angles 0 -25.458 0
+ }
+}
+GenericEntity : "{91991AEB147C0F3B}Prefabs/System/DRG_RandomSpawnPrefab.et" {
+ components {
+  DRG_RandomSpawnComponent "{66295E1A338BA9CE}" {
+   m_TargetEntity "TANKER"
+   m_MarkerEntities {
+    "SPAWN1"
+    "SPAWN2"
+   }
+  }
+ }
+ coords 2143.067 16.933 4503.949
+}

@@ -1,0 +1,117 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ {
+  coords 11569.529 29.808 7190.966
+  m_sTitle "Правила и задачи"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "ПРАВИЛА:"\
+  "1. Гражданским запрещено далеко убегать от места крушения."\
+  ""\
+  "ЗАДАЧИ:"\
+  "• ION: "\
+  " 1. Сфотографировать данные (папка с документами)."\
+  ""\
+  "• США:"\
+  " 1. Недопустить ИОН сфотографировать данные."\
+  ""\
+  "• Гражданские:"\
+  " 1. Выжить."\
+  " 2. Доп. - помочь США."\
+  ""\
+  "ДОПОЛНИТЕЛЬНО:"\
+  "1. Папка появляется в черном кейсе рандомно в одном из двух мест. Папку надо найти в зеленой зоне;"\
+  "2. Гражданские могут брать оружие. Можете поискать на месте крушения."
+  m_aVisibleForFactions {
+   "RHS_ION"
+   "RHS_USAF"
+   "CIV"
+   ""
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+ {
+  coords 11569.529 19.463 6791.432
+  m_sTitle "Сюжет"
+  m_sTextData "После установления контроля над Зимнитритой американские войска обнаруживают сеть секретных лабораторий корпорации \"Green Prospect\", занимающейся производством химического оружия. Расследование ЦРУ выявляет масштабы деятельности корпорации, и агенты готовятся передать собранные данные на большую землю. Стремясь предотвратить утечку информации, руководство \"Green Prospect\" тайно нанимает ЧВК \"ИОН\" для решения проблемы."\
+  "Ранним утром поезд, следовавший по маршруту Myslow - Andruhanov, терпит крушение в окрестностях города Gruwice. Элитное подразделение \"ИОН\" прибыв на место, начало зачистку, уничтожая выживших. Однако среди них оказались выжившие агенты, которые оказали вооружённое сопротивление. Отразив первую атаку, они готовятся ко второй волне, в надежде дождаться подкрепления."
+  m_aVisibleForFactions {
+   "RHS_ION"
+   "RHS_USAF"
+   "CIV"
+   ""
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+ {
+  coords 11569.529 19.463 6791.432
+  m_sTitle "Информация для ION"
+  m_sDescriptionLayout "{41DAF7B7061DC0BC}UI/MissionDescription/DescriptionEditable.layout"
+  m_sTextData "Если гражданский будет пытаться сдаться - ликвидировать его в любом случае, так как это свидетель."
+  m_aVisibleForFactions {
+   "RHS_ION"
+  }
+ }
+}
+GenericEntity PAPKA : "{40412E2667D33040}PrefabsEditable/Auto/Structures/Military/Document/SecretDocument_foto.et" {
+ components {
+  SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+   m_aObjectiveNames {
+    "ION_WIN"
+   }
+   m_sFactionKey "RHS_USAF"
+   m_sNotificationText "Данные сфотографированы"
+  }
+  BaseActionsManagerComponent "{6202D4E6F133BF4A}" {
+   additionalActions {
+    PS_FlagChangeAction "{6202D4E6A53D4B3C}" {
+     UIInfo UIInfo "{6202D793D0C82106}" {
+      Name "Сфотографировать данные"
+     }
+    }
+   }
+  }
+ }
+ coords 10783.082 29.491 6222.899
+}
+GenericEntity : "{91991AEB147C0F3B}Prefabs/System/DRG_RandomSpawnPrefab.et" {
+ components {
+  DRG_RandomSpawnComponent "{66295E1A338BA9CE}" {
+   m_TargetEntity "PAPKA"
+   m_MarkerEntities {
+    "SPAWN1"
+    "SPAWN2"
+   }
+  }
+ }
+ coords 11009.172 17.341 6321.016
+}
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ CIV_WIN {
+  coords 10536.85 32.827 6252.311
+  m_sTitle "5 из 9 гражданских выжило"
+  m_sFactionKey "CIV"
+ }
+ USAF_WIN {
+  coords 10536.85 32.827 6253.877
+  m_sTitle "Данные сохранены"
+  m_sFactionKey "RHS_USAF"
+ }
+ ION_WIN {
+  coords 10536.85 32.827 6256.57
+  m_sTitle "Данные сфотографированы"
+  m_sFactionKey "RHS_ION"
+ }
+}
+$grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+ SPAWN1 {
+  coords 10677.335 25.042 6183.692
+  angles -5.767 -50.052 -3.351
+ }
+ SPAWN2 {
+  coords 10677.771 24.924 6107.121
+  angles 0.076 -112.515 -0.248
+ }
+}

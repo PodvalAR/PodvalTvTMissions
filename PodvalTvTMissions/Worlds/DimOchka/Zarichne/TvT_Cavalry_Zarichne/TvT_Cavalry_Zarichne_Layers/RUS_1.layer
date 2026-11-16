@@ -1,0 +1,179 @@
+$grp Turret : "{1A407760EEAE4156}Prefabs/Vehicles/Static/BaconZU23/BaconZU23_Turret_Deployed.et" {
+ {
+  coords 1822.988 19.82 3661.27
+  angles 0 104.354 0
+ }
+ {
+  coords 1778.634 24.906 3673.217
+  angles 0.123 -165.002 -0.836
+ }
+}
+Vehicle UAZ452_transport1 : "{1FBB492E86002BF5}Prefabs/Vehicles/Wheeled/UAZ452/UAZ452_transport.et" {
+ coords 1847.368 10.125 3703.991
+ angles 0.201 102.983 -0.872
+ m_sAttachmentGroupName "RUS"
+}
+Vehicle APC_K17_nopt1 : "{E5FE9FFC9ED44048}Prefabs/Vehicles/Wheeled/K17/APC_K17_nopt.et" {
+ components {
+  SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+   FuelNodes {
+    SCR_FuelNode "{5622A70CD4036C5A}" {
+     m_fInitialFuelTankState 0
+    }
+    SCR_FuelNode "{5EC564945724D7B4}" {
+     m_fInitialFuelTankState 0
+    }
+   }
+  }
+ }
+ coords 1842.613 10.009 3655.493
+ angles -0.694 168.257 1.059
+ m_sAttachmentGroupName "RUS2"
+}
+$grp SCR_AIGroup : "{EB131DDF464F90FD}Prefabs/Groups/OPFOR/RHS_AFRF/Regular/Group_RHS_AFRF_Regular_Squad.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 1849.846 10.288 3671.471
+  angles 0 101.874 0
+  m_aUnitPrefabSlots {
+   "{1A218EBE2475E7A5}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_SL.et"
+   "{6739624641E6DB3C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_SR.et"
+   "{AF0116606F785BEA}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_AT.et"
+   "{4C7BB35921F4A079}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_AAT.et"
+   "{FFC41E8742BF11C1}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_MG_Opt.et"
+   "{7B317B69F37E48E4}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_IGLA.et"
+   "{BA526038C6AC4D78}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_Rfl_2.et"
+   "{357BE1311F38F9E5}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_Medic.et"
+   "{0E6E4BD30C5D0056}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_Sniper.et"
+  }
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 1853.366 10.288 3688.211
+  angles 0 101.874 0
+  m_aUnitPrefabSlots {
+   "{1A218EBE2475E7A5}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_SL.et"
+   "{6739624641E6DB3C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_SR.et"
+   "{AF0116606F785BEA}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_AT.et"
+   "{4C7BB35921F4A079}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_AAT.et"
+   "{FFC41E8742BF11C1}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_MG_Opt.et"
+   "{62FA09F9BF255324}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_Rfl_4.et"
+   "{7B317B69F37E48E4}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_IGLA.et"
+   "{357BE1311F38F9E5}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_Medic.et"
+   "{0E6E4BD30C5D0056}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_Sniper.et"
+  }
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 3
+   }
+  }
+  coords 1856.395 10.288 3702.615
+  angles 0 101.874 0
+  m_aUnitPrefabSlots {
+   "{1A218EBE2475E7A5}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_SL.et"
+   "{6739624641E6DB3C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_SR.et"
+   "{AF0116606F785BEA}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_AT.et"
+   "{4C7BB35921F4A079}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_AAT.et"
+   "{FFC41E8742BF11C1}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_MG_Opt.et"
+   "{5FCE2CC1CA49DA13}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_Rfl_3.et"
+   "{D60654D87A68C256}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_Rfl_1.et"
+   "{357BE1311F38F9E5}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_Medic.et"
+   "{0E6E4BD30C5D0056}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_Sniper.et"
+  }
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 1852.572 10.288 3646.017
+  angles 0 -76.277 0
+  m_aUnitPrefabSlots {
+   "{1A218EBE2475E7A5}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_SL.et"
+   "{6739624641E6DB3C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_SR.et"
+   "{AF0116606F785BEA}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_AT.et"
+   "{4C7BB35921F4A079}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_AAT.et"
+   "{FFC41E8742BF11C1}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_MG_Opt.et"
+   "{D60654D87A68C256}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_Rfl_1.et"
+   "{BA526038C6AC4D78}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_Rfl_2.et"
+   "{357BE1311F38F9E5}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_Medic.et"
+   "{0E6E4BD30C5D0056}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_Sniper.et"
+  }
+ }
+ RUS2 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 1857.044 10.288 3665.281
+  angles 0 -76.277 0
+  m_aUnitPrefabSlots {
+   "{F8F5DF9F36B961A6}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_CC.et"
+   "{C71B7D7DEAD5B6F3}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Crew.et"
+  }
+  m_sCustomNameSet "Экипаж К17"
+ }
+ {
+  coords 1829.258 10.288 3676.679
+  angles 0 101.874 0
+  m_aUnitPrefabSlots {
+   "{7551E181CE4C6845}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Officer.et"
+  }
+  m_sCustomNameSet "Командир роты"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 4
+   }
+  }
+  coords 1803.313 10.288 3699.323
+  angles 0 97.953 0
+  m_aUnitPrefabSlots {
+   "{1A218EBE2475E7A5}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_SL.et"
+   "{6739624641E6DB3C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_SR.et"
+   "{AF0116606F785BEA}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_AT.et"
+   "{4C7BB35921F4A079}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_AAT.et"
+   "{FFC41E8742BF11C1}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_MG_Opt.et"
+   "{62FA09F9BF255324}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_Rfl_4.et"
+   "{87664500B3C0C44F}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_Rfl_5.et"
+   "{357BE1311F38F9E5}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_Medic.et"
+   "{0E6E4BD30C5D0056}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_Sniper.et"
+  }
+ }
+ RUS {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 1840.507 10.288 3704.822
+  angles 0 101.874 0
+  m_aUnitPrefabSlots {
+   "{1A218EBE2475E7A5}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_SL.et"
+   "{6739624641E6DB3C}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_SR.et"
+   "{AF0116606F785BEA}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_AT.et"
+   "{4C7BB35921F4A079}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_AAT.et"
+   "{FFC41E8742BF11C1}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_MG_Opt.et"
+   "{D60654D87A68C256}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_Rfl_1.et"
+   "{BA526038C6AC4D78}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_Rfl_2.et"
+   "{357BE1311F38F9E5}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/Rolled/dim_AFRF_Rolled_Medic.et"
+  }
+ }
+}

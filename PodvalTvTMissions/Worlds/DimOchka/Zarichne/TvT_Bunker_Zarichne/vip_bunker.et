@@ -1,0 +1,58 @@
+SCR_ChimeraCharacter : "{992BA577EAF077F5}Prefabs/Characters/Factions/INDFOR/NAPA/dim/dim_NAPA_Officer.et" {
+ ID "520EC961A090B1EE"
+ components {
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{B3C3C0B02E7B12C9}Prefabs/Characters/HeadGear/Hair_1.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{AE93D885FDF713D4}Prefabs/Characters/Uniforms/Jacket_Suit_01/Jacket_Suit_01_black_V1.et"
+    }
+    LoadoutSlotInfo ArmoredVest {
+     Prefab ""
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{1A65EADE4B08583E}Prefabs/Characters/Uniforms/Pants_Suit_01/Pants_Suit_01_black_V1.et"
+    }
+    LoadoutSlotInfo HandWear {
+     Prefab ""
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{693B0449DFBBAE29}" {
+     TargetStorage "Pants/Pants_Suit_01_black_V1.et"
+    }
+    ItemsInitConfigurationItem "{693B0449DFBBAE18}" {
+     TargetStorage "Jacket/Jacket_Suit_01_black_V1.et"
+    }
+   }
+  }
+  ActionsManagerComponent "{520EA1D2F659CE02}" {
+   additionalActions {
+    DRG_DeathConfirmAction "{6AE1537D35129250}" {
+     ParentContextList {
+      "LowerTorso"
+     }
+     UIInfo UIInfo "{685EA7C38E96F29B}" {
+      Name "Подтвердить смерть"
+     }
+     ActionTitle "#drg_ConfirmDeathAction"
+     Duration 3
+     m_sEventMessage "Цель ликвидирована"
+     m_aObjectivesToDone {
+      "AFRF_WIN"
+     }
+     m_aObjectivesToFail {
+      "NAPA_WIN"
+     }
+     m_vFactionKey "RHS_AFRF"
+    }
+   }
+  }
+ }
+ coords 3121.205 11.894 4289.417
+ angles 0 -165 0
+}

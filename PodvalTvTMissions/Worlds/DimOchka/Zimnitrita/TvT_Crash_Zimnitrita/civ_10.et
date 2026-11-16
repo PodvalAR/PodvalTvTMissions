@@ -1,0 +1,28 @@
+SCR_ChimeraCharacter : "{6499B433D4325106}Worlds/DimOchka/Zimnitrita/TvT_Crash_Zimnitrita/civ_3.et" {
+ ID "687E0AE866C266DE"
+ components {
+  BaseLoadoutManagerComponent "{687E0AE866C26694}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{E9E59F393B49FC1E}Prefabs/Characters/HeadGear/Disguise/Hair/4/Hair_4_2.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{AE93D885FDF713D4}Prefabs/Characters/Uniforms/Jacket_Suit_01/Jacket_Suit_01_black_V1.et"
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{D8BD52A3138A0E62}Prefabs/Characters/Uniforms/Pants_Suit_01/Pants_Suit_01_base.et"
+    }
+    LoadoutSlotInfo Vest {
+     PivotID "Spine5"
+     Offset -0.0859 0.1052 0.139
+     Angles -11.7718 176.51421 0.712
+     Prefab "{0EEB3ED9F61985A7}Assets/Props/Badge/CIA_BADGE_2.et"
+    }
+   }
+  }
+  AnimationPlayerComponent "{687E0AE866C266B9}" {
+   Animation "{444D228B7931D8CC}anims/anm/Tutorial/Character_anm/npc_copilot_jeep_dead_loop.anm"
+  }
+ }
+ coords 10672.446 24.906 6326.452
+}
