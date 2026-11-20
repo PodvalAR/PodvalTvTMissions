@@ -133,14 +133,17 @@ $grp Vehicle : "{0BBC303A84D87434}Prefabs/Vehicles/Land_Vehicles/Wheeled_Vehicle
   }
   coords 7710.676 12.969 8111.407
   angles 0 -139.155 0
+  m_sAttachmentGroupName "FR3"
  }
  VBMR_VTT_CE2 {
   coords 7700.399 12.969 8099.185
   angles 0 -139.577 0
+  m_sAttachmentGroupName "FR2"
  }
  VBMR_VTT_CE3 {
   coords 7689.315 12.969 8087.204
   angles 0 -139.577 0
+  m_sAttachmentGroupName "FR1"
  }
 }
 Vehicle VBCI_Dragar_CE1 : "{2834E391EC6FC919}Prefabs/Vehicles/Land_Vehicles/Wheeled_Vehicles/VBCI/VBCI_Dragar_CE.et" {
@@ -216,10 +219,11 @@ Vehicle VBCI_Dragar_CE1 : "{2834E391EC6FC919}Prefabs/Vehicles/Land_Vehicles/Whee
  angles 0.859 -106.388 -0.253
 }
 $grp SCR_AIGroup : "{5A9B6C01177635FF}Prefabs/Groups/BLUFOR/French Army/dim_FR_Desert_Infantry_Squad.et" {
- {
+ FR3 {
   components {
    PS_GroupCallsignAssigner "{68B17A65926CDAA3}" {
-    m_iCompanyCallsign 1
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 2
    }
   }
   coords 7704.639 12.969 8119.265
@@ -236,10 +240,11 @@ $grp SCR_AIGroup : "{5A9B6C01177635FF}Prefabs/Groups/BLUFOR/French Army/dim_FR_D
    "{6850692FC045CE51}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_Rifleman.et"
   }
  }
- {
+ FR2 {
   components {
    PS_GroupCallsignAssigner "{68B17A65926CDAA3}" {
     m_iCompanyCallsign 2
+    m_iSquadCallsign 1
    }
   }
   coords 7693.158 12.969 8107.479
@@ -256,10 +261,10 @@ $grp SCR_AIGroup : "{5A9B6C01177635FF}Prefabs/Groups/BLUFOR/French Army/dim_FR_D
    "{6850692FC045CE51}Prefabs/Characters/Factions/BLUFOR/FR_Army/Winter/dim_FR_W_Rifleman.et"
   }
  }
- {
+ FR1 {
   components {
    PS_GroupCallsignAssigner "{68B17A65926CDAA3}" {
-    m_iCompanyCallsign 3
+    m_iCompanyCallsign 2
    }
   }
   coords 7684.39 12.981 8095.519
@@ -331,6 +336,15 @@ SCR_AIGroup : "{679238B227A50316}Prefabs/Groups/OPFOR/PLA/PLA_HQ.et" {
  m_sCustomNameSet "Мин. обороны КНР"
 }
 Vehicle VBMR_SAN_Unarmed_CE1 : "{6F21464B034804CC}Prefabs/Vehicles/Land_Vehicles/Wheeled_Vehicles/VBMR/VBMR_SAN_Unarmed_CE.et" {
+ components {
+  SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+   FuelNodes {
+    SCR_FuelNode "{5622A70CD4036C5A}" {
+     m_fInitialFuelTankState 0
+    }
+   }
+  }
+ }
  coords 5414.299 43.252 10581.862
  angles 0.86 163.88 -0.249
 }
@@ -357,6 +371,11 @@ $grp SCR_AIGroup : "{758E98BA2BCB786E}Prefabs/Groups/BLUFOR/French Army/dim_FR_D
   m_sCustomNameSet "Генерал Жан Де Подваль"
  }
 }
+Vehicle M1083_Engineer1 : "{8DF0C4823CB4224D}Prefabs/Vehicles/Wheeled/M1083/M1083_Engineer.et" {
+ coords 5487.251 44.255 10569.678
+ angles 0.161 -100.39 0.881
+ m_bEnableMoveOnFreeze 1
+}
 Vehicle GBC180_CCE_MK2_Cargo1 : "{C31D3409F78E1EFC}Prefabs/Vehicles/Land_Vehicles/Wheeled_Vehicles/GBC180/CCE/GBC180_CCE_MK2_Cargo.et" {
  coords 5487.666 44.184 10574.246
  angles 0.173 -101.119 0.878
@@ -364,10 +383,28 @@ Vehicle GBC180_CCE_MK2_Cargo1 : "{C31D3409F78E1EFC}Prefabs/Vehicles/Land_Vehicle
 }
 $grp Vehicle : "{DB4858310B7A7ACD}Prefabs/Vehicles/Land_Vehicles/Wheeled_Vehicles/VBL/VBL_Armed_Base.et" {
  VBL_Armed_Base1 {
+  components {
+   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+    FuelNodes {
+     SCR_FuelNode "{5622A70CD4036C5A}" {
+      m_fInitialFuelTankState 0
+     }
+    }
+   }
+  }
   coords 5406.082 43.217 10571.513
   angles -0.865 105.004 -0.232
  }
  VBL_Armed_Base2 {
+  components {
+   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+    FuelNodes {
+     SCR_FuelNode "{5622A70CD4036C5A}" {
+      m_fInitialFuelTankState 0
+     }
+    }
+   }
+  }
   coords 5398.308 43.386 10573.256
   angles -0.865 -15.003 0.232
  }

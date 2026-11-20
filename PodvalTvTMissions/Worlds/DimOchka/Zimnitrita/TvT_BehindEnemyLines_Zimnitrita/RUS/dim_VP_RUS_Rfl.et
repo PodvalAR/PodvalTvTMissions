@@ -1,0 +1,53 @@
+SCR_ChimeraCharacter : "{6860B8D684214DC5}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/VDV_Summer/dim_VDV_Summer_Rfl_4.et" {
+ ID "520EC961A090B1EE"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Солдат ВП"
+    Icon "{D578ED3D438AE38F}UI/Icons/watchman.edds"
+   }
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Vest {
+     Prefab "{1B2F7FA0B1590C16}Prefabs/Characters/Vests/Vest_6Sh117/variants/6B45_Pouches_EMR/Armband/MP/MP_6Sh117_6B45_Pouches_Rfl.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{68A2CC32C0493E3F}" {
+     TargetStorage "Vest/MP_6Sh117_6B45_Pouches_Rfl.et/slot/Pouch_Ratnik_ak_pouch_new_1.et"
+    }
+    ItemsInitConfigurationItem "{68A2CC32CCD2E5D3}" {
+     TargetStorage "Vest/MP_6Sh117_6B45_Pouches_Rfl.et/slot2/Pouch_Ratnik_ak_pouch_new_2.et"
+    }
+    ItemsInitConfigurationItem "{68A2CC32CE7164D0}" {
+     TargetStorage "Vest/MP_6Sh117_6B45_Pouches_Rfl.et/slot3/Pouch_Ratnik_ak_pouch_new_3.et"
+    }
+    ItemsInitConfigurationItem "{68A2CC32CAA891FB}" {
+     TargetStorage "Vest/MP_6Sh117_6B45_Pouches_Rfl.et/slot4/Pouch_Ratnik_ak_pouch_new_1.et"
+    }
+    ItemsInitConfigurationItem "{68A2CC32D309BBFC}" {
+     TargetStorage "Vest/MP_6Sh117_6B45_Pouches_Rfl.et/holster/Pouch_Ratnik_GND_Pouch_4.et"
+    }
+    ItemsInitConfigurationItem "{68A2CC32EE31C4E2}" {
+     TargetStorage "Vest/MP_6Sh117_6B45_Pouches_Rfl.et/arsbelt/Pouch_Ratnik_GND_Pouch_2.et"
+    }
+    ItemsInitConfigurationItem "{68A2CC32F45F0382}" {
+     TargetStorage "Vest/MP_6Sh117_6B45_Pouches_Rfl.et/arsbelt2/Pouch_Ratnik_GND_Pouch_3.et"
+    }
+    ItemsInitConfigurationItem "{68A2CC32FB0D16CA}" {
+     TargetStorage "Vest/MP_6Sh117_6B45_Pouches_Rfl.et/uni1/Pouch_Ratnik_Uni_Pouch_1.et"
+    }
+    ItemsInitConfigurationItem "{68A2CC33048A6D32}" {
+     TargetStorage "Vest/MP_6Sh117_6B45_Pouches_Rfl.et/uni1/Pouch_Ratnik_Uni_Pouch_1.et"
+    }
+    ItemsInitConfigurationItem "{694731D93F7F8CA8}" {
+     TargetStorage "Vest/MP_6Sh117_6B45_Pouches_Rfl.et/uni2/Pouch_Ratnik_Uni_Pouch_2.et"
+    }
+   }
+  }
+ }
+ coords 15109.368 50 14685.951
+}

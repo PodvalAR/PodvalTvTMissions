@@ -1,0 +1,191 @@
+Vehicle M1151_armed_M2HB_MBO1 : "{2401DC427B9B8CFB}Prefabs/Vehicles/Wheeled/M998/M1151_armed_M2HB_MBO.et" {
+ coords 10575.265 15.594 4647.892
+ angles 0 -26.502 0
+ m_sAttachmentGroupName "usaf"
+}
+$grp Vehicle : "{32A7BCC2E9929510}Prefabs/Vehicles/Helicopters/UH60/dim_UH-60_Black_M60.et" {
+ dim_UH_60_Black_M1 {
+  components {
+   SCR_BaseCompartmentManagerComponent "{6916DC2183CD40FF}" {
+    DoorInfoList {
+     CompartmentDoorInfo "{6916DC21B0628115}" {
+      GetInAligningTeleport 1
+      GetOutAligningTeleport 1
+     }
+     CompartmentDoorInfo "{6916DC21B0D94D94}" {
+      GetInAligningTeleport 1
+      GetOutAligningTeleport 1
+     }
+    }
+   }
+  }
+  coords 14346.481 51.271 11998.262
+  angles 0 -32.152 0
+  m_sAttachmentGroupName "heli1"
+ }
+ dim_UH_60_Black_M2 {
+  components {
+   SCR_BaseCompartmentManagerComponent "{6916DC2183CD40FF}" {
+    DoorInfoList {
+     CompartmentDoorInfo "{6916DC21B0628115}" {
+      GetInAligningTeleport 1
+      GetOutAligningTeleport 1
+     }
+     CompartmentDoorInfo "{6916DC21B0D94D94}" {
+      GetInAligningTeleport 1
+      GetOutAligningTeleport 1
+     }
+    }
+   }
+  }
+  coords 14385.392 51.271 12022.72
+  angles 0 -32.152 0
+  m_sAttachmentGroupName "heli2"
+ }
+}
+$grp SCR_AIGroup : "{6981CA4A67B1A730}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/Group_RHS_USAF_Regular_Heli.et" {
+ heli1 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 4
+   }
+  }
+  coords 14398.071 51.04 11962.926
+  angles 0 -34.527 0
+  m_aUnitPrefabSlots {
+   "{9954121045CD84B5}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USMC_HeliPilot.et"
+   "{FCEC57426C3422FF}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USMC_HeliCoPilot.et"
+   "{FCEC57426C3422FF}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USMC_HeliCoPilot.et"
+  }
+  m_bSnapToTerrain 0
+  m_sCustomNameSet "Экипаж UH-60"
+ }
+ heli2 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 4
+    m_iSquadCallsign 1
+   }
+  }
+  coords 14401.395 51.04 11965.213
+  angles 0 -34.527 0
+  m_aUnitPrefabSlots {
+   "{9954121045CD84B5}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USMC_HeliPilot.et"
+   "{FCEC57426C3422FF}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USMC_HeliCoPilot.et"
+   "{FCEC57426C3422FF}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USMC_HeliCoPilot.et"
+  }
+  m_bSnapToTerrain 0
+  m_sCustomNameSet "Экипаж UH-60"
+ }
+}
+Vehicle M1151_armed_CROWS_M1 : "{7D9668EDADFCD7E1}Prefabs/Vehicles/Wheeled/M998/M1151_armed_CROWS_M2.et" {
+ coords 10571.12 15.594 4645.742
+ angles 0 -26.847 0
+ m_sAttachmentGroupName "usaf"
+}
+SCR_AIGroup usaf : "{AEF66CED87917497}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/dim_RHS_USAF_Regular_Squad_Modern.et" {
+ components {
+  PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+   m_iCompanyCallsign 3
+  }
+ }
+ coords 10449.973 26.489 4706.995
+ angles 0 -90 0
+ m_bSnapToTerrain 0
+}
+$grp SCR_AIGroup : "{C42733B27FC0BB6F}Prefabs/Groups/BLUFOR/RHS_USAF/Regular/dim_USAF_SOCOM.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 0
+   }
+  }
+  coords 14326.931 51.314 11920.081
+  angles 0 -33.45 0
+  m_aUnitPrefabSlots {
+   "{A927AF0908AD5841}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/SFOD-D/SOCOM/dim_SOCOM_SL.et"
+   "{AEE055586E2BE282}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/SFOD-D/SOCOM/dim_SOCOM_TL.et"
+   "{C4AF5E163A29FA52}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/SFOD-D/SOCOM/dim_SOCOM_AR.et"
+   "{1C0737D743A0E40E}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/SFOD-D/SOCOM/dim_SOCOM_AT.et"
+   "{71A9EDD13F5B1AAD}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/SFOD-D/SOCOM/dim_SOCOM_Rfl.et"
+   "{2ADC06C0DFBBBABD}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/SFOD-D/SOCOM/dim_SOCOM_Sapper.et"
+   "{8D00BF0D34133D7D}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/SFOD-D/SOCOM/dim_SOCOM_Marksman.et"
+  }
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 0
+    m_iSquadCallsign 1
+   }
+  }
+  coords 14329.206 51.314 11916.637
+  angles 0 -33.45 0
+  m_aUnitPrefabSlots {
+   "{A927AF0908AD5841}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/SFOD-D/SOCOM/dim_SOCOM_SL.et"
+   "{AEE055586E2BE282}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/SFOD-D/SOCOM/dim_SOCOM_TL.et"
+   "{C4AF5E163A29FA52}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/SFOD-D/SOCOM/dim_SOCOM_AR.et"
+   "{1C0737D743A0E40E}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/SFOD-D/SOCOM/dim_SOCOM_AT.et"
+   "{71A9EDD13F5B1AAD}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/SFOD-D/SOCOM/dim_SOCOM_Rfl.et"
+   "{2ADC06C0DFBBBABD}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/SFOD-D/SOCOM/dim_SOCOM_Sapper.et"
+   "{8D00BF0D34133D7D}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/SFOD-D/SOCOM/dim_SOCOM_Marksman.et"
+  }
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 0
+    m_iSquadCallsign 2
+   }
+  }
+  coords 14317.875 51.314 11914.099
+  angles 0 -33.45 0
+ }
+}
+$grp SCR_AIGroup : "{F77D5F8E4E2A70A7}Prefabs/Groups/BLUFOR/RHS_USAF/Group_RHS_USAF_Base.et" {
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 10674.789 25.049 6170.117
+  angles 0 84.811 0
+  m_aUnitPrefabSlots {
+   "{DBAACEF64639B92A}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/CAT/dim_US_CAT_SL_Jacket.et"
+   "{B64C6131FADC0290}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/CAT/dim__US_CAT_Rifleman_Jacket_5.et"
+   "{53D02DC8F63995FB}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/CAT/dim__US_CAT_Rifleman_Jacket_4.et"
+   "{6EE408F083551CCC}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/CAT/dim__US_CAT_Rifleman_Jacket_3.et"
+  }
+  m_sCustomNameSet "ЦРУ"
+ }
+ {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE57278C3493}" {
+    m_iPlatoonCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 10679.287 25.153 6106.132
+  angles 0 64.064 0
+  m_aUnitPrefabSlots {
+   "{DBAACEF64639B92A}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/CAT/dim_US_CAT_SL_Jacket.et"
+   "{9B036F103829DD83}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/CAT/dim_US_CAT_Rifleman_2_Jacket.et"
+   "{AB3B0BA0F1553FB7}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/CAT/dim_US_CAT_Rifleman_Jacket.et"
+   "{DA1855D146188DBE}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/CAT/dim__US_CAT_Rifleman_Jacket_6.et"
+  }
+  m_bSnapToTerrain 0
+  m_sCustomNameSet "ЦРУ"
+ }
+ {
+  coords 10674.354 25.049 6174.908
+  angles 0 84.811 0
+  m_aUnitPrefabSlots {
+   "{172E6224021F3E96}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/CAT/dim_US_CAT_Officer_Jacket.et"
+  }
+  m_sCustomNameSet "ЦРУ"
+ }
+}

@@ -1,0 +1,49 @@
+SCR_EditorRestrictionZoneEntity : "{6144B0BE2EAC6897}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneMedium.et" {
+ coords 4979.433 2.188 3877.11
+}
+$grp SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+ {
+  coords 6012.371 8.114 2727.45
+ }
+ {
+  coords 5827.858 13.544 2393.941
+ }
+ {
+  coords 5445.661 15.89 2374.215
+ }
+ {
+  coords 7488.922 165.75 4279.388
+  m_fWarnRadius 114
+  m_fZoneRadius 154
+  m_fZoneTeleportedRadius 164
+  {
+   GenericEntity {
+    ID "59D673B36B893D84"
+    components {
+     SCR_CustomAreaMeshComponent "{59D673B22B1EBC57}" {
+      m_fRadius 114
+     }
+    }
+   }
+  }
+ }
+ {
+  coords 4779.47 165.044 7082.235
+ }
+}
+GenericEntity : "{BB2868026755FF03}Worlds/DimOchka/EveronWinter/TvT_SpyGame_Eden/SPYGAME_TRIGGER.et" {
+ coords 7472.491 168.885 4268.679
+ angles 0 0 0
+ {
+  GenericEntity pivot {
+   ID "6AD6CDB635E63D23"
+  }
+  GenericEntity tapeRecorder {
+   ID "6AD6CDB635E63D21"
+  }
+  SCR_ChimeraCharacter victim : "{38A22DCB7128BE18}Worlds/DimOchka/EveronWinter/TvT_SpyGame_Eden/KS_SPY.et" {
+   coords 0.619 -0.002 0.216
+   angles 0 -160.328 0
+  }
+ }
+}

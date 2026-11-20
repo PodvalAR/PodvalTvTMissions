@@ -1,0 +1,20 @@
+SCR_ChimeraCharacter : "{94F3D0FCB0D0A7F2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/2000s/New/Character_RHS_AFRF_crew.et" {
+ ID "520EC961A090B1EE"
+ components {
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Jacket {
+     Prefab "{F76125387034A746}Prefabs/Characters/Uniforms/Jacket_M88_VSR_rolledup_VDV.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{695B0D084A1FBD7F}" {
+     TargetStorage "Jacket/Jacket_M88_VSR_rolledup_VDV.et"
+    }
+   }
+  }
+ }
+ coords 11874.163 148.75 12536.566
+}

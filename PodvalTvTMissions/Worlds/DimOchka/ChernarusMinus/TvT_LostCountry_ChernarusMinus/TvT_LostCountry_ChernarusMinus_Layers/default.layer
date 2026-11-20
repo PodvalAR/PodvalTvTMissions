@@ -1,0 +1,77 @@
+SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
+ coords 13071.883 6 10120.916
+}
+GenericWorldFogEntity : "{941B72D7DE694160}Prefabs/World/Game/Chernarus/FogHaze_Chernarus.et" {
+ coords 6992.295 -64.374 2859.48
+ FogHeightStart entity
+}
+PerceptionManager PerceptionManager1 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 13075.575 6 10116.745
+}
+TimeAndWeatherManagerEntity : "{81F1F45CD3EB7AEA}Worlds/DimOchka/ChernarusMinus/TvT_LostCountry_ChernarusMinus/dim_weather_test.et" {
+ components {
+  RplComponent "{523075B49AB5FFA5}" {
+   "Rpl State Override" None
+  }
+ }
+ coords 11992.079 148.687 12503.93
+ WeatherStateMachine "{04DA67DEAD3336AC}Terrains/Common/WeatherPresets/StateMachine/WeatherBagheeraDesert.conf"
+ "Internal variant transition" 0
+ "Internal subvariant 0" 0
+ "Internal subvariant 1" 0
+}
+PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
+ components {
+  SCR_InitWeatherComponent "{61B68227C35BFE9A}" {
+   m_sInitialStartingWeatherId "81F1F45CD3EB7AEA"
+  }
+ }
+ coords 13072.121 6 10118.174
+ m_iFreezeTime 360000
+ m_iHardFreezeTime 10000
+ {
+  SCR_FactionManager "6AD76D181978D5BD" {
+   ID "5ED9088735FF2D8B"
+   Factions {
+    SCR_Faction "{5978B9CE6585BBE8}" {
+     FactionColor 0.016 0.552 0.9047 1
+     UIInfo SCR_FactionUIInfo "{5977478D568C0938}" {
+      Name "Миротворческие силы ООН"
+      Icon "{3BB03F8B0F67652A}Assets/Props/Fabric/Flags/UN_Flag_icon.edds"
+      m_sNameUpper "Миротворческие силы ООН"
+     }
+     m_OutlineFactionColor 0.011 0.324 0.533 1
+     m_NotificationFactionColor 0.016 0.552 0.905 1
+     m_NotificationTextFactionColor 0.011 0.324 0.533 1
+     m_sFactionFlag "{050FD4B166F57D6F}Assets/Props/Fabric/Flags/UN_Flag_big.edds"
+     m_FactionFlagMaterial "{5DB0C2B8BE5D4DA8}Assets/Props/Fabric/Flags/Data/dim_Flag_1_2_UN.emat"
+     m_CallsignInfo SCR_FactionCallsignInfo "{5977478D568C093C}" {
+      m_aCompanyNames {
+       SCR_CallsignInfo "{5977478D568C0922}" {
+        m_sCallsign "UN Альфа"
+       }
+       SCR_CallsignInfo "{5977478D568C0921}" {
+        m_sCallsign "UN Браво"
+       }
+       SCR_CallsignInfo "{5977478D568C0920}" {
+        m_sCallsign "UN Чарли"
+       }
+       SCR_CallsignInfo "{5977478D568C0927}" {
+        m_sCallsign "UN Дельта"
+       }
+       SCR_CallsignInfo "{5977478D568C0926}" {
+        m_sCallsign "UN Эхо"
+       }
+      }
+     }
+    }
+    SCR_Faction "{604D1A678A26714B}" {
+     m_aFriendlyFactionsIds {
+      "USSR"
+      ""
+     }
+    }
+   }
+  }
+ }
+}

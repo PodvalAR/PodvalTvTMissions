@@ -1,0 +1,57 @@
+SCR_ChimeraCharacter : "{CA13B43EACD9CADB}Prefabs/Characters/Factions/BLUFOR/FR_Army/Summer/dim_FR_Crew.et" {
+ ID "520EC961A090B1EE"
+ components {
+  SCR_CharacterFactionAffiliationComponent "{6063106E37B90E37}" {
+   "faction affiliation" "RHS_AFRF"
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{837EDA3789EC1C89}Prefabs/Weapons/Rifles/FAMAS/Famas_F1_Inf.et"
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Jacket {
+     Prefab "{1AEA725E5BB518ED}Prefabs/Characters/Uniforms/FELIN_T4S2_Vest/dim_FELIN_T4S2_Vest_CCE_Patch.et"
+    }
+    LoadoutSlotInfo ArmoredVest {
+     Prefab "{F342102250ED03CC}Prefabs/Characters/Vests/Vest_CBA/Vest_CBA.et"
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{7ACBEAC605222C8A}Prefabs/Characters/Uniforms/FELIN_T4S2_Pantalon/Pants_FELIN_T4S2_CCE_base.et"
+    }
+    LoadoutSlotInfo Boots {
+     Prefab "{DAAFD15478BDE1C3}Prefabs/Characters/Footwear/CombatBoots_US_01.et"
+    }
+    LoadoutSlotInfo Vest {
+     Prefab "{E5191EFF6E28870A}Prefabs/Characters/Vests/Vest_PLCE/Variants/BF_Vest_PLCE_BeltKit.et"
+    }
+    LoadoutSlotInfo HandWear {
+     Prefab ""
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{68B0DD431891FC70}" {
+     TargetStorage "Pants/Pants_FELIN_T4S2_CCE_base.et"
+    }
+    ItemsInitConfigurationItem "{68B0DD4318E8B310}" {
+     TargetStorage "Pants/Pants_FELIN_T4S2_CCE_base.et"
+    }
+    ItemsInitConfigurationItem "{68B0DD4318C59FBA}" {
+     TargetStorage "Jacket/dim_FELIN_T4S2_Vest_CCE_Patch.et"
+     PrefabsToSpawn {
+      "{941249F520FEAC08}Prefabs/Items/Equipment/Radios/Radio_R148_RF_Singl.et"
+     }
+    }
+    ItemsInitConfigurationItem "{6AD76D10CAB68378}" {
+     TargetStorage "Vest/BF_Vest_PLCE_BeltKit.et/MagPouch/BF_Pouch_PLCE_AmmoPouch_01.et"
+     PrefabsToSpawn {
+      "{4BD8473ECB6C950B}Prefabs/Weapons/Magazines/FAMAS/Magazine_556x45_SS109_Famas_25rnd_BT.et" "{4BD8473ECB6C950B}Prefabs/Weapons/Magazines/FAMAS/Magazine_556x45_SS109_Famas_25rnd_BT.et" "{4BD8473ECB6C950B}Prefabs/Weapons/Magazines/FAMAS/Magazine_556x45_SS109_Famas_25rnd_BT.et" "{4BD8473ECB6C950B}Prefabs/Weapons/Magazines/FAMAS/Magazine_556x45_SS109_Famas_25rnd_BT.et" "{4BD8473ECB6C950B}Prefabs/Weapons/Magazines/FAMAS/Magazine_556x45_SS109_Famas_25rnd_BT.et" "{4BD8473ECB6C950B}Prefabs/Weapons/Magazines/FAMAS/Magazine_556x45_SS109_Famas_25rnd_BT.et" "{4BD8473ECB6C950B}Prefabs/Weapons/Magazines/FAMAS/Magazine_556x45_SS109_Famas_25rnd_BT.et"
+     }
+    }
+   }
+  }
+ }
+ coords 12156.246 148.781 12608.034
+ angles 0 -105 0
+}

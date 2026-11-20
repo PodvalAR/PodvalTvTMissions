@@ -1,0 +1,123 @@
+GenericEntity : "{A1A11E5C3A29B763}Prefabs/Props/Furniture/ChairDental_01/ChairDental_01.et" {
+ ID "F0DBA538AC2A0552"
+ components {
+  RigidBody "{5872F0EB7DFB5A9D}" {
+   Enabled 0
+  }
+ }
+ coords 4749.507 45.537 4513.658
+ angles 0 -123.221 0
+ {
+  $grp GenericEntity {
+   tapeInteractionPoint {
+    ID "6AD6CDB635E63D20"
+    components {
+     TvT_InterrogationRescueComponent "{660CD132B158CFC6}" {
+      m_sWinObjectiveName "NOAK_WIN"
+      m_sLoseObjectiveName "FR_WIN"
+      m_sEndMessage "Китайский агент найден. Запись допроса зафиксирована."
+      m_fEndDelaySeconds 15
+      m_sTapeRecorderName "tapeRecorder"
+      m_sVictimEntityName "victim"
+      m_sPivotEntityName "pivot"
+      m_fRescuerYawOffset 0
+      m_fRescuerPitchOffset -10
+      m_fDebriefingDelaySeconds 5
+      m_sCinematicEntityName ""
+     }
+     ActionsManagerComponent "{660CD13386D41633}" {
+      ActionContexts {
+       UserActionContext "{660CD13389672F83}" {
+        ContextName "InteractionPoint"
+        Position PointInfo "{6510E1C90744EB6A}" {
+        }
+        Radius 2
+       }
+      }
+      additionalActions {
+       TvT_InterrogationRescueAction "{660CD133E7321DD6}" {
+        ParentContextList {
+         "InteractionPoint"
+        }
+        UIInfo UIInfo "{6510E1CB6CFE7B51}" {
+         Name "Осмотреть генерала"
+        }
+        ActionTitle "Осмотреть генерала"
+        VisibilityRange 2
+        Duration 0.5
+        m_bLoopAction 0
+       }
+      }
+     }
+     RplComponent "{660CD132B158CFC5}" {
+     }
+    }
+    coords 1.09 0.963 -0.279
+    angles 0 146.797 0
+   }
+   pivot {
+    ID "6AD6CDB635E63D23"
+    coords 0.619 -0.002 0.216
+    angles 0 -160.328 0
+   }
+  }
+  GenericEntity tapeRecorder : "{1CA7E18E0CEE6EA1}Prefabs/Props/Civilian/TapeRecorder_01/TapeRecorder_01_KS03.et" {
+   ID "6AD6CDB635E63D21"
+   components {
+    SignalsManagerComponent "{660CC5D5503029AA}" {
+    }
+    SCR_CommunicationSoundComponent "{66449E5FFBB606C7}" {
+     Filenames {
+      "{B420A82B5B32DB99}Sounds/VO/KS/CinematicScenes/VO_KS_SovietTorturerCO_Direct_TapeRecorder.acp" "{D09D5F0301A1909F}Sounds/VO/KS/CinematicScenes/VO_KS_SovietTorturerYuri_Direct_TapeRecorder.acp" "{5D6D18DE4A183963}Sounds/VO/KS/CinematicScenes/VO_KS_Angelina_Direct.acp" "{B841567755D1E690}Sounds/Props/Civilian/TapeRecorder_01/Props_TapeRecorder_01_Interactive.acp"
+     }
+    }
+    MeshObject "{5872F0EB7FA40561}" {
+     BoundingBox AABBBoundingVolume "{65B68EA9F7AF4B4B}" {
+      Mins -2 0 -2
+      Maxs 2 0.157 2
+     }
+    }
+    RigidBody "{5872F0EB7DFB5A9D}" {
+     Enabled 0
+    }
+    ActionsManagerComponent "{6510E1C90AEE369E}" {
+     Enabled 0
+     ActionContexts {
+      UserActionContext "{6510E1C900D6A136}" {
+       ContextName "InteractionPoint"
+       Position PointInfo "{6510E1C90744EB6A}" {
+        PivotID "i_control_switch"
+        Offset 0 0 0
+       }
+       Radius 2
+      }
+     }
+     additionalActions {
+      SCR_ScriptedUserAction "{6510E1CDF29EF069}" {
+       ParentContextList +{
+       }
+       UIInfo UIInfo "{6510E1CB6CFE7B51}" {
+        Name "Play tape"
+       }
+       ActionTitle "Play tape"
+       Duration 0.5
+       m_bLoopAction 0
+      }
+     }
+    }
+    AnimationPlayerComponent "{65B68EAB437CFAEC}" {
+     Animation "{1D2714F34BFFC416}anims/anm/NPC/male/Body/Dentist/cine_savior_dentist_victimloop_TapePlayer.anm"
+     Loop 1
+     AutoPlay 1
+    }
+   }
+   coords 0.619 -0.002 0.216
+   angles 0 -160.329 0
+  }
+  GenericEntity : "{EFCD232A50C15173}Prefabs/Props/Furniture/Nightstand_01.et" {
+   ID "6AD6CDB635E63D1C"
+   coords 1.095 -0.008 -0.326
+   angles 0 -30.255 0
+  }
+ }
+}

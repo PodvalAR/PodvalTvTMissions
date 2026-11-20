@@ -1,0 +1,39 @@
+SCR_ChimeraCharacter : "{153D8A03EC90E6C1}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/MARSOC/New/dim_USAF_MARSOC_SL.et" {
+ ID "520EC961A090B1EE"
+ components {
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{1D35A956FF706300}Prefabs/Characters/HeadGear/Helmet_OPSCORE/variants/dim_Helmet_OPSCORE_SF_MARSOC6.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{704A5E7BFA7F58D3}Prefabs/Characters/Uniforms/Shirt_CP_G3/MC/dim_G3_USA_MC_4.et"
+    }
+    LoadoutSlotInfo ArmoredVest {
+     Prefab "{4A11957AAD447582}Prefabs/Characters/Vests/Vest_JPC/Vest_JPC_MC.et"
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{7BDF3DD1CB3730A3}Prefabs/Characters/Uniforms/Pants_CP_G3/CP_G3_Pants_KpadsG3_MC.et"
+    }
+    LoadoutSlotInfo Boots {
+     Prefab "{09E2F277F5B672E8}Prefabs/Characters/Footwear/Solomon_4dgtx.et"
+    }
+    LoadoutSlotInfo Back {
+     Prefab "{F0A675A839C1ACAD}Prefabs/Items/Equipment/Backpacks/GMS_StaticLine_Parachute.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{6720F9CB5344D10E}" {
+     TargetStorage "Pants/CP_G3_Pants_KpadsG3_MC.et"
+    }
+    ItemsInitConfigurationItem "{6720F9CB52FFCEB5}" {
+     TargetStorage "Pants/CP_G3_Pants_KpadsG3_MC.et"
+    }
+   }
+  }
+ }
+ coords 6358.379 234.125 1815.2
+ angles 0 90.66 0
+}

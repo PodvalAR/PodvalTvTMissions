@@ -1,0 +1,44 @@
+SCR_ChimeraCharacter : "{DD31DC48F1BA3AA1}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/2000s/New/Character_RHS_AFRF_sniper.et" {
+ ID "520EC961A090B1EE"
+ components {
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{F5347DE84CA1E3EE}Prefabs/Characters/HeadGear/Hat_VDV_Beret/Hat_VDV_Beret.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{F76125387034A746}Prefabs/Characters/Uniforms/Jacket_M88_VSR_rolledup_VDV.et"
+    }
+    LoadoutSlotInfo ArmoredVest {
+     Prefab "{4CBDC206FEF9897C}Prefabs/Characters/Vests/Vest_6B3/Vest_6B3.et"
+    }
+    LoadoutSlotInfo Back {
+     Prefab ""
+    }
+    LoadoutSlotInfo Vest {
+     Prefab ""
+    }
+    LoadoutSlotInfo FaceSlot {
+     Prefab "{7DC444631AAC3B63}Prefabs/Items/Equipment/Armband/GD_Peacekeepers_Armband_VKPO_Summer.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{695B0D094B1F79F4}" {
+     TargetStorage "ArmoredVest/Vest_6B3.et"
+    }
+    ItemsInitConfigurationItem "{695B0D084A1FBD7F}" {
+     TargetStorage "Jacket/Jacket_M88_VSR_rolledup_VDV.et"
+    }
+    ItemsInitConfigurationItem "{695B0D018BC53637}" {
+     TargetStorage "ArmoredVest/Vest_6B3.et"
+    }
+    ItemsInitConfigurationItem "{695B0D00628494F9}" {
+     TargetStorage "ArmoredVest/Vest_6B3.et"
+    }
+   }
+  }
+ }
+ coords 12134.692 148.781 12606.635
+}

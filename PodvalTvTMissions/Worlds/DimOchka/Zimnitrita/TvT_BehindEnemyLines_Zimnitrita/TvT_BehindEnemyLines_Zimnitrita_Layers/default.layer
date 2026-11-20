@@ -1,0 +1,34 @@
+SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
+ coords 4057.927 56.374 1246.288
+}
+GenericWorldFogEntity Fog_Haze2 {
+ coords 12793.943 -198.168 12704.634
+ FakeDistFog 1
+ HeightDensity 0.113
+ DistanceDensity 0.158
+ HeightOffset 0
+ FogHeightStart entity
+}
+PerceptionManager PerceptionManager1 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 4061.599 54.983 1308.609
+}
+PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
+ components {
+  SCR_TimeAndWeatherHandlerComponent "{5EE3229927D4D2F5}" {
+   m_bUsePredefineStartingTimeAndWeather 1
+   m_aStartingWeatherAndTime {
+    SCR_TimeAndWeatherState "{6AD4E562376D046F}" {
+     m_sWeatherPresetName "Clear Fog"
+     m_iStartingHour 3
+     m_iStartingMinutes 23
+    }
+   }
+   m_bDateOverride 1
+   m_iMonth 8
+   m_iYear 1996
+  }
+ }
+ coords 4043.755 54.495 1303.687
+ m_iFreezeTime 360000
+ m_iHardFreezeTime 15000
+}
