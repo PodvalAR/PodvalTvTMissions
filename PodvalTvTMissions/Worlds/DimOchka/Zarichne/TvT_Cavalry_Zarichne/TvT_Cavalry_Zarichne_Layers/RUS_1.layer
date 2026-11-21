@@ -1,13 +1,3 @@
-$grp Turret : "{1A407760EEAE4156}Prefabs/Vehicles/Static/BaconZU23/BaconZU23_Turret_Deployed.et" {
- {
-  coords 1822.988 19.82 3661.27
-  angles 0 104.354 0
- }
- {
-  coords 1778.634 24.906 3673.217
-  angles 0.123 -165.002 -0.836
- }
-}
 Vehicle UAZ452_transport1 : "{1FBB492E86002BF5}Prefabs/Vehicles/Wheeled/UAZ452/UAZ452_transport.et" {
  coords 1847.368 10.125 3703.991
  angles 0.201 102.983 -0.872
@@ -22,6 +12,15 @@ Vehicle APC_K17_nopt1 : "{E5FE9FFC9ED44048}Prefabs/Vehicles/Wheeled/K17/APC_K17_
     }
     SCR_FuelNode "{5EC564945724D7B4}" {
      m_fInitialFuelTankState 0
+    }
+   }
+  }
+  SCR_UniversalInventoryStorageComponent "{5CE26149257047CD}" {
+   MultiSlots {
+    MultiSlotConfiguration "{60954EF276244CB6}" {
+     SlotTemplate InventoryStorageSlot fuel {
+      Enabled 0
+     }
     }
    }
   }
