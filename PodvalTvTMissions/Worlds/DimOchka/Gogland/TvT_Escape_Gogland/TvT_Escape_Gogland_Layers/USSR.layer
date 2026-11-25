@@ -1,0 +1,154 @@
+$grp SCR_AIGroup : "{1041E60A9AB94408}Prefabs/Groups/OPFOR/USSR/Group_USSR_Rifle_BTR_SQ.et" {
+ ussr1 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 4376.629 80.003 9918.093
+  angles 0 95.866 0
+  m_sCustomNameSet "Гарнизон Гогланда на БТР-70"
+ }
+ ussr2 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 4387.668 80.207 9932.223
+  angles 0 137.428 0
+  m_sCustomNameSet "Гарнизон Гогланда на БТР-70"
+ }
+ ussr9 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 2
+   }
+  }
+  coords 4402.238 80.207 9938.418
+  angles 0 175.602 0
+  m_sCustomNameSet "Гарнизон Гогланда на БТР-70"
+ }
+}
+Vehicle UAZ452_transport1 : "{1FBB492E86002BF5}Prefabs/Vehicles/Wheeled/UAZ452/UAZ452_transport.et" {
+ coords 4534.61 11.393 8860.045
+ angles 0 -173.891 0
+}
+Vehicle UAZ1 : "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et" {
+ coords 4521.134 11.393 8861.725
+ angles 0 -176.529 0
+ m_sAttachmentGroupName "hq"
+}
+$grp Vehicle : "{447CFE8D73F95C40}Prefabs/Vehicles/Wheeled/BTR70/BTR70_AFRF.et" {
+ BTR70_AFRF1 {
+  coords 4377.894 79.154 9894.134
+  angles 2.771 59.972 -0.568
+  m_sAttachmentGroupName "ussr1"
+ }
+ BTR70_AFRF2 {
+  coords 4391.625 79.913 9903.178
+  angles 1.962 52.052 -0.395
+  m_sAttachmentGroupName "ussr2"
+ }
+ BTR70_AFRF3 {
+  coords 4414.384 80.738 9922.783
+  angles 1.919 46.962 -0.567
+  m_sAttachmentGroupName "ussr9"
+ }
+}
+SCR_AIGroup hq : "{706340F7481FF22F}Prefabs/Groups/OPFOR/USSR/Group_USSR_PL.et" {
+ coords 4542.844 11.156 8802.854
+ angles 0 -87.161 0
+ m_aUnitPrefabSlots {
+  "{27BC80AA31C33BF5}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Afgan/dim_USSR_Afgan_PL.et"
+ }
+ m_sCustomNameSet "Командир гарнизона"
+}
+$grp SCR_AIGroup : "{84AF92E239A71FCE}Prefabs/Groups/OPFOR/USSR/Group_USSR_Rifle_SQ.et" {
+ ussr3 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 3
+   }
+  }
+  coords 4498.606 11.156 8811.029
+  angles 0 7.206 0
+  m_sCustomNameSet "Гарнизон Гогланда"
+ }
+ ussr4 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
+  coords 4509.87 11.156 8809.605
+  angles 0 7.206 0
+  m_sCustomNameSet "Гарнизон Гогланда"
+ }
+ ussr5 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
+  coords 4518.974 11.156 8800.374
+  angles 0 7.206 0
+  m_sCustomNameSet "Гарнизон Гогланда"
+ }
+ ussr6 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 1
+   }
+  }
+  coords 4530.303 11.156 8798.941
+  angles 0 7.206 0
+  m_sCustomNameSet "Гарнизон Гогланда"
+ }
+ ussr7 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 3
+    m_iSquadCallsign 1
+   }
+  }
+  coords 4620.128 5 11016.497
+  angles 0 142.206 0
+  m_sCustomNameSet "Гарнизон Гогланда"
+ }
+ ussr8 {
+  components {
+   PS_GroupCallsignAssigner "{68A4F09568F482B4}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 4610.471 5.512 11008.15
+  angles 0 123.967 0
+  m_sCustomNameSet "Гарнизон Гогланда"
+ }
+}
+$grp Vehicle : "{D9B91FAB817A6033}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_covered.et" {
+ Ural4320_transport_covered1 {
+  coords 4611.001 5.886 11003.054
+  angles 3.637 -144.444 2.596
+  m_sAttachmentGroupName "ussr8"
+ }
+ Ural4320_transport_covered2 {
+  coords 4618.965 5.175 11011.358
+  angles 2.624 -125.919 3.616
+  m_sAttachmentGroupName "ussr7"
+ }
+ Ural4320_transport_covered3 {
+  coords 4502.91 11.393 8864.458
+  angles 0 -171.314 0
+ }
+ Ural4320_transport_covered4 {
+  coords 4513.173 11.393 8862.891
+  angles 0 -171.314 0
+ }
+}

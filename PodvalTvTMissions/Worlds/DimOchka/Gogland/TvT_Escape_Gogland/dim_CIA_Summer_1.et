@@ -1,0 +1,24 @@
+SCR_ChimeraCharacter : "{5F98F203C2D50C9C}Worlds/DimOchka/Bagheera/TvT_HostageOfTheDesert_Bagheera/CIA/dim_CIA_3.et" {
+ ID "520EC961A090BBD5"
+ components {
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Pants {
+     Prefab "{5E0AD6D55C0B9657}Prefabs/Characters/Uniforms/Pants_TrousersV2/Pants_TrousersV2_Grey.et"
+    }
+    LoadoutSlotInfo HandWear {
+     Prefab "{F988B7B82BB26F49}Prefabs/Characters/Handwear/Gloves_Pilot_US_01/Gloves_Pilot_folded.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{68CD6B3A809E1C99}" {
+     TargetStorage "Pants/Pants_TrousersV2_Grey.et"
+    }
+   }
+  }
+ }
+ coords 5223.945 101.13 7970.385
+ angles 0 60 0
+}

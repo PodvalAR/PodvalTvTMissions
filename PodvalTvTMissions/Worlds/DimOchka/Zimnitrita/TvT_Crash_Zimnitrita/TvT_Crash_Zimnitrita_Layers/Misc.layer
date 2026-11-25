@@ -304,12 +304,6 @@ $grp GenericEntity {
   components {
    MeshObject "{6ADF3A27B211A546}" {
     Object "{9272681732A2A875}Assets/Infrastructure/Tunnels/Train Tunnel.xob"
-    Materials {
-     MaterialAssignClass "{6ADF726091CE3E1A}" {
-      SourceMaterial "default_MatTerrainObj_E0078B932EB17D27"
-      AssignedMaterial "{8FBC3A6E946F056E}Common/Materials/Default_Transparent.emat"
-     }
-    }
    }
    RigidBody "{6ADF68D6DFBA0F5F}" {
     ModelGeometry 1
@@ -324,12 +318,10 @@ $grp GenericEntity {
   components {
    MeshObject "{6ADF3A27B211A546}" {
     Object "{9272681732A2A875}Assets/Infrastructure/Tunnels/Train Tunnel.xob"
-    Materials {
-     MaterialAssignClass "{6ADF68D70DFC32D3}" {
-      SourceMaterial "default_MatTerrainObj_E0078B932EB17D27"
-      AssignedMaterial "{8FBC3A6E946F056E}Common/Materials/Default_Transparent.emat"
-     }
-    }
+   }
+   RigidBody "{6AECE6A05539421C}" {
+    ModelGeometry 1
+    Static 1
    }
   }
   coords 10705.617 24.5 5814.599
@@ -350,89 +342,6 @@ $grp GenericEntity {
   }
   coords 10680.592 25.076 6194.396
   angles 0 165 0
- }
-}
-$grp ParticleEffectEntity {
- {
-  coords 10677.667 24.795 6096.91
-  angles 0 90 0
-  EffectPath "{42917AAB29152360}Particles/Vehicle/Cinematic_Kolguyev_Fire.ptc"
- }
- {
-  coords 10675.472 25.59 6087.806
-  EffectPath "{93CAB5E5559B5C32}Particles/Vehicle/Vehicle_fire_engine_big.ptc"
- }
- {
-  coords 10675.482 25.59 6081.661
-  EffectPath "{93CAB5E5559B5C32}Particles/Vehicle/Vehicle_fire_engine_big.ptc"
- }
- {
-  coords 10671.276 24.673 6116.504
-  angles -17.096 6.099 -19.974
-  EffectPath "{93CAB5E5559B5C32}Particles/Vehicle/Vehicle_fire_engine_big.ptc"
- }
- {
-  coords 10678.487 23.81 6124.791
-  angles 0 120.289 0
-  EffectPath "{42917AAB29152360}Particles/Vehicle/Cinematic_Kolguyev_Fire.ptc"
- }
- {
-  coords 10673.552 25.58 6122.24
-  EffectPath "{79DD3A5F1F3069CD}Particles/Vehicle/Vehicle_fire_engine_small.ptc"
- }
- {
-  coords 10677.5 25.597 6127.776
-  EffectPath "{93CAB5E5559B5C32}Particles/Vehicle/Vehicle_fire_engine_big.ptc"
- }
- {
-  coords 10672.597 25.536 6150.076
-  angles 0.113 -0.044 -21.484
-  EffectPath "{93CAB5E5559B5C32}Particles/Vehicle/Vehicle_fire_engine_big.ptc"
- }
- {
-  coords 10673.069 25.73 6153.304
-  angles 0.113 -0.044 -21.484
-  EffectPath "{93CAB5E5559B5C32}Particles/Vehicle/Vehicle_fire_engine_big.ptc"
- }
- {
-  coords 10673.403 25.869 6156.6
-  angles 0.113 -0.044 -21.484
-  EffectPath "{93CAB5E5559B5C32}Particles/Vehicle/Vehicle_fire_engine_big.ptc"
- }
- {
-  coords 10672.615 25.572 6162.395
-  angles 0.113 -0.044 -21.484
-  EffectPath "{93CAB5E5559B5C32}Particles/Vehicle/Vehicle_fire_engine_big.ptc"
- }
- {
-  coords 10671.348 25.43 6210.705
-  angles 0.113 -0.044 -21.484
-  EffectPath "{93CAB5E5559B5C32}Particles/Vehicle/Vehicle_fire_engine_big.ptc"
- }
- {
-  coords 10667.465 25.56 6201.805
-  angles 0 -75 0
-  EffectPath "{42917AAB29152360}Particles/Vehicle/Cinematic_Kolguyev_Fire.ptc"
- }
- {
-  coords 10669.068 25.817 6198.445
-  angles -0.382 -0.095 7.576
-  EffectPath "{93CAB5E5559B5C32}Particles/Vehicle/Vehicle_fire_engine_big.ptc"
- }
- {
-  coords 10644.187 23.096 6210.373
-  angles 3.133 -29.49 -3.903
-  EffectPath "{93CAB5E5559B5C32}Particles/Vehicle/Vehicle_fire_engine_big.ptc"
- }
- {
-  coords 10649.597 23.952 6208.262
-  angles 0 51.148 0
-  EffectPath "{42917AAB29152360}Particles/Vehicle/Cinematic_Kolguyev_Fire.ptc"
- }
- {
-  coords 10652.508 25.155 6206.064
-  angles 0 51.148 0
-  EffectPath "{42917AAB29152360}Particles/Vehicle/Cinematic_Kolguyev_Fire.ptc"
  }
 }
 $grp PolylineShapeEntity {

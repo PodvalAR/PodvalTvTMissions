@@ -1,0 +1,76 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ {
+  coords 6876.31 5.565 6301.583
+  m_sTitle "Правила и задачи"
+  m_sDescriptionLayout "{41DAF7B7061DC0BC}UI/MissionDescription/DescriptionEditable.layout"
+  m_sTextData "ПРАВИЛА:"\
+  "1. Главе ячейки (КС\ВИП) запрещено покидать бункер."\
+  ""\
+  "ЗАДАЧИ:"\
+  "• РФ: "\
+  " 1. Ликвидировать цель."\
+  ""\
+  "• Ячейка:"\
+  " 1. Недопустить ликвидацию командира."\
+  ""\
+  "ДОПОЛНИТЕЛЬНО:"\
+  "1. На тайфунах есть мигалки;"\
+  "2. У СОБР есть щиты;"\
+  "3. Смерть надо подтвердить."
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "Ses_NAPA"
+   "CCA"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+ }
+ {
+  coords 6876.31 5.565 6301.583
+  m_sTitle "Обстановка"
+  m_sDescriptionLayout "{B6DE04F7CF7A95DA}UI/MissionDescription/DescriptionEditableScrollable.layout"
+  m_sTextData "Глава одной из бандитской ячеек захватил склады ВС РФ, находящиеся в бункере в Заричной области. Первая группа СОБРа попала в засаду и была уничтожена."
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "Ses_NAPA"
+   "CCA"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+ }
+ {
+  coords 6876.31 5.565 6301.583
+  m_sTitle "Про щиты"
+  m_sDescriptionLayout "{41DAF7B7061DC0BC}UI/MissionDescription/DescriptionEditable.layout"
+  m_sTextData "Нажимаете на 3 и щит берется в руки. На L можно включать стробоскопы или просто яркий свет. Свет очень сильно светит, пользуйтесь этим преимуществом."\
+  "Советую аккуратно выглядывать используя Q\E. Через ПКМ удобнее это делать. "\
+  ""
+  m_aVisibleForFactions {
+   "RHS_AFRF"
+   "Ses_NAPA"
+   "CCA"
+   ""
+  }
+  m_bEmptyFactionVisibility 1
+ }
+}
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ AFRF_WIN {
+  coords 6927.594 8.248 6204.361
+  m_sTitle "Цель ликвидирована"
+  m_sFactionKey "RHS_AFRF"
+ }
+ NAPA_WIN {
+  coords 6927.594 8.248 6204.361
+  m_sTitle "Глава ячейки жив"
+  m_sFactionKey "Ses_NAPA"
+ }
+}
+GenericEntity : "{E6FC6DD69FA3479F}Prefabs/System/DRG_MissionEndTimerPrefab.et" {
+ components {
+  DRG_MissionEndTimerComponent "{651B0839B21B3BBF}" {
+   m_iMissionTime 2700
+  }
+ }
+ coords 5547.709 15.194 4020.56
+}

@@ -2,38 +2,78 @@ $grp Vehicle : "{85D26AF7F1E9E609}Prefabs/Vehicles/Wheeled/K4386/K4386_RG_Beacon
  K4386_RG_Beacon1 {
   coords 1845.823 10.152 3668.1
   angles 0 98.489 0
+  m_sAttachmentGroupName "SOBR7"
  }
  K4386_RG_Beacon2 {
   coords 1846.775 10.152 3674.479
   angles 0 98.489 0
+  m_sAttachmentGroupName "SOBR5"
  }
  K4386_RG_Beacon3 {
+  components {
+   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+    FuelNodes {
+     SCR_FuelNode "{5622A70CD4036C5A}" {
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{62593DAA0629B156}" {
+      m_fInitialFuelTankState 0
+     }
+    }
+   }
+  }
   coords 3110.997 25.336 4295.378
   angles 1.781 128.363 -4.067
  }
  K4386_RG_Beacon4 {
+  components {
+   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+    FuelNodes {
+     SCR_FuelNode "{5622A70CD4036C5A}" {
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{62593DAA0629B156}" {
+      m_fInitialFuelTankState 0
+     }
+    }
+   }
+  }
   coords 3105.903 25.031 4285.62
   angles 0 51.446 0
  }
  K4386_RG_Beacon5 {
   coords 1850.925 10.295 3695.079
   angles 0.864 105.265 0.236
+  m_sAttachmentGroupName "SOBR3"
  }
  K4386_RG_Beacon6 {
   coords 1852.622 10.229 3701.301
   angles 0.236 105.257 -0.864
+  m_sAttachmentGroupName "SOBR"
  }
  K4386_RG_Beacon7 {
   coords 1841.928 10.03 3704.218
   angles 0.864 105.265 0.236
+  m_sAttachmentGroupName "SOBR2"
  }
  K4386_RG_Beacon8 {
   coords 1840.231 10.066 3697.997
   angles 0.864 105.265 0.236
+  m_sAttachmentGroupName "SOBR4"
+ }
+ K4386_RG_Beacon9 {
+  coords 1856.946 10.344 3683.797
+  angles 0 12.444 0
+  m_sAttachmentGroupName "HQ"
  }
 }
 $grp SCR_AIGroup : "{8A24F086E661B2E7}Prefabs/Groups/OPFOR/RHS_AFRF/SOBR/dim_SOBR_Squad.et" {
- {
+ SOBR {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+   }
+  }
   coords 1857.123 10.329 3703.391
   angles 0 -165 0
   m_aUnitPrefabSlots {
@@ -48,7 +88,13 @@ $grp SCR_AIGroup : "{8A24F086E661B2E7}Prefabs/Groups/OPFOR/RHS_AFRF/SOBR/dim_SOB
   }
   m_bSnapToTerrain 0
  }
- {
+ SOBR2 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 1
+   }
+  }
   coords 1846.201 10.329 3706.318
   angles 0 -166.756 0
   m_aUnitPrefabSlots {
@@ -63,7 +109,13 @@ $grp SCR_AIGroup : "{8A24F086E661B2E7}Prefabs/Groups/OPFOR/RHS_AFRF/SOBR/dim_SOB
   }
   m_bSnapToTerrain 0
  }
- {
+ SOBR3 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 3
+   }
+  }
   coords 1846.915 10.329 3692.498
   angles 0 13.244 0
   m_aUnitPrefabSlots {
@@ -78,7 +130,13 @@ $grp SCR_AIGroup : "{8A24F086E661B2E7}Prefabs/Groups/OPFOR/RHS_AFRF/SOBR/dim_SOB
   }
   m_bSnapToTerrain 0
  }
- {
+ SOBR4 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 1
+    m_iSquadCallsign 2
+   }
+  }
   coords 1835.993 10.329 3695.425
   angles 0 15 0
   m_aUnitPrefabSlots {
@@ -93,7 +151,12 @@ $grp SCR_AIGroup : "{8A24F086E661B2E7}Prefabs/Groups/OPFOR/RHS_AFRF/SOBR/dim_SOB
   }
   m_bSnapToTerrain 0
  }
- {
+ SOBR5 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+   }
+  }
   coords 1850.427 10.329 3677.331
   angles 0 -170.851 0
   m_aUnitPrefabSlots {
@@ -108,22 +171,33 @@ $grp SCR_AIGroup : "{8A24F086E661B2E7}Prefabs/Groups/OPFOR/RHS_AFRF/SOBR/dim_SOB
   }
   m_bSnapToTerrain 0
  }
- {
-  coords 3101.405 25.031 4284.868
-  angles 0 52.393 0
+ SOBR6 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 3
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 2868.046 4.881 3554.506
+  angles 0 -37.607 0
   m_aUnitPrefabSlots {
    "{A03597B05D1311B7}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Rosgvardia/dim_SOBR_SL.et"
    "{A7F26DE13B95AB74}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Rosgvardia/dim_SOBR_TL.et"
    "{9FAAB8B501D8A747}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Rosgvardia/dim_SOBR_MG.et"
-   "{70194CB331FAA640}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Rosgvardia/dim_SOBR_Shield.et"
    "{FEB3128E5357C3A1}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Rosgvardia/dim_SOBR_Rifleman.et"
    "{FEB3128E5357C3A1}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Rosgvardia/dim_SOBR_Rifleman.et"
    "{C068188E9820DA8E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Rosgvardia/dim_SOBR_GL.et"
    "{511A132AA4CF9977}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Rosgvardia/dim_SOBR_RPO.et"
+   "{3F2F63838FA57388}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Rosgvardia/dim_SOBR_Sniper.et"
   }
-  m_bSnapToTerrain 0
  }
- {
+ SOBR7 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
   coords 1841.383 10.329 3665.455
   angles 0 7.393 0
   m_aUnitPrefabSlots {
@@ -138,19 +212,54 @@ $grp SCR_AIGroup : "{8A24F086E661B2E7}Prefabs/Groups/OPFOR/RHS_AFRF/SOBR/dim_SOB
   }
   m_bSnapToTerrain 0
  }
- {
-  coords 3103.092 25.085 4296.032
-  angles 0 99.149 0
+ SOBR8 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 3
+    m_iPlatoonCallsign 2
+   }
+  }
+  coords 4155.812 18.93 4540.648
+  angles 0 -125.851 0
   m_aUnitPrefabSlots {
    "{A03597B05D1311B7}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Rosgvardia/dim_SOBR_SL.et"
    "{A7F26DE13B95AB74}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Rosgvardia/dim_SOBR_TL.et"
    "{9FAAB8B501D8A747}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Rosgvardia/dim_SOBR_MG.et"
-   "{70194CB331FAA640}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Rosgvardia/dim_SOBR_Shield.et"
    "{FEB3128E5357C3A1}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Rosgvardia/dim_SOBR_Rifleman.et"
    "{FEB3128E5357C3A1}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Rosgvardia/dim_SOBR_Rifleman.et"
    "{C068188E9820DA8E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Rosgvardia/dim_SOBR_GL.et"
    "{511A132AA4CF9977}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Rosgvardia/dim_SOBR_RPO.et"
+   "{3F2F63838FA57388}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Rosgvardia/dim_SOBR_Sniper.et"
   }
   m_bSnapToTerrain 0
+ }
+ SOBR9 {
+  components {
+   PS_GroupCallsignAssigner "{68A0FE5711C4D2FB}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 2504.281 17.29 4538.711
+  angles 0 84.149 0
+  m_aUnitPrefabSlots {
+   "{A03597B05D1311B7}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Rosgvardia/dim_SOBR_SL.et"
+   "{A7F26DE13B95AB74}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Rosgvardia/dim_SOBR_TL.et"
+   "{9FAAB8B501D8A747}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Rosgvardia/dim_SOBR_MG.et"
+   "{FEB3128E5357C3A1}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Rosgvardia/dim_SOBR_Rifleman.et"
+   "{FEB3128E5357C3A1}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Rosgvardia/dim_SOBR_Rifleman.et"
+   "{C068188E9820DA8E}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Rosgvardia/dim_SOBR_GL.et"
+   "{511A132AA4CF9977}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Rosgvardia/dim_SOBR_RPO.et"
+   "{3F2F63838FA57388}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Rosgvardia/dim_SOBR_Sniper.et"
+  }
+  m_bSnapToTerrain 0
+ }
+ HQ {
+  coords 1853.084 10.329 3684.711
+  angles 0 99.149 0
+  m_aUnitPrefabSlots {
+   "{A9A15CBC78D8F3CF}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Rosgvardia/dim_SOBR_HQ.et"
+  }
+  m_bSnapToTerrain 0
+  m_sCustomNameSet "Командующий операцией"
  }
 }

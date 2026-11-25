@@ -1,0 +1,57 @@
+SCR_ChimeraCharacter : "{6B9F29BEDCD9F327}Worlds/DimOchka/Gogland/TvT_Escape_Gogland/dim_CIA_Summer_1.et" {
+ ID "520EC961A090BBD5"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Агент разведки"
+   }
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{4928A6C17AA30D0E}Prefabs/Weapons/Rifles/M16/Rifle_M16A2_carbine_m855a1_opt.et"
+  }
+  SCR_CharacterIdentityComponent "{5584CBC63E092DBC}" {
+   Identity Identity "{5584CBC6363C648B}" {
+    VisualIdentity VisualIdentity "{56E6D9456009D1C4}" {
+     Head "{32583C88222142FD}Prefabs/Characters/Heads/Head_White_04.et"
+    }
+   }
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{3A0BB8A99E5A0A8C}Prefabs/Characters/HeadGear/Hair_3.et"
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{0E7D2DBAB45D6D20}Prefabs/Characters/Uniforms/Pants_FROG/Pants_FROG_M81.et"
+    }
+    LoadoutSlotInfo Back {
+     Prefab ""
+    }
+    LoadoutSlotInfo Vest {
+     Prefab "{73C45B6CD2688E0B}Prefabs/Characters/Vests/Vest_PLCE/Variants/BF_Vest_PLCE_Commander.et"
+    }
+    LoadoutSlotInfo Waist {
+     Prefab "{A0CC736CAEB8E10B}Prefabs/Characters/Belts/Delta_Belt_03.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{68CD6B3A809E1C99}" {
+     TargetStorage "Pants/Pants_FROG_M81.et"
+    }
+    ItemsInitConfigurationItem "{68CD6B3945F13073}" {
+     TargetStorage "Vest/BF_Vest_PLCE_Commander.et/MagPouch/BF_Pouch_PLCE_AmmoPouch_01.et"
+    }
+    ItemsInitConfigurationItem "{68CD6B3943B7F161}" {
+     TargetStorage "Vest/BF_Vest_PLCE_Commander.et/MagPouch2/BF_Pouch_PLCE_Utility_02.et"
+    }
+    ItemsInitConfigurationItem "{68CD6B394EFC6E76}" {
+     TargetStorage "Vest/BF_Vest_PLCE_Commander.et/UtilityOne/BF_Pouch_PLCE_Utility_01.et"
+    }
+   }
+  }
+ }
+ coords 5223.581 101.13 7962.479
+ angles 0 0 0
+}

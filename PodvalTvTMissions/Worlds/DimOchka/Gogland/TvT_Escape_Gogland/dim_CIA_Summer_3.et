@@ -1,0 +1,30 @@
+SCR_ChimeraCharacter : "{BA04BEFACE309BF7}Worlds/DimOchka/Bagheera/TvT_HostageOfTheDesert_Bagheera/CIA/dim_CIA_2.et" {
+ ID "520EC961A090BBD5"
+ components {
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Jacket {
+     Prefab "{228DBC831D3EDD65}Prefabs/Characters/Uniforms/Shirt_flannel/flannel_shirt_blue_1.et"
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{5A8C9A020BD7ABA6}Prefabs/Characters/Uniforms/Pants_Trousers_01/Pants_Trousers_01_DarkGrey.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{68CD6B3A809E1C99}" {
+     TargetStorage "Pants/Pants_Trousers_01_DarkGrey.et"
+    }
+    ItemsInitConfigurationItem "{68CD6B3A80F6D72C}" {
+     TargetStorage "Vest/BF_Vest_PLCE_Rifleman.et/Suspenders/BF_Vest_PLCE_suspenders.et"
+    }
+    ItemsInitConfigurationItem "{68CD6B3A80D0F11B}" {
+     TargetStorage "Jacket/flannel_shirt_blue_1.et"
+    }
+   }
+  }
+ }
+ coords 5227.212 101.13 7974.642
+ angles 0 90 0
+}

@@ -1,0 +1,57 @@
+SCR_ChimeraCharacter : "{FB511965C45891AB}Prefabs/Characters/Factions/INDFOR/CIV/VIP/dim_CIV_VIP_3.et" {
+ ID "520EC961A090B1EE"
+ components {
+  SCR_CharacterFactionAffiliationComponent "{60DC952FF79A02F1}" {
+   "faction affiliation" "US"
+  }
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "Ученый Лебедев"
+    Icon "{D7F5BF1ECF66FB8F}UI/Icons/unarmed.edds"
+    m_sFaction "US"
+   }
+  }
+  SCR_CharacterIdentityComponent "{5584CBC63E092DBC}" {
+   Override 1
+   Identity Identity "{5584CBC6363C648B}" {
+    VisualIdentity VisualIdentity "{56E6D9456009D1C4}" {
+     Head "{2F3375E395C46AB3}Prefabs/Characters/Heads/Head_BaseBody_01.et"
+    }
+   }
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{9F3A7D7943C278D1}Prefabs/Characters/HeadGear/Hat_FlatCap_01/Hat_FlatCap_01_base.et"
+    }
+    LoadoutSlotInfo ArmoredVest {
+     Prefab "{725C5E1C75CADAF4}Prefabs/Characters/Vests/Vest_M69/Vest_M69_M81woodland.et"
+    }
+   }
+  }
+  ActionsManagerComponent "{520EA1D2F659CE02}" {
+   additionalActions {
+    DRG_DeathConfirmAction "{6AF2F2BA3C9422BB}" {
+     ParentContextList {
+      "LowerTorso"
+     }
+     UIInfo UIInfo "{685EA7C38E96F29B}" {
+      Name "Подтвердить смерть"
+     }
+     ActionTitle "#drg_ConfirmDeathAction"
+     Duration 3
+     m_bAdvanceGameStage 0
+     m_sEventMessage "Ученый Лебедев убит"
+     m_aObjectivesToDone {
+      "USSR_WIN2"
+     }
+     m_aObjectivesToFail {
+      "US_WIN2"
+     }
+    }
+   }
+  }
+ }
+ coords 5231.33 101.13 7969.575
+ angles 0 105 0
+}

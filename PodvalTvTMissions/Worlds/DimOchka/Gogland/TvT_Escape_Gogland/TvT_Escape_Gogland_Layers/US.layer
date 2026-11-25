@@ -1,0 +1,221 @@
+SCR_AIGroup PL : "{0956C232E69AF443}Prefabs/Groups/BLUFOR/US/Regular/dim_Group_US_Reg_Desert.et" {
+ components {
+  PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+   m_iCompanyCallsign 0
+   m_iSquadCallsign 0
+  }
+ }
+ coords 1284.891 2.75 5016.707
+ angles 0 28.51 0
+ m_aUnitPrefabSlots {
+  "{6BC7832A1C3DDC7A}Prefabs/Characters/Factions/BLUFOR/US/Regular/dim_US_HQ.et"
+ }
+ m_sCustomNameSet "Командир США"
+}
+Vehicle V2101_darkBlue1 : "{1846AF973412368A}Prefabs/Vehicles/Wheeled/V2101/V2101_darkBlue.et" {
+ coords 5835.561 13.536 2958.072
+ angles 0 4.76 0
+ m_sAttachmentGroupName "DEF_GREEN3"
+ m_bEnableMoveOnFreeze 1
+}
+Vehicle T601_blue1 : "{18DB666895492297}Prefabs/Vehicles/Wheeled/T601/T601_blue.et" {
+ coords 5834.713 13.109 2951.668
+ m_sAttachmentGroupName "DEF_GREEN3"
+ m_bEnableMoveOnFreeze 1
+}
+$grp Vehicle : "{3312ADBF53A16DD9}Prefabs/Vehicles/Wheeled/LAV25/LAV25_RHS.et" {
+ LAV25_RHS1 {
+  coords 990.019 3.48 5121.271
+  angles 0 122.591 0
+ }
+ LAV25_RHS2 {
+  coords 986.012 3.48 5115.003
+  angles 0 122.591 0
+ }
+}
+Vehicle V2101_beige1 : "{5E696DD4888CE406}Prefabs/Vehicles/Wheeled/V2101/V2101_beige.et" {
+ coords 8072.471 3.887 3788.265
+ angles 0 165.613 0
+ m_sAttachmentGroupName "DEF_GREEN5"
+ m_bEnableMoveOnFreeze 1
+}
+Vehicle T601_beige1 : "{6303FEB76E4B719A}Prefabs/Vehicles/Wheeled/T601/T601_beige.et" {
+ coords 7001.15 100.528 3991.184
+ angles 0 59.23 0
+ m_sAttachmentGroupName "DEF_GREEN4"
+ m_bEnableMoveOnFreeze 1
+}
+$grp SCR_AIGroup : "{6E2296FB529E9097}Prefabs/Groups/BLUFOR/US/dim_US_SPN_Force_Recon.et" {
+ DEF_GREEN3 {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B0F0D80A730}" {
+    m_iCompanyCallsign 3
+   }
+  }
+  coords 5841.436 13.58 2949.91
+  angles 0 -80.519 0
+  m_aUnitPrefabSlots {
+   "{ED4E0ACF6FD3C80A}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_SL.et"
+   "{8D1385F1AAE00333}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_GL.et"
+   "{61F3754A8D172C22}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_Rifleman.et"
+   "{F7FE66E14E368DF9}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_RTO.et"
+   "{8D1385F1AAE00333}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_GL.et"
+   "{090346732FB897D1}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_Medic.et"
+   "{6956B24D18F9C0EC}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_Sapper.et"
+   "{07DB2A2C2FD68F06}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_Sniper.et"
+  }
+  m_sCustomNameSet "Green Berets"
+ }
+ DEF_GREEN4 {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B0F0D80A730}" {
+    m_iCompanyCallsign 3
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 6993.029 101.016 3992.701
+  angles 0 69.481 0
+  m_aUnitPrefabSlots {
+   "{ED4E0ACF6FD3C80A}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_SL.et"
+   "{8D1385F1AAE00333}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_GL.et"
+   "{61F3754A8D172C22}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_Rifleman.et"
+   "{F7FE66E14E368DF9}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_RTO.et"
+   "{8D1385F1AAE00333}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_GL.et"
+   "{090346732FB897D1}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_Medic.et"
+   "{6956B24D18F9C0EC}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_Sapper.et"
+   "{07DB2A2C2FD68F06}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_Sniper.et"
+  }
+  m_sCustomNameSet "Green Berets"
+ }
+ DEF_GREEN5 {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B0F0D80A730}" {
+    m_iCompanyCallsign 3
+    m_iPlatoonCallsign 2
+   }
+  }
+  coords 8062.34 5.05 3801.818
+  angles 0 69.481 0
+  m_aUnitPrefabSlots {
+   "{ED4E0ACF6FD3C80A}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_SL.et"
+   "{8D1385F1AAE00333}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_GL.et"
+   "{61F3754A8D172C22}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_Rifleman.et"
+   "{F7FE66E14E368DF9}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_RTO.et"
+   "{8D1385F1AAE00333}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_GL.et"
+   "{090346732FB897D1}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_Medic.et"
+   "{6956B24D18F9C0EC}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_Sapper.et"
+   "{07DB2A2C2FD68F06}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_Sniper.et"
+  }
+  m_sCustomNameSet "Green Berets"
+ }
+ DEF_GREEN6 {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B0F0D80A730}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 2
+    m_iSquadCallsign 1
+   }
+  }
+  coords 5235.627 101.105 7977.974
+  angles 0 -177.96 0
+  m_aUnitPrefabSlots {
+   "{ED4E0ACF6FD3C80A}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_SL.et"
+   "{8D1385F1AAE00333}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_GL.et"
+   "{61F3754A8D172C22}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_Rifleman.et"
+   "{F7FE66E14E368DF9}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_RTO.et"
+   "{8D1385F1AAE00333}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_GL.et"
+   "{090346732FB897D1}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_Medic.et"
+   "{6956B24D18F9C0EC}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_Sapper.et"
+   "{07DB2A2C2FD68F06}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_Sniper.et"
+  }
+  m_bSnapToTerrain 0
+  m_sCustomNameSet "Green Berets"
+ }
+ DEF_GREEN1 {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B0F0D80A730}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 2
+   }
+  }
+  coords 5227.903 101.13 7963.158
+  angles 0 1.123 0
+  m_aUnitPrefabSlots {
+   "{ED4E0ACF6FD3C80A}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_SL.et"
+   "{8D1385F1AAE00333}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_GL.et"
+   "{61F3754A8D172C22}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_Rifleman.et"
+   "{F7FE66E14E368DF9}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_RTO.et"
+   "{8D1385F1AAE00333}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_GL.et"
+   "{090346732FB897D1}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_Medic.et"
+   "{6956B24D18F9C0EC}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_Sapper.et"
+   "{07DB2A2C2FD68F06}Prefabs/Characters/Factions/BLUFOR/US/SPN/dim_US_SPN_Sniper.et"
+  }
+  m_bSnapToTerrain 0
+  m_sCustomNameSet "Green Berets"
+ }
+}
+Vehicle MC130E_CombatTalon1 : "{7C4A19E2B85D3F60}Prefabs/Vehicles/FixedWing/C-130/MC130E_CombatTalon.et" {
+ coords 1305.74 2.75 5046.684
+ angles 0 89.358 0
+ m_sAttachmentGroupName "PIL"
+}
+SCR_AIGroup PIL : "{AC37A0539DB4CA1C}Prefabs/Groups/BLUFOR/US/Regular/Group_US_Regular_Heli.et" {
+ components {
+  PS_GroupCallsignAssigner "{68C296C0889BBE2B}" {
+   m_iCompanyCallsign 1
+  }
+ }
+ coords 1013.601 3.406 5125.538
+ angles 0 -173.929 0
+ m_sCustomNameSet "Экипаж С130"
+}
+Vehicle S105_green1 : "{AD80FB47D868C775}Prefabs/Vehicles/Wheeled/S105/S105_green.et" {
+ coords 6998.296 100.785 3995.433
+ angles 0 20.081 0
+ m_sAttachmentGroupName "DEF_GREEN4"
+ m_bEnableMoveOnFreeze 1
+}
+Vehicle UAZ469_uncovered_CIV_teal1 : "{D4855501D5B12AF2}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_uncovered_CIV_teal.et" {
+ coords 8076.463 3.998 3791.948
+ angles -2.592 164.969 0.696
+ m_sAttachmentGroupName "DEF_GREEN5"
+ m_bEnableMoveOnFreeze 1
+}
+$grp SCR_AIGroup : "{D86A53387FE69F56}Prefabs/Groups/BLUFOR/US/dim_US_SPN_Delta.et" {
+ DEF_GREEN2 {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B0F0D80A730}" {
+    m_iCompanyCallsign 2
+   }
+  }
+  coords 5223.128 101.13 7972.097
+  angles 0 90.058 0
+  m_aUnitPrefabSlots {
+   "{6B9F29BEDCD9F327}Worlds/DimOchka/Gogland/TvT_Escape_Gogland/dim_CIA_Summer_1.et"
+   "{E25751A76CF8EB62}Worlds/DimOchka/Gogland/TvT_Escape_Gogland/dim_CIA_Summer_3.et"
+   "{07CB1D5E601D7C09}Worlds/DimOchka/Gogland/TvT_Escape_Gogland/dim_CIA_Summer_2.et"
+   "{DF63749F19946255}Worlds/DimOchka/Gogland/TvT_Escape_Gogland/dim_CIA_Summer_4.et"
+   "{56AB0C86A9B57A10}Worlds/DimOchka/Gogland/TvT_Escape_Gogland/dim_CIA_Summer_6.et"
+   "{87309BC2BB5C12C0}Worlds/DimOchka/Bagheera/TvT_HostageOfTheDesert_Bagheera/CIA/dim_CIA_5.et"
+   "{3AFF38661571F53E}Worlds/DimOchka/Gogland/TvT_Escape_Gogland/dim_CIA_Summer_5.et"
+  }
+  m_bSnapToTerrain 0
+  m_sCustomNameSet "Агенты ЦРУ"
+ }
+ DEF_VIP {
+  components {
+   PS_GroupCallsignAssigner "{68CD6B0F0D80A730}" {
+    m_iCompanyCallsign 2
+    m_iPlatoonCallsign 1
+   }
+  }
+  coords 5229.797 101.13 7971.048
+  angles 0 90.058 0
+  m_aUnitPrefabSlots {
+   "{CBD73B607908EA7F}Worlds/DimOchka/Gogland/TvT_Escape_Gogland/dim_vip_1_escape.et"
+   "{E1F31CC38FE68C50}Worlds/DimOchka/Gogland/TvT_Escape_Gogland/dim_vip_2_escape.et"
+  }
+  m_bSnapToTerrain 0
+  m_sCustomNameSet "Ученые"
+ }
+}
