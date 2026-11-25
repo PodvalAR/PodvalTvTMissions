@@ -128,10 +128,17 @@ $grp SCR_AIGroup : "{7EC6BD7F0BE29069}Prefabs/Groups/OPFOR/PLA/NAVY/MODERN/PLA_N
   m_bSnapToTerrain 0
  }
 }
-Vehicle PLA_Navy_Rosomak1 : "{81B8A1E44BAEA751}Prefabs/Vehicles/PLA Vehicle/PLA_Navy_Rosomak.et" {
- coords 4979.907 2.219 3884.56
- angles 0 44.679 0
- m_sAttachmentGroupName "KNR4"
+$grp Vehicle : "{81B8A1E44BAEA751}Prefabs/Vehicles/PLA Vehicle/PLA_Navy_Rosomak.et" {
+ PLA_Navy_Rosomak1 {
+  coords 4979.907 2.219 3884.56
+  angles 0 44.679 0
+  m_sAttachmentGroupName "KNR4"
+ }
+ PLA_Navy_Rosomak2 {
+  coords 4970.944 2.188 3874.722
+  angles 0 44.679 0
+  m_sAttachmentGroupName "KNR6"
+ }
 }
 $grp Vehicle : "{974A2A21DB6B2592}Prefabs/CB90/Vehicles/PlainGrey/CB90_Naval_PLA.et" {
  CB90_Naval_PLA1 {
@@ -181,17 +188,10 @@ Vehicle PLA_Vamtac_Transport_Camo1 : "{C7DF0E6F3C502C27}Prefabs/Vehicles/PLA Veh
  angles -0.145 51.56 1.258
  m_sAttachmentGroupName "KNR3"
 }
-$grp Vehicle : "{CD3A724819D4E820}Prefabs/Vehicles/PLA Vehicle/PLA_NAVY_ROSOMAK_Transport.et" {
- PLA_NAVY_ROSOMAK_Transport1 {
-  coords 4971.297 2.182 3875.083
-  angles -1.257 38.293 0.148
-  m_sAttachmentGroupName "KNR6"
- }
- PLA_NAVY_ROSOMAK_Transport2 {
-  coords 4963.725 2.188 3865.507
-  angles 0 31.954 0
-  m_sAttachmentGroupName "KNR7"
- }
+Vehicle PLA_NAVY_ROSOMAK_Transport2 : "{CD3A724819D4E820}Prefabs/Vehicles/PLA Vehicle/PLA_NAVY_ROSOMAK_Transport.et" {
+ coords 4963.725 2.188 3865.507
+ angles 0 31.954 0
+ m_sAttachmentGroupName "KNR7"
 }
 SCR_AIGroup KNR6 : "{CDC662D0A3493CFC}Prefabs/Groups/OPFOR/PLA/NAVY/MODERN/PLA_NAVY_MODERN_SQ_RIFLE_1.et" {
  components {
@@ -202,6 +202,18 @@ SCR_AIGroup KNR6 : "{CDC662D0A3493CFC}Prefabs/Groups/OPFOR/PLA/NAVY/MODERN/PLA_N
  }
  coords 4971.545 2.187 3869.793
  angles 0 -46.696 0
+ m_aUnitPrefabSlots {
+  "{B5DF1FEE2CED359B}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/Modern/dim_PLA_Navy_Modern_SL.et"
+  "{D389FF90CE404232}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/Modern/dim_PLA_Navy_Modern_TL_2.et"
+  "{00FF873067E089D4}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/Modern/dim_PLA_Navy_Modern_AT.et"
+  "{942E7F9D0D2E8FBE}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/Modern/dim_PLA_Navy_Modern_AAT.et"
+  "{D857EEF11E699788}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/Modern/dim_PLA_Navy_Modern_AR.et"
+  "{B218E5BF4A6B8F58}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/Modern/dim_PLA_Navy_Modern_TL.et"
+  "{977F3C52BE122389}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/Modern/dim_PLA_Navy_Modern_Rifleman.et"
+  "{318B37EB24A18E3F}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/dim_PLA_Navy_CC.et"
+  "{35BEFD501A106018}Prefabs/Characters/Factions/OPFOR/PLA/NAVY/dim_PLA_Navy_CREW.et"
+ }
+ m_sCustomNameSet "Мото-отделение МП НОАК"
 }
 $grp Vehicle : "{CE7A8E98466292E0}Prefabs/Vehicles/PLA Vehicle/PLA_SA342_GAZELLE_M134.et" {
  PLA_SA342_GAZELLE_M1 {
