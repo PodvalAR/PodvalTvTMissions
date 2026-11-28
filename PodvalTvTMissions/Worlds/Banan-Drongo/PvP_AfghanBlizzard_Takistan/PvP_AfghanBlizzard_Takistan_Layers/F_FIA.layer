@@ -166,23 +166,6 @@ $grp SCR_AIGroup : "{17C7309FFE4775B0}Prefabs/Groups/INDFOR/Group_FIA_RifleSquad
    "{BF44997B8982C009}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_Rifleman_P.et"
   }
  }
- FIA_3_0_2 {
-  components {
-   AIFormationComponent "{507E9DC12F541FE6}" {
-    DefaultFormation " "
-   }
-   PS_GroupCallsignAssigner "{5F0CF2CA5860FA6D}" {
-    m_iCompanyCallsign 3
-   }
-  }
-  coords 10574.482 287.854 6502.046
-  angles -0.008 143.282 2.839
-  m_aUnitPrefabSlots {
-   "{5E10F18AF4717622}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_SL_P.et"
-   "{BF44997B8982C009}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_Rifleman_P.et"
-  }
-  m_sCustomNameSet "Зенитный расчёт"
- }
 }
 Vehicle BM_21_1_9M1 : "{753091E32C4E2EE3}Prefabs/Vehicles/Wheeled/Ural_4320_Grad/BM 21-1_9M22.et" {
  coords 10508.199 285.111 6504.089
@@ -252,6 +235,8 @@ SCR_AIGroup FIA_0_0_0 : "{CA73F9230999408B}Prefabs/Groups/INDFOR/Group_FIA_Plato
  angles 0 142.813 0
  m_aUnitPrefabSlots {
   "{156CA8B61F1F1CD7}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_Officer_P.et"
+  "{B63BF32359017C54}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_Sapper.et"
+  "{6EF882860DCD77D1}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_MG_P.et"
   "{950D59E028D3F268}Prefabs/Characters/Factions/INDFOR/FIA/drg_Character_FIA_Sharpshooter_P.et"
  }
 }
@@ -266,12 +251,6 @@ $grp Vehicle : "{FD109F3702AAB392}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_ZU2
   coords 10601.72 289.411 6516.969
   angles -2.839 -125.198 -0.083
   m_sAttachmentGroupName "FIA_3_0_0"
-  m_bEnableMoveOnFreeze 1
- }
- Ural4320_ZU2 {
-  coords 10575.713 287.774 6497.692
-  angles -2.838 -125.198 -0.083
-  m_sAttachmentGroupName "FIA_3_0_2"
   m_bEnableMoveOnFreeze 1
  }
 }
